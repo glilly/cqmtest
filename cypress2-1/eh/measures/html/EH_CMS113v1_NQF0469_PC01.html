@@ -1,0 +1,558 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:n1="urn:hl7-org:v3">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   
+      <title>Elective Delivery</title><style type="text/css">
+body {
+	color: rgb(26, 26, 26);
+	background-color: rgb(255,255,255);
+	font-family: Verdana, Tahoma, sans-serif;
+	font-size: 11px;
+}
+
+a {
+	color: rgb(0, 0, 255);
+	background-color: rgb(255,255,255);
+}
+
+h1 {
+	font-size: 12pt;
+	font-weight: bold;
+}
+
+h2 {
+	font-size: 11pt;
+	font-weight: bold;
+}
+
+h3 {
+	font-size: 10pt;
+	font-weight: bold;
+}
+
+h4 {
+	font-size: 8pt;
+	font-weight: bold;
+}
+
+div {
+	width: 80%;
+}
+
+table {
+	line-height: 10pt;
+	width: 80%;
+}
+
+tr {
+	background-color: rgb(224,224,224);
+}
+
+td {
+	padding: 0.1cm 0.2cm;
+	vertical-align: top;
+}
+
+.h1center {
+	font-size: 12pt;
+	font-weight: bold;
+	text-align: center;
+	width: 80%;
+}
+
+.header_table{
+	border: 1pt inset rgb(0,0,0);
+}
+
+.narr_table {
+	width: 100%;
+}
+
+.narr_tr {
+	background-color: rgb(225,225,225);
+}
+pre {
+ overflow: auto; /* Use horizontal scroller if needed; for Firefox 2, not needed in Firefox 3 */
+ white-space: pre-wrap; /* css-3 */
+ white-space: -moz-pre-wrap !important; /* Mozilla, since 1999 */
+ white-space: -pre-wrap; /* Opera 4-6 */
+ white-space: -o-pre-wrap; /* Opera 7 */
+ word-wrap: break-word; /* Internet Explorer 5.5+ */
+ font-family: Verdana, Tahoma, sans-serif;
+ font-size: 11px;
+ text-align:left;
+ margin: 0px 0px 0px 0px;
+ padding:0px 0px 0px 0px;
+}
+.narr_th {
+	background-color: rgb(201,201,201);
+}
+
+.td_label{
+	font-weight: bold;
+	color: white;
+}
+	</style></head>
+   <body>
+      <table class="header_table">
+         <tbody>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">eMeasure Title</span></td>
+               <td width="80%" colspan="3">Elective Delivery</td>
+            </tr>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">eMeasure Identifier<br>(Measure Authoring Tool)</span></td>
+               <td width="30%">113</td>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">eMeasure Version number</span></td>
+               <td width="30%">1</td>
+            </tr>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">NQF Number</span></td>
+               <td width="30%">0469</td>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">GUID</span></td>
+               <td> fd7ca18d-b56d-4bca-af35-71ce36b15246</td>
+            </tr>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">Measurement Period</span></td>
+               <td width="80%" colspan="3">January 1, 20xx  through December 31, 20xx </td>
+            </tr>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">Measure Steward</span></td>
+               <td width="80%" colspan="3">Joint Commission</td>
+            </tr>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">Measure Developer</span></td>
+               <td width="80%" colspan="3">Joint Commission</td>
+            </tr>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">Endorsed By</span></td>
+               <td width="80%" colspan="3">National Quality Forum</td>
+            </tr>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">Description</span></td>
+               <td width="80%" colspan="3">
+                  <div style="width:660px;overflow-x:hidden;overflow-y:auto"><pre>Patients with elective vaginal deliveries or elective cesarean sections at &gt;= 37 and &lt; 39 weeks of gestation completed</pre></div>
+               </td>
+            </tr>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">Copyright</span></td>
+               <td width="80%" colspan="3">
+                  <div style="width:660px;overflow-x:hidden;overflow-y:auto"><pre>Measure specifications are in the Public Domain
+
+LOINC(R) is a registered trademark of the Regenstrief Institute.
+
+This material contains SNOMED Clinical Terms (R) (SNOMED CT(c) ) copyright 2004-&#8211;2010 International Health Terminology Standards Development Organization. All rights reserved.</pre></div>
+               </td>
+            </tr>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">Disclaimer</span></td>
+               <td width="80%" colspan="3">
+                  <div style="width:660px;overflow-x:hidden;overflow-y:auto"><pre>None</pre></div>
+               </td>
+            </tr>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">Measure Scoring</span></td>
+               <td width="80%" colspan="3">Proportion</td>
+            </tr>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">Measure Type</span></td>
+               <td width="80%" colspan="3">Process</td>
+            </tr>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">Stratification</span></td>
+               <td width="80%" colspan="3">
+                  <div style="width:660px;overflow-x:hidden;overflow-y:auto"><pre>None</pre></div>
+               </td>
+            </tr>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">Risk Adjustment</span></td>
+               <td width="80%" colspan="3">
+                  <div style="width:660px;overflow-x:hidden;overflow-y:auto"><pre>None</pre></div>
+               </td>
+            </tr>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">Rate Aggregation</span></td>
+               <td width="80%" colspan="3">
+                  <div style="width:660px;overflow-x:hidden;overflow-y:auto"><pre>None</pre></div>
+               </td>
+            </tr>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">Rationale</span></td>
+               <td width="80%" colspan="3">
+                  <div style="width:660px;overflow-x:hidden;overflow-y:auto"><pre>For almost 3 decades, the American College of Obstetricians and Gynecologists (ACOG) and the American Academy of Pediatrics (AAP) have had in place a standard requiring 39 completed weeks gestation prior to ELECTIVE delivery, either vaginal or operative (ACOG, 1996). A survey conducted in 2007 of almost 20,000 births in HCA hospitals throughout the U.S. carried out in conjunction with the March of Dimes at the request of ACOG revealed that almost 1/3 of all babies delivered in the United States are electively delivered with 5% of all deliveries in the U.S. delivered in a manner violating ACOG/AAP guidelines. Most of these are for convenience, and result in significant short term neonatal morbidity (neonatal intensive care unit admission rates of 13- 21%) (Clark et al., 2009).
+According to Glantz (2005), compared to spontaneous labor, elective inductions result in more cesarean deliveries and longer maternal length of stay. The American Academy of Family Physicians (2000) also notes that elective induction doubles the cesarean delivery rate. Repeat elective cesarean sections before 39 weeks gestation also result in higher rates of adverse respiratory outcomes, mechanical ventilation, sepsis and hypoglycemia for the newborns (Tita et al., 2009).</pre></div>
+               </td>
+            </tr>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">Clinical Recommendation Statement</span></td>
+               <td width="80%" colspan="3">
+                  <div style="width:660px;overflow-x:hidden;overflow-y:auto"><pre>Guidelines from the American College of Obstetricians and Gynecologists and the American Academy of Pediatrics do not support non-medically indicated elective deliveries at &lt;39 weeks gestation. Evidence suggests that early term deliveries result in significant short term neonatal morbidity. Therefore, it is recommended that elective deliveries should not be performed at &lt;39 weeks gestation unless medically-indicated.</pre></div>
+               </td>
+            </tr>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">Improvement Notation</span></td>
+               <td width="80%" colspan="3">
+                  <div style="width:660px;overflow-x:hidden;overflow-y:auto"><pre>Decrease in the rate</pre></div>
+               </td>
+            </tr>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">Reference</span></td>
+               <td width="80%" colspan="3">
+                  <div style="width:660px;overflow-x:hidden;overflow-y:auto"><pre>American Academy of Family Physicians. (2000). Tips from Other Journals: Elective induction doubles cesarean delivery rate, 61, 4.Retrieved December 29, 2008 at: http://www.aafp.org/afp/20000215/tips/39.html.</pre></div>
+               </td>
+            </tr>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">Reference</span></td>
+               <td width="80%" colspan="3">
+                  <div style="width:660px;overflow-x:hidden;overflow-y:auto"><pre>American College of Obstetricians and Gynecologists. (November 1996). ACOG Educational Bulletin.</pre></div>
+               </td>
+            </tr>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">Reference</span></td>
+               <td width="80%" colspan="3">
+                  <div style="width:660px;overflow-x:hidden;overflow-y:auto"><pre>Clark, S., Miller, D., Belfort, M., Dildy, G., Frye, D., &amp; Meyers, J. (2009). Neonatal and maternal outcomes associated with elective delivery. [Electronic Version]. Am J Obstet Gynecol. 200:156.e1-156.e4.</pre></div>
+               </td>
+            </tr>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">Reference</span></td>
+               <td width="80%" colspan="3">
+                  <div style="width:660px;overflow-x:hidden;overflow-y:auto"><pre>Glantz, J. (Apr.2005). Elective induction vs. spontaneous labor associations and outcomes. [Electronic Version]. J Reprod Med. 50(4):235-40.</pre></div>
+               </td>
+            </tr>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">Reference</span></td>
+               <td width="80%" colspan="3">
+                  <div style="width:660px;overflow-x:hidden;overflow-y:auto"><pre>Tita, A., Landon, M., Spong, C., Lai, Y., Leveno, K., Varner, M, et al. (2009). Timing of elective repeat cesarean delivery at term and neonatal outcomes. [Electronic Version]. NEJM. 360:2, 111-120.</pre></div>
+               </td>
+            </tr>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">Definition</span></td>
+               <td width="80%" colspan="3">
+                  <div style="width:660px;overflow-x:hidden;overflow-y:auto"><pre>None</pre></div>
+               </td>
+            </tr>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">Guidance</span></td>
+               <td width="80%" colspan="3">
+                  <div style="width:660px;overflow-x:hidden;overflow-y:auto"><pre>The unit of measurement for this measure is an inpatient episode of care. Each distinct hospitalization should be reported, regardless of whether the same patient is admitted for inpatient care more than once during the measurement period. In addition, the eMeasure logic intends to represent events within or surrounding a single occurrence of an inpatient hospitalization.
+
+Wherever the gestational age is mentioned with relative timing to delivery, the intent is to capture gestational age documented on the day of delivery but prior to delivery.
+
+Gestational age should be rounded off to the nearest completed week, not the following week. For example, an infant born on the 5th day of the 36th week (35 weeks and 5/7 days) is at a gestational age of 35 weeks, not 36 weeks.
+
+The denominator inclusion of patients with a gestational age of 37 or 38 weeks, or gestational age unknown, or gestational age not documented, is achieved implicitly by excluding patients with a gestational age of &lt;37 weeks or &gt;= 39 weeks.
+
+The numerator inclusion for patients with gestational age unknown or not documented in the medical record is achieved by modeling patients who do not have a gestational age of 37 or 38 weeks.</pre></div>
+               </td>
+            </tr>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">Transmission Format</span></td>
+               <td width="80%" colspan="3">
+                  <div style="width:660px;overflow-x:hidden;overflow-y:auto"><pre>None</pre></div>
+               </td>
+            </tr>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">Initial Patient Population</span></td>
+               <td width="80%" colspan="3">
+                  <div style="width:660px;overflow-x:hidden;overflow-y:auto"><pre>Patients admitted to the hospital for inpatient acute care are included if they have a diagnosis related to pregnancy with reference to delivery, a patient age &gt;= 8 years and &lt; 65, and a length of stay &lt; 120 days.</pre></div>
+               </td>
+            </tr>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">Denominator</span></td>
+               <td width="80%" colspan="3">
+                  <div style="width:660px;overflow-x:hidden;overflow-y:auto"><pre>Patients delivering newborns with &gt;= 37 and &lt; 39 weeks of gestation completed</pre></div>
+               </td>
+            </tr>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">Denominator Exclusions</span></td>
+               <td width="80%" colspan="3">
+                  <div style="width:660px;overflow-x:hidden;overflow-y:auto"><pre>Patients who experienced a prior uterine surgery (classical cesarean section or myomectomy)
+Patients with conditions possibly justifying elective delivery prior to 39 weeks gestation</pre></div>
+               </td>
+            </tr>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">Numerator</span></td>
+               <td width="80%" colspan="3">
+                  <div style="width:660px;overflow-x:hidden;overflow-y:auto"><pre>Patients with elective deliveries</pre></div>
+               </td>
+            </tr>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">Numerator Exclusions</span></td>
+               <td width="80%" colspan="3">
+                  <div style="width:660px;overflow-x:hidden;overflow-y:auto"><pre>Not Applicable</pre></div>
+               </td>
+            </tr>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">Denominator Exceptions</span></td>
+               <td width="80%" colspan="3">
+                  <div style="width:660px;overflow-x:hidden;overflow-y:auto"><pre>None</pre></div>
+               </td>
+            </tr>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">Measure Population</span></td>
+               <td width="80%" colspan="3">
+                  <div style="width:660px;overflow-x:hidden;overflow-y:auto"><pre>Not Applicable</pre></div>
+               </td>
+            </tr>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">Measure Observations</span></td>
+               <td width="80%" colspan="3">
+                  <div style="width:660px;overflow-x:hidden;overflow-y:auto"><pre>Not Applicable</pre></div>
+               </td>
+            </tr>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">Supplemental Data Elements</span></td>
+               <td width="80%" colspan="3">
+                  <div style="width:660px;overflow-x:hidden;overflow-y:auto"><pre>For every patient evaluated by this measure also identify payer, race, ethnicity and sex.</pre></div>
+               </td>
+            </tr>
+         </tbody>
+      </table>
+      <h2><a name="toc">Table of Contents</a></h2>
+      <ul>
+         <li><a href="#d21257867e508">Population criteria</a></li>
+         <li><a href="#d21257867e1938">Data criteria (QDM Data Elements)</a></li>
+         <li><a href="#d21257867e2627">Reporting Stratification</a></li>
+         <li><a href="#d21257867e2648">Supplemental Data Elements</a></li>
+      </ul>
+      <hr align="left" color="teal" size="2" width="80%">
+      <h3><a name="d21257867e508" href="#toc">Population criteria</a></h3>
+      <div>
+         
+         <ul>
+            <li>
+               <b>Initial Patient Population =</b>
+               
+               <ul>
+                  <li>AND: "Patient Characteristic Birthdate: birth date"  &gt;= 8 year(s) starts before start of "Occurrence A of Encounter, Performed:
+                     Inpatient Encounter"
+                  </li>
+                  <li>AND: "Patient Characteristic Birthdate: birth date"  &lt; 65 year(s) starts before start of "Occurrence A of Encounter, Performed:
+                     Inpatient Encounter"
+                  </li>
+                  <li>AND: "Occurrence A of Encounter, Performed: Inpatient Encounter (length of stay &lt;= 120 day(s))"</li>
+                  <li>AND: "Occurrence A of Encounter, Performed: Inpatient Encounter (discharge datetime)" during "Measurement Period"</li>
+                  <li>AND: 
+                     <ul>
+                        <li>OR: "Diagnosis, Active: Complication Mainly Related to Pregnancy"</li>
+                        <li>OR: "Diagnosis, Active: Normal Delivery and Other Indications for Care"</li>
+                        <li>OR: "Diagnosis, Active: Complication Mainly in the Course of Labor and Delivery"</li>
+                        <li>OR: "Diagnosis, Active: Complication of the Puerperium"</li>
+                        <li>OR: "Diagnosis, Active: Outcome of Delivery"</li>
+                        <li>OR: "Procedure, Performed: Delivery Procedures"</li>
+                        <li> starts during "Occurrence A of Encounter, Performed: Inpatient Encounter"</li>
+                     </ul>
+                     
+                  </li>
+               </ul>
+               
+            </li>
+            <li>
+               <b>Denominator =</b>
+               
+               <ul>
+                  <li>AND: "Initial Patient Population"</li>
+               </ul>
+               
+            </li>
+            <li>
+               <b>Denominator Exclusions =</b>
+               
+               <ul>
+                  <li>AND: 
+                     <ul>
+                        <li>OR: "Patient Characteristic: Gestational Age &lt;37 weeks"  = 0 day(s) starts before start of ("Procedure, Performed: Delivery
+                           Procedures" during "Occurrence A of Encounter, Performed: Inpatient Encounter")
+                        </li>
+                        <li>OR: "Patient Characteristic: Gestational Age &gt;38 weeks"  = 0 day(s) starts before start of ("Procedure, Performed: Delivery
+                           Procedures" during "Occurrence A of Encounter, Performed: Inpatient Encounter")
+                        </li>
+                        <li>OR: 
+                           <ul>
+                              <li>AND NOT: "Diagnosis, Active: Conditions Possibly Justifying Elective Delivery Prior to 39 Weeks Gestation" ends before start
+                                 of "Occurrence A of Encounter, Performed: Inpatient Encounter"
+                              </li>
+                              <li>AND: "Diagnosis, Active: Conditions Possibly Justifying Elective Delivery Prior to 39 Weeks Gestation" starts before or during
+                                 "Occurrence A of Encounter, Performed: Inpatient Encounter"
+                              </li>
+                           </ul>
+                           
+                        </li>
+                        <li>OR: 
+                           <ul>
+                              <li>OR: "Procedure, Performed: Classical Cesarean Section"</li>
+                              <li>OR: "Procedure, Performed: Myomectomy"</li>
+                              <li> starts before start of "Occurrence A of Encounter, Performed: Inpatient Encounter"</li>
+                           </ul>
+                           
+                        </li>
+                     </ul>
+                     
+                  </li>
+               </ul>
+               
+            </li>
+            <li>
+               <b>Numerator =</b>
+               
+               <ul>
+                  <li>AND: 
+                     <ul>
+                        <li>OR: 
+                           <ul>
+                              <li>AND: "Patient Characteristic: Gestational Age 37-38 weeks"  = 0 day(s) starts before start of ("Procedure, Performed: Delivery
+                                 Procedures" during "Occurrence A of Encounter, Performed: Inpatient Encounter")
+                              </li>
+                              <li>AND: 
+                                 <ul>
+                                    <li>OR: "Procedure, Performed: Medical Induction of Labor"</li>
+                                    <li>OR: 
+                                       <ul>
+                                          <li>OR NOT: "Physical Exam, Finding: Active Labor" starts before start of ("Procedure, Performed: Cesarean Section" during "Occurrence
+                                             A of Encounter, Performed: Inpatient Encounter")
+                                          </li>
+                                          <li>OR NOT: "Diagnosis, Active: Spontaneous Rupture of Membranes" starts before start of ("Procedure, Performed: Cesarean Section"
+                                             during "Occurrence A of Encounter, Performed: Inpatient Encounter")
+                                          </li>
+                                       </ul>
+                                       
+                                    </li>
+                                    <li> during "Occurrence A of Encounter, Performed: Inpatient Encounter"</li>
+                                 </ul>
+                                 
+                              </li>
+                           </ul>
+                           
+                        </li>
+                        <li>OR: 
+                           <ul>
+                              <li>OR NOT: "Patient Characteristic: Gestational Age 37-38 weeks"  = 0 day(s) starts before start of ("Procedure, Performed: Delivery
+                                 Procedures" during "Occurrence A of Encounter, Performed: Inpatient Encounter")
+                              </li>
+                              <li>OR: "Patient Characteristic: Gestational Age Unknown"  = 0 day(s) starts before start of ("Procedure, Performed: Delivery
+                                 Procedures" during "Occurrence A of Encounter, Performed: Inpatient Encounter")
+                              </li>
+                           </ul>
+                           
+                        </li>
+                     </ul>
+                     
+                  </li>
+               </ul>
+               
+            </li>
+            <li>
+               <b>Denominator Exceptions =</b>
+               
+               <ul>
+                  <li>None</li>
+               </ul>
+               
+            </li>
+         </ul>
+         
+      </div>
+      <h3><a name="d21257867e1938" href="#toc">Data criteria (QDM Data Elements)</a></h3>
+      <div>
+         
+         <ul>
+            <li>
+               "Diagnosis, Active: Complication Mainly in the Course of Labor and Delivery" using "Complication Mainly in the Course of Labor and Delivery ICD-9 Value Set (2.16.840.1.113883.3.117.1.7.1.397)"
+            </li>
+            <li>
+               "Diagnosis, Active: Complication Mainly Related to Pregnancy" using "Complication Mainly Related to Pregnancy ICD-9 Value Set (2.16.840.1.113883.3.117.1.7.1.372)"
+            </li>
+            <li>
+               "Diagnosis, Active: Complication of the Puerperium" using "Complication of the Puerperium ICD-9 Value Set (2.16.840.1.113883.3.117.1.7.1.375)"
+            </li>
+            <li>
+               "Diagnosis, Active: Conditions Possibly Justifying Elective Delivery Prior to 39 Weeks Gestation" using "Conditions Possibly Justifying Elective Delivery Prior to 39 Weeks Gestation Grouping Value Set (2.16.840.1.113883.3.117.1.7.1.286)"
+            </li>
+            <li>
+               "Diagnosis, Active: Normal Delivery and Other Indications for Care" using "Normal Delivery and Other Indications for Care ICD-9 Value Set (2.16.840.1.113883.3.117.1.7.1.391)"
+            </li>
+            <li>
+               "Diagnosis, Active: Outcome of Delivery" using "Outcome of Delivery ICD-10 Value Set (2.16.840.1.113883.3.117.1.7.1.408)"
+            </li>
+            <li>
+               "Diagnosis, Active: Spontaneous Rupture of Membranes" using "Spontaneous Rupture of Membranes SNOMED-CT Value Set (2.16.840.1.113883.3.117.1.7.1.300)"
+            </li>
+            <li>
+               "Encounter, Performed: Inpatient Encounter" using "Inpatient Encounter SNOMED-CT Value Set (2.16.840.1.113883.3.117.1.7.1.23)"
+            </li>
+            <li>
+               "Patient Characteristic: Gestational Age &lt;37 weeks" using "Gestational Age &lt;37 weeks SNOMED-CT Value Set (2.16.840.1.113883.3.117.1.7.1.402)"
+            </li>
+            <li>
+               "Patient Characteristic: Gestational Age &gt;38 weeks" using "Gestational Age &gt;38 weeks SNOMED-CT Value Set (2.16.840.1.113883.3.117.1.7.1.403)"
+            </li>
+            <li>
+               "Patient Characteristic: Gestational Age 37-38 weeks" using "Gestational Age 37-38 weeks SNOMED-CT Value Set (2.16.840.1.113883.3.117.1.7.1.287)"
+            </li>
+            <li>
+               "Patient Characteristic: Gestational Age Unknown" using "Gestational Age Unknown SNOMED-CT Value Set (2.16.840.1.113883.3.117.1.7.1.307)"
+            </li>
+            <li>
+               "Patient Characteristic Birthdate: birth date" using "birth date LOINC Value Set (2.16.840.1.113883.3.560.100.4)"
+            </li>
+            <li>
+               "Physical Exam, Finding: Active Labor" using "Active Labor SNOMED-CT Value Set (2.16.840.1.113883.3.117.1.7.1.281)"
+            </li>
+            <li>
+               "Procedure, Performed: Cesarean Section" using "Cesarean Section Grouping Value Set (2.16.840.1.113883.3.117.1.7.1.282)"
+            </li>
+            <li>
+               "Procedure, Performed: Classical Cesarean Section" using "Classical Cesarean Section Grouping Value Set (2.16.840.1.113883.3.117.1.7.1.421)"
+            </li>
+            <li>
+               "Procedure, Performed: Delivery Procedures" using "Delivery Procedures SNOMED-CT Value Set (2.16.840.1.113883.3.117.1.7.1.401)"
+            </li>
+            <li>
+               "Procedure, Performed: Medical Induction of Labor" using "Medical Induction of Labor Grouping Value Set (2.16.840.1.113883.3.117.1.7.1.288)"
+            </li>
+            <li>
+               "Procedure, Performed: Myomectomy" using "Myomectomy SNOMED-CT Value Set (2.16.840.1.113883.3.117.1.7.1.422)"
+            </li>
+         </ul>
+         
+      </div>
+      <h3><a name="d21257867e2627" href="#toc">Reporting Stratification</a></h3>
+      <div>
+         
+         <ul>
+            <li>None</li>
+         </ul>
+         
+      </div>
+      <h3><a name="d21257867e2648" href="#toc">Supplemental Data Elements</a></h3>
+      <div>
+         
+         <ul>
+            <li>
+               "Patient Characteristic Ethnicity: Ethnicity" using "Ethnicity CDC Value Set (2.16.840.1.114222.4.11.837)"
+            </li>
+            <li>
+               "Patient Characteristic Payer: Payer" using "Payer Source of Payment Typology Value Set (2.16.840.1.114222.4.11.3591)"
+            </li>
+            <li>
+               "Patient Characteristic Race: Race" using "Race CDC Value Set (2.16.840.1.114222.4.11.836)"
+            </li>
+            <li>
+               "Patient Characteristic Sex: ONC Administrative Sex" using "ONC Administrative Sex Administrative Sex Value Set (2.16.840.1.113762.1.4.1)"
+            </li>
+         </ul>
+         
+      </div><br><hr align="left" color="teal" size="2" width="80%"><br><table class="header_table">
+         <tbody>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">Measure Set</span></td>
+               <td colspan="3" width="80%">
+                  <div style="width:660px;overflow-x:hidden;overflow-y:auto;word-wrap:break-word">eMeasure Perinatal Care (ePC)</div>
+               </td>
+            </tr>
+         </tbody>
+      </table>
+   </body>
+</html>

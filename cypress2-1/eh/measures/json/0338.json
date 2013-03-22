@@ -1,0 +1,616 @@
+{
+  "id": "8A4D92B2-37BF-6F1B-0137-CCD612A40D0E",
+  "nqf_id": "0338",
+  "hqmf_id": "8A4D92B2-37BF-6F1B-0137-CCD612A40D0E",
+  "hqmf_set_id": "E1CB05E0-97D5-40FC-B456-15C5DBF44309",
+  "hqmf_version_number": 1,
+  "cms_id": "CMS26v1",
+  "endorser": null,
+  "name": "Home Management Plan of Care (HMPC) Document Given to Patient/Caregiver",
+  "description": "An assessment that there is documentation in the medical record that a Home Management Plan of Care (HMPC) document was given to the pediatric asthma patient/caregiver.",
+  "type": "eh",
+  "category": "Asthma",
+  "steward": null,
+  "population": {
+    "conjunction": "and",
+    "items": [
+      {
+        "conjunction": "and",
+        "items": [
+          {
+            "title": "Asthma",
+            "description": "Diagnosis, Active: Asthma",
+            "standard_category": "diagnosis_condition_problem",
+            "qds_data_type": "diagnosis_active",
+            "code_list_id": "2.16.840.1.113883.3.117.1.7.1.271",
+            "type": "conditions",
+            "definition": "diagnosis",
+            "status": "active",
+            "hard_status": false,
+            "negation": false,
+            "source_data_criteria": "DiagnosisActiveAsthma",
+            "field_values": {
+              "ORDINAL": {
+                "type": "CD",
+                "code_list_id": "2.16.840.1.113883.3.117.2.7.1.14",
+                "title": "Principal Diagnosis"
+              }
+            },
+            "temporal_references": [
+              {
+                "type": "SDU",
+                "reference": {
+                  "title": "Inpatient Encounter",
+                  "description": "Encounter, Performed: Inpatient Encounter",
+                  "standard_category": "encounter",
+                  "qds_data_type": "encounter",
+                  "code_list_id": "2.16.840.1.113883.3.117.1.7.1.23",
+                  "type": "encounters",
+                  "definition": "encounter",
+                  "status": "performed",
+                  "hard_status": false,
+                  "negation": false,
+                  "specific_occurrence": "A",
+                  "specific_occurrence_const": "ENCOUNTER_PERFORMED_INPATIENT_ENCOUNTER",
+                  "source_data_criteria": "OccurrenceAInpatientEncounter1"
+                }
+              }
+            ]
+          },
+          {
+            "title": "birth date",
+            "description": "Patient Characteristic Birthdate: birth date",
+            "standard_category": "individual_characteristic",
+            "qds_data_type": "individual_characteristic",
+            "code_list_id": "2.16.840.1.113883.3.560.100.4",
+            "property": "birthtime",
+            "type": "characteristic",
+            "definition": "patient_characteristic_birthdate",
+            "hard_status": false,
+            "negation": false,
+            "source_data_criteria": "PatientCharacteristicBirthdateBirthDate",
+            "inline_code_list": {
+              "LOINC": [
+                "21112-8"
+              ]
+            },
+            "temporal_references": [
+              {
+                "type": "SBS",
+                "reference": {
+                  "title": "Inpatient Encounter",
+                  "description": "Encounter, Performed: Inpatient Encounter",
+                  "standard_category": "encounter",
+                  "qds_data_type": "encounter",
+                  "code_list_id": "2.16.840.1.113883.3.117.1.7.1.23",
+                  "type": "encounters",
+                  "definition": "encounter",
+                  "status": "performed",
+                  "hard_status": false,
+                  "negation": false,
+                  "specific_occurrence": "A",
+                  "specific_occurrence_const": "ENCOUNTER_PERFORMED_INPATIENT_ENCOUNTER",
+                  "source_data_criteria": "OccurrenceAInpatientEncounter1"
+                },
+                "range": {
+                  "type": "IVL_PQ",
+                  "low": {
+                    "type": "PQ",
+                    "unit": "a",
+                    "value": "2",
+                    "inclusive?": true,
+                    "derived?": false
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "title": "birth date",
+            "description": "Patient Characteristic Birthdate: birth date",
+            "standard_category": "individual_characteristic",
+            "qds_data_type": "individual_characteristic",
+            "code_list_id": "2.16.840.1.113883.3.560.100.4",
+            "property": "birthtime",
+            "type": "characteristic",
+            "definition": "patient_characteristic_birthdate",
+            "hard_status": false,
+            "negation": false,
+            "source_data_criteria": "PatientCharacteristicBirthdateBirthDate",
+            "inline_code_list": {
+              "LOINC": [
+                "21112-8"
+              ]
+            },
+            "temporal_references": [
+              {
+                "type": "SBS",
+                "reference": {
+                  "title": "Inpatient Encounter",
+                  "description": "Encounter, Performed: Inpatient Encounter",
+                  "standard_category": "encounter",
+                  "qds_data_type": "encounter",
+                  "code_list_id": "2.16.840.1.113883.3.117.1.7.1.23",
+                  "type": "encounters",
+                  "definition": "encounter",
+                  "status": "performed",
+                  "hard_status": false,
+                  "negation": false,
+                  "specific_occurrence": "A",
+                  "specific_occurrence_const": "ENCOUNTER_PERFORMED_INPATIENT_ENCOUNTER",
+                  "source_data_criteria": "OccurrenceAInpatientEncounter1"
+                },
+                "range": {
+                  "type": "IVL_PQ",
+                  "high": {
+                    "type": "PQ",
+                    "unit": "a",
+                    "value": "17",
+                    "inclusive?": true,
+                    "derived?": false
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "title": "Inpatient Encounter",
+            "description": "Encounter, Performed: Inpatient Encounter",
+            "standard_category": "encounter",
+            "qds_data_type": "encounter",
+            "code_list_id": "2.16.840.1.113883.3.117.1.7.1.23",
+            "type": "encounters",
+            "definition": "encounter",
+            "status": "performed",
+            "hard_status": false,
+            "negation": false,
+            "specific_occurrence": "A",
+            "specific_occurrence_const": "ENCOUNTER_PERFORMED_INPATIENT_ENCOUNTER",
+            "source_data_criteria": "OccurrenceAInpatientEncounter1",
+            "field_values": {
+              "LENGTH_OF_STAY": {
+                "type": "IVL_PQ",
+                "high": {
+                  "type": "PQ",
+                  "unit": "d",
+                  "value": "120",
+                  "inclusive?": true,
+                  "derived?": false
+                }
+              }
+            }
+          },
+          {
+            "title": "Inpatient Encounter",
+            "description": "Encounter, Performed: Inpatient Encounter",
+            "standard_category": "encounter",
+            "qds_data_type": "encounter",
+            "code_list_id": "2.16.840.1.113883.3.117.1.7.1.23",
+            "type": "encounters",
+            "definition": "encounter",
+            "status": "performed",
+            "hard_status": false,
+            "negation": false,
+            "specific_occurrence": "A",
+            "specific_occurrence_const": "ENCOUNTER_PERFORMED_INPATIENT_ENCOUNTER",
+            "source_data_criteria": "OccurrenceAInpatientEncounter1",
+            "field_values": {
+              "DISCHARGE_DATETIME": {
+                "type": "ANYNonNull"
+              }
+            },
+            "temporal_references": [
+              {
+                "type": "DURING",
+                "reference": "MeasurePeriod",
+                "title": "MeasurePeriod"
+              }
+            ]
+          }
+        ],
+        "negation": null,
+        "precondition_id": 23
+      }
+    ]
+  },
+  "denominator": {
+    "conjunction": "and",
+    "items": [
+      {
+        "conjunction": "and",
+        "items": [
+          {
+            "title": "Inpatient Encounter",
+            "description": "Encounter, Performed: Inpatient Encounter",
+            "standard_category": "encounter",
+            "qds_data_type": "encounter",
+            "code_list_id": "2.16.840.1.113883.3.117.1.7.1.23",
+            "type": "encounters",
+            "definition": "encounter",
+            "status": "performed",
+            "hard_status": false,
+            "negation": false,
+            "specific_occurrence": "A",
+            "specific_occurrence_const": "ENCOUNTER_PERFORMED_INPATIENT_ENCOUNTER",
+            "source_data_criteria": "OccurrenceAInpatientEncounter1",
+            "field_values": {
+              "DISCHARGE_STATUS": {
+                "type": "CD",
+                "code_list_id": "2.16.840.1.113883.3.117.1.7.1.82",
+                "title": "Discharge To Home Or Police Custody"
+              }
+            }
+          }
+        ],
+        "negation": null,
+        "precondition_id": 12
+      }
+    ]
+  },
+  "numerator": {
+    "conjunction": "and",
+    "items": [
+      {
+        "conjunction": "and",
+        "items": [
+          {
+            "conjunction": "or",
+            "items": [
+              {
+                "title": "Asthma Management Plan",
+                "description": "Communication: From Provider to Patient: Asthma Management Plan",
+                "standard_category": "communication",
+                "qds_data_type": "communication",
+                "code_list_id": "2.16.840.1.113883.3.117.1.7.1.131",
+                "type": "communications",
+                "definition": "communication_from_provider_to_patient",
+                "hard_status": false,
+                "negation": false,
+                "source_data_criteria": "CommunicationFromProviderToPatientAsthmaManagementPlan",
+                "temporal_references": [
+                  {
+                    "type": "DURING",
+                    "reference": {
+                      "title": "Inpatient Encounter",
+                      "description": "Encounter, Performed: Inpatient Encounter",
+                      "standard_category": "encounter",
+                      "qds_data_type": "encounter",
+                      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.23",
+                      "type": "encounters",
+                      "definition": "encounter",
+                      "status": "performed",
+                      "hard_status": false,
+                      "negation": false,
+                      "specific_occurrence": "A",
+                      "specific_occurrence_const": "ENCOUNTER_PERFORMED_INPATIENT_ENCOUNTER",
+                      "source_data_criteria": "OccurrenceAInpatientEncounter1"
+                    }
+                  }
+                ]
+              },
+              {
+                "title": "Asthma Management Plan",
+                "description": "Communication: From Provider to Patient: Asthma Management Plan",
+                "standard_category": "communication",
+                "qds_data_type": "communication",
+                "code_list_id": "2.16.840.1.113883.3.117.1.7.1.131",
+                "type": "communications",
+                "definition": "communication_from_provider_to_patient",
+                "hard_status": false,
+                "negation": true,
+                "negation_code_list_id": "2.16.840.1.113883.3.117.1.7.1.93",
+                "source_data_criteria": "CommunicationFromProviderToPatientAsthmaManagementPlan",
+                "temporal_references": [
+                  {
+                    "type": "DURING",
+                    "reference": {
+                      "title": "Inpatient Encounter",
+                      "description": "Encounter, Performed: Inpatient Encounter",
+                      "standard_category": "encounter",
+                      "qds_data_type": "encounter",
+                      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.23",
+                      "type": "encounters",
+                      "definition": "encounter",
+                      "status": "performed",
+                      "hard_status": false,
+                      "negation": false,
+                      "specific_occurrence": "A",
+                      "specific_occurrence_const": "ENCOUNTER_PERFORMED_INPATIENT_ENCOUNTER",
+                      "source_data_criteria": "OccurrenceAInpatientEncounter1"
+                    }
+                  }
+                ]
+              }
+            ],
+            "negation": null,
+            "precondition_id": 6
+          }
+        ],
+        "negation": null,
+        "precondition_id": 9
+      }
+    ]
+  },
+  "exclusions": {
+    "conjunction": "and",
+    "items": [
+
+    ]
+  },
+  "map_fn": "function() {\n        var patient = this;\n        var effective_date = <%= effective_date %>;\n\n        hqmfjs = {}\n        <%= init_js_frameworks %>\n        \n        \n      var patient_api = new hQuery.Patient(patient);\n\n      \n\n      // clear out logger\n      if (typeof Logger != 'undefined') { Logger.logger = []; Logger.rationale={};}\n      // turn on logging if it is enabled\n      if (Logger.enabled) enableLogging();\n      \n      \n        // #########################\n        // ##### DATA ELEMENTS #####\n        // #########################\n\n        OidDictionary = <%= oid_dictionary %>;\n        \n        // Measure variables\nvar MeasurePeriod = {\n  \"low\": new TS(\"201201010000\", null, true),\n  \"high\": new TS(\"201212312359\", null, true)\n}\nhqmfjs.MeasurePeriod = function(patient) {\n  return [new hQuery.CodedEntry(\n    {\n      \"start_time\": MeasurePeriod.low.asDate().getTime()/1000,\n      \"end_time\": MeasurePeriod.high.asDate().getTime()/1000,\n      \"codes\": {}\n    }\n  )];\n}\nif (typeof effective_date === 'number') {\n  MeasurePeriod.high.date = new Date(1000*effective_date);\n  // add one minute before pulling off the year.  This turns 12-31-2012 23:59 into 1-1-2013 00:00 => 1-1-2012 00:00\n  MeasurePeriod.low.date = new Date(1000*(effective_date+60));\n  MeasurePeriod.low.date.setFullYear(MeasurePeriod.low.date.getFullYear()-1);\n}\n\n// Data critera\nhqmfjs.OccurrenceAInpatientEncounter1 = function(patient, initialSpecificContext) {\n  var events = patient.encounters();\n  events.specific_occurrence = 'OccurrenceAInpatientEncounter1'\n  events = events.withStatuses([\"performed\"]);\n  events = events.withoutNegation();\n  var codes = getCodes(\"2.16.840.1.113883.3.117.1.7.1.23\");\n  var start = null;\n  var end = null;\n  events = events.match(codes, start, end, true);\n\n  events.specificContext=new hqmf.SpecificOccurrence(Row.buildForDataCriteria(events.specific_occurrence, events))\n  return events;\n}\n\nhqmfjs.EncounterPerformedInpatientEncounter = function(patient, initialSpecificContext) {\n  var events = patient.encounters();\n  events = events.withStatuses([\"performed\"]);\n  events = events.withoutNegation();\n  var codes = getCodes(\"2.16.840.1.113883.3.117.1.7.1.23\");\n  var start = null;\n  var end = null;\n  events = events.match(codes, start, end, true);\n\n  events.specificContext=hqmf.SpecificsManager.identity()\n  return events;\n}\n\nhqmfjs.CommunicationFromProviderToPatientNotDonePatientRefusal = function(patient, initialSpecificContext) {\n  var events = patient.procedures();\n  events = events.withNegation();\n  var codes = getCodes(\"2.16.840.1.113883.3.117.1.7.1.93\");\n  var start = null;\n  var end = null;\n  events = events.match(codes, start, end, true);\n\n  events.specificContext=hqmf.SpecificsManager.identity()\n  return events;\n}\n\nhqmfjs.OccurrenceAInpatientEncounter1 = function(patient, initialSpecificContext) {\n  var events = patient.encounters();\n  events.specific_occurrence = 'OccurrenceAInpatientEncounter1'\n  events = events.withStatuses([\"performed\"]);\n  events = events.withoutNegation();\n  var codes = getCodes(\"2.16.840.1.113883.3.117.1.7.1.23\");\n  var start = null;\n  var end = null;\n  events = events.match(codes, start, end, true);\n\n  events.specificContext=new hqmf.SpecificOccurrence(Row.buildForDataCriteria(events.specific_occurrence, events))\n  return events;\n}\n\nhqmfjs.OccurrenceAInpatientEncounter1_precondition_7 = function(patient, initialSpecificContext) {\n  var events = patient.encounters();\n  events.specific_occurrence = 'OccurrenceAInpatientEncounter1'\n  events = events.withStatuses([\"performed\"]);\n  events = events.withoutNegation();\n  var codes = getCodes(\"2.16.840.1.113883.3.117.1.7.1.23\");\n  var start = null;\n  var end = null;\n  events = events.match(codes, start, end, true);\n\n  events.specificContext=new hqmf.SpecificOccurrence(Row.buildForDataCriteria(events.specific_occurrence, events))\n  return events;\n}\n\nhqmfjs.CommunicationFromProviderToPatientAsthmaManagementPlan_precondition_2 = function(patient, initialSpecificContext) {\n  var events = patient.procedures();\n  events = events.withoutNegation();\n  var codes = getCodes(\"2.16.840.1.113883.3.117.1.7.1.131\");\n  var start = null;\n  var end = null;\n  events = events.match(codes, start, end, true);\n\n  if (events.length > 0) events = DURING(events, hqmfjs.OccurrenceAInpatientEncounter1_precondition_7(patient));\n  else events.specificContext=hqmf.SpecificsManager.empty();\n  return events;\n}\n\nhqmfjs.CommunicationFromProviderToPatientAsthmaManagementPlan_precondition_4 = function(patient, initialSpecificContext) {\n  var events = patient.procedures();\n  events = events.withNegation(getCodes(\"2.16.840.1.113883.3.117.1.7.1.93\"));\n  var codes = getCodes(\"2.16.840.1.113883.3.117.1.7.1.131\");\n  var start = null;\n  var end = null;\n  events = events.match(codes, start, end, true);\n\n  if (events.length > 0) events = DURING(events, hqmfjs.OccurrenceAInpatientEncounter1_precondition_7(patient));\n  else events.specificContext=hqmf.SpecificsManager.empty();\n  return events;\n}\n\nhqmfjs.OccurrenceAInpatientEncounter1_precondition_10 = function(patient, initialSpecificContext) {\n  var events = patient.encounters();\n  events.specific_occurrence = 'OccurrenceAInpatientEncounter1'\n  events = events.withStatuses([\"performed\"]);\n  events = events.withoutNegation();\n  var codes = getCodes(\"2.16.840.1.113883.3.117.1.7.1.23\");\n  var start = null;\n  var end = null;\n  events = events.match(codes, start, end, true);\n\n  events = filterEventsByField(events, \"dischargeDisposition\", new CodeList(getCodes(\"2.16.840.1.113883.3.117.1.7.1.82\")));\n  events.specificContext=new hqmf.SpecificOccurrence(Row.buildForDataCriteria(events.specific_occurrence, events))\n  return events;\n}\n\nhqmfjs.DiagnosisActiveAsthma_precondition_13 = function(patient, initialSpecificContext) {\n  var events = patient.allProblems();\n  events = events.withStatuses([\"active\"]);\n  events = events.withoutNegation();\n  var codes = getCodes(\"2.16.840.1.113883.3.117.1.7.1.271\");\n  var start = null;\n  var end = null;\n  events = events.match(codes, start, end, true);\n\n  events = filterEventsByField(events, \"ordinality\", new CodeList(getCodes(\"2.16.840.1.113883.3.117.2.7.1.14\")));\n  if (events.length > 0) events = SDU(events, hqmfjs.OccurrenceAInpatientEncounter1(patient));\n  else events.specificContext=hqmf.SpecificsManager.empty();\n  return events;\n}\n\nhqmfjs.PatientCharacteristicBirthdateBirthDate_precondition_15 = function(patient, initialSpecificContext) {\nvar value = patient.birthtime();\nvar events = [value];\nevents = SBS(events, hqmfjs.OccurrenceAInpatientEncounter1(patient), new IVL_PQ(new PQ(2, \"a\", true), null));\nevents.specificContext=hqmf.SpecificsManager.identity();\nreturn events;\n\n}\n\nhqmfjs.PatientCharacteristicBirthdateBirthDate_precondition_17 = function(patient, initialSpecificContext) {\nvar value = patient.birthtime();\nvar events = [value];\nevents = SBS(events, hqmfjs.OccurrenceAInpatientEncounter1(patient), new IVL_PQ(null, new PQ(17, \"a\", true)));\nevents.specificContext=hqmf.SpecificsManager.identity();\nreturn events;\n\n}\n\nhqmfjs.OccurrenceAInpatientEncounter1_precondition_19 = function(patient, initialSpecificContext) {\n  var events = patient.encounters();\n  events.specific_occurrence = 'OccurrenceAInpatientEncounter1'\n  events = events.withStatuses([\"performed\"]);\n  events = events.withoutNegation();\n  var codes = getCodes(\"2.16.840.1.113883.3.117.1.7.1.23\");\n  var start = null;\n  var end = null;\n  events = events.match(codes, start, end, true);\n\n  events = filterEventsByField(events, \"lengthOfStay\", new IVL_PQ(null, new PQ(120, \"d\", true)));\n  events.specificContext=new hqmf.SpecificOccurrence(Row.buildForDataCriteria(events.specific_occurrence, events))\n  return events;\n}\n\nhqmfjs.OccurrenceAInpatientEncounter1_precondition_21 = function(patient, initialSpecificContext) {\n  var events = patient.encounters();\n  events.specific_occurrence = 'OccurrenceAInpatientEncounter1'\n  events = events.withStatuses([\"performed\"]);\n  events = events.withoutNegation();\n  var codes = getCodes(\"2.16.840.1.113883.3.117.1.7.1.23\");\n  var start = null;\n  var end = null;\n  events = events.match(codes, start, end, true);\n\n  events = adjustBoundsForField(events, \"dischargeTime\", new ANYNonNull());\n  if (events.length > 0) events = DURING(events, hqmfjs.MeasurePeriod(patient));\n  else events.specificContext=hqmf.SpecificsManager.empty();\n  return events;\n}\n\n\n\n        // #########################\n        // ##### MEASURE LOGIC #####\n        // #########################\n        \n        hqmfjs.initializeSpecifics = function(patient_api, hqmfjs) { hqmf.SpecificsManager.initialize(patient_api,hqmfjs,{\"id\":\"OccurrenceAInpatientEncounter1\",\"type\":\"ENCOUNTER_PERFORMED_INPATIENT_ENCOUNTER\",\"function\":\"OccurrenceAInpatientEncounter1\"}) }\n\n        // INITIAL PATIENT POPULATION\n        hqmfjs.IPP = function(patient, initialSpecificContext) {\n  return allTrue('IPP',  \n    allTrue('23',     hqmfjs.DiagnosisActiveAsthma_precondition_13(patient, initialSpecificContext),     hqmfjs.PatientCharacteristicBirthdateBirthDate_precondition_15(patient, initialSpecificContext),     hqmfjs.PatientCharacteristicBirthdateBirthDate_precondition_17(patient, initialSpecificContext),     hqmfjs.OccurrenceAInpatientEncounter1_precondition_19(patient, initialSpecificContext),     hqmfjs.OccurrenceAInpatientEncounter1_precondition_21(patient, initialSpecificContext)\n    )\n  );\n};\n\n\n        // DENOMINATOR\n        hqmfjs.DENOM = function(patient, initialSpecificContext) {\n  return allTrue('DENOM',  \n    allTrue('12',     hqmfjs.OccurrenceAInpatientEncounter1_precondition_10(patient, initialSpecificContext)\n    )\n  );\n};\n\n\n        // NUMERATOR\n        hqmfjs.NUMER = function(patient, initialSpecificContext) {\n  return allTrue('NUMER',  \n    allTrue('9',    \n      atLeastOneTrue('6',       hqmfjs.CommunicationFromProviderToPatientAsthmaManagementPlan_precondition_2(patient, initialSpecificContext),       hqmfjs.CommunicationFromProviderToPatientAsthmaManagementPlan_precondition_4(patient, initialSpecificContext)\n      )\n    )\n  );\n};\n\n\n        hqmfjs.DENEX = function(patient) { return new Boolean(false); }\n        hqmfjs.DENEXCEP = function(patient) { return new Boolean(false); }\n        // CV\n        hqmfjs.MSRPOPL = function(patient) { return new Boolean(false); }\n        hqmfjs.OBSERV = function(patient) { return new Boolean(false); }\n        \n      \n      var occurrenceId = [\"OccurrenceAInpatientEncounter1\"];\n\n      hqmfjs.initializeSpecifics(patient_api, hqmfjs)\n      \n      var population = function() {\n        return executeIfAvailable(hqmfjs.IPP, patient_api);\n      }\n      var denominator = function() {\n        return executeIfAvailable(hqmfjs.DENOM, patient_api);\n      }\n      var numerator = function() {\n        return executeIfAvailable(hqmfjs.NUMER, patient_api);\n      }\n      var exclusion = function() {\n        return executeIfAvailable(hqmfjs.DENEX, patient_api);\n      }\n      var denexcep = function() {\n        return executeIfAvailable(hqmfjs.DENEXCEP, patient_api);\n      }\n      var msrpopl = function() {\n        return executeIfAvailable(hqmfjs.MSRPOPL, patient_api);\n      }\n      var observ = function(specific_context) {\n        \n        var observFunc = hqmfjs.OBSERV\n        if (typeof(observFunc)==='function')\n          return observFunc(patient_api, specific_context);\n        else\n          return [];\n      }\n      \n      var executeIfAvailable = function(optionalFunction, arg) {\n        if (typeof(optionalFunction)==='function')\n          return optionalFunction(arg);\n        else\n          return false;\n      }\n\n      if (Logger.enabled) enableMeasureLogging(hqmfjs);\n\n      map(patient, population, denominator, numerator, exclusion, denexcep, msrpopl, observ, occurrenceId,false);\n      \n      };\n      ",
+  "continuous_variable": false,
+  "episode_of_care": true,
+  "data_criteria": [
+    {
+      "CommunicationFromProviderToPatientAsthmaManagementPlan_precondition_2": {
+        "title": "Asthma Management Plan",
+        "description": "Communication: From Provider to Patient: Asthma Management Plan",
+        "standard_category": "communication",
+        "qds_data_type": "communication",
+        "code_list_id": "2.16.840.1.113883.3.117.1.7.1.131",
+        "type": "communications",
+        "definition": "communication_from_provider_to_patient",
+        "hard_status": false,
+        "negation": false,
+        "source_data_criteria": "CommunicationFromProviderToPatientAsthmaManagementPlan",
+        "temporal_references": [
+          {
+            "type": "DURING",
+            "reference": "OccurrenceAInpatientEncounter1_precondition_7"
+          }
+        ]
+      }
+    },
+    {
+      "OccurrenceAInpatientEncounter1_precondition_7": {
+        "title": "Inpatient Encounter",
+        "description": "Encounter, Performed: Inpatient Encounter",
+        "standard_category": "encounter",
+        "qds_data_type": "encounter",
+        "code_list_id": "2.16.840.1.113883.3.117.1.7.1.23",
+        "type": "encounters",
+        "definition": "encounter",
+        "status": "performed",
+        "hard_status": false,
+        "negation": false,
+        "specific_occurrence": "A",
+        "specific_occurrence_const": "ENCOUNTER_PERFORMED_INPATIENT_ENCOUNTER",
+        "source_data_criteria": "OccurrenceAInpatientEncounter1"
+      }
+    },
+    {
+      "CommunicationFromProviderToPatientAsthmaManagementPlan_precondition_4": {
+        "title": "Asthma Management Plan",
+        "description": "Communication: From Provider to Patient: Asthma Management Plan",
+        "standard_category": "communication",
+        "qds_data_type": "communication",
+        "code_list_id": "2.16.840.1.113883.3.117.1.7.1.131",
+        "type": "communications",
+        "definition": "communication_from_provider_to_patient",
+        "hard_status": false,
+        "negation": true,
+        "negation_code_list_id": "2.16.840.1.113883.3.117.1.7.1.93",
+        "source_data_criteria": "CommunicationFromProviderToPatientAsthmaManagementPlan",
+        "temporal_references": [
+          {
+            "type": "DURING",
+            "reference": "OccurrenceAInpatientEncounter1_precondition_7"
+          }
+        ]
+      }
+    },
+    {
+      "OccurrenceAInpatientEncounter1_precondition_10": {
+        "title": "Inpatient Encounter",
+        "description": "Encounter, Performed: Inpatient Encounter",
+        "standard_category": "encounter",
+        "qds_data_type": "encounter",
+        "code_list_id": "2.16.840.1.113883.3.117.1.7.1.23",
+        "type": "encounters",
+        "definition": "encounter",
+        "status": "performed",
+        "hard_status": false,
+        "negation": false,
+        "specific_occurrence": "A",
+        "specific_occurrence_const": "ENCOUNTER_PERFORMED_INPATIENT_ENCOUNTER",
+        "source_data_criteria": "OccurrenceAInpatientEncounter1",
+        "field_values": {
+          "DISCHARGE_STATUS": {
+            "type": "CD",
+            "code_list_id": "2.16.840.1.113883.3.117.1.7.1.82",
+            "title": "Discharge To Home Or Police Custody"
+          }
+        }
+      }
+    },
+    {
+      "DiagnosisActiveAsthma_precondition_13": {
+        "title": "Asthma",
+        "description": "Diagnosis, Active: Asthma",
+        "standard_category": "diagnosis_condition_problem",
+        "qds_data_type": "diagnosis_active",
+        "code_list_id": "2.16.840.1.113883.3.117.1.7.1.271",
+        "type": "conditions",
+        "definition": "diagnosis",
+        "status": "active",
+        "hard_status": false,
+        "negation": false,
+        "source_data_criteria": "DiagnosisActiveAsthma",
+        "field_values": {
+          "ORDINAL": {
+            "type": "CD",
+            "code_list_id": "2.16.840.1.113883.3.117.2.7.1.14",
+            "title": "Principal Diagnosis"
+          }
+        },
+        "temporal_references": [
+          {
+            "type": "SDU",
+            "reference": "OccurrenceAInpatientEncounter1"
+          }
+        ]
+      }
+    },
+    {
+      "OccurrenceAInpatientEncounter1": {
+        "title": "Inpatient Encounter",
+        "description": "Encounter, Performed: Inpatient Encounter",
+        "standard_category": "encounter",
+        "qds_data_type": "encounter",
+        "code_list_id": "2.16.840.1.113883.3.117.1.7.1.23",
+        "type": "encounters",
+        "definition": "encounter",
+        "status": "performed",
+        "hard_status": false,
+        "negation": false,
+        "specific_occurrence": "A",
+        "specific_occurrence_const": "ENCOUNTER_PERFORMED_INPATIENT_ENCOUNTER",
+        "source_data_criteria": "OccurrenceAInpatientEncounter1"
+      }
+    },
+    {
+      "PatientCharacteristicBirthdateBirthDate_precondition_15": {
+        "title": "birth date",
+        "description": "Patient Characteristic Birthdate: birth date",
+        "standard_category": "individual_characteristic",
+        "qds_data_type": "individual_characteristic",
+        "code_list_id": "2.16.840.1.113883.3.560.100.4",
+        "property": "birthtime",
+        "type": "characteristic",
+        "definition": "patient_characteristic_birthdate",
+        "hard_status": false,
+        "negation": false,
+        "source_data_criteria": "PatientCharacteristicBirthdateBirthDate",
+        "inline_code_list": {
+          "LOINC": [
+            "21112-8"
+          ]
+        },
+        "temporal_references": [
+          {
+            "type": "SBS",
+            "reference": "OccurrenceAInpatientEncounter1",
+            "range": {
+              "type": "IVL_PQ",
+              "low": {
+                "type": "PQ",
+                "unit": "a",
+                "value": "2",
+                "inclusive?": true,
+                "derived?": false
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "PatientCharacteristicBirthdateBirthDate_precondition_17": {
+        "title": "birth date",
+        "description": "Patient Characteristic Birthdate: birth date",
+        "standard_category": "individual_characteristic",
+        "qds_data_type": "individual_characteristic",
+        "code_list_id": "2.16.840.1.113883.3.560.100.4",
+        "property": "birthtime",
+        "type": "characteristic",
+        "definition": "patient_characteristic_birthdate",
+        "hard_status": false,
+        "negation": false,
+        "source_data_criteria": "PatientCharacteristicBirthdateBirthDate",
+        "inline_code_list": {
+          "LOINC": [
+            "21112-8"
+          ]
+        },
+        "temporal_references": [
+          {
+            "type": "SBS",
+            "reference": "OccurrenceAInpatientEncounter1",
+            "range": {
+              "type": "IVL_PQ",
+              "high": {
+                "type": "PQ",
+                "unit": "a",
+                "value": "17",
+                "inclusive?": true,
+                "derived?": false
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "OccurrenceAInpatientEncounter1_precondition_19": {
+        "title": "Inpatient Encounter",
+        "description": "Encounter, Performed: Inpatient Encounter",
+        "standard_category": "encounter",
+        "qds_data_type": "encounter",
+        "code_list_id": "2.16.840.1.113883.3.117.1.7.1.23",
+        "type": "encounters",
+        "definition": "encounter",
+        "status": "performed",
+        "hard_status": false,
+        "negation": false,
+        "specific_occurrence": "A",
+        "specific_occurrence_const": "ENCOUNTER_PERFORMED_INPATIENT_ENCOUNTER",
+        "source_data_criteria": "OccurrenceAInpatientEncounter1",
+        "field_values": {
+          "LENGTH_OF_STAY": {
+            "type": "IVL_PQ",
+            "high": {
+              "type": "PQ",
+              "unit": "d",
+              "value": "120",
+              "inclusive?": true,
+              "derived?": false
+            }
+          }
+        }
+      }
+    },
+    {
+      "OccurrenceAInpatientEncounter1_precondition_21": {
+        "title": "Inpatient Encounter",
+        "description": "Encounter, Performed: Inpatient Encounter",
+        "standard_category": "encounter",
+        "qds_data_type": "encounter",
+        "code_list_id": "2.16.840.1.113883.3.117.1.7.1.23",
+        "type": "encounters",
+        "definition": "encounter",
+        "status": "performed",
+        "hard_status": false,
+        "negation": false,
+        "specific_occurrence": "A",
+        "specific_occurrence_const": "ENCOUNTER_PERFORMED_INPATIENT_ENCOUNTER",
+        "source_data_criteria": "OccurrenceAInpatientEncounter1",
+        "field_values": {
+          "DISCHARGE_DATETIME": {
+            "type": "ANYNonNull"
+          }
+        },
+        "temporal_references": [
+          {
+            "type": "DURING",
+            "reference": "MeasurePeriod"
+          }
+        ]
+      }
+    }
+  ],
+  "oids": [
+    "2.16.840.1.113883.3.560.100.4",
+    "2.16.840.1.113883.3.117.2.7.1.14",
+    "2.16.840.1.113883.3.117.1.7.1.93",
+    "2.16.840.1.113883.3.117.1.7.1.82",
+    "2.16.840.1.113883.3.117.1.7.1.271",
+    "2.16.840.1.113883.3.117.1.7.1.23",
+    "2.16.840.1.113883.3.117.1.7.1.131"
+  ],
+  "population_ids": {
+    "IPP": "9D87B158-4A9F-46C8-B49C-8AA49084372D",
+    "DENOM": "34CCB5C0-82C7-4B60-8492-255CAD81D868",
+    "NUMER": "A61B4390-F385-4BF1-90CB-09E149170D17",
+    "DENEX": "D65B0EAA-7A1F-4904-915D-198120B11FE9"
+  }
+}

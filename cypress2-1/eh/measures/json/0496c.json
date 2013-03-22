@@ -1,0 +1,513 @@
+{
+  "id": "8A4D92B2-37D1-F95B-0137-DD4B0EB62DE6",
+  "nqf_id": "0496",
+  "hqmf_id": "8A4D92B2-37D1-F95B-0137-DD4B0EB62DE6",
+  "hqmf_set_id": "3FD13096-2C8F-40B5-9297-B714E8DE9133",
+  "hqmf_version_number": 2,
+  "cms_id": "CMS32v2",
+  "endorser": null,
+  "name": "Median Time from ED Arrival to ED Departure for Discharged ED Patients",
+  "description": "Median time from emergency department arrival to time of departure from the emergency room for patients discharged from the emergency department.",
+  "type": "eh",
+  "category": "Emergency Department",
+  "steward": null,
+  "population": {
+    "conjunction": "and",
+    "items": [
+      {
+        "conjunction": "and",
+        "items": [
+          {
+            "title": "Hospital Measures-Joint Commission Mental Disorders",
+            "description": "Diagnosis, Active: Hospital Measures-Joint Commission Mental Disorders",
+            "standard_category": "diagnosis_condition_problem",
+            "qds_data_type": "diagnosis_active",
+            "code_list_id": "1.3.6.1.4.1.33895.1.3.0.42",
+            "type": "conditions",
+            "definition": "diagnosis",
+            "status": "active",
+            "hard_status": false,
+            "negation": false,
+            "source_data_criteria": "DiagnosisActiveHospitalMeasuresJointCommissionMentalDisorders",
+            "field_values": {
+              "ORDINAL": {
+                "type": "CD",
+                "code_list_id": "2.16.840.1.113883.3.666.5.3010",
+                "title": "Hospital Measures - Principal"
+              }
+            },
+            "temporal_references": [
+              {
+                "type": "SDU",
+                "reference": {
+                  "title": "Hospital Measures - Encounter ED",
+                  "description": "Encounter, Performed: Hospital Measures - Encounter ED",
+                  "standard_category": "encounter",
+                  "qds_data_type": "encounter",
+                  "code_list_id": "2.16.840.1.113883.3.666.5.900",
+                  "type": "encounters",
+                  "definition": "encounter",
+                  "status": "performed",
+                  "hard_status": false,
+                  "negation": false,
+                  "specific_occurrence": "A",
+                  "specific_occurrence_const": "ENCOUNTER_PERFORMED_HOSPITAL_MEASURES_ENCOUNTER_ED",
+                  "source_data_criteria": "OccurrenceAHospitalMeasuresEncounterEd1"
+                }
+              }
+            ]
+          },
+          {
+            "title": "Hospital Measures - Encounter ED",
+            "description": "Encounter, Performed: Hospital Measures - Encounter ED",
+            "standard_category": "encounter",
+            "qds_data_type": "encounter",
+            "code_list_id": "2.16.840.1.113883.3.666.5.900",
+            "type": "encounters",
+            "definition": "encounter",
+            "status": "performed",
+            "hard_status": false,
+            "negation": false,
+            "specific_occurrence": "A",
+            "specific_occurrence_const": "ENCOUNTER_PERFORMED_HOSPITAL_MEASURES_ENCOUNTER_ED",
+            "source_data_criteria": "OccurrenceAHospitalMeasuresEncounterEd1",
+            "field_values": {
+              "FACILITY_LOCATION_ARRIVAL_DATETIME": null
+            },
+            "temporal_references": [
+              {
+                "type": "DURING",
+                "reference": "MeasurePeriod",
+                "title": "MeasurePeriod"
+              }
+            ]
+          }
+        ],
+        "negation": null,
+        "precondition_id": 26
+      }
+    ]
+  },
+  "denominator": null,
+  "numerator": null,
+  "exclusions": null,
+  "map_fn": "function() {\n        var patient = this;\n        var effective_date = <%= effective_date %>;\n\n        hqmfjs = {}\n        <%= init_js_frameworks %>\n        \n        \n      var patient_api = new hQuery.Patient(patient);\n\n      \n\n      // clear out logger\n      if (typeof Logger != 'undefined') { Logger.logger = []; Logger.rationale={};}\n      // turn on logging if it is enabled\n      if (Logger.enabled) enableLogging();\n      \n      \n        // #########################\n        // ##### DATA ELEMENTS #####\n        // #########################\n\n        OidDictionary = <%= oid_dictionary %>;\n        \n        // Measure variables\nvar MeasurePeriod = {\n  \"low\": new TS(\"201201010000\", null, true),\n  \"high\": new TS(\"201212312359\", null, true)\n}\nhqmfjs.MeasurePeriod = function(patient) {\n  return [new hQuery.CodedEntry(\n    {\n      \"start_time\": MeasurePeriod.low.asDate().getTime()/1000,\n      \"end_time\": MeasurePeriod.high.asDate().getTime()/1000,\n      \"codes\": {}\n    }\n  )];\n}\nif (typeof effective_date === 'number') {\n  MeasurePeriod.high.date = new Date(1000*effective_date);\n  // add one minute before pulling off the year.  This turns 12-31-2012 23:59 into 1-1-2013 00:00 => 1-1-2012 00:00\n  MeasurePeriod.low.date = new Date(1000*(effective_date+60));\n  MeasurePeriod.low.date.setFullYear(MeasurePeriod.low.date.getFullYear()-1);\n}\n\n// Data critera\nhqmfjs.OccurrenceAHospitalMeasuresEncounterEd1 = function(patient, initialSpecificContext) {\n  var events = patient.encounters();\n  events.specific_occurrence = 'OccurrenceAHospitalMeasuresEncounterEd1'\n  events = events.withStatuses([\"performed\"]);\n  events = events.withoutNegation();\n  var codes = getCodes(\"2.16.840.1.113883.3.666.5.900\");\n  var start = null;\n  var end = null;\n  events = events.match(codes, start, end, true);\n\n  events.specificContext=new hqmf.SpecificOccurrence(Row.buildForDataCriteria(events.specific_occurrence, events))\n  return events;\n}\n\nhqmfjs.EncounterPerformedHospitalMeasuresEncounterEd = function(patient, initialSpecificContext) {\n  var events = patient.encounters();\n  events = events.withStatuses([\"performed\"]);\n  events = events.withoutNegation();\n  var codes = getCodes(\"2.16.840.1.113883.3.666.5.900\");\n  var start = null;\n  var end = null;\n  events = events.match(codes, start, end, true);\n\n  events.specificContext=hqmf.SpecificsManager.identity()\n  return events;\n}\n\nhqmfjs.OccurrenceAHospitalMeasuresEncounterEd1 = function(patient, initialSpecificContext) {\n  var events = patient.encounters();\n  events.specific_occurrence = 'OccurrenceAHospitalMeasuresEncounterEd1'\n  events = events.withStatuses([\"performed\"]);\n  events = events.withoutNegation();\n  var codes = getCodes(\"2.16.840.1.113883.3.666.5.900\");\n  var start = null;\n  var end = null;\n  events = events.match(codes, start, end, true);\n\n  events.specificContext=new hqmf.SpecificOccurrence(Row.buildForDataCriteria(events.specific_occurrence, events))\n  return events;\n}\n\nhqmfjs.OccurrenceAHospitalMeasuresEncounterEd1_precondition_2 = function(patient, initialSpecificContext) {\n  var events = patient.encounters();\n  events.specific_occurrence = 'OccurrenceAHospitalMeasuresEncounterEd1'\n  events = events.withStatuses([\"performed\"]);\n  events = events.withoutNegation();\n  var codes = getCodes(\"2.16.840.1.113883.3.666.5.900\");\n  var start = null;\n  var end = null;\n  events = events.match(codes, start, end, true);\n\n  events = denormalizeEventsByLocation(events, \"facilityArrival\", null);\n  if (events.length > 0) events = DURING(events, hqmfjs.MeasurePeriod(patient));\n  else events.specificContext=hqmf.SpecificsManager.empty();\n  return events;\n}\n\nhqmfjs.EncounterPerformedHospitalMeasuresEncounterInpatient_precondition_5 = function(patient, initialSpecificContext) {\n  var events = patient.encounters();\n  events = events.withStatuses([\"performed\"]);\n  events = events.withoutNegation();\n  var codes = getCodes(\"2.16.840.1.113883.3.666.5.625\");\n  var start = null;\n  var end = null;\n  events = events.match(codes, start, end, true);\n\n  if (events.length > 0) events = SAE(events, hqmfjs.OccurrenceAHospitalMeasuresEncounterEd1(patient), new IVL_PQ(null, new PQ(6, \"h\", true)));\n  else events.specificContext=hqmf.SpecificsManager.empty();\n  return events;\n}\n\nhqmfjs.OccurrenceAHospitalMeasuresEncounterEd1_precondition_7 = function(patient, initialSpecificContext) {\n  var events = patient.encounters();\n  events.specific_occurrence = 'OccurrenceAHospitalMeasuresEncounterEd1'\n  events = events.withStatuses([\"performed\"]);\n  events = events.withoutNegation();\n  var codes = getCodes(\"2.16.840.1.113883.3.666.5.900\");\n  var start = null;\n  var end = null;\n  events = events.match(codes, start, end, true);\n\n  events = filterEventsByField(events, \"dischargeDisposition\", new CodeList(getCodes(\"2.16.840.1.113883.3.666.5.1146\")));\n  events.specificContext=new hqmf.SpecificOccurrence(Row.buildForDataCriteria(events.specific_occurrence, events))\n  return events;\n}\n\nhqmfjs.OccurrenceAHospitalMeasuresEncounterEd1_precondition_10 = function(patient, initialSpecificContext) {\n  var events = patient.encounters();\n  events.specific_occurrence = 'OccurrenceAHospitalMeasuresEncounterEd1'\n  events = events.withStatuses([\"performed\"]);\n  events = events.withoutNegation();\n  var codes = getCodes(\"2.16.840.1.113883.3.666.5.900\");\n  var start = null;\n  var end = null;\n  events = events.match(codes, start, end, true);\n\n  events = denormalizeEventsByLocation(events, \"facilityArrival\", null);\n  events.specificContext=new hqmf.SpecificOccurrence(Row.buildForDataCriteria(events.specific_occurrence, events))\n  return events;\n}\n\nhqmfjs.OccurrenceAHospitalMeasuresEncounterEd1_precondition_12 = function(patient, initialSpecificContext) {\n  var events = patient.encounters();\n  events.specific_occurrence = 'OccurrenceAHospitalMeasuresEncounterEd1'\n  events = events.withStatuses([\"performed\"]);\n  events = events.withoutNegation();\n  var codes = getCodes(\"2.16.840.1.113883.3.666.5.900\");\n  var start = null;\n  var end = null;\n  events = events.match(codes, start, end, true);\n\n  events = denormalizeEventsByLocation(events, \"facilityDeparture\", null);\n  events.specificContext=new hqmf.SpecificOccurrence(Row.buildForDataCriteria(events.specific_occurrence, events))\n  return events;\n}\n\nhqmfjs.GROUP_TIMEDIFF_43 = function(patient, initialSpecificContext) {\n  var events = XPRODUCT(\n    hqmfjs.OccurrenceAHospitalMeasuresEncounterEd1_precondition_10(patient, initialSpecificContext),\n    hqmfjs.OccurrenceAHospitalMeasuresEncounterEd1_precondition_12(patient, initialSpecificContext)\n  );\n\n  events.specificContext=hqmf.SpecificsManager.identity()\n  events = TIMEDIFF(events, new ANYNonNull(), initialSpecificContext);\n  return events;\n}\n\nhqmfjs.OccurrenceAHospitalMeasuresEncounterEd1_precondition_19 = function(patient, initialSpecificContext) {\n  var events = patient.encounters();\n  events.specific_occurrence = 'OccurrenceAHospitalMeasuresEncounterEd1'\n  events = events.withStatuses([\"performed\"]);\n  events = events.withoutNegation();\n  var codes = getCodes(\"2.16.840.1.113883.3.666.5.900\");\n  var start = null;\n  var end = null;\n  events = events.match(codes, start, end, true);\n\n  events = denormalizeEventsByLocation(events, \"facilityArrival\", null);\n  if (events.length > 0) events = DURING(events, hqmfjs.MeasurePeriod(patient));\n  else events.specificContext=hqmf.SpecificsManager.empty();\n  return events;\n}\n\nhqmfjs.DiagnosisActiveHospitalMeasuresJointCommissionMentalDisorders_precondition_22 = function(patient, initialSpecificContext) {\n  var events = patient.allProblems();\n  events = events.withStatuses([\"active\"]);\n  events = events.withoutNegation();\n  var codes = getCodes(\"1.3.6.1.4.1.33895.1.3.0.42\");\n  var start = null;\n  var end = null;\n  events = events.match(codes, start, end, true);\n\n  events = filterEventsByField(events, \"ordinality\", new CodeList(getCodes(\"2.16.840.1.113883.3.666.5.3010\")));\n  if (events.length > 0) events = SDU(events, hqmfjs.OccurrenceAHospitalMeasuresEncounterEd1(patient));\n  else events.specificContext=hqmf.SpecificsManager.empty();\n  return events;\n}\n\nhqmfjs.OccurrenceAHospitalMeasuresEncounterEd1_precondition_24 = function(patient, initialSpecificContext) {\n  var events = patient.encounters();\n  events.specific_occurrence = 'OccurrenceAHospitalMeasuresEncounterEd1'\n  events = events.withStatuses([\"performed\"]);\n  events = events.withoutNegation();\n  var codes = getCodes(\"2.16.840.1.113883.3.666.5.900\");\n  var start = null;\n  var end = null;\n  events = events.match(codes, start, end, true);\n\n  events = denormalizeEventsByLocation(events, \"facilityArrival\", null);\n  if (events.length > 0) events = DURING(events, hqmfjs.MeasurePeriod(patient));\n  else events.specificContext=hqmf.SpecificsManager.empty();\n  return events;\n}\n\nhqmfjs.TransferToHospitalMeasuresAcuteCareHospital_precondition_27 = function(patient, initialSpecificContext) {\n  var events = patient.encounters();\n  events = events.withoutNegation();\n  var codes = null;\n  var start = null;\n  var end = null;\n  events = events.match(codes, start, end, true);\n\n  events = filterEventsByField(events, \"transferTo\", new CodeList(getCodes(\"2.16.840.1.113883.3.666.5.3013\")));\n  if (events.length > 0) events = SAE(events, hqmfjs.OccurrenceAHospitalMeasuresEncounterEd1(patient), new IVL_PQ(null, new PQ(6, \"h\", true)));\n  else events.specificContext=hqmf.SpecificsManager.empty();\n  return events;\n}\n\nhqmfjs.OccurrenceAHospitalMeasuresEncounterEd1_precondition_29 = function(patient, initialSpecificContext) {\n  var events = patient.encounters();\n  events.specific_occurrence = 'OccurrenceAHospitalMeasuresEncounterEd1'\n  events = events.withStatuses([\"performed\"]);\n  events = events.withoutNegation();\n  var codes = getCodes(\"2.16.840.1.113883.3.666.5.900\");\n  var start = null;\n  var end = null;\n  events = events.match(codes, start, end, true);\n\n  events = denormalizeEventsByLocation(events, \"facilityArrival\", null);\n  if (events.length > 0) events = DURING(events, hqmfjs.MeasurePeriod(patient));\n  else events.specificContext=hqmf.SpecificsManager.empty();\n  return events;\n}\n\nhqmfjs.OccurrenceAHospitalMeasuresEncounterEd1_precondition_38 = function(patient, initialSpecificContext) {\n  var events = patient.encounters();\n  events.specific_occurrence = 'OccurrenceAHospitalMeasuresEncounterEd1'\n  events = events.withStatuses([\"performed\"]);\n  events = events.withoutNegation();\n  var codes = getCodes(\"2.16.840.1.113883.3.666.5.900\");\n  var start = null;\n  var end = null;\n  events = events.match(codes, start, end, true);\n\n  events = denormalizeEventsByLocation(events, \"facilityArrival\", null);\n  if (events.length > 0) events = DURING(events, hqmfjs.MeasurePeriod(patient));\n  else events.specificContext=hqmf.SpecificsManager.empty();\n  return events;\n}\n\nhqmfjs.DiagnosisActiveHospitalMeasuresJointCommissionMentalDisorders_precondition_32 = function(patient, initialSpecificContext) {\n  var events = patient.allProblems();\n  events = events.withStatuses([\"active\"]);\n  events = events.withoutNegation();\n  var codes = getCodes(\"1.3.6.1.4.1.33895.1.3.0.42\");\n  var start = null;\n  var end = null;\n  events = events.match(codes, start, end, true);\n\n  events = filterEventsByField(events, \"ordinality\", new CodeList(getCodes(\"2.16.840.1.113883.3.666.5.3010\")));\n  if (events.length > 0) events = SDU(events, hqmfjs.OccurrenceAHospitalMeasuresEncounterEd1(patient));\n  else events.specificContext=hqmf.SpecificsManager.empty();\n  return events;\n}\n\nhqmfjs.TransferToHospitalMeasuresAcuteCareHospital_precondition_34 = function(patient, initialSpecificContext) {\n  var events = patient.encounters();\n  events = events.withoutNegation();\n  var codes = null;\n  var start = null;\n  var end = null;\n  events = events.match(codes, start, end, true);\n\n  events = filterEventsByField(events, \"transferTo\", new CodeList(getCodes(\"2.16.840.1.113883.3.666.5.3013\")));\n  if (events.length > 0) events = SAE(events, hqmfjs.OccurrenceAHospitalMeasuresEncounterEd1(patient), new IVL_PQ(null, new PQ(6, \"h\", true)));\n  else events.specificContext=hqmf.SpecificsManager.empty();\n  return events;\n}\n\n\n\n        // #########################\n        // ##### MEASURE LOGIC #####\n        // #########################\n        \n        hqmfjs.initializeSpecifics = function(patient_api, hqmfjs) { hqmf.SpecificsManager.initialize(patient_api,hqmfjs,{\"id\":\"OccurrenceAHospitalMeasuresEncounterEd1\",\"type\":\"ENCOUNTER_PERFORMED_HOSPITAL_MEASURES_ENCOUNTER_ED\",\"function\":\"OccurrenceAHospitalMeasuresEncounterEd1\"}) }\n\n        // INITIAL PATIENT POPULATION\n        hqmfjs.IPP = function(patient, initialSpecificContext) {\n  return allTrue('IPP_2',  \n    allTrue('26',     hqmfjs.DiagnosisActiveHospitalMeasuresJointCommissionMentalDisorders_precondition_22(patient, initialSpecificContext),     hqmfjs.OccurrenceAHospitalMeasuresEncounterEd1_precondition_24(patient, initialSpecificContext)\n    )\n  );\n};\n\n\n        // DENOMINATOR\n        hqmfjs.DENOM = function(patient) { return new Boolean(true); }\n        // NUMERATOR\n        hqmfjs.NUMER = function(patient) { return new Boolean(false); }\n        hqmfjs.DENEX = function(patient) { return new Boolean(false); }\n        hqmfjs.DENEXCEP = function(patient) { return new Boolean(false); }\n        // CV\n        hqmfjs.MSRPOPL = function(patient, initialSpecificContext) {\n  return allTrue('MSRPOPL',  \n    allFalse('9',     hqmfjs.EncounterPerformedHospitalMeasuresEncounterInpatient_precondition_5(patient, initialSpecificContext),     hqmfjs.OccurrenceAHospitalMeasuresEncounterEd1_precondition_7(patient, initialSpecificContext)\n    )\n  );\n};\n\n\n        hqmfjs.OBSERV = function(patient, initialSpecificContext) {\n  return  hqmfjs.GROUP_TIMEDIFF_43(patient, initialSpecificContext);\n};\n\n\n        \n      \n      var occurrenceId = [\"OccurrenceAHospitalMeasuresEncounterEd1\"];\n\n      hqmfjs.initializeSpecifics(patient_api, hqmfjs)\n      \n      var population = function() {\n        return executeIfAvailable(hqmfjs.IPP, patient_api);\n      }\n      var denominator = function() {\n        return executeIfAvailable(hqmfjs.DENOM, patient_api);\n      }\n      var numerator = function() {\n        return executeIfAvailable(hqmfjs.NUMER, patient_api);\n      }\n      var exclusion = function() {\n        return executeIfAvailable(hqmfjs.DENEX, patient_api);\n      }\n      var denexcep = function() {\n        return executeIfAvailable(hqmfjs.DENEXCEP, patient_api);\n      }\n      var msrpopl = function() {\n        return executeIfAvailable(hqmfjs.MSRPOPL, patient_api);\n      }\n      var observ = function(specific_context) {\n        \n        var observFunc = hqmfjs.OBSERV\n        if (typeof(observFunc)==='function')\n          return observFunc(patient_api, specific_context);\n        else\n          return [];\n      }\n      \n      var executeIfAvailable = function(optionalFunction, arg) {\n        if (typeof(optionalFunction)==='function')\n          return optionalFunction(arg);\n        else\n          return false;\n      }\n\n      if (Logger.enabled) enableMeasureLogging(hqmfjs);\n\n      map(patient, population, denominator, numerator, exclusion, denexcep, msrpopl, observ, occurrenceId,true);\n      \n      };\n      ",
+  "continuous_variable": true,
+  "episode_of_care": true,
+  "sub_id": "c",
+  "subtitle": "RS2: With Mental Disorders",
+  "short_subtitle": "RS2: With Mental Disorders",
+  "aggregator": "MEDIAN",
+  "data_criteria": [
+    {
+      "OccurrenceAHospitalMeasuresEncounterEd1_precondition_2": {
+        "title": "Hospital Measures - Encounter ED",
+        "description": "Encounter, Performed: Hospital Measures - Encounter ED",
+        "standard_category": "encounter",
+        "qds_data_type": "encounter",
+        "code_list_id": "2.16.840.1.113883.3.666.5.900",
+        "type": "encounters",
+        "definition": "encounter",
+        "status": "performed",
+        "hard_status": false,
+        "negation": false,
+        "specific_occurrence": "A",
+        "specific_occurrence_const": "ENCOUNTER_PERFORMED_HOSPITAL_MEASURES_ENCOUNTER_ED",
+        "source_data_criteria": "OccurrenceAHospitalMeasuresEncounterEd1",
+        "field_values": {
+          "FACILITY_LOCATION_ARRIVAL_DATETIME": null
+        },
+        "temporal_references": [
+          {
+            "type": "DURING",
+            "reference": "MeasurePeriod"
+          }
+        ]
+      }
+    },
+    {
+      "EncounterPerformedHospitalMeasuresEncounterInpatient_precondition_5": {
+        "title": "Hospital Measures-Encounter Inpatient",
+        "description": "Encounter, Performed: Hospital Measures-Encounter Inpatient",
+        "standard_category": "encounter",
+        "qds_data_type": "encounter",
+        "code_list_id": "2.16.840.1.113883.3.666.5.625",
+        "type": "encounters",
+        "definition": "encounter",
+        "status": "performed",
+        "hard_status": false,
+        "negation": false,
+        "source_data_criteria": "EncounterPerformedHospitalMeasuresEncounterInpatient",
+        "temporal_references": [
+          {
+            "type": "SAE",
+            "reference": "OccurrenceAHospitalMeasuresEncounterEd1",
+            "range": {
+              "type": "IVL_PQ",
+              "high": {
+                "type": "PQ",
+                "unit": "h",
+                "value": "6",
+                "inclusive?": true,
+                "derived?": false
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "OccurrenceAHospitalMeasuresEncounterEd1": {
+        "title": "Hospital Measures - Encounter ED",
+        "description": "Encounter, Performed: Hospital Measures - Encounter ED",
+        "standard_category": "encounter",
+        "qds_data_type": "encounter",
+        "code_list_id": "2.16.840.1.113883.3.666.5.900",
+        "type": "encounters",
+        "definition": "encounter",
+        "status": "performed",
+        "hard_status": false,
+        "negation": false,
+        "specific_occurrence": "A",
+        "specific_occurrence_const": "ENCOUNTER_PERFORMED_HOSPITAL_MEASURES_ENCOUNTER_ED",
+        "source_data_criteria": "OccurrenceAHospitalMeasuresEncounterEd1"
+      }
+    },
+    {
+      "OccurrenceAHospitalMeasuresEncounterEd1_precondition_7": {
+        "title": "Hospital Measures - Encounter ED",
+        "description": "Encounter, Performed: Hospital Measures - Encounter ED",
+        "standard_category": "encounter",
+        "qds_data_type": "encounter",
+        "code_list_id": "2.16.840.1.113883.3.666.5.900",
+        "type": "encounters",
+        "definition": "encounter",
+        "status": "performed",
+        "hard_status": false,
+        "negation": false,
+        "specific_occurrence": "A",
+        "specific_occurrence_const": "ENCOUNTER_PERFORMED_HOSPITAL_MEASURES_ENCOUNTER_ED",
+        "source_data_criteria": "OccurrenceAHospitalMeasuresEncounterEd1",
+        "field_values": {
+          "DISCHARGE_STATUS": {
+            "type": "CD",
+            "code_list_id": "2.16.840.1.113883.3.666.5.1146",
+            "title": "Hospital Measures - Expired"
+          }
+        }
+      }
+    },
+    {
+      "GROUP_TIMEDIFF_43": {
+        "title": "GROUP_TIMEDIFF_43",
+        "description": "",
+        "standard_category": "",
+        "qds_data_type": "",
+        "children_criteria": [
+          "OccurrenceAHospitalMeasuresEncounterEd1_precondition_10",
+          "OccurrenceAHospitalMeasuresEncounterEd1_precondition_12"
+        ],
+        "derivation_operator": "XPRODUCT",
+        "type": "derived",
+        "definition": "derived",
+        "hard_status": false,
+        "negation": false,
+        "source_data_criteria": "GROUP_TIMEDIFF_43",
+        "subset_operators": [
+          {
+            "type": "TIMEDIFF",
+            "value": {
+              "type": "ANYNonNull"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "OccurrenceAHospitalMeasuresEncounterEd1_precondition_10": {
+        "title": "Hospital Measures - Encounter ED",
+        "description": "Encounter, Performed: Hospital Measures - Encounter ED",
+        "standard_category": "encounter",
+        "qds_data_type": "encounter",
+        "code_list_id": "2.16.840.1.113883.3.666.5.900",
+        "type": "encounters",
+        "definition": "encounter",
+        "status": "performed",
+        "hard_status": false,
+        "negation": false,
+        "specific_occurrence": "A",
+        "specific_occurrence_const": "ENCOUNTER_PERFORMED_HOSPITAL_MEASURES_ENCOUNTER_ED",
+        "source_data_criteria": "OccurrenceAHospitalMeasuresEncounterEd1",
+        "field_values": {
+          "FACILITY_LOCATION_ARRIVAL_DATETIME": null
+        }
+      }
+    },
+    {
+      "OccurrenceAHospitalMeasuresEncounterEd1_precondition_12": {
+        "title": "Hospital Measures - Encounter ED",
+        "description": "Encounter, Performed: Hospital Measures - Encounter ED",
+        "standard_category": "encounter",
+        "qds_data_type": "encounter",
+        "code_list_id": "2.16.840.1.113883.3.666.5.900",
+        "type": "encounters",
+        "definition": "encounter",
+        "status": "performed",
+        "hard_status": false,
+        "negation": false,
+        "specific_occurrence": "A",
+        "specific_occurrence_const": "ENCOUNTER_PERFORMED_HOSPITAL_MEASURES_ENCOUNTER_ED",
+        "source_data_criteria": "OccurrenceAHospitalMeasuresEncounterEd1",
+        "field_values": {
+          "FACILITY_LOCATION_DEPARTURE_DATETIME": null
+        }
+      }
+    },
+    {
+      "OccurrenceAHospitalMeasuresEncounterEd1_precondition_19": {
+        "title": "Hospital Measures - Encounter ED",
+        "description": "Encounter, Performed: Hospital Measures - Encounter ED",
+        "standard_category": "encounter",
+        "qds_data_type": "encounter",
+        "code_list_id": "2.16.840.1.113883.3.666.5.900",
+        "type": "encounters",
+        "definition": "encounter",
+        "status": "performed",
+        "hard_status": false,
+        "negation": false,
+        "specific_occurrence": "A",
+        "specific_occurrence_const": "ENCOUNTER_PERFORMED_HOSPITAL_MEASURES_ENCOUNTER_ED",
+        "source_data_criteria": "OccurrenceAHospitalMeasuresEncounterEd1",
+        "field_values": {
+          "FACILITY_LOCATION_ARRIVAL_DATETIME": null
+        },
+        "temporal_references": [
+          {
+            "type": "DURING",
+            "reference": "MeasurePeriod"
+          }
+        ]
+      }
+    },
+    {
+      "DiagnosisActiveHospitalMeasuresJointCommissionMentalDisorders_precondition_22": {
+        "title": "Hospital Measures-Joint Commission Mental Disorders",
+        "description": "Diagnosis, Active: Hospital Measures-Joint Commission Mental Disorders",
+        "standard_category": "diagnosis_condition_problem",
+        "qds_data_type": "diagnosis_active",
+        "code_list_id": "1.3.6.1.4.1.33895.1.3.0.42",
+        "type": "conditions",
+        "definition": "diagnosis",
+        "status": "active",
+        "hard_status": false,
+        "negation": false,
+        "source_data_criteria": "DiagnosisActiveHospitalMeasuresJointCommissionMentalDisorders",
+        "field_values": {
+          "ORDINAL": {
+            "type": "CD",
+            "code_list_id": "2.16.840.1.113883.3.666.5.3010",
+            "title": "Hospital Measures - Principal"
+          }
+        },
+        "temporal_references": [
+          {
+            "type": "SDU",
+            "reference": "OccurrenceAHospitalMeasuresEncounterEd1"
+          }
+        ]
+      }
+    },
+    {
+      "OccurrenceAHospitalMeasuresEncounterEd1_precondition_24": {
+        "title": "Hospital Measures - Encounter ED",
+        "description": "Encounter, Performed: Hospital Measures - Encounter ED",
+        "standard_category": "encounter",
+        "qds_data_type": "encounter",
+        "code_list_id": "2.16.840.1.113883.3.666.5.900",
+        "type": "encounters",
+        "definition": "encounter",
+        "status": "performed",
+        "hard_status": false,
+        "negation": false,
+        "specific_occurrence": "A",
+        "specific_occurrence_const": "ENCOUNTER_PERFORMED_HOSPITAL_MEASURES_ENCOUNTER_ED",
+        "source_data_criteria": "OccurrenceAHospitalMeasuresEncounterEd1",
+        "field_values": {
+          "FACILITY_LOCATION_ARRIVAL_DATETIME": null
+        },
+        "temporal_references": [
+          {
+            "type": "DURING",
+            "reference": "MeasurePeriod"
+          }
+        ]
+      }
+    },
+    {
+      "TransferToHospitalMeasuresAcuteCareHospital_precondition_27": {
+        "title": "Hospital Measures-Acute care hospital",
+        "description": "Transfer To: Hospital Measures-Acute care hospital",
+        "standard_category": "",
+        "qds_data_type": "",
+        "type": "transfers",
+        "definition": "transfer_to",
+        "hard_status": false,
+        "negation": false,
+        "source_data_criteria": "TransferToHospitalMeasuresAcuteCareHospital",
+        "field_values": {
+          "TRANSFER_TO": {
+            "type": "CD",
+            "code_list_id": "2.16.840.1.113883.3.666.5.3013",
+            "title": "Hospital Measures-Acute care hospital"
+          }
+        },
+        "temporal_references": [
+          {
+            "type": "SAE",
+            "reference": "OccurrenceAHospitalMeasuresEncounterEd1",
+            "range": {
+              "type": "IVL_PQ",
+              "high": {
+                "type": "PQ",
+                "unit": "h",
+                "value": "6",
+                "inclusive?": true,
+                "derived?": false
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "OccurrenceAHospitalMeasuresEncounterEd1_precondition_29": {
+        "title": "Hospital Measures - Encounter ED",
+        "description": "Encounter, Performed: Hospital Measures - Encounter ED",
+        "standard_category": "encounter",
+        "qds_data_type": "encounter",
+        "code_list_id": "2.16.840.1.113883.3.666.5.900",
+        "type": "encounters",
+        "definition": "encounter",
+        "status": "performed",
+        "hard_status": false,
+        "negation": false,
+        "specific_occurrence": "A",
+        "specific_occurrence_const": "ENCOUNTER_PERFORMED_HOSPITAL_MEASURES_ENCOUNTER_ED",
+        "source_data_criteria": "OccurrenceAHospitalMeasuresEncounterEd1",
+        "field_values": {
+          "FACILITY_LOCATION_ARRIVAL_DATETIME": null
+        },
+        "temporal_references": [
+          {
+            "type": "DURING",
+            "reference": "MeasurePeriod"
+          }
+        ]
+      }
+    },
+    {
+      "OccurrenceAHospitalMeasuresEncounterEd1_precondition_38": {
+        "title": "Hospital Measures - Encounter ED",
+        "description": "Encounter, Performed: Hospital Measures - Encounter ED",
+        "standard_category": "encounter",
+        "qds_data_type": "encounter",
+        "code_list_id": "2.16.840.1.113883.3.666.5.900",
+        "type": "encounters",
+        "definition": "encounter",
+        "status": "performed",
+        "hard_status": false,
+        "negation": false,
+        "specific_occurrence": "A",
+        "specific_occurrence_const": "ENCOUNTER_PERFORMED_HOSPITAL_MEASURES_ENCOUNTER_ED",
+        "source_data_criteria": "OccurrenceAHospitalMeasuresEncounterEd1",
+        "field_values": {
+          "FACILITY_LOCATION_ARRIVAL_DATETIME": null
+        },
+        "temporal_references": [
+          {
+            "type": "DURING",
+            "reference": "MeasurePeriod"
+          }
+        ]
+      }
+    },
+    {
+      "DiagnosisActiveHospitalMeasuresJointCommissionMentalDisorders_precondition_32": {
+        "title": "Hospital Measures-Joint Commission Mental Disorders",
+        "description": "Diagnosis, Active: Hospital Measures-Joint Commission Mental Disorders",
+        "standard_category": "diagnosis_condition_problem",
+        "qds_data_type": "diagnosis_active",
+        "code_list_id": "1.3.6.1.4.1.33895.1.3.0.42",
+        "type": "conditions",
+        "definition": "diagnosis",
+        "status": "active",
+        "hard_status": false,
+        "negation": false,
+        "source_data_criteria": "DiagnosisActiveHospitalMeasuresJointCommissionMentalDisorders",
+        "field_values": {
+          "ORDINAL": {
+            "type": "CD",
+            "code_list_id": "2.16.840.1.113883.3.666.5.3010",
+            "title": "Hospital Measures - Principal"
+          }
+        },
+        "temporal_references": [
+          {
+            "type": "SDU",
+            "reference": "OccurrenceAHospitalMeasuresEncounterEd1"
+          }
+        ]
+      }
+    },
+    {
+      "TransferToHospitalMeasuresAcuteCareHospital_precondition_34": {
+        "title": "Hospital Measures-Acute care hospital",
+        "description": "Transfer To: Hospital Measures-Acute care hospital",
+        "standard_category": "",
+        "qds_data_type": "",
+        "type": "transfers",
+        "definition": "transfer_to",
+        "hard_status": false,
+        "negation": false,
+        "source_data_criteria": "TransferToHospitalMeasuresAcuteCareHospital",
+        "field_values": {
+          "TRANSFER_TO": {
+            "type": "CD",
+            "code_list_id": "2.16.840.1.113883.3.666.5.3013",
+            "title": "Hospital Measures-Acute care hospital"
+          }
+        },
+        "temporal_references": [
+          {
+            "type": "SAE",
+            "reference": "OccurrenceAHospitalMeasuresEncounterEd1",
+            "range": {
+              "type": "IVL_PQ",
+              "high": {
+                "type": "PQ",
+                "unit": "h",
+                "value": "6",
+                "inclusive?": true,
+                "derived?": false
+              }
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "oids": [
+    "2.16.840.1.113883.3.666.5.900",
+    "2.16.840.1.113883.3.666.5.625",
+    "2.16.840.1.113883.3.666.5.3013",
+    "2.16.840.1.113883.3.666.5.3010",
+    "2.16.840.1.113883.3.666.5.1146",
+    "1.3.6.1.4.1.33895.1.3.0.42"
+  ],
+  "population_ids": {
+    "IPP": "3787689B-18CA-4230-B79F-DF7C946D9662",
+    "MSRPOPL": "A9199FB8-9A94-4416-AC40-C5E0529BA9C5",
+    "OBSERV": "8C1FC129-F685-472D-9CEB-9E76ED2739EA",
+    "stratification": "49300C0A-A71F-4621-8240-05FDDA18625F"
+  }
+}

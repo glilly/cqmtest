@@ -1,0 +1,898 @@
+{
+  "id": "8A4D92B2-3887-5DF3-0139-12364AE9126F",
+  "nqf_id": "1354",
+  "hqmf_id": "8A4D92B2-3887-5DF3-0139-12364AE9126F",
+  "hqmf_set_id": "0924FBAE-3FDB-4D0A-AAB7-9F354E699FDE",
+  "hqmf_version_number": 1,
+  "cms_id": "CMS31v1",
+  "endorser": null,
+  "name": "Hearing Screening Prior To Hospital Discharge (EHDI-1a)",
+  "description": "This measure assesses the proportion of births that have been screened for hearing loss before hospital discharge.",
+  "type": "eh",
+  "category": "Newborn",
+  "steward": null,
+  "population": {
+    "conjunction": "and",
+    "items": [
+      {
+        "conjunction": "and",
+        "items": [
+          {
+            "title": "Livebirth",
+            "description": "Diagnosis, Active: Livebirth",
+            "standard_category": "diagnosis_condition_problem",
+            "qds_data_type": "diagnosis_active",
+            "code_list_id": "2.16.840.1.114222.4.1.214079.1.1.1",
+            "type": "conditions",
+            "definition": "diagnosis",
+            "status": "active",
+            "hard_status": false,
+            "negation": false,
+            "source_data_criteria": "DiagnosisActiveLivebirth",
+            "field_values": {
+              "ORDINAL": {
+                "type": "CD",
+                "code_list_id": "2.16.840.1.113883.3.117.2.7.1.14",
+                "title": "Principal Diagnosis"
+              }
+            },
+            "temporal_references": [
+              {
+                "type": "SDU",
+                "reference": {
+                  "title": "Inpatient Encounter",
+                  "description": "Encounter, Performed: Inpatient Encounter",
+                  "standard_category": "encounter",
+                  "qds_data_type": "encounter",
+                  "code_list_id": "2.16.840.1.113883.3.117.1.7.1.23",
+                  "type": "encounters",
+                  "definition": "encounter",
+                  "status": "performed",
+                  "hard_status": false,
+                  "negation": false,
+                  "specific_occurrence": "A",
+                  "specific_occurrence_const": "ENCOUNTER_PERFORMED_INPATIENT_ENCOUNTER",
+                  "source_data_criteria": "OccurrenceAInpatientEncounter3"
+                }
+              }
+            ]
+          },
+          {
+            "title": "Inpatient Encounter",
+            "description": "Encounter, Performed: Inpatient Encounter",
+            "standard_category": "encounter",
+            "qds_data_type": "encounter",
+            "code_list_id": "2.16.840.1.113883.3.117.1.7.1.23",
+            "type": "encounters",
+            "definition": "encounter",
+            "status": "performed",
+            "hard_status": false,
+            "negation": false,
+            "specific_occurrence": "A",
+            "specific_occurrence_const": "ENCOUNTER_PERFORMED_INPATIENT_ENCOUNTER",
+            "source_data_criteria": "OccurrenceAInpatientEncounter3",
+            "field_values": {
+              "REASON": {
+                "type": "CD",
+                "code_list_id": "2.16.840.1.113883.3.117.1.7.1.70",
+                "title": "Birth"
+              }
+            },
+            "temporal_references": [
+              {
+                "type": "DURING",
+                "reference": "MeasurePeriod",
+                "title": "MeasurePeriod"
+              }
+            ]
+          },
+          {
+            "title": "Liveborn Born In Hospital",
+            "description": "Diagnosis, Active: Liveborn Born In Hospital",
+            "standard_category": "diagnosis_condition_problem",
+            "qds_data_type": "diagnosis_active",
+            "code_list_id": "2.16.840.1.113883.3.117.1.7.1.29",
+            "type": "conditions",
+            "definition": "diagnosis",
+            "status": "active",
+            "hard_status": false,
+            "negation": false,
+            "source_data_criteria": "DiagnosisActiveLivebornBornInHospital",
+            "temporal_references": [
+              {
+                "type": "SDU",
+                "reference": {
+                  "title": "Inpatient Encounter",
+                  "description": "Encounter, Performed: Inpatient Encounter",
+                  "standard_category": "encounter",
+                  "qds_data_type": "encounter",
+                  "code_list_id": "2.16.840.1.113883.3.117.1.7.1.23",
+                  "type": "encounters",
+                  "definition": "encounter",
+                  "status": "performed",
+                  "hard_status": false,
+                  "negation": false,
+                  "specific_occurrence": "A",
+                  "specific_occurrence_const": "ENCOUNTER_PERFORMED_INPATIENT_ENCOUNTER",
+                  "source_data_criteria": "OccurrenceAInpatientEncounter3"
+                }
+              }
+            ]
+          }
+        ],
+        "negation": null,
+        "precondition_id": 41
+      }
+    ]
+  },
+  "denominator": {
+    "conjunction": "and",
+    "items": [
+
+    ]
+  },
+  "numerator": {
+    "conjunction": "and",
+    "items": [
+      {
+        "conjunction": "and",
+        "items": [
+          {
+            "conjunction": "or",
+            "items": [
+              {
+                "title": "Newborn Hearing Screen Left",
+                "description": "Diagnostic Study, Result: Newborn Hearing Screen Left",
+                "standard_category": "diagnostic_study",
+                "qds_data_type": "diagnostic_study_result",
+                "code_list_id": "2.16.840.1.114222.4.1.214079.1.1.3",
+                "type": "diagnostic_studies",
+                "definition": "diagnostic_study_result",
+                "hard_status": false,
+                "negation": true,
+                "negation_code_list_id": "2.16.840.1.114222.4.1.214079.1.1.7",
+                "source_data_criteria": "DiagnosticStudyResultNewbornHearingScreenLeft",
+                "temporal_references": [
+                  {
+                    "type": "DURING",
+                    "reference": {
+                      "title": "Inpatient Encounter",
+                      "description": "Encounter, Performed: Inpatient Encounter",
+                      "standard_category": "encounter",
+                      "qds_data_type": "encounter",
+                      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.23",
+                      "type": "encounters",
+                      "definition": "encounter",
+                      "status": "performed",
+                      "hard_status": false,
+                      "negation": false,
+                      "specific_occurrence": "A",
+                      "specific_occurrence_const": "ENCOUNTER_PERFORMED_INPATIENT_ENCOUNTER",
+                      "source_data_criteria": "OccurrenceAInpatientEncounter3"
+                    }
+                  }
+                ]
+              },
+              {
+                "title": "Newborn Hearing Screen Right",
+                "description": "Diagnostic Study, Result: Newborn Hearing Screen Right",
+                "standard_category": "diagnostic_study",
+                "qds_data_type": "diagnostic_study_result",
+                "code_list_id": "2.16.840.1.114222.4.1.214079.1.1.4",
+                "type": "diagnostic_studies",
+                "definition": "diagnostic_study_result",
+                "hard_status": false,
+                "negation": true,
+                "negation_code_list_id": "2.16.840.1.114222.4.1.214079.1.1.7",
+                "source_data_criteria": "DiagnosticStudyResultNewbornHearingScreenRight",
+                "temporal_references": [
+                  {
+                    "type": "DURING",
+                    "reference": {
+                      "title": "Inpatient Encounter",
+                      "description": "Encounter, Performed: Inpatient Encounter",
+                      "standard_category": "encounter",
+                      "qds_data_type": "encounter",
+                      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.23",
+                      "type": "encounters",
+                      "definition": "encounter",
+                      "status": "performed",
+                      "hard_status": false,
+                      "negation": false,
+                      "specific_occurrence": "A",
+                      "specific_occurrence_const": "ENCOUNTER_PERFORMED_INPATIENT_ENCOUNTER",
+                      "source_data_criteria": "OccurrenceAInpatientEncounter3"
+                    }
+                  }
+                ]
+              },
+              {
+                "title": "Hearing Examination",
+                "description": "Diagnostic Study, Result: Hearing Examination",
+                "standard_category": "diagnostic_study",
+                "qds_data_type": "diagnostic_study_result",
+                "code_list_id": "2.16.840.1.114222.4.1.214079.1.1.2",
+                "type": "diagnostic_studies",
+                "definition": "diagnostic_study_result",
+                "hard_status": false,
+                "negation": false,
+                "source_data_criteria": "DiagnosticStudyResultHearingExamination",
+                "temporal_references": [
+                  {
+                    "type": "DURING",
+                    "reference": {
+                      "title": "Inpatient Encounter",
+                      "description": "Encounter, Performed: Inpatient Encounter",
+                      "standard_category": "encounter",
+                      "qds_data_type": "encounter",
+                      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.23",
+                      "type": "encounters",
+                      "definition": "encounter",
+                      "status": "performed",
+                      "hard_status": false,
+                      "negation": false,
+                      "specific_occurrence": "A",
+                      "specific_occurrence_const": "ENCOUNTER_PERFORMED_INPATIENT_ENCOUNTER",
+                      "source_data_criteria": "OccurrenceAInpatientEncounter3"
+                    }
+                  }
+                ]
+              },
+              {
+                "title": "Hearing Examination",
+                "description": "Diagnostic Study, Result: Hearing Examination",
+                "standard_category": "diagnostic_study",
+                "qds_data_type": "diagnostic_study_result",
+                "code_list_id": "2.16.840.1.114222.4.1.214079.1.1.2",
+                "type": "diagnostic_studies",
+                "definition": "diagnostic_study_result",
+                "hard_status": false,
+                "negation": true,
+                "negation_code_list_id": "2.16.840.1.114222.4.1.214079.1.1.7",
+                "source_data_criteria": "DiagnosticStudyResultHearingExamination",
+                "temporal_references": [
+                  {
+                    "type": "DURING",
+                    "reference": {
+                      "title": "Inpatient Encounter",
+                      "description": "Encounter, Performed: Inpatient Encounter",
+                      "standard_category": "encounter",
+                      "qds_data_type": "encounter",
+                      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.23",
+                      "type": "encounters",
+                      "definition": "encounter",
+                      "status": "performed",
+                      "hard_status": false,
+                      "negation": false,
+                      "specific_occurrence": "A",
+                      "specific_occurrence_const": "ENCOUNTER_PERFORMED_INPATIENT_ENCOUNTER",
+                      "source_data_criteria": "OccurrenceAInpatientEncounter3"
+                    }
+                  }
+                ]
+              },
+              {
+                "conjunction": "and",
+                "items": [
+                  {
+                    "title": "Newborn Hearing Screen Left",
+                    "description": "Diagnostic Study, Result: Newborn Hearing Screen Left",
+                    "standard_category": "diagnostic_study",
+                    "qds_data_type": "diagnostic_study_result",
+                    "code_list_id": "2.16.840.1.114222.4.1.214079.1.1.3",
+                    "type": "diagnostic_studies",
+                    "definition": "diagnostic_study_result",
+                    "hard_status": false,
+                    "negation": false,
+                    "source_data_criteria": "DiagnosticStudyResultNewbornHearingScreenLeft",
+                    "value": {
+                      "type": "CD",
+                      "code_list_id": "2.16.840.1.114222.4.1.214079.1.1.6",
+                      "title": "Pass Or Refer"
+                    },
+                    "temporal_references": [
+                      {
+                        "type": "DURING",
+                        "reference": {
+                          "title": "Inpatient Encounter",
+                          "description": "Encounter, Performed: Inpatient Encounter",
+                          "standard_category": "encounter",
+                          "qds_data_type": "encounter",
+                          "code_list_id": "2.16.840.1.113883.3.117.1.7.1.23",
+                          "type": "encounters",
+                          "definition": "encounter",
+                          "status": "performed",
+                          "hard_status": false,
+                          "negation": false,
+                          "specific_occurrence": "A",
+                          "specific_occurrence_const": "ENCOUNTER_PERFORMED_INPATIENT_ENCOUNTER",
+                          "source_data_criteria": "OccurrenceAInpatientEncounter3"
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "title": "Newborn Hearing Screen Right",
+                    "description": "Diagnostic Study, Result: Newborn Hearing Screen Right",
+                    "standard_category": "diagnostic_study",
+                    "qds_data_type": "diagnostic_study_result",
+                    "code_list_id": "2.16.840.1.114222.4.1.214079.1.1.4",
+                    "type": "diagnostic_studies",
+                    "definition": "diagnostic_study_result",
+                    "hard_status": false,
+                    "negation": false,
+                    "source_data_criteria": "DiagnosticStudyResultNewbornHearingScreenRight",
+                    "value": {
+                      "type": "CD",
+                      "code_list_id": "2.16.840.1.114222.4.1.214079.1.1.6",
+                      "title": "Pass Or Refer"
+                    },
+                    "temporal_references": [
+                      {
+                        "type": "DURING",
+                        "reference": {
+                          "title": "Inpatient Encounter",
+                          "description": "Encounter, Performed: Inpatient Encounter",
+                          "standard_category": "encounter",
+                          "qds_data_type": "encounter",
+                          "code_list_id": "2.16.840.1.113883.3.117.1.7.1.23",
+                          "type": "encounters",
+                          "definition": "encounter",
+                          "status": "performed",
+                          "hard_status": false,
+                          "negation": false,
+                          "specific_occurrence": "A",
+                          "specific_occurrence_const": "ENCOUNTER_PERFORMED_INPATIENT_ENCOUNTER",
+                          "source_data_criteria": "OccurrenceAInpatientEncounter3"
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "negation": null,
+                "precondition_id": 29
+              }
+            ],
+            "negation": null,
+            "precondition_id": 31
+          }
+        ],
+        "negation": null,
+        "precondition_id": 34
+      }
+    ]
+  },
+  "exclusions": {
+    "conjunction": "and",
+    "items": [
+      {
+        "conjunction": "and",
+        "items": [
+          {
+            "title": "Patient Expired",
+            "description": "Patient Characteristic Expired: Patient Expired",
+            "standard_category": "individual_characteristic",
+            "qds_data_type": "individual_characteristic",
+            "code_list_id": "2.16.840.1.113883.3.67.1.101.1.78",
+            "property": "expired",
+            "type": "characteristic",
+            "definition": "patient_characteristic_expired",
+            "hard_status": false,
+            "negation": false,
+            "source_data_criteria": "PatientCharacteristicExpiredPatientExpired",
+            "inline_code_list": {
+              "SNOMED-CT": [
+                "371828006"
+              ]
+            },
+            "temporal_references": [
+              {
+                "type": "DURING",
+                "reference": {
+                  "title": "Inpatient Encounter",
+                  "description": "Encounter, Performed: Inpatient Encounter",
+                  "standard_category": "encounter",
+                  "qds_data_type": "encounter",
+                  "code_list_id": "2.16.840.1.113883.3.117.1.7.1.23",
+                  "type": "encounters",
+                  "definition": "encounter",
+                  "status": "performed",
+                  "hard_status": false,
+                  "negation": false,
+                  "specific_occurrence": "A",
+                  "specific_occurrence_const": "ENCOUNTER_PERFORMED_INPATIENT_ENCOUNTER",
+                  "source_data_criteria": "OccurrenceAInpatientEncounter3"
+                }
+              }
+            ]
+          },
+          {
+            "conjunction": "or",
+            "items": [
+              {
+                "conjunction": "or",
+                "items": [
+                  {
+                    "title": "Hearing Examination",
+                    "description": "Diagnostic Study, Result: Hearing Examination",
+                    "standard_category": "diagnostic_study",
+                    "qds_data_type": "diagnostic_study_result",
+                    "code_list_id": "2.16.840.1.114222.4.1.214079.1.1.2",
+                    "type": "diagnostic_studies",
+                    "definition": "diagnostic_study_result",
+                    "hard_status": false,
+                    "negation": false,
+                    "source_data_criteria": "DiagnosticStudyResultHearingExamination",
+                    "temporal_references": [
+                      {
+                        "type": "DURING",
+                        "reference": {
+                          "title": "Inpatient Encounter",
+                          "description": "Encounter, Performed: Inpatient Encounter",
+                          "standard_category": "encounter",
+                          "qds_data_type": "encounter",
+                          "code_list_id": "2.16.840.1.113883.3.117.1.7.1.23",
+                          "type": "encounters",
+                          "definition": "encounter",
+                          "status": "performed",
+                          "hard_status": false,
+                          "negation": false,
+                          "specific_occurrence": "A",
+                          "specific_occurrence_const": "ENCOUNTER_PERFORMED_INPATIENT_ENCOUNTER",
+                          "source_data_criteria": "OccurrenceAInpatientEncounter3"
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "title": "Newborn Hearing Screen Left",
+                    "description": "Diagnostic Study, Result: Newborn Hearing Screen Left",
+                    "standard_category": "diagnostic_study",
+                    "qds_data_type": "diagnostic_study_result",
+                    "code_list_id": "2.16.840.1.114222.4.1.214079.1.1.3",
+                    "type": "diagnostic_studies",
+                    "definition": "diagnostic_study_result",
+                    "hard_status": false,
+                    "negation": false,
+                    "source_data_criteria": "DiagnosticStudyResultNewbornHearingScreenLeft",
+                    "temporal_references": [
+                      {
+                        "type": "DURING",
+                        "reference": {
+                          "title": "Inpatient Encounter",
+                          "description": "Encounter, Performed: Inpatient Encounter",
+                          "standard_category": "encounter",
+                          "qds_data_type": "encounter",
+                          "code_list_id": "2.16.840.1.113883.3.117.1.7.1.23",
+                          "type": "encounters",
+                          "definition": "encounter",
+                          "status": "performed",
+                          "hard_status": false,
+                          "negation": false,
+                          "specific_occurrence": "A",
+                          "specific_occurrence_const": "ENCOUNTER_PERFORMED_INPATIENT_ENCOUNTER",
+                          "source_data_criteria": "OccurrenceAInpatientEncounter3"
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "title": "Newborn Hearing Screen Right",
+                    "description": "Diagnostic Study, Result: Newborn Hearing Screen Right",
+                    "standard_category": "diagnostic_study",
+                    "qds_data_type": "diagnostic_study_result",
+                    "code_list_id": "2.16.840.1.114222.4.1.214079.1.1.4",
+                    "type": "diagnostic_studies",
+                    "definition": "diagnostic_study_result",
+                    "hard_status": false,
+                    "negation": false,
+                    "source_data_criteria": "DiagnosticStudyResultNewbornHearingScreenRight",
+                    "temporal_references": [
+                      {
+                        "type": "DURING",
+                        "reference": {
+                          "title": "Inpatient Encounter",
+                          "description": "Encounter, Performed: Inpatient Encounter",
+                          "standard_category": "encounter",
+                          "qds_data_type": "encounter",
+                          "code_list_id": "2.16.840.1.113883.3.117.1.7.1.23",
+                          "type": "encounters",
+                          "definition": "encounter",
+                          "status": "performed",
+                          "hard_status": false,
+                          "negation": false,
+                          "specific_occurrence": "A",
+                          "specific_occurrence_const": "ENCOUNTER_PERFORMED_INPATIENT_ENCOUNTER",
+                          "source_data_criteria": "OccurrenceAInpatientEncounter3"
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "negation": null,
+                "precondition_id": 10
+              }
+            ],
+            "negation": true,
+            "precondition_id": 15
+          }
+        ],
+        "negation": null,
+        "precondition_id": 16
+      }
+    ]
+  },
+  "map_fn": "function() {\n        var patient = this;\n        var effective_date = <%= effective_date %>;\n\n        hqmfjs = {}\n        <%= init_js_frameworks %>\n        \n        \n      var patient_api = new hQuery.Patient(patient);\n\n      \n\n      // clear out logger\n      if (typeof Logger != 'undefined') { Logger.logger = []; Logger.rationale={};}\n      // turn on logging if it is enabled\n      if (Logger.enabled) enableLogging();\n      \n      \n        // #########################\n        // ##### DATA ELEMENTS #####\n        // #########################\n\n        OidDictionary = <%= oid_dictionary %>;\n        \n        // Measure variables\nvar MeasurePeriod = {\n  \"low\": new TS(\"201201010000\", null, true),\n  \"high\": new TS(\"201212312359\", null, true)\n}\nhqmfjs.MeasurePeriod = function(patient) {\n  return [new hQuery.CodedEntry(\n    {\n      \"start_time\": MeasurePeriod.low.asDate().getTime()/1000,\n      \"end_time\": MeasurePeriod.high.asDate().getTime()/1000,\n      \"codes\": {}\n    }\n  )];\n}\nif (typeof effective_date === 'number') {\n  MeasurePeriod.high.date = new Date(1000*effective_date);\n  // add one minute before pulling off the year.  This turns 12-31-2012 23:59 into 1-1-2013 00:00 => 1-1-2012 00:00\n  MeasurePeriod.low.date = new Date(1000*(effective_date+60));\n  MeasurePeriod.low.date.setFullYear(MeasurePeriod.low.date.getFullYear()-1);\n}\n\n// Data critera\nhqmfjs.OccurrenceAInpatientEncounter3 = function(patient, initialSpecificContext) {\n  var events = patient.encounters();\n  events.specific_occurrence = 'OccurrenceAInpatientEncounter3'\n  events = events.withStatuses([\"performed\"]);\n  events = events.withoutNegation();\n  var codes = getCodes(\"2.16.840.1.113883.3.117.1.7.1.23\");\n  var start = null;\n  var end = null;\n  events = events.match(codes, start, end, true);\n\n  events.specificContext=new hqmf.SpecificOccurrence(Row.buildForDataCriteria(events.specific_occurrence, events))\n  return events;\n}\n\nhqmfjs.EncounterPerformedInpatientEncounter = function(patient, initialSpecificContext) {\n  var events = patient.encounters();\n  events = events.withStatuses([\"performed\"]);\n  events = events.withoutNegation();\n  var codes = getCodes(\"2.16.840.1.113883.3.117.1.7.1.23\");\n  var start = null;\n  var end = null;\n  events = events.match(codes, start, end, true);\n\n  events.specificContext=hqmf.SpecificsManager.identity()\n  return events;\n}\n\nhqmfjs.DiagnosticStudyResultNotDoneMedicalReasons = function(patient, initialSpecificContext) {\n  var events = patient.procedureResults();\n  events = events.withNegation();\n  var codes = getCodes(\"2.16.840.1.114222.4.1.214079.1.1.7\");\n  var start = null;\n  var end = null;\n  events = events.match(codes, start, end, true);\n\n  events.specificContext=hqmf.SpecificsManager.identity()\n  return events;\n}\n\nhqmfjs.DiagnosticStudyResultNotDoneMedicalReasons1 = function(patient, initialSpecificContext) {\n  var events = patient.procedureResults();\n  events = events.withNegation();\n  var codes = getCodes(\"2.16.840.1.114222.4.1.214079.1.1.7\");\n  var start = null;\n  var end = null;\n  events = events.match(codes, start, end, true);\n\n  events.specificContext=hqmf.SpecificsManager.identity()\n  return events;\n}\n\nhqmfjs.DiagnosticStudyResultNotDoneMedicalReasons2 = function(patient, initialSpecificContext) {\n  var events = patient.procedureResults();\n  events = events.withNegation();\n  var codes = getCodes(\"2.16.840.1.114222.4.1.214079.1.1.7\");\n  var start = null;\n  var end = null;\n  events = events.match(codes, start, end, true);\n\n  events.specificContext=hqmf.SpecificsManager.identity()\n  return events;\n}\n\nhqmfjs.OccurrenceAInpatientEncounter3 = function(patient, initialSpecificContext) {\n  var events = patient.encounters();\n  events.specific_occurrence = 'OccurrenceAInpatientEncounter3'\n  events = events.withStatuses([\"performed\"]);\n  events = events.withoutNegation();\n  var codes = getCodes(\"2.16.840.1.113883.3.117.1.7.1.23\");\n  var start = null;\n  var end = null;\n  events = events.match(codes, start, end, true);\n\n  events.specificContext=new hqmf.SpecificOccurrence(Row.buildForDataCriteria(events.specific_occurrence, events))\n  return events;\n}\n\nhqmfjs.PatientCharacteristicExpiredPatientExpired_precondition_13 = function(patient, initialSpecificContext) {\nvar value = patient.expired();\nmatching = matchingValue(value, 'true');\nmatching.specificContext=hqmf.SpecificsManager.identity();\nreturn matching\n\n}\n\nhqmfjs.OccurrenceAInpatientEncounter3_precondition_11 = function(patient, initialSpecificContext) {\n  var events = patient.encounters();\n  events.specific_occurrence = 'OccurrenceAInpatientEncounter3'\n  events = events.withStatuses([\"performed\"]);\n  events = events.withoutNegation();\n  var codes = getCodes(\"2.16.840.1.113883.3.117.1.7.1.23\");\n  var start = null;\n  var end = null;\n  events = events.match(codes, start, end, true);\n\n  events.specificContext=new hqmf.SpecificOccurrence(Row.buildForDataCriteria(events.specific_occurrence, events))\n  return events;\n}\n\nhqmfjs.DiagnosticStudyResultHearingExamination_precondition_4 = function(patient, initialSpecificContext) {\n  var events = patient.procedureResults();\n  events = events.withoutNegation();\n  var codes = getCodes(\"2.16.840.1.114222.4.1.214079.1.1.2\");\n  var start = null;\n  var end = null;\n  events = events.match(codes, start, end, true);\n\n  if (events.length > 0) events = DURING(events, hqmfjs.OccurrenceAInpatientEncounter3_precondition_11(patient));\n  else events.specificContext=hqmf.SpecificsManager.empty();\n  return events;\n}\n\nhqmfjs.DiagnosticStudyResultNewbornHearingScreenLeft_precondition_6 = function(patient, initialSpecificContext) {\n  var events = patient.procedureResults();\n  events = events.withoutNegation();\n  var codes = getCodes(\"2.16.840.1.114222.4.1.214079.1.1.3\");\n  var start = null;\n  var end = null;\n  events = events.match(codes, start, end, true);\n\n  if (events.length > 0) events = DURING(events, hqmfjs.OccurrenceAInpatientEncounter3_precondition_11(patient));\n  else events.specificContext=hqmf.SpecificsManager.empty();\n  return events;\n}\n\nhqmfjs.DiagnosticStudyResultNewbornHearingScreenRight_precondition_8 = function(patient, initialSpecificContext) {\n  var events = patient.procedureResults();\n  events = events.withoutNegation();\n  var codes = getCodes(\"2.16.840.1.114222.4.1.214079.1.1.4\");\n  var start = null;\n  var end = null;\n  events = events.match(codes, start, end, true);\n\n  if (events.length > 0) events = DURING(events, hqmfjs.OccurrenceAInpatientEncounter3_precondition_11(patient));\n  else events.specificContext=hqmf.SpecificsManager.empty();\n  return events;\n}\n\nhqmfjs.OccurrenceAInpatientEncounter3_precondition_32 = function(patient, initialSpecificContext) {\n  var events = patient.encounters();\n  events.specific_occurrence = 'OccurrenceAInpatientEncounter3'\n  events = events.withStatuses([\"performed\"]);\n  events = events.withoutNegation();\n  var codes = getCodes(\"2.16.840.1.113883.3.117.1.7.1.23\");\n  var start = null;\n  var end = null;\n  events = events.match(codes, start, end, true);\n\n  events.specificContext=new hqmf.SpecificOccurrence(Row.buildForDataCriteria(events.specific_occurrence, events))\n  return events;\n}\n\nhqmfjs.DiagnosticStudyResultNewbornHearingScreenLeft_precondition_17 = function(patient, initialSpecificContext) {\n  var events = patient.procedureResults();\n  events = events.withNegation(getCodes(\"2.16.840.1.114222.4.1.214079.1.1.7\"));\n  var codes = getCodes(\"2.16.840.1.114222.4.1.214079.1.1.3\");\n  var start = null;\n  var end = null;\n  events = events.match(codes, start, end, true);\n\n  if (events.length > 0) events = DURING(events, hqmfjs.OccurrenceAInpatientEncounter3_precondition_32(patient));\n  else events.specificContext=hqmf.SpecificsManager.empty();\n  return events;\n}\n\nhqmfjs.DiagnosticStudyResultNewbornHearingScreenRight_precondition_19 = function(patient, initialSpecificContext) {\n  var events = patient.procedureResults();\n  events = events.withNegation(getCodes(\"2.16.840.1.114222.4.1.214079.1.1.7\"));\n  var codes = getCodes(\"2.16.840.1.114222.4.1.214079.1.1.4\");\n  var start = null;\n  var end = null;\n  events = events.match(codes, start, end, true);\n\n  if (events.length > 0) events = DURING(events, hqmfjs.OccurrenceAInpatientEncounter3_precondition_32(patient));\n  else events.specificContext=hqmf.SpecificsManager.empty();\n  return events;\n}\n\nhqmfjs.DiagnosticStudyResultHearingExamination_precondition_21 = function(patient, initialSpecificContext) {\n  var events = patient.procedureResults();\n  events = events.withoutNegation();\n  var codes = getCodes(\"2.16.840.1.114222.4.1.214079.1.1.2\");\n  var start = null;\n  var end = null;\n  events = events.match(codes, start, end, true);\n\n  if (events.length > 0) events = DURING(events, hqmfjs.OccurrenceAInpatientEncounter3_precondition_32(patient));\n  else events.specificContext=hqmf.SpecificsManager.empty();\n  return events;\n}\n\nhqmfjs.DiagnosticStudyResultHearingExamination_precondition_23 = function(patient, initialSpecificContext) {\n  var events = patient.procedureResults();\n  events = events.withNegation(getCodes(\"2.16.840.1.114222.4.1.214079.1.1.7\"));\n  var codes = getCodes(\"2.16.840.1.114222.4.1.214079.1.1.2\");\n  var start = null;\n  var end = null;\n  events = events.match(codes, start, end, true);\n\n  if (events.length > 0) events = DURING(events, hqmfjs.OccurrenceAInpatientEncounter3_precondition_32(patient));\n  else events.specificContext=hqmf.SpecificsManager.empty();\n  return events;\n}\n\nhqmfjs.DiagnosticStudyResultNewbornHearingScreenLeft_precondition_25 = function(patient, initialSpecificContext) {\n  var events = patient.procedureResults();\n  events = events.withoutNegation();\n  var codes = getCodes(\"2.16.840.1.114222.4.1.214079.1.1.3\");\n  var start = null;\n  var end = null;\n  events = events.match(codes, start, end, true);\n\n  events = filterEventsByValue(events, new CodeList(getCodes(\"2.16.840.1.114222.4.1.214079.1.1.6\")));\n  if (events.length > 0) events = DURING(events, hqmfjs.OccurrenceAInpatientEncounter3_precondition_32(patient));\n  else events.specificContext=hqmf.SpecificsManager.empty();\n  return events;\n}\n\nhqmfjs.DiagnosticStudyResultNewbornHearingScreenRight_precondition_27 = function(patient, initialSpecificContext) {\n  var events = patient.procedureResults();\n  events = events.withoutNegation();\n  var codes = getCodes(\"2.16.840.1.114222.4.1.214079.1.1.4\");\n  var start = null;\n  var end = null;\n  events = events.match(codes, start, end, true);\n\n  events = filterEventsByValue(events, new CodeList(getCodes(\"2.16.840.1.114222.4.1.214079.1.1.6\")));\n  if (events.length > 0) events = DURING(events, hqmfjs.OccurrenceAInpatientEncounter3_precondition_32(patient));\n  else events.specificContext=hqmf.SpecificsManager.empty();\n  return events;\n}\n\nhqmfjs.DiagnosisActiveLivebirth_precondition_35 = function(patient, initialSpecificContext) {\n  var events = patient.allProblems();\n  events = events.withStatuses([\"active\"]);\n  events = events.withoutNegation();\n  var codes = getCodes(\"2.16.840.1.114222.4.1.214079.1.1.1\");\n  var start = null;\n  var end = null;\n  events = events.match(codes, start, end, true);\n\n  events = filterEventsByField(events, \"ordinality\", new CodeList(getCodes(\"2.16.840.1.113883.3.117.2.7.1.14\")));\n  if (events.length > 0) events = SDU(events, hqmfjs.OccurrenceAInpatientEncounter3(patient));\n  else events.specificContext=hqmf.SpecificsManager.empty();\n  return events;\n}\n\nhqmfjs.OccurrenceAInpatientEncounter3_precondition_37 = function(patient, initialSpecificContext) {\n  var events = patient.encounters();\n  events.specific_occurrence = 'OccurrenceAInpatientEncounter3'\n  events = events.withStatuses([\"performed\"]);\n  events = events.withoutNegation();\n  var codes = getCodes(\"2.16.840.1.113883.3.117.1.7.1.23\");\n  var start = null;\n  var end = null;\n  events = events.match(codes, start, end, true);\n\n  events = filterEventsByField(events, \"reason\", new CodeList(getCodes(\"2.16.840.1.113883.3.117.1.7.1.70\")));\n  if (events.length > 0) events = DURING(events, hqmfjs.MeasurePeriod(patient));\n  else events.specificContext=hqmf.SpecificsManager.empty();\n  return events;\n}\n\nhqmfjs.DiagnosisActiveLivebornBornInHospital_precondition_39 = function(patient, initialSpecificContext) {\n  var events = patient.allProblems();\n  events = events.withStatuses([\"active\"]);\n  events = events.withoutNegation();\n  var codes = getCodes(\"2.16.840.1.113883.3.117.1.7.1.29\");\n  var start = null;\n  var end = null;\n  events = events.match(codes, start, end, true);\n\n  if (events.length > 0) events = SDU(events, hqmfjs.OccurrenceAInpatientEncounter3(patient));\n  else events.specificContext=hqmf.SpecificsManager.empty();\n  return events;\n}\n\n\n\n        // #########################\n        // ##### MEASURE LOGIC #####\n        // #########################\n        \n        hqmfjs.initializeSpecifics = function(patient_api, hqmfjs) { hqmf.SpecificsManager.initialize(patient_api,hqmfjs,{\"id\":\"OccurrenceAInpatientEncounter3\",\"type\":\"ENCOUNTER_PERFORMED_INPATIENT_ENCOUNTER\",\"function\":\"OccurrenceAInpatientEncounter3\"}) }\n\n        // INITIAL PATIENT POPULATION\n        hqmfjs.IPP = function(patient, initialSpecificContext) {\n  return allTrue('IPP',  \n    allTrue('41',     hqmfjs.DiagnosisActiveLivebirth_precondition_35(patient, initialSpecificContext),     hqmfjs.OccurrenceAInpatientEncounter3_precondition_37(patient, initialSpecificContext),     hqmfjs.DiagnosisActiveLivebornBornInHospital_precondition_39(patient, initialSpecificContext)\n    )\n  );\n};\n\n\n        // DENOMINATOR\n        hqmfjs.DENOM = function(patient) { return new Boolean(true); }\n        // NUMERATOR\n        hqmfjs.NUMER = function(patient, initialSpecificContext) {\n  return allTrue('NUMER',  \n    allTrue('34',    \n      atLeastOneTrue('31',       hqmfjs.DiagnosticStudyResultNewbornHearingScreenLeft_precondition_17(patient, initialSpecificContext),       hqmfjs.DiagnosticStudyResultNewbornHearingScreenRight_precondition_19(patient, initialSpecificContext),       hqmfjs.DiagnosticStudyResultHearingExamination_precondition_21(patient, initialSpecificContext),       hqmfjs.DiagnosticStudyResultHearingExamination_precondition_23(patient, initialSpecificContext),      \n        allTrue('29',         hqmfjs.DiagnosticStudyResultNewbornHearingScreenLeft_precondition_25(patient, initialSpecificContext),         hqmfjs.DiagnosticStudyResultNewbornHearingScreenRight_precondition_27(patient, initialSpecificContext)\n        )\n      )\n    )\n  );\n};\n\n\n        hqmfjs.DENEX = function(patient, initialSpecificContext) {\n  return atLeastOneTrue('DENEX',  \n    allTrue('16',     hqmfjs.PatientCharacteristicExpiredPatientExpired_precondition_13(patient, initialSpecificContext),    \n      allFalse('15',      \n        atLeastOneTrue('10',         hqmfjs.DiagnosticStudyResultHearingExamination_precondition_4(patient, initialSpecificContext),         hqmfjs.DiagnosticStudyResultNewbornHearingScreenLeft_precondition_6(patient, initialSpecificContext),         hqmfjs.DiagnosticStudyResultNewbornHearingScreenRight_precondition_8(patient, initialSpecificContext)\n        )\n      )\n    )\n  );\n};\n\n\n        hqmfjs.DENEXCEP = function(patient) { return new Boolean(false); }\n        // CV\n        hqmfjs.MSRPOPL = function(patient) { return new Boolean(false); }\n        hqmfjs.OBSERV = function(patient) { return new Boolean(false); }\n        \n      \n      var occurrenceId = [\"OccurrenceAInpatientEncounter3\"];\n\n      hqmfjs.initializeSpecifics(patient_api, hqmfjs)\n      \n      var population = function() {\n        return executeIfAvailable(hqmfjs.IPP, patient_api);\n      }\n      var denominator = function() {\n        return executeIfAvailable(hqmfjs.DENOM, patient_api);\n      }\n      var numerator = function() {\n        return executeIfAvailable(hqmfjs.NUMER, patient_api);\n      }\n      var exclusion = function() {\n        return executeIfAvailable(hqmfjs.DENEX, patient_api);\n      }\n      var denexcep = function() {\n        return executeIfAvailable(hqmfjs.DENEXCEP, patient_api);\n      }\n      var msrpopl = function() {\n        return executeIfAvailable(hqmfjs.MSRPOPL, patient_api);\n      }\n      var observ = function(specific_context) {\n        \n        var observFunc = hqmfjs.OBSERV\n        if (typeof(observFunc)==='function')\n          return observFunc(patient_api, specific_context);\n        else\n          return [];\n      }\n      \n      var executeIfAvailable = function(optionalFunction, arg) {\n        if (typeof(optionalFunction)==='function')\n          return optionalFunction(arg);\n        else\n          return false;\n      }\n\n      if (Logger.enabled) enableMeasureLogging(hqmfjs);\n\n      map(patient, population, denominator, numerator, exclusion, denexcep, msrpopl, observ, occurrenceId,false);\n      \n      };\n      ",
+  "continuous_variable": false,
+  "episode_of_care": true,
+  "data_criteria": [
+    {
+      "PatientCharacteristicExpiredPatientExpired_precondition_13": {
+        "title": "Patient Expired",
+        "description": "Patient Characteristic Expired: Patient Expired",
+        "standard_category": "individual_characteristic",
+        "qds_data_type": "individual_characteristic",
+        "code_list_id": "2.16.840.1.113883.3.67.1.101.1.78",
+        "property": "expired",
+        "type": "characteristic",
+        "definition": "patient_characteristic_expired",
+        "hard_status": false,
+        "negation": false,
+        "source_data_criteria": "PatientCharacteristicExpiredPatientExpired",
+        "inline_code_list": {
+          "SNOMED-CT": [
+            "371828006"
+          ]
+        },
+        "temporal_references": [
+          {
+            "type": "DURING",
+            "reference": "OccurrenceAInpatientEncounter3"
+          }
+        ]
+      }
+    },
+    {
+      "OccurrenceAInpatientEncounter3": {
+        "title": "Inpatient Encounter",
+        "description": "Encounter, Performed: Inpatient Encounter",
+        "standard_category": "encounter",
+        "qds_data_type": "encounter",
+        "code_list_id": "2.16.840.1.113883.3.117.1.7.1.23",
+        "type": "encounters",
+        "definition": "encounter",
+        "status": "performed",
+        "hard_status": false,
+        "negation": false,
+        "specific_occurrence": "A",
+        "specific_occurrence_const": "ENCOUNTER_PERFORMED_INPATIENT_ENCOUNTER",
+        "source_data_criteria": "OccurrenceAInpatientEncounter3"
+      }
+    },
+    {
+      "DiagnosticStudyResultHearingExamination_precondition_4": {
+        "title": "Hearing Examination",
+        "description": "Diagnostic Study, Result: Hearing Examination",
+        "standard_category": "diagnostic_study",
+        "qds_data_type": "diagnostic_study_result",
+        "code_list_id": "2.16.840.1.114222.4.1.214079.1.1.2",
+        "type": "diagnostic_studies",
+        "definition": "diagnostic_study_result",
+        "hard_status": false,
+        "negation": false,
+        "source_data_criteria": "DiagnosticStudyResultHearingExamination",
+        "temporal_references": [
+          {
+            "type": "DURING",
+            "reference": "OccurrenceAInpatientEncounter3_precondition_11"
+          }
+        ]
+      }
+    },
+    {
+      "OccurrenceAInpatientEncounter3_precondition_11": {
+        "title": "Inpatient Encounter",
+        "description": "Encounter, Performed: Inpatient Encounter",
+        "standard_category": "encounter",
+        "qds_data_type": "encounter",
+        "code_list_id": "2.16.840.1.113883.3.117.1.7.1.23",
+        "type": "encounters",
+        "definition": "encounter",
+        "status": "performed",
+        "hard_status": false,
+        "negation": false,
+        "specific_occurrence": "A",
+        "specific_occurrence_const": "ENCOUNTER_PERFORMED_INPATIENT_ENCOUNTER",
+        "source_data_criteria": "OccurrenceAInpatientEncounter3"
+      }
+    },
+    {
+      "DiagnosticStudyResultNewbornHearingScreenLeft_precondition_6": {
+        "title": "Newborn Hearing Screen Left",
+        "description": "Diagnostic Study, Result: Newborn Hearing Screen Left",
+        "standard_category": "diagnostic_study",
+        "qds_data_type": "diagnostic_study_result",
+        "code_list_id": "2.16.840.1.114222.4.1.214079.1.1.3",
+        "type": "diagnostic_studies",
+        "definition": "diagnostic_study_result",
+        "hard_status": false,
+        "negation": false,
+        "source_data_criteria": "DiagnosticStudyResultNewbornHearingScreenLeft",
+        "temporal_references": [
+          {
+            "type": "DURING",
+            "reference": "OccurrenceAInpatientEncounter3_precondition_11"
+          }
+        ]
+      }
+    },
+    {
+      "DiagnosticStudyResultNewbornHearingScreenRight_precondition_8": {
+        "title": "Newborn Hearing Screen Right",
+        "description": "Diagnostic Study, Result: Newborn Hearing Screen Right",
+        "standard_category": "diagnostic_study",
+        "qds_data_type": "diagnostic_study_result",
+        "code_list_id": "2.16.840.1.114222.4.1.214079.1.1.4",
+        "type": "diagnostic_studies",
+        "definition": "diagnostic_study_result",
+        "hard_status": false,
+        "negation": false,
+        "source_data_criteria": "DiagnosticStudyResultNewbornHearingScreenRight",
+        "temporal_references": [
+          {
+            "type": "DURING",
+            "reference": "OccurrenceAInpatientEncounter3_precondition_11"
+          }
+        ]
+      }
+    },
+    {
+      "DiagnosticStudyResultNewbornHearingScreenLeft_precondition_17": {
+        "title": "Newborn Hearing Screen Left",
+        "description": "Diagnostic Study, Result: Newborn Hearing Screen Left",
+        "standard_category": "diagnostic_study",
+        "qds_data_type": "diagnostic_study_result",
+        "code_list_id": "2.16.840.1.114222.4.1.214079.1.1.3",
+        "type": "diagnostic_studies",
+        "definition": "diagnostic_study_result",
+        "hard_status": false,
+        "negation": true,
+        "negation_code_list_id": "2.16.840.1.114222.4.1.214079.1.1.7",
+        "source_data_criteria": "DiagnosticStudyResultNewbornHearingScreenLeft",
+        "temporal_references": [
+          {
+            "type": "DURING",
+            "reference": "OccurrenceAInpatientEncounter3_precondition_32"
+          }
+        ]
+      }
+    },
+    {
+      "OccurrenceAInpatientEncounter3_precondition_32": {
+        "title": "Inpatient Encounter",
+        "description": "Encounter, Performed: Inpatient Encounter",
+        "standard_category": "encounter",
+        "qds_data_type": "encounter",
+        "code_list_id": "2.16.840.1.113883.3.117.1.7.1.23",
+        "type": "encounters",
+        "definition": "encounter",
+        "status": "performed",
+        "hard_status": false,
+        "negation": false,
+        "specific_occurrence": "A",
+        "specific_occurrence_const": "ENCOUNTER_PERFORMED_INPATIENT_ENCOUNTER",
+        "source_data_criteria": "OccurrenceAInpatientEncounter3"
+      }
+    },
+    {
+      "DiagnosticStudyResultNewbornHearingScreenRight_precondition_19": {
+        "title": "Newborn Hearing Screen Right",
+        "description": "Diagnostic Study, Result: Newborn Hearing Screen Right",
+        "standard_category": "diagnostic_study",
+        "qds_data_type": "diagnostic_study_result",
+        "code_list_id": "2.16.840.1.114222.4.1.214079.1.1.4",
+        "type": "diagnostic_studies",
+        "definition": "diagnostic_study_result",
+        "hard_status": false,
+        "negation": true,
+        "negation_code_list_id": "2.16.840.1.114222.4.1.214079.1.1.7",
+        "source_data_criteria": "DiagnosticStudyResultNewbornHearingScreenRight",
+        "temporal_references": [
+          {
+            "type": "DURING",
+            "reference": "OccurrenceAInpatientEncounter3_precondition_32"
+          }
+        ]
+      }
+    },
+    {
+      "DiagnosticStudyResultHearingExamination_precondition_21": {
+        "title": "Hearing Examination",
+        "description": "Diagnostic Study, Result: Hearing Examination",
+        "standard_category": "diagnostic_study",
+        "qds_data_type": "diagnostic_study_result",
+        "code_list_id": "2.16.840.1.114222.4.1.214079.1.1.2",
+        "type": "diagnostic_studies",
+        "definition": "diagnostic_study_result",
+        "hard_status": false,
+        "negation": false,
+        "source_data_criteria": "DiagnosticStudyResultHearingExamination",
+        "temporal_references": [
+          {
+            "type": "DURING",
+            "reference": "OccurrenceAInpatientEncounter3_precondition_32"
+          }
+        ]
+      }
+    },
+    {
+      "DiagnosticStudyResultHearingExamination_precondition_23": {
+        "title": "Hearing Examination",
+        "description": "Diagnostic Study, Result: Hearing Examination",
+        "standard_category": "diagnostic_study",
+        "qds_data_type": "diagnostic_study_result",
+        "code_list_id": "2.16.840.1.114222.4.1.214079.1.1.2",
+        "type": "diagnostic_studies",
+        "definition": "diagnostic_study_result",
+        "hard_status": false,
+        "negation": true,
+        "negation_code_list_id": "2.16.840.1.114222.4.1.214079.1.1.7",
+        "source_data_criteria": "DiagnosticStudyResultHearingExamination",
+        "temporal_references": [
+          {
+            "type": "DURING",
+            "reference": "OccurrenceAInpatientEncounter3_precondition_32"
+          }
+        ]
+      }
+    },
+    {
+      "DiagnosticStudyResultNewbornHearingScreenLeft_precondition_25": {
+        "title": "Newborn Hearing Screen Left",
+        "description": "Diagnostic Study, Result: Newborn Hearing Screen Left",
+        "standard_category": "diagnostic_study",
+        "qds_data_type": "diagnostic_study_result",
+        "code_list_id": "2.16.840.1.114222.4.1.214079.1.1.3",
+        "type": "diagnostic_studies",
+        "definition": "diagnostic_study_result",
+        "hard_status": false,
+        "negation": false,
+        "source_data_criteria": "DiagnosticStudyResultNewbornHearingScreenLeft",
+        "value": {
+          "type": "CD",
+          "code_list_id": "2.16.840.1.114222.4.1.214079.1.1.6",
+          "title": "Pass Or Refer"
+        },
+        "temporal_references": [
+          {
+            "type": "DURING",
+            "reference": "OccurrenceAInpatientEncounter3_precondition_32"
+          }
+        ]
+      }
+    },
+    {
+      "DiagnosticStudyResultNewbornHearingScreenRight_precondition_27": {
+        "title": "Newborn Hearing Screen Right",
+        "description": "Diagnostic Study, Result: Newborn Hearing Screen Right",
+        "standard_category": "diagnostic_study",
+        "qds_data_type": "diagnostic_study_result",
+        "code_list_id": "2.16.840.1.114222.4.1.214079.1.1.4",
+        "type": "diagnostic_studies",
+        "definition": "diagnostic_study_result",
+        "hard_status": false,
+        "negation": false,
+        "source_data_criteria": "DiagnosticStudyResultNewbornHearingScreenRight",
+        "value": {
+          "type": "CD",
+          "code_list_id": "2.16.840.1.114222.4.1.214079.1.1.6",
+          "title": "Pass Or Refer"
+        },
+        "temporal_references": [
+          {
+            "type": "DURING",
+            "reference": "OccurrenceAInpatientEncounter3_precondition_32"
+          }
+        ]
+      }
+    },
+    {
+      "DiagnosisActiveLivebirth_precondition_35": {
+        "title": "Livebirth",
+        "description": "Diagnosis, Active: Livebirth",
+        "standard_category": "diagnosis_condition_problem",
+        "qds_data_type": "diagnosis_active",
+        "code_list_id": "2.16.840.1.114222.4.1.214079.1.1.1",
+        "type": "conditions",
+        "definition": "diagnosis",
+        "status": "active",
+        "hard_status": false,
+        "negation": false,
+        "source_data_criteria": "DiagnosisActiveLivebirth",
+        "field_values": {
+          "ORDINAL": {
+            "type": "CD",
+            "code_list_id": "2.16.840.1.113883.3.117.2.7.1.14",
+            "title": "Principal Diagnosis"
+          }
+        },
+        "temporal_references": [
+          {
+            "type": "SDU",
+            "reference": "OccurrenceAInpatientEncounter3"
+          }
+        ]
+      }
+    },
+    {
+      "OccurrenceAInpatientEncounter3_precondition_37": {
+        "title": "Inpatient Encounter",
+        "description": "Encounter, Performed: Inpatient Encounter",
+        "standard_category": "encounter",
+        "qds_data_type": "encounter",
+        "code_list_id": "2.16.840.1.113883.3.117.1.7.1.23",
+        "type": "encounters",
+        "definition": "encounter",
+        "status": "performed",
+        "hard_status": false,
+        "negation": false,
+        "specific_occurrence": "A",
+        "specific_occurrence_const": "ENCOUNTER_PERFORMED_INPATIENT_ENCOUNTER",
+        "source_data_criteria": "OccurrenceAInpatientEncounter3",
+        "field_values": {
+          "REASON": {
+            "type": "CD",
+            "code_list_id": "2.16.840.1.113883.3.117.1.7.1.70",
+            "title": "Birth"
+          }
+        },
+        "temporal_references": [
+          {
+            "type": "DURING",
+            "reference": "MeasurePeriod"
+          }
+        ]
+      }
+    },
+    {
+      "DiagnosisActiveLivebornBornInHospital_precondition_39": {
+        "title": "Liveborn Born In Hospital",
+        "description": "Diagnosis, Active: Liveborn Born In Hospital",
+        "standard_category": "diagnosis_condition_problem",
+        "qds_data_type": "diagnosis_active",
+        "code_list_id": "2.16.840.1.113883.3.117.1.7.1.29",
+        "type": "conditions",
+        "definition": "diagnosis",
+        "status": "active",
+        "hard_status": false,
+        "negation": false,
+        "source_data_criteria": "DiagnosisActiveLivebornBornInHospital",
+        "temporal_references": [
+          {
+            "type": "SDU",
+            "reference": "OccurrenceAInpatientEncounter3"
+          }
+        ]
+      }
+    }
+  ],
+  "oids": [
+    "2.16.840.1.114222.4.1.214079.1.1.7",
+    "2.16.840.1.114222.4.1.214079.1.1.6",
+    "2.16.840.1.114222.4.1.214079.1.1.4",
+    "2.16.840.1.114222.4.1.214079.1.1.3",
+    "2.16.840.1.114222.4.1.214079.1.1.2",
+    "2.16.840.1.114222.4.1.214079.1.1.1",
+    "2.16.840.1.113883.3.67.1.101.1.78",
+    "2.16.840.1.113883.3.117.2.7.1.14",
+    "2.16.840.1.113883.3.117.1.7.1.70",
+    "2.16.840.1.113883.3.117.1.7.1.29",
+    "2.16.840.1.113883.3.117.1.7.1.23"
+  ],
+  "population_ids": {
+    "IPP": "BF8B2094-FF16-477C-9046-58FA07119C9D",
+    "DENOM": "9C0DA0B8-FF25-4D5B-A6B0-9C31BCD8C878",
+    "NUMER": "6C6477E9-B7CE-4E89-928F-8BD6959A23C7",
+    "DENEX": "06939B16-7A8C-411C-B8AA-5018537D7D48"
+  }
+}

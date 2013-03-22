@@ -1,0 +1,3125 @@
+{
+  "id": "8A4D92B2-3887-5DF3-0139-01959FB76498",
+  "nqf_id": "0374",
+  "hqmf_id": "8A4D92B2-3887-5DF3-0139-01959FB76498",
+  "hqmf_set_id": "BCCE43DD-08E3-46C3-BFDD-0B1B472690F0",
+  "hqmf_version_number": 1,
+  "cms_id": "CMS109v1",
+  "endorser": null,
+  "name": "Venous Thromboembolism Patients Receiving Unfractionated Heparin with Dosages/Platelet Count Monitoring by Protocol or Nomogram",
+  "description": "This measure assesses the number of patients diagnosed with confirmed VTE who received intravenous (IV) UFH therapy dosages AND had their platelet counts monitored using defined parameters such as a nomogram or protocol.",
+  "type": "eh",
+  "category": "Venous Thromboembolism",
+  "steward": null,
+  "population": {
+    "conjunction": "and",
+    "items": [
+      {
+        "conjunction": "and",
+        "items": [
+          {
+            "title": "birth date",
+            "description": "Patient Characteristic Birthdate: birth date",
+            "standard_category": "individual_characteristic",
+            "qds_data_type": "individual_characteristic",
+            "code_list_id": "2.16.840.1.113883.3.560.100.4",
+            "property": "birthtime",
+            "type": "characteristic",
+            "definition": "patient_characteristic_birthdate",
+            "hard_status": false,
+            "negation": false,
+            "source_data_criteria": "PatientCharacteristicBirthdateBirthDate",
+            "inline_code_list": {
+              "LOINC": [
+                "21112-8"
+              ]
+            },
+            "temporal_references": [
+              {
+                "type": "SBS",
+                "reference": {
+                  "title": "Inpatient Encounter",
+                  "description": "Encounter, Performed: Inpatient Encounter",
+                  "standard_category": "encounter",
+                  "qds_data_type": "encounter",
+                  "code_list_id": "2.16.840.1.113883.3.117.1.7.1.23",
+                  "type": "encounters",
+                  "definition": "encounter",
+                  "status": "performed",
+                  "hard_status": false,
+                  "negation": false,
+                  "specific_occurrence": "A",
+                  "specific_occurrence_const": "ENCOUNTER_PERFORMED_INPATIENT_ENCOUNTER",
+                  "source_data_criteria": "OccurrenceAInpatientEncounter2"
+                },
+                "range": {
+                  "type": "IVL_PQ",
+                  "low": {
+                    "type": "PQ",
+                    "unit": "a",
+                    "value": "18",
+                    "inclusive?": true,
+                    "derived?": false
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "title": "Inpatient Encounter",
+            "description": "Encounter, Performed: Inpatient Encounter",
+            "standard_category": "encounter",
+            "qds_data_type": "encounter",
+            "code_list_id": "2.16.840.1.113883.3.117.1.7.1.23",
+            "type": "encounters",
+            "definition": "encounter",
+            "status": "performed",
+            "hard_status": false,
+            "negation": false,
+            "specific_occurrence": "A",
+            "specific_occurrence_const": "ENCOUNTER_PERFORMED_INPATIENT_ENCOUNTER",
+            "source_data_criteria": "OccurrenceAInpatientEncounter2",
+            "field_values": {
+              "LENGTH_OF_STAY": {
+                "type": "IVL_PQ",
+                "high": {
+                  "type": "PQ",
+                  "unit": "d",
+                  "value": "120",
+                  "inclusive?": true,
+                  "derived?": false
+                }
+              }
+            }
+          },
+          {
+            "title": "Inpatient Encounter",
+            "description": "Encounter, Performed: Inpatient Encounter",
+            "standard_category": "encounter",
+            "qds_data_type": "encounter",
+            "code_list_id": "2.16.840.1.113883.3.117.1.7.1.23",
+            "type": "encounters",
+            "definition": "encounter",
+            "status": "performed",
+            "hard_status": false,
+            "negation": false,
+            "specific_occurrence": "A",
+            "specific_occurrence_const": "ENCOUNTER_PERFORMED_INPATIENT_ENCOUNTER",
+            "source_data_criteria": "OccurrenceAInpatientEncounter2",
+            "field_values": {
+              "DISCHARGE_DATETIME": {
+                "type": "ANYNonNull"
+              }
+            },
+            "temporal_references": [
+              {
+                "type": "DURING",
+                "reference": "MeasurePeriod",
+                "title": "MeasurePeriod"
+              }
+            ]
+          },
+          {
+            "conjunction": "or",
+            "items": [
+              {
+                "conjunction": "and",
+                "items": [
+                  {
+                    "title": "Inpatient Encounter",
+                    "description": "Encounter, Performed: Inpatient Encounter",
+                    "standard_category": "encounter",
+                    "qds_data_type": "encounter",
+                    "code_list_id": "2.16.840.1.113883.3.117.1.7.1.23",
+                    "type": "encounters",
+                    "definition": "encounter",
+                    "status": "performed",
+                    "hard_status": false,
+                    "negation": false,
+                    "specific_occurrence": "A",
+                    "specific_occurrence_const": "ENCOUNTER_PERFORMED_INPATIENT_ENCOUNTER",
+                    "source_data_criteria": "OccurrenceAInpatientEncounter2",
+                    "field_values": {
+                      "ADMISSION_DATETIME": {
+                        "type": "ANYNonNull"
+                      }
+                    },
+                    "temporal_references": [
+                      {
+                        "type": "SAE",
+                        "reference": {
+                          "title": "Emergency Department Visit",
+                          "description": "Encounter, Performed: Emergency Department Visit",
+                          "standard_category": "encounter",
+                          "qds_data_type": "encounter",
+                          "code_list_id": "2.16.840.1.113883.3.117.1.7.1.293",
+                          "type": "encounters",
+                          "definition": "encounter",
+                          "status": "performed",
+                          "hard_status": false,
+                          "negation": false,
+                          "specific_occurrence": "A",
+                          "specific_occurrence_const": "ENCOUNTER_PERFORMED_EMERGENCY_DEPARTMENT_VISIT",
+                          "source_data_criteria": "OccurrenceAEmergencyDepartmentVisit1",
+                          "field_values": {
+                            "FACILITY_LOCATION_DEPARTURE_DATETIME": null
+                          }
+                        },
+                        "range": {
+                          "type": "IVL_PQ",
+                          "high": {
+                            "type": "PQ",
+                            "unit": "h",
+                            "value": "1",
+                            "inclusive?": true,
+                            "derived?": false
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "conjunction": "or",
+                    "items": [
+                      {
+                        "title": "Venous Thromboembolism",
+                        "description": "Diagnosis, Active: Venous Thromboembolism",
+                        "standard_category": "diagnosis_condition_problem",
+                        "qds_data_type": "diagnosis_active",
+                        "code_list_id": "2.16.840.1.113883.3.117.1.7.1.279",
+                        "type": "conditions",
+                        "definition": "diagnosis",
+                        "status": "active",
+                        "hard_status": false,
+                        "negation": false,
+                        "source_data_criteria": "DiagnosisActiveVenousThromboembolism",
+                        "temporal_references": [
+                          {
+                            "type": "SDU",
+                            "reference": {
+                              "title": "Emergency Department Visit",
+                              "description": "Encounter, Performed: Emergency Department Visit",
+                              "standard_category": "encounter",
+                              "qds_data_type": "encounter",
+                              "code_list_id": "2.16.840.1.113883.3.117.1.7.1.293",
+                              "type": "encounters",
+                              "definition": "encounter",
+                              "status": "performed",
+                              "hard_status": false,
+                              "negation": false,
+                              "specific_occurrence": "A",
+                              "specific_occurrence_const": "ENCOUNTER_PERFORMED_EMERGENCY_DEPARTMENT_VISIT",
+                              "source_data_criteria": "OccurrenceAEmergencyDepartmentVisit1"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "title": "Obstetrics VTE",
+                        "description": "Diagnosis, Active: Obstetrics VTE",
+                        "standard_category": "diagnosis_condition_problem",
+                        "qds_data_type": "diagnosis_active",
+                        "code_list_id": "2.16.840.1.113883.3.117.1.7.1.264",
+                        "type": "conditions",
+                        "definition": "diagnosis",
+                        "status": "active",
+                        "hard_status": false,
+                        "negation": false,
+                        "source_data_criteria": "DiagnosisActiveObstetricsVte",
+                        "temporal_references": [
+                          {
+                            "type": "SDU",
+                            "reference": {
+                              "title": "Emergency Department Visit",
+                              "description": "Encounter, Performed: Emergency Department Visit",
+                              "standard_category": "encounter",
+                              "qds_data_type": "encounter",
+                              "code_list_id": "2.16.840.1.113883.3.117.1.7.1.293",
+                              "type": "encounters",
+                              "definition": "encounter",
+                              "status": "performed",
+                              "hard_status": false,
+                              "negation": false,
+                              "specific_occurrence": "A",
+                              "specific_occurrence_const": "ENCOUNTER_PERFORMED_EMERGENCY_DEPARTMENT_VISIT",
+                              "source_data_criteria": "OccurrenceAEmergencyDepartmentVisit1"
+                            }
+                          }
+                        ]
+                      }
+                    ],
+                    "negation": null,
+                    "precondition_id": 130
+                  }
+                ],
+                "negation": null,
+                "precondition_id": 133
+              },
+              {
+                "conjunction": "or",
+                "items": [
+                  {
+                    "title": "Venous Thromboembolism",
+                    "description": "Diagnosis, Active: Venous Thromboembolism",
+                    "standard_category": "diagnosis_condition_problem",
+                    "qds_data_type": "diagnosis_active",
+                    "code_list_id": "2.16.840.1.113883.3.117.1.7.1.279",
+                    "type": "conditions",
+                    "definition": "diagnosis",
+                    "status": "active",
+                    "hard_status": false,
+                    "negation": false,
+                    "source_data_criteria": "DiagnosisActiveVenousThromboembolism",
+                    "temporal_references": [
+                      {
+                        "type": "SDU",
+                        "reference": {
+                          "title": "Inpatient Encounter",
+                          "description": "Encounter, Performed: Inpatient Encounter",
+                          "standard_category": "encounter",
+                          "qds_data_type": "encounter",
+                          "code_list_id": "2.16.840.1.113883.3.117.1.7.1.23",
+                          "type": "encounters",
+                          "definition": "encounter",
+                          "status": "performed",
+                          "hard_status": false,
+                          "negation": false,
+                          "specific_occurrence": "A",
+                          "specific_occurrence_const": "ENCOUNTER_PERFORMED_INPATIENT_ENCOUNTER",
+                          "source_data_criteria": "OccurrenceAInpatientEncounter2"
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "title": "Obstetrics VTE",
+                    "description": "Diagnosis, Active: Obstetrics VTE",
+                    "standard_category": "diagnosis_condition_problem",
+                    "qds_data_type": "diagnosis_active",
+                    "code_list_id": "2.16.840.1.113883.3.117.1.7.1.264",
+                    "type": "conditions",
+                    "definition": "diagnosis",
+                    "status": "active",
+                    "hard_status": false,
+                    "negation": false,
+                    "source_data_criteria": "DiagnosisActiveObstetricsVte",
+                    "temporal_references": [
+                      {
+                        "type": "SDU",
+                        "reference": {
+                          "title": "Inpatient Encounter",
+                          "description": "Encounter, Performed: Inpatient Encounter",
+                          "standard_category": "encounter",
+                          "qds_data_type": "encounter",
+                          "code_list_id": "2.16.840.1.113883.3.117.1.7.1.23",
+                          "type": "encounters",
+                          "definition": "encounter",
+                          "status": "performed",
+                          "hard_status": false,
+                          "negation": false,
+                          "specific_occurrence": "A",
+                          "specific_occurrence_const": "ENCOUNTER_PERFORMED_INPATIENT_ENCOUNTER",
+                          "source_data_criteria": "OccurrenceAInpatientEncounter2"
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "negation": null,
+                "precondition_id": 139
+              }
+            ],
+            "negation": null,
+            "precondition_id": 142
+          }
+        ],
+        "negation": null,
+        "precondition_id": 144
+      }
+    ]
+  },
+  "denominator": {
+    "conjunction": "and",
+    "items": [
+      {
+        "conjunction": "and",
+        "items": [
+          {
+            "conjunction": "or",
+            "items": [
+              {
+                "conjunction": "and",
+                "items": [
+                  {
+                    "title": "VTE Diagnostic Test",
+                    "description": "Diagnostic Study, Result: VTE Diagnostic Test",
+                    "standard_category": "diagnostic_study",
+                    "qds_data_type": "diagnostic_study_result",
+                    "code_list_id": "2.16.840.1.113883.3.117.1.7.1.276",
+                    "type": "diagnostic_studies",
+                    "definition": "diagnostic_study_result",
+                    "hard_status": false,
+                    "negation": false,
+                    "source_data_criteria": "DiagnosticStudyResultVteDiagnosticTest",
+                    "value": {
+                      "type": "CD",
+                      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.407",
+                      "title": "VTE Confirmed"
+                    },
+                    "temporal_references": [
+                      {
+                        "type": "SBS",
+                        "reference": {
+                          "title": "Inpatient Encounter",
+                          "description": "Encounter, Performed: Inpatient Encounter",
+                          "standard_category": "encounter",
+                          "qds_data_type": "encounter",
+                          "code_list_id": "2.16.840.1.113883.3.117.1.7.1.23",
+                          "type": "encounters",
+                          "definition": "encounter",
+                          "status": "performed",
+                          "hard_status": false,
+                          "negation": false,
+                          "specific_occurrence": "A",
+                          "specific_occurrence_const": "ENCOUNTER_PERFORMED_INPATIENT_ENCOUNTER",
+                          "source_data_criteria": "OccurrenceAInpatientEncounter2"
+                        },
+                        "range": {
+                          "type": "IVL_PQ",
+                          "high": {
+                            "type": "PQ",
+                            "unit": "d",
+                            "value": "2",
+                            "inclusive?": true,
+                            "derived?": false
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "title": "VTE Diagnostic Test",
+                    "description": "Diagnostic Study, Performed: VTE Diagnostic Test",
+                    "standard_category": "diagnostic_study",
+                    "qds_data_type": "diagnostic_study_performed",
+                    "code_list_id": "2.16.840.1.113883.3.117.1.7.1.276",
+                    "type": "diagnostic_studies",
+                    "definition": "diagnostic_study",
+                    "status": "performed",
+                    "hard_status": false,
+                    "negation": false,
+                    "source_data_criteria": "DiagnosticStudyPerformedVteDiagnosticTest",
+                    "temporal_references": [
+                      {
+                        "type": "SBS",
+                        "reference": {
+                          "title": "Inpatient Encounter",
+                          "description": "Encounter, Performed: Inpatient Encounter",
+                          "standard_category": "encounter",
+                          "qds_data_type": "encounter",
+                          "code_list_id": "2.16.840.1.113883.3.117.1.7.1.23",
+                          "type": "encounters",
+                          "definition": "encounter",
+                          "status": "performed",
+                          "hard_status": false,
+                          "negation": false,
+                          "specific_occurrence": "A",
+                          "specific_occurrence_const": "ENCOUNTER_PERFORMED_INPATIENT_ENCOUNTER",
+                          "source_data_criteria": "OccurrenceAInpatientEncounter2"
+                        },
+                        "range": {
+                          "type": "IVL_PQ",
+                          "high": {
+                            "type": "PQ",
+                            "unit": "d",
+                            "value": "2",
+                            "inclusive?": true,
+                            "derived?": false
+                          }
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "negation": null,
+                "precondition_id": 66
+              },
+              {
+                "conjunction": "and",
+                "items": [
+                  {
+                    "title": "VTE Diagnostic Test",
+                    "description": "Diagnostic Study, Result: VTE Diagnostic Test",
+                    "standard_category": "diagnostic_study",
+                    "qds_data_type": "diagnostic_study_result",
+                    "code_list_id": "2.16.840.1.113883.3.117.1.7.1.276",
+                    "type": "diagnostic_studies",
+                    "definition": "diagnostic_study_result",
+                    "hard_status": false,
+                    "negation": false,
+                    "source_data_criteria": "DiagnosticStudyResultVteDiagnosticTest",
+                    "value": {
+                      "type": "CD",
+                      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.407",
+                      "title": "VTE Confirmed"
+                    },
+                    "temporal_references": [
+                      {
+                        "type": "DURING",
+                        "reference": {
+                          "title": "Inpatient Encounter",
+                          "description": "Encounter, Performed: Inpatient Encounter",
+                          "standard_category": "encounter",
+                          "qds_data_type": "encounter",
+                          "code_list_id": "2.16.840.1.113883.3.117.1.7.1.23",
+                          "type": "encounters",
+                          "definition": "encounter",
+                          "status": "performed",
+                          "hard_status": false,
+                          "negation": false,
+                          "specific_occurrence": "A",
+                          "specific_occurrence_const": "ENCOUNTER_PERFORMED_INPATIENT_ENCOUNTER",
+                          "source_data_criteria": "OccurrenceAInpatientEncounter2"
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "title": "VTE Diagnostic Test",
+                    "description": "Diagnostic Study, Performed: VTE Diagnostic Test",
+                    "standard_category": "diagnostic_study",
+                    "qds_data_type": "diagnostic_study_performed",
+                    "code_list_id": "2.16.840.1.113883.3.117.1.7.1.276",
+                    "type": "diagnostic_studies",
+                    "definition": "diagnostic_study",
+                    "status": "performed",
+                    "hard_status": false,
+                    "negation": false,
+                    "source_data_criteria": "DiagnosticStudyPerformedVteDiagnosticTest",
+                    "temporal_references": [
+                      {
+                        "type": "DURING",
+                        "reference": {
+                          "title": "Inpatient Encounter",
+                          "description": "Encounter, Performed: Inpatient Encounter",
+                          "standard_category": "encounter",
+                          "qds_data_type": "encounter",
+                          "code_list_id": "2.16.840.1.113883.3.117.1.7.1.23",
+                          "type": "encounters",
+                          "definition": "encounter",
+                          "status": "performed",
+                          "hard_status": false,
+                          "negation": false,
+                          "specific_occurrence": "A",
+                          "specific_occurrence_const": "ENCOUNTER_PERFORMED_INPATIENT_ENCOUNTER",
+                          "source_data_criteria": "OccurrenceAInpatientEncounter2"
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "negation": null,
+                "precondition_id": 73
+              },
+              {
+                "conjunction": "and",
+                "items": [
+                  {
+                    "title": "Inpatient Encounter",
+                    "description": "Encounter, Performed: Inpatient Encounter",
+                    "standard_category": "encounter",
+                    "qds_data_type": "encounter",
+                    "code_list_id": "2.16.840.1.113883.3.117.1.7.1.23",
+                    "type": "encounters",
+                    "definition": "encounter",
+                    "status": "performed",
+                    "hard_status": false,
+                    "negation": false,
+                    "specific_occurrence": "A",
+                    "specific_occurrence_const": "ENCOUNTER_PERFORMED_INPATIENT_ENCOUNTER",
+                    "source_data_criteria": "OccurrenceAInpatientEncounter2",
+                    "field_values": {
+                      "ADMISSION_DATETIME": {
+                        "type": "ANYNonNull"
+                      }
+                    },
+                    "temporal_references": [
+                      {
+                        "type": "SAE",
+                        "reference": {
+                          "title": "Emergency Department Visit",
+                          "description": "Encounter, Performed: Emergency Department Visit",
+                          "standard_category": "encounter",
+                          "qds_data_type": "encounter",
+                          "code_list_id": "2.16.840.1.113883.3.117.1.7.1.293",
+                          "type": "encounters",
+                          "definition": "encounter",
+                          "status": "performed",
+                          "hard_status": false,
+                          "negation": false,
+                          "specific_occurrence": "A",
+                          "specific_occurrence_const": "ENCOUNTER_PERFORMED_EMERGENCY_DEPARTMENT_VISIT",
+                          "source_data_criteria": "OccurrenceAEmergencyDepartmentVisit1",
+                          "field_values": {
+                            "FACILITY_LOCATION_DEPARTURE_DATETIME": null
+                          }
+                        },
+                        "range": {
+                          "type": "IVL_PQ",
+                          "high": {
+                            "type": "PQ",
+                            "unit": "h",
+                            "value": "1",
+                            "inclusive?": true,
+                            "derived?": false
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "conjunction": "or",
+                    "items": [
+                      {
+                        "conjunction": "and",
+                        "items": [
+                          {
+                            "title": "VTE Diagnostic Test",
+                            "description": "Diagnostic Study, Result: VTE Diagnostic Test",
+                            "standard_category": "diagnostic_study",
+                            "qds_data_type": "diagnostic_study_result",
+                            "code_list_id": "2.16.840.1.113883.3.117.1.7.1.276",
+                            "type": "diagnostic_studies",
+                            "definition": "diagnostic_study_result",
+                            "hard_status": false,
+                            "negation": false,
+                            "source_data_criteria": "DiagnosticStudyResultVteDiagnosticTest",
+                            "value": {
+                              "type": "CD",
+                              "code_list_id": "2.16.840.1.113883.3.117.1.7.1.407",
+                              "title": "VTE Confirmed"
+                            },
+                            "temporal_references": [
+                              {
+                                "type": "SBS",
+                                "reference": {
+                                  "title": "Emergency Department Visit",
+                                  "description": "Encounter, Performed: Emergency Department Visit",
+                                  "standard_category": "encounter",
+                                  "qds_data_type": "encounter",
+                                  "code_list_id": "2.16.840.1.113883.3.117.1.7.1.293",
+                                  "type": "encounters",
+                                  "definition": "encounter",
+                                  "status": "performed",
+                                  "hard_status": false,
+                                  "negation": false,
+                                  "specific_occurrence": "A",
+                                  "specific_occurrence_const": "ENCOUNTER_PERFORMED_EMERGENCY_DEPARTMENT_VISIT",
+                                  "source_data_criteria": "OccurrenceAEmergencyDepartmentVisit1",
+                                  "field_values": {
+                                    "FACILITY_LOCATION_ARRIVAL_DATETIME": null
+                                  }
+                                },
+                                "range": {
+                                  "type": "IVL_PQ",
+                                  "high": {
+                                    "type": "PQ",
+                                    "unit": "d",
+                                    "value": "2",
+                                    "inclusive?": true,
+                                    "derived?": false
+                                  }
+                                }
+                              }
+                            ]
+                          },
+                          {
+                            "title": "VTE Diagnostic Test",
+                            "description": "Diagnostic Study, Performed: VTE Diagnostic Test",
+                            "standard_category": "diagnostic_study",
+                            "qds_data_type": "diagnostic_study_performed",
+                            "code_list_id": "2.16.840.1.113883.3.117.1.7.1.276",
+                            "type": "diagnostic_studies",
+                            "definition": "diagnostic_study",
+                            "status": "performed",
+                            "hard_status": false,
+                            "negation": false,
+                            "source_data_criteria": "DiagnosticStudyPerformedVteDiagnosticTest",
+                            "temporal_references": [
+                              {
+                                "type": "SBS",
+                                "reference": {
+                                  "title": "Emergency Department Visit",
+                                  "description": "Encounter, Performed: Emergency Department Visit",
+                                  "standard_category": "encounter",
+                                  "qds_data_type": "encounter",
+                                  "code_list_id": "2.16.840.1.113883.3.117.1.7.1.293",
+                                  "type": "encounters",
+                                  "definition": "encounter",
+                                  "status": "performed",
+                                  "hard_status": false,
+                                  "negation": false,
+                                  "specific_occurrence": "A",
+                                  "specific_occurrence_const": "ENCOUNTER_PERFORMED_EMERGENCY_DEPARTMENT_VISIT",
+                                  "source_data_criteria": "OccurrenceAEmergencyDepartmentVisit1",
+                                  "field_values": {
+                                    "FACILITY_LOCATION_ARRIVAL_DATETIME": null
+                                  }
+                                },
+                                "range": {
+                                  "type": "IVL_PQ",
+                                  "high": {
+                                    "type": "PQ",
+                                    "unit": "d",
+                                    "value": "2",
+                                    "inclusive?": true,
+                                    "derived?": false
+                                  }
+                                }
+                              }
+                            ]
+                          }
+                        ],
+                        "negation": null,
+                        "precondition_id": 83
+                      },
+                      {
+                        "conjunction": "and",
+                        "items": [
+                          {
+                            "title": "VTE Diagnostic Test",
+                            "description": "Diagnostic Study, Result: VTE Diagnostic Test",
+                            "standard_category": "diagnostic_study",
+                            "qds_data_type": "diagnostic_study_result",
+                            "code_list_id": "2.16.840.1.113883.3.117.1.7.1.276",
+                            "type": "diagnostic_studies",
+                            "definition": "diagnostic_study_result",
+                            "hard_status": false,
+                            "negation": false,
+                            "source_data_criteria": "DiagnosticStudyResultVteDiagnosticTest",
+                            "value": {
+                              "type": "CD",
+                              "code_list_id": "2.16.840.1.113883.3.117.1.7.1.407",
+                              "title": "VTE Confirmed"
+                            },
+                            "temporal_references": [
+                              {
+                                "type": "DURING",
+                                "reference": {
+                                  "title": "Emergency Department Visit",
+                                  "description": "Encounter, Performed: Emergency Department Visit",
+                                  "standard_category": "encounter",
+                                  "qds_data_type": "encounter",
+                                  "code_list_id": "2.16.840.1.113883.3.117.1.7.1.293",
+                                  "type": "encounters",
+                                  "definition": "encounter",
+                                  "status": "performed",
+                                  "hard_status": false,
+                                  "negation": false,
+                                  "specific_occurrence": "A",
+                                  "specific_occurrence_const": "ENCOUNTER_PERFORMED_EMERGENCY_DEPARTMENT_VISIT",
+                                  "source_data_criteria": "OccurrenceAEmergencyDepartmentVisit1"
+                                }
+                              }
+                            ]
+                          },
+                          {
+                            "title": "VTE Diagnostic Test",
+                            "description": "Diagnostic Study, Performed: VTE Diagnostic Test",
+                            "standard_category": "diagnostic_study",
+                            "qds_data_type": "diagnostic_study_performed",
+                            "code_list_id": "2.16.840.1.113883.3.117.1.7.1.276",
+                            "type": "diagnostic_studies",
+                            "definition": "diagnostic_study",
+                            "status": "performed",
+                            "hard_status": false,
+                            "negation": false,
+                            "source_data_criteria": "DiagnosticStudyPerformedVteDiagnosticTest",
+                            "temporal_references": [
+                              {
+                                "type": "DURING",
+                                "reference": {
+                                  "title": "Emergency Department Visit",
+                                  "description": "Encounter, Performed: Emergency Department Visit",
+                                  "standard_category": "encounter",
+                                  "qds_data_type": "encounter",
+                                  "code_list_id": "2.16.840.1.113883.3.117.1.7.1.293",
+                                  "type": "encounters",
+                                  "definition": "encounter",
+                                  "status": "performed",
+                                  "hard_status": false,
+                                  "negation": false,
+                                  "specific_occurrence": "A",
+                                  "specific_occurrence_const": "ENCOUNTER_PERFORMED_EMERGENCY_DEPARTMENT_VISIT",
+                                  "source_data_criteria": "OccurrenceAEmergencyDepartmentVisit1"
+                                }
+                              }
+                            ]
+                          }
+                        ],
+                        "negation": null,
+                        "precondition_id": 90
+                      },
+                      {
+                        "conjunction": "and",
+                        "items": [
+                          {
+                            "title": "VTE Diagnostic Test",
+                            "description": "Diagnostic Study, Performed: VTE Diagnostic Test",
+                            "standard_category": "diagnostic_study",
+                            "qds_data_type": "diagnostic_study_performed",
+                            "code_list_id": "2.16.840.1.113883.3.117.1.7.1.276",
+                            "type": "diagnostic_studies",
+                            "definition": "diagnostic_study",
+                            "status": "performed",
+                            "hard_status": false,
+                            "negation": false,
+                            "source_data_criteria": "DiagnosticStudyPerformedVteDiagnosticTest",
+                            "temporal_references": [
+                              {
+                                "type": "DURING",
+                                "reference": {
+                                  "title": "Emergency Department Visit",
+                                  "description": "Encounter, Performed: Emergency Department Visit",
+                                  "standard_category": "encounter",
+                                  "qds_data_type": "encounter",
+                                  "code_list_id": "2.16.840.1.113883.3.117.1.7.1.293",
+                                  "type": "encounters",
+                                  "definition": "encounter",
+                                  "status": "performed",
+                                  "hard_status": false,
+                                  "negation": false,
+                                  "specific_occurrence": "A",
+                                  "specific_occurrence_const": "ENCOUNTER_PERFORMED_EMERGENCY_DEPARTMENT_VISIT",
+                                  "source_data_criteria": "OccurrenceAEmergencyDepartmentVisit1"
+                                }
+                              }
+                            ]
+                          },
+                          {
+                            "title": "VTE Diagnostic Test",
+                            "description": "Diagnostic Study, Result: VTE Diagnostic Test",
+                            "standard_category": "diagnostic_study",
+                            "qds_data_type": "diagnostic_study_result",
+                            "code_list_id": "2.16.840.1.113883.3.117.1.7.1.276",
+                            "type": "diagnostic_studies",
+                            "definition": "diagnostic_study_result",
+                            "hard_status": false,
+                            "negation": false,
+                            "source_data_criteria": "DiagnosticStudyResultVteDiagnosticTest",
+                            "value": {
+                              "type": "CD",
+                              "code_list_id": "2.16.840.1.113883.3.117.1.7.1.407",
+                              "title": "VTE Confirmed"
+                            },
+                            "temporal_references": [
+                              {
+                                "type": "DURING",
+                                "reference": {
+                                  "title": "Inpatient Encounter",
+                                  "description": "Encounter, Performed: Inpatient Encounter",
+                                  "standard_category": "encounter",
+                                  "qds_data_type": "encounter",
+                                  "code_list_id": "2.16.840.1.113883.3.117.1.7.1.23",
+                                  "type": "encounters",
+                                  "definition": "encounter",
+                                  "status": "performed",
+                                  "hard_status": false,
+                                  "negation": false,
+                                  "specific_occurrence": "A",
+                                  "specific_occurrence_const": "ENCOUNTER_PERFORMED_INPATIENT_ENCOUNTER",
+                                  "source_data_criteria": "OccurrenceAInpatientEncounter2"
+                                }
+                              }
+                            ]
+                          }
+                        ],
+                        "negation": null,
+                        "precondition_id": 97
+                      }
+                    ],
+                    "negation": null,
+                    "precondition_id": 99
+                  }
+                ],
+                "negation": null,
+                "precondition_id": 101
+              }
+            ],
+            "negation": null,
+            "precondition_id": 103
+          },
+          {
+            "conjunction": "or",
+            "items": [
+              {
+                "title": "Unfractionated Heparin",
+                "description": "Medication, Administered: Unfractionated Heparin",
+                "standard_category": "medication",
+                "qds_data_type": "medication_administered",
+                "code_list_id": "2.16.840.1.113883.3.117.1.7.1.218",
+                "type": "medications",
+                "definition": "medication",
+                "status": "administered",
+                "hard_status": true,
+                "negation": false,
+                "source_data_criteria": "MedicationAdministeredUnfractionatedHeparin",
+                "field_values": {
+                  "ROUTE": {
+                    "type": "CD",
+                    "code_list_id": "2.16.840.1.113883.3.117.1.7.1.222",
+                    "title": "Intravenous route"
+                  }
+                },
+                "temporal_references": [
+                  {
+                    "type": "DURING",
+                    "reference": {
+                      "title": "Inpatient Encounter",
+                      "description": "Encounter, Performed: Inpatient Encounter",
+                      "standard_category": "encounter",
+                      "qds_data_type": "encounter",
+                      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.23",
+                      "type": "encounters",
+                      "definition": "encounter",
+                      "status": "performed",
+                      "hard_status": false,
+                      "negation": false,
+                      "specific_occurrence": "A",
+                      "specific_occurrence_const": "ENCOUNTER_PERFORMED_INPATIENT_ENCOUNTER",
+                      "source_data_criteria": "OccurrenceAInpatientEncounter2"
+                    }
+                  }
+                ]
+              },
+              {
+                "conjunction": "and",
+                "items": [
+                  {
+                    "title": "Inpatient Encounter",
+                    "description": "Encounter, Performed: Inpatient Encounter",
+                    "standard_category": "encounter",
+                    "qds_data_type": "encounter",
+                    "code_list_id": "2.16.840.1.113883.3.117.1.7.1.23",
+                    "type": "encounters",
+                    "definition": "encounter",
+                    "status": "performed",
+                    "hard_status": false,
+                    "negation": false,
+                    "specific_occurrence": "A",
+                    "specific_occurrence_const": "ENCOUNTER_PERFORMED_INPATIENT_ENCOUNTER",
+                    "source_data_criteria": "OccurrenceAInpatientEncounter2",
+                    "field_values": {
+                      "ADMISSION_DATETIME": {
+                        "type": "ANYNonNull"
+                      }
+                    },
+                    "temporal_references": [
+                      {
+                        "type": "SAE",
+                        "reference": {
+                          "title": "Emergency Department Visit",
+                          "description": "Encounter, Performed: Emergency Department Visit",
+                          "standard_category": "encounter",
+                          "qds_data_type": "encounter",
+                          "code_list_id": "2.16.840.1.113883.3.117.1.7.1.293",
+                          "type": "encounters",
+                          "definition": "encounter",
+                          "status": "performed",
+                          "hard_status": false,
+                          "negation": false,
+                          "specific_occurrence": "A",
+                          "specific_occurrence_const": "ENCOUNTER_PERFORMED_EMERGENCY_DEPARTMENT_VISIT",
+                          "source_data_criteria": "OccurrenceAEmergencyDepartmentVisit1",
+                          "field_values": {
+                            "FACILITY_LOCATION_DEPARTURE_DATETIME": null
+                          }
+                        },
+                        "range": {
+                          "type": "IVL_PQ",
+                          "high": {
+                            "type": "PQ",
+                            "unit": "h",
+                            "value": "1",
+                            "inclusive?": true,
+                            "derived?": false
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "title": "Unfractionated Heparin",
+                    "description": "Medication, Administered: Unfractionated Heparin",
+                    "standard_category": "medication",
+                    "qds_data_type": "medication_administered",
+                    "code_list_id": "2.16.840.1.113883.3.117.1.7.1.218",
+                    "type": "medications",
+                    "definition": "medication",
+                    "status": "administered",
+                    "hard_status": true,
+                    "negation": false,
+                    "source_data_criteria": "MedicationAdministeredUnfractionatedHeparin",
+                    "field_values": {
+                      "ROUTE": {
+                        "type": "CD",
+                        "code_list_id": "2.16.840.1.113883.3.117.1.7.1.222",
+                        "title": "Intravenous route"
+                      }
+                    },
+                    "temporal_references": [
+                      {
+                        "type": "SDU",
+                        "reference": {
+                          "title": "Emergency Department Visit",
+                          "description": "Encounter, Performed: Emergency Department Visit",
+                          "standard_category": "encounter",
+                          "qds_data_type": "encounter",
+                          "code_list_id": "2.16.840.1.113883.3.117.1.7.1.293",
+                          "type": "encounters",
+                          "definition": "encounter",
+                          "status": "performed",
+                          "hard_status": false,
+                          "negation": false,
+                          "specific_occurrence": "A",
+                          "specific_occurrence_const": "ENCOUNTER_PERFORMED_EMERGENCY_DEPARTMENT_VISIT",
+                          "source_data_criteria": "OccurrenceAEmergencyDepartmentVisit1"
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "negation": null,
+                "precondition_id": 112
+              }
+            ],
+            "negation": null,
+            "precondition_id": 114
+          }
+        ],
+        "negation": null,
+        "precondition_id": 116
+      }
+    ]
+  },
+  "numerator": {
+    "conjunction": "and",
+    "items": [
+      {
+        "conjunction": "and",
+        "items": [
+          {
+            "conjunction": "or",
+            "items": [
+              {
+                "conjunction": "and",
+                "items": [
+                  {
+                    "title": "Platelet Count",
+                    "description": "Laboratory Test, Performed: Platelet Count",
+                    "standard_category": "laboratory_test",
+                    "qds_data_type": "laboratory_test",
+                    "code_list_id": "2.16.840.1.113883.3.117.1.7.1.267",
+                    "type": "laboratory_tests",
+                    "definition": "laboratory_test",
+                    "status": "performed",
+                    "hard_status": false,
+                    "negation": false,
+                    "source_data_criteria": "LaboratoryTestPerformedPlateletCount",
+                    "temporal_references": [
+                      {
+                        "type": "SAS",
+                        "reference": {
+                          "title": "Unfractionated Heparin",
+                          "description": "Medication, Order: Unfractionated Heparin",
+                          "standard_category": "medication",
+                          "qds_data_type": "medication_order",
+                          "code_list_id": "2.16.840.1.113883.3.117.1.7.1.218",
+                          "type": "medications",
+                          "definition": "medication",
+                          "status": "ordered",
+                          "hard_status": true,
+                          "negation": false,
+                          "source_data_criteria": "MedicationOrderUnfractionatedHeparin",
+                          "field_values": {
+                            "ROUTE": {
+                              "type": "CD",
+                              "code_list_id": "2.16.840.1.113883.3.117.1.7.1.222",
+                              "title": "Intravenous route"
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "type": "SDU",
+                        "reference": {
+                          "title": "Inpatient Encounter",
+                          "description": "Encounter, Performed: Inpatient Encounter",
+                          "standard_category": "encounter",
+                          "qds_data_type": "encounter",
+                          "code_list_id": "2.16.840.1.113883.3.117.1.7.1.23",
+                          "type": "encounters",
+                          "definition": "encounter",
+                          "status": "performed",
+                          "hard_status": false,
+                          "negation": false,
+                          "specific_occurrence": "A",
+                          "specific_occurrence_const": "ENCOUNTER_PERFORMED_INPATIENT_ENCOUNTER",
+                          "source_data_criteria": "OccurrenceAInpatientEncounter2"
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "conjunction": "or",
+                    "items": [
+                      {
+                        "title": "Treatment Adjusted by Protocol",
+                        "description": "Procedure, Performed: Treatment Adjusted by Protocol",
+                        "standard_category": "procedure",
+                        "qds_data_type": "procedure_performed",
+                        "code_list_id": "2.16.840.1.113883.3.117.1.7.1.278",
+                        "type": "procedures",
+                        "definition": "procedure",
+                        "status": "performed",
+                        "hard_status": false,
+                        "negation": false,
+                        "source_data_criteria": "ProcedurePerformedTreatmentAdjustedByProtocol",
+                        "temporal_references": [
+                          {
+                            "type": "SAS",
+                            "reference": {
+                              "title": "Unfractionated Heparin",
+                              "description": "Medication, Order: Unfractionated Heparin",
+                              "standard_category": "medication",
+                              "qds_data_type": "medication_order",
+                              "code_list_id": "2.16.840.1.113883.3.117.1.7.1.218",
+                              "type": "medications",
+                              "definition": "medication",
+                              "status": "ordered",
+                              "hard_status": true,
+                              "negation": false,
+                              "source_data_criteria": "MedicationOrderUnfractionatedHeparin",
+                              "field_values": {
+                                "ROUTE": {
+                                  "type": "CD",
+                                  "code_list_id": "2.16.840.1.113883.3.117.1.7.1.222",
+                                  "title": "Intravenous route"
+                                }
+                              }
+                            }
+                          },
+                          {
+                            "type": "SDU",
+                            "reference": {
+                              "title": "Inpatient Encounter",
+                              "description": "Encounter, Performed: Inpatient Encounter",
+                              "standard_category": "encounter",
+                              "qds_data_type": "encounter",
+                              "code_list_id": "2.16.840.1.113883.3.117.1.7.1.23",
+                              "type": "encounters",
+                              "definition": "encounter",
+                              "status": "performed",
+                              "hard_status": false,
+                              "negation": false,
+                              "specific_occurrence": "A",
+                              "specific_occurrence_const": "ENCOUNTER_PERFORMED_INPATIENT_ENCOUNTER",
+                              "source_data_criteria": "OccurrenceAInpatientEncounter2"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "title": "Clinical Pathway Protocol",
+                        "description": "Procedure, Performed: Clinical Pathway Protocol",
+                        "standard_category": "procedure",
+                        "qds_data_type": "procedure_performed",
+                        "code_list_id": "2.16.840.1.113883.3.117.1.7.1.253",
+                        "type": "procedures",
+                        "definition": "procedure",
+                        "status": "performed",
+                        "hard_status": false,
+                        "negation": false,
+                        "source_data_criteria": "ProcedurePerformedClinicalPathwayProtocol",
+                        "temporal_references": [
+                          {
+                            "type": "SAS",
+                            "reference": {
+                              "title": "Unfractionated Heparin",
+                              "description": "Medication, Order: Unfractionated Heparin",
+                              "standard_category": "medication",
+                              "qds_data_type": "medication_order",
+                              "code_list_id": "2.16.840.1.113883.3.117.1.7.1.218",
+                              "type": "medications",
+                              "definition": "medication",
+                              "status": "ordered",
+                              "hard_status": true,
+                              "negation": false,
+                              "source_data_criteria": "MedicationOrderUnfractionatedHeparin",
+                              "field_values": {
+                                "ROUTE": {
+                                  "type": "CD",
+                                  "code_list_id": "2.16.840.1.113883.3.117.1.7.1.222",
+                                  "title": "Intravenous route"
+                                }
+                              }
+                            }
+                          },
+                          {
+                            "type": "SDU",
+                            "reference": {
+                              "title": "Inpatient Encounter",
+                              "description": "Encounter, Performed: Inpatient Encounter",
+                              "standard_category": "encounter",
+                              "qds_data_type": "encounter",
+                              "code_list_id": "2.16.840.1.113883.3.117.1.7.1.23",
+                              "type": "encounters",
+                              "definition": "encounter",
+                              "status": "performed",
+                              "hard_status": false,
+                              "negation": false,
+                              "specific_occurrence": "A",
+                              "specific_occurrence_const": "ENCOUNTER_PERFORMED_INPATIENT_ENCOUNTER",
+                              "source_data_criteria": "OccurrenceAInpatientEncounter2"
+                            }
+                          }
+                        ]
+                      }
+                    ],
+                    "negation": null,
+                    "precondition_id": 41
+                  }
+                ],
+                "negation": null,
+                "precondition_id": 43
+              },
+              {
+                "conjunction": "and",
+                "items": [
+                  {
+                    "title": "Unfractionated Heparin",
+                    "description": "Medication, Administered: Unfractionated Heparin",
+                    "standard_category": "medication",
+                    "qds_data_type": "medication_administered",
+                    "code_list_id": "2.16.840.1.113883.3.117.1.7.1.218",
+                    "type": "medications",
+                    "definition": "medication",
+                    "status": "administered",
+                    "hard_status": true,
+                    "negation": false,
+                    "source_data_criteria": "MedicationAdministeredUnfractionatedHeparin",
+                    "field_values": {
+                      "STOP_DATETIME": {
+                        "type": "ANYNonNull"
+                      }
+                    },
+                    "temporal_references": [
+                      {
+                        "type": "SAS",
+                        "reference": {
+                          "title": "Unfractionated Heparin",
+                          "description": "Medication, Administered: Unfractionated Heparin",
+                          "standard_category": "medication",
+                          "qds_data_type": "medication_administered",
+                          "code_list_id": "2.16.840.1.113883.3.117.1.7.1.218",
+                          "type": "medications",
+                          "definition": "medication",
+                          "status": "administered",
+                          "hard_status": true,
+                          "negation": false,
+                          "source_data_criteria": "MedicationAdministeredUnfractionatedHeparin",
+                          "field_values": {
+                            "START_DATETIME": {
+                              "type": "ANYNonNull"
+                            }
+                          }
+                        },
+                        "range": {
+                          "type": "IVL_PQ",
+                          "high": {
+                            "type": "PQ",
+                            "unit": "h",
+                            "value": "24",
+                            "inclusive?": true,
+                            "derived?": false
+                          }
+                        }
+                      },
+                      {
+                        "type": "SDU",
+                        "reference": {
+                          "title": "Inpatient Encounter",
+                          "description": "Encounter, Performed: Inpatient Encounter",
+                          "standard_category": "encounter",
+                          "qds_data_type": "encounter",
+                          "code_list_id": "2.16.840.1.113883.3.117.1.7.1.23",
+                          "type": "encounters",
+                          "definition": "encounter",
+                          "status": "performed",
+                          "hard_status": false,
+                          "negation": false,
+                          "specific_occurrence": "A",
+                          "specific_occurrence_const": "ENCOUNTER_PERFORMED_INPATIENT_ENCOUNTER",
+                          "source_data_criteria": "OccurrenceAInpatientEncounter2"
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "conjunction": "or",
+                    "items": [
+                      {
+                        "title": "Treatment Adjusted by Protocol",
+                        "description": "Procedure, Performed: Treatment Adjusted by Protocol",
+                        "standard_category": "procedure",
+                        "qds_data_type": "procedure_performed",
+                        "code_list_id": "2.16.840.1.113883.3.117.1.7.1.278",
+                        "type": "procedures",
+                        "definition": "procedure",
+                        "status": "performed",
+                        "hard_status": false,
+                        "negation": false,
+                        "source_data_criteria": "ProcedurePerformedTreatmentAdjustedByProtocol",
+                        "temporal_references": [
+                          {
+                            "type": "SAS",
+                            "reference": {
+                              "title": "Unfractionated Heparin",
+                              "description": "Medication, Order: Unfractionated Heparin",
+                              "standard_category": "medication",
+                              "qds_data_type": "medication_order",
+                              "code_list_id": "2.16.840.1.113883.3.117.1.7.1.218",
+                              "type": "medications",
+                              "definition": "medication",
+                              "status": "ordered",
+                              "hard_status": true,
+                              "negation": false,
+                              "source_data_criteria": "MedicationOrderUnfractionatedHeparin",
+                              "field_values": {
+                                "ROUTE": {
+                                  "type": "CD",
+                                  "code_list_id": "2.16.840.1.113883.3.117.1.7.1.222",
+                                  "title": "Intravenous route"
+                                }
+                              }
+                            }
+                          },
+                          {
+                            "type": "SDU",
+                            "reference": {
+                              "title": "Inpatient Encounter",
+                              "description": "Encounter, Performed: Inpatient Encounter",
+                              "standard_category": "encounter",
+                              "qds_data_type": "encounter",
+                              "code_list_id": "2.16.840.1.113883.3.117.1.7.1.23",
+                              "type": "encounters",
+                              "definition": "encounter",
+                              "status": "performed",
+                              "hard_status": false,
+                              "negation": false,
+                              "specific_occurrence": "A",
+                              "specific_occurrence_const": "ENCOUNTER_PERFORMED_INPATIENT_ENCOUNTER",
+                              "source_data_criteria": "OccurrenceAInpatientEncounter2"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "title": "Clinical Pathway Protocol",
+                        "description": "Procedure, Performed: Clinical Pathway Protocol",
+                        "standard_category": "procedure",
+                        "qds_data_type": "procedure_performed",
+                        "code_list_id": "2.16.840.1.113883.3.117.1.7.1.253",
+                        "type": "procedures",
+                        "definition": "procedure",
+                        "status": "performed",
+                        "hard_status": false,
+                        "negation": false,
+                        "source_data_criteria": "ProcedurePerformedClinicalPathwayProtocol",
+                        "temporal_references": [
+                          {
+                            "type": "SAS",
+                            "reference": {
+                              "title": "Unfractionated Heparin",
+                              "description": "Medication, Order: Unfractionated Heparin",
+                              "standard_category": "medication",
+                              "qds_data_type": "medication_order",
+                              "code_list_id": "2.16.840.1.113883.3.117.1.7.1.218",
+                              "type": "medications",
+                              "definition": "medication",
+                              "status": "ordered",
+                              "hard_status": true,
+                              "negation": false,
+                              "source_data_criteria": "MedicationOrderUnfractionatedHeparin",
+                              "field_values": {
+                                "ROUTE": {
+                                  "type": "CD",
+                                  "code_list_id": "2.16.840.1.113883.3.117.1.7.1.222",
+                                  "title": "Intravenous route"
+                                }
+                              }
+                            }
+                          },
+                          {
+                            "type": "SDU",
+                            "reference": {
+                              "title": "Inpatient Encounter",
+                              "description": "Encounter, Performed: Inpatient Encounter",
+                              "standard_category": "encounter",
+                              "qds_data_type": "encounter",
+                              "code_list_id": "2.16.840.1.113883.3.117.1.7.1.23",
+                              "type": "encounters",
+                              "definition": "encounter",
+                              "status": "performed",
+                              "hard_status": false,
+                              "negation": false,
+                              "specific_occurrence": "A",
+                              "specific_occurrence_const": "ENCOUNTER_PERFORMED_INPATIENT_ENCOUNTER",
+                              "source_data_criteria": "OccurrenceAInpatientEncounter2"
+                            }
+                          }
+                        ]
+                      }
+                    ],
+                    "negation": null,
+                    "precondition_id": 53
+                  }
+                ],
+                "negation": null,
+                "precondition_id": 56
+              }
+            ],
+            "negation": null,
+            "precondition_id": 58
+          }
+        ],
+        "negation": null,
+        "precondition_id": 61
+      }
+    ]
+  },
+  "exclusions": {
+    "conjunction": "and",
+    "items": [
+      {
+        "conjunction": "and",
+        "items": [
+          {
+            "conjunction": "or",
+            "items": [
+              {
+                "title": "Inpatient Encounter",
+                "description": "Encounter, Performed: Inpatient Encounter",
+                "standard_category": "encounter",
+                "qds_data_type": "encounter",
+                "code_list_id": "2.16.840.1.113883.3.117.1.7.1.23",
+                "type": "encounters",
+                "definition": "encounter",
+                "status": "performed",
+                "hard_status": false,
+                "negation": false,
+                "specific_occurrence": "A",
+                "specific_occurrence_const": "ENCOUNTER_PERFORMED_INPATIENT_ENCOUNTER",
+                "source_data_criteria": "OccurrenceAInpatientEncounter2",
+                "field_values": {
+                  "DISCHARGE_STATUS": {
+                    "type": "CD",
+                    "code_list_id": "2.16.840.1.113883.3.117.1.7.1.87",
+                    "title": "Discharge To Another Hospital"
+                  }
+                }
+              },
+              {
+                "title": "Inpatient Encounter",
+                "description": "Encounter, Performed: Inpatient Encounter",
+                "standard_category": "encounter",
+                "qds_data_type": "encounter",
+                "code_list_id": "2.16.840.1.113883.3.117.1.7.1.23",
+                "type": "encounters",
+                "definition": "encounter",
+                "status": "performed",
+                "hard_status": false,
+                "negation": false,
+                "specific_occurrence": "A",
+                "specific_occurrence_const": "ENCOUNTER_PERFORMED_INPATIENT_ENCOUNTER",
+                "source_data_criteria": "OccurrenceAInpatientEncounter2",
+                "field_values": {
+                  "DISCHARGE_STATUS": {
+                    "type": "CD",
+                    "code_list_id": "2.16.840.1.113883.3.117.1.7.1.308",
+                    "title": "Left Against Medical Advice"
+                  }
+                }
+              },
+              {
+                "title": "Inpatient Encounter",
+                "description": "Encounter, Performed: Inpatient Encounter",
+                "standard_category": "encounter",
+                "qds_data_type": "encounter",
+                "code_list_id": "2.16.840.1.113883.3.117.1.7.1.23",
+                "type": "encounters",
+                "definition": "encounter",
+                "status": "performed",
+                "hard_status": false,
+                "negation": false,
+                "specific_occurrence": "A",
+                "specific_occurrence_const": "ENCOUNTER_PERFORMED_INPATIENT_ENCOUNTER",
+                "source_data_criteria": "OccurrenceAInpatientEncounter2",
+                "field_values": {
+                  "DISCHARGE_STATUS": {
+                    "type": "CD",
+                    "code_list_id": "2.16.840.1.113883.3.117.1.7.1.309",
+                    "title": "Patient Expired"
+                  }
+                }
+              },
+              {
+                "title": "Inpatient Encounter",
+                "description": "Encounter, Performed: Inpatient Encounter",
+                "standard_category": "encounter",
+                "qds_data_type": "encounter",
+                "code_list_id": "2.16.840.1.113883.3.117.1.7.1.23",
+                "type": "encounters",
+                "definition": "encounter",
+                "status": "performed",
+                "hard_status": false,
+                "negation": false,
+                "specific_occurrence": "A",
+                "specific_occurrence_const": "ENCOUNTER_PERFORMED_INPATIENT_ENCOUNTER",
+                "source_data_criteria": "OccurrenceAInpatientEncounter2",
+                "field_values": {
+                  "DISCHARGE_STATUS": {
+                    "type": "CD",
+                    "code_list_id": "2.16.840.1.113883.3.117.1.7.1.209",
+                    "title": "Discharged to Home for Hospice Care"
+                  }
+                }
+              },
+              {
+                "title": "Inpatient Encounter",
+                "description": "Encounter, Performed: Inpatient Encounter",
+                "standard_category": "encounter",
+                "qds_data_type": "encounter",
+                "code_list_id": "2.16.840.1.113883.3.117.1.7.1.23",
+                "type": "encounters",
+                "definition": "encounter",
+                "status": "performed",
+                "hard_status": false,
+                "negation": false,
+                "specific_occurrence": "A",
+                "specific_occurrence_const": "ENCOUNTER_PERFORMED_INPATIENT_ENCOUNTER",
+                "source_data_criteria": "OccurrenceAInpatientEncounter2",
+                "field_values": {
+                  "DISCHARGE_STATUS": {
+                    "type": "CD",
+                    "code_list_id": "2.16.840.1.113883.3.117.1.7.1.207",
+                    "title": "Discharged to Health Care Facility for Hospice Care"
+                  }
+                }
+              },
+              {
+                "conjunction": "and",
+                "items": [
+                  {
+                    "title": "Inpatient Encounter",
+                    "description": "Encounter, Performed: Inpatient Encounter",
+                    "standard_category": "encounter",
+                    "qds_data_type": "encounter",
+                    "code_list_id": "2.16.840.1.113883.3.117.1.7.1.23",
+                    "type": "encounters",
+                    "definition": "encounter",
+                    "status": "performed",
+                    "hard_status": false,
+                    "negation": false,
+                    "specific_occurrence": "A",
+                    "specific_occurrence_const": "ENCOUNTER_PERFORMED_INPATIENT_ENCOUNTER",
+                    "source_data_criteria": "OccurrenceAInpatientEncounter2",
+                    "field_values": {
+                      "ADMISSION_DATETIME": {
+                        "type": "ANYNonNull"
+                      }
+                    },
+                    "temporal_references": [
+                      {
+                        "type": "SAE",
+                        "reference": {
+                          "title": "Emergency Department Visit",
+                          "description": "Encounter, Performed: Emergency Department Visit",
+                          "standard_category": "encounter",
+                          "qds_data_type": "encounter",
+                          "code_list_id": "2.16.840.1.113883.3.117.1.7.1.293",
+                          "type": "encounters",
+                          "definition": "encounter",
+                          "status": "performed",
+                          "hard_status": false,
+                          "negation": false,
+                          "specific_occurrence": "A",
+                          "specific_occurrence_const": "ENCOUNTER_PERFORMED_EMERGENCY_DEPARTMENT_VISIT",
+                          "source_data_criteria": "OccurrenceAEmergencyDepartmentVisit1",
+                          "field_values": {
+                            "FACILITY_LOCATION_DEPARTURE_DATETIME": null
+                          }
+                        },
+                        "range": {
+                          "type": "IVL_PQ",
+                          "high": {
+                            "type": "PQ",
+                            "unit": "h",
+                            "value": "1",
+                            "inclusive?": true,
+                            "derived?": false
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "conjunction": "or",
+                    "items": [
+                      {
+                        "title": "Palliative Care",
+                        "description": "Intervention, Order: Palliative Care",
+                        "standard_category": "procedure",
+                        "qds_data_type": "procedure_performed",
+                        "code_list_id": "2.16.840.1.113883.3.526.2.1076",
+                        "type": "interventions",
+                        "definition": "intervention",
+                        "status": "ordered",
+                        "hard_status": true,
+                        "negation": false,
+                        "source_data_criteria": "InterventionOrderPalliativeCare",
+                        "temporal_references": [
+                          {
+                            "type": "SDU",
+                            "reference": {
+                              "title": "Emergency Department Visit",
+                              "description": "Encounter, Performed: Emergency Department Visit",
+                              "standard_category": "encounter",
+                              "qds_data_type": "encounter",
+                              "code_list_id": "2.16.840.1.113883.3.117.1.7.1.293",
+                              "type": "encounters",
+                              "definition": "encounter",
+                              "status": "performed",
+                              "hard_status": false,
+                              "negation": false,
+                              "specific_occurrence": "A",
+                              "specific_occurrence_const": "ENCOUNTER_PERFORMED_EMERGENCY_DEPARTMENT_VISIT",
+                              "source_data_criteria": "OccurrenceAEmergencyDepartmentVisit1"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "title": "Palliative Care",
+                        "description": "Intervention, Performed: Palliative Care",
+                        "standard_category": "procedure",
+                        "qds_data_type": "procedure_performed",
+                        "code_list_id": "2.16.840.1.113883.3.526.2.1076",
+                        "type": "interventions",
+                        "definition": "intervention",
+                        "status": "performed",
+                        "hard_status": false,
+                        "negation": false,
+                        "source_data_criteria": "InterventionPerformedPalliativeCare",
+                        "temporal_references": [
+                          {
+                            "type": "SDU",
+                            "reference": {
+                              "title": "Emergency Department Visit",
+                              "description": "Encounter, Performed: Emergency Department Visit",
+                              "standard_category": "encounter",
+                              "qds_data_type": "encounter",
+                              "code_list_id": "2.16.840.1.113883.3.117.1.7.1.293",
+                              "type": "encounters",
+                              "definition": "encounter",
+                              "status": "performed",
+                              "hard_status": false,
+                              "negation": false,
+                              "specific_occurrence": "A",
+                              "specific_occurrence_const": "ENCOUNTER_PERFORMED_EMERGENCY_DEPARTMENT_VISIT",
+                              "source_data_criteria": "OccurrenceAEmergencyDepartmentVisit1"
+                            }
+                          }
+                        ]
+                      }
+                    ],
+                    "negation": null,
+                    "precondition_id": 20
+                  }
+                ],
+                "negation": null,
+                "precondition_id": 23
+              },
+              {
+                "conjunction": "or",
+                "items": [
+                  {
+                    "title": "Palliative Care",
+                    "description": "Intervention, Order: Palliative Care",
+                    "standard_category": "procedure",
+                    "qds_data_type": "procedure_performed",
+                    "code_list_id": "2.16.840.1.113883.3.526.2.1076",
+                    "type": "interventions",
+                    "definition": "intervention",
+                    "status": "ordered",
+                    "hard_status": true,
+                    "negation": false,
+                    "source_data_criteria": "InterventionOrderPalliativeCare",
+                    "temporal_references": [
+                      {
+                        "type": "SDU",
+                        "reference": {
+                          "title": "Inpatient Encounter",
+                          "description": "Encounter, Performed: Inpatient Encounter",
+                          "standard_category": "encounter",
+                          "qds_data_type": "encounter",
+                          "code_list_id": "2.16.840.1.113883.3.117.1.7.1.23",
+                          "type": "encounters",
+                          "definition": "encounter",
+                          "status": "performed",
+                          "hard_status": false,
+                          "negation": false,
+                          "specific_occurrence": "A",
+                          "specific_occurrence_const": "ENCOUNTER_PERFORMED_INPATIENT_ENCOUNTER",
+                          "source_data_criteria": "OccurrenceAInpatientEncounter2"
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "title": "Palliative Care",
+                    "description": "Intervention, Performed: Palliative Care",
+                    "standard_category": "procedure",
+                    "qds_data_type": "procedure_performed",
+                    "code_list_id": "2.16.840.1.113883.3.526.2.1076",
+                    "type": "interventions",
+                    "definition": "intervention",
+                    "status": "performed",
+                    "hard_status": false,
+                    "negation": false,
+                    "source_data_criteria": "InterventionPerformedPalliativeCare",
+                    "temporal_references": [
+                      {
+                        "type": "SDU",
+                        "reference": {
+                          "title": "Inpatient Encounter",
+                          "description": "Encounter, Performed: Inpatient Encounter",
+                          "standard_category": "encounter",
+                          "qds_data_type": "encounter",
+                          "code_list_id": "2.16.840.1.113883.3.117.1.7.1.23",
+                          "type": "encounters",
+                          "definition": "encounter",
+                          "status": "performed",
+                          "hard_status": false,
+                          "negation": false,
+                          "specific_occurrence": "A",
+                          "specific_occurrence_const": "ENCOUNTER_PERFORMED_INPATIENT_ENCOUNTER",
+                          "source_data_criteria": "OccurrenceAInpatientEncounter2"
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "negation": null,
+                "precondition_id": 29
+              }
+            ],
+            "negation": null,
+            "precondition_id": 32
+          }
+        ],
+        "negation": null,
+        "precondition_id": 34
+      }
+    ]
+  },
+  "map_fn": "function() {\n        var patient = this;\n        var effective_date = <%= effective_date %>;\n\n        hqmfjs = {}\n        <%= init_js_frameworks %>\n        \n        \n      var patient_api = new hQuery.Patient(patient);\n\n      \n\n      // clear out logger\n      if (typeof Logger != 'undefined') { Logger.logger = []; Logger.rationale={};}\n      // turn on logging if it is enabled\n      if (Logger.enabled) enableLogging();\n      \n      \n        // #########################\n        // ##### DATA ELEMENTS #####\n        // #########################\n\n        OidDictionary = <%= oid_dictionary %>;\n        \n        // Measure variables\nvar MeasurePeriod = {\n  \"low\": new TS(\"201201010000\", null, true),\n  \"high\": new TS(\"201212312359\", null, true)\n}\nhqmfjs.MeasurePeriod = function(patient) {\n  return [new hQuery.CodedEntry(\n    {\n      \"start_time\": MeasurePeriod.low.asDate().getTime()/1000,\n      \"end_time\": MeasurePeriod.high.asDate().getTime()/1000,\n      \"codes\": {}\n    }\n  )];\n}\nif (typeof effective_date === 'number') {\n  MeasurePeriod.high.date = new Date(1000*effective_date);\n  // add one minute before pulling off the year.  This turns 12-31-2012 23:59 into 1-1-2013 00:00 => 1-1-2012 00:00\n  MeasurePeriod.low.date = new Date(1000*(effective_date+60));\n  MeasurePeriod.low.date.setFullYear(MeasurePeriod.low.date.getFullYear()-1);\n}\n\n// Data critera\nhqmfjs.OccurrenceAEmergencyDepartmentVisit1 = function(patient, initialSpecificContext) {\n  var events = patient.encounters();\n  events.specific_occurrence = 'OccurrenceAEmergencyDepartmentVisit1'\n  events = events.withStatuses([\"performed\"]);\n  events = events.withoutNegation();\n  var codes = getCodes(\"2.16.840.1.113883.3.117.1.7.1.293\");\n  var start = null;\n  var end = null;\n  events = events.match(codes, start, end, true);\n\n  events.specificContext=new hqmf.SpecificOccurrence(Row.buildForDataCriteria(events.specific_occurrence, events))\n  return events;\n}\n\nhqmfjs.OccurrenceAInpatientEncounter2 = function(patient, initialSpecificContext) {\n  var events = patient.encounters();\n  events.specific_occurrence = 'OccurrenceAInpatientEncounter2'\n  events = events.withStatuses([\"performed\"]);\n  events = events.withoutNegation();\n  var codes = getCodes(\"2.16.840.1.113883.3.117.1.7.1.23\");\n  var start = null;\n  var end = null;\n  events = events.match(codes, start, end, true);\n\n  events.specificContext=new hqmf.SpecificOccurrence(Row.buildForDataCriteria(events.specific_occurrence, events))\n  return events;\n}\n\nhqmfjs.EncounterPerformedInpatientEncounter = function(patient, initialSpecificContext) {\n  var events = patient.encounters();\n  events = events.withStatuses([\"performed\"]);\n  events = events.withoutNegation();\n  var codes = getCodes(\"2.16.840.1.113883.3.117.1.7.1.23\");\n  var start = null;\n  var end = null;\n  events = events.match(codes, start, end, true);\n\n  events.specificContext=hqmf.SpecificsManager.identity()\n  return events;\n}\n\nhqmfjs.EncounterPerformedEmergencyDepartmentVisit = function(patient, initialSpecificContext) {\n  var events = patient.encounters();\n  events = events.withStatuses([\"performed\"]);\n  events = events.withoutNegation();\n  var codes = getCodes(\"2.16.840.1.113883.3.117.1.7.1.293\");\n  var start = null;\n  var end = null;\n  events = events.match(codes, start, end, true);\n\n  events.specificContext=hqmf.SpecificsManager.identity()\n  return events;\n}\n\nhqmfjs.OccurrenceAEmergencyDepartmentVisit1 = function(patient, initialSpecificContext) {\n  var events = patient.encounters();\n  events.specific_occurrence = 'OccurrenceAEmergencyDepartmentVisit1'\n  events = events.withStatuses([\"performed\"]);\n  events = events.withoutNegation();\n  var codes = getCodes(\"2.16.840.1.113883.3.117.1.7.1.293\");\n  var start = null;\n  var end = null;\n  events = events.match(codes, start, end, true);\n\n  events.specificContext=new hqmf.SpecificOccurrence(Row.buildForDataCriteria(events.specific_occurrence, events))\n  return events;\n}\n\nhqmfjs.OccurrenceAInpatientEncounter2 = function(patient, initialSpecificContext) {\n  var events = patient.encounters();\n  events.specific_occurrence = 'OccurrenceAInpatientEncounter2'\n  events = events.withStatuses([\"performed\"]);\n  events = events.withoutNegation();\n  var codes = getCodes(\"2.16.840.1.113883.3.117.1.7.1.23\");\n  var start = null;\n  var end = null;\n  events = events.match(codes, start, end, true);\n\n  events.specificContext=new hqmf.SpecificOccurrence(Row.buildForDataCriteria(events.specific_occurrence, events))\n  return events;\n}\n\nhqmfjs.OccurrenceAInpatientEncounter2_precondition_3 = function(patient, initialSpecificContext) {\n  var events = patient.encounters();\n  events.specific_occurrence = 'OccurrenceAInpatientEncounter2'\n  events = events.withStatuses([\"performed\"]);\n  events = events.withoutNegation();\n  var codes = getCodes(\"2.16.840.1.113883.3.117.1.7.1.23\");\n  var start = null;\n  var end = null;\n  events = events.match(codes, start, end, true);\n\n  events = filterEventsByField(events, \"dischargeDisposition\", new CodeList(getCodes(\"2.16.840.1.113883.3.117.1.7.1.87\")));\n  events.specificContext=new hqmf.SpecificOccurrence(Row.buildForDataCriteria(events.specific_occurrence, events))\n  return events;\n}\n\nhqmfjs.OccurrenceAInpatientEncounter2_precondition_5 = function(patient, initialSpecificContext) {\n  var events = patient.encounters();\n  events.specific_occurrence = 'OccurrenceAInpatientEncounter2'\n  events = events.withStatuses([\"performed\"]);\n  events = events.withoutNegation();\n  var codes = getCodes(\"2.16.840.1.113883.3.117.1.7.1.23\");\n  var start = null;\n  var end = null;\n  events = events.match(codes, start, end, true);\n\n  events = filterEventsByField(events, \"dischargeDisposition\", new CodeList(getCodes(\"2.16.840.1.113883.3.117.1.7.1.308\")));\n  events.specificContext=new hqmf.SpecificOccurrence(Row.buildForDataCriteria(events.specific_occurrence, events))\n  return events;\n}\n\nhqmfjs.OccurrenceAInpatientEncounter2_precondition_7 = function(patient, initialSpecificContext) {\n  var events = patient.encounters();\n  events.specific_occurrence = 'OccurrenceAInpatientEncounter2'\n  events = events.withStatuses([\"performed\"]);\n  events = events.withoutNegation();\n  var codes = getCodes(\"2.16.840.1.113883.3.117.1.7.1.23\");\n  var start = null;\n  var end = null;\n  events = events.match(codes, start, end, true);\n\n  events = filterEventsByField(events, \"dischargeDisposition\", new CodeList(getCodes(\"2.16.840.1.113883.3.117.1.7.1.309\")));\n  events.specificContext=new hqmf.SpecificOccurrence(Row.buildForDataCriteria(events.specific_occurrence, events))\n  return events;\n}\n\nhqmfjs.OccurrenceAInpatientEncounter2_precondition_9 = function(patient, initialSpecificContext) {\n  var events = patient.encounters();\n  events.specific_occurrence = 'OccurrenceAInpatientEncounter2'\n  events = events.withStatuses([\"performed\"]);\n  events = events.withoutNegation();\n  var codes = getCodes(\"2.16.840.1.113883.3.117.1.7.1.23\");\n  var start = null;\n  var end = null;\n  events = events.match(codes, start, end, true);\n\n  events = filterEventsByField(events, \"dischargeDisposition\", new CodeList(getCodes(\"2.16.840.1.113883.3.117.1.7.1.209\")));\n  events.specificContext=new hqmf.SpecificOccurrence(Row.buildForDataCriteria(events.specific_occurrence, events))\n  return events;\n}\n\nhqmfjs.OccurrenceAInpatientEncounter2_precondition_11 = function(patient, initialSpecificContext) {\n  var events = patient.encounters();\n  events.specific_occurrence = 'OccurrenceAInpatientEncounter2'\n  events = events.withStatuses([\"performed\"]);\n  events = events.withoutNegation();\n  var codes = getCodes(\"2.16.840.1.113883.3.117.1.7.1.23\");\n  var start = null;\n  var end = null;\n  events = events.match(codes, start, end, true);\n\n  events = filterEventsByField(events, \"dischargeDisposition\", new CodeList(getCodes(\"2.16.840.1.113883.3.117.1.7.1.207\")));\n  events.specificContext=new hqmf.SpecificOccurrence(Row.buildForDataCriteria(events.specific_occurrence, events))\n  return events;\n}\n\nhqmfjs.OccurrenceAEmergencyDepartmentVisit1_precondition_13 = function(patient, initialSpecificContext) {\n  var events = patient.encounters();\n  events.specific_occurrence = 'OccurrenceAEmergencyDepartmentVisit1'\n  events = events.withStatuses([\"performed\"]);\n  events = events.withoutNegation();\n  var codes = getCodes(\"2.16.840.1.113883.3.117.1.7.1.293\");\n  var start = null;\n  var end = null;\n  events = events.match(codes, start, end, true);\n\n  events = denormalizeEventsByLocation(events, \"facilityDeparture\", null);\n  events.specificContext=new hqmf.SpecificOccurrence(Row.buildForDataCriteria(events.specific_occurrence, events))\n  return events;\n}\n\nhqmfjs.OccurrenceAInpatientEncounter2_precondition_14 = function(patient, initialSpecificContext) {\n  var events = patient.encounters();\n  events.specific_occurrence = 'OccurrenceAInpatientEncounter2'\n  events = events.withStatuses([\"performed\"]);\n  events = events.withoutNegation();\n  var codes = getCodes(\"2.16.840.1.113883.3.117.1.7.1.23\");\n  var start = null;\n  var end = null;\n  events = events.match(codes, start, end, true);\n\n  events = adjustBoundsForField(events, \"admitTime\", new ANYNonNull());\n  if (events.length > 0) events = SAE(events, hqmfjs.OccurrenceAEmergencyDepartmentVisit1_precondition_13(patient), new IVL_PQ(null, new PQ(1, \"h\", true)));\n  else events.specificContext=hqmf.SpecificsManager.empty();\n  return events;\n}\n\nhqmfjs.OccurrenceAEmergencyDepartmentVisit1_precondition_21 = function(patient, initialSpecificContext) {\n  var events = patient.encounters();\n  events.specific_occurrence = 'OccurrenceAEmergencyDepartmentVisit1'\n  events = events.withStatuses([\"performed\"]);\n  events = events.withoutNegation();\n  var codes = getCodes(\"2.16.840.1.113883.3.117.1.7.1.293\");\n  var start = null;\n  var end = null;\n  events = events.match(codes, start, end, true);\n\n  events.specificContext=new hqmf.SpecificOccurrence(Row.buildForDataCriteria(events.specific_occurrence, events))\n  return events;\n}\n\nhqmfjs.InterventionOrderPalliativeCare_precondition_16 = function(patient, initialSpecificContext) {\n  var events = patient.allProcedures();\n  events = events.withStatuses([\"ordered\"], false);\n  events = events.withoutNegation();\n  var codes = getCodes(\"2.16.840.1.113883.3.526.2.1076\");\n  var start = null;\n  var end = null;\n  events = events.match(codes, start, end, true);\n\n  if (events.length > 0) events = SDU(events, hqmfjs.OccurrenceAEmergencyDepartmentVisit1_precondition_21(patient));\n  else events.specificContext=hqmf.SpecificsManager.empty();\n  return events;\n}\n\nhqmfjs.InterventionPerformedPalliativeCare_precondition_18 = function(patient, initialSpecificContext) {\n  var events = patient.allProcedures();\n  events = events.withStatuses([\"performed\"]);\n  events = events.withoutNegation();\n  var codes = getCodes(\"2.16.840.1.113883.3.526.2.1076\");\n  var start = null;\n  var end = null;\n  events = events.match(codes, start, end, true);\n\n  if (events.length > 0) events = SDU(events, hqmfjs.OccurrenceAEmergencyDepartmentVisit1_precondition_21(patient));\n  else events.specificContext=hqmf.SpecificsManager.empty();\n  return events;\n}\n\nhqmfjs.OccurrenceAInpatientEncounter2_precondition_30 = function(patient, initialSpecificContext) {\n  var events = patient.encounters();\n  events.specific_occurrence = 'OccurrenceAInpatientEncounter2'\n  events = events.withStatuses([\"performed\"]);\n  events = events.withoutNegation();\n  var codes = getCodes(\"2.16.840.1.113883.3.117.1.7.1.23\");\n  var start = null;\n  var end = null;\n  events = events.match(codes, start, end, true);\n\n  events.specificContext=new hqmf.SpecificOccurrence(Row.buildForDataCriteria(events.specific_occurrence, events))\n  return events;\n}\n\nhqmfjs.InterventionOrderPalliativeCare_precondition_25 = function(patient, initialSpecificContext) {\n  var events = patient.allProcedures();\n  events = events.withStatuses([\"ordered\"], false);\n  events = events.withoutNegation();\n  var codes = getCodes(\"2.16.840.1.113883.3.526.2.1076\");\n  var start = null;\n  var end = null;\n  events = events.match(codes, start, end, true);\n\n  if (events.length > 0) events = SDU(events, hqmfjs.OccurrenceAInpatientEncounter2_precondition_30(patient));\n  else events.specificContext=hqmf.SpecificsManager.empty();\n  return events;\n}\n\nhqmfjs.InterventionPerformedPalliativeCare_precondition_27 = function(patient, initialSpecificContext) {\n  var events = patient.allProcedures();\n  events = events.withStatuses([\"performed\"]);\n  events = events.withoutNegation();\n  var codes = getCodes(\"2.16.840.1.113883.3.526.2.1076\");\n  var start = null;\n  var end = null;\n  events = events.match(codes, start, end, true);\n\n  if (events.length > 0) events = SDU(events, hqmfjs.OccurrenceAInpatientEncounter2_precondition_30(patient));\n  else events.specificContext=hqmf.SpecificsManager.empty();\n  return events;\n}\n\nhqmfjs.MedicationOrderUnfractionatedHeparin_precondition_44 = function(patient, initialSpecificContext) {\n  var events = patient.allMedications();\n  events = events.withStatuses([\"ordered\"], false);\n  events = events.withoutNegation();\n  var codes = getCodes(\"2.16.840.1.113883.3.117.1.7.1.218\");\n  var start = null;\n  var end = null;\n  events = events.match(codes, start, end, true);\n\n  events = filterEventsByField(events, \"route\", new CodeList(getCodes(\"2.16.840.1.113883.3.117.1.7.1.222\")));\n  events.specificContext=hqmf.SpecificsManager.identity()\n  return events;\n}\n\nhqmfjs.OccurrenceAInpatientEncounter2_precondition_59 = function(patient, initialSpecificContext) {\n  var events = patient.encounters();\n  events.specific_occurrence = 'OccurrenceAInpatientEncounter2'\n  events = events.withStatuses([\"performed\"]);\n  events = events.withoutNegation();\n  var codes = getCodes(\"2.16.840.1.113883.3.117.1.7.1.23\");\n  var start = null;\n  var end = null;\n  events = events.match(codes, start, end, true);\n\n  events.specificContext=new hqmf.SpecificOccurrence(Row.buildForDataCriteria(events.specific_occurrence, events))\n  return events;\n}\n\nhqmfjs.LaboratoryTestPerformedPlateletCount_precondition_35 = function(patient, initialSpecificContext) {\n  var events = patient.laboratoryTests();\n  events = events.withStatuses([\"performed\"]);\n  events = events.withoutNegation();\n  var codes = getCodes(\"2.16.840.1.113883.3.117.1.7.1.267\");\n  var start = null;\n  var end = null;\n  events = events.match(codes, start, end, true);\n\n  if (events.length > 0) events = SAS(events, hqmfjs.MedicationOrderUnfractionatedHeparin_precondition_44(patient));\n  else events.specificContext=hqmf.SpecificsManager.empty();\n  if (events.length > 0) events = SDU(events, hqmfjs.OccurrenceAInpatientEncounter2_precondition_59(patient));\n  else events.specificContext=hqmf.SpecificsManager.empty();\n  return events;\n}\n\nhqmfjs.ProcedurePerformedTreatmentAdjustedByProtocol_precondition_37 = function(patient, initialSpecificContext) {\n  var events = patient.allProcedures();\n  events = events.withStatuses([\"performed\"]);\n  events = events.withoutNegation();\n  var codes = getCodes(\"2.16.840.1.113883.3.117.1.7.1.278\");\n  var start = null;\n  var end = null;\n  events = events.match(codes, start, end, true);\n\n  if (events.length > 0) events = SAS(events, hqmfjs.MedicationOrderUnfractionatedHeparin_precondition_44(patient));\n  else events.specificContext=hqmf.SpecificsManager.empty();\n  if (events.length > 0) events = SDU(events, hqmfjs.OccurrenceAInpatientEncounter2_precondition_59(patient));\n  else events.specificContext=hqmf.SpecificsManager.empty();\n  return events;\n}\n\nhqmfjs.ProcedurePerformedClinicalPathwayProtocol_precondition_39 = function(patient, initialSpecificContext) {\n  var events = patient.allProcedures();\n  events = events.withStatuses([\"performed\"]);\n  events = events.withoutNegation();\n  var codes = getCodes(\"2.16.840.1.113883.3.117.1.7.1.253\");\n  var start = null;\n  var end = null;\n  events = events.match(codes, start, end, true);\n\n  if (events.length > 0) events = SAS(events, hqmfjs.MedicationOrderUnfractionatedHeparin_precondition_44(patient));\n  else events.specificContext=hqmf.SpecificsManager.empty();\n  if (events.length > 0) events = SDU(events, hqmfjs.OccurrenceAInpatientEncounter2_precondition_59(patient));\n  else events.specificContext=hqmf.SpecificsManager.empty();\n  return events;\n}\n\nhqmfjs.MedicationAdministeredUnfractionatedHeparin_precondition_46 = function(patient, initialSpecificContext) {\n  var events = patient.allMedications();\n  events = events.withStatuses([\"administered\"], false);\n  events = events.withoutNegation();\n  var codes = getCodes(\"2.16.840.1.113883.3.117.1.7.1.218\");\n  var start = null;\n  var end = null;\n  events = events.match(codes, start, end, true);\n\n  events = adjustBoundsForField(events, \"startDate\", new ANYNonNull());\n  events.specificContext=hqmf.SpecificsManager.identity()\n  return events;\n}\n\nhqmfjs.MedicationAdministeredUnfractionatedHeparin_precondition_47 = function(patient, initialSpecificContext) {\n  var events = patient.allMedications();\n  events = events.withStatuses([\"administered\"], false);\n  events = events.withoutNegation();\n  var codes = getCodes(\"2.16.840.1.113883.3.117.1.7.1.218\");\n  var start = null;\n  var end = null;\n  events = events.match(codes, start, end, true);\n\n  events = adjustBoundsForField(events, \"endDate\", new ANYNonNull());\n  if (events.length > 0) events = SAS(events, hqmfjs.MedicationAdministeredUnfractionatedHeparin_precondition_46(patient), new IVL_PQ(null, new PQ(24, \"h\", true)));\n  else events.specificContext=hqmf.SpecificsManager.empty();\n  if (events.length > 0) events = SDU(events, hqmfjs.OccurrenceAInpatientEncounter2_precondition_59(patient));\n  else events.specificContext=hqmf.SpecificsManager.empty();\n  return events;\n}\n\nhqmfjs.MedicationOrderUnfractionatedHeparin_precondition_54 = function(patient, initialSpecificContext) {\n  var events = patient.allMedications();\n  events = events.withStatuses([\"ordered\"], false);\n  events = events.withoutNegation();\n  var codes = getCodes(\"2.16.840.1.113883.3.117.1.7.1.218\");\n  var start = null;\n  var end = null;\n  events = events.match(codes, start, end, true);\n\n  events = filterEventsByField(events, \"route\", new CodeList(getCodes(\"2.16.840.1.113883.3.117.1.7.1.222\")));\n  events.specificContext=hqmf.SpecificsManager.identity()\n  return events;\n}\n\nhqmfjs.ProcedurePerformedTreatmentAdjustedByProtocol_precondition_49 = function(patient, initialSpecificContext) {\n  var events = patient.allProcedures();\n  events = events.withStatuses([\"performed\"]);\n  events = events.withoutNegation();\n  var codes = getCodes(\"2.16.840.1.113883.3.117.1.7.1.278\");\n  var start = null;\n  var end = null;\n  events = events.match(codes, start, end, true);\n\n  if (events.length > 0) events = SAS(events, hqmfjs.MedicationOrderUnfractionatedHeparin_precondition_54(patient));\n  else events.specificContext=hqmf.SpecificsManager.empty();\n  if (events.length > 0) events = SDU(events, hqmfjs.OccurrenceAInpatientEncounter2_precondition_59(patient));\n  else events.specificContext=hqmf.SpecificsManager.empty();\n  return events;\n}\n\nhqmfjs.ProcedurePerformedClinicalPathwayProtocol_precondition_51 = function(patient, initialSpecificContext) {\n  var events = patient.allProcedures();\n  events = events.withStatuses([\"performed\"]);\n  events = events.withoutNegation();\n  var codes = getCodes(\"2.16.840.1.113883.3.117.1.7.1.253\");\n  var start = null;\n  var end = null;\n  events = events.match(codes, start, end, true);\n\n  if (events.length > 0) events = SAS(events, hqmfjs.MedicationOrderUnfractionatedHeparin_precondition_54(patient));\n  else events.specificContext=hqmf.SpecificsManager.empty();\n  if (events.length > 0) events = SDU(events, hqmfjs.OccurrenceAInpatientEncounter2_precondition_59(patient));\n  else events.specificContext=hqmf.SpecificsManager.empty();\n  return events;\n}\n\nhqmfjs.OccurrenceAInpatientEncounter2_precondition_67 = function(patient, initialSpecificContext) {\n  var events = patient.encounters();\n  events.specific_occurrence = 'OccurrenceAInpatientEncounter2'\n  events = events.withStatuses([\"performed\"]);\n  events = events.withoutNegation();\n  var codes = getCodes(\"2.16.840.1.113883.3.117.1.7.1.23\");\n  var start = null;\n  var end = null;\n  events = events.match(codes, start, end, true);\n\n  events.specificContext=new hqmf.SpecificOccurrence(Row.buildForDataCriteria(events.specific_occurrence, events))\n  return events;\n}\n\nhqmfjs.DiagnosticStudyResultVteDiagnosticTest_precondition_62 = function(patient, initialSpecificContext) {\n  var events = patient.procedureResults();\n  events = events.withoutNegation();\n  var codes = getCodes(\"2.16.840.1.113883.3.117.1.7.1.276\");\n  var start = null;\n  var end = null;\n  events = events.match(codes, start, end, true);\n\n  events = filterEventsByValue(events, new CodeList(getCodes(\"2.16.840.1.113883.3.117.1.7.1.407\")));\n  if (events.length > 0) events = SBS(events, hqmfjs.OccurrenceAInpatientEncounter2_precondition_67(patient), new IVL_PQ(null, new PQ(2, \"d\", true)));\n  else events.specificContext=hqmf.SpecificsManager.empty();\n  return events;\n}\n\nhqmfjs.DiagnosticStudyPerformedVteDiagnosticTest_precondition_64 = function(patient, initialSpecificContext) {\n  var events = patient.allProcedures();\n  events = events.withStatuses([\"performed\"]);\n  events = events.withoutNegation();\n  var codes = getCodes(\"2.16.840.1.113883.3.117.1.7.1.276\");\n  var start = null;\n  var end = null;\n  events = events.match(codes, start, end, true);\n\n  if (events.length > 0) events = SBS(events, hqmfjs.OccurrenceAInpatientEncounter2_precondition_67(patient), new IVL_PQ(null, new PQ(2, \"d\", true)));\n  else events.specificContext=hqmf.SpecificsManager.empty();\n  return events;\n}\n\nhqmfjs.OccurrenceAInpatientEncounter2_precondition_74 = function(patient, initialSpecificContext) {\n  var events = patient.encounters();\n  events.specific_occurrence = 'OccurrenceAInpatientEncounter2'\n  events = events.withStatuses([\"performed\"]);\n  events = events.withoutNegation();\n  var codes = getCodes(\"2.16.840.1.113883.3.117.1.7.1.23\");\n  var start = null;\n  var end = null;\n  events = events.match(codes, start, end, true);\n\n  events.specificContext=new hqmf.SpecificOccurrence(Row.buildForDataCriteria(events.specific_occurrence, events))\n  return events;\n}\n\nhqmfjs.DiagnosticStudyResultVteDiagnosticTest_precondition_69 = function(patient, initialSpecificContext) {\n  var events = patient.procedureResults();\n  events = events.withoutNegation();\n  var codes = getCodes(\"2.16.840.1.113883.3.117.1.7.1.276\");\n  var start = null;\n  var end = null;\n  events = events.match(codes, start, end, true);\n\n  events = filterEventsByValue(events, new CodeList(getCodes(\"2.16.840.1.113883.3.117.1.7.1.407\")));\n  if (events.length > 0) events = DURING(events, hqmfjs.OccurrenceAInpatientEncounter2_precondition_74(patient));\n  else events.specificContext=hqmf.SpecificsManager.empty();\n  return events;\n}\n\nhqmfjs.DiagnosticStudyPerformedVteDiagnosticTest_precondition_71 = function(patient, initialSpecificContext) {\n  var events = patient.allProcedures();\n  events = events.withStatuses([\"performed\"]);\n  events = events.withoutNegation();\n  var codes = getCodes(\"2.16.840.1.113883.3.117.1.7.1.276\");\n  var start = null;\n  var end = null;\n  events = events.match(codes, start, end, true);\n\n  if (events.length > 0) events = DURING(events, hqmfjs.OccurrenceAInpatientEncounter2_precondition_74(patient));\n  else events.specificContext=hqmf.SpecificsManager.empty();\n  return events;\n}\n\nhqmfjs.OccurrenceAEmergencyDepartmentVisit1_precondition_76 = function(patient, initialSpecificContext) {\n  var events = patient.encounters();\n  events.specific_occurrence = 'OccurrenceAEmergencyDepartmentVisit1'\n  events = events.withStatuses([\"performed\"]);\n  events = events.withoutNegation();\n  var codes = getCodes(\"2.16.840.1.113883.3.117.1.7.1.293\");\n  var start = null;\n  var end = null;\n  events = events.match(codes, start, end, true);\n\n  events = denormalizeEventsByLocation(events, \"facilityDeparture\", null);\n  events.specificContext=new hqmf.SpecificOccurrence(Row.buildForDataCriteria(events.specific_occurrence, events))\n  return events;\n}\n\nhqmfjs.OccurrenceAInpatientEncounter2_precondition_77 = function(patient, initialSpecificContext) {\n  var events = patient.encounters();\n  events.specific_occurrence = 'OccurrenceAInpatientEncounter2'\n  events = events.withStatuses([\"performed\"]);\n  events = events.withoutNegation();\n  var codes = getCodes(\"2.16.840.1.113883.3.117.1.7.1.23\");\n  var start = null;\n  var end = null;\n  events = events.match(codes, start, end, true);\n\n  events = adjustBoundsForField(events, \"admitTime\", new ANYNonNull());\n  if (events.length > 0) events = SAE(events, hqmfjs.OccurrenceAEmergencyDepartmentVisit1_precondition_76(patient), new IVL_PQ(null, new PQ(1, \"h\", true)));\n  else events.specificContext=hqmf.SpecificsManager.empty();\n  return events;\n}\n\nhqmfjs.OccurrenceAEmergencyDepartmentVisit1_precondition_84 = function(patient, initialSpecificContext) {\n  var events = patient.encounters();\n  events.specific_occurrence = 'OccurrenceAEmergencyDepartmentVisit1'\n  events = events.withStatuses([\"performed\"]);\n  events = events.withoutNegation();\n  var codes = getCodes(\"2.16.840.1.113883.3.117.1.7.1.293\");\n  var start = null;\n  var end = null;\n  events = events.match(codes, start, end, true);\n\n  events = denormalizeEventsByLocation(events, \"facilityArrival\", null);\n  events.specificContext=new hqmf.SpecificOccurrence(Row.buildForDataCriteria(events.specific_occurrence, events))\n  return events;\n}\n\nhqmfjs.DiagnosticStudyResultVteDiagnosticTest_precondition_79 = function(patient, initialSpecificContext) {\n  var events = patient.procedureResults();\n  events = events.withoutNegation();\n  var codes = getCodes(\"2.16.840.1.113883.3.117.1.7.1.276\");\n  var start = null;\n  var end = null;\n  events = events.match(codes, start, end, true);\n\n  events = filterEventsByValue(events, new CodeList(getCodes(\"2.16.840.1.113883.3.117.1.7.1.407\")));\n  if (events.length > 0) events = SBS(events, hqmfjs.OccurrenceAEmergencyDepartmentVisit1_precondition_84(patient), new IVL_PQ(null, new PQ(2, \"d\", true)));\n  else events.specificContext=hqmf.SpecificsManager.empty();\n  return events;\n}\n\nhqmfjs.DiagnosticStudyPerformedVteDiagnosticTest_precondition_81 = function(patient, initialSpecificContext) {\n  var events = patient.allProcedures();\n  events = events.withStatuses([\"performed\"]);\n  events = events.withoutNegation();\n  var codes = getCodes(\"2.16.840.1.113883.3.117.1.7.1.276\");\n  var start = null;\n  var end = null;\n  events = events.match(codes, start, end, true);\n\n  if (events.length > 0) events = SBS(events, hqmfjs.OccurrenceAEmergencyDepartmentVisit1_precondition_84(patient), new IVL_PQ(null, new PQ(2, \"d\", true)));\n  else events.specificContext=hqmf.SpecificsManager.empty();\n  return events;\n}\n\nhqmfjs.OccurrenceAEmergencyDepartmentVisit1_precondition_91 = function(patient, initialSpecificContext) {\n  var events = patient.encounters();\n  events.specific_occurrence = 'OccurrenceAEmergencyDepartmentVisit1'\n  events = events.withStatuses([\"performed\"]);\n  events = events.withoutNegation();\n  var codes = getCodes(\"2.16.840.1.113883.3.117.1.7.1.293\");\n  var start = null;\n  var end = null;\n  events = events.match(codes, start, end, true);\n\n  events.specificContext=new hqmf.SpecificOccurrence(Row.buildForDataCriteria(events.specific_occurrence, events))\n  return events;\n}\n\nhqmfjs.DiagnosticStudyResultVteDiagnosticTest_precondition_86 = function(patient, initialSpecificContext) {\n  var events = patient.procedureResults();\n  events = events.withoutNegation();\n  var codes = getCodes(\"2.16.840.1.113883.3.117.1.7.1.276\");\n  var start = null;\n  var end = null;\n  events = events.match(codes, start, end, true);\n\n  events = filterEventsByValue(events, new CodeList(getCodes(\"2.16.840.1.113883.3.117.1.7.1.407\")));\n  if (events.length > 0) events = DURING(events, hqmfjs.OccurrenceAEmergencyDepartmentVisit1_precondition_91(patient));\n  else events.specificContext=hqmf.SpecificsManager.empty();\n  return events;\n}\n\nhqmfjs.DiagnosticStudyPerformedVteDiagnosticTest_precondition_88 = function(patient, initialSpecificContext) {\n  var events = patient.allProcedures();\n  events = events.withStatuses([\"performed\"]);\n  events = events.withoutNegation();\n  var codes = getCodes(\"2.16.840.1.113883.3.117.1.7.1.276\");\n  var start = null;\n  var end = null;\n  events = events.match(codes, start, end, true);\n\n  if (events.length > 0) events = DURING(events, hqmfjs.OccurrenceAEmergencyDepartmentVisit1_precondition_91(patient));\n  else events.specificContext=hqmf.SpecificsManager.empty();\n  return events;\n}\n\nhqmfjs.DiagnosticStudyPerformedVteDiagnosticTest_precondition_93 = function(patient, initialSpecificContext) {\n  var events = patient.allProcedures();\n  events = events.withStatuses([\"performed\"]);\n  events = events.withoutNegation();\n  var codes = getCodes(\"2.16.840.1.113883.3.117.1.7.1.276\");\n  var start = null;\n  var end = null;\n  events = events.match(codes, start, end, true);\n\n  if (events.length > 0) events = DURING(events, hqmfjs.OccurrenceAEmergencyDepartmentVisit1(patient));\n  else events.specificContext=hqmf.SpecificsManager.empty();\n  return events;\n}\n\nhqmfjs.DiagnosticStudyResultVteDiagnosticTest_precondition_95 = function(patient, initialSpecificContext) {\n  var events = patient.procedureResults();\n  events = events.withoutNegation();\n  var codes = getCodes(\"2.16.840.1.113883.3.117.1.7.1.276\");\n  var start = null;\n  var end = null;\n  events = events.match(codes, start, end, true);\n\n  events = filterEventsByValue(events, new CodeList(getCodes(\"2.16.840.1.113883.3.117.1.7.1.407\")));\n  if (events.length > 0) events = DURING(events, hqmfjs.OccurrenceAInpatientEncounter2(patient));\n  else events.specificContext=hqmf.SpecificsManager.empty();\n  return events;\n}\n\nhqmfjs.MedicationAdministeredUnfractionatedHeparin_precondition_105 = function(patient, initialSpecificContext) {\n  var events = patient.allMedications();\n  events = events.withStatuses([\"administered\"], false);\n  events = events.withoutNegation();\n  var codes = getCodes(\"2.16.840.1.113883.3.117.1.7.1.218\");\n  var start = null;\n  var end = null;\n  events = events.match(codes, start, end, true);\n\n  events = filterEventsByField(events, \"route\", new CodeList(getCodes(\"2.16.840.1.113883.3.117.1.7.1.222\")));\n  if (events.length > 0) events = DURING(events, hqmfjs.OccurrenceAInpatientEncounter2(patient));\n  else events.specificContext=hqmf.SpecificsManager.empty();\n  return events;\n}\n\nhqmfjs.OccurrenceAEmergencyDepartmentVisit1_precondition_107 = function(patient, initialSpecificContext) {\n  var events = patient.encounters();\n  events.specific_occurrence = 'OccurrenceAEmergencyDepartmentVisit1'\n  events = events.withStatuses([\"performed\"]);\n  events = events.withoutNegation();\n  var codes = getCodes(\"2.16.840.1.113883.3.117.1.7.1.293\");\n  var start = null;\n  var end = null;\n  events = events.match(codes, start, end, true);\n\n  events = denormalizeEventsByLocation(events, \"facilityDeparture\", null);\n  events.specificContext=new hqmf.SpecificOccurrence(Row.buildForDataCriteria(events.specific_occurrence, events))\n  return events;\n}\n\nhqmfjs.OccurrenceAInpatientEncounter2_precondition_108 = function(patient, initialSpecificContext) {\n  var events = patient.encounters();\n  events.specific_occurrence = 'OccurrenceAInpatientEncounter2'\n  events = events.withStatuses([\"performed\"]);\n  events = events.withoutNegation();\n  var codes = getCodes(\"2.16.840.1.113883.3.117.1.7.1.23\");\n  var start = null;\n  var end = null;\n  events = events.match(codes, start, end, true);\n\n  events = adjustBoundsForField(events, \"admitTime\", new ANYNonNull());\n  if (events.length > 0) events = SAE(events, hqmfjs.OccurrenceAEmergencyDepartmentVisit1_precondition_107(patient), new IVL_PQ(null, new PQ(1, \"h\", true)));\n  else events.specificContext=hqmf.SpecificsManager.empty();\n  return events;\n}\n\nhqmfjs.MedicationAdministeredUnfractionatedHeparin_precondition_110 = function(patient, initialSpecificContext) {\n  var events = patient.allMedications();\n  events = events.withStatuses([\"administered\"], false);\n  events = events.withoutNegation();\n  var codes = getCodes(\"2.16.840.1.113883.3.117.1.7.1.218\");\n  var start = null;\n  var end = null;\n  events = events.match(codes, start, end, true);\n\n  events = filterEventsByField(events, \"route\", new CodeList(getCodes(\"2.16.840.1.113883.3.117.1.7.1.222\")));\n  if (events.length > 0) events = SDU(events, hqmfjs.OccurrenceAEmergencyDepartmentVisit1(patient));\n  else events.specificContext=hqmf.SpecificsManager.empty();\n  return events;\n}\n\nhqmfjs.PatientCharacteristicBirthdateBirthDate_precondition_117 = function(patient, initialSpecificContext) {\nvar value = patient.birthtime();\nvar events = [value];\nevents = SBS(events, hqmfjs.OccurrenceAInpatientEncounter2(patient), new IVL_PQ(new PQ(18, \"a\", true), null));\nevents.specificContext=hqmf.SpecificsManager.identity();\nreturn events;\n\n}\n\nhqmfjs.OccurrenceAInpatientEncounter2_precondition_119 = function(patient, initialSpecificContext) {\n  var events = patient.encounters();\n  events.specific_occurrence = 'OccurrenceAInpatientEncounter2'\n  events = events.withStatuses([\"performed\"]);\n  events = events.withoutNegation();\n  var codes = getCodes(\"2.16.840.1.113883.3.117.1.7.1.23\");\n  var start = null;\n  var end = null;\n  events = events.match(codes, start, end, true);\n\n  events = filterEventsByField(events, \"lengthOfStay\", new IVL_PQ(null, new PQ(120, \"d\", true)));\n  events.specificContext=new hqmf.SpecificOccurrence(Row.buildForDataCriteria(events.specific_occurrence, events))\n  return events;\n}\n\nhqmfjs.OccurrenceAInpatientEncounter2_precondition_121 = function(patient, initialSpecificContext) {\n  var events = patient.encounters();\n  events.specific_occurrence = 'OccurrenceAInpatientEncounter2'\n  events = events.withStatuses([\"performed\"]);\n  events = events.withoutNegation();\n  var codes = getCodes(\"2.16.840.1.113883.3.117.1.7.1.23\");\n  var start = null;\n  var end = null;\n  events = events.match(codes, start, end, true);\n\n  events = adjustBoundsForField(events, \"dischargeTime\", new ANYNonNull());\n  if (events.length > 0) events = DURING(events, hqmfjs.MeasurePeriod(patient));\n  else events.specificContext=hqmf.SpecificsManager.empty();\n  return events;\n}\n\nhqmfjs.OccurrenceAEmergencyDepartmentVisit1_precondition_123 = function(patient, initialSpecificContext) {\n  var events = patient.encounters();\n  events.specific_occurrence = 'OccurrenceAEmergencyDepartmentVisit1'\n  events = events.withStatuses([\"performed\"]);\n  events = events.withoutNegation();\n  var codes = getCodes(\"2.16.840.1.113883.3.117.1.7.1.293\");\n  var start = null;\n  var end = null;\n  events = events.match(codes, start, end, true);\n\n  events = denormalizeEventsByLocation(events, \"facilityDeparture\", null);\n  events.specificContext=new hqmf.SpecificOccurrence(Row.buildForDataCriteria(events.specific_occurrence, events))\n  return events;\n}\n\nhqmfjs.OccurrenceAInpatientEncounter2_precondition_124 = function(patient, initialSpecificContext) {\n  var events = patient.encounters();\n  events.specific_occurrence = 'OccurrenceAInpatientEncounter2'\n  events = events.withStatuses([\"performed\"]);\n  events = events.withoutNegation();\n  var codes = getCodes(\"2.16.840.1.113883.3.117.1.7.1.23\");\n  var start = null;\n  var end = null;\n  events = events.match(codes, start, end, true);\n\n  events = adjustBoundsForField(events, \"admitTime\", new ANYNonNull());\n  if (events.length > 0) events = SAE(events, hqmfjs.OccurrenceAEmergencyDepartmentVisit1_precondition_123(patient), new IVL_PQ(null, new PQ(1, \"h\", true)));\n  else events.specificContext=hqmf.SpecificsManager.empty();\n  return events;\n}\n\nhqmfjs.OccurrenceAEmergencyDepartmentVisit1_precondition_131 = function(patient, initialSpecificContext) {\n  var events = patient.encounters();\n  events.specific_occurrence = 'OccurrenceAEmergencyDepartmentVisit1'\n  events = events.withStatuses([\"performed\"]);\n  events = events.withoutNegation();\n  var codes = getCodes(\"2.16.840.1.113883.3.117.1.7.1.293\");\n  var start = null;\n  var end = null;\n  events = events.match(codes, start, end, true);\n\n  events.specificContext=new hqmf.SpecificOccurrence(Row.buildForDataCriteria(events.specific_occurrence, events))\n  return events;\n}\n\nhqmfjs.DiagnosisActiveVenousThromboembolism_precondition_126 = function(patient, initialSpecificContext) {\n  var events = patient.allProblems();\n  events = events.withStatuses([\"active\"]);\n  events = events.withoutNegation();\n  var codes = getCodes(\"2.16.840.1.113883.3.117.1.7.1.279\");\n  var start = null;\n  var end = null;\n  events = events.match(codes, start, end, true);\n\n  if (events.length > 0) events = SDU(events, hqmfjs.OccurrenceAEmergencyDepartmentVisit1_precondition_131(patient));\n  else events.specificContext=hqmf.SpecificsManager.empty();\n  return events;\n}\n\nhqmfjs.DiagnosisActiveObstetricsVte_precondition_128 = function(patient, initialSpecificContext) {\n  var events = patient.allProblems();\n  events = events.withStatuses([\"active\"]);\n  events = events.withoutNegation();\n  var codes = getCodes(\"2.16.840.1.113883.3.117.1.7.1.264\");\n  var start = null;\n  var end = null;\n  events = events.match(codes, start, end, true);\n\n  if (events.length > 0) events = SDU(events, hqmfjs.OccurrenceAEmergencyDepartmentVisit1_precondition_131(patient));\n  else events.specificContext=hqmf.SpecificsManager.empty();\n  return events;\n}\n\nhqmfjs.OccurrenceAInpatientEncounter2_precondition_140 = function(patient, initialSpecificContext) {\n  var events = patient.encounters();\n  events.specific_occurrence = 'OccurrenceAInpatientEncounter2'\n  events = events.withStatuses([\"performed\"]);\n  events = events.withoutNegation();\n  var codes = getCodes(\"2.16.840.1.113883.3.117.1.7.1.23\");\n  var start = null;\n  var end = null;\n  events = events.match(codes, start, end, true);\n\n  events.specificContext=new hqmf.SpecificOccurrence(Row.buildForDataCriteria(events.specific_occurrence, events))\n  return events;\n}\n\nhqmfjs.DiagnosisActiveVenousThromboembolism_precondition_135 = function(patient, initialSpecificContext) {\n  var events = patient.allProblems();\n  events = events.withStatuses([\"active\"]);\n  events = events.withoutNegation();\n  var codes = getCodes(\"2.16.840.1.113883.3.117.1.7.1.279\");\n  var start = null;\n  var end = null;\n  events = events.match(codes, start, end, true);\n\n  if (events.length > 0) events = SDU(events, hqmfjs.OccurrenceAInpatientEncounter2_precondition_140(patient));\n  else events.specificContext=hqmf.SpecificsManager.empty();\n  return events;\n}\n\nhqmfjs.DiagnosisActiveObstetricsVte_precondition_137 = function(patient, initialSpecificContext) {\n  var events = patient.allProblems();\n  events = events.withStatuses([\"active\"]);\n  events = events.withoutNegation();\n  var codes = getCodes(\"2.16.840.1.113883.3.117.1.7.1.264\");\n  var start = null;\n  var end = null;\n  events = events.match(codes, start, end, true);\n\n  if (events.length > 0) events = SDU(events, hqmfjs.OccurrenceAInpatientEncounter2_precondition_140(patient));\n  else events.specificContext=hqmf.SpecificsManager.empty();\n  return events;\n}\n\n\n\n        // #########################\n        // ##### MEASURE LOGIC #####\n        // #########################\n        \n        hqmfjs.initializeSpecifics = function(patient_api, hqmfjs) { hqmf.SpecificsManager.initialize(patient_api,hqmfjs,{\"id\":\"OccurrenceAEmergencyDepartmentVisit1\",\"type\":\"ENCOUNTER_PERFORMED_EMERGENCY_DEPARTMENT_VISIT\",\"function\":\"OccurrenceAEmergencyDepartmentVisit1\"},{\"id\":\"OccurrenceAInpatientEncounter2\",\"type\":\"ENCOUNTER_PERFORMED_INPATIENT_ENCOUNTER\",\"function\":\"OccurrenceAInpatientEncounter2\"}) }\n\n        // INITIAL PATIENT POPULATION\n        hqmfjs.IPP = function(patient, initialSpecificContext) {\n  return allTrue('IPP',  \n    allTrue('144',     hqmfjs.PatientCharacteristicBirthdateBirthDate_precondition_117(patient, initialSpecificContext),     hqmfjs.OccurrenceAInpatientEncounter2_precondition_119(patient, initialSpecificContext),     hqmfjs.OccurrenceAInpatientEncounter2_precondition_121(patient, initialSpecificContext),    \n      atLeastOneTrue('142',      \n        allTrue('133',         hqmfjs.OccurrenceAInpatientEncounter2_precondition_124(patient, initialSpecificContext),        \n          atLeastOneTrue('130',           hqmfjs.DiagnosisActiveVenousThromboembolism_precondition_126(patient, initialSpecificContext),           hqmfjs.DiagnosisActiveObstetricsVte_precondition_128(patient, initialSpecificContext)\n          )\n        ),      \n        atLeastOneTrue('139',         hqmfjs.DiagnosisActiveVenousThromboembolism_precondition_135(patient, initialSpecificContext),         hqmfjs.DiagnosisActiveObstetricsVte_precondition_137(patient, initialSpecificContext)\n        )\n      )\n    )\n  );\n};\n\n\n        // DENOMINATOR\n        hqmfjs.DENOM = function(patient, initialSpecificContext) {\n  return allTrue('DENOM',  \n    allTrue('116',    \n      atLeastOneTrue('103',      \n        allTrue('66',         hqmfjs.DiagnosticStudyResultVteDiagnosticTest_precondition_62(patient, initialSpecificContext),         hqmfjs.DiagnosticStudyPerformedVteDiagnosticTest_precondition_64(patient, initialSpecificContext)\n        ),      \n        allTrue('73',         hqmfjs.DiagnosticStudyResultVteDiagnosticTest_precondition_69(patient, initialSpecificContext),         hqmfjs.DiagnosticStudyPerformedVteDiagnosticTest_precondition_71(patient, initialSpecificContext)\n        ),      \n        allTrue('101',         hqmfjs.OccurrenceAInpatientEncounter2_precondition_77(patient, initialSpecificContext),        \n          atLeastOneTrue('99',          \n            allTrue('83',             hqmfjs.DiagnosticStudyResultVteDiagnosticTest_precondition_79(patient, initialSpecificContext),             hqmfjs.DiagnosticStudyPerformedVteDiagnosticTest_precondition_81(patient, initialSpecificContext)\n            ),          \n            allTrue('90',             hqmfjs.DiagnosticStudyResultVteDiagnosticTest_precondition_86(patient, initialSpecificContext),             hqmfjs.DiagnosticStudyPerformedVteDiagnosticTest_precondition_88(patient, initialSpecificContext)\n            ),          \n            allTrue('97',             hqmfjs.DiagnosticStudyPerformedVteDiagnosticTest_precondition_93(patient, initialSpecificContext),             hqmfjs.DiagnosticStudyResultVteDiagnosticTest_precondition_95(patient, initialSpecificContext)\n            )\n          )\n        )\n      ),    \n      atLeastOneTrue('114',       hqmfjs.MedicationAdministeredUnfractionatedHeparin_precondition_105(patient, initialSpecificContext),      \n        allTrue('112',         hqmfjs.OccurrenceAInpatientEncounter2_precondition_108(patient, initialSpecificContext),         hqmfjs.MedicationAdministeredUnfractionatedHeparin_precondition_110(patient, initialSpecificContext)\n        )\n      )\n    )\n  );\n};\n\n\n        // NUMERATOR\n        hqmfjs.NUMER = function(patient, initialSpecificContext) {\n  return allTrue('NUMER',  \n    allTrue('61',    \n      atLeastOneTrue('58',      \n        allTrue('43',         hqmfjs.LaboratoryTestPerformedPlateletCount_precondition_35(patient, initialSpecificContext),        \n          atLeastOneTrue('41',           hqmfjs.ProcedurePerformedTreatmentAdjustedByProtocol_precondition_37(patient, initialSpecificContext),           hqmfjs.ProcedurePerformedClinicalPathwayProtocol_precondition_39(patient, initialSpecificContext)\n          )\n        ),      \n        allTrue('56',         hqmfjs.MedicationAdministeredUnfractionatedHeparin_precondition_47(patient, initialSpecificContext),        \n          atLeastOneTrue('53',           hqmfjs.ProcedurePerformedTreatmentAdjustedByProtocol_precondition_49(patient, initialSpecificContext),           hqmfjs.ProcedurePerformedClinicalPathwayProtocol_precondition_51(patient, initialSpecificContext)\n          )\n        )\n      )\n    )\n  );\n};\n\n\n        hqmfjs.DENEX = function(patient, initialSpecificContext) {\n  return atLeastOneTrue('DENEX',  \n    allTrue('34',    \n      atLeastOneTrue('32',       hqmfjs.OccurrenceAInpatientEncounter2_precondition_3(patient, initialSpecificContext),       hqmfjs.OccurrenceAInpatientEncounter2_precondition_5(patient, initialSpecificContext),       hqmfjs.OccurrenceAInpatientEncounter2_precondition_7(patient, initialSpecificContext),       hqmfjs.OccurrenceAInpatientEncounter2_precondition_9(patient, initialSpecificContext),       hqmfjs.OccurrenceAInpatientEncounter2_precondition_11(patient, initialSpecificContext),      \n        allTrue('23',         hqmfjs.OccurrenceAInpatientEncounter2_precondition_14(patient, initialSpecificContext),        \n          atLeastOneTrue('20',           hqmfjs.InterventionOrderPalliativeCare_precondition_16(patient, initialSpecificContext),           hqmfjs.InterventionPerformedPalliativeCare_precondition_18(patient, initialSpecificContext)\n          )\n        ),      \n        atLeastOneTrue('29',         hqmfjs.InterventionOrderPalliativeCare_precondition_25(patient, initialSpecificContext),         hqmfjs.InterventionPerformedPalliativeCare_precondition_27(patient, initialSpecificContext)\n        )\n      )\n    )\n  );\n};\n\n\n        hqmfjs.DENEXCEP = function(patient) { return new Boolean(false); }\n        // CV\n        hqmfjs.MSRPOPL = function(patient) { return new Boolean(false); }\n        hqmfjs.OBSERV = function(patient) { return new Boolean(false); }\n        \n      \n      var occurrenceId = [\"OccurrenceAInpatientEncounter2\"];\n\n      hqmfjs.initializeSpecifics(patient_api, hqmfjs)\n      \n      var population = function() {\n        return executeIfAvailable(hqmfjs.IPP, patient_api);\n      }\n      var denominator = function() {\n        return executeIfAvailable(hqmfjs.DENOM, patient_api);\n      }\n      var numerator = function() {\n        return executeIfAvailable(hqmfjs.NUMER, patient_api);\n      }\n      var exclusion = function() {\n        return executeIfAvailable(hqmfjs.DENEX, patient_api);\n      }\n      var denexcep = function() {\n        return executeIfAvailable(hqmfjs.DENEXCEP, patient_api);\n      }\n      var msrpopl = function() {\n        return executeIfAvailable(hqmfjs.MSRPOPL, patient_api);\n      }\n      var observ = function(specific_context) {\n        \n        var observFunc = hqmfjs.OBSERV\n        if (typeof(observFunc)==='function')\n          return observFunc(patient_api, specific_context);\n        else\n          return [];\n      }\n      \n      var executeIfAvailable = function(optionalFunction, arg) {\n        if (typeof(optionalFunction)==='function')\n          return optionalFunction(arg);\n        else\n          return false;\n      }\n\n      if (Logger.enabled) enableMeasureLogging(hqmfjs);\n\n      map(patient, population, denominator, numerator, exclusion, denexcep, msrpopl, observ, occurrenceId,false);\n      \n      };\n      ",
+  "continuous_variable": false,
+  "episode_of_care": true,
+  "data_criteria": [
+    {
+      "OccurrenceAInpatientEncounter2_precondition_3": {
+        "title": "Inpatient Encounter",
+        "description": "Encounter, Performed: Inpatient Encounter",
+        "standard_category": "encounter",
+        "qds_data_type": "encounter",
+        "code_list_id": "2.16.840.1.113883.3.117.1.7.1.23",
+        "type": "encounters",
+        "definition": "encounter",
+        "status": "performed",
+        "hard_status": false,
+        "negation": false,
+        "specific_occurrence": "A",
+        "specific_occurrence_const": "ENCOUNTER_PERFORMED_INPATIENT_ENCOUNTER",
+        "source_data_criteria": "OccurrenceAInpatientEncounter2",
+        "field_values": {
+          "DISCHARGE_STATUS": {
+            "type": "CD",
+            "code_list_id": "2.16.840.1.113883.3.117.1.7.1.87",
+            "title": "Discharge To Another Hospital"
+          }
+        }
+      }
+    },
+    {
+      "OccurrenceAInpatientEncounter2_precondition_5": {
+        "title": "Inpatient Encounter",
+        "description": "Encounter, Performed: Inpatient Encounter",
+        "standard_category": "encounter",
+        "qds_data_type": "encounter",
+        "code_list_id": "2.16.840.1.113883.3.117.1.7.1.23",
+        "type": "encounters",
+        "definition": "encounter",
+        "status": "performed",
+        "hard_status": false,
+        "negation": false,
+        "specific_occurrence": "A",
+        "specific_occurrence_const": "ENCOUNTER_PERFORMED_INPATIENT_ENCOUNTER",
+        "source_data_criteria": "OccurrenceAInpatientEncounter2",
+        "field_values": {
+          "DISCHARGE_STATUS": {
+            "type": "CD",
+            "code_list_id": "2.16.840.1.113883.3.117.1.7.1.308",
+            "title": "Left Against Medical Advice"
+          }
+        }
+      }
+    },
+    {
+      "OccurrenceAInpatientEncounter2_precondition_7": {
+        "title": "Inpatient Encounter",
+        "description": "Encounter, Performed: Inpatient Encounter",
+        "standard_category": "encounter",
+        "qds_data_type": "encounter",
+        "code_list_id": "2.16.840.1.113883.3.117.1.7.1.23",
+        "type": "encounters",
+        "definition": "encounter",
+        "status": "performed",
+        "hard_status": false,
+        "negation": false,
+        "specific_occurrence": "A",
+        "specific_occurrence_const": "ENCOUNTER_PERFORMED_INPATIENT_ENCOUNTER",
+        "source_data_criteria": "OccurrenceAInpatientEncounter2",
+        "field_values": {
+          "DISCHARGE_STATUS": {
+            "type": "CD",
+            "code_list_id": "2.16.840.1.113883.3.117.1.7.1.309",
+            "title": "Patient Expired"
+          }
+        }
+      }
+    },
+    {
+      "OccurrenceAInpatientEncounter2_precondition_9": {
+        "title": "Inpatient Encounter",
+        "description": "Encounter, Performed: Inpatient Encounter",
+        "standard_category": "encounter",
+        "qds_data_type": "encounter",
+        "code_list_id": "2.16.840.1.113883.3.117.1.7.1.23",
+        "type": "encounters",
+        "definition": "encounter",
+        "status": "performed",
+        "hard_status": false,
+        "negation": false,
+        "specific_occurrence": "A",
+        "specific_occurrence_const": "ENCOUNTER_PERFORMED_INPATIENT_ENCOUNTER",
+        "source_data_criteria": "OccurrenceAInpatientEncounter2",
+        "field_values": {
+          "DISCHARGE_STATUS": {
+            "type": "CD",
+            "code_list_id": "2.16.840.1.113883.3.117.1.7.1.209",
+            "title": "Discharged to Home for Hospice Care"
+          }
+        }
+      }
+    },
+    {
+      "OccurrenceAInpatientEncounter2_precondition_11": {
+        "title": "Inpatient Encounter",
+        "description": "Encounter, Performed: Inpatient Encounter",
+        "standard_category": "encounter",
+        "qds_data_type": "encounter",
+        "code_list_id": "2.16.840.1.113883.3.117.1.7.1.23",
+        "type": "encounters",
+        "definition": "encounter",
+        "status": "performed",
+        "hard_status": false,
+        "negation": false,
+        "specific_occurrence": "A",
+        "specific_occurrence_const": "ENCOUNTER_PERFORMED_INPATIENT_ENCOUNTER",
+        "source_data_criteria": "OccurrenceAInpatientEncounter2",
+        "field_values": {
+          "DISCHARGE_STATUS": {
+            "type": "CD",
+            "code_list_id": "2.16.840.1.113883.3.117.1.7.1.207",
+            "title": "Discharged to Health Care Facility for Hospice Care"
+          }
+        }
+      }
+    },
+    {
+      "OccurrenceAInpatientEncounter2_precondition_14": {
+        "title": "Inpatient Encounter",
+        "description": "Encounter, Performed: Inpatient Encounter",
+        "standard_category": "encounter",
+        "qds_data_type": "encounter",
+        "code_list_id": "2.16.840.1.113883.3.117.1.7.1.23",
+        "type": "encounters",
+        "definition": "encounter",
+        "status": "performed",
+        "hard_status": false,
+        "negation": false,
+        "specific_occurrence": "A",
+        "specific_occurrence_const": "ENCOUNTER_PERFORMED_INPATIENT_ENCOUNTER",
+        "source_data_criteria": "OccurrenceAInpatientEncounter2",
+        "field_values": {
+          "ADMISSION_DATETIME": {
+            "type": "ANYNonNull"
+          }
+        },
+        "temporal_references": [
+          {
+            "type": "SAE",
+            "reference": "OccurrenceAEmergencyDepartmentVisit1_precondition_13",
+            "range": {
+              "type": "IVL_PQ",
+              "high": {
+                "type": "PQ",
+                "unit": "h",
+                "value": "1",
+                "inclusive?": true,
+                "derived?": false
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "OccurrenceAEmergencyDepartmentVisit1_precondition_13": {
+        "title": "Emergency Department Visit",
+        "description": "Encounter, Performed: Emergency Department Visit",
+        "standard_category": "encounter",
+        "qds_data_type": "encounter",
+        "code_list_id": "2.16.840.1.113883.3.117.1.7.1.293",
+        "type": "encounters",
+        "definition": "encounter",
+        "status": "performed",
+        "hard_status": false,
+        "negation": false,
+        "specific_occurrence": "A",
+        "specific_occurrence_const": "ENCOUNTER_PERFORMED_EMERGENCY_DEPARTMENT_VISIT",
+        "source_data_criteria": "OccurrenceAEmergencyDepartmentVisit1",
+        "field_values": {
+          "FACILITY_LOCATION_DEPARTURE_DATETIME": null
+        }
+      }
+    },
+    {
+      "InterventionOrderPalliativeCare_precondition_16": {
+        "title": "Palliative Care",
+        "description": "Intervention, Order: Palliative Care",
+        "standard_category": "procedure",
+        "qds_data_type": "procedure_performed",
+        "code_list_id": "2.16.840.1.113883.3.526.2.1076",
+        "type": "interventions",
+        "definition": "intervention",
+        "status": "ordered",
+        "hard_status": true,
+        "negation": false,
+        "source_data_criteria": "InterventionOrderPalliativeCare",
+        "temporal_references": [
+          {
+            "type": "SDU",
+            "reference": "OccurrenceAEmergencyDepartmentVisit1_precondition_21"
+          }
+        ]
+      }
+    },
+    {
+      "OccurrenceAEmergencyDepartmentVisit1_precondition_21": {
+        "title": "Emergency Department Visit",
+        "description": "Encounter, Performed: Emergency Department Visit",
+        "standard_category": "encounter",
+        "qds_data_type": "encounter",
+        "code_list_id": "2.16.840.1.113883.3.117.1.7.1.293",
+        "type": "encounters",
+        "definition": "encounter",
+        "status": "performed",
+        "hard_status": false,
+        "negation": false,
+        "specific_occurrence": "A",
+        "specific_occurrence_const": "ENCOUNTER_PERFORMED_EMERGENCY_DEPARTMENT_VISIT",
+        "source_data_criteria": "OccurrenceAEmergencyDepartmentVisit1"
+      }
+    },
+    {
+      "InterventionPerformedPalliativeCare_precondition_18": {
+        "title": "Palliative Care",
+        "description": "Intervention, Performed: Palliative Care",
+        "standard_category": "procedure",
+        "qds_data_type": "procedure_performed",
+        "code_list_id": "2.16.840.1.113883.3.526.2.1076",
+        "type": "interventions",
+        "definition": "intervention",
+        "status": "performed",
+        "hard_status": false,
+        "negation": false,
+        "source_data_criteria": "InterventionPerformedPalliativeCare",
+        "temporal_references": [
+          {
+            "type": "SDU",
+            "reference": "OccurrenceAEmergencyDepartmentVisit1_precondition_21"
+          }
+        ]
+      }
+    },
+    {
+      "InterventionOrderPalliativeCare_precondition_25": {
+        "title": "Palliative Care",
+        "description": "Intervention, Order: Palliative Care",
+        "standard_category": "procedure",
+        "qds_data_type": "procedure_performed",
+        "code_list_id": "2.16.840.1.113883.3.526.2.1076",
+        "type": "interventions",
+        "definition": "intervention",
+        "status": "ordered",
+        "hard_status": true,
+        "negation": false,
+        "source_data_criteria": "InterventionOrderPalliativeCare",
+        "temporal_references": [
+          {
+            "type": "SDU",
+            "reference": "OccurrenceAInpatientEncounter2_precondition_30"
+          }
+        ]
+      }
+    },
+    {
+      "OccurrenceAInpatientEncounter2_precondition_30": {
+        "title": "Inpatient Encounter",
+        "description": "Encounter, Performed: Inpatient Encounter",
+        "standard_category": "encounter",
+        "qds_data_type": "encounter",
+        "code_list_id": "2.16.840.1.113883.3.117.1.7.1.23",
+        "type": "encounters",
+        "definition": "encounter",
+        "status": "performed",
+        "hard_status": false,
+        "negation": false,
+        "specific_occurrence": "A",
+        "specific_occurrence_const": "ENCOUNTER_PERFORMED_INPATIENT_ENCOUNTER",
+        "source_data_criteria": "OccurrenceAInpatientEncounter2"
+      }
+    },
+    {
+      "InterventionPerformedPalliativeCare_precondition_27": {
+        "title": "Palliative Care",
+        "description": "Intervention, Performed: Palliative Care",
+        "standard_category": "procedure",
+        "qds_data_type": "procedure_performed",
+        "code_list_id": "2.16.840.1.113883.3.526.2.1076",
+        "type": "interventions",
+        "definition": "intervention",
+        "status": "performed",
+        "hard_status": false,
+        "negation": false,
+        "source_data_criteria": "InterventionPerformedPalliativeCare",
+        "temporal_references": [
+          {
+            "type": "SDU",
+            "reference": "OccurrenceAInpatientEncounter2_precondition_30"
+          }
+        ]
+      }
+    },
+    {
+      "LaboratoryTestPerformedPlateletCount_precondition_35": {
+        "title": "Platelet Count",
+        "description": "Laboratory Test, Performed: Platelet Count",
+        "standard_category": "laboratory_test",
+        "qds_data_type": "laboratory_test",
+        "code_list_id": "2.16.840.1.113883.3.117.1.7.1.267",
+        "type": "laboratory_tests",
+        "definition": "laboratory_test",
+        "status": "performed",
+        "hard_status": false,
+        "negation": false,
+        "source_data_criteria": "LaboratoryTestPerformedPlateletCount",
+        "temporal_references": [
+          {
+            "type": "SAS",
+            "reference": "MedicationOrderUnfractionatedHeparin_precondition_44"
+          },
+          {
+            "type": "SDU",
+            "reference": "OccurrenceAInpatientEncounter2_precondition_59"
+          }
+        ]
+      }
+    },
+    {
+      "MedicationOrderUnfractionatedHeparin_precondition_44": {
+        "title": "Unfractionated Heparin",
+        "description": "Medication, Order: Unfractionated Heparin",
+        "standard_category": "medication",
+        "qds_data_type": "medication_order",
+        "code_list_id": "2.16.840.1.113883.3.117.1.7.1.218",
+        "type": "medications",
+        "definition": "medication",
+        "status": "ordered",
+        "hard_status": true,
+        "negation": false,
+        "source_data_criteria": "MedicationOrderUnfractionatedHeparin",
+        "field_values": {
+          "ROUTE": {
+            "type": "CD",
+            "code_list_id": "2.16.840.1.113883.3.117.1.7.1.222",
+            "title": "Intravenous route"
+          }
+        }
+      }
+    },
+    {
+      "OccurrenceAInpatientEncounter2_precondition_59": {
+        "title": "Inpatient Encounter",
+        "description": "Encounter, Performed: Inpatient Encounter",
+        "standard_category": "encounter",
+        "qds_data_type": "encounter",
+        "code_list_id": "2.16.840.1.113883.3.117.1.7.1.23",
+        "type": "encounters",
+        "definition": "encounter",
+        "status": "performed",
+        "hard_status": false,
+        "negation": false,
+        "specific_occurrence": "A",
+        "specific_occurrence_const": "ENCOUNTER_PERFORMED_INPATIENT_ENCOUNTER",
+        "source_data_criteria": "OccurrenceAInpatientEncounter2"
+      }
+    },
+    {
+      "ProcedurePerformedTreatmentAdjustedByProtocol_precondition_37": {
+        "title": "Treatment Adjusted by Protocol",
+        "description": "Procedure, Performed: Treatment Adjusted by Protocol",
+        "standard_category": "procedure",
+        "qds_data_type": "procedure_performed",
+        "code_list_id": "2.16.840.1.113883.3.117.1.7.1.278",
+        "type": "procedures",
+        "definition": "procedure",
+        "status": "performed",
+        "hard_status": false,
+        "negation": false,
+        "source_data_criteria": "ProcedurePerformedTreatmentAdjustedByProtocol",
+        "temporal_references": [
+          {
+            "type": "SAS",
+            "reference": "MedicationOrderUnfractionatedHeparin_precondition_44"
+          },
+          {
+            "type": "SDU",
+            "reference": "OccurrenceAInpatientEncounter2_precondition_59"
+          }
+        ]
+      }
+    },
+    {
+      "ProcedurePerformedClinicalPathwayProtocol_precondition_39": {
+        "title": "Clinical Pathway Protocol",
+        "description": "Procedure, Performed: Clinical Pathway Protocol",
+        "standard_category": "procedure",
+        "qds_data_type": "procedure_performed",
+        "code_list_id": "2.16.840.1.113883.3.117.1.7.1.253",
+        "type": "procedures",
+        "definition": "procedure",
+        "status": "performed",
+        "hard_status": false,
+        "negation": false,
+        "source_data_criteria": "ProcedurePerformedClinicalPathwayProtocol",
+        "temporal_references": [
+          {
+            "type": "SAS",
+            "reference": "MedicationOrderUnfractionatedHeparin_precondition_44"
+          },
+          {
+            "type": "SDU",
+            "reference": "OccurrenceAInpatientEncounter2_precondition_59"
+          }
+        ]
+      }
+    },
+    {
+      "MedicationAdministeredUnfractionatedHeparin_precondition_47": {
+        "title": "Unfractionated Heparin",
+        "description": "Medication, Administered: Unfractionated Heparin",
+        "standard_category": "medication",
+        "qds_data_type": "medication_administered",
+        "code_list_id": "2.16.840.1.113883.3.117.1.7.1.218",
+        "type": "medications",
+        "definition": "medication",
+        "status": "administered",
+        "hard_status": true,
+        "negation": false,
+        "source_data_criteria": "MedicationAdministeredUnfractionatedHeparin",
+        "field_values": {
+          "STOP_DATETIME": {
+            "type": "ANYNonNull"
+          }
+        },
+        "temporal_references": [
+          {
+            "type": "SAS",
+            "reference": "MedicationAdministeredUnfractionatedHeparin_precondition_46",
+            "range": {
+              "type": "IVL_PQ",
+              "high": {
+                "type": "PQ",
+                "unit": "h",
+                "value": "24",
+                "inclusive?": true,
+                "derived?": false
+              }
+            }
+          },
+          {
+            "type": "SDU",
+            "reference": "OccurrenceAInpatientEncounter2_precondition_59"
+          }
+        ]
+      }
+    },
+    {
+      "MedicationAdministeredUnfractionatedHeparin_precondition_46": {
+        "title": "Unfractionated Heparin",
+        "description": "Medication, Administered: Unfractionated Heparin",
+        "standard_category": "medication",
+        "qds_data_type": "medication_administered",
+        "code_list_id": "2.16.840.1.113883.3.117.1.7.1.218",
+        "type": "medications",
+        "definition": "medication",
+        "status": "administered",
+        "hard_status": true,
+        "negation": false,
+        "source_data_criteria": "MedicationAdministeredUnfractionatedHeparin",
+        "field_values": {
+          "START_DATETIME": {
+            "type": "ANYNonNull"
+          }
+        }
+      }
+    },
+    {
+      "ProcedurePerformedTreatmentAdjustedByProtocol_precondition_49": {
+        "title": "Treatment Adjusted by Protocol",
+        "description": "Procedure, Performed: Treatment Adjusted by Protocol",
+        "standard_category": "procedure",
+        "qds_data_type": "procedure_performed",
+        "code_list_id": "2.16.840.1.113883.3.117.1.7.1.278",
+        "type": "procedures",
+        "definition": "procedure",
+        "status": "performed",
+        "hard_status": false,
+        "negation": false,
+        "source_data_criteria": "ProcedurePerformedTreatmentAdjustedByProtocol",
+        "temporal_references": [
+          {
+            "type": "SAS",
+            "reference": "MedicationOrderUnfractionatedHeparin_precondition_54"
+          },
+          {
+            "type": "SDU",
+            "reference": "OccurrenceAInpatientEncounter2_precondition_59"
+          }
+        ]
+      }
+    },
+    {
+      "MedicationOrderUnfractionatedHeparin_precondition_54": {
+        "title": "Unfractionated Heparin",
+        "description": "Medication, Order: Unfractionated Heparin",
+        "standard_category": "medication",
+        "qds_data_type": "medication_order",
+        "code_list_id": "2.16.840.1.113883.3.117.1.7.1.218",
+        "type": "medications",
+        "definition": "medication",
+        "status": "ordered",
+        "hard_status": true,
+        "negation": false,
+        "source_data_criteria": "MedicationOrderUnfractionatedHeparin",
+        "field_values": {
+          "ROUTE": {
+            "type": "CD",
+            "code_list_id": "2.16.840.1.113883.3.117.1.7.1.222",
+            "title": "Intravenous route"
+          }
+        }
+      }
+    },
+    {
+      "ProcedurePerformedClinicalPathwayProtocol_precondition_51": {
+        "title": "Clinical Pathway Protocol",
+        "description": "Procedure, Performed: Clinical Pathway Protocol",
+        "standard_category": "procedure",
+        "qds_data_type": "procedure_performed",
+        "code_list_id": "2.16.840.1.113883.3.117.1.7.1.253",
+        "type": "procedures",
+        "definition": "procedure",
+        "status": "performed",
+        "hard_status": false,
+        "negation": false,
+        "source_data_criteria": "ProcedurePerformedClinicalPathwayProtocol",
+        "temporal_references": [
+          {
+            "type": "SAS",
+            "reference": "MedicationOrderUnfractionatedHeparin_precondition_54"
+          },
+          {
+            "type": "SDU",
+            "reference": "OccurrenceAInpatientEncounter2_precondition_59"
+          }
+        ]
+      }
+    },
+    {
+      "DiagnosticStudyResultVteDiagnosticTest_precondition_62": {
+        "title": "VTE Diagnostic Test",
+        "description": "Diagnostic Study, Result: VTE Diagnostic Test",
+        "standard_category": "diagnostic_study",
+        "qds_data_type": "diagnostic_study_result",
+        "code_list_id": "2.16.840.1.113883.3.117.1.7.1.276",
+        "type": "diagnostic_studies",
+        "definition": "diagnostic_study_result",
+        "hard_status": false,
+        "negation": false,
+        "source_data_criteria": "DiagnosticStudyResultVteDiagnosticTest",
+        "value": {
+          "type": "CD",
+          "code_list_id": "2.16.840.1.113883.3.117.1.7.1.407",
+          "title": "VTE Confirmed"
+        },
+        "temporal_references": [
+          {
+            "type": "SBS",
+            "reference": "OccurrenceAInpatientEncounter2_precondition_67",
+            "range": {
+              "type": "IVL_PQ",
+              "high": {
+                "type": "PQ",
+                "unit": "d",
+                "value": "2",
+                "inclusive?": true,
+                "derived?": false
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "OccurrenceAInpatientEncounter2_precondition_67": {
+        "title": "Inpatient Encounter",
+        "description": "Encounter, Performed: Inpatient Encounter",
+        "standard_category": "encounter",
+        "qds_data_type": "encounter",
+        "code_list_id": "2.16.840.1.113883.3.117.1.7.1.23",
+        "type": "encounters",
+        "definition": "encounter",
+        "status": "performed",
+        "hard_status": false,
+        "negation": false,
+        "specific_occurrence": "A",
+        "specific_occurrence_const": "ENCOUNTER_PERFORMED_INPATIENT_ENCOUNTER",
+        "source_data_criteria": "OccurrenceAInpatientEncounter2"
+      }
+    },
+    {
+      "DiagnosticStudyPerformedVteDiagnosticTest_precondition_64": {
+        "title": "VTE Diagnostic Test",
+        "description": "Diagnostic Study, Performed: VTE Diagnostic Test",
+        "standard_category": "diagnostic_study",
+        "qds_data_type": "diagnostic_study_performed",
+        "code_list_id": "2.16.840.1.113883.3.117.1.7.1.276",
+        "type": "diagnostic_studies",
+        "definition": "diagnostic_study",
+        "status": "performed",
+        "hard_status": false,
+        "negation": false,
+        "source_data_criteria": "DiagnosticStudyPerformedVteDiagnosticTest",
+        "temporal_references": [
+          {
+            "type": "SBS",
+            "reference": "OccurrenceAInpatientEncounter2_precondition_67",
+            "range": {
+              "type": "IVL_PQ",
+              "high": {
+                "type": "PQ",
+                "unit": "d",
+                "value": "2",
+                "inclusive?": true,
+                "derived?": false
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "DiagnosticStudyResultVteDiagnosticTest_precondition_69": {
+        "title": "VTE Diagnostic Test",
+        "description": "Diagnostic Study, Result: VTE Diagnostic Test",
+        "standard_category": "diagnostic_study",
+        "qds_data_type": "diagnostic_study_result",
+        "code_list_id": "2.16.840.1.113883.3.117.1.7.1.276",
+        "type": "diagnostic_studies",
+        "definition": "diagnostic_study_result",
+        "hard_status": false,
+        "negation": false,
+        "source_data_criteria": "DiagnosticStudyResultVteDiagnosticTest",
+        "value": {
+          "type": "CD",
+          "code_list_id": "2.16.840.1.113883.3.117.1.7.1.407",
+          "title": "VTE Confirmed"
+        },
+        "temporal_references": [
+          {
+            "type": "DURING",
+            "reference": "OccurrenceAInpatientEncounter2_precondition_74"
+          }
+        ]
+      }
+    },
+    {
+      "OccurrenceAInpatientEncounter2_precondition_74": {
+        "title": "Inpatient Encounter",
+        "description": "Encounter, Performed: Inpatient Encounter",
+        "standard_category": "encounter",
+        "qds_data_type": "encounter",
+        "code_list_id": "2.16.840.1.113883.3.117.1.7.1.23",
+        "type": "encounters",
+        "definition": "encounter",
+        "status": "performed",
+        "hard_status": false,
+        "negation": false,
+        "specific_occurrence": "A",
+        "specific_occurrence_const": "ENCOUNTER_PERFORMED_INPATIENT_ENCOUNTER",
+        "source_data_criteria": "OccurrenceAInpatientEncounter2"
+      }
+    },
+    {
+      "DiagnosticStudyPerformedVteDiagnosticTest_precondition_71": {
+        "title": "VTE Diagnostic Test",
+        "description": "Diagnostic Study, Performed: VTE Diagnostic Test",
+        "standard_category": "diagnostic_study",
+        "qds_data_type": "diagnostic_study_performed",
+        "code_list_id": "2.16.840.1.113883.3.117.1.7.1.276",
+        "type": "diagnostic_studies",
+        "definition": "diagnostic_study",
+        "status": "performed",
+        "hard_status": false,
+        "negation": false,
+        "source_data_criteria": "DiagnosticStudyPerformedVteDiagnosticTest",
+        "temporal_references": [
+          {
+            "type": "DURING",
+            "reference": "OccurrenceAInpatientEncounter2_precondition_74"
+          }
+        ]
+      }
+    },
+    {
+      "OccurrenceAInpatientEncounter2_precondition_77": {
+        "title": "Inpatient Encounter",
+        "description": "Encounter, Performed: Inpatient Encounter",
+        "standard_category": "encounter",
+        "qds_data_type": "encounter",
+        "code_list_id": "2.16.840.1.113883.3.117.1.7.1.23",
+        "type": "encounters",
+        "definition": "encounter",
+        "status": "performed",
+        "hard_status": false,
+        "negation": false,
+        "specific_occurrence": "A",
+        "specific_occurrence_const": "ENCOUNTER_PERFORMED_INPATIENT_ENCOUNTER",
+        "source_data_criteria": "OccurrenceAInpatientEncounter2",
+        "field_values": {
+          "ADMISSION_DATETIME": {
+            "type": "ANYNonNull"
+          }
+        },
+        "temporal_references": [
+          {
+            "type": "SAE",
+            "reference": "OccurrenceAEmergencyDepartmentVisit1_precondition_76",
+            "range": {
+              "type": "IVL_PQ",
+              "high": {
+                "type": "PQ",
+                "unit": "h",
+                "value": "1",
+                "inclusive?": true,
+                "derived?": false
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "OccurrenceAEmergencyDepartmentVisit1_precondition_76": {
+        "title": "Emergency Department Visit",
+        "description": "Encounter, Performed: Emergency Department Visit",
+        "standard_category": "encounter",
+        "qds_data_type": "encounter",
+        "code_list_id": "2.16.840.1.113883.3.117.1.7.1.293",
+        "type": "encounters",
+        "definition": "encounter",
+        "status": "performed",
+        "hard_status": false,
+        "negation": false,
+        "specific_occurrence": "A",
+        "specific_occurrence_const": "ENCOUNTER_PERFORMED_EMERGENCY_DEPARTMENT_VISIT",
+        "source_data_criteria": "OccurrenceAEmergencyDepartmentVisit1",
+        "field_values": {
+          "FACILITY_LOCATION_DEPARTURE_DATETIME": null
+        }
+      }
+    },
+    {
+      "DiagnosticStudyResultVteDiagnosticTest_precondition_79": {
+        "title": "VTE Diagnostic Test",
+        "description": "Diagnostic Study, Result: VTE Diagnostic Test",
+        "standard_category": "diagnostic_study",
+        "qds_data_type": "diagnostic_study_result",
+        "code_list_id": "2.16.840.1.113883.3.117.1.7.1.276",
+        "type": "diagnostic_studies",
+        "definition": "diagnostic_study_result",
+        "hard_status": false,
+        "negation": false,
+        "source_data_criteria": "DiagnosticStudyResultVteDiagnosticTest",
+        "value": {
+          "type": "CD",
+          "code_list_id": "2.16.840.1.113883.3.117.1.7.1.407",
+          "title": "VTE Confirmed"
+        },
+        "temporal_references": [
+          {
+            "type": "SBS",
+            "reference": "OccurrenceAEmergencyDepartmentVisit1_precondition_84",
+            "range": {
+              "type": "IVL_PQ",
+              "high": {
+                "type": "PQ",
+                "unit": "d",
+                "value": "2",
+                "inclusive?": true,
+                "derived?": false
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "OccurrenceAEmergencyDepartmentVisit1_precondition_84": {
+        "title": "Emergency Department Visit",
+        "description": "Encounter, Performed: Emergency Department Visit",
+        "standard_category": "encounter",
+        "qds_data_type": "encounter",
+        "code_list_id": "2.16.840.1.113883.3.117.1.7.1.293",
+        "type": "encounters",
+        "definition": "encounter",
+        "status": "performed",
+        "hard_status": false,
+        "negation": false,
+        "specific_occurrence": "A",
+        "specific_occurrence_const": "ENCOUNTER_PERFORMED_EMERGENCY_DEPARTMENT_VISIT",
+        "source_data_criteria": "OccurrenceAEmergencyDepartmentVisit1",
+        "field_values": {
+          "FACILITY_LOCATION_ARRIVAL_DATETIME": null
+        }
+      }
+    },
+    {
+      "DiagnosticStudyPerformedVteDiagnosticTest_precondition_81": {
+        "title": "VTE Diagnostic Test",
+        "description": "Diagnostic Study, Performed: VTE Diagnostic Test",
+        "standard_category": "diagnostic_study",
+        "qds_data_type": "diagnostic_study_performed",
+        "code_list_id": "2.16.840.1.113883.3.117.1.7.1.276",
+        "type": "diagnostic_studies",
+        "definition": "diagnostic_study",
+        "status": "performed",
+        "hard_status": false,
+        "negation": false,
+        "source_data_criteria": "DiagnosticStudyPerformedVteDiagnosticTest",
+        "temporal_references": [
+          {
+            "type": "SBS",
+            "reference": "OccurrenceAEmergencyDepartmentVisit1_precondition_84",
+            "range": {
+              "type": "IVL_PQ",
+              "high": {
+                "type": "PQ",
+                "unit": "d",
+                "value": "2",
+                "inclusive?": true,
+                "derived?": false
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "DiagnosticStudyResultVteDiagnosticTest_precondition_86": {
+        "title": "VTE Diagnostic Test",
+        "description": "Diagnostic Study, Result: VTE Diagnostic Test",
+        "standard_category": "diagnostic_study",
+        "qds_data_type": "diagnostic_study_result",
+        "code_list_id": "2.16.840.1.113883.3.117.1.7.1.276",
+        "type": "diagnostic_studies",
+        "definition": "diagnostic_study_result",
+        "hard_status": false,
+        "negation": false,
+        "source_data_criteria": "DiagnosticStudyResultVteDiagnosticTest",
+        "value": {
+          "type": "CD",
+          "code_list_id": "2.16.840.1.113883.3.117.1.7.1.407",
+          "title": "VTE Confirmed"
+        },
+        "temporal_references": [
+          {
+            "type": "DURING",
+            "reference": "OccurrenceAEmergencyDepartmentVisit1_precondition_91"
+          }
+        ]
+      }
+    },
+    {
+      "OccurrenceAEmergencyDepartmentVisit1_precondition_91": {
+        "title": "Emergency Department Visit",
+        "description": "Encounter, Performed: Emergency Department Visit",
+        "standard_category": "encounter",
+        "qds_data_type": "encounter",
+        "code_list_id": "2.16.840.1.113883.3.117.1.7.1.293",
+        "type": "encounters",
+        "definition": "encounter",
+        "status": "performed",
+        "hard_status": false,
+        "negation": false,
+        "specific_occurrence": "A",
+        "specific_occurrence_const": "ENCOUNTER_PERFORMED_EMERGENCY_DEPARTMENT_VISIT",
+        "source_data_criteria": "OccurrenceAEmergencyDepartmentVisit1"
+      }
+    },
+    {
+      "DiagnosticStudyPerformedVteDiagnosticTest_precondition_88": {
+        "title": "VTE Diagnostic Test",
+        "description": "Diagnostic Study, Performed: VTE Diagnostic Test",
+        "standard_category": "diagnostic_study",
+        "qds_data_type": "diagnostic_study_performed",
+        "code_list_id": "2.16.840.1.113883.3.117.1.7.1.276",
+        "type": "diagnostic_studies",
+        "definition": "diagnostic_study",
+        "status": "performed",
+        "hard_status": false,
+        "negation": false,
+        "source_data_criteria": "DiagnosticStudyPerformedVteDiagnosticTest",
+        "temporal_references": [
+          {
+            "type": "DURING",
+            "reference": "OccurrenceAEmergencyDepartmentVisit1_precondition_91"
+          }
+        ]
+      }
+    },
+    {
+      "DiagnosticStudyPerformedVteDiagnosticTest_precondition_93": {
+        "title": "VTE Diagnostic Test",
+        "description": "Diagnostic Study, Performed: VTE Diagnostic Test",
+        "standard_category": "diagnostic_study",
+        "qds_data_type": "diagnostic_study_performed",
+        "code_list_id": "2.16.840.1.113883.3.117.1.7.1.276",
+        "type": "diagnostic_studies",
+        "definition": "diagnostic_study",
+        "status": "performed",
+        "hard_status": false,
+        "negation": false,
+        "source_data_criteria": "DiagnosticStudyPerformedVteDiagnosticTest",
+        "temporal_references": [
+          {
+            "type": "DURING",
+            "reference": "OccurrenceAEmergencyDepartmentVisit1"
+          }
+        ]
+      }
+    },
+    {
+      "OccurrenceAEmergencyDepartmentVisit1": {
+        "title": "Emergency Department Visit",
+        "description": "Encounter, Performed: Emergency Department Visit",
+        "standard_category": "encounter",
+        "qds_data_type": "encounter",
+        "code_list_id": "2.16.840.1.113883.3.117.1.7.1.293",
+        "type": "encounters",
+        "definition": "encounter",
+        "status": "performed",
+        "hard_status": false,
+        "negation": false,
+        "specific_occurrence": "A",
+        "specific_occurrence_const": "ENCOUNTER_PERFORMED_EMERGENCY_DEPARTMENT_VISIT",
+        "source_data_criteria": "OccurrenceAEmergencyDepartmentVisit1"
+      }
+    },
+    {
+      "DiagnosticStudyResultVteDiagnosticTest_precondition_95": {
+        "title": "VTE Diagnostic Test",
+        "description": "Diagnostic Study, Result: VTE Diagnostic Test",
+        "standard_category": "diagnostic_study",
+        "qds_data_type": "diagnostic_study_result",
+        "code_list_id": "2.16.840.1.113883.3.117.1.7.1.276",
+        "type": "diagnostic_studies",
+        "definition": "diagnostic_study_result",
+        "hard_status": false,
+        "negation": false,
+        "source_data_criteria": "DiagnosticStudyResultVteDiagnosticTest",
+        "value": {
+          "type": "CD",
+          "code_list_id": "2.16.840.1.113883.3.117.1.7.1.407",
+          "title": "VTE Confirmed"
+        },
+        "temporal_references": [
+          {
+            "type": "DURING",
+            "reference": "OccurrenceAInpatientEncounter2"
+          }
+        ]
+      }
+    },
+    {
+      "OccurrenceAInpatientEncounter2": {
+        "title": "Inpatient Encounter",
+        "description": "Encounter, Performed: Inpatient Encounter",
+        "standard_category": "encounter",
+        "qds_data_type": "encounter",
+        "code_list_id": "2.16.840.1.113883.3.117.1.7.1.23",
+        "type": "encounters",
+        "definition": "encounter",
+        "status": "performed",
+        "hard_status": false,
+        "negation": false,
+        "specific_occurrence": "A",
+        "specific_occurrence_const": "ENCOUNTER_PERFORMED_INPATIENT_ENCOUNTER",
+        "source_data_criteria": "OccurrenceAInpatientEncounter2"
+      }
+    },
+    {
+      "MedicationAdministeredUnfractionatedHeparin_precondition_105": {
+        "title": "Unfractionated Heparin",
+        "description": "Medication, Administered: Unfractionated Heparin",
+        "standard_category": "medication",
+        "qds_data_type": "medication_administered",
+        "code_list_id": "2.16.840.1.113883.3.117.1.7.1.218",
+        "type": "medications",
+        "definition": "medication",
+        "status": "administered",
+        "hard_status": true,
+        "negation": false,
+        "source_data_criteria": "MedicationAdministeredUnfractionatedHeparin",
+        "field_values": {
+          "ROUTE": {
+            "type": "CD",
+            "code_list_id": "2.16.840.1.113883.3.117.1.7.1.222",
+            "title": "Intravenous route"
+          }
+        },
+        "temporal_references": [
+          {
+            "type": "DURING",
+            "reference": "OccurrenceAInpatientEncounter2"
+          }
+        ]
+      }
+    },
+    {
+      "OccurrenceAInpatientEncounter2_precondition_108": {
+        "title": "Inpatient Encounter",
+        "description": "Encounter, Performed: Inpatient Encounter",
+        "standard_category": "encounter",
+        "qds_data_type": "encounter",
+        "code_list_id": "2.16.840.1.113883.3.117.1.7.1.23",
+        "type": "encounters",
+        "definition": "encounter",
+        "status": "performed",
+        "hard_status": false,
+        "negation": false,
+        "specific_occurrence": "A",
+        "specific_occurrence_const": "ENCOUNTER_PERFORMED_INPATIENT_ENCOUNTER",
+        "source_data_criteria": "OccurrenceAInpatientEncounter2",
+        "field_values": {
+          "ADMISSION_DATETIME": {
+            "type": "ANYNonNull"
+          }
+        },
+        "temporal_references": [
+          {
+            "type": "SAE",
+            "reference": "OccurrenceAEmergencyDepartmentVisit1_precondition_107",
+            "range": {
+              "type": "IVL_PQ",
+              "high": {
+                "type": "PQ",
+                "unit": "h",
+                "value": "1",
+                "inclusive?": true,
+                "derived?": false
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "OccurrenceAEmergencyDepartmentVisit1_precondition_107": {
+        "title": "Emergency Department Visit",
+        "description": "Encounter, Performed: Emergency Department Visit",
+        "standard_category": "encounter",
+        "qds_data_type": "encounter",
+        "code_list_id": "2.16.840.1.113883.3.117.1.7.1.293",
+        "type": "encounters",
+        "definition": "encounter",
+        "status": "performed",
+        "hard_status": false,
+        "negation": false,
+        "specific_occurrence": "A",
+        "specific_occurrence_const": "ENCOUNTER_PERFORMED_EMERGENCY_DEPARTMENT_VISIT",
+        "source_data_criteria": "OccurrenceAEmergencyDepartmentVisit1",
+        "field_values": {
+          "FACILITY_LOCATION_DEPARTURE_DATETIME": null
+        }
+      }
+    },
+    {
+      "MedicationAdministeredUnfractionatedHeparin_precondition_110": {
+        "title": "Unfractionated Heparin",
+        "description": "Medication, Administered: Unfractionated Heparin",
+        "standard_category": "medication",
+        "qds_data_type": "medication_administered",
+        "code_list_id": "2.16.840.1.113883.3.117.1.7.1.218",
+        "type": "medications",
+        "definition": "medication",
+        "status": "administered",
+        "hard_status": true,
+        "negation": false,
+        "source_data_criteria": "MedicationAdministeredUnfractionatedHeparin",
+        "field_values": {
+          "ROUTE": {
+            "type": "CD",
+            "code_list_id": "2.16.840.1.113883.3.117.1.7.1.222",
+            "title": "Intravenous route"
+          }
+        },
+        "temporal_references": [
+          {
+            "type": "SDU",
+            "reference": "OccurrenceAEmergencyDepartmentVisit1"
+          }
+        ]
+      }
+    },
+    {
+      "PatientCharacteristicBirthdateBirthDate_precondition_117": {
+        "title": "birth date",
+        "description": "Patient Characteristic Birthdate: birth date",
+        "standard_category": "individual_characteristic",
+        "qds_data_type": "individual_characteristic",
+        "code_list_id": "2.16.840.1.113883.3.560.100.4",
+        "property": "birthtime",
+        "type": "characteristic",
+        "definition": "patient_characteristic_birthdate",
+        "hard_status": false,
+        "negation": false,
+        "source_data_criteria": "PatientCharacteristicBirthdateBirthDate",
+        "inline_code_list": {
+          "LOINC": [
+            "21112-8"
+          ]
+        },
+        "temporal_references": [
+          {
+            "type": "SBS",
+            "reference": "OccurrenceAInpatientEncounter2",
+            "range": {
+              "type": "IVL_PQ",
+              "low": {
+                "type": "PQ",
+                "unit": "a",
+                "value": "18",
+                "inclusive?": true,
+                "derived?": false
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "OccurrenceAInpatientEncounter2_precondition_119": {
+        "title": "Inpatient Encounter",
+        "description": "Encounter, Performed: Inpatient Encounter",
+        "standard_category": "encounter",
+        "qds_data_type": "encounter",
+        "code_list_id": "2.16.840.1.113883.3.117.1.7.1.23",
+        "type": "encounters",
+        "definition": "encounter",
+        "status": "performed",
+        "hard_status": false,
+        "negation": false,
+        "specific_occurrence": "A",
+        "specific_occurrence_const": "ENCOUNTER_PERFORMED_INPATIENT_ENCOUNTER",
+        "source_data_criteria": "OccurrenceAInpatientEncounter2",
+        "field_values": {
+          "LENGTH_OF_STAY": {
+            "type": "IVL_PQ",
+            "high": {
+              "type": "PQ",
+              "unit": "d",
+              "value": "120",
+              "inclusive?": true,
+              "derived?": false
+            }
+          }
+        }
+      }
+    },
+    {
+      "OccurrenceAInpatientEncounter2_precondition_121": {
+        "title": "Inpatient Encounter",
+        "description": "Encounter, Performed: Inpatient Encounter",
+        "standard_category": "encounter",
+        "qds_data_type": "encounter",
+        "code_list_id": "2.16.840.1.113883.3.117.1.7.1.23",
+        "type": "encounters",
+        "definition": "encounter",
+        "status": "performed",
+        "hard_status": false,
+        "negation": false,
+        "specific_occurrence": "A",
+        "specific_occurrence_const": "ENCOUNTER_PERFORMED_INPATIENT_ENCOUNTER",
+        "source_data_criteria": "OccurrenceAInpatientEncounter2",
+        "field_values": {
+          "DISCHARGE_DATETIME": {
+            "type": "ANYNonNull"
+          }
+        },
+        "temporal_references": [
+          {
+            "type": "DURING",
+            "reference": "MeasurePeriod"
+          }
+        ]
+      }
+    },
+    {
+      "OccurrenceAInpatientEncounter2_precondition_124": {
+        "title": "Inpatient Encounter",
+        "description": "Encounter, Performed: Inpatient Encounter",
+        "standard_category": "encounter",
+        "qds_data_type": "encounter",
+        "code_list_id": "2.16.840.1.113883.3.117.1.7.1.23",
+        "type": "encounters",
+        "definition": "encounter",
+        "status": "performed",
+        "hard_status": false,
+        "negation": false,
+        "specific_occurrence": "A",
+        "specific_occurrence_const": "ENCOUNTER_PERFORMED_INPATIENT_ENCOUNTER",
+        "source_data_criteria": "OccurrenceAInpatientEncounter2",
+        "field_values": {
+          "ADMISSION_DATETIME": {
+            "type": "ANYNonNull"
+          }
+        },
+        "temporal_references": [
+          {
+            "type": "SAE",
+            "reference": "OccurrenceAEmergencyDepartmentVisit1_precondition_123",
+            "range": {
+              "type": "IVL_PQ",
+              "high": {
+                "type": "PQ",
+                "unit": "h",
+                "value": "1",
+                "inclusive?": true,
+                "derived?": false
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "OccurrenceAEmergencyDepartmentVisit1_precondition_123": {
+        "title": "Emergency Department Visit",
+        "description": "Encounter, Performed: Emergency Department Visit",
+        "standard_category": "encounter",
+        "qds_data_type": "encounter",
+        "code_list_id": "2.16.840.1.113883.3.117.1.7.1.293",
+        "type": "encounters",
+        "definition": "encounter",
+        "status": "performed",
+        "hard_status": false,
+        "negation": false,
+        "specific_occurrence": "A",
+        "specific_occurrence_const": "ENCOUNTER_PERFORMED_EMERGENCY_DEPARTMENT_VISIT",
+        "source_data_criteria": "OccurrenceAEmergencyDepartmentVisit1",
+        "field_values": {
+          "FACILITY_LOCATION_DEPARTURE_DATETIME": null
+        }
+      }
+    },
+    {
+      "DiagnosisActiveVenousThromboembolism_precondition_126": {
+        "title": "Venous Thromboembolism",
+        "description": "Diagnosis, Active: Venous Thromboembolism",
+        "standard_category": "diagnosis_condition_problem",
+        "qds_data_type": "diagnosis_active",
+        "code_list_id": "2.16.840.1.113883.3.117.1.7.1.279",
+        "type": "conditions",
+        "definition": "diagnosis",
+        "status": "active",
+        "hard_status": false,
+        "negation": false,
+        "source_data_criteria": "DiagnosisActiveVenousThromboembolism",
+        "temporal_references": [
+          {
+            "type": "SDU",
+            "reference": "OccurrenceAEmergencyDepartmentVisit1_precondition_131"
+          }
+        ]
+      }
+    },
+    {
+      "OccurrenceAEmergencyDepartmentVisit1_precondition_131": {
+        "title": "Emergency Department Visit",
+        "description": "Encounter, Performed: Emergency Department Visit",
+        "standard_category": "encounter",
+        "qds_data_type": "encounter",
+        "code_list_id": "2.16.840.1.113883.3.117.1.7.1.293",
+        "type": "encounters",
+        "definition": "encounter",
+        "status": "performed",
+        "hard_status": false,
+        "negation": false,
+        "specific_occurrence": "A",
+        "specific_occurrence_const": "ENCOUNTER_PERFORMED_EMERGENCY_DEPARTMENT_VISIT",
+        "source_data_criteria": "OccurrenceAEmergencyDepartmentVisit1"
+      }
+    },
+    {
+      "DiagnosisActiveObstetricsVte_precondition_128": {
+        "title": "Obstetrics VTE",
+        "description": "Diagnosis, Active: Obstetrics VTE",
+        "standard_category": "diagnosis_condition_problem",
+        "qds_data_type": "diagnosis_active",
+        "code_list_id": "2.16.840.1.113883.3.117.1.7.1.264",
+        "type": "conditions",
+        "definition": "diagnosis",
+        "status": "active",
+        "hard_status": false,
+        "negation": false,
+        "source_data_criteria": "DiagnosisActiveObstetricsVte",
+        "temporal_references": [
+          {
+            "type": "SDU",
+            "reference": "OccurrenceAEmergencyDepartmentVisit1_precondition_131"
+          }
+        ]
+      }
+    },
+    {
+      "DiagnosisActiveVenousThromboembolism_precondition_135": {
+        "title": "Venous Thromboembolism",
+        "description": "Diagnosis, Active: Venous Thromboembolism",
+        "standard_category": "diagnosis_condition_problem",
+        "qds_data_type": "diagnosis_active",
+        "code_list_id": "2.16.840.1.113883.3.117.1.7.1.279",
+        "type": "conditions",
+        "definition": "diagnosis",
+        "status": "active",
+        "hard_status": false,
+        "negation": false,
+        "source_data_criteria": "DiagnosisActiveVenousThromboembolism",
+        "temporal_references": [
+          {
+            "type": "SDU",
+            "reference": "OccurrenceAInpatientEncounter2_precondition_140"
+          }
+        ]
+      }
+    },
+    {
+      "OccurrenceAInpatientEncounter2_precondition_140": {
+        "title": "Inpatient Encounter",
+        "description": "Encounter, Performed: Inpatient Encounter",
+        "standard_category": "encounter",
+        "qds_data_type": "encounter",
+        "code_list_id": "2.16.840.1.113883.3.117.1.7.1.23",
+        "type": "encounters",
+        "definition": "encounter",
+        "status": "performed",
+        "hard_status": false,
+        "negation": false,
+        "specific_occurrence": "A",
+        "specific_occurrence_const": "ENCOUNTER_PERFORMED_INPATIENT_ENCOUNTER",
+        "source_data_criteria": "OccurrenceAInpatientEncounter2"
+      }
+    },
+    {
+      "DiagnosisActiveObstetricsVte_precondition_137": {
+        "title": "Obstetrics VTE",
+        "description": "Diagnosis, Active: Obstetrics VTE",
+        "standard_category": "diagnosis_condition_problem",
+        "qds_data_type": "diagnosis_active",
+        "code_list_id": "2.16.840.1.113883.3.117.1.7.1.264",
+        "type": "conditions",
+        "definition": "diagnosis",
+        "status": "active",
+        "hard_status": false,
+        "negation": false,
+        "source_data_criteria": "DiagnosisActiveObstetricsVte",
+        "temporal_references": [
+          {
+            "type": "SDU",
+            "reference": "OccurrenceAInpatientEncounter2_precondition_140"
+          }
+        ]
+      }
+    }
+  ],
+  "oids": [
+    "2.16.840.1.113883.3.560.100.4",
+    "2.16.840.1.113883.3.526.2.1076",
+    "2.16.840.1.113883.3.117.1.7.1.87",
+    "2.16.840.1.113883.3.117.1.7.1.276",
+    "2.16.840.1.113883.3.117.1.7.1.407",
+    "2.16.840.1.113883.3.117.1.7.1.309",
+    "2.16.840.1.113883.3.117.1.7.1.308",
+    "2.16.840.1.113883.3.117.1.7.1.293",
+    "2.16.840.1.113883.3.117.1.7.1.279",
+    "2.16.840.1.113883.3.117.1.7.1.278",
+    "2.16.840.1.113883.3.117.1.7.1.267",
+    "2.16.840.1.113883.3.117.1.7.1.264",
+    "2.16.840.1.113883.3.117.1.7.1.253",
+    "2.16.840.1.113883.3.117.1.7.1.23",
+    "2.16.840.1.113883.3.117.1.7.1.222",
+    "2.16.840.1.113883.3.117.1.7.1.218",
+    "2.16.840.1.113883.3.117.1.7.1.209",
+    "2.16.840.1.113883.3.117.1.7.1.207"
+  ],
+  "population_ids": {
+    "IPP": "AB659695-8E62-478A-9ED5-14B14030F303",
+    "DENOM": "304329A5-E739-4181-84A8-674462CC1763",
+    "NUMER": "21BC7578-1BDC-4790-B954-C9A97316320E",
+    "DENEX": "BE16EF90-BCEE-4407-8740-46BAC172EF29"
+  }
+}

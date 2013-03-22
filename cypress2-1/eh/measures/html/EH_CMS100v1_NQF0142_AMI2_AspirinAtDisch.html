@@ -1,0 +1,564 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:n1="urn:hl7-org:v3">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   
+      <title>Aspirin Prescribed at Discharge</title><style type="text/css">
+body {
+	color: rgb(26, 26, 26);
+	background-color: rgb(255,255,255);
+	font-family: Verdana, Tahoma, sans-serif;
+	font-size: 11px;
+}
+
+a {
+	color: rgb(0, 0, 255);
+	background-color: rgb(255,255,255);
+}
+
+h1 {
+	font-size: 12pt;
+	font-weight: bold;
+}
+
+h2 {
+	font-size: 11pt;
+	font-weight: bold;
+}
+
+h3 {
+	font-size: 10pt;
+	font-weight: bold;
+}
+
+h4 {
+	font-size: 8pt;
+	font-weight: bold;
+}
+
+div {
+	width: 80%;
+}
+
+table {
+	line-height: 10pt;
+	width: 80%;
+}
+
+tr {
+	background-color: rgb(224,224,224);
+}
+
+td {
+	padding: 0.1cm 0.2cm;
+	vertical-align: top;
+}
+
+.h1center {
+	font-size: 12pt;
+	font-weight: bold;
+	text-align: center;
+	width: 80%;
+}
+
+.header_table{
+	border: 1pt inset rgb(0,0,0);
+}
+
+.narr_table {
+	width: 100%;
+}
+
+.narr_tr {
+	background-color: rgb(225,225,225);
+}
+pre {
+ overflow: auto; /* Use horizontal scroller if needed; for Firefox 2, not needed in Firefox 3 */
+ white-space: pre-wrap; /* css-3 */
+ white-space: -moz-pre-wrap !important; /* Mozilla, since 1999 */
+ white-space: -pre-wrap; /* Opera 4-6 */
+ white-space: -o-pre-wrap; /* Opera 7 */
+ word-wrap: break-word; /* Internet Explorer 5.5+ */
+ font-family: Verdana, Tahoma, sans-serif;
+ font-size: 11px;
+ text-align:left;
+ margin: 0px 0px 0px 0px;
+ padding:0px 0px 0px 0px;
+}
+.narr_th {
+	background-color: rgb(201,201,201);
+}
+
+.td_label{
+	font-weight: bold;
+	color: white;
+}
+	</style></head>
+   <body>
+      <table class="header_table">
+         <tbody>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">eMeasure Title</span></td>
+               <td width="80%" colspan="3">Aspirin Prescribed at Discharge</td>
+            </tr>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">eMeasure Identifier<br>(Measure Authoring Tool)</span></td>
+               <td width="30%">100</td>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">eMeasure Version number</span></td>
+               <td width="30%">1</td>
+            </tr>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">NQF Number</span></td>
+               <td width="30%">0142</td>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">GUID</span></td>
+               <td> bb481284-30dd-4383-928c-82385bbf1b17</td>
+            </tr>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">Measurement Period</span></td>
+               <td width="80%" colspan="3">January 1, 20xx  through December 31, 20xx </td>
+            </tr>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">Measure Steward</span></td>
+               <td width="80%" colspan="3">Oklahoma Foundation for Medical Quality</td>
+            </tr>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">Measure Developer</span></td>
+               <td width="80%" colspan="3">Oklahoma Foundation for Medical Quality</td>
+            </tr>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">Endorsed By</span></td>
+               <td width="80%" colspan="3">National Quality Forum</td>
+            </tr>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">Description</span></td>
+               <td width="80%" colspan="3">
+                  <div style="width:660px;overflow-x:hidden;overflow-y:auto"><pre>Acute myocardial infarction (AMI) patients who are prescribed aspirin at hospital discharge</pre></div>
+               </td>
+            </tr>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">Copyright</span></td>
+               <td width="80%" colspan="3">
+                  <div style="width:660px;overflow-x:hidden;overflow-y:auto"><pre>Measure specifications are in the Public Domain.
+
+LOINC (R) is a registered trademark of the Regenstrief Institute.
+
+This material contains SNOMED Clinical Terms (R) (SNOMED CT(c)) copyright 2004-2010 International Health Terminology Standards Development Organization. All rights reserved.</pre></div>
+               </td>
+            </tr>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">Disclaimer</span></td>
+               <td width="80%" colspan="3">
+                  <div style="width:660px;overflow-x:hidden;overflow-y:auto"><pre>None</pre></div>
+               </td>
+            </tr>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">Measure Scoring</span></td>
+               <td width="80%" colspan="3">Proportion</td>
+            </tr>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">Measure Type</span></td>
+               <td width="80%" colspan="3">Process</td>
+            </tr>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">Stratification</span></td>
+               <td width="80%" colspan="3">
+                  <div style="width:660px;overflow-x:hidden;overflow-y:auto"><pre>None</pre></div>
+               </td>
+            </tr>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">Risk Adjustment</span></td>
+               <td width="80%" colspan="3">
+                  <div style="width:660px;overflow-x:hidden;overflow-y:auto"><pre>None</pre></div>
+               </td>
+            </tr>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">Rate Aggregation</span></td>
+               <td width="80%" colspan="3">
+                  <div style="width:660px;overflow-x:hidden;overflow-y:auto"><pre>None</pre></div>
+               </td>
+            </tr>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">Rationale</span></td>
+               <td width="80%" colspan="3">
+                  <div style="width:660px;overflow-x:hidden;overflow-y:auto"><pre>Aspirin therapy in patients who have suffered an acute myocardial infarction reduces the risk of adverse events and mortality. Studies have demonstrated that aspirin can reduce this risk by 20% (Antiplatelet Trialists' Collaboration, 1994). National guidelines strongly recommend long-term aspirin for the secondary prevention of subsequent cardiovascular events in eligible older patients discharged after AMI (Antman, 2004; Antman, 2008; Anderson, 2007; and Smith, 2006).</pre></div>
+               </td>
+            </tr>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">Clinical Recommendation Statement</span></td>
+               <td width="80%" colspan="3">
+                  <div style="width:660px;overflow-x:hidden;overflow-y:auto"><pre>National guidelines strongly recommend long-term aspirin for the secondary prevention of subsequent cardiovascular events in eligible older patients discharged after AMI</pre></div>
+               </td>
+            </tr>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">Improvement Notation</span></td>
+               <td width="80%" colspan="3">
+                  <div style="width:660px;overflow-x:hidden;overflow-y:auto"><pre>Higher score indicates better quality</pre></div>
+               </td>
+            </tr>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">Reference</span></td>
+               <td width="80%" colspan="3">
+                  <div style="width:660px;overflow-x:hidden;overflow-y:auto"><pre>Anderson JL, Adams CD, Antman EM, Bridges CR, Califf RM, Casey DE Jr, et al. ACC/AHA 2007 guidelines for the management of patients with unstable angina/non&#8211;ST-elevation myocardial infarction: a report of the American College of Cardiology/American Heart Association Task Force on Practice Guidelines (Writing Committee to Revise the 2002 Guidelines for the Management of Patients With Unstable Angina/Non&#8211;ST-Elevation Myocardial Infarction): developed in collaboration with the American College of Emergency Physicians, American College of Physicians, Society for Academic Emergency Medicine, Society for Cardiovascular Angiography and Interventions, and Society of Thoracic Surgeons. J Am Coll Cardiol. 2007;50:e1&#8211;157.</pre></div>
+               </td>
+            </tr>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">Reference</span></td>
+               <td width="80%" colspan="3">
+                  <div style="width:660px;overflow-x:hidden;overflow-y:auto"><pre>Antiplatelet Trialists' Collaboration. Collaborative overview of randomized trials of antiplatelet therapy - I: prevention of death, myocardial infarction, and stroke by prolonged antiplatelet therapy in various categories of patients. BMJ. 1994;308:81-106.</pre></div>
+               </td>
+            </tr>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">Reference</span></td>
+               <td width="80%" colspan="3">
+                  <div style="width:660px;overflow-x:hidden;overflow-y:auto"><pre>Antman EM, Anbe DT, Armstrong PW, Bates ER, Green LA, Hand M, et al. ACC/AHA guidelines for the management of patients with ST-elevation myocardial infarction: a report of the American College of Cardiology/American Heart Association Task Force on Practice Guidelines (Committee to Revise the 1999 Guidelines for the Management of Patients With Acute Myocardial Infarction). 2004.</pre></div>
+               </td>
+            </tr>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">Reference</span></td>
+               <td width="80%" colspan="3">
+                  <div style="width:660px;overflow-x:hidden;overflow-y:auto"><pre>Antman EM, Hand M, Armstrong PW, Bates ER, Green LA, Halasyamani LK, et al. 2007 focused update of the ACC/AHA 2004 Guidelines for the Management of Patients With ST-Elevation Myocardial Infarction: a report of the American College of Cardiology/American Heart Association Task Force on Practice Guidelines (Writing Group to Review New Evidence and Update the ACC/AHA 2004 Guidelines for the Management of Patients With ST-Elevation Myocardial Infarction). J Am Coll Cardiol. 2008;51:210&#8211;47.</pre></div>
+               </td>
+            </tr>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">Reference</span></td>
+               <td width="80%" colspan="3">
+                  <div style="width:660px;overflow-x:hidden;overflow-y:auto"><pre>Krumholz HM, Anderson JL, Bachelder BL, Fesmire FM, Fihn SD, Foody JM, et al. ACC/AHA 2008 performance measures for adults with ST-elevation and non&#8211;ST-elevation myocardial infarction: a report of the American College of Cardiology/American Heart Association Task Force on Performance Measures (Writing Committee to Develop Performance Measures for ST-Elevation and Non&#8211;ST-Elevation Myocardial Infarction). J Am Coll Cardiol. 2008;52:2046 &#8211;99.</pre></div>
+               </td>
+            </tr>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">Reference</span></td>
+               <td width="80%" colspan="3">
+                  <div style="width:660px;overflow-x:hidden;overflow-y:auto"><pre>Smith SC, Allen J, Blair SN, Bonow RO, Brass LM, Fonarow GC, et al. AHA/ACC guidelines for secondary prevention for patients with coronary and other atherosclerotic vascular disease: 2006 update. J Am Coll Cardiol. 2006;47:2130 &#8211;9. doi:10.1016/j.jacc.2006.04.026.</pre></div>
+               </td>
+            </tr>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">Definition</span></td>
+               <td width="80%" colspan="3">
+                  <div style="width:660px;overflow-x:hidden;overflow-y:auto"><pre>None</pre></div>
+               </td>
+            </tr>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">Guidance</span></td>
+               <td width="80%" colspan="3">
+                  <div style="width:660px;overflow-x:hidden;overflow-y:auto"><pre>The measurement period is one calendar year but the reporting period is 3 months as a calendar quarter; Q1 = Jan &#8211; Mar, Q2 = Apr &#8211; Jun, Q3 = Jul &#8211; Sep, Q4 is Oct &#8211; Dec.
+
+Patients for whom there are missing or inaccurate data (e.g., arrival time, medication administration, etc.) are considered to have failed the measure; the total number of patients with missing or erroneous (e.g., a time of 03:69 or a date of 10/26/2035) data (i.e., measure failures) must be reported with the results of the measure.
+
+Exclusion element guidance: 
+The exclusion for patients who are clinical trial participants is limited to patients participating in a clinical trial for acute myocardial infarction (AMI), ST elevation myocardial infarction (STEMI), non-ST elevation myocardial infarction (non-STEMI), heart attack, or acute coronary syndrome (ACS), the same conditions as covered by the measure. Other clinical trials are not valid reasons for exclusions.</pre></div>
+               </td>
+            </tr>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">Transmission Format</span></td>
+               <td width="80%" colspan="3">
+                  <div style="width:660px;overflow-x:hidden;overflow-y:auto"><pre>None</pre></div>
+               </td>
+            </tr>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">Initial Patient Population</span></td>
+               <td width="80%" colspan="3">
+                  <div style="width:660px;overflow-x:hidden;overflow-y:auto"><pre>All hospital discharges for acute myocardial infarction (AMI) with hospital stays &lt;= 120 days during the measurement year for patients age 18 and older at the time of hospital admission</pre></div>
+               </td>
+            </tr>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">Denominator</span></td>
+               <td width="80%" colspan="3">
+                  <div style="width:660px;overflow-x:hidden;overflow-y:auto"><pre>All Acute Myocardial Infarctions patients age 18 and older with an ICD-9-CM Principal Diagnosis Code for Acute Myocardial Infarction</pre></div>
+               </td>
+            </tr>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">Denominator Exclusions</span></td>
+               <td width="80%" colspan="3">
+                  <div style="width:660px;overflow-x:hidden;overflow-y:auto"><pre>Patients with Comfort Measures Only documented. 
+Patients enrolled in clinical trials.
+Patients discharged to another hospital. 
+Patients who left against medical advice. 
+Patients who expired.
+Patients discharged to home for hospice care.
+Patients discharged to a health care facility for hospice care.
+Patients with a documented Reason for No Aspirin at Discharge</pre></div>
+               </td>
+            </tr>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">Numerator</span></td>
+               <td width="80%" colspan="3">
+                  <div style="width:660px;overflow-x:hidden;overflow-y:auto"><pre>Acute Myocardial Infarction patients who are prescribed aspirin at hospital discharge.</pre></div>
+               </td>
+            </tr>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">Numerator Exclusions</span></td>
+               <td width="80%" colspan="3">
+                  <div style="width:660px;overflow-x:hidden;overflow-y:auto"><pre>None</pre></div>
+               </td>
+            </tr>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">Denominator Exceptions</span></td>
+               <td width="80%" colspan="3">
+                  <div style="width:660px;overflow-x:hidden;overflow-y:auto"><pre>None</pre></div>
+               </td>
+            </tr>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">Measure Population</span></td>
+               <td width="80%" colspan="3">
+                  <div style="width:660px;overflow-x:hidden;overflow-y:auto"><pre>Not applicable</pre></div>
+               </td>
+            </tr>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">Measure Observations</span></td>
+               <td width="80%" colspan="3">
+                  <div style="width:660px;overflow-x:hidden;overflow-y:auto"><pre>Not applicable</pre></div>
+               </td>
+            </tr>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">Supplemental Data Elements</span></td>
+               <td width="80%" colspan="3">
+                  <div style="width:660px;overflow-x:hidden;overflow-y:auto"><pre>For every patient evaluated by this measure also identify payer, race, ethnicity, and sex.</pre></div>
+               </td>
+            </tr>
+         </tbody>
+      </table>
+      <h2><a name="toc">Table of Contents</a></h2>
+      <ul>
+         <li><a href="#d21003472e519">Population criteria</a></li>
+         <li><a href="#d21003472e2003">Data criteria (QDM Data Elements)</a></li>
+         <li><a href="#d21003472e2798">Reporting Stratification</a></li>
+         <li><a href="#d21003472e2819">Supplemental Data Elements</a></li>
+      </ul>
+      <hr align="left" color="teal" size="2" width="80%">
+      <h3><a name="d21003472e519" href="#toc">Population criteria</a></h3>
+      <div>
+         
+         <ul>
+            <li>
+               <b>Initial Patient Population =</b>
+               
+               <ul>
+                  <li>AND: "Diagnosis, Active: Hospital Measures - AMI (ordinality: 'Hospital Measures - Principal')" starts during "Occurrence
+                     A of Encounter, Performed: Hospital Measures-Encounter Inpatient"
+                  </li>
+                  <li>AND: "Patient Characteristic Birthdate: birth date"  &gt;= 18 year(s) starts before start of "Occurrence A of Encounter, Performed:
+                     Hospital Measures-Encounter Inpatient (admission datetime)"
+                  </li>
+                  <li>AND: "Occurrence A of Encounter, Performed: Hospital Measures-Encounter Inpatient (length of stay &lt;= 120 day(s))"</li>
+                  <li>AND: "Occurrence A of Encounter, Performed: Hospital Measures-Encounter Inpatient (discharge datetime)" during "Measurement
+                     Period"
+                  </li>
+               </ul>
+               
+            </li>
+            <li>
+               <b>Denominator =</b>
+               
+               <ul>
+                  <li>AND: "Initial Patient Population"</li>
+               </ul>
+               
+            </li>
+            <li>
+               <b>Denominator Exclusions =</b>
+               
+               <ul>
+                  <li>AND: 
+                     <ul>
+                        <li>OR: "Intervention, Performed: Hospital Measures - Comfort Measures Only Intervention" starts during "Occurrence A of Encounter,
+                           Performed: Hospital Measures-Encounter Inpatient"
+                        </li>
+                        <li>OR: "Medication, Adverse Effects: Hospital Measures-Aspirin" starts before or during "Occurrence A of Encounter, Performed:
+                           Hospital Measures-Encounter Inpatient"
+                        </li>
+                        <li>OR: "Transfer To: Hospital Measures - Home Hospice Care"  &lt; 1 day(s) starts after end of "Occurrence A of Encounter, Performed:
+                           Hospital Measures-Encounter Inpatient"
+                        </li>
+                        <li>OR: "Transfer To: Hospital Measures - Inpatient Hospice Care"  &lt; 1 day(s) starts after end of "Occurrence A of Encounter,
+                           Performed: Hospital Measures-Encounter Inpatient"
+                        </li>
+                        <li>OR: "Occurrence A of Encounter, Performed: Hospital Measures-Encounter Inpatient (discharge status: 'Left Against Medical
+                           Advice')"
+                        </li>
+                        <li>OR: "Occurrence A of Encounter, Performed: Hospital Measures-Encounter Inpatient (discharge status: 'Hospital Measures - Expired')"</li>
+                        <li>OR: "Medication, Order: Hospital Measures-Aspirin (reason: 'Hospital Measures - Discontinue')" during "Occurrence A of Encounter,
+                           Performed: Hospital Measures-Encounter Inpatient"
+                        </li>
+                        <li>OR: "Medication, Active not done: Medical Reason" for "Hospital Measures-Aspirin RxNorm Value Set" during "Occurrence A of
+                           Encounter, Performed: Hospital Measures-Encounter Inpatient (discharge datetime)"
+                        </li>
+                        <li>OR: "Medication, Order not done: Medical Reason" for "Hospital Measures-Aspirin RxNorm Value Set" during "Occurrence A of
+                           Encounter, Performed: Hospital Measures-Encounter Inpatient (discharge datetime)"
+                        </li>
+                        <li>OR: "Medication, Active not done: Patient Reason" for "Hospital Measures-Aspirin RxNorm Value Set" during "Occurrence A of
+                           Encounter, Performed: Hospital Measures-Encounter Inpatient (discharge datetime)"
+                        </li>
+                        <li>OR: "Medication, Order not done: Patient Reason" for "Hospital Measures-Aspirin RxNorm Value Set" during "Occurrence A of
+                           Encounter, Performed: Hospital Measures-Encounter Inpatient (discharge datetime)"
+                        </li>
+                        <li>OR: "Medication, Discharge: Hospital Measures - Warfarin Anticoagulants" during "Occurrence A of Encounter, Performed: Hospital
+                           Measures-Encounter Inpatient"
+                        </li>
+                        <li>OR: "Medication, Order: Hospital Measures-Aspirin (reason: 'Hospital Measures - Hold')" during "Occurrence A of Encounter,
+                           Performed: Hospital Measures-Encounter Inpatient"
+                        </li>
+                        <li>OR: "Medication, Allergy: Hospital Measures-Aspirin" starts before or during "Occurrence A of Encounter, Performed: Hospital
+                           Measures-Encounter Inpatient"
+                        </li>
+                        <li>OR: "Medication, Intolerance: Hospital Measures-Aspirin" starts before or during "Occurrence A of Encounter, Performed: Hospital
+                           Measures-Encounter Inpatient"
+                        </li>
+                        <li>OR: "Occurrence A of Encounter, Performed: Hospital Measures-Encounter Inpatient (discharge status: 'Discharge To Another
+                           Hospital')"
+                        </li>
+                        <li>OR: 
+                           <ul>
+                              <li>AND NOT: "Occurrence A of Patient Characteristic: Clinical Trial Participant" ends before start of "Occurrence A of Encounter,
+                                 Performed: Hospital Measures-Encounter Inpatient"
+                              </li>
+                              <li>AND: "Occurrence A of Patient Characteristic: Clinical Trial Participant" starts before or during "Occurrence A of Encounter,
+                                 Performed: Hospital Measures-Encounter Inpatient"
+                              </li>
+                           </ul>
+                           
+                        </li>
+                     </ul>
+                     
+                  </li>
+               </ul>
+               
+            </li>
+            <li>
+               <b>Numerator =</b>
+               
+               <ul>
+                  <li>AND: "Medication, Discharge: Hospital Measures-Aspirin" during "Occurrence A of Encounter, Performed: Hospital Measures-Encounter
+                     Inpatient"
+                  </li>
+               </ul>
+               
+            </li>
+            <li>
+               <b>Denominator Exceptions =</b>
+               
+               <ul>
+                  <li>None</li>
+               </ul>
+               
+            </li>
+         </ul>
+         
+      </div>
+      <h3><a name="d21003472e2003" href="#toc">Data criteria (QDM Data Elements)</a></h3>
+      <div>
+         
+         <ul>
+            <li>
+               "Diagnosis, Active: Hospital Measures - AMI" using "Hospital Measures - AMI Grouping Value Set (2.16.840.1.113883.3.666.5.3011)"
+            </li>
+            <li>
+               "Encounter, Performed: Hospital Measures-Encounter Inpatient" using "Hospital Measures-Encounter Inpatient SNOMED-CT Value Set (2.16.840.1.113883.3.666.5.625)"
+            </li>
+            <li>
+               "Intervention, Performed: Hospital Measures - Comfort Measures Only Intervention" using "Hospital Measures - Comfort Measures Only Intervention SNOMED-CT Value Set (1.3.6.1.4.1.33895.1.3.0.45)"
+            </li>
+            <li>
+               "Medication, Active: Hospital Measures-Aspirin" using "Hospital Measures-Aspirin RxNorm Value Set (2.16.840.1.113883.3.666.5.626)"
+            </li>
+            <li>
+               "Medication, Active not done: Medical Reason" using "Medical Reason SNOMED-CT Value Set (2.16.840.1.113883.3.117.1.7.1.473)"
+            </li>
+            <li>
+               "Medication, Active not done: Patient Reason" using "Patient Reason SNOMED-CT Value Set (2.16.840.1.113883.3.117.1.7.1.474)"
+            </li>
+            <li>
+               "Medication, Adverse Effects: Hospital Measures-Aspirin" using "Hospital Measures-Aspirin RxNorm Value Set (2.16.840.1.113883.3.666.5.626)"
+            </li>
+            <li>
+               "Medication, Allergy: Hospital Measures-Aspirin" using "Hospital Measures-Aspirin RxNorm Value Set (2.16.840.1.113883.3.666.5.626)"
+            </li>
+            <li>
+               "Medication, Discharge: Hospital Measures-Aspirin" using "Hospital Measures-Aspirin RxNorm Value Set (2.16.840.1.113883.3.666.5.626)"
+            </li>
+            <li>
+               "Medication, Discharge: Hospital Measures - Warfarin Anticoagulants" using "Hospital Measures - Warfarin Anticoagulants RxNorm Value Set (2.16.840.1.113883.3.666.5.636)"
+            </li>
+            <li>
+               "Medication, Intolerance: Hospital Measures-Aspirin" using "Hospital Measures-Aspirin RxNorm Value Set (2.16.840.1.113883.3.666.5.626)"
+            </li>
+            <li>
+               "Medication, Order: Hospital Measures-Aspirin" using "Hospital Measures-Aspirin RxNorm Value Set (2.16.840.1.113883.3.666.5.626)"
+            </li>
+            <li>
+               "Medication, Order not done: Medical Reason" using "Medical Reason SNOMED-CT Value Set (2.16.840.1.113883.3.526.2.313)"
+            </li>
+            <li>
+               "Medication, Order not done: Patient Reason" using "Patient Reason SNOMED-CT Value Set (2.16.840.1.113883.3.526.2.311)"
+            </li>
+            <li>
+               "Patient Characteristic: Clinical Trial Participant" using "Clinical Trial Participant SNOMED-CT Value Set (2.16.840.1.113883.3.526.2.643)"
+            </li>
+            <li>
+               "Patient Characteristic Birthdate: birth date" using "birth date LOINC Value Set (2.16.840.1.113883.3.560.100.4)"
+            </li>
+            <li>
+               "Transfer To: Hospital Measures - Home Hospice Care" using "Hospital Measures - Home Hospice Care SNOMED-CT Value Set (2.16.840.1.113883.3.666.5.3008)"
+            </li>
+            <li>
+               "Transfer To: Hospital Measures - Inpatient Hospice Care" using "Hospital Measures - Inpatient Hospice Care SNOMED-CT Value Set (2.16.840.1.113883.3.666.5.3007)"
+            </li>
+            <li>
+               Attribute: "Ordinality: Hospital Measures - Principal" using "Hospital Measures - Principal SNOMED-CT Value Set  (2.16.840.1.113883.3.666.5.3010)"
+            </li>
+            <li>
+               Attribute: "Discharge status: Left Against Medical Advice" using "Left Against Medical Advice SNOMED-CT Value Set  (2.16.840.1.113883.3.666.5.1106)"
+            </li>
+            <li>
+               Attribute: "Discharge status: Hospital Measures - Expired" using "Hospital Measures - Expired Grouping Value Set  (2.16.840.1.113883.3.666.5.1146)"
+            </li>
+            <li>
+               Attribute: "Reason: Hospital Measures - Discontinue" using "Hospital Measures - Discontinue SNOMED-CT Value Set  (2.16.840.1.113883.3.666.5.1149)"
+            </li>
+            <li>
+               Attribute: "Reason: Hospital Measures - Hold" using "Hospital Measures - Hold SNOMED-CT Value Set  (2.16.840.1.113883.3.666.5.1145)"
+            </li>
+            <li>
+               Attribute: "Discharge status: Discharge To Another Hospital" using "Discharge To Another Hospital SNOMED-CT Value Set  (2.16.840.1.113883.3.117.1.7.1.87)"
+            </li>
+         </ul>
+         
+      </div>
+      <h3><a name="d21003472e2798" href="#toc">Reporting Stratification</a></h3>
+      <div>
+         
+         <ul>
+            <li>None</li>
+         </ul>
+         
+      </div>
+      <h3><a name="d21003472e2819" href="#toc">Supplemental Data Elements</a></h3>
+      <div>
+         
+         <ul>
+            <li>
+               "Patient Characteristic Ethnicity: Ethnicity" using "Ethnicity CDC Value Set (2.16.840.1.114222.4.11.837)"
+            </li>
+            <li>
+               "Patient Characteristic Payer: Payer" using "Payer Source of Payment Typology Value Set (2.16.840.1.114222.4.11.3591)"
+            </li>
+            <li>
+               "Patient Characteristic Race: Race" using "Race CDC Value Set (2.16.840.1.114222.4.11.836)"
+            </li>
+            <li>
+               "Patient Characteristic Sex: ONC Administrative Sex" using "ONC Administrative Sex Administrative Sex Value Set (2.16.840.1.113762.1.4.1)"
+            </li>
+         </ul>
+         
+      </div><br><hr align="left" color="teal" size="2" width="80%"><br><table class="header_table">
+         <tbody>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">Measure Set</span></td>
+               <td colspan="3" width="80%">
+                  <div style="width:660px;overflow-x:hidden;overflow-y:auto;word-wrap:break-word">Acute Myocardial Infarction (AMI)</div>
+               </td>
+            </tr>
+         </tbody>
+      </table>
+   </body>
+</html>

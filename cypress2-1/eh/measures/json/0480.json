@@ -1,0 +1,931 @@
+{
+  "id": "8A4D92B2-37D1-F95B-0137-E726AD2F7415",
+  "nqf_id": "0480",
+  "hqmf_id": "8A4D92B2-37D1-F95B-0137-E726AD2F7415",
+  "hqmf_set_id": "7D374C6A-3821-4333-A1BC-4531005D77B8",
+  "hqmf_version_number": 1,
+  "cms_id": "CMS9v1",
+  "endorser": null,
+  "name": "Exclusive Breast Milk Feeding",
+  "description": "Exclusive breast milk feeding during the newborn's entire hospitalization",
+  "type": "eh",
+  "category": "Newborn",
+  "steward": null,
+  "population": {
+    "conjunction": "and",
+    "items": [
+      {
+        "conjunction": "and",
+        "items": [
+          {
+            "title": "Inpatient Encounter",
+            "description": "Encounter, Performed: Inpatient Encounter",
+            "standard_category": "encounter",
+            "qds_data_type": "encounter",
+            "code_list_id": "2.16.840.1.113883.3.117.1.7.1.23",
+            "type": "encounters",
+            "definition": "encounter",
+            "status": "performed",
+            "hard_status": false,
+            "negation": false,
+            "specific_occurrence": "A",
+            "specific_occurrence_const": "ENCOUNTER_PERFORMED_INPATIENT_ENCOUNTER",
+            "source_data_criteria": "OccurrenceAInpatientEncounter1",
+            "field_values": {
+              "DISCHARGE_DATETIME": {
+                "type": "ANYNonNull"
+              }
+            },
+            "temporal_references": [
+              {
+                "type": "DURING",
+                "reference": "MeasurePeriod",
+                "title": "MeasurePeriod"
+              }
+            ]
+          },
+          {
+            "title": "Inpatient Encounter",
+            "description": "Encounter, Performed: Inpatient Encounter",
+            "standard_category": "encounter",
+            "qds_data_type": "encounter",
+            "code_list_id": "2.16.840.1.113883.3.117.1.7.1.23",
+            "type": "encounters",
+            "definition": "encounter",
+            "status": "performed",
+            "hard_status": false,
+            "negation": false,
+            "specific_occurrence": "A",
+            "specific_occurrence_const": "ENCOUNTER_PERFORMED_INPATIENT_ENCOUNTER",
+            "source_data_criteria": "OccurrenceAInpatientEncounter1",
+            "field_values": {
+              "LENGTH_OF_STAY": {
+                "type": "IVL_PQ",
+                "high": {
+                  "type": "PQ",
+                  "unit": "d",
+                  "value": "120",
+                  "inclusive?": true,
+                  "derived?": false
+                }
+              }
+            }
+          },
+          {
+            "title": "Gestational age >= 37 weeks",
+            "description": "Diagnosis, Active: Gestational age >= 37 weeks",
+            "standard_category": "diagnosis_condition_problem",
+            "qds_data_type": "diagnosis_active",
+            "code_list_id": "2.16.840.1.113883.3.666.5.1596",
+            "type": "conditions",
+            "definition": "diagnosis",
+            "status": "active",
+            "hard_status": false,
+            "negation": false,
+            "source_data_criteria": "DiagnosisActiveGestationalAge37Weeks",
+            "temporal_references": [
+              {
+                "type": "SDU",
+                "reference": {
+                  "title": "Inpatient Encounter",
+                  "description": "Encounter, Performed: Inpatient Encounter",
+                  "standard_category": "encounter",
+                  "qds_data_type": "encounter",
+                  "code_list_id": "2.16.840.1.113883.3.117.1.7.1.23",
+                  "type": "encounters",
+                  "definition": "encounter",
+                  "status": "performed",
+                  "hard_status": false,
+                  "negation": false,
+                  "specific_occurrence": "A",
+                  "specific_occurrence_const": "ENCOUNTER_PERFORMED_INPATIENT_ENCOUNTER",
+                  "source_data_criteria": "OccurrenceAInpatientEncounter1"
+                }
+              }
+            ]
+          },
+          {
+            "conjunction": "or",
+            "items": [
+              {
+                "title": "Single Liveborn Newborn Born in Hospital",
+                "description": "Diagnosis, Active: Single Liveborn Newborn Born in Hospital",
+                "standard_category": "diagnosis_condition_problem",
+                "qds_data_type": "diagnosis_active",
+                "code_list_id": "2.16.840.1.113883.3.117.1.7.1.26",
+                "type": "conditions",
+                "definition": "diagnosis",
+                "status": "active",
+                "hard_status": false,
+                "negation": false,
+                "source_data_criteria": "DiagnosisActiveSingleLivebornNewbornBornInHospital",
+                "temporal_references": [
+                  {
+                    "type": "SDU",
+                    "reference": {
+                      "title": "Inpatient Encounter",
+                      "description": "Encounter, Performed: Inpatient Encounter",
+                      "standard_category": "encounter",
+                      "qds_data_type": "encounter",
+                      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.23",
+                      "type": "encounters",
+                      "definition": "encounter",
+                      "status": "performed",
+                      "hard_status": false,
+                      "negation": false,
+                      "specific_occurrence": "A",
+                      "specific_occurrence_const": "ENCOUNTER_PERFORMED_INPATIENT_ENCOUNTER",
+                      "source_data_criteria": "OccurrenceAInpatientEncounter1"
+                    }
+                  }
+                ]
+              },
+              {
+                "conjunction": "and",
+                "items": [
+                  {
+                    "title": "Single Live Birth",
+                    "description": "Diagnosis, Active: Single Live Birth",
+                    "standard_category": "diagnosis_condition_problem",
+                    "qds_data_type": "diagnosis_active",
+                    "code_list_id": "2.16.840.1.113883.3.117.1.7.1.25",
+                    "type": "conditions",
+                    "definition": "diagnosis",
+                    "status": "active",
+                    "hard_status": false,
+                    "negation": false,
+                    "source_data_criteria": "DiagnosisActiveSingleLiveBirth",
+                    "temporal_references": [
+                      {
+                        "type": "SDU",
+                        "reference": {
+                          "title": "Inpatient Encounter",
+                          "description": "Encounter, Performed: Inpatient Encounter",
+                          "standard_category": "encounter",
+                          "qds_data_type": "encounter",
+                          "code_list_id": "2.16.840.1.113883.3.117.1.7.1.23",
+                          "type": "encounters",
+                          "definition": "encounter",
+                          "status": "performed",
+                          "hard_status": false,
+                          "negation": false,
+                          "specific_occurrence": "A",
+                          "specific_occurrence_const": "ENCOUNTER_PERFORMED_INPATIENT_ENCOUNTER",
+                          "source_data_criteria": "OccurrenceAInpatientEncounter1"
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "title": "Liveborn Born In Hospital",
+                    "description": "Diagnosis, Active: Liveborn Born In Hospital",
+                    "standard_category": "diagnosis_condition_problem",
+                    "qds_data_type": "diagnosis_active",
+                    "code_list_id": "2.16.840.1.113883.3.117.1.7.1.29",
+                    "type": "conditions",
+                    "definition": "diagnosis",
+                    "status": "active",
+                    "hard_status": false,
+                    "negation": false,
+                    "source_data_criteria": "DiagnosisActiveLivebornBornInHospital",
+                    "temporal_references": [
+                      {
+                        "type": "SDU",
+                        "reference": {
+                          "title": "Inpatient Encounter",
+                          "description": "Encounter, Performed: Inpatient Encounter",
+                          "standard_category": "encounter",
+                          "qds_data_type": "encounter",
+                          "code_list_id": "2.16.840.1.113883.3.117.1.7.1.23",
+                          "type": "encounters",
+                          "definition": "encounter",
+                          "status": "performed",
+                          "hard_status": false,
+                          "negation": false,
+                          "specific_occurrence": "A",
+                          "specific_occurrence_const": "ENCOUNTER_PERFORMED_INPATIENT_ENCOUNTER",
+                          "source_data_criteria": "OccurrenceAInpatientEncounter1"
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "title": "Inpatient Encounter",
+                    "description": "Encounter, Performed: Inpatient Encounter",
+                    "standard_category": "encounter",
+                    "qds_data_type": "encounter",
+                    "code_list_id": "2.16.840.1.113883.3.117.1.7.1.23",
+                    "type": "encounters",
+                    "definition": "encounter",
+                    "status": "performed",
+                    "hard_status": false,
+                    "negation": false,
+                    "specific_occurrence": "A",
+                    "specific_occurrence_const": "ENCOUNTER_PERFORMED_INPATIENT_ENCOUNTER",
+                    "source_data_criteria": "OccurrenceAInpatientEncounter1",
+                    "field_values": {
+                      "REASON": {
+                        "type": "CD",
+                        "code_list_id": "2.16.840.1.113883.3.117.1.7.1.70",
+                        "title": "Birth"
+                      }
+                    }
+                  }
+                ],
+                "negation": null,
+                "precondition_id": 41
+              }
+            ],
+            "negation": null,
+            "precondition_id": 43
+          },
+          {
+            "conjunction": "or",
+            "items": [
+              {
+                "title": "Galactosemia",
+                "description": "Diagnosis, Active: Galactosemia",
+                "standard_category": "diagnosis_condition_problem",
+                "qds_data_type": "diagnosis_active",
+                "code_list_id": "2.16.840.1.113883.3.117.1.7.1.35",
+                "type": "conditions",
+                "definition": "diagnosis",
+                "status": "active",
+                "hard_status": false,
+                "negation": false,
+                "source_data_criteria": "DiagnosisActiveGalactosemia",
+                "temporal_references": [
+                  {
+                    "type": "SDU",
+                    "reference": {
+                      "title": "Inpatient Encounter",
+                      "description": "Encounter, Performed: Inpatient Encounter",
+                      "standard_category": "encounter",
+                      "qds_data_type": "encounter",
+                      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.23",
+                      "type": "encounters",
+                      "definition": "encounter",
+                      "status": "performed",
+                      "hard_status": false,
+                      "negation": false,
+                      "specific_occurrence": "A",
+                      "specific_occurrence_const": "ENCOUNTER_PERFORMED_INPATIENT_ENCOUNTER",
+                      "source_data_criteria": "OccurrenceAInpatientEncounter1"
+                    }
+                  }
+                ]
+              },
+              {
+                "title": "Parenteral Infusion",
+                "description": "Procedure, Performed: Parenteral Infusion",
+                "standard_category": "procedure",
+                "qds_data_type": "procedure_performed",
+                "code_list_id": "2.16.840.1.113883.3.117.1.7.1.38",
+                "type": "procedures",
+                "definition": "procedure",
+                "status": "performed",
+                "hard_status": false,
+                "negation": false,
+                "source_data_criteria": "ProcedurePerformedParenteralInfusion",
+                "temporal_references": [
+                  {
+                    "type": "DURING",
+                    "reference": {
+                      "title": "Inpatient Encounter",
+                      "description": "Encounter, Performed: Inpatient Encounter",
+                      "standard_category": "encounter",
+                      "qds_data_type": "encounter",
+                      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.23",
+                      "type": "encounters",
+                      "definition": "encounter",
+                      "status": "performed",
+                      "hard_status": false,
+                      "negation": false,
+                      "specific_occurrence": "A",
+                      "specific_occurrence_const": "ENCOUNTER_PERFORMED_INPATIENT_ENCOUNTER",
+                      "source_data_criteria": "OccurrenceAInpatientEncounter1"
+                    }
+                  }
+                ]
+              }
+            ],
+            "negation": true,
+            "precondition_id": 45
+          }
+        ],
+        "negation": null,
+        "precondition_id": 46
+      }
+    ]
+  },
+  "denominator": {
+    "conjunction": "and",
+    "items": [
+
+    ]
+  },
+  "numerator": {
+    "conjunction": "and",
+    "items": [
+      {
+        "conjunction": "and",
+        "items": [
+          {
+            "conjunction": "and",
+            "items": [
+              {
+                "title": "Breast Milk",
+                "description": "Substance, Administered: Breast Milk",
+                "standard_category": "medication",
+                "qds_data_type": "medication_administered",
+                "code_list_id": "2.16.840.1.113883.3.117.1.7.1.30",
+                "type": "substances",
+                "definition": "substance",
+                "status": "administered",
+                "hard_status": true,
+                "negation": false,
+                "source_data_criteria": "SubstanceAdministeredBreastMilk",
+                "temporal_references": [
+                  {
+                    "type": "DURING",
+                    "reference": {
+                      "title": "Inpatient Encounter",
+                      "description": "Encounter, Performed: Inpatient Encounter",
+                      "standard_category": "encounter",
+                      "qds_data_type": "encounter",
+                      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.23",
+                      "type": "encounters",
+                      "definition": "encounter",
+                      "status": "performed",
+                      "hard_status": false,
+                      "negation": false,
+                      "specific_occurrence": "A",
+                      "specific_occurrence_const": "ENCOUNTER_PERFORMED_INPATIENT_ENCOUNTER",
+                      "source_data_criteria": "OccurrenceAInpatientEncounter1"
+                    }
+                  }
+                ]
+              },
+              {
+                "conjunction": "or",
+                "items": [
+                  {
+                    "title": "Dietary Intake Other than Breast Milk",
+                    "description": "Substance, Administered: Dietary Intake Other than Breast Milk",
+                    "standard_category": "medication",
+                    "qds_data_type": "medication_administered",
+                    "code_list_id": "2.16.840.1.113883.3.117.1.7.1.27",
+                    "type": "substances",
+                    "definition": "substance",
+                    "status": "administered",
+                    "hard_status": true,
+                    "negation": false,
+                    "source_data_criteria": "SubstanceAdministeredDietaryIntakeOtherThanBreastMilk",
+                    "temporal_references": [
+                      {
+                        "type": "DURING",
+                        "reference": {
+                          "title": "Inpatient Encounter",
+                          "description": "Encounter, Performed: Inpatient Encounter",
+                          "standard_category": "encounter",
+                          "qds_data_type": "encounter",
+                          "code_list_id": "2.16.840.1.113883.3.117.1.7.1.23",
+                          "type": "encounters",
+                          "definition": "encounter",
+                          "status": "performed",
+                          "hard_status": false,
+                          "negation": false,
+                          "specific_occurrence": "A",
+                          "specific_occurrence_const": "ENCOUNTER_PERFORMED_INPATIENT_ENCOUNTER",
+                          "source_data_criteria": "OccurrenceAInpatientEncounter1"
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "negation": true,
+                "precondition_id": 18
+              }
+            ],
+            "negation": null,
+            "precondition_id": 19
+          }
+        ],
+        "negation": null,
+        "precondition_id": 22
+      }
+    ]
+  },
+  "exclusions": {
+    "conjunction": "and",
+    "items": [
+      {
+        "conjunction": "and",
+        "items": [
+          {
+            "conjunction": "or",
+            "items": [
+              {
+                "title": "Inpatient Encounter",
+                "description": "Encounter, Performed: Inpatient Encounter",
+                "standard_category": "encounter",
+                "qds_data_type": "encounter",
+                "code_list_id": "2.16.840.1.113883.3.117.1.7.1.23",
+                "type": "encounters",
+                "definition": "encounter",
+                "status": "performed",
+                "hard_status": false,
+                "negation": false,
+                "source_data_criteria": "EncounterPerformedInpatientEncounter",
+                "field_values": {
+                  "FACILITY_LOCATION": {
+                    "type": "CD",
+                    "code_list_id": "2.16.840.1.113883.3.117.1.7.1.75",
+                    "title": "Neonatal Intensive Care Unit (NICU)"
+                  }
+                },
+                "temporal_references": [
+                  {
+                    "type": "DURING",
+                    "reference": {
+                      "title": "Inpatient Encounter",
+                      "description": "Encounter, Performed: Inpatient Encounter",
+                      "standard_category": "encounter",
+                      "qds_data_type": "encounter",
+                      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.23",
+                      "type": "encounters",
+                      "definition": "encounter",
+                      "status": "performed",
+                      "hard_status": false,
+                      "negation": false,
+                      "specific_occurrence": "A",
+                      "specific_occurrence_const": "ENCOUNTER_PERFORMED_INPATIENT_ENCOUNTER",
+                      "source_data_criteria": "OccurrenceAInpatientEncounter1"
+                    }
+                  }
+                ]
+              },
+              {
+                "title": "Inpatient Encounter",
+                "description": "Encounter, Performed: Inpatient Encounter",
+                "standard_category": "encounter",
+                "qds_data_type": "encounter",
+                "code_list_id": "2.16.840.1.113883.3.117.1.7.1.23",
+                "type": "encounters",
+                "definition": "encounter",
+                "status": "performed",
+                "hard_status": false,
+                "negation": false,
+                "specific_occurrence": "A",
+                "specific_occurrence_const": "ENCOUNTER_PERFORMED_INPATIENT_ENCOUNTER",
+                "source_data_criteria": "OccurrenceAInpatientEncounter1",
+                "field_values": {
+                  "DISCHARGE_STATUS": {
+                    "type": "CD",
+                    "code_list_id": "2.16.840.1.113883.3.117.1.7.1.309",
+                    "title": "Patient Expired"
+                  }
+                }
+              },
+              {
+                "title": "Inpatient Encounter",
+                "description": "Encounter, Performed: Inpatient Encounter",
+                "standard_category": "encounter",
+                "qds_data_type": "encounter",
+                "code_list_id": "2.16.840.1.113883.3.117.1.7.1.23",
+                "type": "encounters",
+                "definition": "encounter",
+                "status": "performed",
+                "hard_status": false,
+                "negation": false,
+                "specific_occurrence": "A",
+                "specific_occurrence_const": "ENCOUNTER_PERFORMED_INPATIENT_ENCOUNTER",
+                "source_data_criteria": "OccurrenceAInpatientEncounter1",
+                "field_values": {
+                  "DISCHARGE_STATUS": {
+                    "type": "CD",
+                    "code_list_id": "2.16.840.1.113883.3.117.1.7.1.87",
+                    "title": "Discharge To Another Hospital"
+                  }
+                }
+              }
+            ],
+            "negation": null,
+            "precondition_id": 11
+          }
+        ],
+        "negation": null,
+        "precondition_id": 13
+      }
+    ]
+  },
+  "map_fn": "function() {\n        var patient = this;\n        var effective_date = <%= effective_date %>;\n\n        hqmfjs = {}\n        <%= init_js_frameworks %>\n        \n        \n      var patient_api = new hQuery.Patient(patient);\n\n      \n\n      // clear out logger\n      if (typeof Logger != 'undefined') { Logger.logger = []; Logger.rationale={};}\n      // turn on logging if it is enabled\n      if (Logger.enabled) enableLogging();\n      \n      \n        // #########################\n        // ##### DATA ELEMENTS #####\n        // #########################\n\n        OidDictionary = <%= oid_dictionary %>;\n        \n        // Measure variables\nvar MeasurePeriod = {\n  \"low\": new TS(\"201201010000\", null, true),\n  \"high\": new TS(\"201212312359\", null, true)\n}\nhqmfjs.MeasurePeriod = function(patient) {\n  return [new hQuery.CodedEntry(\n    {\n      \"start_time\": MeasurePeriod.low.asDate().getTime()/1000,\n      \"end_time\": MeasurePeriod.high.asDate().getTime()/1000,\n      \"codes\": {}\n    }\n  )];\n}\nif (typeof effective_date === 'number') {\n  MeasurePeriod.high.date = new Date(1000*effective_date);\n  // add one minute before pulling off the year.  This turns 12-31-2012 23:59 into 1-1-2013 00:00 => 1-1-2012 00:00\n  MeasurePeriod.low.date = new Date(1000*(effective_date+60));\n  MeasurePeriod.low.date.setFullYear(MeasurePeriod.low.date.getFullYear()-1);\n}\n\n// Data critera\nhqmfjs.OccurrenceAInpatientEncounter1 = function(patient, initialSpecificContext) {\n  var events = patient.encounters();\n  events.specific_occurrence = 'OccurrenceAInpatientEncounter1'\n  events = events.withStatuses([\"performed\"]);\n  events = events.withoutNegation();\n  var codes = getCodes(\"2.16.840.1.113883.3.117.1.7.1.23\");\n  var start = null;\n  var end = null;\n  events = events.match(codes, start, end, true);\n\n  events.specificContext=new hqmf.SpecificOccurrence(Row.buildForDataCriteria(events.specific_occurrence, events))\n  return events;\n}\n\nhqmfjs.SubstanceAdministeredNotDoneMaternalReason = function(patient, initialSpecificContext) {\n  var events = patient.allMedications();\n  events = events.withStatuses([\"administered\"], false);\n  events = events.withNegation();\n  var codes = getCodes(\"2.16.840.1.113883.3.117.1.7.1.84\");\n  var start = null;\n  var end = null;\n  events = events.match(codes, start, end, true);\n\n  events.specificContext=hqmf.SpecificsManager.identity()\n  return events;\n}\n\nhqmfjs.OccurrenceAInpatientEncounter1 = function(patient, initialSpecificContext) {\n  var events = patient.encounters();\n  events.specific_occurrence = 'OccurrenceAInpatientEncounter1'\n  events = events.withStatuses([\"performed\"]);\n  events = events.withoutNegation();\n  var codes = getCodes(\"2.16.840.1.113883.3.117.1.7.1.23\");\n  var start = null;\n  var end = null;\n  events = events.match(codes, start, end, true);\n\n  events.specificContext=new hqmf.SpecificOccurrence(Row.buildForDataCriteria(events.specific_occurrence, events))\n  return events;\n}\n\nhqmfjs.SubstanceAdministeredBreastMilk_precondition_2 = function(patient, initialSpecificContext) {\n  var events = patient.allMedications();\n  events = events.withStatuses([\"administered\"], false);\n  events = events.withNegation(getCodes(\"2.16.840.1.113883.3.117.1.7.1.84\"));\n  var codes = getCodes(\"2.16.840.1.113883.3.117.1.7.1.30\");\n  var start = null;\n  var end = null;\n  events = events.match(codes, start, end, true);\n\n  if (events.length > 0) events = DURING(events, hqmfjs.OccurrenceAInpatientEncounter1(patient));\n  else events.specificContext=hqmf.SpecificsManager.empty();\n  return events;\n}\n\nhqmfjs.EncounterPerformedInpatientEncounter_precondition_5 = function(patient, initialSpecificContext) {\n  var events = patient.encounters();\n  events = events.withStatuses([\"performed\"]);\n  events = events.withoutNegation();\n  var codes = getCodes(\"2.16.840.1.113883.3.117.1.7.1.23\");\n  var start = null;\n  var end = null;\n  events = events.match(codes, start, end, true);\n\n  events = filterEventsByField(events, \"facility\", new CodeList(getCodes(\"2.16.840.1.113883.3.117.1.7.1.75\")));\n  if (events.length > 0) events = DURING(events, hqmfjs.OccurrenceAInpatientEncounter1(patient));\n  else events.specificContext=hqmf.SpecificsManager.empty();\n  return events;\n}\n\nhqmfjs.OccurrenceAInpatientEncounter1_precondition_7 = function(patient, initialSpecificContext) {\n  var events = patient.encounters();\n  events.specific_occurrence = 'OccurrenceAInpatientEncounter1'\n  events = events.withStatuses([\"performed\"]);\n  events = events.withoutNegation();\n  var codes = getCodes(\"2.16.840.1.113883.3.117.1.7.1.23\");\n  var start = null;\n  var end = null;\n  events = events.match(codes, start, end, true);\n\n  events = filterEventsByField(events, \"dischargeDisposition\", new CodeList(getCodes(\"2.16.840.1.113883.3.117.1.7.1.309\")));\n  events.specificContext=new hqmf.SpecificOccurrence(Row.buildForDataCriteria(events.specific_occurrence, events))\n  return events;\n}\n\nhqmfjs.OccurrenceAInpatientEncounter1_precondition_9 = function(patient, initialSpecificContext) {\n  var events = patient.encounters();\n  events.specific_occurrence = 'OccurrenceAInpatientEncounter1'\n  events = events.withStatuses([\"performed\"]);\n  events = events.withoutNegation();\n  var codes = getCodes(\"2.16.840.1.113883.3.117.1.7.1.23\");\n  var start = null;\n  var end = null;\n  events = events.match(codes, start, end, true);\n\n  events = filterEventsByField(events, \"dischargeDisposition\", new CodeList(getCodes(\"2.16.840.1.113883.3.117.1.7.1.87\")));\n  events.specificContext=new hqmf.SpecificOccurrence(Row.buildForDataCriteria(events.specific_occurrence, events))\n  return events;\n}\n\nhqmfjs.OccurrenceAInpatientEncounter1_precondition_20 = function(patient, initialSpecificContext) {\n  var events = patient.encounters();\n  events.specific_occurrence = 'OccurrenceAInpatientEncounter1'\n  events = events.withStatuses([\"performed\"]);\n  events = events.withoutNegation();\n  var codes = getCodes(\"2.16.840.1.113883.3.117.1.7.1.23\");\n  var start = null;\n  var end = null;\n  events = events.match(codes, start, end, true);\n\n  events.specificContext=new hqmf.SpecificOccurrence(Row.buildForDataCriteria(events.specific_occurrence, events))\n  return events;\n}\n\nhqmfjs.SubstanceAdministeredBreastMilk_precondition_16 = function(patient, initialSpecificContext) {\n  var events = patient.allMedications();\n  events = events.withStatuses([\"administered\"], false);\n  events = events.withoutNegation();\n  var codes = getCodes(\"2.16.840.1.113883.3.117.1.7.1.30\");\n  var start = null;\n  var end = null;\n  events = events.match(codes, start, end, true);\n\n  if (events.length > 0) events = DURING(events, hqmfjs.OccurrenceAInpatientEncounter1_precondition_20(patient));\n  else events.specificContext=hqmf.SpecificsManager.empty();\n  return events;\n}\n\nhqmfjs.SubstanceAdministeredDietaryIntakeOtherThanBreastMilk_precondition_14 = function(patient, initialSpecificContext) {\n  var events = patient.allMedications();\n  events = events.withStatuses([\"administered\"], false);\n  events = events.withoutNegation();\n  var codes = getCodes(\"2.16.840.1.113883.3.117.1.7.1.27\");\n  var start = null;\n  var end = null;\n  events = events.match(codes, start, end, true);\n\n  if (events.length > 0) events = DURING(events, hqmfjs.OccurrenceAInpatientEncounter1_precondition_20(patient));\n  else events.specificContext=hqmf.SpecificsManager.empty();\n  return events;\n}\n\nhqmfjs.OccurrenceAInpatientEncounter1_precondition_27 = function(patient, initialSpecificContext) {\n  var events = patient.encounters();\n  events.specific_occurrence = 'OccurrenceAInpatientEncounter1'\n  events = events.withStatuses([\"performed\"]);\n  events = events.withoutNegation();\n  var codes = getCodes(\"2.16.840.1.113883.3.117.1.7.1.23\");\n  var start = null;\n  var end = null;\n  events = events.match(codes, start, end, true);\n\n  events = adjustBoundsForField(events, \"dischargeTime\", new ANYNonNull());\n  if (events.length > 0) events = DURING(events, hqmfjs.MeasurePeriod(patient));\n  else events.specificContext=hqmf.SpecificsManager.empty();\n  return events;\n}\n\nhqmfjs.OccurrenceAInpatientEncounter1_precondition_29 = function(patient, initialSpecificContext) {\n  var events = patient.encounters();\n  events.specific_occurrence = 'OccurrenceAInpatientEncounter1'\n  events = events.withStatuses([\"performed\"]);\n  events = events.withoutNegation();\n  var codes = getCodes(\"2.16.840.1.113883.3.117.1.7.1.23\");\n  var start = null;\n  var end = null;\n  events = events.match(codes, start, end, true);\n\n  events = filterEventsByField(events, \"lengthOfStay\", new IVL_PQ(null, new PQ(120, \"d\", true)));\n  events.specificContext=new hqmf.SpecificOccurrence(Row.buildForDataCriteria(events.specific_occurrence, events))\n  return events;\n}\n\nhqmfjs.DiagnosisActiveGestationalAge37Weeks_precondition_31 = function(patient, initialSpecificContext) {\n  var events = patient.allProblems();\n  events = events.withStatuses([\"active\"]);\n  events = events.withoutNegation();\n  var codes = getCodes(\"2.16.840.1.113883.3.666.5.1596\");\n  var start = null;\n  var end = null;\n  events = events.match(codes, start, end, true);\n\n  if (events.length > 0) events = SDU(events, hqmfjs.OccurrenceAInpatientEncounter1(patient));\n  else events.specificContext=hqmf.SpecificsManager.empty();\n  return events;\n}\n\nhqmfjs.DiagnosisActiveSingleLivebornNewbornBornInHospital_precondition_33 = function(patient, initialSpecificContext) {\n  var events = patient.allProblems();\n  events = events.withStatuses([\"active\"]);\n  events = events.withoutNegation();\n  var codes = getCodes(\"2.16.840.1.113883.3.117.1.7.1.26\");\n  var start = null;\n  var end = null;\n  events = events.match(codes, start, end, true);\n\n  if (events.length > 0) events = SDU(events, hqmfjs.OccurrenceAInpatientEncounter1(patient));\n  else events.specificContext=hqmf.SpecificsManager.empty();\n  return events;\n}\n\nhqmfjs.DiagnosisActiveSingleLiveBirth_precondition_35 = function(patient, initialSpecificContext) {\n  var events = patient.allProblems();\n  events = events.withStatuses([\"active\"]);\n  events = events.withoutNegation();\n  var codes = getCodes(\"2.16.840.1.113883.3.117.1.7.1.25\");\n  var start = null;\n  var end = null;\n  events = events.match(codes, start, end, true);\n\n  if (events.length > 0) events = SDU(events, hqmfjs.OccurrenceAInpatientEncounter1(patient));\n  else events.specificContext=hqmf.SpecificsManager.empty();\n  return events;\n}\n\nhqmfjs.DiagnosisActiveLivebornBornInHospital_precondition_37 = function(patient, initialSpecificContext) {\n  var events = patient.allProblems();\n  events = events.withStatuses([\"active\"]);\n  events = events.withoutNegation();\n  var codes = getCodes(\"2.16.840.1.113883.3.117.1.7.1.29\");\n  var start = null;\n  var end = null;\n  events = events.match(codes, start, end, true);\n\n  if (events.length > 0) events = SDU(events, hqmfjs.OccurrenceAInpatientEncounter1(patient));\n  else events.specificContext=hqmf.SpecificsManager.empty();\n  return events;\n}\n\nhqmfjs.OccurrenceAInpatientEncounter1_precondition_39 = function(patient, initialSpecificContext) {\n  var events = patient.encounters();\n  events.specific_occurrence = 'OccurrenceAInpatientEncounter1'\n  events = events.withStatuses([\"performed\"]);\n  events = events.withoutNegation();\n  var codes = getCodes(\"2.16.840.1.113883.3.117.1.7.1.23\");\n  var start = null;\n  var end = null;\n  events = events.match(codes, start, end, true);\n\n  events = filterEventsByField(events, \"reason\", new CodeList(getCodes(\"2.16.840.1.113883.3.117.1.7.1.70\")));\n  events.specificContext=new hqmf.SpecificOccurrence(Row.buildForDataCriteria(events.specific_occurrence, events))\n  return events;\n}\n\nhqmfjs.DiagnosisActiveGalactosemia_precondition_23 = function(patient, initialSpecificContext) {\n  var events = patient.allProblems();\n  events = events.withStatuses([\"active\"]);\n  events = events.withoutNegation();\n  var codes = getCodes(\"2.16.840.1.113883.3.117.1.7.1.35\");\n  var start = null;\n  var end = null;\n  events = events.match(codes, start, end, true);\n\n  if (events.length > 0) events = SDU(events, hqmfjs.OccurrenceAInpatientEncounter1(patient));\n  else events.specificContext=hqmf.SpecificsManager.empty();\n  return events;\n}\n\nhqmfjs.ProcedurePerformedParenteralInfusion_precondition_25 = function(patient, initialSpecificContext) {\n  var events = patient.allProcedures();\n  events = events.withStatuses([\"performed\"]);\n  events = events.withoutNegation();\n  var codes = getCodes(\"2.16.840.1.113883.3.117.1.7.1.38\");\n  var start = null;\n  var end = null;\n  events = events.match(codes, start, end, true);\n\n  if (events.length > 0) events = DURING(events, hqmfjs.OccurrenceAInpatientEncounter1(patient));\n  else events.specificContext=hqmf.SpecificsManager.empty();\n  return events;\n}\n\n\n\n        // #########################\n        // ##### MEASURE LOGIC #####\n        // #########################\n        \n        hqmfjs.initializeSpecifics = function(patient_api, hqmfjs) { hqmf.SpecificsManager.initialize(patient_api,hqmfjs,{\"id\":\"OccurrenceAInpatientEncounter1\",\"type\":\"ENCOUNTER_PERFORMED_INPATIENT_ENCOUNTER\",\"function\":\"OccurrenceAInpatientEncounter1\"}) }\n\n        // INITIAL PATIENT POPULATION\n        hqmfjs.IPP = function(patient, initialSpecificContext) {\n  return allTrue('IPP',  \n    allTrue('46',     hqmfjs.OccurrenceAInpatientEncounter1_precondition_27(patient, initialSpecificContext),     hqmfjs.OccurrenceAInpatientEncounter1_precondition_29(patient, initialSpecificContext),     hqmfjs.DiagnosisActiveGestationalAge37Weeks_precondition_31(patient, initialSpecificContext),    \n      atLeastOneTrue('43',       hqmfjs.DiagnosisActiveSingleLivebornNewbornBornInHospital_precondition_33(patient, initialSpecificContext),      \n        allTrue('41',         hqmfjs.DiagnosisActiveSingleLiveBirth_precondition_35(patient, initialSpecificContext),         hqmfjs.DiagnosisActiveLivebornBornInHospital_precondition_37(patient, initialSpecificContext),         hqmfjs.OccurrenceAInpatientEncounter1_precondition_39(patient, initialSpecificContext)\n        )\n      ),    \n      allFalse('45',       hqmfjs.DiagnosisActiveGalactosemia_precondition_23(patient, initialSpecificContext),       hqmfjs.ProcedurePerformedParenteralInfusion_precondition_25(patient, initialSpecificContext)\n      )\n    )\n  );\n};\n\n\n        // DENOMINATOR\n        hqmfjs.DENOM = function(patient) { return new Boolean(true); }\n        // NUMERATOR\n        hqmfjs.NUMER = function(patient, initialSpecificContext) {\n  return allTrue('NUMER',  \n    allTrue('22',    \n      allTrue('19',       hqmfjs.SubstanceAdministeredBreastMilk_precondition_16(patient, initialSpecificContext),      \n        allFalse('18',         hqmfjs.SubstanceAdministeredDietaryIntakeOtherThanBreastMilk_precondition_14(patient, initialSpecificContext)\n        )\n      )\n    )\n  );\n};\n\n\n        hqmfjs.DENEX = function(patient, initialSpecificContext) {\n  return atLeastOneTrue('DENEX',  \n    allTrue('13',    \n      atLeastOneTrue('11',       hqmfjs.EncounterPerformedInpatientEncounter_precondition_5(patient, initialSpecificContext),       hqmfjs.OccurrenceAInpatientEncounter1_precondition_7(patient, initialSpecificContext),       hqmfjs.OccurrenceAInpatientEncounter1_precondition_9(patient, initialSpecificContext)\n      )\n    )\n  );\n};\n\n\n        hqmfjs.DENEXCEP = function(patient, initialSpecificContext) {\n  return atLeastOneTrue('DENEXCEP',  \n    allTrue('4',     hqmfjs.SubstanceAdministeredBreastMilk_precondition_2(patient, initialSpecificContext)\n    )\n  );\n};\n\n\n        // CV\n        hqmfjs.MSRPOPL = function(patient) { return new Boolean(false); }\n        hqmfjs.OBSERV = function(patient) { return new Boolean(false); }\n        \n      \n      var occurrenceId = [\"OccurrenceAInpatientEncounter1\"];\n\n      hqmfjs.initializeSpecifics(patient_api, hqmfjs)\n      \n      var population = function() {\n        return executeIfAvailable(hqmfjs.IPP, patient_api);\n      }\n      var denominator = function() {\n        return executeIfAvailable(hqmfjs.DENOM, patient_api);\n      }\n      var numerator = function() {\n        return executeIfAvailable(hqmfjs.NUMER, patient_api);\n      }\n      var exclusion = function() {\n        return executeIfAvailable(hqmfjs.DENEX, patient_api);\n      }\n      var denexcep = function() {\n        return executeIfAvailable(hqmfjs.DENEXCEP, patient_api);\n      }\n      var msrpopl = function() {\n        return executeIfAvailable(hqmfjs.MSRPOPL, patient_api);\n      }\n      var observ = function(specific_context) {\n        \n        var observFunc = hqmfjs.OBSERV\n        if (typeof(observFunc)==='function')\n          return observFunc(patient_api, specific_context);\n        else\n          return [];\n      }\n      \n      var executeIfAvailable = function(optionalFunction, arg) {\n        if (typeof(optionalFunction)==='function')\n          return optionalFunction(arg);\n        else\n          return false;\n      }\n\n      if (Logger.enabled) enableMeasureLogging(hqmfjs);\n\n      map(patient, population, denominator, numerator, exclusion, denexcep, msrpopl, observ, occurrenceId,false);\n      \n      };\n      ",
+  "continuous_variable": false,
+  "episode_of_care": true,
+  "data_criteria": [
+    {
+      "SubstanceAdministeredBreastMilk_precondition_2": {
+        "title": "Breast Milk",
+        "description": "Substance, Administered: Breast Milk",
+        "standard_category": "medication",
+        "qds_data_type": "medication_administered",
+        "code_list_id": "2.16.840.1.113883.3.117.1.7.1.30",
+        "type": "substances",
+        "definition": "substance",
+        "status": "administered",
+        "hard_status": true,
+        "negation": true,
+        "negation_code_list_id": "2.16.840.1.113883.3.117.1.7.1.84",
+        "source_data_criteria": "SubstanceAdministeredBreastMilk",
+        "temporal_references": [
+          {
+            "type": "DURING",
+            "reference": "OccurrenceAInpatientEncounter1"
+          }
+        ]
+      }
+    },
+    {
+      "OccurrenceAInpatientEncounter1": {
+        "title": "Inpatient Encounter",
+        "description": "Encounter, Performed: Inpatient Encounter",
+        "standard_category": "encounter",
+        "qds_data_type": "encounter",
+        "code_list_id": "2.16.840.1.113883.3.117.1.7.1.23",
+        "type": "encounters",
+        "definition": "encounter",
+        "status": "performed",
+        "hard_status": false,
+        "negation": false,
+        "specific_occurrence": "A",
+        "specific_occurrence_const": "ENCOUNTER_PERFORMED_INPATIENT_ENCOUNTER",
+        "source_data_criteria": "OccurrenceAInpatientEncounter1"
+      }
+    },
+    {
+      "EncounterPerformedInpatientEncounter_precondition_5": {
+        "title": "Inpatient Encounter",
+        "description": "Encounter, Performed: Inpatient Encounter",
+        "standard_category": "encounter",
+        "qds_data_type": "encounter",
+        "code_list_id": "2.16.840.1.113883.3.117.1.7.1.23",
+        "type": "encounters",
+        "definition": "encounter",
+        "status": "performed",
+        "hard_status": false,
+        "negation": false,
+        "source_data_criteria": "EncounterPerformedInpatientEncounter",
+        "field_values": {
+          "FACILITY_LOCATION": {
+            "type": "CD",
+            "code_list_id": "2.16.840.1.113883.3.117.1.7.1.75",
+            "title": "Neonatal Intensive Care Unit (NICU)"
+          }
+        },
+        "temporal_references": [
+          {
+            "type": "DURING",
+            "reference": "OccurrenceAInpatientEncounter1"
+          }
+        ]
+      }
+    },
+    {
+      "OccurrenceAInpatientEncounter1_precondition_7": {
+        "title": "Inpatient Encounter",
+        "description": "Encounter, Performed: Inpatient Encounter",
+        "standard_category": "encounter",
+        "qds_data_type": "encounter",
+        "code_list_id": "2.16.840.1.113883.3.117.1.7.1.23",
+        "type": "encounters",
+        "definition": "encounter",
+        "status": "performed",
+        "hard_status": false,
+        "negation": false,
+        "specific_occurrence": "A",
+        "specific_occurrence_const": "ENCOUNTER_PERFORMED_INPATIENT_ENCOUNTER",
+        "source_data_criteria": "OccurrenceAInpatientEncounter1",
+        "field_values": {
+          "DISCHARGE_STATUS": {
+            "type": "CD",
+            "code_list_id": "2.16.840.1.113883.3.117.1.7.1.309",
+            "title": "Patient Expired"
+          }
+        }
+      }
+    },
+    {
+      "OccurrenceAInpatientEncounter1_precondition_9": {
+        "title": "Inpatient Encounter",
+        "description": "Encounter, Performed: Inpatient Encounter",
+        "standard_category": "encounter",
+        "qds_data_type": "encounter",
+        "code_list_id": "2.16.840.1.113883.3.117.1.7.1.23",
+        "type": "encounters",
+        "definition": "encounter",
+        "status": "performed",
+        "hard_status": false,
+        "negation": false,
+        "specific_occurrence": "A",
+        "specific_occurrence_const": "ENCOUNTER_PERFORMED_INPATIENT_ENCOUNTER",
+        "source_data_criteria": "OccurrenceAInpatientEncounter1",
+        "field_values": {
+          "DISCHARGE_STATUS": {
+            "type": "CD",
+            "code_list_id": "2.16.840.1.113883.3.117.1.7.1.87",
+            "title": "Discharge To Another Hospital"
+          }
+        }
+      }
+    },
+    {
+      "SubstanceAdministeredBreastMilk_precondition_16": {
+        "title": "Breast Milk",
+        "description": "Substance, Administered: Breast Milk",
+        "standard_category": "medication",
+        "qds_data_type": "medication_administered",
+        "code_list_id": "2.16.840.1.113883.3.117.1.7.1.30",
+        "type": "substances",
+        "definition": "substance",
+        "status": "administered",
+        "hard_status": true,
+        "negation": false,
+        "source_data_criteria": "SubstanceAdministeredBreastMilk",
+        "temporal_references": [
+          {
+            "type": "DURING",
+            "reference": "OccurrenceAInpatientEncounter1_precondition_20"
+          }
+        ]
+      }
+    },
+    {
+      "OccurrenceAInpatientEncounter1_precondition_20": {
+        "title": "Inpatient Encounter",
+        "description": "Encounter, Performed: Inpatient Encounter",
+        "standard_category": "encounter",
+        "qds_data_type": "encounter",
+        "code_list_id": "2.16.840.1.113883.3.117.1.7.1.23",
+        "type": "encounters",
+        "definition": "encounter",
+        "status": "performed",
+        "hard_status": false,
+        "negation": false,
+        "specific_occurrence": "A",
+        "specific_occurrence_const": "ENCOUNTER_PERFORMED_INPATIENT_ENCOUNTER",
+        "source_data_criteria": "OccurrenceAInpatientEncounter1"
+      }
+    },
+    {
+      "SubstanceAdministeredDietaryIntakeOtherThanBreastMilk_precondition_14": {
+        "title": "Dietary Intake Other than Breast Milk",
+        "description": "Substance, Administered: Dietary Intake Other than Breast Milk",
+        "standard_category": "medication",
+        "qds_data_type": "medication_administered",
+        "code_list_id": "2.16.840.1.113883.3.117.1.7.1.27",
+        "type": "substances",
+        "definition": "substance",
+        "status": "administered",
+        "hard_status": true,
+        "negation": false,
+        "source_data_criteria": "SubstanceAdministeredDietaryIntakeOtherThanBreastMilk",
+        "temporal_references": [
+          {
+            "type": "DURING",
+            "reference": "OccurrenceAInpatientEncounter1_precondition_20"
+          }
+        ]
+      }
+    },
+    {
+      "OccurrenceAInpatientEncounter1_precondition_27": {
+        "title": "Inpatient Encounter",
+        "description": "Encounter, Performed: Inpatient Encounter",
+        "standard_category": "encounter",
+        "qds_data_type": "encounter",
+        "code_list_id": "2.16.840.1.113883.3.117.1.7.1.23",
+        "type": "encounters",
+        "definition": "encounter",
+        "status": "performed",
+        "hard_status": false,
+        "negation": false,
+        "specific_occurrence": "A",
+        "specific_occurrence_const": "ENCOUNTER_PERFORMED_INPATIENT_ENCOUNTER",
+        "source_data_criteria": "OccurrenceAInpatientEncounter1",
+        "field_values": {
+          "DISCHARGE_DATETIME": {
+            "type": "ANYNonNull"
+          }
+        },
+        "temporal_references": [
+          {
+            "type": "DURING",
+            "reference": "MeasurePeriod"
+          }
+        ]
+      }
+    },
+    {
+      "OccurrenceAInpatientEncounter1_precondition_29": {
+        "title": "Inpatient Encounter",
+        "description": "Encounter, Performed: Inpatient Encounter",
+        "standard_category": "encounter",
+        "qds_data_type": "encounter",
+        "code_list_id": "2.16.840.1.113883.3.117.1.7.1.23",
+        "type": "encounters",
+        "definition": "encounter",
+        "status": "performed",
+        "hard_status": false,
+        "negation": false,
+        "specific_occurrence": "A",
+        "specific_occurrence_const": "ENCOUNTER_PERFORMED_INPATIENT_ENCOUNTER",
+        "source_data_criteria": "OccurrenceAInpatientEncounter1",
+        "field_values": {
+          "LENGTH_OF_STAY": {
+            "type": "IVL_PQ",
+            "high": {
+              "type": "PQ",
+              "unit": "d",
+              "value": "120",
+              "inclusive?": true,
+              "derived?": false
+            }
+          }
+        }
+      }
+    },
+    {
+      "DiagnosisActiveGestationalAge37Weeks_precondition_31": {
+        "title": "Gestational age >= 37 weeks",
+        "description": "Diagnosis, Active: Gestational age >= 37 weeks",
+        "standard_category": "diagnosis_condition_problem",
+        "qds_data_type": "diagnosis_active",
+        "code_list_id": "2.16.840.1.113883.3.666.5.1596",
+        "type": "conditions",
+        "definition": "diagnosis",
+        "status": "active",
+        "hard_status": false,
+        "negation": false,
+        "source_data_criteria": "DiagnosisActiveGestationalAge37Weeks",
+        "temporal_references": [
+          {
+            "type": "SDU",
+            "reference": "OccurrenceAInpatientEncounter1"
+          }
+        ]
+      }
+    },
+    {
+      "DiagnosisActiveSingleLivebornNewbornBornInHospital_precondition_33": {
+        "title": "Single Liveborn Newborn Born in Hospital",
+        "description": "Diagnosis, Active: Single Liveborn Newborn Born in Hospital",
+        "standard_category": "diagnosis_condition_problem",
+        "qds_data_type": "diagnosis_active",
+        "code_list_id": "2.16.840.1.113883.3.117.1.7.1.26",
+        "type": "conditions",
+        "definition": "diagnosis",
+        "status": "active",
+        "hard_status": false,
+        "negation": false,
+        "source_data_criteria": "DiagnosisActiveSingleLivebornNewbornBornInHospital",
+        "temporal_references": [
+          {
+            "type": "SDU",
+            "reference": "OccurrenceAInpatientEncounter1"
+          }
+        ]
+      }
+    },
+    {
+      "DiagnosisActiveSingleLiveBirth_precondition_35": {
+        "title": "Single Live Birth",
+        "description": "Diagnosis, Active: Single Live Birth",
+        "standard_category": "diagnosis_condition_problem",
+        "qds_data_type": "diagnosis_active",
+        "code_list_id": "2.16.840.1.113883.3.117.1.7.1.25",
+        "type": "conditions",
+        "definition": "diagnosis",
+        "status": "active",
+        "hard_status": false,
+        "negation": false,
+        "source_data_criteria": "DiagnosisActiveSingleLiveBirth",
+        "temporal_references": [
+          {
+            "type": "SDU",
+            "reference": "OccurrenceAInpatientEncounter1"
+          }
+        ]
+      }
+    },
+    {
+      "DiagnosisActiveLivebornBornInHospital_precondition_37": {
+        "title": "Liveborn Born In Hospital",
+        "description": "Diagnosis, Active: Liveborn Born In Hospital",
+        "standard_category": "diagnosis_condition_problem",
+        "qds_data_type": "diagnosis_active",
+        "code_list_id": "2.16.840.1.113883.3.117.1.7.1.29",
+        "type": "conditions",
+        "definition": "diagnosis",
+        "status": "active",
+        "hard_status": false,
+        "negation": false,
+        "source_data_criteria": "DiagnosisActiveLivebornBornInHospital",
+        "temporal_references": [
+          {
+            "type": "SDU",
+            "reference": "OccurrenceAInpatientEncounter1"
+          }
+        ]
+      }
+    },
+    {
+      "OccurrenceAInpatientEncounter1_precondition_39": {
+        "title": "Inpatient Encounter",
+        "description": "Encounter, Performed: Inpatient Encounter",
+        "standard_category": "encounter",
+        "qds_data_type": "encounter",
+        "code_list_id": "2.16.840.1.113883.3.117.1.7.1.23",
+        "type": "encounters",
+        "definition": "encounter",
+        "status": "performed",
+        "hard_status": false,
+        "negation": false,
+        "specific_occurrence": "A",
+        "specific_occurrence_const": "ENCOUNTER_PERFORMED_INPATIENT_ENCOUNTER",
+        "source_data_criteria": "OccurrenceAInpatientEncounter1",
+        "field_values": {
+          "REASON": {
+            "type": "CD",
+            "code_list_id": "2.16.840.1.113883.3.117.1.7.1.70",
+            "title": "Birth"
+          }
+        }
+      }
+    },
+    {
+      "DiagnosisActiveGalactosemia_precondition_23": {
+        "title": "Galactosemia",
+        "description": "Diagnosis, Active: Galactosemia",
+        "standard_category": "diagnosis_condition_problem",
+        "qds_data_type": "diagnosis_active",
+        "code_list_id": "2.16.840.1.113883.3.117.1.7.1.35",
+        "type": "conditions",
+        "definition": "diagnosis",
+        "status": "active",
+        "hard_status": false,
+        "negation": false,
+        "source_data_criteria": "DiagnosisActiveGalactosemia",
+        "temporal_references": [
+          {
+            "type": "SDU",
+            "reference": "OccurrenceAInpatientEncounter1"
+          }
+        ]
+      }
+    },
+    {
+      "ProcedurePerformedParenteralInfusion_precondition_25": {
+        "title": "Parenteral Infusion",
+        "description": "Procedure, Performed: Parenteral Infusion",
+        "standard_category": "procedure",
+        "qds_data_type": "procedure_performed",
+        "code_list_id": "2.16.840.1.113883.3.117.1.7.1.38",
+        "type": "procedures",
+        "definition": "procedure",
+        "status": "performed",
+        "hard_status": false,
+        "negation": false,
+        "source_data_criteria": "ProcedurePerformedParenteralInfusion",
+        "temporal_references": [
+          {
+            "type": "DURING",
+            "reference": "OccurrenceAInpatientEncounter1"
+          }
+        ]
+      }
+    }
+  ],
+  "oids": [
+    "2.16.840.1.113883.3.666.5.1596",
+    "2.16.840.1.113883.3.117.1.7.1.87",
+    "2.16.840.1.113883.3.117.1.7.1.84",
+    "2.16.840.1.113883.3.117.1.7.1.75",
+    "2.16.840.1.113883.3.117.1.7.1.70",
+    "2.16.840.1.113883.3.117.1.7.1.38",
+    "2.16.840.1.113883.3.117.1.7.1.35",
+    "2.16.840.1.113883.3.117.1.7.1.309",
+    "2.16.840.1.113883.3.117.1.7.1.30",
+    "2.16.840.1.113883.3.117.1.7.1.29",
+    "2.16.840.1.113883.3.117.1.7.1.27",
+    "2.16.840.1.113883.3.117.1.7.1.26",
+    "2.16.840.1.113883.3.117.1.7.1.25",
+    "2.16.840.1.113883.3.117.1.7.1.23"
+  ],
+  "population_ids": {
+    "IPP": "76A6E46B-39BF-4377-B57F-BE68CEDE031D",
+    "DENOM": "0F42D7F1-E6F3-48B7-89F9-BAB29C26BDCA",
+    "NUMER": "83077920-F251-4984-9D77-45373359FD07",
+    "DENEXCEP": "B1722AA5-D231-442B-9D6F-6E225F457B09",
+    "DENEX": "35D980DC-0276-4374-8081-BAC526A2E986"
+  }
+}

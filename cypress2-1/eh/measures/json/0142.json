@@ -1,0 +1,1620 @@
+{
+  "id": "8A4D92B2-3887-5DF3-0139-0D01C6626E46",
+  "nqf_id": "0142",
+  "hqmf_id": "8A4D92B2-3887-5DF3-0139-0D01C6626E46",
+  "hqmf_set_id": "BB481284-30DD-4383-928C-82385BBF1B17",
+  "hqmf_version_number": 1,
+  "cms_id": "CMS100v1",
+  "endorser": null,
+  "name": "Aspirin Prescribed at Discharge",
+  "description": "Acute myocardial infarction (AMI) patients who are prescribed aspirin at hospital discharge",
+  "type": "eh",
+  "category": "Acute Myocardial Infarction",
+  "steward": null,
+  "population": {
+    "conjunction": "and",
+    "items": [
+      {
+        "conjunction": "and",
+        "items": [
+          {
+            "title": "Hospital Measures - AMI",
+            "description": "Diagnosis, Active: Hospital Measures - AMI",
+            "standard_category": "diagnosis_condition_problem",
+            "qds_data_type": "diagnosis_active",
+            "code_list_id": "2.16.840.1.113883.3.666.5.3011",
+            "type": "conditions",
+            "definition": "diagnosis",
+            "status": "active",
+            "hard_status": false,
+            "negation": false,
+            "source_data_criteria": "DiagnosisActiveHospitalMeasuresAmi",
+            "field_values": {
+              "ORDINAL": {
+                "type": "CD",
+                "code_list_id": "2.16.840.1.113883.3.666.5.3010",
+                "title": "Hospital Measures - Principal"
+              }
+            },
+            "temporal_references": [
+              {
+                "type": "SDU",
+                "reference": {
+                  "title": "Hospital Measures-Encounter Inpatient",
+                  "description": "Encounter, Performed: Hospital Measures-Encounter Inpatient",
+                  "standard_category": "encounter",
+                  "qds_data_type": "encounter",
+                  "code_list_id": "2.16.840.1.113883.3.666.5.625",
+                  "type": "encounters",
+                  "definition": "encounter",
+                  "status": "performed",
+                  "hard_status": false,
+                  "negation": false,
+                  "specific_occurrence": "A",
+                  "specific_occurrence_const": "ENCOUNTER_PERFORMED_HOSPITAL_MEASURES_ENCOUNTER_INPATIENT",
+                  "source_data_criteria": "OccurrenceAHospitalMeasuresEncounterInpatient1"
+                }
+              }
+            ]
+          },
+          {
+            "title": "birth date",
+            "description": "Patient Characteristic Birthdate: birth date",
+            "standard_category": "individual_characteristic",
+            "qds_data_type": "individual_characteristic",
+            "code_list_id": "2.16.840.1.113883.3.560.100.4",
+            "property": "birthtime",
+            "type": "characteristic",
+            "definition": "patient_characteristic_birthdate",
+            "hard_status": false,
+            "negation": false,
+            "source_data_criteria": "PatientCharacteristicBirthdateBirthDate",
+            "inline_code_list": {
+              "LOINC": [
+                "21112-8"
+              ]
+            },
+            "temporal_references": [
+              {
+                "type": "SBS",
+                "reference": {
+                  "title": "Hospital Measures-Encounter Inpatient",
+                  "description": "Encounter, Performed: Hospital Measures-Encounter Inpatient",
+                  "standard_category": "encounter",
+                  "qds_data_type": "encounter",
+                  "code_list_id": "2.16.840.1.113883.3.666.5.625",
+                  "type": "encounters",
+                  "definition": "encounter",
+                  "status": "performed",
+                  "hard_status": false,
+                  "negation": false,
+                  "specific_occurrence": "A",
+                  "specific_occurrence_const": "ENCOUNTER_PERFORMED_HOSPITAL_MEASURES_ENCOUNTER_INPATIENT",
+                  "source_data_criteria": "OccurrenceAHospitalMeasuresEncounterInpatient1",
+                  "field_values": {
+                    "ADMISSION_DATETIME": {
+                      "type": "ANYNonNull"
+                    }
+                  }
+                },
+                "range": {
+                  "type": "IVL_PQ",
+                  "low": {
+                    "type": "PQ",
+                    "unit": "a",
+                    "value": "18",
+                    "inclusive?": true,
+                    "derived?": false
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "title": "Hospital Measures-Encounter Inpatient",
+            "description": "Encounter, Performed: Hospital Measures-Encounter Inpatient",
+            "standard_category": "encounter",
+            "qds_data_type": "encounter",
+            "code_list_id": "2.16.840.1.113883.3.666.5.625",
+            "type": "encounters",
+            "definition": "encounter",
+            "status": "performed",
+            "hard_status": false,
+            "negation": false,
+            "specific_occurrence": "A",
+            "specific_occurrence_const": "ENCOUNTER_PERFORMED_HOSPITAL_MEASURES_ENCOUNTER_INPATIENT",
+            "source_data_criteria": "OccurrenceAHospitalMeasuresEncounterInpatient1",
+            "field_values": {
+              "LENGTH_OF_STAY": {
+                "type": "IVL_PQ",
+                "high": {
+                  "type": "PQ",
+                  "unit": "d",
+                  "value": "120",
+                  "inclusive?": true,
+                  "derived?": false
+                }
+              }
+            }
+          },
+          {
+            "title": "Hospital Measures-Encounter Inpatient",
+            "description": "Encounter, Performed: Hospital Measures-Encounter Inpatient",
+            "standard_category": "encounter",
+            "qds_data_type": "encounter",
+            "code_list_id": "2.16.840.1.113883.3.666.5.625",
+            "type": "encounters",
+            "definition": "encounter",
+            "status": "performed",
+            "hard_status": false,
+            "negation": false,
+            "specific_occurrence": "A",
+            "specific_occurrence_const": "ENCOUNTER_PERFORMED_HOSPITAL_MEASURES_ENCOUNTER_INPATIENT",
+            "source_data_criteria": "OccurrenceAHospitalMeasuresEncounterInpatient1",
+            "field_values": {
+              "DISCHARGE_DATETIME": {
+                "type": "ANYNonNull"
+              }
+            },
+            "temporal_references": [
+              {
+                "type": "DURING",
+                "reference": "MeasurePeriod",
+                "title": "MeasurePeriod"
+              }
+            ]
+          }
+        ],
+        "negation": null,
+        "precondition_id": 61
+      }
+    ]
+  },
+  "denominator": {
+    "conjunction": "and",
+    "items": [
+
+    ]
+  },
+  "numerator": {
+    "conjunction": "and",
+    "items": [
+      {
+        "conjunction": "and",
+        "items": [
+          {
+            "title": "Hospital Measures-Aspirin",
+            "description": "Medication, Discharge: Hospital Measures-Aspirin",
+            "standard_category": "medication",
+            "qds_data_type": "medication_discharge",
+            "code_list_id": "2.16.840.1.113883.3.666.5.626",
+            "type": "medications",
+            "definition": "medication",
+            "status": "discharge",
+            "hard_status": true,
+            "negation": false,
+            "source_data_criteria": "MedicationDischargeHospitalMeasuresAspirin",
+            "temporal_references": [
+              {
+                "type": "DURING",
+                "reference": {
+                  "title": "Hospital Measures-Encounter Inpatient",
+                  "description": "Encounter, Performed: Hospital Measures-Encounter Inpatient",
+                  "standard_category": "encounter",
+                  "qds_data_type": "encounter",
+                  "code_list_id": "2.16.840.1.113883.3.666.5.625",
+                  "type": "encounters",
+                  "definition": "encounter",
+                  "status": "performed",
+                  "hard_status": false,
+                  "negation": false,
+                  "specific_occurrence": "A",
+                  "specific_occurrence_const": "ENCOUNTER_PERFORMED_HOSPITAL_MEASURES_ENCOUNTER_INPATIENT",
+                  "source_data_criteria": "OccurrenceAHospitalMeasuresEncounterInpatient1"
+                }
+              }
+            ]
+          }
+        ],
+        "negation": null,
+        "precondition_id": 51
+      }
+    ]
+  },
+  "exclusions": {
+    "conjunction": "and",
+    "items": [
+      {
+        "conjunction": "and",
+        "items": [
+          {
+            "conjunction": "or",
+            "items": [
+              {
+                "title": "Hospital Measures - Comfort Measures Only Intervention",
+                "description": "Intervention, Performed: Hospital Measures - Comfort Measures Only Intervention",
+                "standard_category": "procedure",
+                "qds_data_type": "procedure_performed",
+                "code_list_id": "1.3.6.1.4.1.33895.1.3.0.45",
+                "type": "interventions",
+                "definition": "intervention",
+                "status": "performed",
+                "hard_status": false,
+                "negation": false,
+                "source_data_criteria": "InterventionPerformedHospitalMeasuresComfortMeasuresOnlyIntervention",
+                "temporal_references": [
+                  {
+                    "type": "SDU",
+                    "reference": {
+                      "title": "Hospital Measures-Encounter Inpatient",
+                      "description": "Encounter, Performed: Hospital Measures-Encounter Inpatient",
+                      "standard_category": "encounter",
+                      "qds_data_type": "encounter",
+                      "code_list_id": "2.16.840.1.113883.3.666.5.625",
+                      "type": "encounters",
+                      "definition": "encounter",
+                      "status": "performed",
+                      "hard_status": false,
+                      "negation": false,
+                      "specific_occurrence": "A",
+                      "specific_occurrence_const": "ENCOUNTER_PERFORMED_HOSPITAL_MEASURES_ENCOUNTER_INPATIENT",
+                      "source_data_criteria": "OccurrenceAHospitalMeasuresEncounterInpatient1"
+                    }
+                  }
+                ]
+              },
+              {
+                "title": "Hospital Measures-Aspirin",
+                "description": "Medication, Adverse Effects: Hospital Measures-Aspirin",
+                "standard_category": "allergy",
+                "qds_data_type": "allergy",
+                "code_list_id": "2.16.840.1.113883.3.666.5.626",
+                "type": "medications",
+                "definition": "medication_adverse_effects",
+                "hard_status": false,
+                "negation": false,
+                "source_data_criteria": "MedicationAdverseEffectsHospitalMeasuresAspirin",
+                "temporal_references": [
+                  {
+                    "type": "SBE",
+                    "reference": {
+                      "title": "Hospital Measures-Encounter Inpatient",
+                      "description": "Encounter, Performed: Hospital Measures-Encounter Inpatient",
+                      "standard_category": "encounter",
+                      "qds_data_type": "encounter",
+                      "code_list_id": "2.16.840.1.113883.3.666.5.625",
+                      "type": "encounters",
+                      "definition": "encounter",
+                      "status": "performed",
+                      "hard_status": false,
+                      "negation": false,
+                      "specific_occurrence": "A",
+                      "specific_occurrence_const": "ENCOUNTER_PERFORMED_HOSPITAL_MEASURES_ENCOUNTER_INPATIENT",
+                      "source_data_criteria": "OccurrenceAHospitalMeasuresEncounterInpatient1"
+                    }
+                  }
+                ]
+              },
+              {
+                "title": "Hospital Measures - Home Hospice Care",
+                "description": "Transfer To: Hospital Measures - Home Hospice Care",
+                "standard_category": "",
+                "qds_data_type": "",
+                "type": "transfers",
+                "definition": "transfer_to",
+                "hard_status": false,
+                "negation": false,
+                "source_data_criteria": "TransferToHospitalMeasuresHomeHospiceCare",
+                "field_values": {
+                  "TRANSFER_TO": {
+                    "type": "CD",
+                    "code_list_id": "2.16.840.1.113883.3.666.5.3008",
+                    "title": "Hospital Measures - Home Hospice Care"
+                  }
+                },
+                "temporal_references": [
+                  {
+                    "type": "SAE",
+                    "reference": {
+                      "title": "Hospital Measures-Encounter Inpatient",
+                      "description": "Encounter, Performed: Hospital Measures-Encounter Inpatient",
+                      "standard_category": "encounter",
+                      "qds_data_type": "encounter",
+                      "code_list_id": "2.16.840.1.113883.3.666.5.625",
+                      "type": "encounters",
+                      "definition": "encounter",
+                      "status": "performed",
+                      "hard_status": false,
+                      "negation": false,
+                      "specific_occurrence": "A",
+                      "specific_occurrence_const": "ENCOUNTER_PERFORMED_HOSPITAL_MEASURES_ENCOUNTER_INPATIENT",
+                      "source_data_criteria": "OccurrenceAHospitalMeasuresEncounterInpatient1"
+                    },
+                    "range": {
+                      "type": "IVL_PQ",
+                      "high": {
+                        "type": "PQ",
+                        "unit": "d",
+                        "value": "1",
+                        "inclusive?": false,
+                        "derived?": false
+                      }
+                    }
+                  }
+                ]
+              },
+              {
+                "title": "Hospital Measures - Inpatient Hospice Care",
+                "description": "Transfer To: Hospital Measures - Inpatient Hospice Care",
+                "standard_category": "",
+                "qds_data_type": "",
+                "type": "transfers",
+                "definition": "transfer_to",
+                "hard_status": false,
+                "negation": false,
+                "source_data_criteria": "TransferToHospitalMeasuresInpatientHospiceCare",
+                "field_values": {
+                  "TRANSFER_TO": {
+                    "type": "CD",
+                    "code_list_id": "2.16.840.1.113883.3.666.5.3007",
+                    "title": "Hospital Measures - Inpatient Hospice Care"
+                  }
+                },
+                "temporal_references": [
+                  {
+                    "type": "SAE",
+                    "reference": {
+                      "title": "Hospital Measures-Encounter Inpatient",
+                      "description": "Encounter, Performed: Hospital Measures-Encounter Inpatient",
+                      "standard_category": "encounter",
+                      "qds_data_type": "encounter",
+                      "code_list_id": "2.16.840.1.113883.3.666.5.625",
+                      "type": "encounters",
+                      "definition": "encounter",
+                      "status": "performed",
+                      "hard_status": false,
+                      "negation": false,
+                      "specific_occurrence": "A",
+                      "specific_occurrence_const": "ENCOUNTER_PERFORMED_HOSPITAL_MEASURES_ENCOUNTER_INPATIENT",
+                      "source_data_criteria": "OccurrenceAHospitalMeasuresEncounterInpatient1"
+                    },
+                    "range": {
+                      "type": "IVL_PQ",
+                      "high": {
+                        "type": "PQ",
+                        "unit": "d",
+                        "value": "1",
+                        "inclusive?": false,
+                        "derived?": false
+                      }
+                    }
+                  }
+                ]
+              },
+              {
+                "title": "Hospital Measures-Encounter Inpatient",
+                "description": "Encounter, Performed: Hospital Measures-Encounter Inpatient",
+                "standard_category": "encounter",
+                "qds_data_type": "encounter",
+                "code_list_id": "2.16.840.1.113883.3.666.5.625",
+                "type": "encounters",
+                "definition": "encounter",
+                "status": "performed",
+                "hard_status": false,
+                "negation": false,
+                "specific_occurrence": "A",
+                "specific_occurrence_const": "ENCOUNTER_PERFORMED_HOSPITAL_MEASURES_ENCOUNTER_INPATIENT",
+                "source_data_criteria": "OccurrenceAHospitalMeasuresEncounterInpatient1",
+                "field_values": {
+                  "DISCHARGE_STATUS": {
+                    "type": "CD",
+                    "code_list_id": "2.16.840.1.113883.3.666.5.1106",
+                    "title": "Left Against Medical Advice"
+                  }
+                }
+              },
+              {
+                "title": "Hospital Measures-Encounter Inpatient",
+                "description": "Encounter, Performed: Hospital Measures-Encounter Inpatient",
+                "standard_category": "encounter",
+                "qds_data_type": "encounter",
+                "code_list_id": "2.16.840.1.113883.3.666.5.625",
+                "type": "encounters",
+                "definition": "encounter",
+                "status": "performed",
+                "hard_status": false,
+                "negation": false,
+                "specific_occurrence": "A",
+                "specific_occurrence_const": "ENCOUNTER_PERFORMED_HOSPITAL_MEASURES_ENCOUNTER_INPATIENT",
+                "source_data_criteria": "OccurrenceAHospitalMeasuresEncounterInpatient1",
+                "field_values": {
+                  "DISCHARGE_STATUS": {
+                    "type": "CD",
+                    "code_list_id": "2.16.840.1.113883.3.666.5.1146",
+                    "title": "Hospital Measures - Expired"
+                  }
+                }
+              },
+              {
+                "title": "Hospital Measures-Aspirin",
+                "description": "Medication, Order: Hospital Measures-Aspirin",
+                "standard_category": "medication",
+                "qds_data_type": "medication_order",
+                "code_list_id": "2.16.840.1.113883.3.666.5.626",
+                "type": "medications",
+                "definition": "medication",
+                "status": "ordered",
+                "hard_status": true,
+                "negation": false,
+                "source_data_criteria": "MedicationOrderHospitalMeasuresAspirin",
+                "field_values": {
+                  "REASON": {
+                    "type": "CD",
+                    "code_list_id": "2.16.840.1.113883.3.666.5.1149",
+                    "title": "Hospital Measures - Discontinue"
+                  }
+                },
+                "temporal_references": [
+                  {
+                    "type": "DURING",
+                    "reference": {
+                      "title": "Hospital Measures-Encounter Inpatient",
+                      "description": "Encounter, Performed: Hospital Measures-Encounter Inpatient",
+                      "standard_category": "encounter",
+                      "qds_data_type": "encounter",
+                      "code_list_id": "2.16.840.1.113883.3.666.5.625",
+                      "type": "encounters",
+                      "definition": "encounter",
+                      "status": "performed",
+                      "hard_status": false,
+                      "negation": false,
+                      "specific_occurrence": "A",
+                      "specific_occurrence_const": "ENCOUNTER_PERFORMED_HOSPITAL_MEASURES_ENCOUNTER_INPATIENT",
+                      "source_data_criteria": "OccurrenceAHospitalMeasuresEncounterInpatient1"
+                    }
+                  }
+                ]
+              },
+              {
+                "title": "Hospital Measures-Aspirin",
+                "description": "Medication, Active: Hospital Measures-Aspirin",
+                "standard_category": "medication",
+                "qds_data_type": "medication_active",
+                "code_list_id": "2.16.840.1.113883.3.666.5.626",
+                "type": "medications",
+                "definition": "medication",
+                "status": "active",
+                "hard_status": false,
+                "negation": true,
+                "negation_code_list_id": "2.16.840.1.113883.3.117.1.7.1.473",
+                "source_data_criteria": "MedicationActiveHospitalMeasuresAspirin",
+                "temporal_references": [
+                  {
+                    "type": "DURING",
+                    "reference": {
+                      "title": "Hospital Measures-Encounter Inpatient",
+                      "description": "Encounter, Performed: Hospital Measures-Encounter Inpatient",
+                      "standard_category": "encounter",
+                      "qds_data_type": "encounter",
+                      "code_list_id": "2.16.840.1.113883.3.666.5.625",
+                      "type": "encounters",
+                      "definition": "encounter",
+                      "status": "performed",
+                      "hard_status": false,
+                      "negation": false,
+                      "specific_occurrence": "A",
+                      "specific_occurrence_const": "ENCOUNTER_PERFORMED_HOSPITAL_MEASURES_ENCOUNTER_INPATIENT",
+                      "source_data_criteria": "OccurrenceAHospitalMeasuresEncounterInpatient1",
+                      "field_values": {
+                        "DISCHARGE_DATETIME": {
+                          "type": "ANYNonNull"
+                        }
+                      }
+                    }
+                  }
+                ]
+              },
+              {
+                "title": "Hospital Measures-Aspirin",
+                "description": "Medication, Order: Hospital Measures-Aspirin",
+                "standard_category": "medication",
+                "qds_data_type": "medication_order",
+                "code_list_id": "2.16.840.1.113883.3.666.5.626",
+                "type": "medications",
+                "definition": "medication",
+                "status": "ordered",
+                "hard_status": true,
+                "negation": true,
+                "negation_code_list_id": "2.16.840.1.113883.3.526.2.313",
+                "source_data_criteria": "MedicationOrderHospitalMeasuresAspirin",
+                "temporal_references": [
+                  {
+                    "type": "DURING",
+                    "reference": {
+                      "title": "Hospital Measures-Encounter Inpatient",
+                      "description": "Encounter, Performed: Hospital Measures-Encounter Inpatient",
+                      "standard_category": "encounter",
+                      "qds_data_type": "encounter",
+                      "code_list_id": "2.16.840.1.113883.3.666.5.625",
+                      "type": "encounters",
+                      "definition": "encounter",
+                      "status": "performed",
+                      "hard_status": false,
+                      "negation": false,
+                      "specific_occurrence": "A",
+                      "specific_occurrence_const": "ENCOUNTER_PERFORMED_HOSPITAL_MEASURES_ENCOUNTER_INPATIENT",
+                      "source_data_criteria": "OccurrenceAHospitalMeasuresEncounterInpatient1",
+                      "field_values": {
+                        "DISCHARGE_DATETIME": {
+                          "type": "ANYNonNull"
+                        }
+                      }
+                    }
+                  }
+                ]
+              },
+              {
+                "title": "Hospital Measures-Aspirin",
+                "description": "Medication, Active: Hospital Measures-Aspirin",
+                "standard_category": "medication",
+                "qds_data_type": "medication_active",
+                "code_list_id": "2.16.840.1.113883.3.666.5.626",
+                "type": "medications",
+                "definition": "medication",
+                "status": "active",
+                "hard_status": false,
+                "negation": true,
+                "negation_code_list_id": "2.16.840.1.113883.3.117.1.7.1.474",
+                "source_data_criteria": "MedicationActiveHospitalMeasuresAspirin",
+                "temporal_references": [
+                  {
+                    "type": "DURING",
+                    "reference": {
+                      "title": "Hospital Measures-Encounter Inpatient",
+                      "description": "Encounter, Performed: Hospital Measures-Encounter Inpatient",
+                      "standard_category": "encounter",
+                      "qds_data_type": "encounter",
+                      "code_list_id": "2.16.840.1.113883.3.666.5.625",
+                      "type": "encounters",
+                      "definition": "encounter",
+                      "status": "performed",
+                      "hard_status": false,
+                      "negation": false,
+                      "specific_occurrence": "A",
+                      "specific_occurrence_const": "ENCOUNTER_PERFORMED_HOSPITAL_MEASURES_ENCOUNTER_INPATIENT",
+                      "source_data_criteria": "OccurrenceAHospitalMeasuresEncounterInpatient1",
+                      "field_values": {
+                        "DISCHARGE_DATETIME": {
+                          "type": "ANYNonNull"
+                        }
+                      }
+                    }
+                  }
+                ]
+              },
+              {
+                "title": "Hospital Measures-Aspirin",
+                "description": "Medication, Order: Hospital Measures-Aspirin",
+                "standard_category": "medication",
+                "qds_data_type": "medication_order",
+                "code_list_id": "2.16.840.1.113883.3.666.5.626",
+                "type": "medications",
+                "definition": "medication",
+                "status": "ordered",
+                "hard_status": true,
+                "negation": true,
+                "negation_code_list_id": "2.16.840.1.113883.3.526.2.311",
+                "source_data_criteria": "MedicationOrderHospitalMeasuresAspirin",
+                "temporal_references": [
+                  {
+                    "type": "DURING",
+                    "reference": {
+                      "title": "Hospital Measures-Encounter Inpatient",
+                      "description": "Encounter, Performed: Hospital Measures-Encounter Inpatient",
+                      "standard_category": "encounter",
+                      "qds_data_type": "encounter",
+                      "code_list_id": "2.16.840.1.113883.3.666.5.625",
+                      "type": "encounters",
+                      "definition": "encounter",
+                      "status": "performed",
+                      "hard_status": false,
+                      "negation": false,
+                      "specific_occurrence": "A",
+                      "specific_occurrence_const": "ENCOUNTER_PERFORMED_HOSPITAL_MEASURES_ENCOUNTER_INPATIENT",
+                      "source_data_criteria": "OccurrenceAHospitalMeasuresEncounterInpatient1",
+                      "field_values": {
+                        "DISCHARGE_DATETIME": {
+                          "type": "ANYNonNull"
+                        }
+                      }
+                    }
+                  }
+                ]
+              },
+              {
+                "title": "Hospital Measures - Warfarin Anticoagulants",
+                "description": "Medication, Discharge: Hospital Measures - Warfarin Anticoagulants",
+                "standard_category": "medication",
+                "qds_data_type": "medication_discharge",
+                "code_list_id": "2.16.840.1.113883.3.666.5.636",
+                "type": "medications",
+                "definition": "medication",
+                "status": "discharge",
+                "hard_status": true,
+                "negation": false,
+                "source_data_criteria": "MedicationDischargeHospitalMeasuresWarfarinAnticoagulants",
+                "temporal_references": [
+                  {
+                    "type": "DURING",
+                    "reference": {
+                      "title": "Hospital Measures-Encounter Inpatient",
+                      "description": "Encounter, Performed: Hospital Measures-Encounter Inpatient",
+                      "standard_category": "encounter",
+                      "qds_data_type": "encounter",
+                      "code_list_id": "2.16.840.1.113883.3.666.5.625",
+                      "type": "encounters",
+                      "definition": "encounter",
+                      "status": "performed",
+                      "hard_status": false,
+                      "negation": false,
+                      "specific_occurrence": "A",
+                      "specific_occurrence_const": "ENCOUNTER_PERFORMED_HOSPITAL_MEASURES_ENCOUNTER_INPATIENT",
+                      "source_data_criteria": "OccurrenceAHospitalMeasuresEncounterInpatient1"
+                    }
+                  }
+                ]
+              },
+              {
+                "title": "Hospital Measures-Aspirin",
+                "description": "Medication, Order: Hospital Measures-Aspirin",
+                "standard_category": "medication",
+                "qds_data_type": "medication_order",
+                "code_list_id": "2.16.840.1.113883.3.666.5.626",
+                "type": "medications",
+                "definition": "medication",
+                "status": "ordered",
+                "hard_status": true,
+                "negation": false,
+                "source_data_criteria": "MedicationOrderHospitalMeasuresAspirin",
+                "field_values": {
+                  "REASON": {
+                    "type": "CD",
+                    "code_list_id": "2.16.840.1.113883.3.666.5.1145",
+                    "title": "Hospital Measures - Hold"
+                  }
+                },
+                "temporal_references": [
+                  {
+                    "type": "DURING",
+                    "reference": {
+                      "title": "Hospital Measures-Encounter Inpatient",
+                      "description": "Encounter, Performed: Hospital Measures-Encounter Inpatient",
+                      "standard_category": "encounter",
+                      "qds_data_type": "encounter",
+                      "code_list_id": "2.16.840.1.113883.3.666.5.625",
+                      "type": "encounters",
+                      "definition": "encounter",
+                      "status": "performed",
+                      "hard_status": false,
+                      "negation": false,
+                      "specific_occurrence": "A",
+                      "specific_occurrence_const": "ENCOUNTER_PERFORMED_HOSPITAL_MEASURES_ENCOUNTER_INPATIENT",
+                      "source_data_criteria": "OccurrenceAHospitalMeasuresEncounterInpatient1"
+                    }
+                  }
+                ]
+              },
+              {
+                "title": "Hospital Measures-Aspirin",
+                "description": "Medication, Allergy: Hospital Measures-Aspirin",
+                "standard_category": "allergy",
+                "qds_data_type": "allergy",
+                "code_list_id": "2.16.840.1.113883.3.666.5.626",
+                "type": "medications",
+                "definition": "medication_allergy",
+                "hard_status": false,
+                "negation": false,
+                "source_data_criteria": "MedicationAllergyHospitalMeasuresAspirin",
+                "temporal_references": [
+                  {
+                    "type": "SBE",
+                    "reference": {
+                      "title": "Hospital Measures-Encounter Inpatient",
+                      "description": "Encounter, Performed: Hospital Measures-Encounter Inpatient",
+                      "standard_category": "encounter",
+                      "qds_data_type": "encounter",
+                      "code_list_id": "2.16.840.1.113883.3.666.5.625",
+                      "type": "encounters",
+                      "definition": "encounter",
+                      "status": "performed",
+                      "hard_status": false,
+                      "negation": false,
+                      "specific_occurrence": "A",
+                      "specific_occurrence_const": "ENCOUNTER_PERFORMED_HOSPITAL_MEASURES_ENCOUNTER_INPATIENT",
+                      "source_data_criteria": "OccurrenceAHospitalMeasuresEncounterInpatient1"
+                    }
+                  }
+                ]
+              },
+              {
+                "title": "Hospital Measures-Aspirin",
+                "description": "Medication, Intolerance: Hospital Measures-Aspirin",
+                "standard_category": "allergy",
+                "qds_data_type": "allergy",
+                "code_list_id": "2.16.840.1.113883.3.666.5.626",
+                "type": "medications",
+                "definition": "medication_intolerance",
+                "hard_status": false,
+                "negation": false,
+                "source_data_criteria": "MedicationIntoleranceHospitalMeasuresAspirin",
+                "temporal_references": [
+                  {
+                    "type": "SBE",
+                    "reference": {
+                      "title": "Hospital Measures-Encounter Inpatient",
+                      "description": "Encounter, Performed: Hospital Measures-Encounter Inpatient",
+                      "standard_category": "encounter",
+                      "qds_data_type": "encounter",
+                      "code_list_id": "2.16.840.1.113883.3.666.5.625",
+                      "type": "encounters",
+                      "definition": "encounter",
+                      "status": "performed",
+                      "hard_status": false,
+                      "negation": false,
+                      "specific_occurrence": "A",
+                      "specific_occurrence_const": "ENCOUNTER_PERFORMED_HOSPITAL_MEASURES_ENCOUNTER_INPATIENT",
+                      "source_data_criteria": "OccurrenceAHospitalMeasuresEncounterInpatient1"
+                    }
+                  }
+                ]
+              },
+              {
+                "title": "Hospital Measures-Encounter Inpatient",
+                "description": "Encounter, Performed: Hospital Measures-Encounter Inpatient",
+                "standard_category": "encounter",
+                "qds_data_type": "encounter",
+                "code_list_id": "2.16.840.1.113883.3.666.5.625",
+                "type": "encounters",
+                "definition": "encounter",
+                "status": "performed",
+                "hard_status": false,
+                "negation": false,
+                "specific_occurrence": "A",
+                "specific_occurrence_const": "ENCOUNTER_PERFORMED_HOSPITAL_MEASURES_ENCOUNTER_INPATIENT",
+                "source_data_criteria": "OccurrenceAHospitalMeasuresEncounterInpatient1",
+                "field_values": {
+                  "DISCHARGE_STATUS": {
+                    "type": "CD",
+                    "code_list_id": "2.16.840.1.113883.3.117.1.7.1.87",
+                    "title": "Discharge To Another Hospital"
+                  }
+                }
+              },
+              {
+                "conjunction": "and",
+                "items": [
+                  {
+                    "title": "Clinical Trial Participant",
+                    "description": "Patient Characteristic: Clinical Trial Participant",
+                    "standard_category": "individual_characteristic",
+                    "qds_data_type": "individual_characteristic",
+                    "code_list_id": "2.16.840.1.113883.3.526.2.643",
+                    "type": "characteristic",
+                    "definition": "patient_characteristic",
+                    "hard_status": false,
+                    "negation": false,
+                    "specific_occurrence": "A",
+                    "specific_occurrence_const": "PATIENT_CHARACTERISTIC_CLINICAL_TRIAL_PARTICIPANT",
+                    "source_data_criteria": "OccurrenceAClinicalTrialParticipant2",
+                    "temporal_references": [
+                      {
+                        "type": "SBE",
+                        "reference": {
+                          "title": "Hospital Measures-Encounter Inpatient",
+                          "description": "Encounter, Performed: Hospital Measures-Encounter Inpatient",
+                          "standard_category": "encounter",
+                          "qds_data_type": "encounter",
+                          "code_list_id": "2.16.840.1.113883.3.666.5.625",
+                          "type": "encounters",
+                          "definition": "encounter",
+                          "status": "performed",
+                          "hard_status": false,
+                          "negation": false,
+                          "specific_occurrence": "A",
+                          "specific_occurrence_const": "ENCOUNTER_PERFORMED_HOSPITAL_MEASURES_ENCOUNTER_INPATIENT",
+                          "source_data_criteria": "OccurrenceAHospitalMeasuresEncounterInpatient1"
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "conjunction": "or",
+                    "items": [
+                      {
+                        "title": "Clinical Trial Participant",
+                        "description": "Patient Characteristic: Clinical Trial Participant",
+                        "standard_category": "individual_characteristic",
+                        "qds_data_type": "individual_characteristic",
+                        "code_list_id": "2.16.840.1.113883.3.526.2.643",
+                        "type": "characteristic",
+                        "definition": "patient_characteristic",
+                        "hard_status": false,
+                        "negation": false,
+                        "specific_occurrence": "A",
+                        "specific_occurrence_const": "PATIENT_CHARACTERISTIC_CLINICAL_TRIAL_PARTICIPANT",
+                        "source_data_criteria": "OccurrenceAClinicalTrialParticipant2",
+                        "temporal_references": [
+                          {
+                            "type": "EBS",
+                            "reference": {
+                              "title": "Hospital Measures-Encounter Inpatient",
+                              "description": "Encounter, Performed: Hospital Measures-Encounter Inpatient",
+                              "standard_category": "encounter",
+                              "qds_data_type": "encounter",
+                              "code_list_id": "2.16.840.1.113883.3.666.5.625",
+                              "type": "encounters",
+                              "definition": "encounter",
+                              "status": "performed",
+                              "hard_status": false,
+                              "negation": false,
+                              "specific_occurrence": "A",
+                              "specific_occurrence_const": "ENCOUNTER_PERFORMED_HOSPITAL_MEASURES_ENCOUNTER_INPATIENT",
+                              "source_data_criteria": "OccurrenceAHospitalMeasuresEncounterInpatient1"
+                            }
+                          }
+                        ]
+                      }
+                    ],
+                    "negation": true,
+                    "precondition_id": 43
+                  }
+                ],
+                "negation": null,
+                "precondition_id": 44
+              }
+            ],
+            "negation": null,
+            "precondition_id": 46
+          }
+        ],
+        "negation": null,
+        "precondition_id": 48
+      }
+    ]
+  },
+  "map_fn": "function() {\n        var patient = this;\n        var effective_date = <%= effective_date %>;\n\n        hqmfjs = {}\n        <%= init_js_frameworks %>\n        \n        \n      var patient_api = new hQuery.Patient(patient);\n\n      \n\n      // clear out logger\n      if (typeof Logger != 'undefined') { Logger.logger = []; Logger.rationale={};}\n      // turn on logging if it is enabled\n      if (Logger.enabled) enableLogging();\n      \n      \n        // #########################\n        // ##### DATA ELEMENTS #####\n        // #########################\n\n        OidDictionary = <%= oid_dictionary %>;\n        \n        // Measure variables\nvar MeasurePeriod = {\n  \"low\": new TS(\"201201010000\", null, true),\n  \"high\": new TS(\"201212312359\", null, true)\n}\nhqmfjs.MeasurePeriod = function(patient) {\n  return [new hQuery.CodedEntry(\n    {\n      \"start_time\": MeasurePeriod.low.asDate().getTime()/1000,\n      \"end_time\": MeasurePeriod.high.asDate().getTime()/1000,\n      \"codes\": {}\n    }\n  )];\n}\nif (typeof effective_date === 'number') {\n  MeasurePeriod.high.date = new Date(1000*effective_date);\n  // add one minute before pulling off the year.  This turns 12-31-2012 23:59 into 1-1-2013 00:00 => 1-1-2012 00:00\n  MeasurePeriod.low.date = new Date(1000*(effective_date+60));\n  MeasurePeriod.low.date.setFullYear(MeasurePeriod.low.date.getFullYear()-1);\n}\n\n// Data critera\nhqmfjs.OccurrenceAHospitalMeasuresEncounterInpatient1 = function(patient, initialSpecificContext) {\n  var events = patient.encounters();\n  events.specific_occurrence = 'OccurrenceAHospitalMeasuresEncounterInpatient1'\n  events = events.withStatuses([\"performed\"]);\n  events = events.withoutNegation();\n  var codes = getCodes(\"2.16.840.1.113883.3.666.5.625\");\n  var start = null;\n  var end = null;\n  events = events.match(codes, start, end, true);\n\n  events.specificContext=new hqmf.SpecificOccurrence(Row.buildForDataCriteria(events.specific_occurrence, events))\n  return events;\n}\n\nhqmfjs.OccurrenceAClinicalTrialParticipant2 = function(patient, initialSpecificContext) {\n  var events = patient.allProblems();\n  events.specific_occurrence = 'OccurrenceAClinicalTrialParticipant2'\n  events = events.withoutNegation();\n  var codes = getCodes(\"2.16.840.1.113883.3.526.2.643\");\n  var start = null;\n  var end = null;\n  events = events.match(codes, start, end, true);\n\n  events.specificContext=new hqmf.SpecificOccurrence(Row.buildForDataCriteria(events.specific_occurrence, events))\n  return events;\n}\n\nhqmfjs.EncounterPerformedHospitalMeasuresEncounterInpatient = function(patient, initialSpecificContext) {\n  var events = patient.encounters();\n  events = events.withStatuses([\"performed\"]);\n  events = events.withoutNegation();\n  var codes = getCodes(\"2.16.840.1.113883.3.666.5.625\");\n  var start = null;\n  var end = null;\n  events = events.match(codes, start, end, true);\n\n  events.specificContext=hqmf.SpecificsManager.identity()\n  return events;\n}\n\nhqmfjs.PatientCharacteristicClinicalTrialParticipant = function(patient, initialSpecificContext) {\n  var events = patient.allProblems();\n  events = events.withoutNegation();\n  var codes = getCodes(\"2.16.840.1.113883.3.526.2.643\");\n  var start = null;\n  var end = null;\n  events = events.match(codes, start, end, true);\n\n  events.specificContext=hqmf.SpecificsManager.identity()\n  return events;\n}\n\nhqmfjs.MedicationActiveNotDoneMedicalReason = function(patient, initialSpecificContext) {\n  var events = patient.allMedications();\n  events = events.withStatuses([\"active\"]);\n  events = events.withNegation();\n  var codes = getCodes(\"2.16.840.1.113883.3.117.1.7.1.473\");\n  var start = null;\n  var end = null;\n  events = events.match(codes, start, end, true);\n\n  events.specificContext=hqmf.SpecificsManager.identity()\n  return events;\n}\n\nhqmfjs.MedicationOrderNotDoneMedicalReason = function(patient, initialSpecificContext) {\n  var events = patient.allMedications();\n  events = events.withStatuses([\"ordered\"], false);\n  events = events.withNegation();\n  var codes = getCodes(\"2.16.840.1.113883.3.526.2.313\");\n  var start = null;\n  var end = null;\n  events = events.match(codes, start, end, true);\n\n  events.specificContext=hqmf.SpecificsManager.identity()\n  return events;\n}\n\nhqmfjs.MedicationActiveNotDonePatientReason = function(patient, initialSpecificContext) {\n  var events = patient.allMedications();\n  events = events.withStatuses([\"active\"]);\n  events = events.withNegation();\n  var codes = getCodes(\"2.16.840.1.113883.3.117.1.7.1.474\");\n  var start = null;\n  var end = null;\n  events = events.match(codes, start, end, true);\n\n  events.specificContext=hqmf.SpecificsManager.identity()\n  return events;\n}\n\nhqmfjs.MedicationOrderNotDonePatientReason = function(patient, initialSpecificContext) {\n  var events = patient.allMedications();\n  events = events.withStatuses([\"ordered\"], false);\n  events = events.withNegation();\n  var codes = getCodes(\"2.16.840.1.113883.3.526.2.311\");\n  var start = null;\n  var end = null;\n  events = events.match(codes, start, end, true);\n\n  events.specificContext=hqmf.SpecificsManager.identity()\n  return events;\n}\n\nhqmfjs.OccurrenceAHospitalMeasuresEncounterInpatient1 = function(patient, initialSpecificContext) {\n  var events = patient.encounters();\n  events.specific_occurrence = 'OccurrenceAHospitalMeasuresEncounterInpatient1'\n  events = events.withStatuses([\"performed\"]);\n  events = events.withoutNegation();\n  var codes = getCodes(\"2.16.840.1.113883.3.666.5.625\");\n  var start = null;\n  var end = null;\n  events = events.match(codes, start, end, true);\n\n  events.specificContext=new hqmf.SpecificOccurrence(Row.buildForDataCriteria(events.specific_occurrence, events))\n  return events;\n}\n\nhqmfjs.InterventionPerformedHospitalMeasuresComfortMeasuresOnlyIntervention_precondition_3 = function(patient, initialSpecificContext) {\n  var events = patient.allProcedures();\n  events = events.withStatuses([\"performed\"]);\n  events = events.withoutNegation();\n  var codes = getCodes(\"1.3.6.1.4.1.33895.1.3.0.45\");\n  var start = null;\n  var end = null;\n  events = events.match(codes, start, end, true);\n\n  if (events.length > 0) events = SDU(events, hqmfjs.OccurrenceAHospitalMeasuresEncounterInpatient1(patient));\n  else events.specificContext=hqmf.SpecificsManager.empty();\n  return events;\n}\n\nhqmfjs.MedicationAdverseEffectsHospitalMeasuresAspirin_precondition_5 = function(patient, initialSpecificContext) {\n  var events = patient.allergies();\n  events = events.withoutNegation();\n  var codes = getCodes(\"2.16.840.1.113883.3.666.5.626\");\n  var start = null;\n  var end = null;\n  events = events.match(codes, start, end, true);\n\n  if (events.length > 0) events = SBE(events, hqmfjs.OccurrenceAHospitalMeasuresEncounterInpatient1(patient));\n  else events.specificContext=hqmf.SpecificsManager.empty();\n  return events;\n}\n\nhqmfjs.TransferToHospitalMeasuresHomeHospiceCare_precondition_7 = function(patient, initialSpecificContext) {\n  var events = patient.encounters();\n  events = events.withoutNegation();\n  var codes = null;\n  var start = null;\n  var end = null;\n  events = events.match(codes, start, end, true);\n\n  events = filterEventsByField(events, \"transferTo\", new CodeList(getCodes(\"2.16.840.1.113883.3.666.5.3008\")));\n  if (events.length > 0) events = SAE(events, hqmfjs.OccurrenceAHospitalMeasuresEncounterInpatient1(patient), new IVL_PQ(null, new PQ(1, \"d\", false)));\n  else events.specificContext=hqmf.SpecificsManager.empty();\n  return events;\n}\n\nhqmfjs.TransferToHospitalMeasuresInpatientHospiceCare_precondition_9 = function(patient, initialSpecificContext) {\n  var events = patient.encounters();\n  events = events.withoutNegation();\n  var codes = null;\n  var start = null;\n  var end = null;\n  events = events.match(codes, start, end, true);\n\n  events = filterEventsByField(events, \"transferTo\", new CodeList(getCodes(\"2.16.840.1.113883.3.666.5.3007\")));\n  if (events.length > 0) events = SAE(events, hqmfjs.OccurrenceAHospitalMeasuresEncounterInpatient1(patient), new IVL_PQ(null, new PQ(1, \"d\", false)));\n  else events.specificContext=hqmf.SpecificsManager.empty();\n  return events;\n}\n\nhqmfjs.OccurrenceAHospitalMeasuresEncounterInpatient1_precondition_11 = function(patient, initialSpecificContext) {\n  var events = patient.encounters();\n  events.specific_occurrence = 'OccurrenceAHospitalMeasuresEncounterInpatient1'\n  events = events.withStatuses([\"performed\"]);\n  events = events.withoutNegation();\n  var codes = getCodes(\"2.16.840.1.113883.3.666.5.625\");\n  var start = null;\n  var end = null;\n  events = events.match(codes, start, end, true);\n\n  events = filterEventsByField(events, \"dischargeDisposition\", new CodeList(getCodes(\"2.16.840.1.113883.3.666.5.1106\")));\n  events.specificContext=new hqmf.SpecificOccurrence(Row.buildForDataCriteria(events.specific_occurrence, events))\n  return events;\n}\n\nhqmfjs.OccurrenceAHospitalMeasuresEncounterInpatient1_precondition_13 = function(patient, initialSpecificContext) {\n  var events = patient.encounters();\n  events.specific_occurrence = 'OccurrenceAHospitalMeasuresEncounterInpatient1'\n  events = events.withStatuses([\"performed\"]);\n  events = events.withoutNegation();\n  var codes = getCodes(\"2.16.840.1.113883.3.666.5.625\");\n  var start = null;\n  var end = null;\n  events = events.match(codes, start, end, true);\n\n  events = filterEventsByField(events, \"dischargeDisposition\", new CodeList(getCodes(\"2.16.840.1.113883.3.666.5.1146\")));\n  events.specificContext=new hqmf.SpecificOccurrence(Row.buildForDataCriteria(events.specific_occurrence, events))\n  return events;\n}\n\nhqmfjs.MedicationOrderHospitalMeasuresAspirin_precondition_15 = function(patient, initialSpecificContext) {\n  var events = patient.allMedications();\n  events = events.withStatuses([\"ordered\"], false);\n  events = events.withoutNegation();\n  var codes = getCodes(\"2.16.840.1.113883.3.666.5.626\");\n  var start = null;\n  var end = null;\n  events = events.match(codes, start, end, true);\n\n  events = filterEventsByField(events, \"reason\", new CodeList(getCodes(\"2.16.840.1.113883.3.666.5.1149\")));\n  if (events.length > 0) events = DURING(events, hqmfjs.OccurrenceAHospitalMeasuresEncounterInpatient1(patient));\n  else events.specificContext=hqmf.SpecificsManager.empty();\n  return events;\n}\n\nhqmfjs.OccurrenceAHospitalMeasuresEncounterInpatient1_precondition_17 = function(patient, initialSpecificContext) {\n  var events = patient.encounters();\n  events.specific_occurrence = 'OccurrenceAHospitalMeasuresEncounterInpatient1'\n  events = events.withStatuses([\"performed\"]);\n  events = events.withoutNegation();\n  var codes = getCodes(\"2.16.840.1.113883.3.666.5.625\");\n  var start = null;\n  var end = null;\n  events = events.match(codes, start, end, true);\n\n  events = adjustBoundsForField(events, \"dischargeTime\", new ANYNonNull());\n  events.specificContext=new hqmf.SpecificOccurrence(Row.buildForDataCriteria(events.specific_occurrence, events))\n  return events;\n}\n\nhqmfjs.MedicationActiveHospitalMeasuresAspirin_precondition_18 = function(patient, initialSpecificContext) {\n  var events = patient.allMedications();\n  events = events.withStatuses([\"active\"]);\n  events = events.withNegation(getCodes(\"2.16.840.1.113883.3.117.1.7.1.473\"));\n  var codes = getCodes(\"2.16.840.1.113883.3.666.5.626\");\n  var start = null;\n  var end = null;\n  events = events.match(codes, start, end, true);\n\n  if (events.length > 0) events = DURING(events, hqmfjs.OccurrenceAHospitalMeasuresEncounterInpatient1_precondition_17(patient));\n  else events.specificContext=hqmf.SpecificsManager.empty();\n  return events;\n}\n\nhqmfjs.OccurrenceAHospitalMeasuresEncounterInpatient1_precondition_20 = function(patient, initialSpecificContext) {\n  var events = patient.encounters();\n  events.specific_occurrence = 'OccurrenceAHospitalMeasuresEncounterInpatient1'\n  events = events.withStatuses([\"performed\"]);\n  events = events.withoutNegation();\n  var codes = getCodes(\"2.16.840.1.113883.3.666.5.625\");\n  var start = null;\n  var end = null;\n  events = events.match(codes, start, end, true);\n\n  events = adjustBoundsForField(events, \"dischargeTime\", new ANYNonNull());\n  events.specificContext=new hqmf.SpecificOccurrence(Row.buildForDataCriteria(events.specific_occurrence, events))\n  return events;\n}\n\nhqmfjs.MedicationOrderHospitalMeasuresAspirin_precondition_21 = function(patient, initialSpecificContext) {\n  var events = patient.allMedications();\n  events = events.withStatuses([\"ordered\"], false);\n  events = events.withNegation(getCodes(\"2.16.840.1.113883.3.526.2.313\"));\n  var codes = getCodes(\"2.16.840.1.113883.3.666.5.626\");\n  var start = null;\n  var end = null;\n  events = events.match(codes, start, end, true);\n\n  if (events.length > 0) events = DURING(events, hqmfjs.OccurrenceAHospitalMeasuresEncounterInpatient1_precondition_20(patient));\n  else events.specificContext=hqmf.SpecificsManager.empty();\n  return events;\n}\n\nhqmfjs.OccurrenceAHospitalMeasuresEncounterInpatient1_precondition_23 = function(patient, initialSpecificContext) {\n  var events = patient.encounters();\n  events.specific_occurrence = 'OccurrenceAHospitalMeasuresEncounterInpatient1'\n  events = events.withStatuses([\"performed\"]);\n  events = events.withoutNegation();\n  var codes = getCodes(\"2.16.840.1.113883.3.666.5.625\");\n  var start = null;\n  var end = null;\n  events = events.match(codes, start, end, true);\n\n  events = adjustBoundsForField(events, \"dischargeTime\", new ANYNonNull());\n  events.specificContext=new hqmf.SpecificOccurrence(Row.buildForDataCriteria(events.specific_occurrence, events))\n  return events;\n}\n\nhqmfjs.MedicationActiveHospitalMeasuresAspirin_precondition_24 = function(patient, initialSpecificContext) {\n  var events = patient.allMedications();\n  events = events.withStatuses([\"active\"]);\n  events = events.withNegation(getCodes(\"2.16.840.1.113883.3.117.1.7.1.474\"));\n  var codes = getCodes(\"2.16.840.1.113883.3.666.5.626\");\n  var start = null;\n  var end = null;\n  events = events.match(codes, start, end, true);\n\n  if (events.length > 0) events = DURING(events, hqmfjs.OccurrenceAHospitalMeasuresEncounterInpatient1_precondition_23(patient));\n  else events.specificContext=hqmf.SpecificsManager.empty();\n  return events;\n}\n\nhqmfjs.OccurrenceAHospitalMeasuresEncounterInpatient1_precondition_26 = function(patient, initialSpecificContext) {\n  var events = patient.encounters();\n  events.specific_occurrence = 'OccurrenceAHospitalMeasuresEncounterInpatient1'\n  events = events.withStatuses([\"performed\"]);\n  events = events.withoutNegation();\n  var codes = getCodes(\"2.16.840.1.113883.3.666.5.625\");\n  var start = null;\n  var end = null;\n  events = events.match(codes, start, end, true);\n\n  events = adjustBoundsForField(events, \"dischargeTime\", new ANYNonNull());\n  events.specificContext=new hqmf.SpecificOccurrence(Row.buildForDataCriteria(events.specific_occurrence, events))\n  return events;\n}\n\nhqmfjs.MedicationOrderHospitalMeasuresAspirin_precondition_27 = function(patient, initialSpecificContext) {\n  var events = patient.allMedications();\n  events = events.withStatuses([\"ordered\"], false);\n  events = events.withNegation(getCodes(\"2.16.840.1.113883.3.526.2.311\"));\n  var codes = getCodes(\"2.16.840.1.113883.3.666.5.626\");\n  var start = null;\n  var end = null;\n  events = events.match(codes, start, end, true);\n\n  if (events.length > 0) events = DURING(events, hqmfjs.OccurrenceAHospitalMeasuresEncounterInpatient1_precondition_26(patient));\n  else events.specificContext=hqmf.SpecificsManager.empty();\n  return events;\n}\n\nhqmfjs.MedicationDischargeHospitalMeasuresWarfarinAnticoagulants_precondition_29 = function(patient, initialSpecificContext) {\n  var events = patient.allMedications();\n  events = events.withStatuses([\"discharge\"], false);\n  events = events.withoutNegation();\n  var codes = getCodes(\"2.16.840.1.113883.3.666.5.636\");\n  var start = null;\n  var end = null;\n  events = events.match(codes, start, end, true);\n\n  if (events.length > 0) events = DURING(events, hqmfjs.OccurrenceAHospitalMeasuresEncounterInpatient1(patient));\n  else events.specificContext=hqmf.SpecificsManager.empty();\n  return events;\n}\n\nhqmfjs.MedicationOrderHospitalMeasuresAspirin_precondition_31 = function(patient, initialSpecificContext) {\n  var events = patient.allMedications();\n  events = events.withStatuses([\"ordered\"], false);\n  events = events.withoutNegation();\n  var codes = getCodes(\"2.16.840.1.113883.3.666.5.626\");\n  var start = null;\n  var end = null;\n  events = events.match(codes, start, end, true);\n\n  events = filterEventsByField(events, \"reason\", new CodeList(getCodes(\"2.16.840.1.113883.3.666.5.1145\")));\n  if (events.length > 0) events = DURING(events, hqmfjs.OccurrenceAHospitalMeasuresEncounterInpatient1(patient));\n  else events.specificContext=hqmf.SpecificsManager.empty();\n  return events;\n}\n\nhqmfjs.MedicationAllergyHospitalMeasuresAspirin_precondition_33 = function(patient, initialSpecificContext) {\n  var events = patient.allergies();\n  events = events.withoutNegation();\n  var codes = getCodes(\"2.16.840.1.113883.3.666.5.626\");\n  var start = null;\n  var end = null;\n  events = events.match(codes, start, end, true);\n\n  if (events.length > 0) events = SBE(events, hqmfjs.OccurrenceAHospitalMeasuresEncounterInpatient1(patient));\n  else events.specificContext=hqmf.SpecificsManager.empty();\n  return events;\n}\n\nhqmfjs.MedicationIntoleranceHospitalMeasuresAspirin_precondition_35 = function(patient, initialSpecificContext) {\n  var events = patient.allergies();\n  events = events.withoutNegation();\n  var codes = getCodes(\"2.16.840.1.113883.3.666.5.626\");\n  var start = null;\n  var end = null;\n  events = events.match(codes, start, end, true);\n\n  if (events.length > 0) events = SBE(events, hqmfjs.OccurrenceAHospitalMeasuresEncounterInpatient1(patient));\n  else events.specificContext=hqmf.SpecificsManager.empty();\n  return events;\n}\n\nhqmfjs.OccurrenceAHospitalMeasuresEncounterInpatient1_precondition_37 = function(patient, initialSpecificContext) {\n  var events = patient.encounters();\n  events.specific_occurrence = 'OccurrenceAHospitalMeasuresEncounterInpatient1'\n  events = events.withStatuses([\"performed\"]);\n  events = events.withoutNegation();\n  var codes = getCodes(\"2.16.840.1.113883.3.666.5.625\");\n  var start = null;\n  var end = null;\n  events = events.match(codes, start, end, true);\n\n  events = filterEventsByField(events, \"dischargeDisposition\", new CodeList(getCodes(\"2.16.840.1.113883.3.117.1.7.1.87\")));\n  events.specificContext=new hqmf.SpecificOccurrence(Row.buildForDataCriteria(events.specific_occurrence, events))\n  return events;\n}\n\nhqmfjs.OccurrenceAClinicalTrialParticipant2_precondition_41 = function(patient, initialSpecificContext) {\n  var events = patient.allProblems();\n  events.specific_occurrence = 'OccurrenceAClinicalTrialParticipant2'\n  events = events.withoutNegation();\n  var codes = getCodes(\"2.16.840.1.113883.3.526.2.643\");\n  var start = null;\n  var end = null;\n  events = events.match(codes, start, end, true);\n\n  if (events.length > 0) events = SBE(events, hqmfjs.OccurrenceAHospitalMeasuresEncounterInpatient1(patient));\n  else events.specificContext=hqmf.SpecificsManager.empty();\n  return events;\n}\n\nhqmfjs.OccurrenceAClinicalTrialParticipant2_precondition_39 = function(patient, initialSpecificContext) {\n  var events = patient.allProblems();\n  events.specific_occurrence = 'OccurrenceAClinicalTrialParticipant2'\n  events = events.withoutNegation();\n  var codes = getCodes(\"2.16.840.1.113883.3.526.2.643\");\n  var start = null;\n  var end = null;\n  events = events.match(codes, start, end, true);\n\n  if (events.length > 0) events = EBS(events, hqmfjs.OccurrenceAHospitalMeasuresEncounterInpatient1(patient));\n  else events.specificContext=hqmf.SpecificsManager.empty();\n  return events;\n}\n\nhqmfjs.MedicationDischargeHospitalMeasuresAspirin_precondition_49 = function(patient, initialSpecificContext) {\n  var events = patient.allMedications();\n  events = events.withStatuses([\"discharge\"], false);\n  events = events.withoutNegation();\n  var codes = getCodes(\"2.16.840.1.113883.3.666.5.626\");\n  var start = null;\n  var end = null;\n  events = events.match(codes, start, end, true);\n\n  if (events.length > 0) events = DURING(events, hqmfjs.OccurrenceAHospitalMeasuresEncounterInpatient1(patient));\n  else events.specificContext=hqmf.SpecificsManager.empty();\n  return events;\n}\n\nhqmfjs.DiagnosisActiveHospitalMeasuresAmi_precondition_52 = function(patient, initialSpecificContext) {\n  var events = patient.allProblems();\n  events = events.withStatuses([\"active\"]);\n  events = events.withoutNegation();\n  var codes = getCodes(\"2.16.840.1.113883.3.666.5.3011\");\n  var start = null;\n  var end = null;\n  events = events.match(codes, start, end, true);\n\n  events = filterEventsByField(events, \"ordinality\", new CodeList(getCodes(\"2.16.840.1.113883.3.666.5.3010\")));\n  if (events.length > 0) events = SDU(events, hqmfjs.OccurrenceAHospitalMeasuresEncounterInpatient1(patient));\n  else events.specificContext=hqmf.SpecificsManager.empty();\n  return events;\n}\n\nhqmfjs.OccurrenceAHospitalMeasuresEncounterInpatient1_precondition_54 = function(patient, initialSpecificContext) {\n  var events = patient.encounters();\n  events.specific_occurrence = 'OccurrenceAHospitalMeasuresEncounterInpatient1'\n  events = events.withStatuses([\"performed\"]);\n  events = events.withoutNegation();\n  var codes = getCodes(\"2.16.840.1.113883.3.666.5.625\");\n  var start = null;\n  var end = null;\n  events = events.match(codes, start, end, true);\n\n  events = adjustBoundsForField(events, \"admitTime\", new ANYNonNull());\n  events.specificContext=new hqmf.SpecificOccurrence(Row.buildForDataCriteria(events.specific_occurrence, events))\n  return events;\n}\n\nhqmfjs.PatientCharacteristicBirthdateBirthDate_precondition_55 = function(patient, initialSpecificContext) {\nvar value = patient.birthtime();\nvar events = [value];\nevents = SBS(events, hqmfjs.OccurrenceAHospitalMeasuresEncounterInpatient1_precondition_54(patient), new IVL_PQ(new PQ(18, \"a\", true), null));\nevents.specificContext=hqmf.SpecificsManager.identity();\nreturn events;\n\n}\n\nhqmfjs.OccurrenceAHospitalMeasuresEncounterInpatient1_precondition_57 = function(patient, initialSpecificContext) {\n  var events = patient.encounters();\n  events.specific_occurrence = 'OccurrenceAHospitalMeasuresEncounterInpatient1'\n  events = events.withStatuses([\"performed\"]);\n  events = events.withoutNegation();\n  var codes = getCodes(\"2.16.840.1.113883.3.666.5.625\");\n  var start = null;\n  var end = null;\n  events = events.match(codes, start, end, true);\n\n  events = filterEventsByField(events, \"lengthOfStay\", new IVL_PQ(null, new PQ(120, \"d\", true)));\n  events.specificContext=new hqmf.SpecificOccurrence(Row.buildForDataCriteria(events.specific_occurrence, events))\n  return events;\n}\n\nhqmfjs.OccurrenceAHospitalMeasuresEncounterInpatient1_precondition_59 = function(patient, initialSpecificContext) {\n  var events = patient.encounters();\n  events.specific_occurrence = 'OccurrenceAHospitalMeasuresEncounterInpatient1'\n  events = events.withStatuses([\"performed\"]);\n  events = events.withoutNegation();\n  var codes = getCodes(\"2.16.840.1.113883.3.666.5.625\");\n  var start = null;\n  var end = null;\n  events = events.match(codes, start, end, true);\n\n  events = adjustBoundsForField(events, \"dischargeTime\", new ANYNonNull());\n  if (events.length > 0) events = DURING(events, hqmfjs.MeasurePeriod(patient));\n  else events.specificContext=hqmf.SpecificsManager.empty();\n  return events;\n}\n\n\n\n        // #########################\n        // ##### MEASURE LOGIC #####\n        // #########################\n        \n        hqmfjs.initializeSpecifics = function(patient_api, hqmfjs) { hqmf.SpecificsManager.initialize(patient_api,hqmfjs,{\"id\":\"OccurrenceAHospitalMeasuresEncounterInpatient1\",\"type\":\"ENCOUNTER_PERFORMED_HOSPITAL_MEASURES_ENCOUNTER_INPATIENT\",\"function\":\"OccurrenceAHospitalMeasuresEncounterInpatient1\"},{\"id\":\"OccurrenceAClinicalTrialParticipant2\",\"type\":\"PATIENT_CHARACTERISTIC_CLINICAL_TRIAL_PARTICIPANT\",\"function\":\"OccurrenceAClinicalTrialParticipant2\"}) }\n\n        // INITIAL PATIENT POPULATION\n        hqmfjs.IPP = function(patient, initialSpecificContext) {\n  return allTrue('IPP',  \n    allTrue('61',     hqmfjs.DiagnosisActiveHospitalMeasuresAmi_precondition_52(patient, initialSpecificContext),     hqmfjs.PatientCharacteristicBirthdateBirthDate_precondition_55(patient, initialSpecificContext),     hqmfjs.OccurrenceAHospitalMeasuresEncounterInpatient1_precondition_57(patient, initialSpecificContext),     hqmfjs.OccurrenceAHospitalMeasuresEncounterInpatient1_precondition_59(patient, initialSpecificContext)\n    )\n  );\n};\n\n\n        // DENOMINATOR\n        hqmfjs.DENOM = function(patient) { return new Boolean(true); }\n        // NUMERATOR\n        hqmfjs.NUMER = function(patient, initialSpecificContext) {\n  return allTrue('NUMER',  \n    allTrue('51',     hqmfjs.MedicationDischargeHospitalMeasuresAspirin_precondition_49(patient, initialSpecificContext)\n    )\n  );\n};\n\n\n        hqmfjs.DENEX = function(patient, initialSpecificContext) {\n  return atLeastOneTrue('DENEX',  \n    allTrue('48',    \n      atLeastOneTrue('46',       hqmfjs.InterventionPerformedHospitalMeasuresComfortMeasuresOnlyIntervention_precondition_3(patient, initialSpecificContext),       hqmfjs.MedicationAdverseEffectsHospitalMeasuresAspirin_precondition_5(patient, initialSpecificContext),       hqmfjs.TransferToHospitalMeasuresHomeHospiceCare_precondition_7(patient, initialSpecificContext),       hqmfjs.TransferToHospitalMeasuresInpatientHospiceCare_precondition_9(patient, initialSpecificContext),       hqmfjs.OccurrenceAHospitalMeasuresEncounterInpatient1_precondition_11(patient, initialSpecificContext),       hqmfjs.OccurrenceAHospitalMeasuresEncounterInpatient1_precondition_13(patient, initialSpecificContext),       hqmfjs.MedicationOrderHospitalMeasuresAspirin_precondition_15(patient, initialSpecificContext),       hqmfjs.MedicationActiveHospitalMeasuresAspirin_precondition_18(patient, initialSpecificContext),       hqmfjs.MedicationOrderHospitalMeasuresAspirin_precondition_21(patient, initialSpecificContext),       hqmfjs.MedicationActiveHospitalMeasuresAspirin_precondition_24(patient, initialSpecificContext),       hqmfjs.MedicationOrderHospitalMeasuresAspirin_precondition_27(patient, initialSpecificContext),       hqmfjs.MedicationDischargeHospitalMeasuresWarfarinAnticoagulants_precondition_29(patient, initialSpecificContext),       hqmfjs.MedicationOrderHospitalMeasuresAspirin_precondition_31(patient, initialSpecificContext),       hqmfjs.MedicationAllergyHospitalMeasuresAspirin_precondition_33(patient, initialSpecificContext),       hqmfjs.MedicationIntoleranceHospitalMeasuresAspirin_precondition_35(patient, initialSpecificContext),       hqmfjs.OccurrenceAHospitalMeasuresEncounterInpatient1_precondition_37(patient, initialSpecificContext),      \n        allTrue('44',         hqmfjs.OccurrenceAClinicalTrialParticipant2_precondition_41(patient, initialSpecificContext),        \n          allFalse('43',           hqmfjs.OccurrenceAClinicalTrialParticipant2_precondition_39(patient, initialSpecificContext)\n          )\n        )\n      )\n    )\n  );\n};\n\n\n        hqmfjs.DENEXCEP = function(patient) { return new Boolean(false); }\n        // CV\n        hqmfjs.MSRPOPL = function(patient) { return new Boolean(false); }\n        hqmfjs.OBSERV = function(patient) { return new Boolean(false); }\n        \n      \n      var occurrenceId = [\"OccurrenceAHospitalMeasuresEncounterInpatient1\"];\n\n      hqmfjs.initializeSpecifics(patient_api, hqmfjs)\n      \n      var population = function() {\n        return executeIfAvailable(hqmfjs.IPP, patient_api);\n      }\n      var denominator = function() {\n        return executeIfAvailable(hqmfjs.DENOM, patient_api);\n      }\n      var numerator = function() {\n        return executeIfAvailable(hqmfjs.NUMER, patient_api);\n      }\n      var exclusion = function() {\n        return executeIfAvailable(hqmfjs.DENEX, patient_api);\n      }\n      var denexcep = function() {\n        return executeIfAvailable(hqmfjs.DENEXCEP, patient_api);\n      }\n      var msrpopl = function() {\n        return executeIfAvailable(hqmfjs.MSRPOPL, patient_api);\n      }\n      var observ = function(specific_context) {\n        \n        var observFunc = hqmfjs.OBSERV\n        if (typeof(observFunc)==='function')\n          return observFunc(patient_api, specific_context);\n        else\n          return [];\n      }\n      \n      var executeIfAvailable = function(optionalFunction, arg) {\n        if (typeof(optionalFunction)==='function')\n          return optionalFunction(arg);\n        else\n          return false;\n      }\n\n      if (Logger.enabled) enableMeasureLogging(hqmfjs);\n\n      map(patient, population, denominator, numerator, exclusion, denexcep, msrpopl, observ, occurrenceId,false);\n      \n      };\n      ",
+  "continuous_variable": false,
+  "episode_of_care": true,
+  "data_criteria": [
+    {
+      "InterventionPerformedHospitalMeasuresComfortMeasuresOnlyIntervention_precondition_3": {
+        "title": "Hospital Measures - Comfort Measures Only Intervention",
+        "description": "Intervention, Performed: Hospital Measures - Comfort Measures Only Intervention",
+        "standard_category": "procedure",
+        "qds_data_type": "procedure_performed",
+        "code_list_id": "1.3.6.1.4.1.33895.1.3.0.45",
+        "type": "interventions",
+        "definition": "intervention",
+        "status": "performed",
+        "hard_status": false,
+        "negation": false,
+        "source_data_criteria": "InterventionPerformedHospitalMeasuresComfortMeasuresOnlyIntervention",
+        "temporal_references": [
+          {
+            "type": "SDU",
+            "reference": "OccurrenceAHospitalMeasuresEncounterInpatient1"
+          }
+        ]
+      }
+    },
+    {
+      "OccurrenceAHospitalMeasuresEncounterInpatient1": {
+        "title": "Hospital Measures-Encounter Inpatient",
+        "description": "Encounter, Performed: Hospital Measures-Encounter Inpatient",
+        "standard_category": "encounter",
+        "qds_data_type": "encounter",
+        "code_list_id": "2.16.840.1.113883.3.666.5.625",
+        "type": "encounters",
+        "definition": "encounter",
+        "status": "performed",
+        "hard_status": false,
+        "negation": false,
+        "specific_occurrence": "A",
+        "specific_occurrence_const": "ENCOUNTER_PERFORMED_HOSPITAL_MEASURES_ENCOUNTER_INPATIENT",
+        "source_data_criteria": "OccurrenceAHospitalMeasuresEncounterInpatient1"
+      }
+    },
+    {
+      "MedicationAdverseEffectsHospitalMeasuresAspirin_precondition_5": {
+        "title": "Hospital Measures-Aspirin",
+        "description": "Medication, Adverse Effects: Hospital Measures-Aspirin",
+        "standard_category": "allergy",
+        "qds_data_type": "allergy",
+        "code_list_id": "2.16.840.1.113883.3.666.5.626",
+        "type": "medications",
+        "definition": "medication_adverse_effects",
+        "hard_status": false,
+        "negation": false,
+        "source_data_criteria": "MedicationAdverseEffectsHospitalMeasuresAspirin",
+        "temporal_references": [
+          {
+            "type": "SBE",
+            "reference": "OccurrenceAHospitalMeasuresEncounterInpatient1"
+          }
+        ]
+      }
+    },
+    {
+      "TransferToHospitalMeasuresHomeHospiceCare_precondition_7": {
+        "title": "Hospital Measures - Home Hospice Care",
+        "description": "Transfer To: Hospital Measures - Home Hospice Care",
+        "standard_category": "",
+        "qds_data_type": "",
+        "type": "transfers",
+        "definition": "transfer_to",
+        "hard_status": false,
+        "negation": false,
+        "source_data_criteria": "TransferToHospitalMeasuresHomeHospiceCare",
+        "field_values": {
+          "TRANSFER_TO": {
+            "type": "CD",
+            "code_list_id": "2.16.840.1.113883.3.666.5.3008",
+            "title": "Hospital Measures - Home Hospice Care"
+          }
+        },
+        "temporal_references": [
+          {
+            "type": "SAE",
+            "reference": "OccurrenceAHospitalMeasuresEncounterInpatient1",
+            "range": {
+              "type": "IVL_PQ",
+              "high": {
+                "type": "PQ",
+                "unit": "d",
+                "value": "1",
+                "inclusive?": false,
+                "derived?": false
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "TransferToHospitalMeasuresInpatientHospiceCare_precondition_9": {
+        "title": "Hospital Measures - Inpatient Hospice Care",
+        "description": "Transfer To: Hospital Measures - Inpatient Hospice Care",
+        "standard_category": "",
+        "qds_data_type": "",
+        "type": "transfers",
+        "definition": "transfer_to",
+        "hard_status": false,
+        "negation": false,
+        "source_data_criteria": "TransferToHospitalMeasuresInpatientHospiceCare",
+        "field_values": {
+          "TRANSFER_TO": {
+            "type": "CD",
+            "code_list_id": "2.16.840.1.113883.3.666.5.3007",
+            "title": "Hospital Measures - Inpatient Hospice Care"
+          }
+        },
+        "temporal_references": [
+          {
+            "type": "SAE",
+            "reference": "OccurrenceAHospitalMeasuresEncounterInpatient1",
+            "range": {
+              "type": "IVL_PQ",
+              "high": {
+                "type": "PQ",
+                "unit": "d",
+                "value": "1",
+                "inclusive?": false,
+                "derived?": false
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "OccurrenceAHospitalMeasuresEncounterInpatient1_precondition_11": {
+        "title": "Hospital Measures-Encounter Inpatient",
+        "description": "Encounter, Performed: Hospital Measures-Encounter Inpatient",
+        "standard_category": "encounter",
+        "qds_data_type": "encounter",
+        "code_list_id": "2.16.840.1.113883.3.666.5.625",
+        "type": "encounters",
+        "definition": "encounter",
+        "status": "performed",
+        "hard_status": false,
+        "negation": false,
+        "specific_occurrence": "A",
+        "specific_occurrence_const": "ENCOUNTER_PERFORMED_HOSPITAL_MEASURES_ENCOUNTER_INPATIENT",
+        "source_data_criteria": "OccurrenceAHospitalMeasuresEncounterInpatient1",
+        "field_values": {
+          "DISCHARGE_STATUS": {
+            "type": "CD",
+            "code_list_id": "2.16.840.1.113883.3.666.5.1106",
+            "title": "Left Against Medical Advice"
+          }
+        }
+      }
+    },
+    {
+      "OccurrenceAHospitalMeasuresEncounterInpatient1_precondition_13": {
+        "title": "Hospital Measures-Encounter Inpatient",
+        "description": "Encounter, Performed: Hospital Measures-Encounter Inpatient",
+        "standard_category": "encounter",
+        "qds_data_type": "encounter",
+        "code_list_id": "2.16.840.1.113883.3.666.5.625",
+        "type": "encounters",
+        "definition": "encounter",
+        "status": "performed",
+        "hard_status": false,
+        "negation": false,
+        "specific_occurrence": "A",
+        "specific_occurrence_const": "ENCOUNTER_PERFORMED_HOSPITAL_MEASURES_ENCOUNTER_INPATIENT",
+        "source_data_criteria": "OccurrenceAHospitalMeasuresEncounterInpatient1",
+        "field_values": {
+          "DISCHARGE_STATUS": {
+            "type": "CD",
+            "code_list_id": "2.16.840.1.113883.3.666.5.1146",
+            "title": "Hospital Measures - Expired"
+          }
+        }
+      }
+    },
+    {
+      "MedicationOrderHospitalMeasuresAspirin_precondition_15": {
+        "title": "Hospital Measures-Aspirin",
+        "description": "Medication, Order: Hospital Measures-Aspirin",
+        "standard_category": "medication",
+        "qds_data_type": "medication_order",
+        "code_list_id": "2.16.840.1.113883.3.666.5.626",
+        "type": "medications",
+        "definition": "medication",
+        "status": "ordered",
+        "hard_status": true,
+        "negation": false,
+        "source_data_criteria": "MedicationOrderHospitalMeasuresAspirin",
+        "field_values": {
+          "REASON": {
+            "type": "CD",
+            "code_list_id": "2.16.840.1.113883.3.666.5.1149",
+            "title": "Hospital Measures - Discontinue"
+          }
+        },
+        "temporal_references": [
+          {
+            "type": "DURING",
+            "reference": "OccurrenceAHospitalMeasuresEncounterInpatient1"
+          }
+        ]
+      }
+    },
+    {
+      "MedicationActiveHospitalMeasuresAspirin_precondition_18": {
+        "title": "Hospital Measures-Aspirin",
+        "description": "Medication, Active: Hospital Measures-Aspirin",
+        "standard_category": "medication",
+        "qds_data_type": "medication_active",
+        "code_list_id": "2.16.840.1.113883.3.666.5.626",
+        "type": "medications",
+        "definition": "medication",
+        "status": "active",
+        "hard_status": false,
+        "negation": true,
+        "negation_code_list_id": "2.16.840.1.113883.3.117.1.7.1.473",
+        "source_data_criteria": "MedicationActiveHospitalMeasuresAspirin",
+        "temporal_references": [
+          {
+            "type": "DURING",
+            "reference": "OccurrenceAHospitalMeasuresEncounterInpatient1_precondition_17"
+          }
+        ]
+      }
+    },
+    {
+      "OccurrenceAHospitalMeasuresEncounterInpatient1_precondition_17": {
+        "title": "Hospital Measures-Encounter Inpatient",
+        "description": "Encounter, Performed: Hospital Measures-Encounter Inpatient",
+        "standard_category": "encounter",
+        "qds_data_type": "encounter",
+        "code_list_id": "2.16.840.1.113883.3.666.5.625",
+        "type": "encounters",
+        "definition": "encounter",
+        "status": "performed",
+        "hard_status": false,
+        "negation": false,
+        "specific_occurrence": "A",
+        "specific_occurrence_const": "ENCOUNTER_PERFORMED_HOSPITAL_MEASURES_ENCOUNTER_INPATIENT",
+        "source_data_criteria": "OccurrenceAHospitalMeasuresEncounterInpatient1",
+        "field_values": {
+          "DISCHARGE_DATETIME": {
+            "type": "ANYNonNull"
+          }
+        }
+      }
+    },
+    {
+      "MedicationOrderHospitalMeasuresAspirin_precondition_21": {
+        "title": "Hospital Measures-Aspirin",
+        "description": "Medication, Order: Hospital Measures-Aspirin",
+        "standard_category": "medication",
+        "qds_data_type": "medication_order",
+        "code_list_id": "2.16.840.1.113883.3.666.5.626",
+        "type": "medications",
+        "definition": "medication",
+        "status": "ordered",
+        "hard_status": true,
+        "negation": true,
+        "negation_code_list_id": "2.16.840.1.113883.3.526.2.313",
+        "source_data_criteria": "MedicationOrderHospitalMeasuresAspirin",
+        "temporal_references": [
+          {
+            "type": "DURING",
+            "reference": "OccurrenceAHospitalMeasuresEncounterInpatient1_precondition_20"
+          }
+        ]
+      }
+    },
+    {
+      "OccurrenceAHospitalMeasuresEncounterInpatient1_precondition_20": {
+        "title": "Hospital Measures-Encounter Inpatient",
+        "description": "Encounter, Performed: Hospital Measures-Encounter Inpatient",
+        "standard_category": "encounter",
+        "qds_data_type": "encounter",
+        "code_list_id": "2.16.840.1.113883.3.666.5.625",
+        "type": "encounters",
+        "definition": "encounter",
+        "status": "performed",
+        "hard_status": false,
+        "negation": false,
+        "specific_occurrence": "A",
+        "specific_occurrence_const": "ENCOUNTER_PERFORMED_HOSPITAL_MEASURES_ENCOUNTER_INPATIENT",
+        "source_data_criteria": "OccurrenceAHospitalMeasuresEncounterInpatient1",
+        "field_values": {
+          "DISCHARGE_DATETIME": {
+            "type": "ANYNonNull"
+          }
+        }
+      }
+    },
+    {
+      "MedicationActiveHospitalMeasuresAspirin_precondition_24": {
+        "title": "Hospital Measures-Aspirin",
+        "description": "Medication, Active: Hospital Measures-Aspirin",
+        "standard_category": "medication",
+        "qds_data_type": "medication_active",
+        "code_list_id": "2.16.840.1.113883.3.666.5.626",
+        "type": "medications",
+        "definition": "medication",
+        "status": "active",
+        "hard_status": false,
+        "negation": true,
+        "negation_code_list_id": "2.16.840.1.113883.3.117.1.7.1.474",
+        "source_data_criteria": "MedicationActiveHospitalMeasuresAspirin",
+        "temporal_references": [
+          {
+            "type": "DURING",
+            "reference": "OccurrenceAHospitalMeasuresEncounterInpatient1_precondition_23"
+          }
+        ]
+      }
+    },
+    {
+      "OccurrenceAHospitalMeasuresEncounterInpatient1_precondition_23": {
+        "title": "Hospital Measures-Encounter Inpatient",
+        "description": "Encounter, Performed: Hospital Measures-Encounter Inpatient",
+        "standard_category": "encounter",
+        "qds_data_type": "encounter",
+        "code_list_id": "2.16.840.1.113883.3.666.5.625",
+        "type": "encounters",
+        "definition": "encounter",
+        "status": "performed",
+        "hard_status": false,
+        "negation": false,
+        "specific_occurrence": "A",
+        "specific_occurrence_const": "ENCOUNTER_PERFORMED_HOSPITAL_MEASURES_ENCOUNTER_INPATIENT",
+        "source_data_criteria": "OccurrenceAHospitalMeasuresEncounterInpatient1",
+        "field_values": {
+          "DISCHARGE_DATETIME": {
+            "type": "ANYNonNull"
+          }
+        }
+      }
+    },
+    {
+      "MedicationOrderHospitalMeasuresAspirin_precondition_27": {
+        "title": "Hospital Measures-Aspirin",
+        "description": "Medication, Order: Hospital Measures-Aspirin",
+        "standard_category": "medication",
+        "qds_data_type": "medication_order",
+        "code_list_id": "2.16.840.1.113883.3.666.5.626",
+        "type": "medications",
+        "definition": "medication",
+        "status": "ordered",
+        "hard_status": true,
+        "negation": true,
+        "negation_code_list_id": "2.16.840.1.113883.3.526.2.311",
+        "source_data_criteria": "MedicationOrderHospitalMeasuresAspirin",
+        "temporal_references": [
+          {
+            "type": "DURING",
+            "reference": "OccurrenceAHospitalMeasuresEncounterInpatient1_precondition_26"
+          }
+        ]
+      }
+    },
+    {
+      "OccurrenceAHospitalMeasuresEncounterInpatient1_precondition_26": {
+        "title": "Hospital Measures-Encounter Inpatient",
+        "description": "Encounter, Performed: Hospital Measures-Encounter Inpatient",
+        "standard_category": "encounter",
+        "qds_data_type": "encounter",
+        "code_list_id": "2.16.840.1.113883.3.666.5.625",
+        "type": "encounters",
+        "definition": "encounter",
+        "status": "performed",
+        "hard_status": false,
+        "negation": false,
+        "specific_occurrence": "A",
+        "specific_occurrence_const": "ENCOUNTER_PERFORMED_HOSPITAL_MEASURES_ENCOUNTER_INPATIENT",
+        "source_data_criteria": "OccurrenceAHospitalMeasuresEncounterInpatient1",
+        "field_values": {
+          "DISCHARGE_DATETIME": {
+            "type": "ANYNonNull"
+          }
+        }
+      }
+    },
+    {
+      "MedicationDischargeHospitalMeasuresWarfarinAnticoagulants_precondition_29": {
+        "title": "Hospital Measures - Warfarin Anticoagulants",
+        "description": "Medication, Discharge: Hospital Measures - Warfarin Anticoagulants",
+        "standard_category": "medication",
+        "qds_data_type": "medication_discharge",
+        "code_list_id": "2.16.840.1.113883.3.666.5.636",
+        "type": "medications",
+        "definition": "medication",
+        "status": "discharge",
+        "hard_status": true,
+        "negation": false,
+        "source_data_criteria": "MedicationDischargeHospitalMeasuresWarfarinAnticoagulants",
+        "temporal_references": [
+          {
+            "type": "DURING",
+            "reference": "OccurrenceAHospitalMeasuresEncounterInpatient1"
+          }
+        ]
+      }
+    },
+    {
+      "MedicationOrderHospitalMeasuresAspirin_precondition_31": {
+        "title": "Hospital Measures-Aspirin",
+        "description": "Medication, Order: Hospital Measures-Aspirin",
+        "standard_category": "medication",
+        "qds_data_type": "medication_order",
+        "code_list_id": "2.16.840.1.113883.3.666.5.626",
+        "type": "medications",
+        "definition": "medication",
+        "status": "ordered",
+        "hard_status": true,
+        "negation": false,
+        "source_data_criteria": "MedicationOrderHospitalMeasuresAspirin",
+        "field_values": {
+          "REASON": {
+            "type": "CD",
+            "code_list_id": "2.16.840.1.113883.3.666.5.1145",
+            "title": "Hospital Measures - Hold"
+          }
+        },
+        "temporal_references": [
+          {
+            "type": "DURING",
+            "reference": "OccurrenceAHospitalMeasuresEncounterInpatient1"
+          }
+        ]
+      }
+    },
+    {
+      "MedicationAllergyHospitalMeasuresAspirin_precondition_33": {
+        "title": "Hospital Measures-Aspirin",
+        "description": "Medication, Allergy: Hospital Measures-Aspirin",
+        "standard_category": "allergy",
+        "qds_data_type": "allergy",
+        "code_list_id": "2.16.840.1.113883.3.666.5.626",
+        "type": "medications",
+        "definition": "medication_allergy",
+        "hard_status": false,
+        "negation": false,
+        "source_data_criteria": "MedicationAllergyHospitalMeasuresAspirin",
+        "temporal_references": [
+          {
+            "type": "SBE",
+            "reference": "OccurrenceAHospitalMeasuresEncounterInpatient1"
+          }
+        ]
+      }
+    },
+    {
+      "MedicationIntoleranceHospitalMeasuresAspirin_precondition_35": {
+        "title": "Hospital Measures-Aspirin",
+        "description": "Medication, Intolerance: Hospital Measures-Aspirin",
+        "standard_category": "allergy",
+        "qds_data_type": "allergy",
+        "code_list_id": "2.16.840.1.113883.3.666.5.626",
+        "type": "medications",
+        "definition": "medication_intolerance",
+        "hard_status": false,
+        "negation": false,
+        "source_data_criteria": "MedicationIntoleranceHospitalMeasuresAspirin",
+        "temporal_references": [
+          {
+            "type": "SBE",
+            "reference": "OccurrenceAHospitalMeasuresEncounterInpatient1"
+          }
+        ]
+      }
+    },
+    {
+      "OccurrenceAHospitalMeasuresEncounterInpatient1_precondition_37": {
+        "title": "Hospital Measures-Encounter Inpatient",
+        "description": "Encounter, Performed: Hospital Measures-Encounter Inpatient",
+        "standard_category": "encounter",
+        "qds_data_type": "encounter",
+        "code_list_id": "2.16.840.1.113883.3.666.5.625",
+        "type": "encounters",
+        "definition": "encounter",
+        "status": "performed",
+        "hard_status": false,
+        "negation": false,
+        "specific_occurrence": "A",
+        "specific_occurrence_const": "ENCOUNTER_PERFORMED_HOSPITAL_MEASURES_ENCOUNTER_INPATIENT",
+        "source_data_criteria": "OccurrenceAHospitalMeasuresEncounterInpatient1",
+        "field_values": {
+          "DISCHARGE_STATUS": {
+            "type": "CD",
+            "code_list_id": "2.16.840.1.113883.3.117.1.7.1.87",
+            "title": "Discharge To Another Hospital"
+          }
+        }
+      }
+    },
+    {
+      "OccurrenceAClinicalTrialParticipant2_precondition_41": {
+        "title": "Clinical Trial Participant",
+        "description": "Patient Characteristic: Clinical Trial Participant",
+        "standard_category": "individual_characteristic",
+        "qds_data_type": "individual_characteristic",
+        "code_list_id": "2.16.840.1.113883.3.526.2.643",
+        "type": "characteristic",
+        "definition": "patient_characteristic",
+        "hard_status": false,
+        "negation": false,
+        "specific_occurrence": "A",
+        "specific_occurrence_const": "PATIENT_CHARACTERISTIC_CLINICAL_TRIAL_PARTICIPANT",
+        "source_data_criteria": "OccurrenceAClinicalTrialParticipant2",
+        "temporal_references": [
+          {
+            "type": "SBE",
+            "reference": "OccurrenceAHospitalMeasuresEncounterInpatient1"
+          }
+        ]
+      }
+    },
+    {
+      "OccurrenceAClinicalTrialParticipant2_precondition_39": {
+        "title": "Clinical Trial Participant",
+        "description": "Patient Characteristic: Clinical Trial Participant",
+        "standard_category": "individual_characteristic",
+        "qds_data_type": "individual_characteristic",
+        "code_list_id": "2.16.840.1.113883.3.526.2.643",
+        "type": "characteristic",
+        "definition": "patient_characteristic",
+        "hard_status": false,
+        "negation": false,
+        "specific_occurrence": "A",
+        "specific_occurrence_const": "PATIENT_CHARACTERISTIC_CLINICAL_TRIAL_PARTICIPANT",
+        "source_data_criteria": "OccurrenceAClinicalTrialParticipant2",
+        "temporal_references": [
+          {
+            "type": "EBS",
+            "reference": "OccurrenceAHospitalMeasuresEncounterInpatient1"
+          }
+        ]
+      }
+    },
+    {
+      "MedicationDischargeHospitalMeasuresAspirin_precondition_49": {
+        "title": "Hospital Measures-Aspirin",
+        "description": "Medication, Discharge: Hospital Measures-Aspirin",
+        "standard_category": "medication",
+        "qds_data_type": "medication_discharge",
+        "code_list_id": "2.16.840.1.113883.3.666.5.626",
+        "type": "medications",
+        "definition": "medication",
+        "status": "discharge",
+        "hard_status": true,
+        "negation": false,
+        "source_data_criteria": "MedicationDischargeHospitalMeasuresAspirin",
+        "temporal_references": [
+          {
+            "type": "DURING",
+            "reference": "OccurrenceAHospitalMeasuresEncounterInpatient1"
+          }
+        ]
+      }
+    },
+    {
+      "DiagnosisActiveHospitalMeasuresAmi_precondition_52": {
+        "title": "Hospital Measures - AMI",
+        "description": "Diagnosis, Active: Hospital Measures - AMI",
+        "standard_category": "diagnosis_condition_problem",
+        "qds_data_type": "diagnosis_active",
+        "code_list_id": "2.16.840.1.113883.3.666.5.3011",
+        "type": "conditions",
+        "definition": "diagnosis",
+        "status": "active",
+        "hard_status": false,
+        "negation": false,
+        "source_data_criteria": "DiagnosisActiveHospitalMeasuresAmi",
+        "field_values": {
+          "ORDINAL": {
+            "type": "CD",
+            "code_list_id": "2.16.840.1.113883.3.666.5.3010",
+            "title": "Hospital Measures - Principal"
+          }
+        },
+        "temporal_references": [
+          {
+            "type": "SDU",
+            "reference": "OccurrenceAHospitalMeasuresEncounterInpatient1"
+          }
+        ]
+      }
+    },
+    {
+      "PatientCharacteristicBirthdateBirthDate_precondition_55": {
+        "title": "birth date",
+        "description": "Patient Characteristic Birthdate: birth date",
+        "standard_category": "individual_characteristic",
+        "qds_data_type": "individual_characteristic",
+        "code_list_id": "2.16.840.1.113883.3.560.100.4",
+        "property": "birthtime",
+        "type": "characteristic",
+        "definition": "patient_characteristic_birthdate",
+        "hard_status": false,
+        "negation": false,
+        "source_data_criteria": "PatientCharacteristicBirthdateBirthDate",
+        "inline_code_list": {
+          "LOINC": [
+            "21112-8"
+          ]
+        },
+        "temporal_references": [
+          {
+            "type": "SBS",
+            "reference": "OccurrenceAHospitalMeasuresEncounterInpatient1_precondition_54",
+            "range": {
+              "type": "IVL_PQ",
+              "low": {
+                "type": "PQ",
+                "unit": "a",
+                "value": "18",
+                "inclusive?": true,
+                "derived?": false
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "OccurrenceAHospitalMeasuresEncounterInpatient1_precondition_54": {
+        "title": "Hospital Measures-Encounter Inpatient",
+        "description": "Encounter, Performed: Hospital Measures-Encounter Inpatient",
+        "standard_category": "encounter",
+        "qds_data_type": "encounter",
+        "code_list_id": "2.16.840.1.113883.3.666.5.625",
+        "type": "encounters",
+        "definition": "encounter",
+        "status": "performed",
+        "hard_status": false,
+        "negation": false,
+        "specific_occurrence": "A",
+        "specific_occurrence_const": "ENCOUNTER_PERFORMED_HOSPITAL_MEASURES_ENCOUNTER_INPATIENT",
+        "source_data_criteria": "OccurrenceAHospitalMeasuresEncounterInpatient1",
+        "field_values": {
+          "ADMISSION_DATETIME": {
+            "type": "ANYNonNull"
+          }
+        }
+      }
+    },
+    {
+      "OccurrenceAHospitalMeasuresEncounterInpatient1_precondition_57": {
+        "title": "Hospital Measures-Encounter Inpatient",
+        "description": "Encounter, Performed: Hospital Measures-Encounter Inpatient",
+        "standard_category": "encounter",
+        "qds_data_type": "encounter",
+        "code_list_id": "2.16.840.1.113883.3.666.5.625",
+        "type": "encounters",
+        "definition": "encounter",
+        "status": "performed",
+        "hard_status": false,
+        "negation": false,
+        "specific_occurrence": "A",
+        "specific_occurrence_const": "ENCOUNTER_PERFORMED_HOSPITAL_MEASURES_ENCOUNTER_INPATIENT",
+        "source_data_criteria": "OccurrenceAHospitalMeasuresEncounterInpatient1",
+        "field_values": {
+          "LENGTH_OF_STAY": {
+            "type": "IVL_PQ",
+            "high": {
+              "type": "PQ",
+              "unit": "d",
+              "value": "120",
+              "inclusive?": true,
+              "derived?": false
+            }
+          }
+        }
+      }
+    },
+    {
+      "OccurrenceAHospitalMeasuresEncounterInpatient1_precondition_59": {
+        "title": "Hospital Measures-Encounter Inpatient",
+        "description": "Encounter, Performed: Hospital Measures-Encounter Inpatient",
+        "standard_category": "encounter",
+        "qds_data_type": "encounter",
+        "code_list_id": "2.16.840.1.113883.3.666.5.625",
+        "type": "encounters",
+        "definition": "encounter",
+        "status": "performed",
+        "hard_status": false,
+        "negation": false,
+        "specific_occurrence": "A",
+        "specific_occurrence_const": "ENCOUNTER_PERFORMED_HOSPITAL_MEASURES_ENCOUNTER_INPATIENT",
+        "source_data_criteria": "OccurrenceAHospitalMeasuresEncounterInpatient1",
+        "field_values": {
+          "DISCHARGE_DATETIME": {
+            "type": "ANYNonNull"
+          }
+        },
+        "temporal_references": [
+          {
+            "type": "DURING",
+            "reference": "MeasurePeriod"
+          }
+        ]
+      }
+    }
+  ],
+  "oids": [
+    "2.16.840.1.113883.3.666.5.636",
+    "2.16.840.1.113883.3.666.5.626",
+    "2.16.840.1.113883.3.666.5.625",
+    "2.16.840.1.113883.3.666.5.3011",
+    "2.16.840.1.113883.3.666.5.3010",
+    "2.16.840.1.113883.3.666.5.3008",
+    "2.16.840.1.113883.3.666.5.3007",
+    "2.16.840.1.113883.3.666.5.1149",
+    "2.16.840.1.113883.3.666.5.1146",
+    "2.16.840.1.113883.3.666.5.1145",
+    "2.16.840.1.113883.3.666.5.1106",
+    "2.16.840.1.113883.3.560.100.4",
+    "2.16.840.1.113883.3.526.2.643",
+    "2.16.840.1.113883.3.526.2.313",
+    "2.16.840.1.113883.3.526.2.311",
+    "2.16.840.1.113883.3.117.1.7.1.87",
+    "2.16.840.1.113883.3.117.1.7.1.474",
+    "2.16.840.1.113883.3.117.1.7.1.473",
+    "1.3.6.1.4.1.33895.1.3.0.45"
+  ],
+  "population_ids": {
+    "IPP": "EDD90083-3417-4221-B3B9-52C4E5FAFAF4",
+    "DENOM": "193A17EC-66B4-4C44-9302-192556C78454",
+    "NUMER": "C224FC7D-B0C3-4A7F-BB9C-4480C3095F9F",
+    "DENEX": "FCE06869-6ADE-4A43-9A28-098D808A55BD"
+  }
+}

@@ -1,0 +1,577 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:n1="urn:hl7-org:v3">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   
+      <title>Thrombolytic Therapy</title><style type="text/css">
+body {
+	color: rgb(26, 26, 26);
+	background-color: rgb(255,255,255);
+	font-family: Verdana, Tahoma, sans-serif;
+	font-size: 11px;
+}
+
+a {
+	color: rgb(0, 0, 255);
+	background-color: rgb(255,255,255);
+}
+
+h1 {
+	font-size: 12pt;
+	font-weight: bold;
+}
+
+h2 {
+	font-size: 11pt;
+	font-weight: bold;
+}
+
+h3 {
+	font-size: 10pt;
+	font-weight: bold;
+}
+
+h4 {
+	font-size: 8pt;
+	font-weight: bold;
+}
+
+div {
+	width: 80%;
+}
+
+table {
+	line-height: 10pt;
+	width: 80%;
+}
+
+tr {
+	background-color: rgb(224,224,224);
+}
+
+td {
+	padding: 0.1cm 0.2cm;
+	vertical-align: top;
+}
+
+.h1center {
+	font-size: 12pt;
+	font-weight: bold;
+	text-align: center;
+	width: 80%;
+}
+
+.header_table{
+	border: 1pt inset rgb(0,0,0);
+}
+
+.narr_table {
+	width: 100%;
+}
+
+.narr_tr {
+	background-color: rgb(225,225,225);
+}
+pre {
+ overflow: auto; /* Use horizontal scroller if needed; for Firefox 2, not needed in Firefox 3 */
+ white-space: pre-wrap; /* css-3 */
+ white-space: -moz-pre-wrap !important; /* Mozilla, since 1999 */
+ white-space: -pre-wrap; /* Opera 4-6 */
+ white-space: -o-pre-wrap; /* Opera 7 */
+ word-wrap: break-word; /* Internet Explorer 5.5+ */
+ font-family: Verdana, Tahoma, sans-serif;
+ font-size: 11px;
+ text-align:left;
+ margin: 0px 0px 0px 0px;
+ padding:0px 0px 0px 0px;
+}
+.narr_th {
+	background-color: rgb(201,201,201);
+}
+
+.td_label{
+	font-weight: bold;
+	color: white;
+}
+	</style></head>
+   <body>
+      <table class="header_table">
+         <tbody>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">eMeasure Title</span></td>
+               <td width="80%" colspan="3">Thrombolytic Therapy</td>
+            </tr>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">eMeasure Identifier<br>(Measure Authoring Tool)</span></td>
+               <td width="30%">91</td>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">eMeasure Version number</span></td>
+               <td width="30%">2</td>
+            </tr>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">NQF Number</span></td>
+               <td width="30%">0437</td>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">GUID</span></td>
+               <td> 2838875a-07b5-4bf0-be04-c3eb99f53975</td>
+            </tr>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">Measurement Period</span></td>
+               <td width="80%" colspan="3">January 1, 20xx  through December 31, 20xx </td>
+            </tr>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">Measure Steward</span></td>
+               <td width="80%" colspan="3">Joint Commission</td>
+            </tr>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">Measure Developer</span></td>
+               <td width="80%" colspan="3">Joint Commission</td>
+            </tr>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">Endorsed By</span></td>
+               <td width="80%" colspan="3">National Quality Forum</td>
+            </tr>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">Description</span></td>
+               <td width="80%" colspan="3">
+                  <div style="width:660px;overflow-x:hidden;overflow-y:auto"><pre>Acute ischemic stroke patients who arrive at this hospital within 2 hours of time last known well and for whom IV t-PA was initiated at this hospital within 3 hours of time last known well.</pre></div>
+               </td>
+            </tr>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">Copyright</span></td>
+               <td width="80%" colspan="3">
+                  <div style="width:660px;overflow-x:hidden;overflow-y:auto"><pre>Measure specifications are in the Public Domain.
+
+LOINC(R) is a registered trademark of the Regenstrief Institute.
+
+This material contains SNOMED Clinical Terms (R) (SNOMED CT(c)) copyright 2004-2010 International Health Terminology Standards Development Organization. All rights reserved.</pre></div>
+               </td>
+            </tr>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">Disclaimer</span></td>
+               <td width="80%" colspan="3">
+                  <div style="width:660px;overflow-x:hidden;overflow-y:auto"><pre>None</pre></div>
+               </td>
+            </tr>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">Measure Scoring</span></td>
+               <td width="80%" colspan="3">Proportion</td>
+            </tr>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">Measure Type</span></td>
+               <td width="80%" colspan="3">Process</td>
+            </tr>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">Stratification</span></td>
+               <td width="80%" colspan="3">
+                  <div style="width:660px;overflow-x:hidden;overflow-y:auto"><pre>None</pre></div>
+               </td>
+            </tr>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">Risk Adjustment</span></td>
+               <td width="80%" colspan="3">
+                  <div style="width:660px;overflow-x:hidden;overflow-y:auto"><pre>None</pre></div>
+               </td>
+            </tr>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">Rate Aggregation</span></td>
+               <td width="80%" colspan="3">
+                  <div style="width:660px;overflow-x:hidden;overflow-y:auto"><pre>None</pre></div>
+               </td>
+            </tr>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">Rationale</span></td>
+               <td width="80%" colspan="3">
+                  <div style="width:660px;overflow-x:hidden;overflow-y:auto"><pre>The administration of thrombolytic agents to carefully screened, eligible patients with acute ischemic stroke has been shown to be beneficial in several clinical trials. These included two positive randomized controlled trials in the United States: The National Institute of Neurological Disorders and Stroke (NINDS) Studies, Part I and Part II. Based on the results of these studies, the Food and Drug Administration approved the use of intravenous recombinant tissue plasminogen activator (IV r-TPA or t-PA) for the treatment of acute ischemic stroke when given within 3 hours of stroke symptom onset. A large meta-analysis controlling for factors associated with stroke outcome confirmed the benefit of IV t-PA in patients treated within 3 hours of symptom onset. While controversy still exists among some specialists, the major society practice guidelines developed in the United States all recommend the use of IV t-PA for eligible patients. Physicians with experience and skill in stroke management and the interpretation of CT scans should supervise treatment.</pre></div>
+               </td>
+            </tr>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">Clinical Recommendation Statement</span></td>
+               <td width="80%" colspan="3">
+                  <div style="width:660px;overflow-x:hidden;overflow-y:auto"><pre>The administration of thrombolytic agents to carefully screened, eligible patients with acute ischemic stroke has been shown to be beneficial in several clinical trials. Intravenous recombinant tissue plasminogen activator (IV r-TPA or t-PA) should be used for the treatment of acute ischemic stroke when given within 3 hours of stroke symptom onset.</pre></div>
+               </td>
+            </tr>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">Improvement Notation</span></td>
+               <td width="80%" colspan="3">
+                  <div style="width:660px;overflow-x:hidden;overflow-y:auto"><pre>An increase in the rate</pre></div>
+               </td>
+            </tr>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">Reference</span></td>
+               <td width="80%" colspan="3">
+                  <div style="width:660px;overflow-x:hidden;overflow-y:auto"><pre>Adams HP, del Zoppo G, Alberts MJ, Bhatt DL, Brass L, Furlan A, Grubb RL, Higashida RT, Jauch EC, Kidwell C, Lyden PD, Morgenstern LB, Qureshi AI, Rosenwasser RH, Scott PA, Wijdicks E. Guidelines for the Early Management of Adults with Ischemic Stroke: A Guideline From the American Heart Association/American Stroke, Association Stroke Council, Clinical Cardiology Council, Cardiovascular Radiology and Intervention Council, and the Atherosclerotic Peripheral Vascular Disease and Quality of Care Outcomes in Research Interdisciplinary Working Groups. Stroke. 2007;38:1655-1711.</pre></div>
+               </td>
+            </tr>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">Reference</span></td>
+               <td width="80%" colspan="3">
+                  <div style="width:660px;overflow-x:hidden;overflow-y:auto"><pre>Adams H, Adams R, Del Zoppo G, Goldstein LB. American Heart Association/American Stroke Association Guidelines Update A Scientific Statement From the Stroke Council of the Guidelines for the Early Management of Patients With Ischemic Stroke: 2005, Stroke.2005;36;916-923.</pre></div>
+               </td>
+            </tr>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">Reference</span></td>
+               <td width="80%" colspan="3">
+                  <div style="width:660px;overflow-x:hidden;overflow-y:auto"><pre>Antithrombotic and Thrombolytic Therapy for Ischemic Stroke The Seventh ACCP Conference on Antithrombotic and Thrombolytic Therapy. Gregory W. Albers, MD, Chair; Pierre Amarenco, MD; J. Donald Easton, MD; Ralph L. Sacco, MD; and Philip Teal, MD (CHEST 2004; 126:483S&#8211;512S).</pre></div>
+               </td>
+            </tr>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">Reference</span></td>
+               <td width="80%" colspan="3">
+                  <div style="width:660px;overflow-x:hidden;overflow-y:auto"><pre>del Zoppo GJ, Saver JL, Jauch EC, Adams HP. Expansion of the Time Window for Treatment of Acute Ischemic Stroke With Intravenous Tissue Plasminogen Activator: A Science Advisory From the American Heart Association/ American Stroke Association. Stroke. 2009;40:2945-2948.</pre></div>
+               </td>
+            </tr>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">Reference</span></td>
+               <td width="80%" colspan="3">
+                  <div style="width:660px;overflow-x:hidden;overflow-y:auto"><pre>Diagnosis and Initial Treatment of Ischemic Stroke, Institute for Clinical Systems Improvement (ICSI), 2001.</pre></div>
+               </td>
+            </tr>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">Reference</span></td>
+               <td width="80%" colspan="3">
+                  <div style="width:660px;overflow-x:hidden;overflow-y:auto"><pre>Hacke W, Kaste M, Bluhmki E, Brozman M, Davalos A, Gidetti D, et. al. Thrombolysis with Alteplase 3 to 4.5 hours after acute ischemic stroke. The European Cooperative Acute Stroke Study (ECASS) Investigators. NEJM. 2008;359(13):1317-29.</pre></div>
+               </td>
+            </tr>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">Reference</span></td>
+               <td width="80%" colspan="3">
+                  <div style="width:660px;overflow-x:hidden;overflow-y:auto"><pre>Hacke W, Kaste M, Fieschi C, et al. Intravenous thrombolysis with recombinant tissue plasminogen activator for acute hemispheric stroke. The European Cooperative Acute Stroke Study (ECASS). JAMA 1995;274:1017-1025.</pre></div>
+               </td>
+            </tr>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">Reference</span></td>
+               <td width="80%" colspan="3">
+                  <div style="width:660px;overflow-x:hidden;overflow-y:auto"><pre>Management of Patients with Stroke. Assessment, investigation, immediate management and secondary prevention, Scottish Intercollegiate Guidelines Network, 1997.</pre></div>
+               </td>
+            </tr>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">Reference</span></td>
+               <td width="80%" colspan="3">
+                  <div style="width:660px;overflow-x:hidden;overflow-y:auto"><pre>Marler JR, Tilley BC, Lu M, Brott TG, Lyden PC, Grotta JC, Broderick JP, Levine SR, Frankel MP, Horowitz SH, Haley EC, Lewandowski CA, Kwiatkowski TP. Early stroke treatment associated with better outcome The NINDS rt-PA Stroke Study. Neurology 2000;55: 1649-1655.</pre></div>
+               </td>
+            </tr>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">Reference</span></td>
+               <td width="80%" colspan="3">
+                  <div style="width:660px;overflow-x:hidden;overflow-y:auto"><pre>Sacco RL, Adams R, Albers G, Alberts MJ, Benavente O, Furie K, Goldstein LB, Gorelick P, Halperin J, Harbaugh R, Johnston SC, Katzan I, Kelly-Hayes M, Kenton EJ, Marks M, Schwamm LH, Tomsick T. Guidelines for Prevention of Stroke in Patients With Ischemic Stroke or Transient Ischemic Attack: A Statement for Healthcare Professionals From the American Heart Association/American Stroke Association Council on Stroke: Co-Sponsored by the Council on Cardiovascular Radiology and Intervention. Stroke. Vol. 37, 2006:577.</pre></div>
+               </td>
+            </tr>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">Reference</span></td>
+               <td width="80%" colspan="3">
+                  <div style="width:660px;overflow-x:hidden;overflow-y:auto"><pre>STROKE the First Hours Guidelines for Acute Treatment, National Stroke Association, 2000.</pre></div>
+               </td>
+            </tr>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">Reference</span></td>
+               <td width="80%" colspan="3">
+                  <div style="width:660px;overflow-x:hidden;overflow-y:auto"><pre>The ATLANTIS, ECASS, and NINDS rt-PA Study Group Investigators. Association of Outcome with early stroke treatment: pooled analysis of ATLANTIS, ECASS, and NINDS rt-PA stroke Trials. Lancet 2004;363:768-774.</pre></div>
+               </td>
+            </tr>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">Reference</span></td>
+               <td width="80%" colspan="3">
+                  <div style="width:660px;overflow-x:hidden;overflow-y:auto"><pre>The National Institute of Neurological Disorders and Stroke rt-PA Stroke Study Group. Tissue plasminogen activator for acute ischemic stroke. The National Institute of Neurological Disorders and Stroke rt-PA Stroke Study Group. New England Journal of Medicine 1995;333:1581-1587.</pre></div>
+               </td>
+            </tr>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">Definition</span></td>
+               <td width="80%" colspan="3">
+                  <div style="width:660px;overflow-x:hidden;overflow-y:auto"><pre>None</pre></div>
+               </td>
+            </tr>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">Guidance</span></td>
+               <td width="80%" colspan="3">
+                  <div style="width:660px;overflow-x:hidden;overflow-y:auto"><pre>The unit of measurement for this measure is an inpatient episode of care. Each distinct hospitalization should be reported, regardless of whether the same patient is admitted for inpatient care more than once during the measurement period. In addition, the eMeasure logic intends to represent events within or surrounding a single occurrence of an inpatient hospitalization.
+
+The facility location arrival datetime and facility location departure datetime are coupled with the emergency department visit value set. They intend to represent arrival date/time at the emergency department and the discharge date/time from the emergency department, respectively.
+
+The baseline state data value set and its associated stop date/time intend to capture the date and time prior to hospital arrival at which it was witnessed or reported that the patient was last known to be without the signs and symptoms of the current stroke or at his or her baseline state of health</pre></div>
+               </td>
+            </tr>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">Transmission Format</span></td>
+               <td width="80%" colspan="3">
+                  <div style="width:660px;overflow-x:hidden;overflow-y:auto"><pre>None</pre></div>
+               </td>
+            </tr>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">Initial Patient Population</span></td>
+               <td width="80%" colspan="3">
+                  <div style="width:660px;overflow-x:hidden;overflow-y:auto"><pre>Patients admitted to the hospital for inpatient acute care with a Principal Diagnosis Code for ischemic or hemorrhagic stroke with hospital stays &lt;= 120 days during the measurement period for patients age 18 and older at the time of hospital admission.</pre></div>
+               </td>
+            </tr>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">Denominator</span></td>
+               <td width="80%" colspan="3">
+                  <div style="width:660px;overflow-x:hidden;overflow-y:auto"><pre>Acute ischemic stroke patients whose time of arrival is within 2 hours (less than or equal to 120 minutes) of time last known well.</pre></div>
+               </td>
+            </tr>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">Denominator Exclusions</span></td>
+               <td width="80%" colspan="3">
+                  <div style="width:660px;overflow-x:hidden;overflow-y:auto"><pre>Patients admitted for Elective Carotid Intervention, or
+Patients with a documented Reason For Not Initiating IV Thrombolytic</pre></div>
+               </td>
+            </tr>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">Numerator</span></td>
+               <td width="80%" colspan="3">
+                  <div style="width:660px;overflow-x:hidden;overflow-y:auto"><pre>Acute ischemic stroke patients for whom IV thrombolytic therapy was initiated at this hospital within 3 hours (less than or equal to 180 minutes) of time last known well.</pre></div>
+               </td>
+            </tr>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">Numerator Exclusions</span></td>
+               <td width="80%" colspan="3">
+                  <div style="width:660px;overflow-x:hidden;overflow-y:auto"><pre>Not Applicable</pre></div>
+               </td>
+            </tr>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">Denominator Exceptions</span></td>
+               <td width="80%" colspan="3">
+                  <div style="width:660px;overflow-x:hidden;overflow-y:auto"><pre>None</pre></div>
+               </td>
+            </tr>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">Measure Population</span></td>
+               <td width="80%" colspan="3">
+                  <div style="width:660px;overflow-x:hidden;overflow-y:auto"><pre>Not Applicable</pre></div>
+               </td>
+            </tr>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">Measure Observations</span></td>
+               <td width="80%" colspan="3">
+                  <div style="width:660px;overflow-x:hidden;overflow-y:auto"><pre>Not Applicable</pre></div>
+               </td>
+            </tr>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">Supplemental Data Elements</span></td>
+               <td width="80%" colspan="3">
+                  <div style="width:660px;overflow-x:hidden;overflow-y:auto"><pre>For every patient evaluated by this measure also identify payer, race, ethnicity and sex.</pre></div>
+               </td>
+            </tr>
+         </tbody>
+      </table>
+      <h2><a name="toc">Table of Contents</a></h2>
+      <ul>
+         <li><a href="#d3650571e596">Population criteria</a></li>
+         <li><a href="#d3650571e2340">Data criteria (QDM Data Elements)</a></li>
+         <li><a href="#d3650571e2980">Reporting Stratification</a></li>
+         <li><a href="#d3650571e3001">Supplemental Data Elements</a></li>
+      </ul>
+      <hr align="left" color="teal" size="2" width="80%">
+      <h3><a name="d3650571e596" href="#toc">Population criteria</a></h3>
+      <div>
+         
+         <ul>
+            <li>
+               <b>Initial Patient Population =</b>
+               
+               <ul>
+                  <li>AND: "Patient Characteristic Birthdate: birth date"  &gt;= 18 year(s) starts before start of "Occurrence A of Encounter, Performed:
+                     Inpatient Encounter"
+                  </li>
+                  <li>AND: "Occurrence A of Encounter, Performed: Inpatient Encounter (length of stay &lt;= 120 day(s))"</li>
+                  <li>AND: "Occurrence A of Encounter, Performed: Inpatient Encounter (discharge datetime)" during "Measurement Period"</li>
+                  <li>AND: 
+                     <ul>
+                        <li>OR: "Diagnosis, Active: Ischemic Stroke (ordinality: 'Principal Diagnosis')"</li>
+                        <li>OR: "Diagnosis, Active: Hemorrhagic Stroke (ordinality: 'Principal Diagnosis')"</li>
+                        <li> starts during "Occurrence A of Encounter, Performed: Inpatient Encounter"</li>
+                     </ul>
+                     
+                  </li>
+               </ul>
+               
+            </li>
+            <li>
+               <b>Denominator =</b>
+               
+               <ul>
+                  <li>AND: "Initial Patient Population"</li>
+                  <li>AND: "Diagnosis, Active: Ischemic Stroke (ordinality: 'Principal Diagnosis')" starts during "Occurrence A of Encounter, Performed:
+                     Inpatient Encounter"
+                  </li>
+                  <li>AND: "Occurrence A of Encounter, Performed: Inpatient Encounter (admission datetime)"  &lt;= 1 hour(s) starts after end of "Occurrence
+                     A of Encounter, Performed: Emergency Department Visit"
+                  </li>
+                  <li>AND: 
+                     <ul>
+                        <li>OR: "Occurrence A of Symptom, Active: Neurologic Symptoms of Stroke (start datetime)"</li>
+                        <li>OR: "Occurrence A of Symptom, Active: Baseline State (stop datetime)"</li>
+                        <li>  &lt;= 120 minute(s) starts before start of "Occurrence A of Encounter, Performed: Emergency Department Visit (facility location
+                           arrival datetime)"
+                        </li>
+                     </ul>
+                     
+                  </li>
+               </ul>
+               
+            </li>
+            <li>
+               <b>Denominator Exclusions =</b>
+               
+               <ul>
+                  <li>AND: 
+                     <ul>
+                        <li>OR: "Occurrence A of Encounter, Performed: Inpatient Encounter (reason: 'Carotid Intervention')"</li>
+                        <li>OR: "Risk Category Assessment: National Institute of Health Stroke Scale (result = 0 )"  &lt;= 180 minute(s) starts after start
+                           of 
+                           <ul>
+                              <li>OR: "Occurrence A of Symptom, Active: Neurologic Symptoms of Stroke (start datetime)"</li>
+                              <li>OR: "Occurrence A of Symptom, Active: Baseline State (stop datetime)"</li>
+                           </ul>
+                           
+                        </li>
+                        <li>OR: "Medication, Administered: Thrombolytic (t-PA) Therapy"  &lt;= 2 day(s) starts before start of "Occurrence A of Encounter,
+                           Performed: Emergency Department Visit (facility location arrival datetime)"
+                        </li>
+                        <li>OR: 
+                           <ul>
+                              <li>OR: "Medication, Order not done: Medical Reason" for "Thrombolytic (t-PA) Therapy RxNorm Value Set"</li>
+                              <li>OR: "Medication, Order not done: Patient Refusal" for "Thrombolytic (t-PA) Therapy RxNorm Value Set"</li>
+                              <li>OR: "Medication, Administered not done: Medical Reason" for "Thrombolytic (t-PA) Therapy RxNorm Value Set"</li>
+                              <li>OR: "Medication, Administered not done: Patient Refusal" for "Thrombolytic (t-PA) Therapy RxNorm Value Set"</li>
+                              <li>  &lt;= 180 minute(s) starts after start of "Occurrence A of Symptom, Active: Baseline State (stop datetime)"</li>
+                           </ul>
+                           
+                        </li>
+                        <li>OR: 
+                           <ul>
+                              <li>OR: "Medication, Order not done: Medical Reason" for "Thrombolytic (t-PA) Therapy RxNorm Value Set"</li>
+                              <li>OR: "Medication, Order not done: Patient Refusal" for "Thrombolytic (t-PA) Therapy RxNorm Value Set"</li>
+                              <li>OR: "Medication, Administered not done: Medical Reason" for "Thrombolytic (t-PA) Therapy RxNorm Value Set"</li>
+                              <li>OR: "Medication, Administered not done: Patient Refusal" for "Thrombolytic (t-PA) Therapy RxNorm Value Set"</li>
+                              <li>  &lt;= 180 minute(s) starts after start of "Occurrence A of Symptom, Active: Neurologic Symptoms of Stroke (start datetime)"</li>
+                           </ul>
+                           
+                        </li>
+                     </ul>
+                     
+                  </li>
+               </ul>
+               
+            </li>
+            <li>
+               <b>Numerator =</b>
+               
+               <ul>
+                  <li>AND: 
+                     <ul>
+                        <li>OR: "Medication, Administered: Thrombolytic (t-PA) Therapy"  &lt;= 180 minute(s) starts after start of "Occurrence A of Symptom,
+                           Active: Baseline State (stop datetime)"
+                        </li>
+                        <li>OR: "Medication, Administered: Thrombolytic (t-PA) Therapy"  &lt;= 180 minute(s) starts after start of "Occurrence A of Symptom,
+                           Active: Neurologic Symptoms of Stroke (start datetime)"
+                        </li>
+                     </ul>
+                     
+                  </li>
+               </ul>
+               
+            </li>
+            <li>
+               <b>Denominator Exceptions =</b>
+               
+               <ul>
+                  <li>None</li>
+               </ul>
+               
+            </li>
+         </ul>
+         
+      </div>
+      <h3><a name="d3650571e2340" href="#toc">Data criteria (QDM Data Elements)</a></h3>
+      <div>
+         
+         <ul>
+            <li>
+               "Diagnosis, Active: Hemorrhagic Stroke" using "Hemorrhagic Stroke Grouping Value Set (2.16.840.1.113883.3.117.1.7.1.212)"
+            </li>
+            <li>
+               "Diagnosis, Active: Ischemic Stroke" using "Ischemic Stroke Grouping Value Set (2.16.840.1.113883.3.117.1.7.1.247)"
+            </li>
+            <li>
+               "Encounter, Performed: Emergency Department Visit" using "Emergency Department Visit Grouping Value Set (2.16.840.1.113883.3.117.1.7.1.293)"
+            </li>
+            <li>
+               "Encounter, Performed: Inpatient Encounter" using "Inpatient Encounter SNOMED-CT Value Set (2.16.840.1.113883.3.117.1.7.1.23)"
+            </li>
+            <li>
+               "Medication, Administered: Thrombolytic (t-PA) Therapy" using "Thrombolytic (t-PA) Therapy RxNorm Value Set (2.16.840.1.113883.3.117.1.7.1.226)"
+            </li>
+            <li>
+               "Medication, Administered not done: Medical Reason" using "Medical Reason SNOMED-CT Value Set (2.16.840.1.113883.3.117.1.7.1.473)"
+            </li>
+            <li>
+               "Medication, Administered not done: Patient Refusal" using "Patient Refusal SNOMED-CT Value Set (2.16.840.1.113883.3.117.1.7.1.93)"
+            </li>
+            <li>
+               "Medication, Order: Thrombolytic (t-PA) Therapy" using "Thrombolytic (t-PA) Therapy RxNorm Value Set (2.16.840.1.113883.3.117.1.7.1.226)"
+            </li>
+            <li>
+               "Medication, Order not done: Medical Reason" using "Medical Reason SNOMED-CT Value Set (2.16.840.1.113883.3.117.1.7.1.473)"
+            </li>
+            <li>
+               "Medication, Order not done: Patient Refusal" using "Patient Refusal SNOMED-CT Value Set (2.16.840.1.113883.3.117.1.7.1.93)"
+            </li>
+            <li>
+               "Patient Characteristic Birthdate: birth date" using "birth date LOINC Value Set (2.16.840.1.113883.3.560.100.4)"
+            </li>
+            <li>
+               "Risk Category Assessment: National Institute of Health Stroke Scale" using "National Institute of Health Stroke Scale LOINC Value Set (2.16.840.1.113883.3.117.1.7.1.269)"
+            </li>
+            <li>
+               "Symptom, Active: Baseline State" using "Baseline State SNOMED-CT Value Set (2.16.840.1.113883.3.117.1.7.1.417)"
+            </li>
+            <li>
+               "Symptom, Active: Neurologic Symptoms of Stroke" using "Neurologic Symptoms of Stroke SNOMED-CT Value Set (2.16.840.1.113883.3.117.1.7.1.399)"
+            </li>
+            <li>
+               Attribute: "Ordinality: Principal Diagnosis" using "Principal Diagnosis SNOMED-CT Value Set  (2.16.840.1.113883.3.117.2.7.1.14)"
+            </li>
+            <li>
+               Attribute: "Reason: Carotid Intervention" using "Carotid Intervention Grouping Value Set  (2.16.840.1.113883.3.117.1.7.1.204)"
+            </li>
+         </ul>
+         
+      </div>
+      <h3><a name="d3650571e2980" href="#toc">Reporting Stratification</a></h3>
+      <div>
+         
+         <ul>
+            <li>None</li>
+         </ul>
+         
+      </div>
+      <h3><a name="d3650571e3001" href="#toc">Supplemental Data Elements</a></h3>
+      <div>
+         
+         <ul>
+            <li>
+               "Patient Characteristic Ethnicity: Ethnicity" using "Ethnicity CDC Value Set (2.16.840.1.114222.4.11.837)"
+            </li>
+            <li>
+               "Patient Characteristic Payer: Payer" using "Payer Source of Payment Typology Value Set (2.16.840.1.114222.4.11.3591)"
+            </li>
+            <li>
+               "Patient Characteristic Race: Race" using "Race CDC Value Set (2.16.840.1.114222.4.11.836)"
+            </li>
+            <li>
+               "Patient Characteristic Sex: ONC Administrative Sex" using "ONC Administrative Sex Administrative Sex Value Set (2.16.840.1.113762.1.4.1)"
+            </li>
+         </ul>
+         
+      </div><br><hr align="left" color="teal" size="2" width="80%"><br><table class="header_table">
+         <tbody>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">Measure Set</span></td>
+               <td colspan="3" width="80%">
+                  <div style="width:660px;overflow-x:hidden;overflow-y:auto;word-wrap:break-word">eMeasure Stroke (eSTK)</div>
+               </td>
+            </tr>
+         </tbody>
+      </table>
+   </body>
+</html>
