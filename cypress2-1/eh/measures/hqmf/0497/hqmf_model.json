@@ -1,0 +1,937 @@
+{
+  "id": "0497",
+  "hqmf_id": "8A4D92B2-3887-5DF3-0139-0C4E00454B35",
+  "hqmf_set_id": "979F21BD-3F93-4CDD-8273-B23DFE9C0513",
+  "hqmf_version_number": 1,
+  "title": "Median Admit Decision Time to ED Departure Time for Admitted Patients",
+  "description": "Median time (in minutes) from admit decision time to time of departure from the emergency department for emergency department patients admitted to inpatient status.",
+  "cms_id": "CMS111v1",
+  "population_criteria": {
+    "IPP": {
+      "conjunction?": true,
+      "type": "IPP",
+      "title": "Initial Patient Population",
+      "hqmf_id": "57927B6F-128E-4B7B-9C61-46EF133F6983",
+      "preconditions": [
+        {
+          "id": 8,
+          "preconditions": [
+            {
+              "id": 4,
+              "reference": "OccurrenceAEncounterInpatient1_precondition_4"
+            },
+            {
+              "id": 6,
+              "reference": "OccurrenceAEncounterInpatient1_precondition_6"
+            }
+          ],
+          "conjunction_code": "allTrue"
+        }
+      ]
+    },
+    "MSRPOPL": {
+      "conjunction?": true,
+      "type": "MSRPOPL",
+      "title": "Measure Population",
+      "hqmf_id": "657AF3B1-4054-4927-8DEF-ED99FBD4D148",
+      "preconditions": [
+        {
+          "id": 13,
+          "preconditions": [
+            {
+              "id": 9,
+              "reference": "OccurrenceAEmergencyDepartmentVisit2_precondition_9"
+            },
+            {
+              "id": 11,
+              "reference": "OccurrenceADecisionToAdmitToHospitalInpatient3_precondition_11"
+            }
+          ],
+          "conjunction_code": "allTrue"
+        }
+      ]
+    },
+    "OBSERV": {
+      "conjunction?": false,
+      "type": "OBSERV",
+      "title": "Measure Observation",
+      "hqmf_id": "474ABACD-C861-4E77-A633-4C6782FDC7E3",
+      "aggregator": "MEDIAN",
+      "preconditions": [
+        {
+          "id": 20,
+          "reference": "GROUP_TIMEDIFF_46"
+        }
+      ]
+    },
+    "IPP_1": {
+      "conjunction?": true,
+      "type": "IPP",
+      "title": "Initial Patient Population",
+      "hqmf_id": "57927B6F-128E-4B7B-9C61-46EF133F6983",
+      "preconditions": [
+        {
+          "id": 29,
+          "preconditions": [
+            {
+              "id": 23,
+              "reference": "OccurrenceAEmergencyDepartmentVisit2_precondition_23"
+            },
+            {
+              "id": 25,
+              "reference": "OccurrenceAEncounterInpatient1_precondition_25"
+            },
+            {
+              "id": 27,
+              "reference": "OccurrenceAEncounterInpatient1_precondition_27"
+            }
+          ],
+          "conjunction_code": "allTrue"
+        }
+      ]
+    },
+    "IPP_2": {
+      "conjunction?": true,
+      "type": "IPP",
+      "title": "Initial Patient Population",
+      "hqmf_id": "57927B6F-128E-4B7B-9C61-46EF133F6983",
+      "preconditions": [
+        {
+          "id": 37,
+          "preconditions": [
+            {
+              "id": 32,
+              "reference": "OccurrenceAEncounterInpatient1_precondition_32"
+            },
+            {
+              "id": 34,
+              "reference": "OccurrenceAEncounterInpatient1_precondition_34"
+            },
+            {
+              "id": 36,
+              "preconditions": [
+                {
+                  "id": 30,
+                  "reference": "DiagnosisActivePsychiatricMentalHealthPatient_precondition_30"
+                }
+              ],
+              "conjunction_code": "atLeastOneTrue",
+              "negation": true
+            }
+          ],
+          "conjunction_code": "allTrue"
+        }
+      ]
+    },
+    "IPP_3": {
+      "conjunction?": true,
+      "type": "IPP",
+      "title": "Initial Patient Population",
+      "hqmf_id": "57927B6F-128E-4B7B-9C61-46EF133F6983",
+      "preconditions": [
+        {
+          "id": 44,
+          "preconditions": [
+            {
+              "id": 38,
+              "reference": "DiagnosisActivePsychiatricMentalHealthPatient_precondition_38"
+            },
+            {
+              "id": 40,
+              "reference": "OccurrenceAEncounterInpatient1_precondition_40"
+            },
+            {
+              "id": 42,
+              "reference": "OccurrenceAEncounterInpatient1_precondition_42"
+            }
+          ],
+          "conjunction_code": "allTrue"
+        }
+      ]
+    }
+  },
+  "data_criteria": {
+    "EncounterOrderDecisionToAdmitToHospitalInpatient": {
+      "title": "Decision to Admit to Hospital Inpatient",
+      "description": "Encounter, Order: Decision to Admit to Hospital Inpatient",
+      "standard_category": "encounter",
+      "qds_data_type": "encounter",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.295",
+      "type": "encounters",
+      "definition": "encounter",
+      "status": "ordered",
+      "hard_status": true,
+      "negation": false,
+      "source_data_criteria": "EncounterOrderDecisionToAdmitToHospitalInpatient"
+    },
+    "EncounterPerformedEncounterInpatient": {
+      "title": "Encounter Inpatient",
+      "description": "Encounter, Performed: Encounter Inpatient",
+      "standard_category": "encounter",
+      "qds_data_type": "encounter",
+      "code_list_id": "2.16.840.1.113883.3.666.5.307",
+      "type": "encounters",
+      "definition": "encounter",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "EncounterPerformedEncounterInpatient"
+    },
+    "EncounterPerformedEmergencyDepartmentVisit": {
+      "title": "Emergency Department Visit",
+      "description": "Encounter, Performed: Emergency Department Visit",
+      "standard_category": "encounter",
+      "qds_data_type": "encounter",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.293",
+      "type": "encounters",
+      "definition": "encounter",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "EncounterPerformedEmergencyDepartmentVisit"
+    },
+    "OccurrenceAEncounterInpatient1": {
+      "title": "Encounter Inpatient",
+      "description": "Encounter, Performed: Encounter Inpatient",
+      "standard_category": "encounter",
+      "qds_data_type": "encounter",
+      "code_list_id": "2.16.840.1.113883.3.666.5.307",
+      "type": "encounters",
+      "definition": "encounter",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "specific_occurrence": "A",
+      "specific_occurrence_const": "ENCOUNTER_PERFORMED_ENCOUNTER_INPATIENT",
+      "source_data_criteria": "OccurrenceAEncounterInpatient1"
+    },
+    "OccurrenceAEmergencyDepartmentVisit2": {
+      "title": "Emergency Department Visit",
+      "description": "Encounter, Performed: Emergency Department Visit",
+      "standard_category": "encounter",
+      "qds_data_type": "encounter",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.293",
+      "type": "encounters",
+      "definition": "encounter",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "specific_occurrence": "A",
+      "specific_occurrence_const": "ENCOUNTER_PERFORMED_EMERGENCY_DEPARTMENT_VISIT",
+      "source_data_criteria": "OccurrenceAEmergencyDepartmentVisit2"
+    },
+    "OccurrenceAEncounterInpatient1_precondition_4": {
+      "title": "Encounter Inpatient",
+      "description": "Encounter, Performed: Encounter Inpatient",
+      "standard_category": "encounter",
+      "qds_data_type": "encounter",
+      "code_list_id": "2.16.840.1.113883.3.666.5.307",
+      "type": "encounters",
+      "definition": "encounter",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "specific_occurrence": "A",
+      "specific_occurrence_const": "ENCOUNTER_PERFORMED_ENCOUNTER_INPATIENT",
+      "source_data_criteria": "OccurrenceAEncounterInpatient1",
+      "field_values": {
+        "LENGTH_OF_STAY": {
+          "type": "IVL_PQ",
+          "high": {
+            "type": "PQ",
+            "unit": "d",
+            "value": "120",
+            "inclusive?": true,
+            "derived?": false
+          }
+        }
+      }
+    },
+    "OccurrenceAEncounterInpatient1_precondition_6": {
+      "title": "Encounter Inpatient",
+      "description": "Encounter, Performed: Encounter Inpatient",
+      "standard_category": "encounter",
+      "qds_data_type": "encounter",
+      "code_list_id": "2.16.840.1.113883.3.666.5.307",
+      "type": "encounters",
+      "definition": "encounter",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "specific_occurrence": "A",
+      "specific_occurrence_const": "ENCOUNTER_PERFORMED_ENCOUNTER_INPATIENT",
+      "source_data_criteria": "OccurrenceAEncounterInpatient1",
+      "field_values": {
+        "DISCHARGE_DATETIME": {
+          "type": "ANYNonNull"
+        }
+      },
+      "temporal_references": [
+        {
+          "type": "DURING",
+          "reference": "MeasurePeriod"
+        }
+      ]
+    },
+    "OccurrenceAEmergencyDepartmentVisit2_precondition_9": {
+      "title": "Emergency Department Visit",
+      "description": "Encounter, Performed: Emergency Department Visit",
+      "standard_category": "encounter",
+      "qds_data_type": "encounter",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.293",
+      "type": "encounters",
+      "definition": "encounter",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "specific_occurrence": "A",
+      "specific_occurrence_const": "ENCOUNTER_PERFORMED_EMERGENCY_DEPARTMENT_VISIT",
+      "source_data_criteria": "OccurrenceAEmergencyDepartmentVisit2",
+      "temporal_references": [
+        {
+          "type": "EBS",
+          "reference": "OccurrenceAEncounterInpatient1",
+          "range": {
+            "type": "IVL_PQ",
+            "high": {
+              "type": "PQ",
+              "unit": "h",
+              "value": "1",
+              "inclusive?": true,
+              "derived?": false
+            }
+          }
+        }
+      ]
+    },
+    "OccurrenceADecisionToAdmitToHospitalInpatient3_precondition_11": {
+      "title": "Decision to Admit to Hospital Inpatient",
+      "description": "Encounter, Ordered: Decision to Admit to Hospital Inpatient",
+      "standard_category": "encounter",
+      "qds_data_type": "encounter",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.295",
+      "type": "encounters",
+      "definition": "encounter",
+      "status": "ordered",
+      "hard_status": true,
+      "negation": false,
+      "specific_occurrence": "A",
+      "specific_occurrence_const": "ENCOUNTER_ORDERED_DECISION_TO_ADMIT_TO_HOSPITAL_INPATIENT",
+      "source_data_criteria": "OccurrenceADecisionToAdmitToHospitalInpatient3",
+      "temporal_references": [
+        {
+          "type": "DURING",
+          "reference": "OccurrenceAEmergencyDepartmentVisit2"
+        }
+      ]
+    },
+    "OccurrenceADecisionToAdmitToHospitalInpatient3_precondition_14": {
+      "title": "Decision to Admit to Hospital Inpatient",
+      "description": "Encounter, Ordered: Decision to Admit to Hospital Inpatient",
+      "standard_category": "encounter",
+      "qds_data_type": "encounter",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.295",
+      "type": "encounters",
+      "definition": "encounter",
+      "status": "ordered",
+      "hard_status": true,
+      "negation": false,
+      "specific_occurrence": "A",
+      "specific_occurrence_const": "ENCOUNTER_ORDERED_DECISION_TO_ADMIT_TO_HOSPITAL_INPATIENT",
+      "source_data_criteria": "OccurrenceADecisionToAdmitToHospitalInpatient3",
+      "field_values": {
+        "START_DATETIME": {
+          "type": "ANYNonNull"
+        }
+      }
+    },
+    "OccurrenceAEmergencyDepartmentVisit2_precondition_16": {
+      "title": "Emergency Department Visit",
+      "description": "Encounter, Performed: Emergency Department Visit",
+      "standard_category": "encounter",
+      "qds_data_type": "encounter",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.293",
+      "type": "encounters",
+      "definition": "encounter",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "specific_occurrence": "A",
+      "specific_occurrence_const": "ENCOUNTER_PERFORMED_EMERGENCY_DEPARTMENT_VISIT",
+      "source_data_criteria": "OccurrenceAEmergencyDepartmentVisit2",
+      "field_values": {
+        "FACILITY_LOCATION_DEPARTURE_DATETIME": null
+      }
+    },
+    "GROUP_TIMEDIFF_46": {
+      "title": "GROUP_TIMEDIFF_46",
+      "description": "",
+      "standard_category": "",
+      "qds_data_type": "",
+      "children_criteria": [
+        "OccurrenceADecisionToAdmitToHospitalInpatient3_precondition_14",
+        "OccurrenceAEmergencyDepartmentVisit2_precondition_16"
+      ],
+      "derivation_operator": "XPRODUCT",
+      "type": "derived",
+      "definition": "derived",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "GROUP_TIMEDIFF_46",
+      "subset_operators": [
+        {
+          "type": "TIMEDIFF",
+          "value": {
+            "type": "ANYNonNull"
+          }
+        }
+      ]
+    },
+    "OccurrenceAEmergencyDepartmentVisit2_precondition_23": {
+      "title": "Emergency Department Visit",
+      "description": "Encounter, Performed: Emergency Department Visit",
+      "standard_category": "encounter",
+      "qds_data_type": "encounter",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.293",
+      "type": "encounters",
+      "definition": "encounter",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "specific_occurrence": "A",
+      "specific_occurrence_const": "ENCOUNTER_PERFORMED_EMERGENCY_DEPARTMENT_VISIT",
+      "source_data_criteria": "OccurrenceAEmergencyDepartmentVisit2",
+      "temporal_references": [
+        {
+          "type": "EBS",
+          "reference": "OccurrenceAEncounterInpatient1",
+          "range": {
+            "type": "IVL_PQ",
+            "high": {
+              "type": "PQ",
+              "unit": "h",
+              "value": "1",
+              "inclusive?": true,
+              "derived?": false
+            }
+          }
+        }
+      ]
+    },
+    "OccurrenceAEncounterInpatient1_precondition_25": {
+      "title": "Encounter Inpatient",
+      "description": "Encounter, Performed: Encounter Inpatient",
+      "standard_category": "encounter",
+      "qds_data_type": "encounter",
+      "code_list_id": "2.16.840.1.113883.3.666.5.307",
+      "type": "encounters",
+      "definition": "encounter",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "specific_occurrence": "A",
+      "specific_occurrence_const": "ENCOUNTER_PERFORMED_ENCOUNTER_INPATIENT",
+      "source_data_criteria": "OccurrenceAEncounterInpatient1",
+      "field_values": {
+        "LENGTH_OF_STAY": {
+          "type": "IVL_PQ",
+          "high": {
+            "type": "PQ",
+            "unit": "d",
+            "value": "120",
+            "inclusive?": true,
+            "derived?": false
+          }
+        }
+      }
+    },
+    "OccurrenceAEncounterInpatient1_precondition_27": {
+      "title": "Encounter Inpatient",
+      "description": "Encounter, Performed: Encounter Inpatient",
+      "standard_category": "encounter",
+      "qds_data_type": "encounter",
+      "code_list_id": "2.16.840.1.113883.3.666.5.307",
+      "type": "encounters",
+      "definition": "encounter",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "specific_occurrence": "A",
+      "specific_occurrence_const": "ENCOUNTER_PERFORMED_ENCOUNTER_INPATIENT",
+      "source_data_criteria": "OccurrenceAEncounterInpatient1",
+      "field_values": {
+        "DISCHARGE_DATETIME": {
+          "type": "ANYNonNull"
+        }
+      },
+      "temporal_references": [
+        {
+          "type": "DURING",
+          "reference": "MeasurePeriod"
+        }
+      ]
+    },
+    "OccurrenceAEncounterInpatient1_precondition_32": {
+      "title": "Encounter Inpatient",
+      "description": "Encounter, Performed: Encounter Inpatient",
+      "standard_category": "encounter",
+      "qds_data_type": "encounter",
+      "code_list_id": "2.16.840.1.113883.3.666.5.307",
+      "type": "encounters",
+      "definition": "encounter",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "specific_occurrence": "A",
+      "specific_occurrence_const": "ENCOUNTER_PERFORMED_ENCOUNTER_INPATIENT",
+      "source_data_criteria": "OccurrenceAEncounterInpatient1",
+      "field_values": {
+        "LENGTH_OF_STAY": {
+          "type": "IVL_PQ",
+          "high": {
+            "type": "PQ",
+            "unit": "d",
+            "value": "120",
+            "inclusive?": true,
+            "derived?": false
+          }
+        }
+      }
+    },
+    "OccurrenceAEncounterInpatient1_precondition_34": {
+      "title": "Encounter Inpatient",
+      "description": "Encounter, Performed: Encounter Inpatient",
+      "standard_category": "encounter",
+      "qds_data_type": "encounter",
+      "code_list_id": "2.16.840.1.113883.3.666.5.307",
+      "type": "encounters",
+      "definition": "encounter",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "specific_occurrence": "A",
+      "specific_occurrence_const": "ENCOUNTER_PERFORMED_ENCOUNTER_INPATIENT",
+      "source_data_criteria": "OccurrenceAEncounterInpatient1",
+      "field_values": {
+        "DISCHARGE_DATETIME": {
+          "type": "ANYNonNull"
+        }
+      },
+      "temporal_references": [
+        {
+          "type": "DURING",
+          "reference": "MeasurePeriod"
+        }
+      ]
+    },
+    "DiagnosisActivePsychiatricMentalHealthPatient_precondition_30": {
+      "title": "Psychiatric/Mental Health Patient",
+      "description": "Diagnosis, Active: Psychiatric/Mental Health Patient",
+      "standard_category": "diagnosis_condition_problem",
+      "qds_data_type": "diagnosis_active",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.299",
+      "type": "conditions",
+      "definition": "diagnosis",
+      "status": "active",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "DiagnosisActivePsychiatricMentalHealthPatient",
+      "field_values": {
+        "ORDINAL": {
+          "type": "CD",
+          "code_list_id": "2.16.840.1.113883.3.117.2.7.1.14",
+          "title": "Principal Diagnosis"
+        }
+      },
+      "temporal_references": [
+        {
+          "type": "SDU",
+          "reference": "OccurrenceAEmergencyDepartmentVisit2"
+        }
+      ]
+    },
+    "DiagnosisActivePsychiatricMentalHealthPatient_precondition_38": {
+      "title": "Psychiatric/Mental Health Patient",
+      "description": "Diagnosis, Active: Psychiatric/Mental Health Patient",
+      "standard_category": "diagnosis_condition_problem",
+      "qds_data_type": "diagnosis_active",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.299",
+      "type": "conditions",
+      "definition": "diagnosis",
+      "status": "active",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "DiagnosisActivePsychiatricMentalHealthPatient",
+      "field_values": {
+        "ORDINAL": {
+          "type": "CD",
+          "code_list_id": "2.16.840.1.113883.3.117.2.7.1.14",
+          "title": "Principal Diagnosis"
+        }
+      },
+      "temporal_references": [
+        {
+          "type": "SDU",
+          "reference": "OccurrenceAEmergencyDepartmentVisit2"
+        }
+      ]
+    },
+    "OccurrenceAEncounterInpatient1_precondition_40": {
+      "title": "Encounter Inpatient",
+      "description": "Encounter, Performed: Encounter Inpatient",
+      "standard_category": "encounter",
+      "qds_data_type": "encounter",
+      "code_list_id": "2.16.840.1.113883.3.666.5.307",
+      "type": "encounters",
+      "definition": "encounter",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "specific_occurrence": "A",
+      "specific_occurrence_const": "ENCOUNTER_PERFORMED_ENCOUNTER_INPATIENT",
+      "source_data_criteria": "OccurrenceAEncounterInpatient1",
+      "field_values": {
+        "LENGTH_OF_STAY": {
+          "type": "IVL_PQ",
+          "high": {
+            "type": "PQ",
+            "unit": "d",
+            "value": "120",
+            "inclusive?": true,
+            "derived?": false
+          }
+        }
+      }
+    },
+    "OccurrenceAEncounterInpatient1_precondition_42": {
+      "title": "Encounter Inpatient",
+      "description": "Encounter, Performed: Encounter Inpatient",
+      "standard_category": "encounter",
+      "qds_data_type": "encounter",
+      "code_list_id": "2.16.840.1.113883.3.666.5.307",
+      "type": "encounters",
+      "definition": "encounter",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "specific_occurrence": "A",
+      "specific_occurrence_const": "ENCOUNTER_PERFORMED_ENCOUNTER_INPATIENT",
+      "source_data_criteria": "OccurrenceAEncounterInpatient1",
+      "field_values": {
+        "DISCHARGE_DATETIME": {
+          "type": "ANYNonNull"
+        }
+      },
+      "temporal_references": [
+        {
+          "type": "DURING",
+          "reference": "MeasurePeriod"
+        }
+      ]
+    }
+  },
+  "source_data_criteria": {
+    "DiagnosisActivePsychiatricMentalHealthPatient": {
+      "title": "Psychiatric/Mental Health Patient",
+      "description": "Diagnosis, Active: Psychiatric/Mental Health Patient",
+      "standard_category": "diagnosis_condition_problem",
+      "qds_data_type": "diagnosis_active",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.299",
+      "type": "conditions",
+      "definition": "diagnosis",
+      "status": "active",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "DiagnosisActivePsychiatricMentalHealthPatient"
+    },
+    "EncounterOrderDecisionToAdmitToHospitalInpatient": {
+      "title": "Decision to Admit to Hospital Inpatient",
+      "description": "Encounter, Order: Decision to Admit to Hospital Inpatient",
+      "standard_category": "encounter",
+      "qds_data_type": "encounter",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.295",
+      "type": "encounters",
+      "definition": "encounter",
+      "status": "ordered",
+      "hard_status": true,
+      "negation": false,
+      "source_data_criteria": "EncounterOrderDecisionToAdmitToHospitalInpatient"
+    },
+    "EncounterPerformedEncounterInpatient": {
+      "title": "Encounter Inpatient",
+      "description": "Encounter, Performed: Encounter Inpatient",
+      "standard_category": "encounter",
+      "qds_data_type": "encounter",
+      "code_list_id": "2.16.840.1.113883.3.666.5.307",
+      "type": "encounters",
+      "definition": "encounter",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "EncounterPerformedEncounterInpatient"
+    },
+    "EncounterPerformedEmergencyDepartmentVisit": {
+      "title": "Emergency Department Visit",
+      "description": "Encounter, Performed: Emergency Department Visit",
+      "standard_category": "encounter",
+      "qds_data_type": "encounter",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.293",
+      "type": "encounters",
+      "definition": "encounter",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "EncounterPerformedEmergencyDepartmentVisit"
+    },
+    "OccurrenceAEncounterInpatient1": {
+      "title": "Encounter Inpatient",
+      "description": "Encounter, Performed: Encounter Inpatient",
+      "standard_category": "encounter",
+      "qds_data_type": "encounter",
+      "code_list_id": "2.16.840.1.113883.3.666.5.307",
+      "type": "encounters",
+      "definition": "encounter",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "specific_occurrence": "A",
+      "specific_occurrence_const": "ENCOUNTER_PERFORMED_ENCOUNTER_INPATIENT",
+      "source_data_criteria": "OccurrenceAEncounterInpatient1"
+    },
+    "OccurrenceAEmergencyDepartmentVisit2": {
+      "title": "Emergency Department Visit",
+      "description": "Encounter, Performed: Emergency Department Visit",
+      "standard_category": "encounter",
+      "qds_data_type": "encounter",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.293",
+      "type": "encounters",
+      "definition": "encounter",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "specific_occurrence": "A",
+      "specific_occurrence_const": "ENCOUNTER_PERFORMED_EMERGENCY_DEPARTMENT_VISIT",
+      "source_data_criteria": "OccurrenceAEmergencyDepartmentVisit2"
+    },
+    "OccurrenceADecisionToAdmitToHospitalInpatient3": {
+      "title": "Decision to Admit to Hospital Inpatient",
+      "description": "Encounter, Ordered: Decision to Admit to Hospital Inpatient",
+      "standard_category": "encounter",
+      "qds_data_type": "encounter",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.295",
+      "type": "encounters",
+      "definition": "encounter",
+      "status": "ordered",
+      "hard_status": true,
+      "negation": false,
+      "specific_occurrence": "A",
+      "specific_occurrence_const": "ENCOUNTER_ORDERED_DECISION_TO_ADMIT_TO_HOSPITAL_INPATIENT",
+      "source_data_criteria": "OccurrenceADecisionToAdmitToHospitalInpatient3"
+    }
+  },
+  "attributes": [
+    {
+      "id": "COPYRIGHT",
+      "code": "COPY",
+      "value": "Measure specifications are in the Public Domain\r\n\r\nLOINC(R) is a registered trademark of the Regenstrief Institute.\r\n\r\nThis material contains SNOMED Clinical Terms(R) (SNOMED CT(c)) copyright 2004–2010 International Health Terminology Standards Development Organization. All rights reserved.",
+      "name": "Copyright"
+    },
+    {
+      "id": "MEASURE_SCORING",
+      "code": "MSRSCORE",
+      "name": "Measure Scoring"
+    },
+    {
+      "id": "MEASURE_TYPE",
+      "code": "MSRTYPE",
+      "name": "Measure Type"
+    },
+    {
+      "id": "STRATIFICATION",
+      "code": "STRAT",
+      "value": "The measure is stratified. \r\n\r\nStratum 1 - all patients seen in the ED and admitted as an inpatient\r\nStratum 2 - all patients seen in the ED and admitted as an inpatient who do not have a diagnosis consistent with psychiatric/mental health disorders\r\nStratum 3 - all patients seen in the ED and admitted as an inpatient who have a diagnosis consistent with psychiatric/mental health disorders",
+      "name": "Stratification"
+    },
+    {
+      "id": "RISK_ADJUSTMENT",
+      "code": "MSRADJ",
+      "value": "None",
+      "name": "Risk Adjustment"
+    },
+    {
+      "id": "RATE_AGGREGATION",
+      "code": "MSRAGG",
+      "value": "Calculate the ED time in minutes for each person in the measure population; report the median time for all calculations performed. The specification provides elements from the clinical electronic record required to calculate for each ED encounter, i.e., the length of time the patient was in the Emergency Department after the decision to admit, also stated as: the TIMEDIFF between the Emergency Department departure time and the Decision to admit time. The calculation requires the median across all ED encounter durations.",
+      "name": "Rate Aggregation"
+    },
+    {
+      "id": "RATIONALE",
+      "code": "RAT",
+      "value": "Reducing the time patients remain in the emergency department (ED) can improve access to treatment and increase quality of care. Reducing this time potentially improves access to care specific to the patient condition and increases the capability to provide additional treatment. In recent times, EDs have experienced significant overcrowding. Although once only a problem in large, urban, teaching hospitals, the phenomenon has spread to other suburban and rural healthcare organizations. According to a 2002 national U.S. survey, more than 90 percent of large hospitals report EDs operating \"at\" or \"over\" capacity. Approximately one third of hospitals in the U.S. report increases in ambulance diversion in a given year, whereas up to half report crowded conditions in the ED. In a recent national survey, 40 percent of hospital leaders viewed ED crowding as a symptom of workforce shortages. ED crowding may result in delays in the administration of medication such as antibiotics for pneumonia and has been associated with perceptions of compromised emergency care. For patients with non-ST-segment-elevation myocardial infarction, long ED stays were associated with decreased use of guideline-recommended therapies and a higher risk of recurrent myocardial infarction. Overcrowding and heavy emergency resource demand have led to a number of problems, including ambulance refusals, prolonged patient waiting times, increased suffering for those who wait, rushed and unpleasant treatment environments, and potentially poor patient outcomes. When EDs are overwhelmed, their ability to respond to community emergencies and disasters may be compromised.",
+      "name": "Rationale"
+    },
+    {
+      "id": "CLINICAL_RECOMMENDATION_STATEMENT",
+      "code": "CRS",
+      "value": "The most common cause of ED crowding is the boarding of admitted patients in the ED.  Numerous studies have demonstrated the potential for errors, life threatening delays in treatment, and diminished overall quality is enormous.",
+      "name": "Clinical Recommendation Statement"
+    },
+    {
+      "id": "IMPROVEMENT_NOTATION",
+      "code": "IDUR",
+      "value": "A decrease in the median value",
+      "name": "Improvement Notation"
+    },
+    {
+      "id": "NQF_ID_NUMBER",
+      "code": "OTH",
+      "value": "0497",
+      "name": "NQF ID Number"
+    },
+    {
+      "id": "DISCLAIMER",
+      "code": "DISC",
+      "value": "None",
+      "name": "Disclaimer"
+    },
+    {
+      "id": "EMEASURE_IDENTIFIER",
+      "code": "OTH",
+      "value": "111",
+      "name": "eMeasure Identifier"
+    },
+    {
+      "id": "REFERENCE",
+      "code": "REF",
+      "value": "Wilper AP, Woolhandler S, Lasser KE, McCormick D, Cutrona SL, Bor DH, Himmelstein DU. Waits to see an emergency department physician: U.S. trends and predictors, 1997-2004. Health Aff (Millwood). 2008;27:w84-95.",
+      "name": "Reference"
+    },
+    {
+      "id": "DEFINITION",
+      "code": "DEF",
+      "value": "None",
+      "name": "Definition"
+    },
+    {
+      "id": "GUIDANCE",
+      "code": "GUIDE",
+      "value": "This measure specification defines how to determine an individual Emergency Department stay. Reporting requires the median of all patient stays [Encounter: encounter ED]. decisiontoadmitdateandtime -[Encounter: encounter ED]. EDdeparturedateandtime. \r\n\r\nCalculate the ED time in minutes for each person in the measure population; report the median time for all calculations performed. The specification provides elements from the clinical electronic record required to calculate for each ED encounter, i.e., the length of time the patient was in the Emergency Department from the time of decision to admit, also stated as: the TIMEDIFF for the Emergency Department departure time minus the Decision to Admit Time. The calculation requires the median across all ED encounter durations.",
+      "name": "Guidance"
+    },
+    {
+      "id": "TRANSMISSION_FORMAT",
+      "code": "OTH",
+      "value": "None",
+      "name": "Transmission Format"
+    },
+    {
+      "id": "INITIAL_PATIENT_POPULATION",
+      "code": "IPP",
+      "value": "All patients discharged from acute inpatient care with Length of Stay (Discharge Date minus Admission Date) less than or equal to 120 days.",
+      "name": "Initial Patient Population"
+    },
+    {
+      "id": "DENOMINATOR",
+      "code": "DENOM",
+      "value": "Not Applicable",
+      "name": "Denominator"
+    },
+    {
+      "id": "DENOMINATOR_EXCLUSIONS",
+      "code": "OTH",
+      "value": "Not Applicable",
+      "name": "Denominator Exclusions"
+    },
+    {
+      "id": "NUMERATOR",
+      "code": "NUMER",
+      "value": "Not Applicable",
+      "name": "Numerator"
+    },
+    {
+      "id": "NUMERATOR_EXCLUSIONS",
+      "code": "OTH",
+      "value": "Not Applicable",
+      "name": "Numerator Exclusions"
+    },
+    {
+      "id": "DENOMINATOR_EXCEPTIONS",
+      "code": "DENEXCEP",
+      "value": "Not Applicable",
+      "name": "Denominator Exceptions"
+    },
+    {
+      "id": "MEASURE_POPULATION",
+      "code": "MSRPOPL",
+      "value": "Any ED Patient from the facility’s emergency department.",
+      "name": "Measure Population"
+    },
+    {
+      "id": "MEASURE_OBSERVATIONS",
+      "code": "OTH",
+      "value": "Time (in minutes) from Decision to Admit to ED departure for patients admitted to the facility from the emergency department.",
+      "name": "Measure Observations"
+    },
+    {
+      "id": "SUPPLEMENTAL_DATA_ELEMENTS",
+      "code": "OTH",
+      "value": "For every patient evaluated by this measure, also identify payer, race, ethnicity and sex.",
+      "name": "Supplemental Data Elements"
+    }
+  ],
+  "populations": [
+    {
+      "MSRPOPL": "MSRPOPL",
+      "IPP": "IPP",
+      "OBSERV": "OBSERV",
+      "title": "Unstratified",
+      "id": "Population1"
+    },
+    {
+      "IPP": "IPP_1",
+      "MSRPOPL": "MSRPOPL",
+      "OBSERV": "OBSERV",
+      "stratification": "53A7C795-C46D-44E7-AC2E-53A7E64C9334",
+      "title": "RS1: ED and inpatient",
+      "id": "Population2"
+    },
+    {
+      "IPP": "IPP_2",
+      "MSRPOPL": "MSRPOPL",
+      "OBSERV": "OBSERV",
+      "stratification": "DE23B595-DD62-4C4F-8483-4E84E5ED42FC",
+      "title": "RS2: ED and inpatient w/out psych",
+      "id": "Population3"
+    },
+    {
+      "IPP": "IPP_3",
+      "MSRPOPL": "MSRPOPL",
+      "OBSERV": "OBSERV",
+      "stratification": "F30DFA39-4A7C-423D-A635-3BD013BC427C",
+      "title": "RS3: ED and inpatient w/ psych",
+      "id": "Population4"
+    }
+  ],
+  "measure_period": {
+    "type": "IVL_TS",
+    "low": {
+      "type": "TS",
+      "value": "201201010000",
+      "inclusive?": true,
+      "derived?": false
+    },
+    "high": {
+      "type": "TS",
+      "value": "201212312359",
+      "inclusive?": true,
+      "derived?": false
+    },
+    "width": {
+      "type": "PQ",
+      "unit": "a",
+      "value": "1",
+      "inclusive?": true,
+      "derived?": false
+    }
+  }
+}

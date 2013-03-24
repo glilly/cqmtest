@@ -1,0 +1,861 @@
+{
+  "id": "0480",
+  "hqmf_id": "8A4D92B2-37D1-F95B-0137-E726AD2F7415",
+  "hqmf_set_id": "7D374C6A-3821-4333-A1BC-4531005D77B8",
+  "hqmf_version_number": 1,
+  "title": "Exclusive Breast Milk Feeding",
+  "description": "Exclusive breast milk feeding during the newborn's entire hospitalization",
+  "cms_id": "CMS9v1",
+  "population_criteria": {
+    "DENEXCEP": {
+      "conjunction?": true,
+      "type": "DENEXCEP",
+      "title": "Denominator Exception",
+      "hqmf_id": "B1722AA5-D231-442B-9D6F-6E225F457B09",
+      "preconditions": [
+        {
+          "id": 4,
+          "preconditions": [
+            {
+              "id": 2,
+              "reference": "SubstanceAdministeredBreastMilk_precondition_2"
+            }
+          ],
+          "conjunction_code": "allTrue"
+        }
+      ]
+    },
+    "DENEX": {
+      "conjunction?": true,
+      "type": "DENEX",
+      "title": "Denominator",
+      "hqmf_id": "35D980DC-0276-4374-8081-BAC526A2E986",
+      "preconditions": [
+        {
+          "id": 13,
+          "preconditions": [
+            {
+              "id": 11,
+              "preconditions": [
+                {
+                  "id": 5,
+                  "reference": "EncounterPerformedInpatientEncounter_precondition_5"
+                },
+                {
+                  "id": 7,
+                  "reference": "OccurrenceAInpatientEncounter1_precondition_7"
+                },
+                {
+                  "id": 9,
+                  "reference": "OccurrenceAInpatientEncounter1_precondition_9"
+                }
+              ],
+              "conjunction_code": "atLeastOneTrue"
+            }
+          ],
+          "conjunction_code": "allTrue"
+        }
+      ]
+    },
+    "NUMER": {
+      "conjunction?": true,
+      "type": "NUMER",
+      "title": "Numerator",
+      "hqmf_id": "83077920-F251-4984-9D77-45373359FD07",
+      "preconditions": [
+        {
+          "id": 22,
+          "preconditions": [
+            {
+              "id": 19,
+              "preconditions": [
+                {
+                  "id": 16,
+                  "reference": "SubstanceAdministeredBreastMilk_precondition_16"
+                },
+                {
+                  "id": 18,
+                  "preconditions": [
+                    {
+                      "id": 14,
+                      "reference": "SubstanceAdministeredDietaryIntakeOtherThanBreastMilk_precondition_14"
+                    }
+                  ],
+                  "conjunction_code": "atLeastOneTrue",
+                  "negation": true
+                }
+              ],
+              "conjunction_code": "allTrue"
+            }
+          ],
+          "conjunction_code": "allTrue"
+        }
+      ]
+    },
+    "DENOM": {
+      "conjunction?": true,
+      "type": "DENOM",
+      "title": "Denominator",
+      "hqmf_id": "0F42D7F1-E6F3-48B7-89F9-BAB29C26BDCA"
+    },
+    "IPP": {
+      "conjunction?": true,
+      "type": "IPP",
+      "title": "Initial Patient Population",
+      "hqmf_id": "76A6E46B-39BF-4377-B57F-BE68CEDE031D",
+      "preconditions": [
+        {
+          "id": 46,
+          "preconditions": [
+            {
+              "id": 27,
+              "reference": "OccurrenceAInpatientEncounter1_precondition_27"
+            },
+            {
+              "id": 29,
+              "reference": "OccurrenceAInpatientEncounter1_precondition_29"
+            },
+            {
+              "id": 31,
+              "reference": "DiagnosisActiveGestationalAge37Weeks_precondition_31"
+            },
+            {
+              "id": 43,
+              "preconditions": [
+                {
+                  "id": 33,
+                  "reference": "DiagnosisActiveSingleLivebornNewbornBornInHospital_precondition_33"
+                },
+                {
+                  "id": 41,
+                  "preconditions": [
+                    {
+                      "id": 35,
+                      "reference": "DiagnosisActiveSingleLiveBirth_precondition_35"
+                    },
+                    {
+                      "id": 37,
+                      "reference": "DiagnosisActiveLivebornBornInHospital_precondition_37"
+                    },
+                    {
+                      "id": 39,
+                      "reference": "OccurrenceAInpatientEncounter1_precondition_39"
+                    }
+                  ],
+                  "conjunction_code": "allTrue"
+                }
+              ],
+              "conjunction_code": "atLeastOneTrue"
+            },
+            {
+              "id": 45,
+              "preconditions": [
+                {
+                  "id": 23,
+                  "reference": "DiagnosisActiveGalactosemia_precondition_23"
+                },
+                {
+                  "id": 25,
+                  "reference": "ProcedurePerformedParenteralInfusion_precondition_25"
+                }
+              ],
+              "conjunction_code": "atLeastOneTrue",
+              "negation": true
+            }
+          ],
+          "conjunction_code": "allTrue"
+        }
+      ]
+    }
+  },
+  "data_criteria": {
+    "SubstanceAdministeredNotDoneMaternalReason": {
+      "title": "Maternal Reason",
+      "description": "Substance, Administered not done: Maternal Reason",
+      "standard_category": "medication",
+      "qds_data_type": "medication_administered",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.84",
+      "type": "substances",
+      "definition": "substance",
+      "status": "administered",
+      "hard_status": true,
+      "negation": true,
+      "source_data_criteria": "SubstanceAdministeredNotDoneMaternalReason"
+    },
+    "OccurrenceAInpatientEncounter1": {
+      "title": "Inpatient Encounter",
+      "description": "Encounter, Performed: Inpatient Encounter",
+      "standard_category": "encounter",
+      "qds_data_type": "encounter",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.23",
+      "type": "encounters",
+      "definition": "encounter",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "specific_occurrence": "A",
+      "specific_occurrence_const": "ENCOUNTER_PERFORMED_INPATIENT_ENCOUNTER",
+      "source_data_criteria": "OccurrenceAInpatientEncounter1"
+    },
+    "SubstanceAdministeredBreastMilk_precondition_2": {
+      "title": "Breast Milk",
+      "description": "Substance, Administered: Breast Milk",
+      "standard_category": "medication",
+      "qds_data_type": "medication_administered",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.30",
+      "type": "substances",
+      "definition": "substance",
+      "status": "administered",
+      "hard_status": true,
+      "negation": true,
+      "negation_code_list_id": "2.16.840.1.113883.3.117.1.7.1.84",
+      "source_data_criteria": "SubstanceAdministeredBreastMilk",
+      "temporal_references": [
+        {
+          "type": "DURING",
+          "reference": "OccurrenceAInpatientEncounter1"
+        }
+      ]
+    },
+    "EncounterPerformedInpatientEncounter_precondition_5": {
+      "title": "Inpatient Encounter",
+      "description": "Encounter, Performed: Inpatient Encounter",
+      "standard_category": "encounter",
+      "qds_data_type": "encounter",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.23",
+      "type": "encounters",
+      "definition": "encounter",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "EncounterPerformedInpatientEncounter",
+      "field_values": {
+        "FACILITY_LOCATION": {
+          "type": "CD",
+          "code_list_id": "2.16.840.1.113883.3.117.1.7.1.75",
+          "title": "Neonatal Intensive Care Unit (NICU)"
+        }
+      },
+      "temporal_references": [
+        {
+          "type": "DURING",
+          "reference": "OccurrenceAInpatientEncounter1"
+        }
+      ]
+    },
+    "OccurrenceAInpatientEncounter1_precondition_7": {
+      "title": "Inpatient Encounter",
+      "description": "Encounter, Performed: Inpatient Encounter",
+      "standard_category": "encounter",
+      "qds_data_type": "encounter",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.23",
+      "type": "encounters",
+      "definition": "encounter",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "specific_occurrence": "A",
+      "specific_occurrence_const": "ENCOUNTER_PERFORMED_INPATIENT_ENCOUNTER",
+      "source_data_criteria": "OccurrenceAInpatientEncounter1",
+      "field_values": {
+        "DISCHARGE_STATUS": {
+          "type": "CD",
+          "code_list_id": "2.16.840.1.113883.3.117.1.7.1.309",
+          "title": "Patient Expired"
+        }
+      }
+    },
+    "OccurrenceAInpatientEncounter1_precondition_9": {
+      "title": "Inpatient Encounter",
+      "description": "Encounter, Performed: Inpatient Encounter",
+      "standard_category": "encounter",
+      "qds_data_type": "encounter",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.23",
+      "type": "encounters",
+      "definition": "encounter",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "specific_occurrence": "A",
+      "specific_occurrence_const": "ENCOUNTER_PERFORMED_INPATIENT_ENCOUNTER",
+      "source_data_criteria": "OccurrenceAInpatientEncounter1",
+      "field_values": {
+        "DISCHARGE_STATUS": {
+          "type": "CD",
+          "code_list_id": "2.16.840.1.113883.3.117.1.7.1.87",
+          "title": "Discharge To Another Hospital"
+        }
+      }
+    },
+    "OccurrenceAInpatientEncounter1_precondition_20": {
+      "title": "Inpatient Encounter",
+      "description": "Encounter, Performed: Inpatient Encounter",
+      "standard_category": "encounter",
+      "qds_data_type": "encounter",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.23",
+      "type": "encounters",
+      "definition": "encounter",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "specific_occurrence": "A",
+      "specific_occurrence_const": "ENCOUNTER_PERFORMED_INPATIENT_ENCOUNTER",
+      "source_data_criteria": "OccurrenceAInpatientEncounter1"
+    },
+    "SubstanceAdministeredBreastMilk_precondition_16": {
+      "title": "Breast Milk",
+      "description": "Substance, Administered: Breast Milk",
+      "standard_category": "medication",
+      "qds_data_type": "medication_administered",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.30",
+      "type": "substances",
+      "definition": "substance",
+      "status": "administered",
+      "hard_status": true,
+      "negation": false,
+      "source_data_criteria": "SubstanceAdministeredBreastMilk",
+      "temporal_references": [
+        {
+          "type": "DURING",
+          "reference": "OccurrenceAInpatientEncounter1_precondition_20"
+        }
+      ]
+    },
+    "SubstanceAdministeredDietaryIntakeOtherThanBreastMilk_precondition_14": {
+      "title": "Dietary Intake Other than Breast Milk",
+      "description": "Substance, Administered: Dietary Intake Other than Breast Milk",
+      "standard_category": "medication",
+      "qds_data_type": "medication_administered",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.27",
+      "type": "substances",
+      "definition": "substance",
+      "status": "administered",
+      "hard_status": true,
+      "negation": false,
+      "source_data_criteria": "SubstanceAdministeredDietaryIntakeOtherThanBreastMilk",
+      "temporal_references": [
+        {
+          "type": "DURING",
+          "reference": "OccurrenceAInpatientEncounter1_precondition_20"
+        }
+      ]
+    },
+    "OccurrenceAInpatientEncounter1_precondition_27": {
+      "title": "Inpatient Encounter",
+      "description": "Encounter, Performed: Inpatient Encounter",
+      "standard_category": "encounter",
+      "qds_data_type": "encounter",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.23",
+      "type": "encounters",
+      "definition": "encounter",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "specific_occurrence": "A",
+      "specific_occurrence_const": "ENCOUNTER_PERFORMED_INPATIENT_ENCOUNTER",
+      "source_data_criteria": "OccurrenceAInpatientEncounter1",
+      "field_values": {
+        "DISCHARGE_DATETIME": {
+          "type": "ANYNonNull"
+        }
+      },
+      "temporal_references": [
+        {
+          "type": "DURING",
+          "reference": "MeasurePeriod"
+        }
+      ]
+    },
+    "OccurrenceAInpatientEncounter1_precondition_29": {
+      "title": "Inpatient Encounter",
+      "description": "Encounter, Performed: Inpatient Encounter",
+      "standard_category": "encounter",
+      "qds_data_type": "encounter",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.23",
+      "type": "encounters",
+      "definition": "encounter",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "specific_occurrence": "A",
+      "specific_occurrence_const": "ENCOUNTER_PERFORMED_INPATIENT_ENCOUNTER",
+      "source_data_criteria": "OccurrenceAInpatientEncounter1",
+      "field_values": {
+        "LENGTH_OF_STAY": {
+          "type": "IVL_PQ",
+          "high": {
+            "type": "PQ",
+            "unit": "d",
+            "value": "120",
+            "inclusive?": true,
+            "derived?": false
+          }
+        }
+      }
+    },
+    "DiagnosisActiveGestationalAge37Weeks_precondition_31": {
+      "title": "Gestational age >= 37 weeks",
+      "description": "Diagnosis, Active: Gestational age >= 37 weeks",
+      "standard_category": "diagnosis_condition_problem",
+      "qds_data_type": "diagnosis_active",
+      "code_list_id": "2.16.840.1.113883.3.666.5.1596",
+      "type": "conditions",
+      "definition": "diagnosis",
+      "status": "active",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "DiagnosisActiveGestationalAge37Weeks",
+      "temporal_references": [
+        {
+          "type": "SDU",
+          "reference": "OccurrenceAInpatientEncounter1"
+        }
+      ]
+    },
+    "DiagnosisActiveSingleLivebornNewbornBornInHospital_precondition_33": {
+      "title": "Single Liveborn Newborn Born in Hospital",
+      "description": "Diagnosis, Active: Single Liveborn Newborn Born in Hospital",
+      "standard_category": "diagnosis_condition_problem",
+      "qds_data_type": "diagnosis_active",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.26",
+      "type": "conditions",
+      "definition": "diagnosis",
+      "status": "active",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "DiagnosisActiveSingleLivebornNewbornBornInHospital",
+      "temporal_references": [
+        {
+          "type": "SDU",
+          "reference": "OccurrenceAInpatientEncounter1"
+        }
+      ]
+    },
+    "DiagnosisActiveSingleLiveBirth_precondition_35": {
+      "title": "Single Live Birth",
+      "description": "Diagnosis, Active: Single Live Birth",
+      "standard_category": "diagnosis_condition_problem",
+      "qds_data_type": "diagnosis_active",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.25",
+      "type": "conditions",
+      "definition": "diagnosis",
+      "status": "active",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "DiagnosisActiveSingleLiveBirth",
+      "temporal_references": [
+        {
+          "type": "SDU",
+          "reference": "OccurrenceAInpatientEncounter1"
+        }
+      ]
+    },
+    "DiagnosisActiveLivebornBornInHospital_precondition_37": {
+      "title": "Liveborn Born In Hospital",
+      "description": "Diagnosis, Active: Liveborn Born In Hospital",
+      "standard_category": "diagnosis_condition_problem",
+      "qds_data_type": "diagnosis_active",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.29",
+      "type": "conditions",
+      "definition": "diagnosis",
+      "status": "active",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "DiagnosisActiveLivebornBornInHospital",
+      "temporal_references": [
+        {
+          "type": "SDU",
+          "reference": "OccurrenceAInpatientEncounter1"
+        }
+      ]
+    },
+    "OccurrenceAInpatientEncounter1_precondition_39": {
+      "title": "Inpatient Encounter",
+      "description": "Encounter, Performed: Inpatient Encounter",
+      "standard_category": "encounter",
+      "qds_data_type": "encounter",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.23",
+      "type": "encounters",
+      "definition": "encounter",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "specific_occurrence": "A",
+      "specific_occurrence_const": "ENCOUNTER_PERFORMED_INPATIENT_ENCOUNTER",
+      "source_data_criteria": "OccurrenceAInpatientEncounter1",
+      "field_values": {
+        "REASON": {
+          "type": "CD",
+          "code_list_id": "2.16.840.1.113883.3.117.1.7.1.70",
+          "title": "Birth"
+        }
+      }
+    },
+    "DiagnosisActiveGalactosemia_precondition_23": {
+      "title": "Galactosemia",
+      "description": "Diagnosis, Active: Galactosemia",
+      "standard_category": "diagnosis_condition_problem",
+      "qds_data_type": "diagnosis_active",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.35",
+      "type": "conditions",
+      "definition": "diagnosis",
+      "status": "active",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "DiagnosisActiveGalactosemia",
+      "temporal_references": [
+        {
+          "type": "SDU",
+          "reference": "OccurrenceAInpatientEncounter1"
+        }
+      ]
+    },
+    "ProcedurePerformedParenteralInfusion_precondition_25": {
+      "title": "Parenteral Infusion",
+      "description": "Procedure, Performed: Parenteral Infusion",
+      "standard_category": "procedure",
+      "qds_data_type": "procedure_performed",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.38",
+      "type": "procedures",
+      "definition": "procedure",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "ProcedurePerformedParenteralInfusion",
+      "temporal_references": [
+        {
+          "type": "DURING",
+          "reference": "OccurrenceAInpatientEncounter1"
+        }
+      ]
+    }
+  },
+  "source_data_criteria": {
+    "DiagnosisActiveSingleLivebornNewbornBornInHospital": {
+      "title": "Single Liveborn Newborn Born in Hospital",
+      "description": "Diagnosis, Active: Single Liveborn Newborn Born in Hospital",
+      "standard_category": "diagnosis_condition_problem",
+      "qds_data_type": "diagnosis_active",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.26",
+      "type": "conditions",
+      "definition": "diagnosis",
+      "status": "active",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "DiagnosisActiveSingleLivebornNewbornBornInHospital"
+    },
+    "DiagnosisActiveLivebornBornInHospital": {
+      "title": "Liveborn Born In Hospital",
+      "description": "Diagnosis, Active: Liveborn Born In Hospital",
+      "standard_category": "diagnosis_condition_problem",
+      "qds_data_type": "diagnosis_active",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.29",
+      "type": "conditions",
+      "definition": "diagnosis",
+      "status": "active",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "DiagnosisActiveLivebornBornInHospital"
+    },
+    "SubstanceAdministeredBreastMilk": {
+      "title": "Breast Milk",
+      "description": "Substance, Administered: Breast Milk",
+      "standard_category": "medication",
+      "qds_data_type": "medication_administered",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.30",
+      "type": "substances",
+      "definition": "substance",
+      "status": "administered",
+      "hard_status": true,
+      "negation": false,
+      "source_data_criteria": "SubstanceAdministeredBreastMilk"
+    },
+    "DiagnosisActiveGalactosemia": {
+      "title": "Galactosemia",
+      "description": "Diagnosis, Active: Galactosemia",
+      "standard_category": "diagnosis_condition_problem",
+      "qds_data_type": "diagnosis_active",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.35",
+      "type": "conditions",
+      "definition": "diagnosis",
+      "status": "active",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "DiagnosisActiveGalactosemia"
+    },
+    "ProcedurePerformedParenteralInfusion": {
+      "title": "Parenteral Infusion",
+      "description": "Procedure, Performed: Parenteral Infusion",
+      "standard_category": "procedure",
+      "qds_data_type": "procedure_performed",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.38",
+      "type": "procedures",
+      "definition": "procedure",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "ProcedurePerformedParenteralInfusion"
+    },
+    "EncounterPerformedInpatientEncounter": {
+      "title": "Inpatient Encounter",
+      "description": "Encounter, Performed: Inpatient Encounter",
+      "standard_category": "encounter",
+      "qds_data_type": "encounter",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.23",
+      "type": "encounters",
+      "definition": "encounter",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "EncounterPerformedInpatientEncounter"
+    },
+    "SubstanceAdministeredDietaryIntakeOtherThanBreastMilk": {
+      "title": "Dietary Intake Other than Breast Milk",
+      "description": "Substance, Administered: Dietary Intake Other than Breast Milk",
+      "standard_category": "medication",
+      "qds_data_type": "medication_administered",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.27",
+      "type": "substances",
+      "definition": "substance",
+      "status": "administered",
+      "hard_status": true,
+      "negation": false,
+      "source_data_criteria": "SubstanceAdministeredDietaryIntakeOtherThanBreastMilk"
+    },
+    "DiagnosisActiveSingleLiveBirth": {
+      "title": "Single Live Birth",
+      "description": "Diagnosis, Active: Single Live Birth",
+      "standard_category": "diagnosis_condition_problem",
+      "qds_data_type": "diagnosis_active",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.25",
+      "type": "conditions",
+      "definition": "diagnosis",
+      "status": "active",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "DiagnosisActiveSingleLiveBirth"
+    },
+    "DiagnosisActiveGestationalAge37Weeks": {
+      "title": "Gestational age >= 37 weeks",
+      "description": "Diagnosis, Active: Gestational age >= 37 weeks",
+      "standard_category": "diagnosis_condition_problem",
+      "qds_data_type": "diagnosis_active",
+      "code_list_id": "2.16.840.1.113883.3.666.5.1596",
+      "type": "conditions",
+      "definition": "diagnosis",
+      "status": "active",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "DiagnosisActiveGestationalAge37Weeks"
+    },
+    "SubstanceAdministeredNotDoneMaternalReason": {
+      "title": "Maternal Reason",
+      "description": "Substance, Administered not done: Maternal Reason",
+      "standard_category": "medication",
+      "qds_data_type": "medication_administered",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.84",
+      "type": "substances",
+      "definition": "substance",
+      "status": "administered",
+      "hard_status": true,
+      "negation": true,
+      "source_data_criteria": "SubstanceAdministeredNotDoneMaternalReason"
+    },
+    "OccurrenceAInpatientEncounter1": {
+      "title": "Inpatient Encounter",
+      "description": "Encounter, Performed: Inpatient Encounter",
+      "standard_category": "encounter",
+      "qds_data_type": "encounter",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.23",
+      "type": "encounters",
+      "definition": "encounter",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "specific_occurrence": "A",
+      "specific_occurrence_const": "ENCOUNTER_PERFORMED_INPATIENT_ENCOUNTER",
+      "source_data_criteria": "OccurrenceAInpatientEncounter1"
+    }
+  },
+  "attributes": [
+    {
+      "id": "COPYRIGHT",
+      "code": "COPY",
+      "value": "LOINC(R) is a registered trademark of the Regenstrief Institute.\r\n \r\nThis material contains SNOMED Clinical Terms (R) (SNOMED CT(c)) copyright 2004-2010 International Health Terminology Standards Development Organization. All rights reserved.",
+      "name": "Copyright"
+    },
+    {
+      "id": "MEASURE_SCORING",
+      "code": "MSRSCORE",
+      "name": "Measure Scoring"
+    },
+    {
+      "id": "MEASURE_TYPE",
+      "code": "MSRTYPE",
+      "name": "Measure Type"
+    },
+    {
+      "id": "STRATIFICATION",
+      "code": "STRAT",
+      "value": "None",
+      "name": "Stratification"
+    },
+    {
+      "id": "RISK_ADJUSTMENT",
+      "code": "MSRADJ",
+      "value": "None",
+      "name": "Risk Adjustment"
+    },
+    {
+      "id": "RATE_AGGREGATION",
+      "code": "MSRAGG",
+      "value": "None",
+      "name": "Rate Aggregation"
+    },
+    {
+      "id": "RATIONALE",
+      "code": "RAT",
+      "value": "Exclusive breast milk feeding for the first 6 months of neonatal life has long been the expressed goal of World Health Organization (WHO), Department of Health and Human Services (DHHS), American Academy of Pediatrics (AAP) and American College of Obstetricians and Gynecologists (ACOG). ACOG has recently reiterated its position (ACOG, 2007). A recent Cochrane review substantiates the benefits (Kramer et al., 2002). Much evidence has now focused on the prenatal and intrapartum period as critical for the success of exclusive (or any) BF (Centers for Disease Control and Prevention [CDC], 2007; Petrova et al., 2007; Shealy et al., 2005; Taveras et al., 2004). Exclusive breast milk feeding rate during birth hospital stay has been calculated by the California Department of Public Health for the last several years using newborn genetic disease testing data. Healthy People 2010 and the CDC have also been active in promoting this goal.",
+      "name": "Rationale"
+    },
+    {
+      "id": "CLINICAL_RECOMMENDATION_STATEMENT",
+      "code": "CRS",
+      "value": "Exclusive breast milk feeding for the first 6 months of neonatal life can result in numerous long-term health benefits for both mother and newborn and is recommended by a number of national and international organizations. Evidence suggests that the prenatal and intrapartum period is critical for the success of exclusive (or any) breast feeding. Therefore, it is recommended that newborns are fed breast milk only from birth to discharge.",
+      "name": "Clinical Recommendation Statement"
+    },
+    {
+      "id": "IMPROVEMENT_NOTATION",
+      "code": "IDUR",
+      "value": "Increase in the rate",
+      "name": "Improvement Notation"
+    },
+    {
+      "id": "NQF_ID_NUMBER",
+      "code": "OTH",
+      "value": "0480",
+      "name": "NQF ID Number"
+    },
+    {
+      "id": "DISCLAIMER",
+      "code": "DISC",
+      "value": "None",
+      "name": "Disclaimer"
+    },
+    {
+      "id": "EMEASURE_IDENTIFIER",
+      "code": "OTH",
+      "value": "9",
+      "name": "eMeasure Identifier"
+    },
+    {
+      "id": "REFERENCE",
+      "code": "REF",
+      "value": "World Health Organization. (1991). Indicators for assessing breastfeeding practices. Geneva, Switzerland: World Health Organization. Available at: http://www.who.int/child-adolescent-health/new_publications/nutrition/who_cdd_ser_91.14.pdf.",
+      "name": "Reference"
+    },
+    {
+      "id": "DEFINITION",
+      "code": "DEF",
+      "value": "None",
+      "name": "Definition"
+    },
+    {
+      "id": "GUIDANCE",
+      "code": "GUIDE",
+      "value": "Maternal reasons for not exclusively breastfeeding are limited to the following situations:\r\n• HIV infection \r\n• Human t-lymphotrophic virus type I or II \r\n• Substance abuse and/or alcohol abuse \r\n• Active, untreated tuberculosis \r\n• Taking certain medications, i.e., prescribed cancer chemotherapy, radioactive isotopes, antimetabolites, antiretroviral medications and other medications where the risk of morbidity outweighs the benefits of breast milk feeding \r\n• Undergoing radiation therapy \r\n• Active, untreated varicella \r\n• Active herpes simplex virus with breast lesions \r\n• Admission to Intensive Care Unit (ICU) post-partum\r\n\r\nA discharge to a designated cancer center or children’s hospital should be captured as a discharge to another hospital.\r\n\r\nThe unit of measurement for this measure is an inpatient episode of care. Each distinct hospitalization should be reported, regardless of whether the same patient is admitted for inpatient care more than once during the measurement period. In addition, the eMeasure logic intends to represent events within or surrounding a single occurrence of an inpatient hospitalization.\r\n\r\nThe logic phrase AND: “Occurrence A of Encounter, Performed: Inpatient Encounter (reason: 'Birth')” intends to capture admission type of newborn for the encounter. Where this information is available in existing EHR structured fields (e.g. data that is fed to UB 04, field location 14), it can be used to map the criterion specified in the logic.\r\n\r\nThe logic phrase AND: “Diagnosis, Active: Liveborn Born In Hospital” starts during “Occurrence A of Encounter, Performed: Inpatient Encounter” intends to capture the point of origin for the inpatient admission. Where this information is available in existing EHR structured fields (e.g. data that is fed to UB-04, field location 15), it can be used to map the criterion specified in the logic.",
+      "name": "Guidance"
+    },
+    {
+      "id": "TRANSMISSION_FORMAT",
+      "code": "OTH",
+      "value": "None",
+      "name": "Transmission Format"
+    },
+    {
+      "id": "INITIAL_PATIENT_POPULATION",
+      "code": "IPP",
+      "value": "Single term newborns discharged from the hospital who has no diagnosis of galactosemia, no performed procedure of parenteral infusion, no diagnosis of premature newborn, and length of stay less than or equal to 120 days.",
+      "name": "Initial Patient Population"
+    },
+    {
+      "id": "DENOMINATOR",
+      "code": "DENOM",
+      "value": "Single term newborns discharged from the hospital who has no diagnosis of galactosemia, no procedure of parenteral infusion, no diagnosis of premature newborn, and length of stay less than or equal to 120 days.",
+      "name": "Denominator"
+    },
+    {
+      "id": "DENOMINATOR_EXCLUSIONS",
+      "code": "OTH",
+      "value": "Admitted to the Neonatal Intensive Care Unit (NICU) at this hospital during the hospitalization; Experienced death; Had documented reason for not exclusively feeding breast milk; Patients transferred to another hospital.",
+      "name": "Denominator Exclusions"
+    },
+    {
+      "id": "NUMERATOR",
+      "code": "NUMER",
+      "value": "Newborns that were fed breast milk only since birth",
+      "name": "Numerator"
+    },
+    {
+      "id": "NUMERATOR_EXCLUSIONS",
+      "code": "OTH",
+      "value": "Not applicable",
+      "name": "Numerator Exclusions"
+    },
+    {
+      "id": "DENOMINATOR_EXCEPTIONS",
+      "code": "DENEXCEP",
+      "value": "None",
+      "name": "Denominator Exceptions"
+    },
+    {
+      "id": "MEASURE_POPULATION",
+      "code": "MSRPOPL",
+      "value": "Not applicable",
+      "name": "Measure Population"
+    },
+    {
+      "id": "MEASURE_OBSERVATIONS",
+      "code": "OTH",
+      "value": "Not applicable",
+      "name": "Measure Observations"
+    },
+    {
+      "id": "SUPPLEMENTAL_DATA_ELEMENTS",
+      "code": "OTH",
+      "value": "For every patient evaluated by this measure also identify payer, race, ethnicity and sex.",
+      "name": "Supplemental Data Elements"
+    }
+  ],
+  "populations": [
+    {
+      "IPP": "IPP",
+      "DENOM": "DENOM",
+      "NUMER": "NUMER",
+      "DENEXCEP": "DENEXCEP",
+      "DENEX": "DENEX"
+    }
+  ],
+  "measure_period": {
+    "type": "IVL_TS",
+    "low": {
+      "type": "TS",
+      "value": "201201010000",
+      "inclusive?": true,
+      "derived?": false
+    },
+    "high": {
+      "type": "TS",
+      "value": "201212312359",
+      "inclusive?": true,
+      "derived?": false
+    },
+    "width": {
+      "type": "PQ",
+      "unit": "a",
+      "value": "1",
+      "inclusive?": true,
+      "derived?": false
+    }
+  }
+}

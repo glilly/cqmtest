@@ -1,0 +1,625 @@
+{
+  "id": "0338",
+  "hqmf_id": "8A4D92B2-37BF-6F1B-0137-CCD612A40D0E",
+  "hqmf_set_id": "E1CB05E0-97D5-40FC-B456-15C5DBF44309",
+  "hqmf_version_number": 1,
+  "title": "Home Management Plan of Care (HMPC) Document Given to Patient/Caregiver",
+  "description": "An assessment that there is documentation in the medical record that a Home Management Plan of Care (HMPC) document was given to the pediatric asthma patient/caregiver.",
+  "cms_id": "CMS26v1",
+  "population_criteria": {
+    "DENEX": {
+      "conjunction?": true,
+      "type": "DENEX",
+      "title": "Denominator",
+      "hqmf_id": "D65B0EAA-7A1F-4904-915D-198120B11FE9"
+    },
+    "NUMER": {
+      "conjunction?": true,
+      "type": "NUMER",
+      "title": "Numerator",
+      "hqmf_id": "A61B4390-F385-4BF1-90CB-09E149170D17",
+      "preconditions": [
+        {
+          "id": 9,
+          "preconditions": [
+            {
+              "id": 6,
+              "preconditions": [
+                {
+                  "id": 2,
+                  "reference": "CommunicationFromProviderToPatientAsthmaManagementPlan_precondition_2"
+                },
+                {
+                  "id": 4,
+                  "reference": "CommunicationFromProviderToPatientAsthmaManagementPlan_precondition_4"
+                }
+              ],
+              "conjunction_code": "atLeastOneTrue"
+            }
+          ],
+          "conjunction_code": "allTrue"
+        }
+      ]
+    },
+    "DENOM": {
+      "conjunction?": true,
+      "type": "DENOM",
+      "title": "Denominator",
+      "hqmf_id": "34CCB5C0-82C7-4B60-8492-255CAD81D868",
+      "preconditions": [
+        {
+          "id": 12,
+          "preconditions": [
+            {
+              "id": 10,
+              "reference": "OccurrenceAInpatientEncounter1_precondition_10"
+            }
+          ],
+          "conjunction_code": "allTrue"
+        }
+      ]
+    },
+    "IPP": {
+      "conjunction?": true,
+      "type": "IPP",
+      "title": "Initial Patient Population",
+      "hqmf_id": "9D87B158-4A9F-46C8-B49C-8AA49084372D",
+      "preconditions": [
+        {
+          "id": 23,
+          "preconditions": [
+            {
+              "id": 13,
+              "reference": "DiagnosisActiveAsthma_precondition_13"
+            },
+            {
+              "id": 15,
+              "reference": "PatientCharacteristicBirthdateBirthDate_precondition_15"
+            },
+            {
+              "id": 17,
+              "reference": "PatientCharacteristicBirthdateBirthDate_precondition_17"
+            },
+            {
+              "id": 19,
+              "reference": "OccurrenceAInpatientEncounter1_precondition_19"
+            },
+            {
+              "id": 21,
+              "reference": "OccurrenceAInpatientEncounter1_precondition_21"
+            }
+          ],
+          "conjunction_code": "allTrue"
+        }
+      ]
+    }
+  },
+  "data_criteria": {
+    "EncounterPerformedInpatientEncounter": {
+      "title": "Inpatient Encounter",
+      "description": "Encounter, Performed: Inpatient Encounter",
+      "standard_category": "encounter",
+      "qds_data_type": "encounter",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.23",
+      "type": "encounters",
+      "definition": "encounter",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "EncounterPerformedInpatientEncounter"
+    },
+    "CommunicationFromProviderToPatientNotDonePatientRefusal": {
+      "title": "Patient Refusal",
+      "description": "Communication: From Provider to Patient not done: Patient Refusal",
+      "standard_category": "communication",
+      "qds_data_type": "communication",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.93",
+      "type": "communications",
+      "definition": "communication_from_provider_to_patient",
+      "hard_status": false,
+      "negation": true,
+      "source_data_criteria": "CommunicationFromProviderToPatientNotDonePatientRefusal"
+    },
+    "OccurrenceAInpatientEncounter1": {
+      "title": "Inpatient Encounter",
+      "description": "Encounter, Performed: Inpatient Encounter",
+      "standard_category": "encounter",
+      "qds_data_type": "encounter",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.23",
+      "type": "encounters",
+      "definition": "encounter",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "specific_occurrence": "A",
+      "specific_occurrence_const": "ENCOUNTER_PERFORMED_INPATIENT_ENCOUNTER",
+      "source_data_criteria": "OccurrenceAInpatientEncounter1"
+    },
+    "OccurrenceAInpatientEncounter1_precondition_7": {
+      "title": "Inpatient Encounter",
+      "description": "Encounter, Performed: Inpatient Encounter",
+      "standard_category": "encounter",
+      "qds_data_type": "encounter",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.23",
+      "type": "encounters",
+      "definition": "encounter",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "specific_occurrence": "A",
+      "specific_occurrence_const": "ENCOUNTER_PERFORMED_INPATIENT_ENCOUNTER",
+      "source_data_criteria": "OccurrenceAInpatientEncounter1"
+    },
+    "CommunicationFromProviderToPatientAsthmaManagementPlan_precondition_2": {
+      "title": "Asthma Management Plan",
+      "description": "Communication: From Provider to Patient: Asthma Management Plan",
+      "standard_category": "communication",
+      "qds_data_type": "communication",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.131",
+      "type": "communications",
+      "definition": "communication_from_provider_to_patient",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "CommunicationFromProviderToPatientAsthmaManagementPlan",
+      "temporal_references": [
+        {
+          "type": "DURING",
+          "reference": "OccurrenceAInpatientEncounter1_precondition_7"
+        }
+      ]
+    },
+    "CommunicationFromProviderToPatientAsthmaManagementPlan_precondition_4": {
+      "title": "Asthma Management Plan",
+      "description": "Communication: From Provider to Patient: Asthma Management Plan",
+      "standard_category": "communication",
+      "qds_data_type": "communication",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.131",
+      "type": "communications",
+      "definition": "communication_from_provider_to_patient",
+      "hard_status": false,
+      "negation": true,
+      "negation_code_list_id": "2.16.840.1.113883.3.117.1.7.1.93",
+      "source_data_criteria": "CommunicationFromProviderToPatientAsthmaManagementPlan",
+      "temporal_references": [
+        {
+          "type": "DURING",
+          "reference": "OccurrenceAInpatientEncounter1_precondition_7"
+        }
+      ]
+    },
+    "OccurrenceAInpatientEncounter1_precondition_10": {
+      "title": "Inpatient Encounter",
+      "description": "Encounter, Performed: Inpatient Encounter",
+      "standard_category": "encounter",
+      "qds_data_type": "encounter",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.23",
+      "type": "encounters",
+      "definition": "encounter",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "specific_occurrence": "A",
+      "specific_occurrence_const": "ENCOUNTER_PERFORMED_INPATIENT_ENCOUNTER",
+      "source_data_criteria": "OccurrenceAInpatientEncounter1",
+      "field_values": {
+        "DISCHARGE_STATUS": {
+          "type": "CD",
+          "code_list_id": "2.16.840.1.113883.3.117.1.7.1.82",
+          "title": "Discharge To Home Or Police Custody"
+        }
+      }
+    },
+    "DiagnosisActiveAsthma_precondition_13": {
+      "title": "Asthma",
+      "description": "Diagnosis, Active: Asthma",
+      "standard_category": "diagnosis_condition_problem",
+      "qds_data_type": "diagnosis_active",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.271",
+      "type": "conditions",
+      "definition": "diagnosis",
+      "status": "active",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "DiagnosisActiveAsthma",
+      "field_values": {
+        "ORDINAL": {
+          "type": "CD",
+          "code_list_id": "2.16.840.1.113883.3.117.2.7.1.14",
+          "title": "Principal Diagnosis"
+        }
+      },
+      "temporal_references": [
+        {
+          "type": "SDU",
+          "reference": "OccurrenceAInpatientEncounter1"
+        }
+      ]
+    },
+    "PatientCharacteristicBirthdateBirthDate_precondition_15": {
+      "title": "birth date",
+      "description": "Patient Characteristic Birthdate: birth date",
+      "standard_category": "individual_characteristic",
+      "qds_data_type": "individual_characteristic",
+      "code_list_id": "2.16.840.1.113883.3.560.100.4",
+      "property": "birthtime",
+      "type": "characteristic",
+      "definition": "patient_characteristic_birthdate",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "PatientCharacteristicBirthdateBirthDate",
+      "inline_code_list": {
+        "LOINC": [
+          "21112-8"
+        ]
+      },
+      "temporal_references": [
+        {
+          "type": "SBS",
+          "reference": "OccurrenceAInpatientEncounter1",
+          "range": {
+            "type": "IVL_PQ",
+            "low": {
+              "type": "PQ",
+              "unit": "a",
+              "value": "2",
+              "inclusive?": true,
+              "derived?": false
+            }
+          }
+        }
+      ]
+    },
+    "PatientCharacteristicBirthdateBirthDate_precondition_17": {
+      "title": "birth date",
+      "description": "Patient Characteristic Birthdate: birth date",
+      "standard_category": "individual_characteristic",
+      "qds_data_type": "individual_characteristic",
+      "code_list_id": "2.16.840.1.113883.3.560.100.4",
+      "property": "birthtime",
+      "type": "characteristic",
+      "definition": "patient_characteristic_birthdate",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "PatientCharacteristicBirthdateBirthDate",
+      "inline_code_list": {
+        "LOINC": [
+          "21112-8"
+        ]
+      },
+      "temporal_references": [
+        {
+          "type": "SBS",
+          "reference": "OccurrenceAInpatientEncounter1",
+          "range": {
+            "type": "IVL_PQ",
+            "high": {
+              "type": "PQ",
+              "unit": "a",
+              "value": "17",
+              "inclusive?": true,
+              "derived?": false
+            }
+          }
+        }
+      ]
+    },
+    "OccurrenceAInpatientEncounter1_precondition_19": {
+      "title": "Inpatient Encounter",
+      "description": "Encounter, Performed: Inpatient Encounter",
+      "standard_category": "encounter",
+      "qds_data_type": "encounter",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.23",
+      "type": "encounters",
+      "definition": "encounter",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "specific_occurrence": "A",
+      "specific_occurrence_const": "ENCOUNTER_PERFORMED_INPATIENT_ENCOUNTER",
+      "source_data_criteria": "OccurrenceAInpatientEncounter1",
+      "field_values": {
+        "LENGTH_OF_STAY": {
+          "type": "IVL_PQ",
+          "high": {
+            "type": "PQ",
+            "unit": "d",
+            "value": "120",
+            "inclusive?": true,
+            "derived?": false
+          }
+        }
+      }
+    },
+    "OccurrenceAInpatientEncounter1_precondition_21": {
+      "title": "Inpatient Encounter",
+      "description": "Encounter, Performed: Inpatient Encounter",
+      "standard_category": "encounter",
+      "qds_data_type": "encounter",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.23",
+      "type": "encounters",
+      "definition": "encounter",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "specific_occurrence": "A",
+      "specific_occurrence_const": "ENCOUNTER_PERFORMED_INPATIENT_ENCOUNTER",
+      "source_data_criteria": "OccurrenceAInpatientEncounter1",
+      "field_values": {
+        "DISCHARGE_DATETIME": {
+          "type": "ANYNonNull"
+        }
+      },
+      "temporal_references": [
+        {
+          "type": "DURING",
+          "reference": "MeasurePeriod"
+        }
+      ]
+    }
+  },
+  "source_data_criteria": {
+    "DiagnosisActiveAsthma": {
+      "title": "Asthma",
+      "description": "Diagnosis, Active: Asthma",
+      "standard_category": "diagnosis_condition_problem",
+      "qds_data_type": "diagnosis_active",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.271",
+      "type": "conditions",
+      "definition": "diagnosis",
+      "status": "active",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "DiagnosisActiveAsthma"
+    },
+    "EncounterPerformedInpatientEncounter": {
+      "title": "Inpatient Encounter",
+      "description": "Encounter, Performed: Inpatient Encounter",
+      "standard_category": "encounter",
+      "qds_data_type": "encounter",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.23",
+      "type": "encounters",
+      "definition": "encounter",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "EncounterPerformedInpatientEncounter"
+    },
+    "PatientCharacteristicBirthdateBirthDate": {
+      "title": "birth date",
+      "description": "Patient Characteristic Birthdate: birth date",
+      "standard_category": "individual_characteristic",
+      "qds_data_type": "individual_characteristic",
+      "code_list_id": "2.16.840.1.113883.3.560.100.4",
+      "property": "birthtime",
+      "type": "characteristic",
+      "definition": "patient_characteristic_birthdate",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "PatientCharacteristicBirthdateBirthDate",
+      "inline_code_list": {
+        "LOINC": [
+          "21112-8"
+        ]
+      }
+    },
+    "CommunicationFromProviderToPatientAsthmaManagementPlan": {
+      "title": "Asthma Management Plan",
+      "description": "Communication: From Provider to Patient: Asthma Management Plan",
+      "standard_category": "communication",
+      "qds_data_type": "communication",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.131",
+      "type": "communications",
+      "definition": "communication_from_provider_to_patient",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "CommunicationFromProviderToPatientAsthmaManagementPlan"
+    },
+    "CommunicationFromProviderToPatientNotDonePatientRefusal": {
+      "title": "Patient Refusal",
+      "description": "Communication: From Provider to Patient not done: Patient Refusal",
+      "standard_category": "communication",
+      "qds_data_type": "communication",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.93",
+      "type": "communications",
+      "definition": "communication_from_provider_to_patient",
+      "hard_status": false,
+      "negation": true,
+      "source_data_criteria": "CommunicationFromProviderToPatientNotDonePatientRefusal"
+    },
+    "OccurrenceAInpatientEncounter1": {
+      "title": "Inpatient Encounter",
+      "description": "Encounter, Performed: Inpatient Encounter",
+      "standard_category": "encounter",
+      "qds_data_type": "encounter",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.23",
+      "type": "encounters",
+      "definition": "encounter",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "specific_occurrence": "A",
+      "specific_occurrence_const": "ENCOUNTER_PERFORMED_INPATIENT_ENCOUNTER",
+      "source_data_criteria": "OccurrenceAInpatientEncounter1"
+    }
+  },
+  "attributes": [
+    {
+      "id": "COPYRIGHT",
+      "code": "COPY",
+      "value": "LOINC(R) is a registered trademark of the Regenstrief Institute.\r\n\r\nThis material contains SNOMED Clinical Terms (R) (SNOMED CT(c)) copyright 2004-2010 International Health Terminology Standards Development Organization. All rights reserved.",
+      "name": "Copyright"
+    },
+    {
+      "id": "MEASURE_SCORING",
+      "code": "MSRSCORE",
+      "name": "Measure Scoring"
+    },
+    {
+      "id": "MEASURE_TYPE",
+      "code": "MSRTYPE",
+      "name": "Measure Type"
+    },
+    {
+      "id": "STRATIFICATION",
+      "code": "STRAT",
+      "value": "None",
+      "name": "Stratification"
+    },
+    {
+      "id": "RISK_ADJUSTMENT",
+      "code": "MSRADJ",
+      "value": "None",
+      "name": "Risk Adjustment"
+    },
+    {
+      "id": "RATE_AGGREGATION",
+      "code": "MSRAGG",
+      "value": "None",
+      "name": "Rate Aggregation"
+    },
+    {
+      "id": "RATIONALE",
+      "code": "RAT",
+      "value": "Asthma is the most common chronic disease in children and a major cause of morbidity and health care costs nationally (Adams, et al., 2001). For children, asthma is one of the most frequent reasons for admission to hospitals (McCormick, et al., 1999). Silber, et al., (2003) noted that there are approximately 200,000 admissions for childhood asthma in the United States annually, representing more than $3 billion dollars in expenditures. Under-treatment and/or inappropriate treatment of asthma are recognized as major contributors to asthma morbidity and mortality. Guidelines developed by the National Asthma Education and Prevention Program (NAEPP) of the National Heart, Lung and Blood Institute (NHLBI), as well as by the American Academy of Pediatrics (AAP) for the diagnosis and management of asthma in children, recommend establishing a plan for maintaining control of asthma and for establishing plans for managing exacerbations. Both aspects of care would include instructions related to pharmacotherapy and assessment of lung function. \r\n\r\nAccording to the Agency for Healthcare Research and Quality (AHRQ), an Evidence-based Practice Center (EPC) and Aronson, Lefevere, Piper, et al. (2001) reported that increasing use of controller medications improves outcomes. Children with asthma who are seen by specialists or receive follow-up appointments are more likely to use appropriate long-term control medications (ACQA, 2004; Finklestein, Lozano, Farber, et al., 2002). \r\n\r\nOrganization of care towards patient self-management and patient/caregiver routine education on appropriate use of asthma medications, identification of symptoms of exacerbation, avoidance of environmental triggers cannot be overemphasized (AHRQ, 2005). For children, it is particularly important to involve both the patient and the caregiver in this educational component of asthma care as participation in the plan of care by both will provide the greatest opportunity to promote compliance with the treatment plan, control of asthma, and treatment of exacerbations in a safe and timely manner.",
+      "name": "Rationale"
+    },
+    {
+      "id": "CLINICAL_RECOMMENDATION_STATEMENT",
+      "code": "CRS",
+      "value": "Under-treatment and/or inappropriate treatment of asthma are recognized as major contributors to asthma morbidity and mortality. National guidelines for the diagnosis and management of asthma in children, recommend establishing a plan for maintaining control of asthma and for establishing plans for managing exacerbation.",
+      "name": "Clinical Recommendation Statement"
+    },
+    {
+      "id": "IMPROVEMENT_NOTATION",
+      "code": "IDUR",
+      "value": "An increase in the rate.",
+      "name": "Improvement Notation"
+    },
+    {
+      "id": "NQF_ID_NUMBER",
+      "code": "OTH",
+      "value": "0338",
+      "name": "NQF ID Number"
+    },
+    {
+      "id": "DISCLAIMER",
+      "code": "DISC",
+      "value": "None",
+      "name": "Disclaimer"
+    },
+    {
+      "id": "EMEASURE_IDENTIFIER",
+      "code": "OTH",
+      "value": "26",
+      "name": "eMeasure Identifier"
+    },
+    {
+      "id": "REFERENCE",
+      "code": "REF",
+      "value": "Stanton MW, Dougherty D, Rutherford MK. (2005). Chronic care for low-income children with asthma: strategies for improvement. Rockville (MD): Agency for Healthcare Research and Quality. Research in Action Issue 18. AHRQ Pub. No. 05-0073.",
+      "name": "Reference"
+    },
+    {
+      "id": "DEFINITION",
+      "code": "DEF",
+      "value": "None",
+      "name": "Definition"
+    },
+    {
+      "id": "GUIDANCE",
+      "code": "GUIDE",
+      "value": "The home management plan of care document should be a separate and patient-specific written instruction. The document must be present in the form of an explicit and separate document specific to the patient rather than components or segments of the plan spread across discharge instruction sheets, discharge orders, education sheets, or other instruction sheets.\r\n\r\nThe home management plan of care is represented in the eMeasure logic by a LOINC code for an asthma action plan document. This form, or equivalent, contains most of the components required for the home management plan of care, including information on:\r\n•\tMethods and timing of rescue actions: the home management plan of care addresses what to do if asthma symptoms worsen after discharge, including all of the following: 1) When to take action, i.e., assessment of severity (e.g., peak flow meter reading, signs and symptoms to watch for); 2) What specific steps to take, i.e., initial treatment instructions (e.g., inhaled relievers up to three treatments of 2-4 puffs by MDI at 20-minute intervals or single nebulizer treatment); 3) Contact information to be used, when an asthma attack occurs or is about to occur.\r\n•\tAppropriate use of long-term asthma medications (controllers), including the medication name, dose, frequency, and method of administration.\r\n•\tAppropriate use of rescue, quick-relief, or short acting medications of choice to quickly relieve asthma exacerbations (relievers), including the medication name, dose, frequency, and method of administration.\r\n•\tEnvironmental control and control of other triggers: information on avoidance or mitigation of environmental and other triggers.\r\n\r\nIn addition to the information outlined in the asthma action plan form (or equivalent document), the home management plan of care is required to include information regarding arrangements for referral or follow-up care with a healthcare provider, namely:\r\n•\tIf an appointment for referral or follow-up care with a healthcare provider has been made, the home management plan of care is required to include the provider/clinic/office name, as well as the date and time of the appointment.\r\n•\tIf an appointment for referral of follow-up care with a healthcare provider has NOT been made, the home management plan of care is required to include information for the patient/caregiver to be able to make arrangements for follow-up care, i.e., provider/clinic/office name, telephone number and time frame for appointment for follow-up care (e.g., 7-10 days).\r\n\r\nThe home management plan of care can only be considered to comply with the criteria outlined in the measure logic if it meets the requirements outlined above and is appropriately filled-out with information specific to the patient.\r\n\r\nPatient refusal includes refusal by a caregiver. The caregiver is defined as the patient’s family or any other person (e.g., home health, VNA provider, prison official or other law enforcement personnel) who will be responsible for care of the patient after discharge.\r\n\r\nThe “Discharge To Home Or Police Custody” value set also intends to capture the following discharge disposition values:\r\n• Assisted Living Facilities\r\n• Court/Law Enforcement – includes detention facilities, jails, and prison\r\n• Home – includes board and care, foster or residential care, group or personal care homes, and homeless shelters\r\n• Home with Home Health Services\r\n• Outpatient Services including outpatient procedures at another hospital, Outpatient Chemical Dependency Programs and Partial Hospitalization.\r\n\r\nThe unit of measurement for this measure is an inpatient episode of care. Each distinct hospitalization should be reported, regardless of whether the same patient is admitted for inpatient care more than once during the measurement period. In addition, the eMeasure logic intends to represent events within or surrounding a single occurrence of an inpatient hospitalization.",
+      "name": "Guidance"
+    },
+    {
+      "id": "TRANSMISSION_FORMAT",
+      "code": "OTH",
+      "value": "None",
+      "name": "Transmission Format"
+    },
+    {
+      "id": "INITIAL_PATIENT_POPULATION",
+      "code": "IPP",
+      "value": "Pediatric asthma inpatients with an age of 2 through 17 years, and length of stay less than or equal to 120 days.",
+      "name": "Initial Patient Population"
+    },
+    {
+      "id": "DENOMINATOR",
+      "code": "DENOM",
+      "value": "Pediatric asthma inpatients with an age of 2 through 17 years, length of stay less than or equal to 120 days, and discharged to home or police custody.",
+      "name": "Denominator"
+    },
+    {
+      "id": "DENOMINATOR_EXCLUSIONS",
+      "code": "OTH",
+      "value": "None",
+      "name": "Denominator Exclusions"
+    },
+    {
+      "id": "NUMERATOR",
+      "code": "NUMER",
+      "value": "Pediatric asthma inpatients with documentation that they or their caregivers were given a written Home Management Plan of Care (HMPC) document that addresses all of the following: \r\n1. Arrangements for follow-up care \r\n2. Environmental control and control of other triggers\r\n3. Method and timing of rescue actions\r\n4. Use of controllers \r\n5. Use of relievers",
+      "name": "Numerator"
+    },
+    {
+      "id": "NUMERATOR_EXCLUSIONS",
+      "code": "OTH",
+      "value": "Not applicable",
+      "name": "Numerator Exclusions"
+    },
+    {
+      "id": "DENOMINATOR_EXCEPTIONS",
+      "code": "DENEXCEP",
+      "value": "None",
+      "name": "Denominator Exceptions"
+    },
+    {
+      "id": "MEASURE_POPULATION",
+      "code": "MSRPOPL",
+      "value": "Not applicable",
+      "name": "Measure Population"
+    },
+    {
+      "id": "MEASURE_OBSERVATIONS",
+      "code": "OTH",
+      "value": "Not applicable",
+      "name": "Measure Observations"
+    },
+    {
+      "id": "SUPPLEMENTAL_DATA_ELEMENTS",
+      "code": "OTH",
+      "value": "For every patient evaluated by this measure also identify payer, race, ethnicity and sex.",
+      "name": "Supplemental Data Elements"
+    }
+  ],
+  "populations": [
+    {
+      "IPP": "IPP",
+      "DENOM": "DENOM",
+      "NUMER": "NUMER",
+      "DENEX": "DENEX"
+    }
+  ],
+  "measure_period": {
+    "type": "IVL_TS",
+    "low": {
+      "type": "TS",
+      "value": "201201010000",
+      "inclusive?": true,
+      "derived?": false
+    },
+    "high": {
+      "type": "TS",
+      "value": "201212312359",
+      "inclusive?": true,
+      "derived?": false
+    },
+    "width": {
+      "type": "PQ",
+      "unit": "a",
+      "value": "1",
+      "inclusive?": true,
+      "derived?": false
+    }
+  }
+}

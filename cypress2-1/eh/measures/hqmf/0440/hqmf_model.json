@@ -1,0 +1,1132 @@
+{
+  "id": "0440",
+  "hqmf_id": "8A4D92B2-3A00-2A25-013A-0DD50CE621D8",
+  "hqmf_set_id": "217FDF0D-3D64-4720-9116-D5E5AFA27F2C",
+  "hqmf_version_number": 1,
+  "title": "Stroke Education",
+  "description": "Ischemic or hemorrhagic stroke patients or their caregivers who were given educational materials during the hospital stay addressing all of the following: activation of emergency medical system, need for follow-up after discharge, medications prescribed at discharge, risk factors for stroke, and warning signs and symptoms of stroke.",
+  "cms_id": "CMS107v1",
+  "population_criteria": {
+    "DENEX": {
+      "conjunction?": true,
+      "type": "DENEX",
+      "title": "Denominator",
+      "hqmf_id": "15CC8580-9BE2-4634-9D89-4CD10ADEA358",
+      "preconditions": [
+        {
+          "id": 26,
+          "preconditions": [
+            {
+              "id": 24,
+              "preconditions": [
+                {
+                  "id": 3,
+                  "reference": "OccurrenceAInpatientEncounter1_precondition_3"
+                },
+                {
+                  "id": 15,
+                  "preconditions": [
+                    {
+                      "id": 6,
+                      "reference": "OccurrenceAInpatientEncounter1_precondition_6"
+                    },
+                    {
+                      "id": 12,
+                      "preconditions": [
+                        {
+                          "id": 8,
+                          "reference": "InterventionOrderPalliativeCare_precondition_8"
+                        },
+                        {
+                          "id": 10,
+                          "reference": "InterventionPerformedPalliativeCare_precondition_10"
+                        }
+                      ],
+                      "conjunction_code": "atLeastOneTrue"
+                    }
+                  ],
+                  "conjunction_code": "allTrue"
+                },
+                {
+                  "id": 21,
+                  "preconditions": [
+                    {
+                      "id": 17,
+                      "reference": "InterventionOrderPalliativeCare_precondition_17"
+                    },
+                    {
+                      "id": 19,
+                      "reference": "InterventionPerformedPalliativeCare_precondition_19"
+                    }
+                  ],
+                  "conjunction_code": "atLeastOneTrue"
+                }
+              ],
+              "conjunction_code": "atLeastOneTrue"
+            }
+          ],
+          "conjunction_code": "allTrue"
+        }
+      ]
+    },
+    "NUMER": {
+      "conjunction?": true,
+      "type": "NUMER",
+      "title": "Numerator",
+      "hqmf_id": "7A7BD2FB-3BF6-4885-8ACE-9E7BC7D8FFE4",
+      "preconditions": [
+        {
+          "id": 46,
+          "preconditions": [
+            {
+              "id": 43,
+              "preconditions": [
+                {
+                  "id": 27,
+                  "reference": "CommunicationFromProviderToPatientWrittenInformationGiven_precondition_27"
+                },
+                {
+                  "id": 41,
+                  "preconditions": [
+                    {
+                      "id": 29,
+                      "reference": "CommunicationFromProviderToPatientActivationOfEmergencyMedicalSystemEducation_precondition_29"
+                    },
+                    {
+                      "id": 31,
+                      "reference": "CommunicationFromProviderToPatientInstructionsForFollowUpAfterDischarge_precondition_31"
+                    },
+                    {
+                      "id": 33,
+                      "reference": "CommunicationFromProviderToPatientPrescribedMedicationsEducation_precondition_33"
+                    },
+                    {
+                      "id": 35,
+                      "reference": "CommunicationFromProviderToPatientRiskFactorsEducation_precondition_35"
+                    },
+                    {
+                      "id": 37,
+                      "reference": "CommunicationFromProviderToPatientWarningSignsAndSymptomsEducation_precondition_37"
+                    },
+                    {
+                      "id": 39,
+                      "reference": "CommunicationFromProviderToPatientWrittenInformationGiven_precondition_39"
+                    }
+                  ],
+                  "conjunction_code": "allTrue"
+                }
+              ],
+              "conjunction_code": "atLeastOneTrue"
+            }
+          ],
+          "conjunction_code": "allTrue"
+        }
+      ]
+    },
+    "DENOM": {
+      "conjunction?": true,
+      "type": "DENOM",
+      "title": "Denominator",
+      "hqmf_id": "74B86972-A5C4-401B-9161-43BD056E88E2",
+      "preconditions": [
+        {
+          "id": 49,
+          "preconditions": [
+            {
+              "id": 47,
+              "reference": "OccurrenceAInpatientEncounter1_precondition_47"
+            }
+          ],
+          "conjunction_code": "allTrue"
+        }
+      ]
+    },
+    "IPP": {
+      "conjunction?": true,
+      "type": "IPP",
+      "title": "Initial Patient Population",
+      "hqmf_id": "FC9D36CE-323A-4B82-ADD5-EB60224DDE3C",
+      "preconditions": [
+        {
+          "id": 63,
+          "preconditions": [
+            {
+              "id": 50,
+              "reference": "PatientCharacteristicBirthdateBirthDate_precondition_50"
+            },
+            {
+              "id": 52,
+              "reference": "OccurrenceAInpatientEncounter1_precondition_52"
+            },
+            {
+              "id": 54,
+              "reference": "OccurrenceAInpatientEncounter1_precondition_54"
+            },
+            {
+              "id": 60,
+              "preconditions": [
+                {
+                  "id": 56,
+                  "reference": "DiagnosisActiveIschemicStroke_precondition_56"
+                },
+                {
+                  "id": 58,
+                  "reference": "DiagnosisActiveHemorrhagicStroke_precondition_58"
+                }
+              ],
+              "conjunction_code": "atLeastOneTrue"
+            }
+          ],
+          "conjunction_code": "allTrue"
+        }
+      ]
+    }
+  },
+  "data_criteria": {
+    "EncounterPerformedInpatientEncounter": {
+      "title": "Inpatient Encounter",
+      "description": "Encounter, Performed: Inpatient Encounter",
+      "standard_category": "encounter",
+      "qds_data_type": "encounter",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.23",
+      "type": "encounters",
+      "definition": "encounter",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "EncounterPerformedInpatientEncounter"
+    },
+    "EncounterPerformedEmergencyDepartmentVisit": {
+      "title": "Emergency Department Visit",
+      "description": "Encounter, Performed: Emergency Department Visit",
+      "standard_category": "encounter",
+      "qds_data_type": "encounter",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.292",
+      "type": "encounters",
+      "definition": "encounter",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "EncounterPerformedEmergencyDepartmentVisit"
+    },
+    "CommunicationFromProviderToPatientNotDonePatientRefusal": {
+      "title": "Patient Refusal",
+      "description": "Communication: From Provider to Patient not done: Patient Refusal",
+      "standard_category": "communication",
+      "qds_data_type": "communication",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.93",
+      "type": "communications",
+      "definition": "communication_from_provider_to_patient",
+      "hard_status": false,
+      "negation": true,
+      "source_data_criteria": "CommunicationFromProviderToPatientNotDonePatientRefusal"
+    },
+    "OccurrenceAInpatientEncounter1": {
+      "title": "Inpatient Encounter",
+      "description": "Encounter, Performed: Inpatient Encounter",
+      "standard_category": "encounter",
+      "qds_data_type": "encounter",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.23",
+      "type": "encounters",
+      "definition": "encounter",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "specific_occurrence": "A",
+      "specific_occurrence_const": "ENCOUNTER_PERFORMED_INPATIENT_ENCOUNTER",
+      "source_data_criteria": "OccurrenceAInpatientEncounter1"
+    },
+    "OccurrenceAInpatientEncounter1_precondition_3": {
+      "title": "Inpatient Encounter",
+      "description": "Encounter, Performed: Inpatient Encounter",
+      "standard_category": "encounter",
+      "qds_data_type": "encounter",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.23",
+      "type": "encounters",
+      "definition": "encounter",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "specific_occurrence": "A",
+      "specific_occurrence_const": "ENCOUNTER_PERFORMED_INPATIENT_ENCOUNTER",
+      "source_data_criteria": "OccurrenceAInpatientEncounter1",
+      "field_values": {
+        "REASON": {
+          "type": "CD",
+          "code_list_id": "2.16.840.1.113883.3.117.1.7.1.204",
+          "title": "Carotid Intervention"
+        }
+      }
+    },
+    "OccurrenceAEmergencyDepartmentVisit2_precondition_5": {
+      "title": "Emergency Department Visit",
+      "description": "Encounter, Performed: Emergency Department Visit",
+      "standard_category": "encounter",
+      "qds_data_type": "encounter",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.292",
+      "type": "encounters",
+      "definition": "encounter",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "specific_occurrence": "A",
+      "specific_occurrence_const": "ENCOUNTER_PERFORMED_EMERGENCY_DEPARTMENT_VISIT",
+      "source_data_criteria": "OccurrenceAEmergencyDepartmentVisit2",
+      "field_values": {
+        "FACILITY_LOCATION_DEPARTURE_DATETIME": null
+      }
+    },
+    "OccurrenceAInpatientEncounter1_precondition_6": {
+      "title": "Inpatient Encounter",
+      "description": "Encounter, Performed: Inpatient Encounter",
+      "standard_category": "encounter",
+      "qds_data_type": "encounter",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.23",
+      "type": "encounters",
+      "definition": "encounter",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "specific_occurrence": "A",
+      "specific_occurrence_const": "ENCOUNTER_PERFORMED_INPATIENT_ENCOUNTER",
+      "source_data_criteria": "OccurrenceAInpatientEncounter1",
+      "field_values": {
+        "ADMISSION_DATETIME": {
+          "type": "ANYNonNull"
+        }
+      },
+      "temporal_references": [
+        {
+          "type": "SAE",
+          "reference": "OccurrenceAEmergencyDepartmentVisit2_precondition_5",
+          "range": {
+            "type": "IVL_PQ",
+            "high": {
+              "type": "PQ",
+              "unit": "h",
+              "value": "1",
+              "inclusive?": true,
+              "derived?": false
+            }
+          }
+        }
+      ]
+    },
+    "OccurrenceAEmergencyDepartmentVisit2_precondition_13": {
+      "title": "Emergency Department Visit",
+      "description": "Encounter, Performed: Emergency Department Visit",
+      "standard_category": "encounter",
+      "qds_data_type": "encounter",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.292",
+      "type": "encounters",
+      "definition": "encounter",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "specific_occurrence": "A",
+      "specific_occurrence_const": "ENCOUNTER_PERFORMED_EMERGENCY_DEPARTMENT_VISIT",
+      "source_data_criteria": "OccurrenceAEmergencyDepartmentVisit2"
+    },
+    "InterventionOrderPalliativeCare_precondition_8": {
+      "title": "Palliative Care",
+      "description": "Intervention, Order: Palliative Care",
+      "standard_category": "procedure",
+      "qds_data_type": "procedure_performed",
+      "code_list_id": "2.16.840.1.113883.3.526.2.1076",
+      "type": "interventions",
+      "definition": "intervention",
+      "status": "ordered",
+      "hard_status": true,
+      "negation": false,
+      "source_data_criteria": "InterventionOrderPalliativeCare",
+      "temporal_references": [
+        {
+          "type": "SDU",
+          "reference": "OccurrenceAEmergencyDepartmentVisit2_precondition_13"
+        }
+      ]
+    },
+    "InterventionPerformedPalliativeCare_precondition_10": {
+      "title": "Palliative Care",
+      "description": "Intervention, Performed: Palliative Care",
+      "standard_category": "procedure",
+      "qds_data_type": "procedure_performed",
+      "code_list_id": "2.16.840.1.113883.3.526.2.1076",
+      "type": "interventions",
+      "definition": "intervention",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "InterventionPerformedPalliativeCare",
+      "temporal_references": [
+        {
+          "type": "SDU",
+          "reference": "OccurrenceAEmergencyDepartmentVisit2_precondition_13"
+        }
+      ]
+    },
+    "OccurrenceAInpatientEncounter1_precondition_22": {
+      "title": "Inpatient Encounter",
+      "description": "Encounter, Performed: Inpatient Encounter",
+      "standard_category": "encounter",
+      "qds_data_type": "encounter",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.23",
+      "type": "encounters",
+      "definition": "encounter",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "specific_occurrence": "A",
+      "specific_occurrence_const": "ENCOUNTER_PERFORMED_INPATIENT_ENCOUNTER",
+      "source_data_criteria": "OccurrenceAInpatientEncounter1"
+    },
+    "InterventionOrderPalliativeCare_precondition_17": {
+      "title": "Palliative Care",
+      "description": "Intervention, Order: Palliative Care",
+      "standard_category": "procedure",
+      "qds_data_type": "procedure_performed",
+      "code_list_id": "2.16.840.1.113883.3.526.2.1076",
+      "type": "interventions",
+      "definition": "intervention",
+      "status": "ordered",
+      "hard_status": true,
+      "negation": false,
+      "source_data_criteria": "InterventionOrderPalliativeCare",
+      "temporal_references": [
+        {
+          "type": "SDU",
+          "reference": "OccurrenceAInpatientEncounter1_precondition_22"
+        }
+      ]
+    },
+    "InterventionPerformedPalliativeCare_precondition_19": {
+      "title": "Palliative Care",
+      "description": "Intervention, Performed: Palliative Care",
+      "standard_category": "procedure",
+      "qds_data_type": "procedure_performed",
+      "code_list_id": "2.16.840.1.113883.3.526.2.1076",
+      "type": "interventions",
+      "definition": "intervention",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "InterventionPerformedPalliativeCare",
+      "temporal_references": [
+        {
+          "type": "SDU",
+          "reference": "OccurrenceAInpatientEncounter1_precondition_22"
+        }
+      ]
+    },
+    "OccurrenceAInpatientEncounter1_precondition_44": {
+      "title": "Inpatient Encounter",
+      "description": "Encounter, Performed: Inpatient Encounter",
+      "standard_category": "encounter",
+      "qds_data_type": "encounter",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.23",
+      "type": "encounters",
+      "definition": "encounter",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "specific_occurrence": "A",
+      "specific_occurrence_const": "ENCOUNTER_PERFORMED_INPATIENT_ENCOUNTER",
+      "source_data_criteria": "OccurrenceAInpatientEncounter1"
+    },
+    "CommunicationFromProviderToPatientWrittenInformationGiven_precondition_27": {
+      "title": "Written Information Given",
+      "description": "Communication: From Provider to Patient: Written Information Given",
+      "standard_category": "communication",
+      "qds_data_type": "communication",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.415",
+      "type": "communications",
+      "definition": "communication_from_provider_to_patient",
+      "hard_status": false,
+      "negation": true,
+      "negation_code_list_id": "2.16.840.1.113883.3.117.1.7.1.93",
+      "source_data_criteria": "CommunicationFromProviderToPatientWrittenInformationGiven",
+      "temporal_references": [
+        {
+          "type": "DURING",
+          "reference": "OccurrenceAInpatientEncounter1_precondition_44"
+        }
+      ]
+    },
+    "CommunicationFromProviderToPatientActivationOfEmergencyMedicalSystemEducation_precondition_29": {
+      "title": "Activation of Emergency Medical System Education",
+      "description": "Communication: From Provider to Patient: Activation of Emergency Medical System Education",
+      "standard_category": "communication",
+      "qds_data_type": "communication",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.377",
+      "type": "communications",
+      "definition": "communication_from_provider_to_patient",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "CommunicationFromProviderToPatientActivationOfEmergencyMedicalSystemEducation",
+      "temporal_references": [
+        {
+          "type": "DURING",
+          "reference": "OccurrenceAInpatientEncounter1_precondition_44"
+        }
+      ]
+    },
+    "CommunicationFromProviderToPatientInstructionsForFollowUpAfterDischarge_precondition_31": {
+      "title": "Instructions for Follow Up After Discharge",
+      "description": "Communication: From Provider to Patient: Instructions for Follow Up After Discharge",
+      "standard_category": "communication",
+      "qds_data_type": "communication",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.378",
+      "type": "communications",
+      "definition": "communication_from_provider_to_patient",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "CommunicationFromProviderToPatientInstructionsForFollowUpAfterDischarge",
+      "temporal_references": [
+        {
+          "type": "DURING",
+          "reference": "OccurrenceAInpatientEncounter1_precondition_44"
+        }
+      ]
+    },
+    "CommunicationFromProviderToPatientPrescribedMedicationsEducation_precondition_33": {
+      "title": "Prescribed Medications Education",
+      "description": "Communication: From Provider to Patient: Prescribed Medications Education",
+      "standard_category": "communication",
+      "qds_data_type": "communication",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.379",
+      "type": "communications",
+      "definition": "communication_from_provider_to_patient",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "CommunicationFromProviderToPatientPrescribedMedicationsEducation",
+      "temporal_references": [
+        {
+          "type": "DURING",
+          "reference": "OccurrenceAInpatientEncounter1_precondition_44"
+        }
+      ]
+    },
+    "CommunicationFromProviderToPatientRiskFactorsEducation_precondition_35": {
+      "title": "Risk Factors Education",
+      "description": "Communication: From Provider to Patient: Risk Factors Education",
+      "standard_category": "communication",
+      "qds_data_type": "communication",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.380",
+      "type": "communications",
+      "definition": "communication_from_provider_to_patient",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "CommunicationFromProviderToPatientRiskFactorsEducation",
+      "temporal_references": [
+        {
+          "type": "DURING",
+          "reference": "OccurrenceAInpatientEncounter1_precondition_44"
+        }
+      ]
+    },
+    "CommunicationFromProviderToPatientWarningSignsAndSymptomsEducation_precondition_37": {
+      "title": "Warning Signs and Symptoms Education",
+      "description": "Communication: From Provider to Patient: Warning Signs and Symptoms Education",
+      "standard_category": "communication",
+      "qds_data_type": "communication",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.381",
+      "type": "communications",
+      "definition": "communication_from_provider_to_patient",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "CommunicationFromProviderToPatientWarningSignsAndSymptomsEducation",
+      "temporal_references": [
+        {
+          "type": "DURING",
+          "reference": "OccurrenceAInpatientEncounter1_precondition_44"
+        }
+      ]
+    },
+    "CommunicationFromProviderToPatientWrittenInformationGiven_precondition_39": {
+      "title": "Written Information Given",
+      "description": "Communication: From Provider to Patient: Written Information Given",
+      "standard_category": "communication",
+      "qds_data_type": "communication",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.415",
+      "type": "communications",
+      "definition": "communication_from_provider_to_patient",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "CommunicationFromProviderToPatientWrittenInformationGiven",
+      "temporal_references": [
+        {
+          "type": "DURING",
+          "reference": "OccurrenceAInpatientEncounter1_precondition_44"
+        }
+      ]
+    },
+    "OccurrenceAInpatientEncounter1_precondition_47": {
+      "title": "Inpatient Encounter",
+      "description": "Encounter, Performed: Inpatient Encounter",
+      "standard_category": "encounter",
+      "qds_data_type": "encounter",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.23",
+      "type": "encounters",
+      "definition": "encounter",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "specific_occurrence": "A",
+      "specific_occurrence_const": "ENCOUNTER_PERFORMED_INPATIENT_ENCOUNTER",
+      "source_data_criteria": "OccurrenceAInpatientEncounter1",
+      "field_values": {
+        "DISCHARGE_STATUS": {
+          "type": "CD",
+          "code_list_id": "2.16.840.1.113883.3.117.1.7.1.82",
+          "title": "Discharge To Home Or Police Custody"
+        }
+      }
+    },
+    "PatientCharacteristicBirthdateBirthDate_precondition_50": {
+      "title": "birth date",
+      "description": "Patient Characteristic Birthdate: birth date",
+      "standard_category": "individual_characteristic",
+      "qds_data_type": "individual_characteristic",
+      "code_list_id": "2.16.840.1.113883.3.560.100.4",
+      "property": "birthtime",
+      "type": "characteristic",
+      "definition": "patient_characteristic_birthdate",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "PatientCharacteristicBirthdateBirthDate",
+      "inline_code_list": {
+        "LOINC": [
+          "21112-8"
+        ]
+      },
+      "temporal_references": [
+        {
+          "type": "SBS",
+          "reference": "OccurrenceAInpatientEncounter1",
+          "range": {
+            "type": "IVL_PQ",
+            "low": {
+              "type": "PQ",
+              "unit": "a",
+              "value": "18",
+              "inclusive?": true,
+              "derived?": false
+            }
+          }
+        }
+      ]
+    },
+    "OccurrenceAInpatientEncounter1_precondition_52": {
+      "title": "Inpatient Encounter",
+      "description": "Encounter, Performed: Inpatient Encounter",
+      "standard_category": "encounter",
+      "qds_data_type": "encounter",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.23",
+      "type": "encounters",
+      "definition": "encounter",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "specific_occurrence": "A",
+      "specific_occurrence_const": "ENCOUNTER_PERFORMED_INPATIENT_ENCOUNTER",
+      "source_data_criteria": "OccurrenceAInpatientEncounter1",
+      "field_values": {
+        "LENGTH_OF_STAY": {
+          "type": "IVL_PQ",
+          "high": {
+            "type": "PQ",
+            "unit": "d",
+            "value": "120",
+            "inclusive?": true,
+            "derived?": false
+          }
+        }
+      }
+    },
+    "OccurrenceAInpatientEncounter1_precondition_54": {
+      "title": "Inpatient Encounter",
+      "description": "Encounter, Performed: Inpatient Encounter",
+      "standard_category": "encounter",
+      "qds_data_type": "encounter",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.23",
+      "type": "encounters",
+      "definition": "encounter",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "specific_occurrence": "A",
+      "specific_occurrence_const": "ENCOUNTER_PERFORMED_INPATIENT_ENCOUNTER",
+      "source_data_criteria": "OccurrenceAInpatientEncounter1",
+      "field_values": {
+        "DISCHARGE_DATETIME": {
+          "type": "ANYNonNull"
+        }
+      },
+      "temporal_references": [
+        {
+          "type": "DURING",
+          "reference": "MeasurePeriod"
+        }
+      ]
+    },
+    "OccurrenceAInpatientEncounter1_precondition_61": {
+      "title": "Inpatient Encounter",
+      "description": "Encounter, Performed: Inpatient Encounter",
+      "standard_category": "encounter",
+      "qds_data_type": "encounter",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.23",
+      "type": "encounters",
+      "definition": "encounter",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "specific_occurrence": "A",
+      "specific_occurrence_const": "ENCOUNTER_PERFORMED_INPATIENT_ENCOUNTER",
+      "source_data_criteria": "OccurrenceAInpatientEncounter1"
+    },
+    "DiagnosisActiveIschemicStroke_precondition_56": {
+      "title": "Ischemic Stroke",
+      "description": "Diagnosis, Active: Ischemic Stroke",
+      "standard_category": "diagnosis_condition_problem",
+      "qds_data_type": "diagnosis_active",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.247",
+      "type": "conditions",
+      "definition": "diagnosis",
+      "status": "active",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "DiagnosisActiveIschemicStroke",
+      "field_values": {
+        "ORDINAL": {
+          "type": "CD",
+          "code_list_id": "2.16.840.1.113883.3.117.2.7.1.14",
+          "title": "Principal Diagnosis"
+        }
+      },
+      "temporal_references": [
+        {
+          "type": "SDU",
+          "reference": "OccurrenceAInpatientEncounter1_precondition_61"
+        }
+      ]
+    },
+    "DiagnosisActiveHemorrhagicStroke_precondition_58": {
+      "title": "Hemorrhagic Stroke",
+      "description": "Diagnosis, Active: Hemorrhagic Stroke",
+      "standard_category": "diagnosis_condition_problem",
+      "qds_data_type": "diagnosis_active",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.212",
+      "type": "conditions",
+      "definition": "diagnosis",
+      "status": "active",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "DiagnosisActiveHemorrhagicStroke",
+      "field_values": {
+        "ORDINAL": {
+          "type": "CD",
+          "code_list_id": "2.16.840.1.113883.3.117.2.7.1.14",
+          "title": "Principal Diagnosis"
+        }
+      },
+      "temporal_references": [
+        {
+          "type": "SDU",
+          "reference": "OccurrenceAInpatientEncounter1_precondition_61"
+        }
+      ]
+    }
+  },
+  "source_data_criteria": {
+    "PatientCharacteristicBirthdateBirthDate": {
+      "title": "birth date",
+      "description": "Patient Characteristic Birthdate: birth date",
+      "standard_category": "individual_characteristic",
+      "qds_data_type": "individual_characteristic",
+      "code_list_id": "2.16.840.1.113883.3.560.100.4",
+      "property": "birthtime",
+      "type": "characteristic",
+      "definition": "patient_characteristic_birthdate",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "PatientCharacteristicBirthdateBirthDate",
+      "inline_code_list": {
+        "LOINC": [
+          "21112-8"
+        ]
+      }
+    },
+    "DiagnosisActiveHemorrhagicStroke": {
+      "title": "Hemorrhagic Stroke",
+      "description": "Diagnosis, Active: Hemorrhagic Stroke",
+      "standard_category": "diagnosis_condition_problem",
+      "qds_data_type": "diagnosis_active",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.212",
+      "type": "conditions",
+      "definition": "diagnosis",
+      "status": "active",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "DiagnosisActiveHemorrhagicStroke"
+    },
+    "CommunicationFromProviderToPatientActivationOfEmergencyMedicalSystemEducation": {
+      "title": "Activation of Emergency Medical System Education",
+      "description": "Communication: From Provider to Patient: Activation of Emergency Medical System Education",
+      "standard_category": "communication",
+      "qds_data_type": "communication",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.377",
+      "type": "communications",
+      "definition": "communication_from_provider_to_patient",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "CommunicationFromProviderToPatientActivationOfEmergencyMedicalSystemEducation"
+    },
+    "CommunicationFromProviderToPatientInstructionsForFollowUpAfterDischarge": {
+      "title": "Instructions for Follow Up After Discharge",
+      "description": "Communication: From Provider to Patient: Instructions for Follow Up After Discharge",
+      "standard_category": "communication",
+      "qds_data_type": "communication",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.378",
+      "type": "communications",
+      "definition": "communication_from_provider_to_patient",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "CommunicationFromProviderToPatientInstructionsForFollowUpAfterDischarge"
+    },
+    "CommunicationFromProviderToPatientPrescribedMedicationsEducation": {
+      "title": "Prescribed Medications Education",
+      "description": "Communication: From Provider to Patient: Prescribed Medications Education",
+      "standard_category": "communication",
+      "qds_data_type": "communication",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.379",
+      "type": "communications",
+      "definition": "communication_from_provider_to_patient",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "CommunicationFromProviderToPatientPrescribedMedicationsEducation"
+    },
+    "CommunicationFromProviderToPatientRiskFactorsEducation": {
+      "title": "Risk Factors Education",
+      "description": "Communication: From Provider to Patient: Risk Factors Education",
+      "standard_category": "communication",
+      "qds_data_type": "communication",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.380",
+      "type": "communications",
+      "definition": "communication_from_provider_to_patient",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "CommunicationFromProviderToPatientRiskFactorsEducation"
+    },
+    "CommunicationFromProviderToPatientWarningSignsAndSymptomsEducation": {
+      "title": "Warning Signs and Symptoms Education",
+      "description": "Communication: From Provider to Patient: Warning Signs and Symptoms Education",
+      "standard_category": "communication",
+      "qds_data_type": "communication",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.381",
+      "type": "communications",
+      "definition": "communication_from_provider_to_patient",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "CommunicationFromProviderToPatientWarningSignsAndSymptomsEducation"
+    },
+    "EncounterPerformedInpatientEncounter": {
+      "title": "Inpatient Encounter",
+      "description": "Encounter, Performed: Inpatient Encounter",
+      "standard_category": "encounter",
+      "qds_data_type": "encounter",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.23",
+      "type": "encounters",
+      "definition": "encounter",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "EncounterPerformedInpatientEncounter"
+    },
+    "DiagnosisActiveIschemicStroke": {
+      "title": "Ischemic Stroke",
+      "description": "Diagnosis, Active: Ischemic Stroke",
+      "standard_category": "diagnosis_condition_problem",
+      "qds_data_type": "diagnosis_active",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.247",
+      "type": "conditions",
+      "definition": "diagnosis",
+      "status": "active",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "DiagnosisActiveIschemicStroke"
+    },
+    "InterventionOrderPalliativeCare": {
+      "title": "Palliative Care",
+      "description": "Intervention, Order: Palliative Care",
+      "standard_category": "procedure",
+      "qds_data_type": "procedure_performed",
+      "code_list_id": "2.16.840.1.113883.3.526.2.1076",
+      "type": "interventions",
+      "definition": "intervention",
+      "status": "ordered",
+      "hard_status": true,
+      "negation": false,
+      "source_data_criteria": "InterventionOrderPalliativeCare"
+    },
+    "InterventionPerformedPalliativeCare": {
+      "title": "Palliative Care",
+      "description": "Intervention, Performed: Palliative Care",
+      "standard_category": "procedure",
+      "qds_data_type": "procedure_performed",
+      "code_list_id": "2.16.840.1.113883.3.526.2.1076",
+      "type": "interventions",
+      "definition": "intervention",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "InterventionPerformedPalliativeCare"
+    },
+    "CommunicationFromProviderToPatientWrittenInformationGiven": {
+      "title": "Written Information Given",
+      "description": "Communication: From Provider to Patient: Written Information Given",
+      "standard_category": "communication",
+      "qds_data_type": "communication",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.415",
+      "type": "communications",
+      "definition": "communication_from_provider_to_patient",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "CommunicationFromProviderToPatientWrittenInformationGiven"
+    },
+    "EncounterPerformedEmergencyDepartmentVisit": {
+      "title": "Emergency Department Visit",
+      "description": "Encounter, Performed: Emergency Department Visit",
+      "standard_category": "encounter",
+      "qds_data_type": "encounter",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.292",
+      "type": "encounters",
+      "definition": "encounter",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "EncounterPerformedEmergencyDepartmentVisit"
+    },
+    "CommunicationFromProviderToPatientNotDonePatientRefusal": {
+      "title": "Patient Refusal",
+      "description": "Communication: From Provider to Patient not done: Patient Refusal",
+      "standard_category": "communication",
+      "qds_data_type": "communication",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.93",
+      "type": "communications",
+      "definition": "communication_from_provider_to_patient",
+      "hard_status": false,
+      "negation": true,
+      "source_data_criteria": "CommunicationFromProviderToPatientNotDonePatientRefusal"
+    },
+    "OccurrenceAInpatientEncounter1": {
+      "title": "Inpatient Encounter",
+      "description": "Encounter, Performed: Inpatient Encounter",
+      "standard_category": "encounter",
+      "qds_data_type": "encounter",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.23",
+      "type": "encounters",
+      "definition": "encounter",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "specific_occurrence": "A",
+      "specific_occurrence_const": "ENCOUNTER_PERFORMED_INPATIENT_ENCOUNTER",
+      "source_data_criteria": "OccurrenceAInpatientEncounter1"
+    },
+    "OccurrenceAEmergencyDepartmentVisit2": {
+      "title": "Emergency Department Visit",
+      "description": "Encounter, Performed: Emergency Department Visit",
+      "standard_category": "encounter",
+      "qds_data_type": "encounter",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.292",
+      "type": "encounters",
+      "definition": "encounter",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "specific_occurrence": "A",
+      "specific_occurrence_const": "ENCOUNTER_PERFORMED_EMERGENCY_DEPARTMENT_VISIT",
+      "source_data_criteria": "OccurrenceAEmergencyDepartmentVisit2"
+    }
+  },
+  "attributes": [
+    {
+      "id": "COPYRIGHT",
+      "code": "COPY",
+      "value": "Measure specifications are in the Public Domain\r\n\r\nLOINC(R) is a registered trademark of the Regenstrief Institute.\r\n\r\nThis material contains SNOMED Clinical Terms (R) (SNOMED CT(c) ) copyright 2004-–2010 International Health Terminology Standards Development Organization. All rights reserved.",
+      "name": "Copyright"
+    },
+    {
+      "id": "MEASURE_SCORING",
+      "code": "MSRSCORE",
+      "name": "Measure Scoring"
+    },
+    {
+      "id": "MEASURE_TYPE",
+      "code": "MSRTYPE",
+      "name": "Measure Type"
+    },
+    {
+      "id": "STRATIFICATION",
+      "code": "STRAT",
+      "value": "None",
+      "name": "Stratification"
+    },
+    {
+      "id": "RISK_ADJUSTMENT",
+      "code": "MSRADJ",
+      "value": "None",
+      "name": "Risk Adjustment"
+    },
+    {
+      "id": "RATE_AGGREGATION",
+      "code": "MSRAGG",
+      "value": "None",
+      "name": "Rate Aggregation"
+    },
+    {
+      "id": "RATIONALE",
+      "code": "RAT",
+      "value": "There are many examples of how patient education programs for specific chronic conditions have increased healthful behaviors, improved health status, and/or decreased health care costs of their participants. Clinical practice guidelines include recommendations for patient and family education during hospitalization as well as information about resources for social support services. Some clinical trials have shown measurable benefits in patient and caregiver outcomes with the application of education and support strategies. The type of stroke experienced and the resulting outcomes will play a large role in determining not only the course of treatment but also what education will be required. Patient education should include information about the event (e.g., cause, treatment, and risk factors), the role of various medications or strategies, as well as desirable lifestyle modifications to reduce risk or improve outcomes. Family/caregivers will also need guidance in planning effective and realistic care strategies appropriate to the patient’s prognosis and potential for rehabilitation.",
+      "name": "Rationale"
+    },
+    {
+      "id": "CLINICAL_RECOMMENDATION_STATEMENT",
+      "code": "CRS",
+      "value": "Some clinical trials have shown measurable benefits in patient and caregiver outcomes with the application of education and support strategies. Patient education should include information about the event (e.g., cause, treatment, and risk factors), the role of various medications or strategies, as well as desirable lifestyle modifications to reduce risk or improve outcomes. Family/caregivers will also need guidance in planning effective and realistic care strategies appropriate to the patient’s prognosis and potential for rehabilitation.",
+      "name": "Clinical Recommendation Statement"
+    },
+    {
+      "id": "IMPROVEMENT_NOTATION",
+      "code": "IDUR",
+      "value": "An increase in rate",
+      "name": "Improvement Notation"
+    },
+    {
+      "id": "NQF_ID_NUMBER",
+      "code": "OTH",
+      "value": "0440",
+      "name": "NQF ID Number"
+    },
+    {
+      "id": "DISCLAIMER",
+      "code": "DISC",
+      "value": "None",
+      "name": "Disclaimer"
+    },
+    {
+      "id": "EMEASURE_IDENTIFIER",
+      "code": "OTH",
+      "value": "107",
+      "name": "eMeasure Identifier"
+    },
+    {
+      "id": "REFERENCE",
+      "code": "REF",
+      "value": "Post Stroke Rehabilitation, Clinical Practice Guideline No.16, Agency for Health Care Policy and Research (now known as Agency for Healthcare Research and Quality), 1995.",
+      "name": "Reference"
+    },
+    {
+      "id": "DEFINITION",
+      "code": "DEF",
+      "value": "None",
+      "name": "Definition"
+    },
+    {
+      "id": "GUIDANCE",
+      "code": "GUIDE",
+      "value": "The unit of measurement for this measure is an inpatient episode of care. Each distinct hospitalization should be reported, regardless of whether the same patient is admitted for inpatient care more than once during the measurement period. In addition, the eMeasure logic intends to represent events within or surrounding a single occurrence of an inpatient hospitalization.\r\n\r\nThe facility location arrival datetime and facility location departure datetime are coupled with the emergency department visit value set. They intend to represent arrival date/time at the emergency department and the discharge date/time from the emergency department, respectively.\r\n\r\nWritten information given to the patient is required to address each and every one of the educational components. These components are modeled in in the population criteria and data criteria as communication from provider to patient :activation of emergency medical system, follow-up after discharge, medications prescribed at discharge, risk factors and signs and symptoms, and are intended to be specific to stroke.",
+      "name": "Guidance"
+    },
+    {
+      "id": "TRANSMISSION_FORMAT",
+      "code": "OTH",
+      "value": "None",
+      "name": "Transmission Format"
+    },
+    {
+      "id": "INITIAL_PATIENT_POPULATION",
+      "code": "IPP",
+      "value": "Ischemic stroke or hemorrhagic stroke patients discharged home.",
+      "name": "Initial Patient Population"
+    },
+    {
+      "id": "DENOMINATOR",
+      "code": "DENOM",
+      "value": "Ischemic stroke or hemorrhagic stroke patients discharged home.",
+      "name": "Denominator"
+    },
+    {
+      "id": "DENOMINATOR_EXCLUSIONS",
+      "code": "OTH",
+      "value": "Patients less than 18 years of age\r\nPatients who have a length of stay greater than 120 days\r\nPatients with comfort measures only documented\r\nPatients admitted for elective carotid intervention",
+      "name": "Denominator Exclusions"
+    },
+    {
+      "id": "NUMERATOR",
+      "code": "NUMER",
+      "value": "Ischemic or hemorrhagic stroke patients with documentation that they or their caregivers were given educational material addressing all of the following:\r\n1. Activation of emergency medical system \r\n2. Follow-up after discharge\r\n3. Medications prescribed at discharge\r\n4. Risk factors for stroke\r\n5. Warning signs and symptoms of stroke.",
+      "name": "Numerator"
+    },
+    {
+      "id": "NUMERATOR_EXCLUSIONS",
+      "code": "OTH",
+      "value": "Not Applicable",
+      "name": "Numerator Exclusions"
+    },
+    {
+      "id": "DENOMINATOR_EXCEPTIONS",
+      "code": "DENEXCEP",
+      "value": "None",
+      "name": "Denominator Exceptions"
+    },
+    {
+      "id": "MEASURE_POPULATION",
+      "code": "MSRPOPL",
+      "value": "Not Applicable",
+      "name": "Measure Population"
+    },
+    {
+      "id": "MEASURE_OBSERVATIONS",
+      "code": "OTH",
+      "value": "Not Applicable",
+      "name": "Measure Observations"
+    },
+    {
+      "id": "SUPPLEMENTAL_DATA_ELEMENTS",
+      "code": "OTH",
+      "value": "For every patient evaluated by this measure also identify payer, race, ethnicity and sex.",
+      "name": "Supplemental Data Elements"
+    }
+  ],
+  "populations": [
+    {
+      "IPP": "IPP",
+      "DENOM": "DENOM",
+      "NUMER": "NUMER",
+      "DENEX": "DENEX"
+    }
+  ],
+  "measure_period": {
+    "type": "IVL_TS",
+    "low": {
+      "type": "TS",
+      "value": "201201010000",
+      "inclusive?": true,
+      "derived?": false
+    },
+    "high": {
+      "type": "TS",
+      "value": "201212312359",
+      "inclusive?": true,
+      "derived?": false
+    },
+    "width": {
+      "type": "PQ",
+      "unit": "a",
+      "value": "1",
+      "inclusive?": true,
+      "derived?": false
+    }
+  }
+}

@@ -1,0 +1,579 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:n1="urn:hl7-org:v3">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   
+      <title>Anticoagulation Therapy for Atrial Fibrillation/Flutter</title><style type="text/css">
+body {
+	color: rgb(26, 26, 26);
+	background-color: rgb(255,255,255);
+	font-family: Verdana, Tahoma, sans-serif;
+	font-size: 11px;
+}
+
+a {
+	color: rgb(0, 0, 255);
+	background-color: rgb(255,255,255);
+}
+
+h1 {
+	font-size: 12pt;
+	font-weight: bold;
+}
+
+h2 {
+	font-size: 11pt;
+	font-weight: bold;
+}
+
+h3 {
+	font-size: 10pt;
+	font-weight: bold;
+}
+
+h4 {
+	font-size: 8pt;
+	font-weight: bold;
+}
+
+div {
+	width: 80%;
+}
+
+table {
+	line-height: 10pt;
+	width: 80%;
+}
+
+tr {
+	background-color: rgb(224,224,224);
+}
+
+td {
+	padding: 0.1cm 0.2cm;
+	vertical-align: top;
+}
+
+.h1center {
+	font-size: 12pt;
+	font-weight: bold;
+	text-align: center;
+	width: 80%;
+}
+
+.header_table{
+	border: 1pt inset rgb(0,0,0);
+}
+
+.narr_table {
+	width: 100%;
+}
+
+.narr_tr {
+	background-color: rgb(225,225,225);
+}
+pre {
+ overflow: auto; /* Use horizontal scroller if needed; for Firefox 2, not needed in Firefox 3 */
+ white-space: pre-wrap; /* css-3 */
+ white-space: -moz-pre-wrap !important; /* Mozilla, since 1999 */
+ white-space: -pre-wrap; /* Opera 4-6 */
+ white-space: -o-pre-wrap; /* Opera 7 */
+ word-wrap: break-word; /* Internet Explorer 5.5+ */
+ font-family: Verdana, Tahoma, sans-serif;
+ font-size: 11px;
+ text-align:left;
+ margin: 0px 0px 0px 0px;
+ padding:0px 0px 0px 0px;
+}
+.narr_th {
+	background-color: rgb(201,201,201);
+}
+
+.td_label{
+	font-weight: bold;
+	color: white;
+}
+	</style></head>
+   <body>
+      <table class="header_table">
+         <tbody>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">eMeasure Title</span></td>
+               <td width="80%" colspan="3">Anticoagulation Therapy for Atrial Fibrillation/Flutter</td>
+            </tr>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">eMeasure Identifier<br>(Measure Authoring Tool)</span></td>
+               <td width="30%">71</td>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">eMeasure Version number</span></td>
+               <td width="30%">2</td>
+            </tr>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">NQF Number</span></td>
+               <td width="30%">0436</td>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">GUID</span></td>
+               <td> 03876d69-085b-415c-ae9d-9924171040c2</td>
+            </tr>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">Measurement Period</span></td>
+               <td width="80%" colspan="3">January 1, 20xx  through December 31, 20xx </td>
+            </tr>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">Measure Steward</span></td>
+               <td width="80%" colspan="3">The Joint Commission</td>
+            </tr>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">Measure Developer</span></td>
+               <td width="80%" colspan="3">The Joint Commission</td>
+            </tr>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">Endorsed By</span></td>
+               <td width="80%" colspan="3">National Quality Forum</td>
+            </tr>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">Description</span></td>
+               <td width="80%" colspan="3">
+                  <div style="width:660px;overflow-x:hidden;overflow-y:auto"><pre>Ischemic stroke patients with atrial fibrillation/flutter who are prescribed anticoagulation therapy at hospital discharge.</pre></div>
+               </td>
+            </tr>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">Copyright</span></td>
+               <td width="80%" colspan="3">
+                  <div style="width:660px;overflow-x:hidden;overflow-y:auto"><pre>Measure specifications are in the Public Domain.
+
+LOINC(R) is a registered trademark of the Regenstrief Institute.
+
+This material contains SNOMED Clinical Terms(R) (SNOMED CT(c)) copyright 2004&#8211;2010 International Health Terminology Standards Development Organization. All rights reserved.</pre></div>
+               </td>
+            </tr>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">Disclaimer</span></td>
+               <td width="80%" colspan="3">
+                  <div style="width:660px;overflow-x:hidden;overflow-y:auto"><pre>None</pre></div>
+               </td>
+            </tr>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">Measure Scoring</span></td>
+               <td width="80%" colspan="3">Proportion</td>
+            </tr>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">Measure Type</span></td>
+               <td width="80%" colspan="3">Process</td>
+            </tr>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">Stratification</span></td>
+               <td width="80%" colspan="3">
+                  <div style="width:660px;overflow-x:hidden;overflow-y:auto"><pre>None</pre></div>
+               </td>
+            </tr>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">Risk Adjustment</span></td>
+               <td width="80%" colspan="3">
+                  <div style="width:660px;overflow-x:hidden;overflow-y:auto"><pre>None</pre></div>
+               </td>
+            </tr>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">Rate Aggregation</span></td>
+               <td width="80%" colspan="3">
+                  <div style="width:660px;overflow-x:hidden;overflow-y:auto"><pre>None</pre></div>
+               </td>
+            </tr>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">Rationale</span></td>
+               <td width="80%" colspan="3">
+                  <div style="width:660px;overflow-x:hidden;overflow-y:auto"><pre>Nonvalvular atrial fibrillation (NVAF) is a common arrhythmia and an important risk factor for stroke. It is one of several conditions and lifestyle factors that have been identified as risk factors for stroke. It has been estimated that over 2 million adults in the United States have NVAF. While the median age of patients with atrial fibrillation is 75 years, the incidence increases with advancing age. For example, The Framingham Heart Study noted a dramatic increase in stroke risk associated with atrial fibrillation with advancing age, from 1.5% for those 50 to 59 years of age to 23.5% for those 80 to 89 years of age. Furthermore, a prior stroke or transient ischemic attack (TIA) are among a limited number of predictors of high stroke risk within the population of patients with atrial fibrillation. Therefore, much emphasis has been placed on identifying methods for preventing recurrent ischemic stroke as well as preventing first stroke. Prevention strategies focus on the modifiable risk factors such as hypertension, smoking, and atrial fibrillation. Analysis of five placebo-controlled clinical trials investigating the efficacy of warfarin in the primary prevention of thromboembolic stroke, found the relative risk of thromboembolic stroke was reduced by 68% for atrial fibrillation patients treated with warfarin. The administration of anticoagulation therapy, unless there are contraindications, is an established effective strategy in preventing recurrent stroke in high stroke risk-atrial fibrillation patients with TIA or prior stroke.</pre></div>
+               </td>
+            </tr>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">Clinical Recommendation Statement</span></td>
+               <td width="80%" colspan="3">
+                  <div style="width:660px;overflow-x:hidden;overflow-y:auto"><pre>The administration of anticoagulation therapy, unless there are contraindications, is an established effective strategy in preventing recurrent stroke in high stroke risk atrial fibrillation patients with TIA or prior stroke.</pre></div>
+               </td>
+            </tr>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">Improvement Notation</span></td>
+               <td width="80%" colspan="3">
+                  <div style="width:660px;overflow-x:hidden;overflow-y:auto"><pre>An increase in rate</pre></div>
+               </td>
+            </tr>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">Reference</span></td>
+               <td width="80%" colspan="3">
+                  <div style="width:660px;overflow-x:hidden;overflow-y:auto"><pre>Connolly SJ, Ezekowitz MD, Yusuf S, Eikelboom J, et.al., the RE-LY Steering Committee and Investigators. Dabigatran versus Warfarin in Patients with Atrial Fibrillation. NEJM. 2009;361:1139-1151.</pre></div>
+               </td>
+            </tr>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">Reference</span></td>
+               <td width="80%" colspan="3">
+                  <div style="width:660px;overflow-x:hidden;overflow-y:auto"><pre>Fuster et al., ACC/AHA/ESC Guidelines for the Management of Patients with Atrial Fibrillation, JACC Vol.38, August 2001:1231-6.</pre></div>
+               </td>
+            </tr>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">Reference</span></td>
+               <td width="80%" colspan="3">
+                  <div style="width:660px;overflow-x:hidden;overflow-y:auto"><pre>Goldstein LB, Chair; Adams R; Albert MJ, Appel LJ, Brass LM, Bushnell CD, Culebras A, DeGraba TJ, Gorelick PB, Guyton JR, Hart RG, Howard G, Kelly-Hayes M, Nixon JV, Sacco RL. Primary Prevention of Ischemic Stroke: A Guideline From the American Heart Association/American Stroke Association Stroke Council: Cosponsored by the Atherosclerotic Peripheral Vascular Disease Interdisciplinary Working Group; Cardiovascular Nursing Council; Clinical Cardiology Council; Nutrition, Physical Activity, and Metabolism Council; and the Quality of Care and Outcomes Research Interdisciplinary Working Group: The American Academy of Neurology affirms the value of this guideline. Stroke. 2006; 37:1583.</pre></div>
+               </td>
+            </tr>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">Reference</span></td>
+               <td width="80%" colspan="3">
+                  <div style="width:660px;overflow-x:hidden;overflow-y:auto"><pre>Prevention of a First Stroke: A Review of Guidelines and a Multidisciplinary Consensus Statement from the National Stroke Association. National Stroke Association. JAMA. 1999; 281:1112-1120.</pre></div>
+               </td>
+            </tr>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">Reference</span></td>
+               <td width="80%" colspan="3">
+                  <div style="width:660px;overflow-x:hidden;overflow-y:auto"><pre>Sacco RL, Adams R, Albers G, Alberts MJ, Benavente O, Furie K, Goldstein LB, Gorelick P, Halperin J, Harbaugh R, Johnston SC, Katzan I, Kelly-Hayes M, Kenton EJ, Marks M, Schwamm LH, Tomsick T. Guidelines for Prevention of Stroke in Patients With Ischemic Stroke or Transient Ischemic Attack: A Statement for Healthcare Professionals From the American Heart Association/American Stroke Association Council on Stroke: Co-Sponsored by the Council on Cardiovascular Radiology and Intervention. Stroke. Vol. 37, 2006:577.</pre></div>
+               </td>
+            </tr>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">Reference</span></td>
+               <td width="80%" colspan="3">
+                  <div style="width:660px;overflow-x:hidden;overflow-y:auto"><pre>Wann SL, Curtis AB, Ellenbogen KA, Estes M, Ezekowitz MD, Jackman WM, January CT, Lowe JE, Page RL, Slotwiner DJ, Stevenson WG, Tracy CM: Amercian College of Cardiology Foundation, American Heart Association Task Force on Practice Guidelines. 2011 ACCF/AHA/HRS Focused Update on the Management of Patients with Atrial Fibrillation (Update on Dabigatran). J. Am. Coll. Cardiol. 2011; Vol. 57(11).</pre></div>
+               </td>
+            </tr>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">Definition</span></td>
+               <td width="80%" colspan="3">
+                  <div style="width:660px;overflow-x:hidden;overflow-y:auto"><pre>None</pre></div>
+               </td>
+            </tr>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">Guidance</span></td>
+               <td width="80%" colspan="3">
+                  <div style="width:660px;overflow-x:hidden;overflow-y:auto"><pre>The unit of measurement for this measure is an inpatient episode of care. Each distinct hospitalization should be reported, regardless of whether the same patient is admitted for inpatient care more than once during the measurement period. In addition, the eMeasure logic intends to represent events within or surrounding a single occurrence of an inpatient hospitalization.
+
+The facility location arrival datetime and facility location departure datetime are coupled with the emergency department visit value set. They intend to represent arrival date/time at the emergency department and the discharge date/time from the emergency department, respectively.</pre></div>
+               </td>
+            </tr>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">Transmission Format</span></td>
+               <td width="80%" colspan="3">
+                  <div style="width:660px;overflow-x:hidden;overflow-y:auto"><pre>None</pre></div>
+               </td>
+            </tr>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">Initial Patient Population</span></td>
+               <td width="80%" colspan="3">
+                  <div style="width:660px;overflow-x:hidden;overflow-y:auto"><pre>Patients admitted to the hospital for inpatient acute care with a Principal Diagnosis Code for ischemic or hemorrhagic stroke with hospital stays &lt;= 120 days during the measurement period for patients age 18 and older at the time of hospital admission.</pre></div>
+               </td>
+            </tr>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">Denominator</span></td>
+               <td width="80%" colspan="3">
+                  <div style="width:660px;overflow-x:hidden;overflow-y:auto"><pre>Ischemic stroke patients with documented atrial fibrillation/flutter</pre></div>
+               </td>
+            </tr>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">Denominator Exclusions</span></td>
+               <td width="80%" colspan="3">
+                  <div style="width:660px;overflow-x:hidden;overflow-y:auto"><pre>Patients with comfort measures only documented
+Patients admitted for elective carotid intervention
+Patients discharged to another hospital
+Patients who left against medical advice
+Patients who expired
+Patients discharged to home for hospice care
+Patients discharged to a health care facility for hospice care</pre></div>
+               </td>
+            </tr>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">Numerator</span></td>
+               <td width="80%" colspan="3">
+                  <div style="width:660px;overflow-x:hidden;overflow-y:auto"><pre>Ischemic stroke patients prescribed anticoagulation therapy at hospital discharge</pre></div>
+               </td>
+            </tr>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">Numerator Exclusions</span></td>
+               <td width="80%" colspan="3">
+                  <div style="width:660px;overflow-x:hidden;overflow-y:auto"><pre>Not Applicable</pre></div>
+               </td>
+            </tr>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">Denominator Exceptions</span></td>
+               <td width="80%" colspan="3">
+                  <div style="width:660px;overflow-x:hidden;overflow-y:auto"><pre>Patients with a documented reason for not prescribing anticoagulation therapy</pre></div>
+               </td>
+            </tr>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">Measure Population</span></td>
+               <td width="80%" colspan="3">
+                  <div style="width:660px;overflow-x:hidden;overflow-y:auto"><pre>Not Applicable</pre></div>
+               </td>
+            </tr>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">Measure Observations</span></td>
+               <td width="80%" colspan="3">
+                  <div style="width:660px;overflow-x:hidden;overflow-y:auto"><pre>Not Applicable</pre></div>
+               </td>
+            </tr>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">Supplemental Data Elements</span></td>
+               <td width="80%" colspan="3">
+                  <div style="width:660px;overflow-x:hidden;overflow-y:auto"><pre>For every patient evaluated by this measure also identify payer, race, ethnicity and sex.</pre></div>
+               </td>
+            </tr>
+         </tbody>
+      </table>
+      <h2><a name="toc">Table of Contents</a></h2>
+      <ul>
+         <li><a href="#d3641947e519">Population criteria</a></li>
+         <li><a href="#d3641947e2199">Data criteria (QDM Data Elements)</a></li>
+         <li><a href="#d3641947e2896">Reporting Stratification</a></li>
+         <li><a href="#d3641947e2917">Supplemental Data Elements</a></li>
+      </ul>
+      <hr align="left" color="teal" size="2" width="80%">
+      <h3><a name="d3641947e519" href="#toc">Population criteria</a></h3>
+      <div>
+         
+         <ul>
+            <li>
+               <b>Initial Patient Population =</b>
+               
+               <ul>
+                  <li>AND: "Patient Characteristic Birthdate: birth date"  &gt;= 18 year(s) starts before start of "Occurrence A of Encounter, Performed:
+                     Inpatient Encounter"
+                  </li>
+                  <li>AND: "Occurrence A of Encounter, Performed: Inpatient Encounter (length of stay &lt;= 120 day(s))"</li>
+                  <li>AND: "Occurrence A of Encounter, Performed: Inpatient Encounter (discharge datetime)" during "Measurement Period"</li>
+                  <li>AND: 
+                     <ul>
+                        <li>OR: "Diagnosis, Active: Ischemic Stroke (ordinality: 'Principal Diagnosis')"</li>
+                        <li>OR: "Diagnosis, Active: Hemorrhagic Stroke (ordinality: 'Principal Diagnosis')"</li>
+                        <li> starts during "Occurrence A of Encounter, Performed: Inpatient Encounter"</li>
+                     </ul>
+                     
+                  </li>
+               </ul>
+               
+            </li>
+            <li>
+               <b>Denominator =</b>
+               
+               <ul>
+                  <li>AND: "Initial Patient Population"</li>
+                  <li>AND: "Diagnosis, Active: Ischemic Stroke (ordinality: 'Principal Diagnosis')" starts during "Occurrence A of Encounter, Performed:
+                     Inpatient Encounter"
+                  </li>
+                  <li>AND: 
+                     <ul>
+                        <li>OR: "Procedure, Performed: Atrial Ablation" starts before start of "Occurrence A of Encounter, Performed: Inpatient Encounter"</li>
+                        <li>OR: "Diagnosis, Active: Atrial Fibrillation/Flutter" starts before or during "Occurrence A of Encounter, Performed: Inpatient
+                           Encounter"
+                        </li>
+                        <li>OR: "Diagnosis, Inactive: Atrial Fibrillation/Flutter" starts before start of "Occurrence A of Encounter, Performed: Inpatient
+                           Encounter"
+                        </li>
+                     </ul>
+                     
+                  </li>
+               </ul>
+               
+            </li>
+            <li>
+               <b>Denominator Exclusions =</b>
+               
+               <ul>
+                  <li>AND: 
+                     <ul>
+                        <li>OR: "Occurrence A of Encounter, Performed: Inpatient Encounter (discharge status: 'Patient Expired')"</li>
+                        <li>OR: "Occurrence A of Encounter, Performed: Inpatient Encounter (discharge status: 'Discharge To Another Hospital')"</li>
+                        <li>OR: "Occurrence A of Encounter, Performed: Inpatient Encounter (discharge status: 'Discharged to Health Care Facility for
+                           Hospice Care')"
+                        </li>
+                        <li>OR: "Occurrence A of Encounter, Performed: Inpatient Encounter (discharge status: 'Discharged to Home for Hospice Care')"</li>
+                        <li>OR: "Occurrence A of Encounter, Performed: Inpatient Encounter (reason: 'Carotid Intervention')"</li>
+                        <li>OR: "Occurrence A of Encounter, Performed: Inpatient Encounter (discharge status: 'Left Against Medical Advice')"</li>
+                        <li>OR: 
+                           <ul>
+                              <li>AND: "Occurrence A of Encounter, Performed: Inpatient Encounter (admission datetime)"  &lt;= 1 hour(s) starts after start of
+                                 "Occurrence A of Encounter, Performed: Emergency Department Visit (facility location departure datetime)"
+                              </li>
+                              <li>AND: 
+                                 <ul>
+                                    <li>OR: 
+                                       <ul>
+                                          <li>AND: "Occurrence A of Intervention, Order: Palliative Care" starts after start of "Occurrence A of Encounter, Performed: Emergency
+                                             Department Visit (facility location departure datetime)"
+                                          </li>
+                                          <li>AND: "Occurrence A of Intervention, Order: Palliative Care" starts before or during "Occurrence A of Encounter, Performed:
+                                             Inpatient Encounter"
+                                          </li>
+                                       </ul>
+                                       
+                                    </li>
+                                    <li>OR: 
+                                       <ul>
+                                          <li>AND: "Occurrence A of Intervention, Performed: Palliative Care" starts after start of "Occurrence A of Encounter, Performed:
+                                             Emergency Department Visit (facility location arrival datetime)"
+                                          </li>
+                                          <li>AND: "Occurrence A of Intervention, Performed: Palliative Care" starts before or during "Occurrence A of Encounter, Performed:
+                                             Inpatient Encounter"
+                                          </li>
+                                       </ul>
+                                       
+                                    </li>
+                                 </ul>
+                                 
+                              </li>
+                           </ul>
+                           
+                        </li>
+                        <li>OR: 
+                           <ul>
+                              <li>OR: "Intervention, Performed: Palliative Care"</li>
+                              <li>OR: "Intervention, Order: Palliative Care"</li>
+                              <li> starts during "Occurrence A of Encounter, Performed: Inpatient Encounter"</li>
+                           </ul>
+                           
+                        </li>
+                     </ul>
+                     
+                  </li>
+               </ul>
+               
+            </li>
+            <li>
+               <b>Numerator =</b>
+               
+               <ul>
+                  <li>AND: "Medication, Discharge: Anticoagulant Therapy" during "Occurrence A of Encounter, Performed: Inpatient Encounter"</li>
+               </ul>
+               
+            </li>
+            <li>
+               <b>Denominator Exceptions =</b>
+               
+               <ul>
+                  <li>AND: 
+                     <ul>
+                        <li>OR: "Medication, Allergy: Anticoagulant Therapy" starts before or during "Occurrence A of Encounter, Performed: Inpatient
+                           Encounter"
+                        </li>
+                        <li>OR: 
+                           <ul>
+                              <li>OR: "Medication, Order not done: Medical Reason" for "Anticoagulant Therapy RxNorm Value Set"</li>
+                              <li>OR: "Medication, Order not done: Patient Refusal" for "Anticoagulant Therapy RxNorm Value Set"</li>
+                              <li> during "Occurrence A of Encounter, Performed: Inpatient Encounter"</li>
+                           </ul>
+                           
+                        </li>
+                     </ul>
+                     
+                  </li>
+               </ul>
+               
+            </li>
+         </ul>
+         
+      </div>
+      <h3><a name="d3641947e2199" href="#toc">Data criteria (QDM Data Elements)</a></h3>
+      <div>
+         
+         <ul>
+            <li>
+               "Diagnosis, Active: Atrial Fibrillation/Flutter" using "Atrial Fibrillation/Flutter Grouping Value Set (2.16.840.1.113883.3.117.1.7.1.202)"
+            </li>
+            <li>
+               "Diagnosis, Active: Hemorrhagic Stroke" using "Hemorrhagic Stroke Grouping Value Set (2.16.840.1.113883.3.117.1.7.1.212)"
+            </li>
+            <li>
+               "Diagnosis, Active: Ischemic Stroke" using "Ischemic Stroke Grouping Value Set (2.16.840.1.113883.3.117.1.7.1.247)"
+            </li>
+            <li>
+               "Diagnosis, Inactive: Atrial Fibrillation/Flutter" using "Atrial Fibrillation/Flutter Grouping Value Set (2.16.840.1.113883.3.117.1.7.1.202)"
+            </li>
+            <li>
+               "Encounter, Performed: Emergency Department Visit" using "Emergency Department Visit Grouping Value Set (2.16.840.1.113883.3.117.1.7.1.293)"
+            </li>
+            <li>
+               "Encounter, Performed: Inpatient Encounter" using "Inpatient Encounter SNOMED-CT Value Set (2.16.840.1.113883.3.117.1.7.1.23)"
+            </li>
+            <li>
+               "Intervention, Order: Palliative Care" using "Palliative Care SNOMED-CT Value Set (2.16.840.1.113883.3.526.2.1076)"
+            </li>
+            <li>
+               "Intervention, Performed: Palliative Care" using "Palliative Care SNOMED-CT Value Set (2.16.840.1.113883.3.526.2.1076)"
+            </li>
+            <li>
+               "Medication, Allergy: Anticoagulant Therapy" using "Anticoagulant Therapy RxNorm Value Set (2.16.840.1.113883.3.117.1.7.1.200)"
+            </li>
+            <li>
+               "Medication, Discharge: Anticoagulant Therapy" using "Anticoagulant Therapy RxNorm Value Set (2.16.840.1.113883.3.117.1.7.1.200)"
+            </li>
+            <li>
+               "Medication, Order: Anticoagulant Therapy" using "Anticoagulant Therapy RxNorm Value Set (2.16.840.1.113883.3.117.1.7.1.200)"
+            </li>
+            <li>
+               "Medication, Order not done: Medical Reason" using "Medical Reason SNOMED-CT Value Set (2.16.840.1.113883.3.117.1.7.1.473)"
+            </li>
+            <li>
+               "Medication, Order not done: Patient Refusal" using "Patient Refusal SNOMED-CT Value Set (2.16.840.1.113883.3.117.1.7.1.93)"
+            </li>
+            <li>
+               "Patient Characteristic Birthdate: birth date" using "birth date LOINC Value Set (2.16.840.1.113883.3.560.100.4)"
+            </li>
+            <li>
+               "Procedure, Performed: Atrial Ablation" using "Atrial Ablation Grouping Value Set (2.16.840.1.113883.3.117.1.7.1.203)"
+            </li>
+            <li>
+               Attribute: "Ordinality: Principal Diagnosis" using "Principal Diagnosis SNOMED-CT Value Set  (2.16.840.1.113883.3.117.2.7.1.14)"
+            </li>
+            <li>
+               Attribute: "Discharge status: Patient Expired" using "Patient Expired SNOMED-CT Value Set  (2.16.840.1.113883.3.117.1.7.1.309)"
+            </li>
+            <li>
+               Attribute: "Discharge status: Discharge To Another Hospital" using "Discharge To Another Hospital SNOMED-CT Value Set  (2.16.840.1.113883.3.117.1.7.1.87)"
+            </li>
+            <li>
+               Attribute: "Discharge status: Discharged to Health Care Facility for Hospice Care" using "Discharged to Health Care Facility for Hospice Care SNOMED-CT Value Set  (2.16.840.1.113883.3.117.1.7.1.207)"
+            </li>
+            <li>
+               Attribute: "Discharge status: Discharged to Home for Hospice Care" using "Discharged to Home for Hospice Care SNOMED-CT Value Set  (2.16.840.1.113883.3.117.1.7.1.209)"
+            </li>
+            <li>
+               Attribute: "Reason: Carotid Intervention" using "Carotid Intervention Grouping Value Set  (2.16.840.1.113883.3.117.1.7.1.204)"
+            </li>
+            <li>
+               Attribute: "Discharge status: Left Against Medical Advice" using "Left Against Medical Advice SNOMED-CT Value Set  (2.16.840.1.113883.3.117.1.7.1.308)"
+            </li>
+         </ul>
+         
+      </div>
+      <h3><a name="d3641947e2896" href="#toc">Reporting Stratification</a></h3>
+      <div>
+         
+         <ul>
+            <li>None</li>
+         </ul>
+         
+      </div>
+      <h3><a name="d3641947e2917" href="#toc">Supplemental Data Elements</a></h3>
+      <div>
+         
+         <ul>
+            <li>
+               "Patient Characteristic Ethnicity: Ethnicity" using "Ethnicity CDC Value Set (2.16.840.1.114222.4.11.837)"
+            </li>
+            <li>
+               "Patient Characteristic Payer: Payer" using "Payer Source of Payment Typology Value Set (2.16.840.1.114222.4.11.3591)"
+            </li>
+            <li>
+               "Patient Characteristic Race: Race" using "Race CDC Value Set (2.16.840.1.114222.4.11.836)"
+            </li>
+            <li>
+               "Patient Characteristic Sex: ONC Administrative Sex" using "ONC Administrative Sex Administrative Sex Value Set (2.16.840.1.113762.1.4.1)"
+            </li>
+         </ul>
+         
+      </div><br><hr align="left" color="teal" size="2" width="80%"><br><table class="header_table">
+         <tbody>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">Measure Set</span></td>
+               <td colspan="3" width="80%">
+                  <div style="width:660px;overflow-x:hidden;overflow-y:auto;word-wrap:break-word">eMeasure Stroke (eSTK)</div>
+               </td>
+            </tr>
+         </tbody>
+      </table>
+   </body>
+</html>

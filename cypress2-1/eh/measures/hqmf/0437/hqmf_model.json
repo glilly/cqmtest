@@ -1,0 +1,1598 @@
+{
+  "id": "0437",
+  "hqmf_id": "8A4D92B2-3887-5DF3-0139-0C0D3D783133",
+  "hqmf_set_id": "2838875A-07B5-4BF0-BE04-C3EB99F53975",
+  "hqmf_version_number": 2,
+  "title": "Thrombolytic Therapy",
+  "description": "Acute ischemic stroke patients who arrive at this hospital within 2 hours of time last known well and for whom IV t-PA was initiated at this hospital within 3 hours of time last known well.",
+  "cms_id": "CMS91v2",
+  "population_criteria": {
+    "DENEX": {
+      "conjunction?": true,
+      "type": "DENEX",
+      "title": "Denominator",
+      "hqmf_id": "72A0671C-4962-4D0B-A637-8574F8B6DF55",
+      "preconditions": [
+        {
+          "id": 41,
+          "preconditions": [
+            {
+              "id": 39,
+              "preconditions": [
+                {
+                  "id": 5,
+                  "reference": "OccurrenceAInpatientEncounter1_precondition_5"
+                },
+                {
+                  "id": 12,
+                  "reference": "RiskCategoryAssessmentNationalInstituteOfHealthStrokeScale_precondition_12"
+                },
+                {
+                  "id": 15,
+                  "reference": "MedicationAdministeredThrombolyticTPaTherapy_precondition_15"
+                },
+                {
+                  "id": 25,
+                  "preconditions": [
+                    {
+                      "id": 17,
+                      "reference": "MedicationOrderThrombolyticTPaTherapy_precondition_17"
+                    },
+                    {
+                      "id": 19,
+                      "reference": "MedicationOrderThrombolyticTPaTherapy_precondition_19"
+                    },
+                    {
+                      "id": 21,
+                      "reference": "MedicationAdministeredThrombolyticTPaTherapy_precondition_21"
+                    },
+                    {
+                      "id": 23,
+                      "reference": "MedicationAdministeredThrombolyticTPaTherapy_precondition_23"
+                    }
+                  ],
+                  "conjunction_code": "atLeastOneTrue"
+                },
+                {
+                  "id": 36,
+                  "preconditions": [
+                    {
+                      "id": 28,
+                      "reference": "MedicationOrderThrombolyticTPaTherapy_precondition_28"
+                    },
+                    {
+                      "id": 30,
+                      "reference": "MedicationOrderThrombolyticTPaTherapy_precondition_30"
+                    },
+                    {
+                      "id": 32,
+                      "reference": "MedicationAdministeredThrombolyticTPaTherapy_precondition_32"
+                    },
+                    {
+                      "id": 34,
+                      "reference": "MedicationAdministeredThrombolyticTPaTherapy_precondition_34"
+                    }
+                  ],
+                  "conjunction_code": "atLeastOneTrue"
+                }
+              ],
+              "conjunction_code": "atLeastOneTrue"
+            }
+          ],
+          "conjunction_code": "allTrue"
+        }
+      ]
+    },
+    "NUMER": {
+      "conjunction?": true,
+      "type": "NUMER",
+      "title": "Numerator",
+      "hqmf_id": "F0A76D91-4195-4F8E-896C-EE84F0603F04",
+      "preconditions": [
+        {
+          "id": 50,
+          "preconditions": [
+            {
+              "id": 48,
+              "preconditions": [
+                {
+                  "id": 43,
+                  "reference": "MedicationAdministeredThrombolyticTPaTherapy_precondition_43"
+                },
+                {
+                  "id": 46,
+                  "reference": "MedicationAdministeredThrombolyticTPaTherapy_precondition_46"
+                }
+              ],
+              "conjunction_code": "atLeastOneTrue"
+            }
+          ],
+          "conjunction_code": "allTrue"
+        }
+      ]
+    },
+    "DENOM": {
+      "conjunction?": true,
+      "type": "DENOM",
+      "title": "Denominator",
+      "hqmf_id": "E3F49E12-5DFF-4C63-8F31-6F47018F6024",
+      "preconditions": [
+        {
+          "id": 62,
+          "preconditions": [
+            {
+              "id": 51,
+              "reference": "DiagnosisActiveIschemicStroke_precondition_51"
+            },
+            {
+              "id": 53,
+              "reference": "OccurrenceAInpatientEncounter1_precondition_53"
+            },
+            {
+              "id": 59,
+              "preconditions": [
+                {
+                  "id": 55,
+                  "reference": "OccurrenceANeurologicSymptomsOfStroke4_precondition_55"
+                },
+                {
+                  "id": 57,
+                  "reference": "OccurrenceABaselineState3_precondition_57"
+                }
+              ],
+              "conjunction_code": "atLeastOneTrue"
+            }
+          ],
+          "conjunction_code": "allTrue"
+        }
+      ]
+    },
+    "IPP": {
+      "conjunction?": true,
+      "type": "IPP",
+      "title": "Initial Patient Population",
+      "hqmf_id": "FDAB7089-C524-47BD-B90F-CA864C405CC7",
+      "preconditions": [
+        {
+          "id": 76,
+          "preconditions": [
+            {
+              "id": 63,
+              "reference": "PatientCharacteristicBirthdateBirthDate_precondition_63"
+            },
+            {
+              "id": 65,
+              "reference": "OccurrenceAInpatientEncounter1_precondition_65"
+            },
+            {
+              "id": 67,
+              "reference": "OccurrenceAInpatientEncounter1_precondition_67"
+            },
+            {
+              "id": 73,
+              "preconditions": [
+                {
+                  "id": 69,
+                  "reference": "DiagnosisActiveIschemicStroke_precondition_69"
+                },
+                {
+                  "id": 71,
+                  "reference": "DiagnosisActiveHemorrhagicStroke_precondition_71"
+                }
+              ],
+              "conjunction_code": "atLeastOneTrue"
+            }
+          ],
+          "conjunction_code": "allTrue"
+        }
+      ]
+    }
+  },
+  "data_criteria": {
+    "EncounterPerformedEmergencyDepartmentVisit": {
+      "title": "Emergency Department Visit",
+      "description": "Encounter, Performed: Emergency Department Visit",
+      "standard_category": "encounter",
+      "qds_data_type": "encounter",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.293",
+      "type": "encounters",
+      "definition": "encounter",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "EncounterPerformedEmergencyDepartmentVisit"
+    },
+    "EncounterPerformedInpatientEncounter": {
+      "title": "Inpatient Encounter",
+      "description": "Encounter, Performed: Inpatient Encounter",
+      "standard_category": "encounter",
+      "qds_data_type": "encounter",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.23",
+      "type": "encounters",
+      "definition": "encounter",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "EncounterPerformedInpatientEncounter"
+    },
+    "SymptomActiveNeurologicSymptomsOfStroke": {
+      "title": "Neurologic Symptoms of Stroke",
+      "description": "Symptom, Active: Neurologic Symptoms of Stroke",
+      "standard_category": "symptom",
+      "qds_data_type": "symptom",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.399",
+      "type": "symptoms",
+      "definition": "symptom",
+      "status": "active",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "SymptomActiveNeurologicSymptomsOfStroke"
+    },
+    "SymptomActiveBaselineState": {
+      "title": "Baseline State",
+      "description": "Symptom, Active: Baseline State",
+      "standard_category": "symptom",
+      "qds_data_type": "symptom",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.417",
+      "type": "symptoms",
+      "definition": "symptom",
+      "status": "active",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "SymptomActiveBaselineState"
+    },
+    "MedicationOrderNotDoneMedicalReason": {
+      "title": "Medical Reason",
+      "description": "Medication, Order not done: Medical Reason",
+      "standard_category": "medication",
+      "qds_data_type": "medication_order",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.473",
+      "type": "medications",
+      "definition": "medication",
+      "status": "ordered",
+      "hard_status": true,
+      "negation": true,
+      "source_data_criteria": "MedicationOrderNotDoneMedicalReason"
+    },
+    "MedicationOrderNotDonePatientRefusal": {
+      "title": "Patient Refusal",
+      "description": "Medication, Order not done: Patient Refusal",
+      "standard_category": "medication",
+      "qds_data_type": "medication_order",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.93",
+      "type": "medications",
+      "definition": "medication",
+      "status": "ordered",
+      "hard_status": true,
+      "negation": true,
+      "source_data_criteria": "MedicationOrderNotDonePatientRefusal"
+    },
+    "MedicationAdministeredNotDoneMedicalReason": {
+      "title": "Medical Reason",
+      "description": "Medication, Administered not done: Medical Reason",
+      "standard_category": "medication",
+      "qds_data_type": "medication_administered",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.473",
+      "type": "medications",
+      "definition": "medication",
+      "status": "administered",
+      "hard_status": true,
+      "negation": true,
+      "source_data_criteria": "MedicationAdministeredNotDoneMedicalReason"
+    },
+    "MedicationAdministeredNotDonePatientRefusal": {
+      "title": "Patient Refusal",
+      "description": "Medication, Administered not done: Patient Refusal",
+      "standard_category": "medication",
+      "qds_data_type": "medication_administered",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.93",
+      "type": "medications",
+      "definition": "medication",
+      "status": "administered",
+      "hard_status": true,
+      "negation": true,
+      "source_data_criteria": "MedicationAdministeredNotDonePatientRefusal"
+    },
+    "OccurrenceAInpatientEncounter1": {
+      "title": "Inpatient Encounter",
+      "description": "Encounter, Performed: Inpatient Encounter",
+      "standard_category": "encounter",
+      "qds_data_type": "encounter",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.23",
+      "type": "encounters",
+      "definition": "encounter",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "specific_occurrence": "A",
+      "specific_occurrence_const": "ENCOUNTER_PERFORMED_INPATIENT_ENCOUNTER",
+      "source_data_criteria": "OccurrenceAInpatientEncounter1"
+    },
+    "OccurrenceAEmergencyDepartmentVisit2": {
+      "title": "Emergency Department Visit",
+      "description": "Encounter, Performed: Emergency Department Visit",
+      "standard_category": "encounter",
+      "qds_data_type": "encounter",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.293",
+      "type": "encounters",
+      "definition": "encounter",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "specific_occurrence": "A",
+      "specific_occurrence_const": "ENCOUNTER_PERFORMED_EMERGENCY_DEPARTMENT_VISIT",
+      "source_data_criteria": "OccurrenceAEmergencyDepartmentVisit2"
+    },
+    "OccurrenceAInpatientEncounter1_precondition_5": {
+      "title": "Inpatient Encounter",
+      "description": "Encounter, Performed: Inpatient Encounter",
+      "standard_category": "encounter",
+      "qds_data_type": "encounter",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.23",
+      "type": "encounters",
+      "definition": "encounter",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "specific_occurrence": "A",
+      "specific_occurrence_const": "ENCOUNTER_PERFORMED_INPATIENT_ENCOUNTER",
+      "source_data_criteria": "OccurrenceAInpatientEncounter1",
+      "field_values": {
+        "REASON": {
+          "type": "CD",
+          "code_list_id": "2.16.840.1.113883.3.117.1.7.1.204",
+          "title": "Carotid Intervention"
+        }
+      }
+    },
+    "OccurrenceANeurologicSymptomsOfStroke4_precondition_7": {
+      "title": "Neurologic Symptoms of Stroke",
+      "description": "Symptom, Active: Neurologic Symptoms of Stroke",
+      "standard_category": "symptom",
+      "qds_data_type": "symptom",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.399",
+      "type": "symptoms",
+      "definition": "symptom",
+      "status": "active",
+      "hard_status": false,
+      "negation": false,
+      "specific_occurrence": "A",
+      "specific_occurrence_const": "SYMPTOM_ACTIVE_NEUROLOGIC_SYMPTOMS_OF_STROKE",
+      "source_data_criteria": "OccurrenceANeurologicSymptomsOfStroke4",
+      "field_values": {
+        "START_DATETIME": {
+          "type": "ANYNonNull"
+        }
+      }
+    },
+    "OccurrenceABaselineState3_precondition_9": {
+      "title": "Baseline State",
+      "description": "Symptom, Active: Baseline State",
+      "standard_category": "symptom",
+      "qds_data_type": "symptom",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.417",
+      "type": "symptoms",
+      "definition": "symptom",
+      "status": "active",
+      "hard_status": false,
+      "negation": false,
+      "specific_occurrence": "A",
+      "specific_occurrence_const": "SYMPTOM_ACTIVE_BASELINE_STATE",
+      "source_data_criteria": "OccurrenceABaselineState3",
+      "field_values": {
+        "STOP_DATETIME": {
+          "type": "ANYNonNull"
+        }
+      }
+    },
+    "RiskCategoryAssessmentNationalInstituteOfHealthStrokeScale_precondition_12": {
+      "title": "National Institute of Health Stroke Scale",
+      "description": "Risk Category Assessment: National Institute of Health Stroke Scale",
+      "standard_category": "risk_category_assessment",
+      "qds_data_type": "risk_category_assessment",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.269",
+      "type": "risk_category_assessments",
+      "definition": "risk_category_assessment",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "RiskCategoryAssessmentNationalInstituteOfHealthStrokeScale",
+      "value": {
+        "type": "PQ",
+        "value": "0",
+        "inclusive?": true,
+        "derived?": false
+      },
+      "temporal_references": [
+        {
+          "type": "SAS",
+          "reference": "GROUP_SAS_CHILDREN_78",
+          "range": {
+            "type": "IVL_PQ",
+            "high": {
+              "type": "PQ",
+              "unit": "min",
+              "value": "180",
+              "inclusive?": true,
+              "derived?": false
+            }
+          }
+        }
+      ]
+    },
+    "GROUP_SAS_CHILDREN_78": {
+      "title": "GROUP_SAS_CHILDREN_78",
+      "description": "",
+      "standard_category": "",
+      "qds_data_type": "",
+      "children_criteria": [
+        "OccurrenceANeurologicSymptomsOfStroke4_precondition_7",
+        "OccurrenceABaselineState3_precondition_9"
+      ],
+      "derivation_operator": "UNION",
+      "type": "derived",
+      "definition": "derived",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "GROUP_SAS_CHILDREN_78"
+    },
+    "OccurrenceAEmergencyDepartmentVisit2_precondition_14": {
+      "title": "Emergency Department Visit",
+      "description": "Encounter, Performed: Emergency Department Visit",
+      "standard_category": "encounter",
+      "qds_data_type": "encounter",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.293",
+      "type": "encounters",
+      "definition": "encounter",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "specific_occurrence": "A",
+      "specific_occurrence_const": "ENCOUNTER_PERFORMED_EMERGENCY_DEPARTMENT_VISIT",
+      "source_data_criteria": "OccurrenceAEmergencyDepartmentVisit2",
+      "field_values": {
+        "FACILITY_LOCATION_ARRIVAL_DATETIME": null
+      }
+    },
+    "MedicationAdministeredThrombolyticTPaTherapy_precondition_15": {
+      "title": "Thrombolytic (t-PA) Therapy",
+      "description": "Medication, Administered: Thrombolytic (t-PA) Therapy",
+      "standard_category": "medication",
+      "qds_data_type": "medication_administered",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.226",
+      "type": "medications",
+      "definition": "medication",
+      "status": "administered",
+      "hard_status": true,
+      "negation": false,
+      "source_data_criteria": "MedicationAdministeredThrombolyticTPaTherapy",
+      "temporal_references": [
+        {
+          "type": "SBS",
+          "reference": "OccurrenceAEmergencyDepartmentVisit2_precondition_14",
+          "range": {
+            "type": "IVL_PQ",
+            "high": {
+              "type": "PQ",
+              "unit": "d",
+              "value": "2",
+              "inclusive?": true,
+              "derived?": false
+            }
+          }
+        }
+      ]
+    },
+    "OccurrenceABaselineState3_precondition_26": {
+      "title": "Baseline State",
+      "description": "Symptom, Active: Baseline State",
+      "standard_category": "symptom",
+      "qds_data_type": "symptom",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.417",
+      "type": "symptoms",
+      "definition": "symptom",
+      "status": "active",
+      "hard_status": false,
+      "negation": false,
+      "specific_occurrence": "A",
+      "specific_occurrence_const": "SYMPTOM_ACTIVE_BASELINE_STATE",
+      "source_data_criteria": "OccurrenceABaselineState3",
+      "field_values": {
+        "STOP_DATETIME": {
+          "type": "ANYNonNull"
+        }
+      }
+    },
+    "MedicationOrderThrombolyticTPaTherapy_precondition_17": {
+      "title": "Thrombolytic (t-PA) Therapy",
+      "description": "Medication, Order: Thrombolytic (t-PA) Therapy",
+      "standard_category": "medication",
+      "qds_data_type": "medication_order",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.226",
+      "type": "medications",
+      "definition": "medication",
+      "status": "ordered",
+      "hard_status": true,
+      "negation": true,
+      "negation_code_list_id": "2.16.840.1.113883.3.117.1.7.1.473",
+      "source_data_criteria": "MedicationOrderThrombolyticTPaTherapy",
+      "temporal_references": [
+        {
+          "type": "SAS",
+          "reference": "OccurrenceABaselineState3_precondition_26",
+          "range": {
+            "type": "IVL_PQ",
+            "high": {
+              "type": "PQ",
+              "unit": "min",
+              "value": "180",
+              "inclusive?": true,
+              "derived?": false
+            }
+          }
+        }
+      ]
+    },
+    "MedicationOrderThrombolyticTPaTherapy_precondition_19": {
+      "title": "Thrombolytic (t-PA) Therapy",
+      "description": "Medication, Order: Thrombolytic (t-PA) Therapy",
+      "standard_category": "medication",
+      "qds_data_type": "medication_order",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.226",
+      "type": "medications",
+      "definition": "medication",
+      "status": "ordered",
+      "hard_status": true,
+      "negation": true,
+      "negation_code_list_id": "2.16.840.1.113883.3.117.1.7.1.93",
+      "source_data_criteria": "MedicationOrderThrombolyticTPaTherapy",
+      "temporal_references": [
+        {
+          "type": "SAS",
+          "reference": "OccurrenceABaselineState3_precondition_26",
+          "range": {
+            "type": "IVL_PQ",
+            "high": {
+              "type": "PQ",
+              "unit": "min",
+              "value": "180",
+              "inclusive?": true,
+              "derived?": false
+            }
+          }
+        }
+      ]
+    },
+    "MedicationAdministeredThrombolyticTPaTherapy_precondition_21": {
+      "title": "Thrombolytic (t-PA) Therapy",
+      "description": "Medication, Administered: Thrombolytic (t-PA) Therapy",
+      "standard_category": "medication",
+      "qds_data_type": "medication_administered",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.226",
+      "type": "medications",
+      "definition": "medication",
+      "status": "administered",
+      "hard_status": true,
+      "negation": true,
+      "negation_code_list_id": "2.16.840.1.113883.3.117.1.7.1.473",
+      "source_data_criteria": "MedicationAdministeredThrombolyticTPaTherapy",
+      "temporal_references": [
+        {
+          "type": "SAS",
+          "reference": "OccurrenceABaselineState3_precondition_26",
+          "range": {
+            "type": "IVL_PQ",
+            "high": {
+              "type": "PQ",
+              "unit": "min",
+              "value": "180",
+              "inclusive?": true,
+              "derived?": false
+            }
+          }
+        }
+      ]
+    },
+    "MedicationAdministeredThrombolyticTPaTherapy_precondition_23": {
+      "title": "Thrombolytic (t-PA) Therapy",
+      "description": "Medication, Administered: Thrombolytic (t-PA) Therapy",
+      "standard_category": "medication",
+      "qds_data_type": "medication_administered",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.226",
+      "type": "medications",
+      "definition": "medication",
+      "status": "administered",
+      "hard_status": true,
+      "negation": true,
+      "negation_code_list_id": "2.16.840.1.113883.3.117.1.7.1.93",
+      "source_data_criteria": "MedicationAdministeredThrombolyticTPaTherapy",
+      "temporal_references": [
+        {
+          "type": "SAS",
+          "reference": "OccurrenceABaselineState3_precondition_26",
+          "range": {
+            "type": "IVL_PQ",
+            "high": {
+              "type": "PQ",
+              "unit": "min",
+              "value": "180",
+              "inclusive?": true,
+              "derived?": false
+            }
+          }
+        }
+      ]
+    },
+    "OccurrenceANeurologicSymptomsOfStroke4_precondition_37": {
+      "title": "Neurologic Symptoms of Stroke",
+      "description": "Symptom, Active: Neurologic Symptoms of Stroke",
+      "standard_category": "symptom",
+      "qds_data_type": "symptom",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.399",
+      "type": "symptoms",
+      "definition": "symptom",
+      "status": "active",
+      "hard_status": false,
+      "negation": false,
+      "specific_occurrence": "A",
+      "specific_occurrence_const": "SYMPTOM_ACTIVE_NEUROLOGIC_SYMPTOMS_OF_STROKE",
+      "source_data_criteria": "OccurrenceANeurologicSymptomsOfStroke4",
+      "field_values": {
+        "START_DATETIME": {
+          "type": "ANYNonNull"
+        }
+      }
+    },
+    "MedicationOrderThrombolyticTPaTherapy_precondition_28": {
+      "title": "Thrombolytic (t-PA) Therapy",
+      "description": "Medication, Order: Thrombolytic (t-PA) Therapy",
+      "standard_category": "medication",
+      "qds_data_type": "medication_order",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.226",
+      "type": "medications",
+      "definition": "medication",
+      "status": "ordered",
+      "hard_status": true,
+      "negation": true,
+      "negation_code_list_id": "2.16.840.1.113883.3.117.1.7.1.473",
+      "source_data_criteria": "MedicationOrderThrombolyticTPaTherapy",
+      "temporal_references": [
+        {
+          "type": "SAS",
+          "reference": "OccurrenceANeurologicSymptomsOfStroke4_precondition_37",
+          "range": {
+            "type": "IVL_PQ",
+            "high": {
+              "type": "PQ",
+              "unit": "min",
+              "value": "180",
+              "inclusive?": true,
+              "derived?": false
+            }
+          }
+        }
+      ]
+    },
+    "MedicationOrderThrombolyticTPaTherapy_precondition_30": {
+      "title": "Thrombolytic (t-PA) Therapy",
+      "description": "Medication, Order: Thrombolytic (t-PA) Therapy",
+      "standard_category": "medication",
+      "qds_data_type": "medication_order",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.226",
+      "type": "medications",
+      "definition": "medication",
+      "status": "ordered",
+      "hard_status": true,
+      "negation": true,
+      "negation_code_list_id": "2.16.840.1.113883.3.117.1.7.1.93",
+      "source_data_criteria": "MedicationOrderThrombolyticTPaTherapy",
+      "temporal_references": [
+        {
+          "type": "SAS",
+          "reference": "OccurrenceANeurologicSymptomsOfStroke4_precondition_37",
+          "range": {
+            "type": "IVL_PQ",
+            "high": {
+              "type": "PQ",
+              "unit": "min",
+              "value": "180",
+              "inclusive?": true,
+              "derived?": false
+            }
+          }
+        }
+      ]
+    },
+    "MedicationAdministeredThrombolyticTPaTherapy_precondition_32": {
+      "title": "Thrombolytic (t-PA) Therapy",
+      "description": "Medication, Administered: Thrombolytic (t-PA) Therapy",
+      "standard_category": "medication",
+      "qds_data_type": "medication_administered",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.226",
+      "type": "medications",
+      "definition": "medication",
+      "status": "administered",
+      "hard_status": true,
+      "negation": true,
+      "negation_code_list_id": "2.16.840.1.113883.3.117.1.7.1.473",
+      "source_data_criteria": "MedicationAdministeredThrombolyticTPaTherapy",
+      "temporal_references": [
+        {
+          "type": "SAS",
+          "reference": "OccurrenceANeurologicSymptomsOfStroke4_precondition_37",
+          "range": {
+            "type": "IVL_PQ",
+            "high": {
+              "type": "PQ",
+              "unit": "min",
+              "value": "180",
+              "inclusive?": true,
+              "derived?": false
+            }
+          }
+        }
+      ]
+    },
+    "MedicationAdministeredThrombolyticTPaTherapy_precondition_34": {
+      "title": "Thrombolytic (t-PA) Therapy",
+      "description": "Medication, Administered: Thrombolytic (t-PA) Therapy",
+      "standard_category": "medication",
+      "qds_data_type": "medication_administered",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.226",
+      "type": "medications",
+      "definition": "medication",
+      "status": "administered",
+      "hard_status": true,
+      "negation": true,
+      "negation_code_list_id": "2.16.840.1.113883.3.117.1.7.1.93",
+      "source_data_criteria": "MedicationAdministeredThrombolyticTPaTherapy",
+      "temporal_references": [
+        {
+          "type": "SAS",
+          "reference": "OccurrenceANeurologicSymptomsOfStroke4_precondition_37",
+          "range": {
+            "type": "IVL_PQ",
+            "high": {
+              "type": "PQ",
+              "unit": "min",
+              "value": "180",
+              "inclusive?": true,
+              "derived?": false
+            }
+          }
+        }
+      ]
+    },
+    "OccurrenceABaselineState3_precondition_42": {
+      "title": "Baseline State",
+      "description": "Symptom, Active: Baseline State",
+      "standard_category": "symptom",
+      "qds_data_type": "symptom",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.417",
+      "type": "symptoms",
+      "definition": "symptom",
+      "status": "active",
+      "hard_status": false,
+      "negation": false,
+      "specific_occurrence": "A",
+      "specific_occurrence_const": "SYMPTOM_ACTIVE_BASELINE_STATE",
+      "source_data_criteria": "OccurrenceABaselineState3",
+      "field_values": {
+        "STOP_DATETIME": {
+          "type": "ANYNonNull"
+        }
+      }
+    },
+    "MedicationAdministeredThrombolyticTPaTherapy_precondition_43": {
+      "title": "Thrombolytic (t-PA) Therapy",
+      "description": "Medication, Administered: Thrombolytic (t-PA) Therapy",
+      "standard_category": "medication",
+      "qds_data_type": "medication_administered",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.226",
+      "type": "medications",
+      "definition": "medication",
+      "status": "administered",
+      "hard_status": true,
+      "negation": false,
+      "source_data_criteria": "MedicationAdministeredThrombolyticTPaTherapy",
+      "temporal_references": [
+        {
+          "type": "SAS",
+          "reference": "OccurrenceABaselineState3_precondition_42",
+          "range": {
+            "type": "IVL_PQ",
+            "high": {
+              "type": "PQ",
+              "unit": "min",
+              "value": "180",
+              "inclusive?": true,
+              "derived?": false
+            }
+          }
+        }
+      ]
+    },
+    "OccurrenceANeurologicSymptomsOfStroke4_precondition_45": {
+      "title": "Neurologic Symptoms of Stroke",
+      "description": "Symptom, Active: Neurologic Symptoms of Stroke",
+      "standard_category": "symptom",
+      "qds_data_type": "symptom",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.399",
+      "type": "symptoms",
+      "definition": "symptom",
+      "status": "active",
+      "hard_status": false,
+      "negation": false,
+      "specific_occurrence": "A",
+      "specific_occurrence_const": "SYMPTOM_ACTIVE_NEUROLOGIC_SYMPTOMS_OF_STROKE",
+      "source_data_criteria": "OccurrenceANeurologicSymptomsOfStroke4",
+      "field_values": {
+        "START_DATETIME": {
+          "type": "ANYNonNull"
+        }
+      }
+    },
+    "MedicationAdministeredThrombolyticTPaTherapy_precondition_46": {
+      "title": "Thrombolytic (t-PA) Therapy",
+      "description": "Medication, Administered: Thrombolytic (t-PA) Therapy",
+      "standard_category": "medication",
+      "qds_data_type": "medication_administered",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.226",
+      "type": "medications",
+      "definition": "medication",
+      "status": "administered",
+      "hard_status": true,
+      "negation": false,
+      "source_data_criteria": "MedicationAdministeredThrombolyticTPaTherapy",
+      "temporal_references": [
+        {
+          "type": "SAS",
+          "reference": "OccurrenceANeurologicSymptomsOfStroke4_precondition_45",
+          "range": {
+            "type": "IVL_PQ",
+            "high": {
+              "type": "PQ",
+              "unit": "min",
+              "value": "180",
+              "inclusive?": true,
+              "derived?": false
+            }
+          }
+        }
+      ]
+    },
+    "DiagnosisActiveIschemicStroke_precondition_51": {
+      "title": "Ischemic Stroke",
+      "description": "Diagnosis, Active: Ischemic Stroke",
+      "standard_category": "diagnosis_condition_problem",
+      "qds_data_type": "diagnosis_active",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.247",
+      "type": "conditions",
+      "definition": "diagnosis",
+      "status": "active",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "DiagnosisActiveIschemicStroke",
+      "field_values": {
+        "ORDINAL": {
+          "type": "CD",
+          "code_list_id": "2.16.840.1.113883.3.117.2.7.1.14",
+          "title": "Principal Diagnosis"
+        }
+      },
+      "temporal_references": [
+        {
+          "type": "SDU",
+          "reference": "OccurrenceAInpatientEncounter1"
+        }
+      ]
+    },
+    "OccurrenceAInpatientEncounter1_precondition_53": {
+      "title": "Inpatient Encounter",
+      "description": "Encounter, Performed: Inpatient Encounter",
+      "standard_category": "encounter",
+      "qds_data_type": "encounter",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.23",
+      "type": "encounters",
+      "definition": "encounter",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "specific_occurrence": "A",
+      "specific_occurrence_const": "ENCOUNTER_PERFORMED_INPATIENT_ENCOUNTER",
+      "source_data_criteria": "OccurrenceAInpatientEncounter1",
+      "field_values": {
+        "ADMISSION_DATETIME": {
+          "type": "ANYNonNull"
+        }
+      },
+      "temporal_references": [
+        {
+          "type": "SAE",
+          "reference": "OccurrenceAEmergencyDepartmentVisit2",
+          "range": {
+            "type": "IVL_PQ",
+            "high": {
+              "type": "PQ",
+              "unit": "h",
+              "value": "1",
+              "inclusive?": true,
+              "derived?": false
+            }
+          }
+        }
+      ]
+    },
+    "OccurrenceAEmergencyDepartmentVisit2_precondition_60": {
+      "title": "Emergency Department Visit",
+      "description": "Encounter, Performed: Emergency Department Visit",
+      "standard_category": "encounter",
+      "qds_data_type": "encounter",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.293",
+      "type": "encounters",
+      "definition": "encounter",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "specific_occurrence": "A",
+      "specific_occurrence_const": "ENCOUNTER_PERFORMED_EMERGENCY_DEPARTMENT_VISIT",
+      "source_data_criteria": "OccurrenceAEmergencyDepartmentVisit2",
+      "field_values": {
+        "FACILITY_LOCATION_ARRIVAL_DATETIME": null
+      }
+    },
+    "OccurrenceANeurologicSymptomsOfStroke4_precondition_55": {
+      "title": "Neurologic Symptoms of Stroke",
+      "description": "Symptom, Active: Neurologic Symptoms of Stroke",
+      "standard_category": "symptom",
+      "qds_data_type": "symptom",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.399",
+      "type": "symptoms",
+      "definition": "symptom",
+      "status": "active",
+      "hard_status": false,
+      "negation": false,
+      "specific_occurrence": "A",
+      "specific_occurrence_const": "SYMPTOM_ACTIVE_NEUROLOGIC_SYMPTOMS_OF_STROKE",
+      "source_data_criteria": "OccurrenceANeurologicSymptomsOfStroke4",
+      "field_values": {
+        "START_DATETIME": {
+          "type": "ANYNonNull"
+        }
+      },
+      "temporal_references": [
+        {
+          "type": "SBS",
+          "reference": "OccurrenceAEmergencyDepartmentVisit2_precondition_60",
+          "range": {
+            "type": "IVL_PQ",
+            "high": {
+              "type": "PQ",
+              "unit": "min",
+              "value": "120",
+              "inclusive?": true,
+              "derived?": false
+            }
+          }
+        }
+      ]
+    },
+    "OccurrenceABaselineState3_precondition_57": {
+      "title": "Baseline State",
+      "description": "Symptom, Active: Baseline State",
+      "standard_category": "symptom",
+      "qds_data_type": "symptom",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.417",
+      "type": "symptoms",
+      "definition": "symptom",
+      "status": "active",
+      "hard_status": false,
+      "negation": false,
+      "specific_occurrence": "A",
+      "specific_occurrence_const": "SYMPTOM_ACTIVE_BASELINE_STATE",
+      "source_data_criteria": "OccurrenceABaselineState3",
+      "field_values": {
+        "STOP_DATETIME": {
+          "type": "ANYNonNull"
+        }
+      },
+      "temporal_references": [
+        {
+          "type": "SBS",
+          "reference": "OccurrenceAEmergencyDepartmentVisit2_precondition_60",
+          "range": {
+            "type": "IVL_PQ",
+            "high": {
+              "type": "PQ",
+              "unit": "min",
+              "value": "120",
+              "inclusive?": true,
+              "derived?": false
+            }
+          }
+        }
+      ]
+    },
+    "PatientCharacteristicBirthdateBirthDate_precondition_63": {
+      "title": "birth date",
+      "description": "Patient Characteristic Birthdate: birth date",
+      "standard_category": "individual_characteristic",
+      "qds_data_type": "individual_characteristic",
+      "code_list_id": "2.16.840.1.113883.3.560.100.4",
+      "property": "birthtime",
+      "type": "characteristic",
+      "definition": "patient_characteristic_birthdate",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "PatientCharacteristicBirthdateBirthDate",
+      "inline_code_list": {
+        "LOINC": [
+          "21112-8"
+        ]
+      },
+      "temporal_references": [
+        {
+          "type": "SBS",
+          "reference": "OccurrenceAInpatientEncounter1",
+          "range": {
+            "type": "IVL_PQ",
+            "low": {
+              "type": "PQ",
+              "unit": "a",
+              "value": "18",
+              "inclusive?": true,
+              "derived?": false
+            }
+          }
+        }
+      ]
+    },
+    "OccurrenceAInpatientEncounter1_precondition_65": {
+      "title": "Inpatient Encounter",
+      "description": "Encounter, Performed: Inpatient Encounter",
+      "standard_category": "encounter",
+      "qds_data_type": "encounter",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.23",
+      "type": "encounters",
+      "definition": "encounter",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "specific_occurrence": "A",
+      "specific_occurrence_const": "ENCOUNTER_PERFORMED_INPATIENT_ENCOUNTER",
+      "source_data_criteria": "OccurrenceAInpatientEncounter1",
+      "field_values": {
+        "LENGTH_OF_STAY": {
+          "type": "IVL_PQ",
+          "high": {
+            "type": "PQ",
+            "unit": "d",
+            "value": "120",
+            "inclusive?": true,
+            "derived?": false
+          }
+        }
+      }
+    },
+    "OccurrenceAInpatientEncounter1_precondition_67": {
+      "title": "Inpatient Encounter",
+      "description": "Encounter, Performed: Inpatient Encounter",
+      "standard_category": "encounter",
+      "qds_data_type": "encounter",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.23",
+      "type": "encounters",
+      "definition": "encounter",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "specific_occurrence": "A",
+      "specific_occurrence_const": "ENCOUNTER_PERFORMED_INPATIENT_ENCOUNTER",
+      "source_data_criteria": "OccurrenceAInpatientEncounter1",
+      "field_values": {
+        "DISCHARGE_DATETIME": {
+          "type": "ANYNonNull"
+        }
+      },
+      "temporal_references": [
+        {
+          "type": "DURING",
+          "reference": "MeasurePeriod"
+        }
+      ]
+    },
+    "OccurrenceAInpatientEncounter1_precondition_74": {
+      "title": "Inpatient Encounter",
+      "description": "Encounter, Performed: Inpatient Encounter",
+      "standard_category": "encounter",
+      "qds_data_type": "encounter",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.23",
+      "type": "encounters",
+      "definition": "encounter",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "specific_occurrence": "A",
+      "specific_occurrence_const": "ENCOUNTER_PERFORMED_INPATIENT_ENCOUNTER",
+      "source_data_criteria": "OccurrenceAInpatientEncounter1"
+    },
+    "DiagnosisActiveIschemicStroke_precondition_69": {
+      "title": "Ischemic Stroke",
+      "description": "Diagnosis, Active: Ischemic Stroke",
+      "standard_category": "diagnosis_condition_problem",
+      "qds_data_type": "diagnosis_active",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.247",
+      "type": "conditions",
+      "definition": "diagnosis",
+      "status": "active",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "DiagnosisActiveIschemicStroke",
+      "field_values": {
+        "ORDINAL": {
+          "type": "CD",
+          "code_list_id": "2.16.840.1.113883.3.117.2.7.1.14",
+          "title": "Principal Diagnosis"
+        }
+      },
+      "temporal_references": [
+        {
+          "type": "SDU",
+          "reference": "OccurrenceAInpatientEncounter1_precondition_74"
+        }
+      ]
+    },
+    "DiagnosisActiveHemorrhagicStroke_precondition_71": {
+      "title": "Hemorrhagic Stroke",
+      "description": "Diagnosis, Active: Hemorrhagic Stroke",
+      "standard_category": "diagnosis_condition_problem",
+      "qds_data_type": "diagnosis_active",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.212",
+      "type": "conditions",
+      "definition": "diagnosis",
+      "status": "active",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "DiagnosisActiveHemorrhagicStroke",
+      "field_values": {
+        "ORDINAL": {
+          "type": "CD",
+          "code_list_id": "2.16.840.1.113883.3.117.2.7.1.14",
+          "title": "Principal Diagnosis"
+        }
+      },
+      "temporal_references": [
+        {
+          "type": "SDU",
+          "reference": "OccurrenceAInpatientEncounter1_precondition_74"
+        }
+      ]
+    }
+  },
+  "source_data_criteria": {
+    "DiagnosisActiveIschemicStroke": {
+      "title": "Ischemic Stroke",
+      "description": "Diagnosis, Active: Ischemic Stroke",
+      "standard_category": "diagnosis_condition_problem",
+      "qds_data_type": "diagnosis_active",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.247",
+      "type": "conditions",
+      "definition": "diagnosis",
+      "status": "active",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "DiagnosisActiveIschemicStroke"
+    },
+    "DiagnosisActiveHemorrhagicStroke": {
+      "title": "Hemorrhagic Stroke",
+      "description": "Diagnosis, Active: Hemorrhagic Stroke",
+      "standard_category": "diagnosis_condition_problem",
+      "qds_data_type": "diagnosis_active",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.212",
+      "type": "conditions",
+      "definition": "diagnosis",
+      "status": "active",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "DiagnosisActiveHemorrhagicStroke"
+    },
+    "EncounterPerformedEmergencyDepartmentVisit": {
+      "title": "Emergency Department Visit",
+      "description": "Encounter, Performed: Emergency Department Visit",
+      "standard_category": "encounter",
+      "qds_data_type": "encounter",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.293",
+      "type": "encounters",
+      "definition": "encounter",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "EncounterPerformedEmergencyDepartmentVisit"
+    },
+    "MedicationAdministeredThrombolyticTPaTherapy": {
+      "title": "Thrombolytic (t-PA) Therapy",
+      "description": "Medication, Administered: Thrombolytic (t-PA) Therapy",
+      "standard_category": "medication",
+      "qds_data_type": "medication_administered",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.226",
+      "type": "medications",
+      "definition": "medication",
+      "status": "administered",
+      "hard_status": true,
+      "negation": false,
+      "source_data_criteria": "MedicationAdministeredThrombolyticTPaTherapy"
+    },
+    "PatientCharacteristicBirthdateBirthDate": {
+      "title": "birth date",
+      "description": "Patient Characteristic Birthdate: birth date",
+      "standard_category": "individual_characteristic",
+      "qds_data_type": "individual_characteristic",
+      "code_list_id": "2.16.840.1.113883.3.560.100.4",
+      "property": "birthtime",
+      "type": "characteristic",
+      "definition": "patient_characteristic_birthdate",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "PatientCharacteristicBirthdateBirthDate",
+      "inline_code_list": {
+        "LOINC": [
+          "21112-8"
+        ]
+      }
+    },
+    "RiskCategoryAssessmentNationalInstituteOfHealthStrokeScale": {
+      "title": "National Institute of Health Stroke Scale",
+      "description": "Risk Category Assessment: National Institute of Health Stroke Scale",
+      "standard_category": "risk_category_assessment",
+      "qds_data_type": "risk_category_assessment",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.269",
+      "type": "risk_category_assessments",
+      "definition": "risk_category_assessment",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "RiskCategoryAssessmentNationalInstituteOfHealthStrokeScale"
+    },
+    "EncounterPerformedInpatientEncounter": {
+      "title": "Inpatient Encounter",
+      "description": "Encounter, Performed: Inpatient Encounter",
+      "standard_category": "encounter",
+      "qds_data_type": "encounter",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.23",
+      "type": "encounters",
+      "definition": "encounter",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "EncounterPerformedInpatientEncounter"
+    },
+    "SymptomActiveNeurologicSymptomsOfStroke": {
+      "title": "Neurologic Symptoms of Stroke",
+      "description": "Symptom, Active: Neurologic Symptoms of Stroke",
+      "standard_category": "symptom",
+      "qds_data_type": "symptom",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.399",
+      "type": "symptoms",
+      "definition": "symptom",
+      "status": "active",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "SymptomActiveNeurologicSymptomsOfStroke"
+    },
+    "MedicationOrderThrombolyticTPaTherapy": {
+      "title": "Thrombolytic (t-PA) Therapy",
+      "description": "Medication, Order: Thrombolytic (t-PA) Therapy",
+      "standard_category": "medication",
+      "qds_data_type": "medication_order",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.226",
+      "type": "medications",
+      "definition": "medication",
+      "status": "ordered",
+      "hard_status": true,
+      "negation": false,
+      "source_data_criteria": "MedicationOrderThrombolyticTPaTherapy"
+    },
+    "SymptomActiveBaselineState": {
+      "title": "Baseline State",
+      "description": "Symptom, Active: Baseline State",
+      "standard_category": "symptom",
+      "qds_data_type": "symptom",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.417",
+      "type": "symptoms",
+      "definition": "symptom",
+      "status": "active",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "SymptomActiveBaselineState"
+    },
+    "MedicationOrderNotDoneMedicalReason": {
+      "title": "Medical Reason",
+      "description": "Medication, Order not done: Medical Reason",
+      "standard_category": "medication",
+      "qds_data_type": "medication_order",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.473",
+      "type": "medications",
+      "definition": "medication",
+      "status": "ordered",
+      "hard_status": true,
+      "negation": true,
+      "source_data_criteria": "MedicationOrderNotDoneMedicalReason"
+    },
+    "MedicationOrderNotDonePatientRefusal": {
+      "title": "Patient Refusal",
+      "description": "Medication, Order not done: Patient Refusal",
+      "standard_category": "medication",
+      "qds_data_type": "medication_order",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.93",
+      "type": "medications",
+      "definition": "medication",
+      "status": "ordered",
+      "hard_status": true,
+      "negation": true,
+      "source_data_criteria": "MedicationOrderNotDonePatientRefusal"
+    },
+    "MedicationAdministeredNotDoneMedicalReason": {
+      "title": "Medical Reason",
+      "description": "Medication, Administered not done: Medical Reason",
+      "standard_category": "medication",
+      "qds_data_type": "medication_administered",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.473",
+      "type": "medications",
+      "definition": "medication",
+      "status": "administered",
+      "hard_status": true,
+      "negation": true,
+      "source_data_criteria": "MedicationAdministeredNotDoneMedicalReason"
+    },
+    "MedicationAdministeredNotDonePatientRefusal": {
+      "title": "Patient Refusal",
+      "description": "Medication, Administered not done: Patient Refusal",
+      "standard_category": "medication",
+      "qds_data_type": "medication_administered",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.93",
+      "type": "medications",
+      "definition": "medication",
+      "status": "administered",
+      "hard_status": true,
+      "negation": true,
+      "source_data_criteria": "MedicationAdministeredNotDonePatientRefusal"
+    },
+    "OccurrenceAInpatientEncounter1": {
+      "title": "Inpatient Encounter",
+      "description": "Encounter, Performed: Inpatient Encounter",
+      "standard_category": "encounter",
+      "qds_data_type": "encounter",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.23",
+      "type": "encounters",
+      "definition": "encounter",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "specific_occurrence": "A",
+      "specific_occurrence_const": "ENCOUNTER_PERFORMED_INPATIENT_ENCOUNTER",
+      "source_data_criteria": "OccurrenceAInpatientEncounter1"
+    },
+    "OccurrenceAEmergencyDepartmentVisit2": {
+      "title": "Emergency Department Visit",
+      "description": "Encounter, Performed: Emergency Department Visit",
+      "standard_category": "encounter",
+      "qds_data_type": "encounter",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.293",
+      "type": "encounters",
+      "definition": "encounter",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "specific_occurrence": "A",
+      "specific_occurrence_const": "ENCOUNTER_PERFORMED_EMERGENCY_DEPARTMENT_VISIT",
+      "source_data_criteria": "OccurrenceAEmergencyDepartmentVisit2"
+    },
+    "OccurrenceABaselineState3": {
+      "title": "Baseline State",
+      "description": "Symptom, Active: Baseline State",
+      "standard_category": "symptom",
+      "qds_data_type": "symptom",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.417",
+      "type": "symptoms",
+      "definition": "symptom",
+      "status": "active",
+      "hard_status": false,
+      "negation": false,
+      "specific_occurrence": "A",
+      "specific_occurrence_const": "SYMPTOM_ACTIVE_BASELINE_STATE",
+      "source_data_criteria": "OccurrenceABaselineState3"
+    },
+    "OccurrenceANeurologicSymptomsOfStroke4": {
+      "title": "Neurologic Symptoms of Stroke",
+      "description": "Symptom, Active: Neurologic Symptoms of Stroke",
+      "standard_category": "symptom",
+      "qds_data_type": "symptom",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.399",
+      "type": "symptoms",
+      "definition": "symptom",
+      "status": "active",
+      "hard_status": false,
+      "negation": false,
+      "specific_occurrence": "A",
+      "specific_occurrence_const": "SYMPTOM_ACTIVE_NEUROLOGIC_SYMPTOMS_OF_STROKE",
+      "source_data_criteria": "OccurrenceANeurologicSymptomsOfStroke4"
+    }
+  },
+  "attributes": [
+    {
+      "id": "COPYRIGHT",
+      "code": "COPY",
+      "value": "Measure specifications are in the Public Domain.\r\n\r\nLOINC(R) is a registered trademark of the Regenstrief Institute.\r\n\r\nThis material contains SNOMED Clinical Terms (R) (SNOMED CT(c)) copyright 2004-2010 International Health Terminology Standards Development Organization. All rights reserved.",
+      "name": "Copyright"
+    },
+    {
+      "id": "MEASURE_SCORING",
+      "code": "MSRSCORE",
+      "name": "Measure Scoring"
+    },
+    {
+      "id": "MEASURE_TYPE",
+      "code": "MSRTYPE",
+      "name": "Measure Type"
+    },
+    {
+      "id": "STRATIFICATION",
+      "code": "STRAT",
+      "value": "None",
+      "name": "Stratification"
+    },
+    {
+      "id": "RISK_ADJUSTMENT",
+      "code": "MSRADJ",
+      "value": "None",
+      "name": "Risk Adjustment"
+    },
+    {
+      "id": "RATE_AGGREGATION",
+      "code": "MSRAGG",
+      "value": "None",
+      "name": "Rate Aggregation"
+    },
+    {
+      "id": "RATIONALE",
+      "code": "RAT",
+      "value": "The administration of thrombolytic agents to carefully screened, eligible patients with acute ischemic stroke has been shown to be beneficial in several clinical trials. These included two positive randomized controlled trials in the United States: The National Institute of Neurological Disorders and Stroke (NINDS) Studies, Part I and Part II. Based on the results of these studies, the Food and Drug Administration approved the use of intravenous recombinant tissue plasminogen activator (IV r-TPA or t-PA) for the treatment of acute ischemic stroke when given within 3 hours of stroke symptom onset. A large meta-analysis controlling for factors associated with stroke outcome confirmed the benefit of IV t-PA in patients treated within 3 hours of symptom onset. While controversy still exists among some specialists, the major society practice guidelines developed in the United States all recommend the use of IV t-PA for eligible patients. Physicians with experience and skill in stroke management and the interpretation of CT scans should supervise treatment.",
+      "name": "Rationale"
+    },
+    {
+      "id": "CLINICAL_RECOMMENDATION_STATEMENT",
+      "code": "CRS",
+      "value": "The administration of thrombolytic agents to carefully screened, eligible patients with acute ischemic stroke has been shown to be beneficial in several clinical trials. Intravenous recombinant tissue plasminogen activator (IV r-TPA or t-PA) should be used for the treatment of acute ischemic stroke when given within 3 hours of stroke symptom onset.",
+      "name": "Clinical Recommendation Statement"
+    },
+    {
+      "id": "IMPROVEMENT_NOTATION",
+      "code": "IDUR",
+      "value": "An increase in the rate",
+      "name": "Improvement Notation"
+    },
+    {
+      "id": "NQF_ID_NUMBER",
+      "code": "OTH",
+      "value": "0437",
+      "name": "NQF ID Number"
+    },
+    {
+      "id": "DISCLAIMER",
+      "code": "DISC",
+      "value": "None",
+      "name": "Disclaimer"
+    },
+    {
+      "id": "EMEASURE_IDENTIFIER",
+      "code": "OTH",
+      "value": "91",
+      "name": "eMeasure Identifier"
+    },
+    {
+      "id": "REFERENCE",
+      "code": "REF",
+      "value": "The National Institute of Neurological Disorders and Stroke rt-PA Stroke Study Group. Tissue plasminogen activator for acute ischemic stroke. The National Institute of Neurological Disorders and Stroke rt-PA Stroke Study Group. New England Journal of Medicine 1995;333:1581-1587.",
+      "name": "Reference"
+    },
+    {
+      "id": "DEFINITION",
+      "code": "DEF",
+      "value": "None",
+      "name": "Definition"
+    },
+    {
+      "id": "GUIDANCE",
+      "code": "GUIDE",
+      "value": "The unit of measurement for this measure is an inpatient episode of care. Each distinct hospitalization should be reported, regardless of whether the same patient is admitted for inpatient care more than once during the measurement period. In addition, the eMeasure logic intends to represent events within or surrounding a single occurrence of an inpatient hospitalization.\r\n\r\nThe facility location arrival datetime and facility location departure datetime are coupled with the emergency department visit value set. They intend to represent arrival date/time at the emergency department and the discharge date/time from the emergency department, respectively.\r\n\r\nThe baseline state data value set and its associated stop date/time intend to capture the date and time prior to hospital arrival at which it was witnessed or reported that the patient was last known to be without the signs and symptoms of the current stroke or at his or her baseline state of health",
+      "name": "Guidance"
+    },
+    {
+      "id": "TRANSMISSION_FORMAT",
+      "code": "OTH",
+      "value": "None",
+      "name": "Transmission Format"
+    },
+    {
+      "id": "INITIAL_PATIENT_POPULATION",
+      "code": "IPP",
+      "value": "Patients admitted to the hospital for inpatient acute care with a Principal Diagnosis Code for ischemic or hemorrhagic stroke with hospital stays <= 120 days during the measurement period for patients age 18 and older at the time of hospital admission.",
+      "name": "Initial Patient Population"
+    },
+    {
+      "id": "DENOMINATOR",
+      "code": "DENOM",
+      "value": "Acute ischemic stroke patients whose time of arrival is within 2 hours (less than or equal to 120 minutes) of time last known well.",
+      "name": "Denominator"
+    },
+    {
+      "id": "DENOMINATOR_EXCLUSIONS",
+      "code": "OTH",
+      "value": "Patients admitted for Elective Carotid Intervention, or\r\nPatients with a documented Reason For Not Initiating IV Thrombolytic",
+      "name": "Denominator Exclusions"
+    },
+    {
+      "id": "NUMERATOR",
+      "code": "NUMER",
+      "value": "Acute ischemic stroke patients for whom IV thrombolytic therapy was initiated at this hospital within 3 hours (less than or equal to 180 minutes) of time last known well.",
+      "name": "Numerator"
+    },
+    {
+      "id": "NUMERATOR_EXCLUSIONS",
+      "code": "OTH",
+      "value": "Not Applicable",
+      "name": "Numerator Exclusions"
+    },
+    {
+      "id": "DENOMINATOR_EXCEPTIONS",
+      "code": "DENEXCEP",
+      "value": "None",
+      "name": "Denominator Exceptions"
+    },
+    {
+      "id": "MEASURE_POPULATION",
+      "code": "MSRPOPL",
+      "value": "Not Applicable",
+      "name": "Measure Population"
+    },
+    {
+      "id": "MEASURE_OBSERVATIONS",
+      "code": "OTH",
+      "value": "Not Applicable",
+      "name": "Measure Observations"
+    },
+    {
+      "id": "SUPPLEMENTAL_DATA_ELEMENTS",
+      "code": "OTH",
+      "value": "For every patient evaluated by this measure also identify payer, race, ethnicity and sex.",
+      "name": "Supplemental Data Elements"
+    }
+  ],
+  "populations": [
+    {
+      "IPP": "IPP",
+      "DENOM": "DENOM",
+      "NUMER": "NUMER",
+      "DENEX": "DENEX"
+    }
+  ],
+  "measure_period": {
+    "type": "IVL_TS",
+    "low": {
+      "type": "TS",
+      "value": "201201010000",
+      "inclusive?": true,
+      "derived?": false
+    },
+    "high": {
+      "type": "TS",
+      "value": "201212312359",
+      "inclusive?": true,
+      "derived?": false
+    },
+    "width": {
+      "type": "PQ",
+      "unit": "a",
+      "value": "1",
+      "inclusive?": true,
+      "derived?": false
+    }
+  }
+}

@@ -1,0 +1,1153 @@
+{
+  "id": "0639",
+  "hqmf_id": "8A4D92B2-3887-5DF3-0139-0D071EE37793",
+  "hqmf_set_id": "EBFA203E-ACC1-4228-906C-855C4BF11310",
+  "hqmf_version_number": 2,
+  "title": "Statin Prescribed at Discharge",
+  "description": "Acute myocardial infarction (AMI) patients who are prescribed a statin at hospital discharge.",
+  "cms_id": "CMS30v2",
+  "population_criteria": {
+    "DENEX": {
+      "conjunction?": true,
+      "type": "DENEX",
+      "title": "Denominator",
+      "hqmf_id": "AD6061F1-28F8-4509-9758-6730E0144A6C",
+      "preconditions": [
+        {
+          "id": 43,
+          "preconditions": [
+            {
+              "id": 41,
+              "preconditions": [
+                {
+                  "id": 3,
+                  "reference": "InterventionPerformedHospitalMeasuresComfortMeasureOnlyIntervention_precondition_3"
+                },
+                {
+                  "id": 5,
+                  "reference": "OccurrenceAEncounterInpatient1_precondition_5"
+                },
+                {
+                  "id": 7,
+                  "reference": "OccurrenceAEncounterInpatient1_precondition_7"
+                },
+                {
+                  "id": 9,
+                  "reference": "OccurrenceAEncounterInpatient1_precondition_9"
+                },
+                {
+                  "id": 11,
+                  "reference": "OccurrenceAEncounterInpatient1_precondition_11"
+                },
+                {
+                  "id": 13,
+                  "reference": "OccurrenceAEncounterInpatient1_precondition_13"
+                },
+                {
+                  "id": 32,
+                  "preconditions": [
+                    {
+                      "id": 29,
+                      "preconditions": [
+                        {
+                          "id": 18,
+                          "reference": "LaboratoryTestResultLdlC_precondition_18"
+                        },
+                        {
+                          "id": 21,
+                          "reference": "LaboratoryTestResultLdlC_precondition_21"
+                        },
+                        {
+                          "id": 23,
+                          "reference": "MedicationOrderStatins_precondition_23"
+                        },
+                        {
+                          "id": 25,
+                          "reference": "MedicationOrderStatins_precondition_25"
+                        },
+                        {
+                          "id": 27,
+                          "reference": "MedicationOrderStatins_precondition_27"
+                        }
+                      ],
+                      "conjunction_code": "atLeastOneTrue"
+                    },
+                    {
+                      "id": 31,
+                      "preconditions": [
+                        {
+                          "id": 15,
+                          "reference": "MedicationDischargeStatins_precondition_15"
+                        }
+                      ],
+                      "conjunction_code": "atLeastOneTrue",
+                      "negation": true
+                    }
+                  ],
+                  "conjunction_code": "allTrue"
+                },
+                {
+                  "id": 39,
+                  "preconditions": [
+                    {
+                      "id": 36,
+                      "reference": "OccurrenceAClinicalTrialParticipant2_precondition_36"
+                    },
+                    {
+                      "id": 38,
+                      "preconditions": [
+                        {
+                          "id": 34,
+                          "reference": "OccurrenceAClinicalTrialParticipant2_precondition_34"
+                        }
+                      ],
+                      "conjunction_code": "atLeastOneTrue",
+                      "negation": true
+                    }
+                  ],
+                  "conjunction_code": "allTrue"
+                }
+              ],
+              "conjunction_code": "atLeastOneTrue"
+            }
+          ],
+          "conjunction_code": "allTrue"
+        }
+      ]
+    },
+    "NUMER": {
+      "conjunction?": true,
+      "type": "NUMER",
+      "title": "Numerator",
+      "hqmf_id": "F7D36A89-60FD-4F8A-A4B5-116C96C6CB42",
+      "preconditions": [
+        {
+          "id": 46,
+          "preconditions": [
+            {
+              "id": 44,
+              "reference": "MedicationDischargeStatins_precondition_44"
+            }
+          ],
+          "conjunction_code": "allTrue"
+        }
+      ]
+    },
+    "DENOM": {
+      "conjunction?": true,
+      "type": "DENOM",
+      "title": "Denominator",
+      "hqmf_id": "EC797FE5-A1E9-47BB-AE9D-5CCBE8038CB4"
+    },
+    "IPP": {
+      "conjunction?": true,
+      "type": "IPP",
+      "title": "Initial Patient Population",
+      "hqmf_id": "2E5A9126-B9AE-4750-BC72-3EA2C94C7F6A",
+      "preconditions": [
+        {
+          "id": 56,
+          "preconditions": [
+            {
+              "id": 48,
+              "reference": "PatientCharacteristicBirthdateBirthDate_precondition_48"
+            },
+            {
+              "id": 50,
+              "reference": "DiagnosisActiveAmi_precondition_50"
+            },
+            {
+              "id": 52,
+              "reference": "OccurrenceAEncounterInpatient1_precondition_52"
+            },
+            {
+              "id": 54,
+              "reference": "OccurrenceAEncounterInpatient1_precondition_54"
+            }
+          ],
+          "conjunction_code": "allTrue"
+        }
+      ]
+    }
+  },
+  "data_criteria": {
+    "PatientCharacteristicClinicalTrialParticipantClinicalTrialParticipant": {
+      "title": "Clinical Trial Participant",
+      "description": "Patient Characteristic Clinical Trial Participant: Clinical Trial Participant",
+      "standard_category": "individual_characteristic",
+      "qds_data_type": "individual_characteristic",
+      "code_list_id": "2.16.840.1.113883.3.526.2.643",
+      "property": "clinicalTrialParticipant",
+      "type": "characteristic",
+      "definition": "patient_characteristic_clinical_trial_participant",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "PatientCharacteristicClinicalTrialParticipantClinicalTrialParticipant",
+      "inline_code_list": {
+        "SNOMED-CT": [
+          "428024001"
+        ]
+      }
+    },
+    "EncounterPerformedEncounterInpatient": {
+      "title": "Encounter Inpatient",
+      "description": "Encounter, Performed: Encounter Inpatient",
+      "standard_category": "encounter",
+      "qds_data_type": "encounter",
+      "code_list_id": "2.16.840.1.113883.3.666.5.3001",
+      "type": "encounters",
+      "definition": "encounter",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "EncounterPerformedEncounterInpatient"
+    },
+    "MedicationOrderNotDoneMedicalReasonsAmi": {
+      "title": "Medical Reasons AMI",
+      "description": "Medication, Order not done: Medical Reasons AMI",
+      "standard_category": "medication",
+      "qds_data_type": "medication_order",
+      "code_list_id": "2.16.840.1.113883.3.666.5.3003",
+      "type": "medications",
+      "definition": "medication",
+      "status": "ordered",
+      "hard_status": true,
+      "negation": true,
+      "source_data_criteria": "MedicationOrderNotDoneMedicalReasonsAmi"
+    },
+    "MedicationOrderNotDonePatientReasonsAmi": {
+      "title": "Patient Reasons AMI",
+      "description": "Medication, Order not done: Patient Reasons AMI",
+      "standard_category": "medication",
+      "qds_data_type": "medication_order",
+      "code_list_id": "2.16.840.1.113883.3.666.5.3004",
+      "type": "medications",
+      "definition": "medication",
+      "status": "ordered",
+      "hard_status": true,
+      "negation": true,
+      "source_data_criteria": "MedicationOrderNotDonePatientReasonsAmi"
+    },
+    "MedicationOrderNotDoneSystemReasonsAmi": {
+      "title": "System Reasons AMI",
+      "description": "Medication, Order not done: System Reasons AMI",
+      "standard_category": "medication",
+      "qds_data_type": "medication_order",
+      "code_list_id": "2.16.840.1.113883.3.666.5.3005",
+      "type": "medications",
+      "definition": "medication",
+      "status": "ordered",
+      "hard_status": true,
+      "negation": true,
+      "source_data_criteria": "MedicationOrderNotDoneSystemReasonsAmi"
+    },
+    "OccurrenceAEncounterInpatient1": {
+      "title": "Encounter Inpatient",
+      "description": "Encounter, Performed: Encounter Inpatient",
+      "standard_category": "encounter",
+      "qds_data_type": "encounter",
+      "code_list_id": "2.16.840.1.113883.3.666.5.3001",
+      "type": "encounters",
+      "definition": "encounter",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "specific_occurrence": "A",
+      "specific_occurrence_const": "ENCOUNTER_PERFORMED_ENCOUNTER_INPATIENT",
+      "source_data_criteria": "OccurrenceAEncounterInpatient1"
+    },
+    "InterventionPerformedHospitalMeasuresComfortMeasureOnlyIntervention_precondition_3": {
+      "title": "Hospital Measures - Comfort Measure Only Intervention",
+      "description": "Intervention, Performed: Hospital Measures - Comfort Measure Only Intervention",
+      "standard_category": "procedure",
+      "qds_data_type": "procedure_performed",
+      "code_list_id": "2.16.840.1.113883.3.666.5.3002",
+      "type": "interventions",
+      "definition": "intervention",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "InterventionPerformedHospitalMeasuresComfortMeasureOnlyIntervention",
+      "temporal_references": [
+        {
+          "type": "SDU",
+          "reference": "OccurrenceAEncounterInpatient1"
+        }
+      ]
+    },
+    "OccurrenceAEncounterInpatient1_precondition_5": {
+      "title": "Encounter Inpatient",
+      "description": "Encounter, Performed: Encounter Inpatient",
+      "standard_category": "encounter",
+      "qds_data_type": "encounter",
+      "code_list_id": "2.16.840.1.113883.3.666.5.3001",
+      "type": "encounters",
+      "definition": "encounter",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "specific_occurrence": "A",
+      "specific_occurrence_const": "ENCOUNTER_PERFORMED_ENCOUNTER_INPATIENT",
+      "source_data_criteria": "OccurrenceAEncounterInpatient1",
+      "field_values": {
+        "DISCHARGE_STATUS": {
+          "type": "CD",
+          "code_list_id": "2.16.840.1.113883.3.117.1.7.1.86",
+          "title": "Patient Expired"
+        }
+      }
+    },
+    "OccurrenceAEncounterInpatient1_precondition_7": {
+      "title": "Encounter Inpatient",
+      "description": "Encounter, Performed: Encounter Inpatient",
+      "standard_category": "encounter",
+      "qds_data_type": "encounter",
+      "code_list_id": "2.16.840.1.113883.3.666.5.3001",
+      "type": "encounters",
+      "definition": "encounter",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "specific_occurrence": "A",
+      "specific_occurrence_const": "ENCOUNTER_PERFORMED_ENCOUNTER_INPATIENT",
+      "source_data_criteria": "OccurrenceAEncounterInpatient1",
+      "field_values": {
+        "DISCHARGE_STATUS": {
+          "type": "CD",
+          "code_list_id": "2.16.840.1.113883.3.117.1.7.1.87",
+          "title": "Discharge To Another Hospital"
+        }
+      }
+    },
+    "OccurrenceAEncounterInpatient1_precondition_9": {
+      "title": "Encounter Inpatient",
+      "description": "Encounter, Performed: Encounter Inpatient",
+      "standard_category": "encounter",
+      "qds_data_type": "encounter",
+      "code_list_id": "2.16.840.1.113883.3.666.5.3001",
+      "type": "encounters",
+      "definition": "encounter",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "specific_occurrence": "A",
+      "specific_occurrence_const": "ENCOUNTER_PERFORMED_ENCOUNTER_INPATIENT",
+      "source_data_criteria": "OccurrenceAEncounterInpatient1",
+      "field_values": {
+        "DISCHARGE_STATUS": {
+          "type": "CD",
+          "code_list_id": "2.16.840.1.113883.3.666.5.648",
+          "title": "Home Hospice Care"
+        }
+      }
+    },
+    "OccurrenceAEncounterInpatient1_precondition_11": {
+      "title": "Encounter Inpatient",
+      "description": "Encounter, Performed: Encounter Inpatient",
+      "standard_category": "encounter",
+      "qds_data_type": "encounter",
+      "code_list_id": "2.16.840.1.113883.3.666.5.3001",
+      "type": "encounters",
+      "definition": "encounter",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "specific_occurrence": "A",
+      "specific_occurrence_const": "ENCOUNTER_PERFORMED_ENCOUNTER_INPATIENT",
+      "source_data_criteria": "OccurrenceAEncounterInpatient1",
+      "field_values": {
+        "DISCHARGE_STATUS": {
+          "type": "CD",
+          "code_list_id": "2.16.840.1.113883.3.666.5.647",
+          "title": "Inpatient Hospice Care"
+        }
+      }
+    },
+    "OccurrenceAEncounterInpatient1_precondition_13": {
+      "title": "Encounter Inpatient",
+      "description": "Encounter, Performed: Encounter Inpatient",
+      "standard_category": "encounter",
+      "qds_data_type": "encounter",
+      "code_list_id": "2.16.840.1.113883.3.666.5.3001",
+      "type": "encounters",
+      "definition": "encounter",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "specific_occurrence": "A",
+      "specific_occurrence_const": "ENCOUNTER_PERFORMED_ENCOUNTER_INPATIENT",
+      "source_data_criteria": "OccurrenceAEncounterInpatient1",
+      "field_values": {
+        "DISCHARGE_STATUS": {
+          "type": "CD",
+          "code_list_id": "2.16.840.1.113883.3.666.5.1106",
+          "title": "Left Against Medical Advice"
+        }
+      }
+    },
+    "OccurrenceAEncounterInpatient1_precondition_17": {
+      "title": "Encounter Inpatient",
+      "description": "Encounter, Performed: Encounter Inpatient",
+      "standard_category": "encounter",
+      "qds_data_type": "encounter",
+      "code_list_id": "2.16.840.1.113883.3.666.5.3001",
+      "type": "encounters",
+      "definition": "encounter",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "specific_occurrence": "A",
+      "specific_occurrence_const": "ENCOUNTER_PERFORMED_ENCOUNTER_INPATIENT",
+      "source_data_criteria": "OccurrenceAEncounterInpatient1",
+      "field_values": {
+        "FACILITY_LOCATION_ARRIVAL_DATETIME": null
+      }
+    },
+    "LaboratoryTestResultLdlC_precondition_18": {
+      "title": "LDL-c",
+      "description": "Laboratory Test, Result: LDL-c",
+      "standard_category": "laboratory_test",
+      "qds_data_type": "laboratory_test",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.215",
+      "type": "laboratory_tests",
+      "definition": "laboratory_test",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "LaboratoryTestResultLdlC",
+      "value": {
+        "type": "IVL_PQ",
+        "high": {
+          "type": "PQ",
+          "unit": "mg/dL",
+          "value": "100",
+          "inclusive?": false,
+          "derived?": false
+        }
+      },
+      "temporal_references": [
+        {
+          "type": "SAS",
+          "reference": "OccurrenceAEncounterInpatient1_precondition_17",
+          "range": {
+            "type": "IVL_PQ",
+            "high": {
+              "type": "PQ",
+              "unit": "h",
+              "value": "24",
+              "inclusive?": true,
+              "derived?": false
+            }
+          }
+        }
+      ]
+    },
+    "OccurrenceAEncounterInpatient1_precondition_20": {
+      "title": "Encounter Inpatient",
+      "description": "Encounter, Performed: Encounter Inpatient",
+      "standard_category": "encounter",
+      "qds_data_type": "encounter",
+      "code_list_id": "2.16.840.1.113883.3.666.5.3001",
+      "type": "encounters",
+      "definition": "encounter",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "specific_occurrence": "A",
+      "specific_occurrence_const": "ENCOUNTER_PERFORMED_ENCOUNTER_INPATIENT",
+      "source_data_criteria": "OccurrenceAEncounterInpatient1",
+      "field_values": {
+        "FACILITY_LOCATION_ARRIVAL_DATETIME": null
+      }
+    },
+    "LaboratoryTestResultLdlC_precondition_21": {
+      "title": "LDL-c",
+      "description": "Laboratory Test, Result: LDL-c",
+      "standard_category": "laboratory_test",
+      "qds_data_type": "laboratory_test",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.215",
+      "type": "laboratory_tests",
+      "definition": "laboratory_test",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "LaboratoryTestResultLdlC",
+      "value": {
+        "type": "IVL_PQ",
+        "high": {
+          "type": "PQ",
+          "unit": "mg/dL",
+          "value": "100",
+          "inclusive?": false,
+          "derived?": false
+        }
+      },
+      "temporal_references": [
+        {
+          "type": "SBS",
+          "reference": "OccurrenceAEncounterInpatient1_precondition_20",
+          "range": {
+            "type": "IVL_PQ",
+            "high": {
+              "type": "PQ",
+              "unit": "d",
+              "value": "30",
+              "inclusive?": true,
+              "derived?": false
+            }
+          }
+        }
+      ]
+    },
+    "MedicationOrderStatins_precondition_23": {
+      "title": "Statins",
+      "description": "Medication, Order: Statins",
+      "standard_category": "medication",
+      "qds_data_type": "medication_order",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.824",
+      "type": "medications",
+      "definition": "medication",
+      "status": "ordered",
+      "hard_status": true,
+      "negation": true,
+      "negation_code_list_id": "2.16.840.1.113883.3.666.5.3003",
+      "source_data_criteria": "MedicationOrderStatins",
+      "temporal_references": [
+        {
+          "type": "DURING",
+          "reference": "OccurrenceAEncounterInpatient1"
+        }
+      ]
+    },
+    "MedicationOrderStatins_precondition_25": {
+      "title": "Statins",
+      "description": "Medication, Order: Statins",
+      "standard_category": "medication",
+      "qds_data_type": "medication_order",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.824",
+      "type": "medications",
+      "definition": "medication",
+      "status": "ordered",
+      "hard_status": true,
+      "negation": true,
+      "negation_code_list_id": "2.16.840.1.113883.3.666.5.3004",
+      "source_data_criteria": "MedicationOrderStatins",
+      "temporal_references": [
+        {
+          "type": "DURING",
+          "reference": "OccurrenceAEncounterInpatient1"
+        }
+      ]
+    },
+    "MedicationOrderStatins_precondition_27": {
+      "title": "Statins",
+      "description": "Medication, Order: Statins",
+      "standard_category": "medication",
+      "qds_data_type": "medication_order",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.824",
+      "type": "medications",
+      "definition": "medication",
+      "status": "ordered",
+      "hard_status": true,
+      "negation": true,
+      "negation_code_list_id": "2.16.840.1.113883.3.666.5.3005",
+      "source_data_criteria": "MedicationOrderStatins",
+      "temporal_references": [
+        {
+          "type": "DURING",
+          "reference": "OccurrenceAEncounterInpatient1"
+        }
+      ]
+    },
+    "MedicationDischargeStatins_precondition_15": {
+      "title": "Statins",
+      "description": "Medication, Discharge: Statins",
+      "standard_category": "medication",
+      "qds_data_type": "medication_discharge",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.824",
+      "type": "medications",
+      "definition": "medication",
+      "status": "discharge",
+      "hard_status": true,
+      "negation": false,
+      "source_data_criteria": "MedicationDischargeStatins",
+      "temporal_references": [
+        {
+          "type": "DURING",
+          "reference": "OccurrenceAEncounterInpatient1"
+        }
+      ]
+    },
+    "OccurrenceAClinicalTrialParticipant2_precondition_36": {
+      "title": "Clinical Trial Participant",
+      "description": "Patient Characteristic Clinical Trial Participant: Clinical Trial Participant",
+      "standard_category": "individual_characteristic",
+      "qds_data_type": "individual_characteristic",
+      "code_list_id": "2.16.840.1.113883.3.526.2.643",
+      "property": "clinicalTrialParticipant",
+      "type": "characteristic",
+      "definition": "patient_characteristic_clinical_trial_participant",
+      "hard_status": false,
+      "negation": false,
+      "specific_occurrence": "A",
+      "specific_occurrence_const": "PATIENT_CHARACTERISTIC_CLINICAL_TRIAL_PARTICIPANT_CLINICAL_TRIAL_PARTICIPANT",
+      "source_data_criteria": "OccurrenceAClinicalTrialParticipant2",
+      "inline_code_list": {
+        "SNOMED-CT": [
+          "428024001"
+        ]
+      },
+      "temporal_references": [
+        {
+          "type": "SBE",
+          "reference": "OccurrenceAEncounterInpatient1"
+        }
+      ]
+    },
+    "OccurrenceAClinicalTrialParticipant2_precondition_34": {
+      "title": "Clinical Trial Participant",
+      "description": "Patient Characteristic Clinical Trial Participant: Clinical Trial Participant",
+      "standard_category": "individual_characteristic",
+      "qds_data_type": "individual_characteristic",
+      "code_list_id": "2.16.840.1.113883.3.526.2.643",
+      "property": "clinicalTrialParticipant",
+      "type": "characteristic",
+      "definition": "patient_characteristic_clinical_trial_participant",
+      "hard_status": false,
+      "negation": false,
+      "specific_occurrence": "A",
+      "specific_occurrence_const": "PATIENT_CHARACTERISTIC_CLINICAL_TRIAL_PARTICIPANT_CLINICAL_TRIAL_PARTICIPANT",
+      "source_data_criteria": "OccurrenceAClinicalTrialParticipant2",
+      "inline_code_list": {
+        "SNOMED-CT": [
+          "428024001"
+        ]
+      },
+      "temporal_references": [
+        {
+          "type": "EBS",
+          "reference": "OccurrenceAEncounterInpatient1"
+        }
+      ]
+    },
+    "MedicationDischargeStatins_precondition_44": {
+      "title": "Statins",
+      "description": "Medication, Discharge: Statins",
+      "standard_category": "medication",
+      "qds_data_type": "medication_discharge",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.824",
+      "type": "medications",
+      "definition": "medication",
+      "status": "discharge",
+      "hard_status": true,
+      "negation": false,
+      "source_data_criteria": "MedicationDischargeStatins",
+      "temporal_references": [
+        {
+          "type": "DURING",
+          "reference": "OccurrenceAEncounterInpatient1"
+        }
+      ]
+    },
+    "OccurrenceAEncounterInpatient1_precondition_47": {
+      "title": "Encounter Inpatient",
+      "description": "Encounter, Performed: Encounter Inpatient",
+      "standard_category": "encounter",
+      "qds_data_type": "encounter",
+      "code_list_id": "2.16.840.1.113883.3.666.5.3001",
+      "type": "encounters",
+      "definition": "encounter",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "specific_occurrence": "A",
+      "specific_occurrence_const": "ENCOUNTER_PERFORMED_ENCOUNTER_INPATIENT",
+      "source_data_criteria": "OccurrenceAEncounterInpatient1",
+      "field_values": {
+        "ADMISSION_DATETIME": {
+          "type": "ANYNonNull"
+        }
+      }
+    },
+    "PatientCharacteristicBirthdateBirthDate_precondition_48": {
+      "title": "birth date",
+      "description": "Patient Characteristic Birthdate: birth date",
+      "standard_category": "individual_characteristic",
+      "qds_data_type": "individual_characteristic",
+      "code_list_id": "2.16.840.1.113883.3.560.100.4",
+      "property": "birthtime",
+      "type": "characteristic",
+      "definition": "patient_characteristic_birthdate",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "PatientCharacteristicBirthdateBirthDate",
+      "inline_code_list": {
+        "LOINC": [
+          "21112-8"
+        ]
+      },
+      "temporal_references": [
+        {
+          "type": "SBS",
+          "reference": "OccurrenceAEncounterInpatient1_precondition_47",
+          "range": {
+            "type": "IVL_PQ",
+            "low": {
+              "type": "PQ",
+              "unit": "a",
+              "value": "18",
+              "inclusive?": true,
+              "derived?": false
+            }
+          }
+        }
+      ]
+    },
+    "DiagnosisActiveAmi_precondition_50": {
+      "title": "AMI",
+      "description": "Diagnosis, Active: AMI",
+      "standard_category": "diagnosis_condition_problem",
+      "qds_data_type": "diagnosis_active",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.833",
+      "type": "conditions",
+      "definition": "diagnosis",
+      "status": "active",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "DiagnosisActiveAmi",
+      "field_values": {
+        "ORDINAL": {
+          "type": "CD",
+          "code_list_id": "2.16.840.1.113883.3.117.2.7.1.14",
+          "title": "Principal Diagnosis"
+        }
+      },
+      "temporal_references": [
+        {
+          "type": "SDU",
+          "reference": "OccurrenceAEncounterInpatient1"
+        }
+      ]
+    },
+    "OccurrenceAEncounterInpatient1_precondition_52": {
+      "title": "Encounter Inpatient",
+      "description": "Encounter, Performed: Encounter Inpatient",
+      "standard_category": "encounter",
+      "qds_data_type": "encounter",
+      "code_list_id": "2.16.840.1.113883.3.666.5.3001",
+      "type": "encounters",
+      "definition": "encounter",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "specific_occurrence": "A",
+      "specific_occurrence_const": "ENCOUNTER_PERFORMED_ENCOUNTER_INPATIENT",
+      "source_data_criteria": "OccurrenceAEncounterInpatient1",
+      "field_values": {
+        "LENGTH_OF_STAY": {
+          "type": "IVL_PQ",
+          "high": {
+            "type": "PQ",
+            "unit": "d",
+            "value": "120",
+            "inclusive?": true,
+            "derived?": false
+          }
+        }
+      }
+    },
+    "OccurrenceAEncounterInpatient1_precondition_54": {
+      "title": "Encounter Inpatient",
+      "description": "Encounter, Performed: Encounter Inpatient",
+      "standard_category": "encounter",
+      "qds_data_type": "encounter",
+      "code_list_id": "2.16.840.1.113883.3.666.5.3001",
+      "type": "encounters",
+      "definition": "encounter",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "specific_occurrence": "A",
+      "specific_occurrence_const": "ENCOUNTER_PERFORMED_ENCOUNTER_INPATIENT",
+      "source_data_criteria": "OccurrenceAEncounterInpatient1",
+      "field_values": {
+        "ADMISSION_DATETIME": {
+          "type": "ANYNonNull"
+        }
+      },
+      "temporal_references": [
+        {
+          "type": "DURING",
+          "reference": "MeasurePeriod"
+        }
+      ]
+    }
+  },
+  "source_data_criteria": {
+    "PatientCharacteristicClinicalTrialParticipantClinicalTrialParticipant": {
+      "title": "Clinical Trial Participant",
+      "description": "Patient Characteristic Clinical Trial Participant: Clinical Trial Participant",
+      "standard_category": "individual_characteristic",
+      "qds_data_type": "individual_characteristic",
+      "code_list_id": "2.16.840.1.113883.3.526.2.643",
+      "property": "clinicalTrialParticipant",
+      "type": "characteristic",
+      "definition": "patient_characteristic_clinical_trial_participant",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "PatientCharacteristicClinicalTrialParticipantClinicalTrialParticipant",
+      "inline_code_list": {
+        "SNOMED-CT": [
+          "428024001"
+        ]
+      }
+    },
+    "DiagnosisActiveAmi": {
+      "title": "AMI",
+      "description": "Diagnosis, Active: AMI",
+      "standard_category": "diagnosis_condition_problem",
+      "qds_data_type": "diagnosis_active",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.833",
+      "type": "conditions",
+      "definition": "diagnosis",
+      "status": "active",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "DiagnosisActiveAmi"
+    },
+    "PatientCharacteristicBirthdateBirthDate": {
+      "title": "birth date",
+      "description": "Patient Characteristic Birthdate: birth date",
+      "standard_category": "individual_characteristic",
+      "qds_data_type": "individual_characteristic",
+      "code_list_id": "2.16.840.1.113883.3.560.100.4",
+      "property": "birthtime",
+      "type": "characteristic",
+      "definition": "patient_characteristic_birthdate",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "PatientCharacteristicBirthdateBirthDate",
+      "inline_code_list": {
+        "LOINC": [
+          "21112-8"
+        ]
+      }
+    },
+    "EncounterPerformedEncounterInpatient": {
+      "title": "Encounter Inpatient",
+      "description": "Encounter, Performed: Encounter Inpatient",
+      "standard_category": "encounter",
+      "qds_data_type": "encounter",
+      "code_list_id": "2.16.840.1.113883.3.666.5.3001",
+      "type": "encounters",
+      "definition": "encounter",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "EncounterPerformedEncounterInpatient"
+    },
+    "InterventionPerformedHospitalMeasuresComfortMeasureOnlyIntervention": {
+      "title": "Hospital Measures - Comfort Measure Only Intervention",
+      "description": "Intervention, Performed: Hospital Measures - Comfort Measure Only Intervention",
+      "standard_category": "procedure",
+      "qds_data_type": "procedure_performed",
+      "code_list_id": "2.16.840.1.113883.3.666.5.3002",
+      "type": "interventions",
+      "definition": "intervention",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "InterventionPerformedHospitalMeasuresComfortMeasureOnlyIntervention"
+    },
+    "MedicationOrderStatins": {
+      "title": "Statins",
+      "description": "Medication, Order: Statins",
+      "standard_category": "medication",
+      "qds_data_type": "medication_order",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.824",
+      "type": "medications",
+      "definition": "medication",
+      "status": "ordered",
+      "hard_status": true,
+      "negation": false,
+      "source_data_criteria": "MedicationOrderStatins"
+    },
+    "MedicationDischargeStatins": {
+      "title": "Statins",
+      "description": "Medication, Discharge: Statins",
+      "standard_category": "medication",
+      "qds_data_type": "medication_discharge",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.824",
+      "type": "medications",
+      "definition": "medication",
+      "status": "discharge",
+      "hard_status": true,
+      "negation": false,
+      "source_data_criteria": "MedicationDischargeStatins"
+    },
+    "LaboratoryTestResultLdlC": {
+      "title": "LDL-c",
+      "description": "Laboratory Test, Result: LDL-c",
+      "standard_category": "laboratory_test",
+      "qds_data_type": "laboratory_test",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.215",
+      "type": "laboratory_tests",
+      "definition": "laboratory_test",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "LaboratoryTestResultLdlC"
+    },
+    "MedicationOrderNotDoneMedicalReasonsAmi": {
+      "title": "Medical Reasons AMI",
+      "description": "Medication, Order not done: Medical Reasons AMI",
+      "standard_category": "medication",
+      "qds_data_type": "medication_order",
+      "code_list_id": "2.16.840.1.113883.3.666.5.3003",
+      "type": "medications",
+      "definition": "medication",
+      "status": "ordered",
+      "hard_status": true,
+      "negation": true,
+      "source_data_criteria": "MedicationOrderNotDoneMedicalReasonsAmi"
+    },
+    "MedicationOrderNotDonePatientReasonsAmi": {
+      "title": "Patient Reasons AMI",
+      "description": "Medication, Order not done: Patient Reasons AMI",
+      "standard_category": "medication",
+      "qds_data_type": "medication_order",
+      "code_list_id": "2.16.840.1.113883.3.666.5.3004",
+      "type": "medications",
+      "definition": "medication",
+      "status": "ordered",
+      "hard_status": true,
+      "negation": true,
+      "source_data_criteria": "MedicationOrderNotDonePatientReasonsAmi"
+    },
+    "MedicationOrderNotDoneSystemReasonsAmi": {
+      "title": "System Reasons AMI",
+      "description": "Medication, Order not done: System Reasons AMI",
+      "standard_category": "medication",
+      "qds_data_type": "medication_order",
+      "code_list_id": "2.16.840.1.113883.3.666.5.3005",
+      "type": "medications",
+      "definition": "medication",
+      "status": "ordered",
+      "hard_status": true,
+      "negation": true,
+      "source_data_criteria": "MedicationOrderNotDoneSystemReasonsAmi"
+    },
+    "OccurrenceAEncounterInpatient1": {
+      "title": "Encounter Inpatient",
+      "description": "Encounter, Performed: Encounter Inpatient",
+      "standard_category": "encounter",
+      "qds_data_type": "encounter",
+      "code_list_id": "2.16.840.1.113883.3.666.5.3001",
+      "type": "encounters",
+      "definition": "encounter",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "specific_occurrence": "A",
+      "specific_occurrence_const": "ENCOUNTER_PERFORMED_ENCOUNTER_INPATIENT",
+      "source_data_criteria": "OccurrenceAEncounterInpatient1"
+    },
+    "OccurrenceAClinicalTrialParticipant2": {
+      "title": "Clinical Trial Participant",
+      "description": "Patient Characteristic Clinical Trial Participant: Clinical Trial Participant",
+      "standard_category": "individual_characteristic",
+      "qds_data_type": "individual_characteristic",
+      "code_list_id": "2.16.840.1.113883.3.526.2.643",
+      "property": "clinicalTrialParticipant",
+      "type": "characteristic",
+      "definition": "patient_characteristic_clinical_trial_participant",
+      "hard_status": false,
+      "negation": false,
+      "specific_occurrence": "A",
+      "specific_occurrence_const": "PATIENT_CHARACTERISTIC_CLINICAL_TRIAL_PARTICIPANT_CLINICAL_TRIAL_PARTICIPANT",
+      "source_data_criteria": "OccurrenceAClinicalTrialParticipant2",
+      "inline_code_list": {
+        "SNOMED-CT": [
+          "428024001"
+        ]
+      }
+    }
+  },
+  "attributes": [
+    {
+      "id": "COPYRIGHT",
+      "code": "COPY",
+      "value": "Measure specifications are in the Public Domain\r\nCPT(R) is a trademark of the American Medical Association. Current Procedural Terminology. (CPT) is copyright 2012 American Medical Association. All rights reserved. No fee schedules, basic units, relative values, or related listings are included in CPT. The AMA assumes no liability for the data contained herein. Applicable FARS/DFARS restrictions apply to government use.\r\n \r\nLOINC(R) is a registered trademark of the Regenstrief Institute.\r\n \r\n\r\nThis material contains SNOMED Clinical Terms (R) (SNOMED CT(c)) copyright 2004-2010 International Health Terminology Standards Development Organization. All rights reserved.",
+      "name": "Copyright"
+    },
+    {
+      "id": "MEASURE_SCORING",
+      "code": "MSRSCORE",
+      "name": "Measure Scoring"
+    },
+    {
+      "id": "MEASURE_TYPE",
+      "code": "MSRTYPE",
+      "name": "Measure Type"
+    },
+    {
+      "id": "STRATIFICATION",
+      "code": "STRAT",
+      "value": "None",
+      "name": "Stratification"
+    },
+    {
+      "id": "RISK_ADJUSTMENT",
+      "code": "MSRADJ",
+      "value": "None",
+      "name": "Risk Adjustment"
+    },
+    {
+      "id": "RATE_AGGREGATION",
+      "code": "MSRAGG",
+      "value": "None",
+      "name": "Rate Aggregation"
+    },
+    {
+      "id": "RATIONALE",
+      "code": "RAT",
+      "value": "Several randomized clinical trials have proven the benefits of statin drugs (also known as HMG Co-A reductase inhibitors) in reducing the risk of death and recurrent cardiovascular events in a broad range of patients with established cardiovascular disease, including those with prior myocardial infarction (4S, 1994; Sacks, 1996; LIPID Study Group, 1998; and MRC/BHF Heart Protection Study, 2002). Current ACC/AHA guidelines place a strong emphasis on the initiation or maintenance of statin drugs for patients hospitalized with AMI, particularly those with LDL-cholesterol levels above 100 mg/dL (Antman, 2004; Smith, 2006; Anderson, 2007; and Antman, 2008). As a result of the strength of the evidence and guideline support, the ACC/AHA have developed a performance measure to assess this aspect of care for patients with acute myocardial infarction (Krumholz, 2008). Because statins are generally well-tolerated, most patients with AMI are appropriate candidates for this therapy.",
+      "name": "Rationale"
+    },
+    {
+      "id": "CLINICAL_RECOMMENDATION_STATEMENT",
+      "code": "CRS",
+      "value": "Several randomized clinical trials have proven the benefits of statin drugs (also known as HMG Co-A reductase inhibitors) in reducing the risk of death and recurrent cardiovascular events in a broad range of patients with established cardiovascular disease, including those with prior myocardial infarction.",
+      "name": "Clinical Recommendation Statement"
+    },
+    {
+      "id": "IMPROVEMENT_NOTATION",
+      "code": "IDUR",
+      "value": "An increase in rate.",
+      "name": "Improvement Notation"
+    },
+    {
+      "id": "NQF_ID_NUMBER",
+      "code": "OTH",
+      "value": "0639",
+      "name": "NQF ID Number"
+    },
+    {
+      "id": "DISCLAIMER",
+      "code": "DISC",
+      "value": "None",
+      "name": "Disclaimer"
+    },
+    {
+      "id": "EMEASURE_IDENTIFIER",
+      "code": "OTH",
+      "value": "30",
+      "name": "eMeasure Identifier"
+    },
+    {
+      "id": "REFERENCE",
+      "code": "REF",
+      "value": "Smith SC, Allen J, Blair SN, Bonow RO, Brass LM, Fonarow GC, et al. AHA/ACC guidelines for secondary prevention for patients with coronary and other atherosclerotic vascular disease: 2006 update. J Am Coll Cardiol. 2006;47:2130 –9. doi:10.1016/j.jacc.2006.04.026.",
+      "name": "Reference"
+    },
+    {
+      "id": "DEFINITION",
+      "code": "DEF",
+      "value": "None",
+      "name": "Definition"
+    },
+    {
+      "id": "GUIDANCE",
+      "code": "GUIDE",
+      "value": "The measurement period is one calendar year but the reporting period is 3 months as a calendar quarter; Q1 is Jan – Mar, Q2 is Apr – Jun, Q3 is Jul – Sep, Q4 is Oct – Dec.\r\n\r\nPatients for whom there are missing or inaccurate data (e.g., arrival time, medication administration, etc.) are considered to have failed the measure; the total number of patients with missing or erroneous (e.g., a time of 03:69 or a date of 10/26/2035) data (i.e., measure failures) must be reported with the results of the measure.\r\n\r\nExclusion element guidance: \r\nThe exclusion for patients who are clinical trial participants is limited to patients participating in a clinical trial for acute myocardial infarction (AMI), ST elevation myocardial infarction (STEMI), non-ST elevation myocardial infarction (non-STEMI) heart attack, or acute coronary syndrome (ACS), the same conditions as covered by the measure. Other clinical trials are not valid reasons for exclusions.\r\n\r\nMedical, patient, or system reasons for not performing a test or giving a medication are categories for valid medical, patient, or system reasons that are not specifically listed in the exclusion section of the measure. Each is expected to be captured and made available for measurement or clinical decision support within the EHR workflow but the exact method or location of capture is a local or vendor decision.",
+      "name": "Guidance"
+    },
+    {
+      "id": "TRANSMISSION_FORMAT",
+      "code": "OTH",
+      "value": "None",
+      "name": "Transmission Format"
+    },
+    {
+      "id": "INITIAL_PATIENT_POPULATION",
+      "code": "IPP",
+      "value": "AMI patients > = 18 years of age with length of stay < = 120 days",
+      "name": "Initial Patient Population"
+    },
+    {
+      "id": "DENOMINATOR",
+      "code": "DENOM",
+      "value": "AMI patients.",
+      "name": "Denominator"
+    },
+    {
+      "id": "DENOMINATOR_EXCLUSIONS",
+      "code": "OTH",
+      "value": "•\tPatients with Comfort Measures Only documented\r\n•\tPatients enrolled in clinical trials\r\n•\tPatients discharged to another hospital \r\n•\tPatients who left against medical advice \r\n•\tPatients who expired \r\n•\tPatients discharged to home for hospice care\r\n•\tPatients discharged to a health care facility for hospice care\r\n•\tPatients with LDL less than 100 mg/dL within the first 24 hours after hospital arrival or 30 days prior to hospital arrival and not discharged on a statin\r\n•\tPatients with a Reason for Not Prescribing Statin Medication at Discharge",
+      "name": "Denominator Exclusions"
+    },
+    {
+      "id": "NUMERATOR",
+      "code": "NUMER",
+      "value": "AMI patients who are prescribed a statin medication at hospital discharge.",
+      "name": "Numerator"
+    },
+    {
+      "id": "NUMERATOR_EXCLUSIONS",
+      "code": "OTH",
+      "value": "None",
+      "name": "Numerator Exclusions"
+    },
+    {
+      "id": "DENOMINATOR_EXCEPTIONS",
+      "code": "DENEXCEP",
+      "value": "None",
+      "name": "Denominator Exceptions"
+    },
+    {
+      "id": "MEASURE_POPULATION",
+      "code": "MSRPOPL",
+      "value": "Not applicable",
+      "name": "Measure Population"
+    },
+    {
+      "id": "MEASURE_OBSERVATIONS",
+      "code": "OTH",
+      "value": "Not applicable",
+      "name": "Measure Observations"
+    },
+    {
+      "id": "SUPPLEMENTAL_DATA_ELEMENTS",
+      "code": "OTH",
+      "value": "For every patient evaluated by this measure also identify payer, race, ethnicity, and sex.",
+      "name": "Supplemental Data Elements"
+    }
+  ],
+  "populations": [
+    {
+      "IPP": "IPP",
+      "DENOM": "DENOM",
+      "NUMER": "NUMER",
+      "DENEX": "DENEX"
+    }
+  ],
+  "measure_period": {
+    "type": "IVL_TS",
+    "low": {
+      "type": "TS",
+      "value": "201201010000",
+      "inclusive?": true,
+      "derived?": false
+    },
+    "high": {
+      "type": "TS",
+      "value": "201212312359",
+      "inclusive?": true,
+      "derived?": false
+    },
+    "width": {
+      "type": "PQ",
+      "unit": "a",
+      "value": "1",
+      "inclusive?": true,
+      "derived?": false
+    }
+  }
+}

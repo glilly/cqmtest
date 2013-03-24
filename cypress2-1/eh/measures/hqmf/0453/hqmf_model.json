@@ -1,0 +1,2450 @@
+{
+  "id": "0453",
+  "hqmf_id": "8A4D92B2-3B79-4CE2-013B-950EF1A92C3F",
+  "hqmf_set_id": "D78CE034-8288-4012-A31E-7F485A74F2A9",
+  "hqmf_version_number": 2,
+  "title": "Urinary catheter removed on Postoperative Day 1 (POD 1) or Postoperative Day 2 (POD 2) with day of surgery being day zero",
+  "description": "Surgical patients with urinary catheter removed on Postoperative Day 1 or Postoperative Day 2 with day of surgery being day zero.",
+  "cms_id": "CMS178v2",
+  "population_criteria": {
+    "DENEX": {
+      "conjunction?": true,
+      "type": "DENEX",
+      "title": "Denominator",
+      "hqmf_id": "D4F8063E-653D-4BB1-943E-A5C739E7C7CF",
+      "preconditions": [
+        {
+          "id": 105,
+          "preconditions": [
+            {
+              "id": 103,
+              "preconditions": [
+                {
+                  "id": 7,
+                  "reference": "DeviceAppliedHospitalMeasuresPacemakerOrImplantableDefibrillatorDevice_precondition_7"
+                },
+                {
+                  "id": 10,
+                  "reference": "ProcedurePerformedHospitalMeasuresPacemakerOrImplantableDefibrillatorProcedure_precondition_10"
+                },
+                {
+                  "id": 12,
+                  "reference": "ProcedurePerformedHospitalMeasuresCabg_precondition_12"
+                },
+                {
+                  "id": 14,
+                  "reference": "ProcedurePerformedHospitalMeasuresCabg_precondition_14"
+                },
+                {
+                  "id": 17,
+                  "reference": "ProcedurePerformedHospitalMeasuresPacemakerOrImplantableDefibrillatorProcedure_precondition_17"
+                },
+                {
+                  "id": 19,
+                  "reference": "DeviceAppliedHospitalMeasuresPacemakerOrImplantableDefibrillatorDevice_precondition_19"
+                },
+                {
+                  "id": 22,
+                  "reference": "ProcedurePerformedHospitalMeasuresPacemakerOrImplantableDefibrillatorProcedure_precondition_22"
+                },
+                {
+                  "id": 24,
+                  "reference": "ProcedurePerformedHospitalMeasuresOtherCardiacSurgery_precondition_24"
+                },
+                {
+                  "id": 26,
+                  "reference": "DeviceAppliedHospitalMeasuresPacemakerOrImplantableDefibrillatorDevice_precondition_26"
+                },
+                {
+                  "id": 28,
+                  "reference": "PhysicalExamFindingHospitalMeasuresScipUrinaryDiversion_precondition_28"
+                },
+                {
+                  "id": 30,
+                  "reference": "ProcedurePerformedHospitalMeasuresScipUrologicalPerinealProceduresWithPotentialNeedOfIndwellingCatheters_precondition_30"
+                },
+                {
+                  "id": 33,
+                  "reference": "DeviceAppliedHospitalMeasuresPacemakerOrImplantableDefibrillatorDevice_precondition_33"
+                },
+                {
+                  "id": 36,
+                  "reference": "DeviceAppliedHospitalMeasuresIndwellingUrinaryCatheter_precondition_36"
+                },
+                {
+                  "id": 39,
+                  "reference": "ProcedurePerformedHospitalMeasuresPacemakerOrImplantableDefibrillatorProcedure_precondition_39"
+                },
+                {
+                  "id": 41,
+                  "reference": "ProcedurePerformedHospitalMeasuresPacemakerOrImplantableDefibrillatorProcedure_precondition_41"
+                },
+                {
+                  "id": 43,
+                  "reference": "ProcedurePerformedHospitalMeasuresPacemakerOrImplantableDefibrillatorProcedure_precondition_43"
+                },
+                {
+                  "id": 45,
+                  "reference": "ProcedurePerformedHospitalMeasuresScipUrinaryDiversionProcedures_precondition_45"
+                },
+                {
+                  "id": 48,
+                  "reference": "DeviceAppliedHospitalMeasuresPacemakerOrImplantableDefibrillatorDevice_precondition_48"
+                },
+                {
+                  "id": 50,
+                  "reference": "ProcedurePerformedHospitalMeasuresOtherCardiacSurgery_precondition_50"
+                },
+                {
+                  "id": 52,
+                  "reference": "InterventionPerformedHospitalMeasuresIntermittentCatheterization_precondition_52"
+                },
+                {
+                  "id": 54,
+                  "reference": "DeviceAppliedHospitalMeasuresSuprapubicCatheter_precondition_54"
+                },
+                {
+                  "id": 56,
+                  "reference": "EncounterPerformedEncounterInpatient_precondition_56"
+                },
+                {
+                  "id": 59,
+                  "reference": "DeviceAppliedHospitalMeasuresPacemakerOrImplantableDefibrillatorDevice_precondition_59"
+                },
+                {
+                  "id": 65,
+                  "preconditions": [
+                    {
+                      "id": 61,
+                      "reference": "MedicationAdministeredHospitalMeasuresDiureticsRxnorm_precondition_61"
+                    },
+                    {
+                      "id": 63,
+                      "reference": "EncounterPerformedEncounterInpatient_precondition_63"
+                    }
+                  ],
+                  "conjunction_code": "allTrue"
+                },
+                {
+                  "id": 73,
+                  "preconditions": [
+                    {
+                      "id": 68,
+                      "reference": "PatientCharacteristicExpired_precondition_68"
+                    },
+                    {
+                      "id": 71,
+                      "reference": "PatientCharacteristicExpired_precondition_71"
+                    }
+                  ],
+                  "conjunction_code": "allTrue"
+                },
+                {
+                  "id": 80,
+                  "preconditions": [
+                    {
+                      "id": 77,
+                      "reference": "DeviceAppliedHospitalMeasuresIndwellingUrinaryCatheter_precondition_77"
+                    },
+                    {
+                      "id": 79,
+                      "preconditions": [
+                        {
+                          "id": 75,
+                          "reference": "OccurrenceAHospitalMeasuresIndwellingUrinaryCatheter4_precondition_75"
+                        }
+                      ],
+                      "conjunction_code": "atLeastOneTrue",
+                      "negation": true
+                    }
+                  ],
+                  "conjunction_code": "allTrue"
+                },
+                {
+                  "id": 87,
+                  "preconditions": [
+                    {
+                      "id": 83,
+                      "reference": "OccurrenceBScipMajorSurgicalProcedure2_precondition_82",
+                      "conjunction_code": "allTrue"
+                    },
+                    {
+                      "id": 85,
+                      "reference": "OccurrenceBScipMajorSurgicalProcedure2_precondition_85"
+                    }
+                  ],
+                  "conjunction_code": "allTrue"
+                },
+                {
+                  "id": 94,
+                  "preconditions": [
+                    {
+                      "id": 90,
+                      "reference": "OccurrenceBScipMajorSurgicalProcedure2_precondition_89",
+                      "conjunction_code": "allTrue"
+                    },
+                    {
+                      "id": 92,
+                      "reference": "OccurrenceBScipMajorSurgicalProcedure2_precondition_92"
+                    }
+                  ],
+                  "conjunction_code": "allTrue"
+                },
+                {
+                  "id": 101,
+                  "preconditions": [
+                    {
+                      "id": 98,
+                      "reference": "PatientCharacteristicClinicalTrialParticipant_precondition_98"
+                    },
+                    {
+                      "id": 100,
+                      "preconditions": [
+                        {
+                          "id": 96,
+                          "reference": "PatientCharacteristicClinicalTrialParticipant_precondition_96"
+                        }
+                      ],
+                      "conjunction_code": "atLeastOneTrue",
+                      "negation": true
+                    }
+                  ],
+                  "conjunction_code": "allTrue"
+                }
+              ],
+              "conjunction_code": "atLeastOneTrue"
+            }
+          ],
+          "conjunction_code": "allTrue"
+        }
+      ]
+    },
+    "NUMER": {
+      "conjunction?": true,
+      "type": "NUMER",
+      "title": "Numerator",
+      "hqmf_id": "8C0EECC2-0CB8-49A9-9841-74378BA2500A",
+      "preconditions": [
+        {
+          "id": 108,
+          "preconditions": [
+            {
+              "id": 106,
+              "reference": "OccurrenceAHospitalMeasuresIndwellingUrinaryCatheter4_precondition_106"
+            }
+          ],
+          "conjunction_code": "allTrue"
+        }
+      ]
+    },
+    "DENOM": {
+      "conjunction?": true,
+      "type": "DENOM",
+      "title": "Denominator",
+      "hqmf_id": "E6ED8FAC-A105-447D-B1C1-027D4A41092C",
+      "preconditions": [
+        {
+          "id": 123,
+          "preconditions": [
+            {
+              "id": 109,
+              "reference": "OccurrenceAHospitalMeasuresIndwellingUrinaryCatheter4_precondition_109"
+            },
+            {
+              "id": 111,
+              "reference": "OccurrenceAScipMajorSurgicalProcedure1_precondition_111"
+            },
+            {
+              "id": 113,
+              "reference": "OccurrenceAHospitalMeasuresJointCommissionEvidenceOfASurgicalProcedureRequiringGeneralOrNeuraxialAnesthesia5_precondition_113"
+            },
+            {
+              "id": 121,
+              "preconditions": [
+                {
+                  "id": 116,
+                  "reference": "OccurrenceAHospitalMeasuresJointCommissionEvidenceOfASurgicalProcedureRequiringGeneralOrNeuraxialAnesthesia5_precondition_116"
+                },
+                {
+                  "id": 119,
+                  "reference": "OccurrenceAHospitalMeasuresJointCommissionEvidenceOfASurgicalProcedureRequiringGeneralOrNeuraxialAnesthesia5_precondition_119"
+                }
+              ],
+              "conjunction_code": "atLeastOneTrue"
+            }
+          ],
+          "conjunction_code": "allTrue"
+        }
+      ]
+    },
+    "IPP": {
+      "conjunction?": true,
+      "type": "IPP",
+      "title": "Initial Patient Population",
+      "hqmf_id": "254EF15B-BF3A-48C0-B73A-D15743D40FC9",
+      "preconditions": [
+        {
+          "id": 131,
+          "preconditions": [
+            {
+              "id": 124,
+              "reference": "OccurrenceAEncounterInpatient3_precondition_124"
+            },
+            {
+              "id": 126,
+              "reference": "OccurrenceAEncounterInpatient3_precondition_126"
+            },
+            {
+              "id": 129,
+              "reference": "PatientCharacteristicBirthdateBirthDate_precondition_129"
+            }
+          ],
+          "conjunction_code": "allTrue"
+        }
+      ]
+    }
+  },
+  "data_criteria": {
+    "ProcedurePerformedHospitalMeasuresJointCommissionEvidenceOfASurgicalProcedureRequiringGeneralOrNeuraxialAnesthesia": {
+      "title": "Hospital Measures-Joint Commission Evidence of a surgical procedure requiring general or neuraxial anesthesia",
+      "description": "Procedure, Performed: Hospital Measures-Joint Commission Evidence of a surgical procedure requiring general or neuraxial anesthesia",
+      "standard_category": "procedure",
+      "qds_data_type": "procedure_performed",
+      "code_list_id": "1.3.6.1.4.1.33895.1.3.0.31",
+      "type": "procedures",
+      "definition": "procedure",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "ProcedurePerformedHospitalMeasuresJointCommissionEvidenceOfASurgicalProcedureRequiringGeneralOrNeuraxialAnesthesia"
+    },
+    "ProcedurePerformedScipMajorSurgicalProcedure": {
+      "title": "SCIP Major Surgical Procedure",
+      "description": "Procedure, Performed: SCIP Major Surgical Procedure",
+      "standard_category": "procedure",
+      "qds_data_type": "procedure_performed",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.2",
+      "type": "procedures",
+      "definition": "procedure",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "ProcedurePerformedScipMajorSurgicalProcedure"
+    },
+    "DeviceAppliedNotDoneMedicalReasons": {
+      "title": "Medical Reasons",
+      "description": "Device, Applied not done: Medical Reasons",
+      "standard_category": "device",
+      "qds_data_type": "device_applied",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.18",
+      "type": "devices",
+      "definition": "device",
+      "status": "applied",
+      "hard_status": true,
+      "negation": true,
+      "source_data_criteria": "DeviceAppliedNotDoneMedicalReasons"
+    },
+    "OccurrenceAScipMajorSurgicalProcedure1": {
+      "title": "SCIP Major Surgical Procedure",
+      "description": "Procedure, Performed: SCIP Major Surgical Procedure",
+      "standard_category": "procedure",
+      "qds_data_type": "procedure_performed",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.2",
+      "type": "procedures",
+      "definition": "procedure",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "specific_occurrence": "A",
+      "specific_occurrence_const": "PROCEDURE_PERFORMED_SCIP_MAJOR_SURGICAL_PROCEDURE",
+      "source_data_criteria": "OccurrenceAScipMajorSurgicalProcedure1"
+    },
+    "OccurrenceAEncounterInpatient3": {
+      "title": "Encounter Inpatient",
+      "description": "Encounter, Performed: Encounter Inpatient",
+      "standard_category": "encounter",
+      "qds_data_type": "encounter",
+      "code_list_id": "2.16.840.1.113883.3.666.5.307",
+      "type": "encounters",
+      "definition": "encounter",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "specific_occurrence": "A",
+      "specific_occurrence_const": "ENCOUNTER_PERFORMED_ENCOUNTER_INPATIENT",
+      "source_data_criteria": "OccurrenceAEncounterInpatient3"
+    },
+    "OccurrenceAHospitalMeasuresJointCommissionEvidenceOfASurgicalProcedureRequiringGeneralOrNeuraxialAnesthesia5": {
+      "title": "Hospital Measures-Joint Commission Evidence of a surgical procedure requiring general or neuraxial anesthesia",
+      "description": "Procedure, Performed: Hospital Measures-Joint Commission Evidence of a surgical procedure requiring general or neuraxial anesthesia",
+      "standard_category": "procedure",
+      "qds_data_type": "procedure_performed",
+      "code_list_id": "1.3.6.1.4.1.33895.1.3.0.31",
+      "type": "procedures",
+      "definition": "procedure",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "specific_occurrence": "A",
+      "specific_occurrence_const": "PROCEDURE_PERFORMED_HOSPITAL_MEASURES_JOINT_COMMISSION_EVIDENCE_OF_A_SURGICAL_PROCEDURE_REQUIRING_GENERAL_OR_NEURAXIAL_ANESTHESIA",
+      "source_data_criteria": "OccurrenceAHospitalMeasuresJointCommissionEvidenceOfASurgicalProcedureRequiringGeneralOrNeuraxialAnesthesia5"
+    },
+    "ProcedurePerformedHospitalMeasuresOtherCardiacSurgery_precondition_6": {
+      "title": "Hospital measures-Other Cardiac Surgery",
+      "description": "Procedure, Performed: Hospital measures-Other Cardiac Surgery",
+      "standard_category": "procedure",
+      "qds_data_type": "procedure_performed",
+      "code_list_id": "2.16.840.1.113883.3.666.5.701",
+      "type": "procedures",
+      "definition": "procedure",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "ProcedurePerformedHospitalMeasuresOtherCardiacSurgery",
+      "temporal_references": [
+        {
+          "type": "DURING",
+          "reference": "OccurrenceAEncounterInpatient3"
+        }
+      ]
+    },
+    "DeviceAppliedHospitalMeasuresPacemakerOrImplantableDefibrillatorDevice_precondition_7": {
+      "title": "Hospital measures-Pacemaker or implantable defibrillator device",
+      "description": "Device, Applied: Hospital measures-Pacemaker or implantable defibrillator device",
+      "standard_category": "device",
+      "qds_data_type": "device_applied",
+      "code_list_id": "2.16.840.1.113883.3.666.5.1086",
+      "type": "devices",
+      "definition": "device",
+      "status": "applied",
+      "hard_status": true,
+      "negation": false,
+      "source_data_criteria": "DeviceAppliedHospitalMeasuresPacemakerOrImplantableDefibrillatorDevice",
+      "temporal_references": [
+        {
+          "type": "SBS",
+          "reference": "ProcedurePerformedHospitalMeasuresOtherCardiacSurgery_precondition_6",
+          "range": {
+            "type": "IVL_PQ",
+            "high": {
+              "type": "PQ",
+              "unit": "d",
+              "value": "4",
+              "inclusive?": true,
+              "derived?": false
+            }
+          }
+        }
+      ]
+    },
+    "ProcedurePerformedHospitalMeasuresCabg_precondition_9": {
+      "title": "Hospital measures-CABG",
+      "description": "Procedure, Performed: Hospital measures-CABG",
+      "standard_category": "procedure",
+      "qds_data_type": "procedure_performed",
+      "code_list_id": "2.16.840.1.113883.3.666.5.694",
+      "type": "procedures",
+      "definition": "procedure",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "ProcedurePerformedHospitalMeasuresCabg",
+      "temporal_references": [
+        {
+          "type": "DURING",
+          "reference": "OccurrenceAEncounterInpatient3"
+        }
+      ]
+    },
+    "ProcedurePerformedHospitalMeasuresPacemakerOrImplantableDefibrillatorProcedure_precondition_10": {
+      "title": "Hospital Measures-Pacemaker or implantable defibrillator procedure",
+      "description": "Procedure, Performed: Hospital Measures-Pacemaker or implantable defibrillator procedure",
+      "standard_category": "procedure",
+      "qds_data_type": "procedure_performed",
+      "code_list_id": "2.16.840.1.113883.3.666.5.1087",
+      "type": "procedures",
+      "definition": "procedure",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "ProcedurePerformedHospitalMeasuresPacemakerOrImplantableDefibrillatorProcedure",
+      "temporal_references": [
+        {
+          "type": "SBS",
+          "reference": "ProcedurePerformedHospitalMeasuresCabg_precondition_9",
+          "range": {
+            "type": "IVL_PQ",
+            "high": {
+              "type": "PQ",
+              "unit": "d",
+              "value": "4",
+              "inclusive?": true,
+              "derived?": false
+            }
+          }
+        }
+      ]
+    },
+    "ProcedurePerformedHospitalMeasuresCabg_precondition_12": {
+      "title": "Hospital measures-CABG",
+      "description": "Procedure, Performed: Hospital measures-CABG",
+      "standard_category": "procedure",
+      "qds_data_type": "procedure_performed",
+      "code_list_id": "2.16.840.1.113883.3.666.5.694",
+      "type": "procedures",
+      "definition": "procedure",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "ProcedurePerformedHospitalMeasuresCabg",
+      "temporal_references": [
+        {
+          "type": "SBS",
+          "reference": "OccurrenceAScipMajorSurgicalProcedure1",
+          "range": {
+            "type": "IVL_PQ",
+            "high": {
+              "type": "PQ",
+              "unit": "d",
+              "value": "4",
+              "inclusive?": true,
+              "derived?": false
+            }
+          }
+        }
+      ]
+    },
+    "ProcedurePerformedHospitalMeasuresCabg_precondition_14": {
+      "title": "Hospital measures-CABG",
+      "description": "Procedure, Performed: Hospital measures-CABG",
+      "standard_category": "procedure",
+      "qds_data_type": "procedure_performed",
+      "code_list_id": "2.16.840.1.113883.3.666.5.694",
+      "type": "procedures",
+      "definition": "procedure",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "ProcedurePerformedHospitalMeasuresCabg",
+      "temporal_references": [
+        {
+          "type": "SAE",
+          "reference": "OccurrenceAScipMajorSurgicalProcedure1",
+          "range": {
+            "type": "IVL_PQ",
+            "high": {
+              "type": "PQ",
+              "unit": "d",
+              "value": "4",
+              "inclusive?": true,
+              "derived?": false
+            }
+          }
+        }
+      ]
+    },
+    "ProcedurePerformedHospitalMeasuresOtherCardiacSurgery_precondition_16": {
+      "title": "Hospital measures-Other Cardiac Surgery",
+      "description": "Procedure, Performed: Hospital measures-Other Cardiac Surgery",
+      "standard_category": "procedure",
+      "qds_data_type": "procedure_performed",
+      "code_list_id": "2.16.840.1.113883.3.666.5.701",
+      "type": "procedures",
+      "definition": "procedure",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "ProcedurePerformedHospitalMeasuresOtherCardiacSurgery",
+      "temporal_references": [
+        {
+          "type": "DURING",
+          "reference": "OccurrenceAEncounterInpatient3"
+        }
+      ]
+    },
+    "ProcedurePerformedHospitalMeasuresPacemakerOrImplantableDefibrillatorProcedure_precondition_17": {
+      "title": "Hospital Measures-Pacemaker or implantable defibrillator procedure",
+      "description": "Procedure, Performed: Hospital Measures-Pacemaker or implantable defibrillator procedure",
+      "standard_category": "procedure",
+      "qds_data_type": "procedure_performed",
+      "code_list_id": "2.16.840.1.113883.3.666.5.1087",
+      "type": "procedures",
+      "definition": "procedure",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "ProcedurePerformedHospitalMeasuresPacemakerOrImplantableDefibrillatorProcedure",
+      "temporal_references": [
+        {
+          "type": "SBS",
+          "reference": "ProcedurePerformedHospitalMeasuresOtherCardiacSurgery_precondition_16",
+          "range": {
+            "type": "IVL_PQ",
+            "high": {
+              "type": "PQ",
+              "unit": "d",
+              "value": "4",
+              "inclusive?": true,
+              "derived?": false
+            }
+          }
+        }
+      ]
+    },
+    "DeviceAppliedHospitalMeasuresPacemakerOrImplantableDefibrillatorDevice_precondition_19": {
+      "title": "Hospital measures-Pacemaker or implantable defibrillator device",
+      "description": "Device, Applied: Hospital measures-Pacemaker or implantable defibrillator device",
+      "standard_category": "device",
+      "qds_data_type": "device_applied",
+      "code_list_id": "2.16.840.1.113883.3.666.5.1086",
+      "type": "devices",
+      "definition": "device",
+      "status": "applied",
+      "hard_status": true,
+      "negation": false,
+      "source_data_criteria": "DeviceAppliedHospitalMeasuresPacemakerOrImplantableDefibrillatorDevice",
+      "temporal_references": [
+        {
+          "type": "SBS",
+          "reference": "OccurrenceAScipMajorSurgicalProcedure1",
+          "range": {
+            "type": "IVL_PQ",
+            "high": {
+              "type": "PQ",
+              "unit": "d",
+              "value": "3",
+              "inclusive?": true,
+              "derived?": false
+            }
+          }
+        }
+      ]
+    },
+    "ProcedurePerformedHospitalMeasuresOtherCardiacSurgery_precondition_21": {
+      "title": "Hospital measures-Other Cardiac Surgery",
+      "description": "Procedure, Performed: Hospital measures-Other Cardiac Surgery",
+      "standard_category": "procedure",
+      "qds_data_type": "procedure_performed",
+      "code_list_id": "2.16.840.1.113883.3.666.5.701",
+      "type": "procedures",
+      "definition": "procedure",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "ProcedurePerformedHospitalMeasuresOtherCardiacSurgery",
+      "temporal_references": [
+        {
+          "type": "DURING",
+          "reference": "OccurrenceAEncounterInpatient3"
+        }
+      ]
+    },
+    "ProcedurePerformedHospitalMeasuresPacemakerOrImplantableDefibrillatorProcedure_precondition_22": {
+      "title": "Hospital Measures-Pacemaker or implantable defibrillator procedure",
+      "description": "Procedure, Performed: Hospital Measures-Pacemaker or implantable defibrillator procedure",
+      "standard_category": "procedure",
+      "qds_data_type": "procedure_performed",
+      "code_list_id": "2.16.840.1.113883.3.666.5.1087",
+      "type": "procedures",
+      "definition": "procedure",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "ProcedurePerformedHospitalMeasuresPacemakerOrImplantableDefibrillatorProcedure",
+      "temporal_references": [
+        {
+          "type": "SAE",
+          "reference": "ProcedurePerformedHospitalMeasuresOtherCardiacSurgery_precondition_21",
+          "range": {
+            "type": "IVL_PQ",
+            "high": {
+              "type": "PQ",
+              "unit": "d",
+              "value": "4",
+              "inclusive?": true,
+              "derived?": false
+            }
+          }
+        }
+      ]
+    },
+    "ProcedurePerformedHospitalMeasuresOtherCardiacSurgery_precondition_24": {
+      "title": "Hospital measures-Other Cardiac Surgery",
+      "description": "Procedure, Performed: Hospital measures-Other Cardiac Surgery",
+      "standard_category": "procedure",
+      "qds_data_type": "procedure_performed",
+      "code_list_id": "2.16.840.1.113883.3.666.5.701",
+      "type": "procedures",
+      "definition": "procedure",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "ProcedurePerformedHospitalMeasuresOtherCardiacSurgery",
+      "temporal_references": [
+        {
+          "type": "SBS",
+          "reference": "OccurrenceAScipMajorSurgicalProcedure1",
+          "range": {
+            "type": "IVL_PQ",
+            "high": {
+              "type": "PQ",
+              "unit": "d",
+              "value": "4",
+              "inclusive?": true,
+              "derived?": false
+            }
+          }
+        }
+      ]
+    },
+    "DeviceAppliedHospitalMeasuresPacemakerOrImplantableDefibrillatorDevice_precondition_26": {
+      "title": "Hospital measures-Pacemaker or implantable defibrillator device",
+      "description": "Device, Applied: Hospital measures-Pacemaker or implantable defibrillator device",
+      "standard_category": "device",
+      "qds_data_type": "device_applied",
+      "code_list_id": "2.16.840.1.113883.3.666.5.1086",
+      "type": "devices",
+      "definition": "device",
+      "status": "applied",
+      "hard_status": true,
+      "negation": false,
+      "source_data_criteria": "DeviceAppliedHospitalMeasuresPacemakerOrImplantableDefibrillatorDevice",
+      "temporal_references": [
+        {
+          "type": "SAE",
+          "reference": "OccurrenceAScipMajorSurgicalProcedure1",
+          "range": {
+            "type": "IVL_PQ",
+            "high": {
+              "type": "PQ",
+              "unit": "d",
+              "value": "3",
+              "inclusive?": true,
+              "derived?": false
+            }
+          }
+        }
+      ]
+    },
+    "PhysicalExamFindingHospitalMeasuresScipUrinaryDiversion_precondition_28": {
+      "title": "Hospital Measures-SCIP urinary diversion",
+      "description": "Physical Exam, Finding: Hospital Measures-SCIP urinary diversion",
+      "standard_category": "physical_exam",
+      "qds_data_type": "physical_exam",
+      "code_list_id": "2.16.840.1.113883.3.666.5.822",
+      "type": "physical_exams",
+      "definition": "physical_exam",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "PhysicalExamFindingHospitalMeasuresScipUrinaryDiversion",
+      "temporal_references": [
+        {
+          "type": "SBS",
+          "reference": "OccurrenceAScipMajorSurgicalProcedure1",
+          "range": {
+            "type": "IVL_PQ",
+            "low": {
+              "type": "PQ",
+              "unit": "min",
+              "value": "1",
+              "inclusive?": true,
+              "derived?": false
+            }
+          }
+        }
+      ]
+    },
+    "ProcedurePerformedHospitalMeasuresScipUrologicalPerinealProceduresWithPotentialNeedOfIndwellingCatheters_precondition_30": {
+      "title": "Hospital Measures-SCIP Urological/Perineal procedures with potential need of indwelling catheters",
+      "description": "Procedure, Performed: Hospital Measures-SCIP Urological/Perineal procedures with potential need of indwelling catheters",
+      "standard_category": "procedure",
+      "qds_data_type": "procedure_performed",
+      "code_list_id": "2.16.840.1.113883.3.666.5.819",
+      "type": "procedures",
+      "definition": "procedure",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "ProcedurePerformedHospitalMeasuresScipUrologicalPerinealProceduresWithPotentialNeedOfIndwellingCatheters",
+      "field_values": {
+        "ORDINAL": {
+          "type": "CD",
+          "code_list_id": "2.16.840.1.113883.3.526.2.8001",
+          "title": "Hospital Measures - Principal"
+        }
+      },
+      "temporal_references": [
+        {
+          "type": "DURING",
+          "reference": "OccurrenceAEncounterInpatient3"
+        }
+      ]
+    },
+    "ProcedurePerformedHospitalMeasuresOtherCardiacSurgery_precondition_32": {
+      "title": "Hospital measures-Other Cardiac Surgery",
+      "description": "Procedure, Performed: Hospital measures-Other Cardiac Surgery",
+      "standard_category": "procedure",
+      "qds_data_type": "procedure_performed",
+      "code_list_id": "2.16.840.1.113883.3.666.5.701",
+      "type": "procedures",
+      "definition": "procedure",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "ProcedurePerformedHospitalMeasuresOtherCardiacSurgery",
+      "temporal_references": [
+        {
+          "type": "DURING",
+          "reference": "OccurrenceAEncounterInpatient3"
+        }
+      ]
+    },
+    "DeviceAppliedHospitalMeasuresPacemakerOrImplantableDefibrillatorDevice_precondition_33": {
+      "title": "Hospital measures-Pacemaker or implantable defibrillator device",
+      "description": "Device, Applied: Hospital measures-Pacemaker or implantable defibrillator device",
+      "standard_category": "device",
+      "qds_data_type": "device_applied",
+      "code_list_id": "2.16.840.1.113883.3.666.5.1086",
+      "type": "devices",
+      "definition": "device",
+      "status": "applied",
+      "hard_status": true,
+      "negation": false,
+      "source_data_criteria": "DeviceAppliedHospitalMeasuresPacemakerOrImplantableDefibrillatorDevice",
+      "temporal_references": [
+        {
+          "type": "SAE",
+          "reference": "ProcedurePerformedHospitalMeasuresOtherCardiacSurgery_precondition_32",
+          "range": {
+            "type": "IVL_PQ",
+            "high": {
+              "type": "PQ",
+              "unit": "d",
+              "value": "4",
+              "inclusive?": true,
+              "derived?": false
+            }
+          }
+        }
+      ]
+    },
+    "OccurrenceAEncounterInpatient3_precondition_35": {
+      "title": "Encounter Inpatient",
+      "description": "Encounter, Performed: Encounter Inpatient",
+      "standard_category": "encounter",
+      "qds_data_type": "encounter",
+      "code_list_id": "2.16.840.1.113883.3.666.5.307",
+      "type": "encounters",
+      "definition": "encounter",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "specific_occurrence": "A",
+      "specific_occurrence_const": "ENCOUNTER_PERFORMED_ENCOUNTER_INPATIENT",
+      "source_data_criteria": "OccurrenceAEncounterInpatient3",
+      "field_values": {
+        "ADMISSION_DATETIME": {
+          "type": "ANYNonNull"
+        }
+      }
+    },
+    "DeviceAppliedHospitalMeasuresIndwellingUrinaryCatheter_precondition_36": {
+      "title": "Hospital Measures-Indwelling urinary catheter",
+      "description": "Device, Applied: Hospital Measures-Indwelling urinary catheter",
+      "standard_category": "device",
+      "qds_data_type": "device_applied",
+      "code_list_id": "2.16.840.1.113883.3.666.5.820",
+      "type": "devices",
+      "definition": "device",
+      "status": "applied",
+      "hard_status": true,
+      "negation": false,
+      "source_data_criteria": "DeviceAppliedHospitalMeasuresIndwellingUrinaryCatheter",
+      "field_values": {
+        "ANATOMICAL_STRUCTURE": {
+          "type": "CD",
+          "code_list_id": "2.16.840.1.113883.3.666.5.1130",
+          "title": "Hospital Measures-Urethra"
+        }
+      },
+      "temporal_references": [
+        {
+          "type": "SBS",
+          "reference": "OccurrenceAEncounterInpatient3_precondition_35",
+          "range": {
+            "type": "IVL_PQ",
+            "low": {
+              "type": "PQ",
+              "unit": "min",
+              "value": "1",
+              "inclusive?": true,
+              "derived?": false
+            }
+          }
+        }
+      ]
+    },
+    "ProcedurePerformedHospitalMeasuresCabg_precondition_38": {
+      "title": "Hospital measures-CABG",
+      "description": "Procedure, Performed: Hospital measures-CABG",
+      "standard_category": "procedure",
+      "qds_data_type": "procedure_performed",
+      "code_list_id": "2.16.840.1.113883.3.666.5.694",
+      "type": "procedures",
+      "definition": "procedure",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "ProcedurePerformedHospitalMeasuresCabg",
+      "temporal_references": [
+        {
+          "type": "DURING",
+          "reference": "OccurrenceAEncounterInpatient3"
+        }
+      ]
+    },
+    "ProcedurePerformedHospitalMeasuresPacemakerOrImplantableDefibrillatorProcedure_precondition_39": {
+      "title": "Hospital Measures-Pacemaker or implantable defibrillator procedure",
+      "description": "Procedure, Performed: Hospital Measures-Pacemaker or implantable defibrillator procedure",
+      "standard_category": "procedure",
+      "qds_data_type": "procedure_performed",
+      "code_list_id": "2.16.840.1.113883.3.666.5.1087",
+      "type": "procedures",
+      "definition": "procedure",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "ProcedurePerformedHospitalMeasuresPacemakerOrImplantableDefibrillatorProcedure",
+      "temporal_references": [
+        {
+          "type": "SAE",
+          "reference": "ProcedurePerformedHospitalMeasuresCabg_precondition_38",
+          "range": {
+            "type": "IVL_PQ",
+            "high": {
+              "type": "PQ",
+              "unit": "d",
+              "value": "4",
+              "inclusive?": true,
+              "derived?": false
+            }
+          }
+        }
+      ]
+    },
+    "ProcedurePerformedHospitalMeasuresPacemakerOrImplantableDefibrillatorProcedure_precondition_41": {
+      "title": "Hospital Measures-Pacemaker or implantable defibrillator procedure",
+      "description": "Procedure, Performed: Hospital Measures-Pacemaker or implantable defibrillator procedure",
+      "standard_category": "procedure",
+      "qds_data_type": "procedure_performed",
+      "code_list_id": "2.16.840.1.113883.3.666.5.1087",
+      "type": "procedures",
+      "definition": "procedure",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "ProcedurePerformedHospitalMeasuresPacemakerOrImplantableDefibrillatorProcedure",
+      "temporal_references": [
+        {
+          "type": "SAE",
+          "reference": "OccurrenceAScipMajorSurgicalProcedure1",
+          "range": {
+            "type": "IVL_PQ",
+            "high": {
+              "type": "PQ",
+              "unit": "d",
+              "value": "3",
+              "inclusive?": true,
+              "derived?": false
+            }
+          }
+        }
+      ]
+    },
+    "ProcedurePerformedHospitalMeasuresPacemakerOrImplantableDefibrillatorProcedure_precondition_43": {
+      "title": "Hospital Measures-Pacemaker or implantable defibrillator procedure",
+      "description": "Procedure, Performed: Hospital Measures-Pacemaker or implantable defibrillator procedure",
+      "standard_category": "procedure",
+      "qds_data_type": "procedure_performed",
+      "code_list_id": "2.16.840.1.113883.3.666.5.1087",
+      "type": "procedures",
+      "definition": "procedure",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "ProcedurePerformedHospitalMeasuresPacemakerOrImplantableDefibrillatorProcedure",
+      "temporal_references": [
+        {
+          "type": "SBS",
+          "reference": "OccurrenceAScipMajorSurgicalProcedure1",
+          "range": {
+            "type": "IVL_PQ",
+            "high": {
+              "type": "PQ",
+              "unit": "d",
+              "value": "3",
+              "inclusive?": true,
+              "derived?": false
+            }
+          }
+        }
+      ]
+    },
+    "ProcedurePerformedHospitalMeasuresScipUrinaryDiversionProcedures_precondition_45": {
+      "title": "Hospital Measures-SCIP urinary diversion procedures",
+      "description": "Procedure, Performed: Hospital Measures-SCIP urinary diversion procedures",
+      "standard_category": "procedure",
+      "qds_data_type": "procedure_performed",
+      "code_list_id": "2.16.840.1.113883.3.666.5.1050",
+      "type": "procedures",
+      "definition": "procedure",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "ProcedurePerformedHospitalMeasuresScipUrinaryDiversionProcedures",
+      "temporal_references": [
+        {
+          "type": "SBS",
+          "reference": "OccurrenceAScipMajorSurgicalProcedure1",
+          "range": {
+            "type": "IVL_PQ",
+            "low": {
+              "type": "PQ",
+              "unit": "min",
+              "value": "1",
+              "inclusive?": true,
+              "derived?": false
+            }
+          }
+        }
+      ]
+    },
+    "ProcedurePerformedHospitalMeasuresCabg_precondition_47": {
+      "title": "Hospital measures-CABG",
+      "description": "Procedure, Performed: Hospital measures-CABG",
+      "standard_category": "procedure",
+      "qds_data_type": "procedure_performed",
+      "code_list_id": "2.16.840.1.113883.3.666.5.694",
+      "type": "procedures",
+      "definition": "procedure",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "ProcedurePerformedHospitalMeasuresCabg",
+      "temporal_references": [
+        {
+          "type": "DURING",
+          "reference": "OccurrenceAEncounterInpatient3"
+        }
+      ]
+    },
+    "DeviceAppliedHospitalMeasuresPacemakerOrImplantableDefibrillatorDevice_precondition_48": {
+      "title": "Hospital measures-Pacemaker or implantable defibrillator device",
+      "description": "Device, Applied: Hospital measures-Pacemaker or implantable defibrillator device",
+      "standard_category": "device",
+      "qds_data_type": "device_applied",
+      "code_list_id": "2.16.840.1.113883.3.666.5.1086",
+      "type": "devices",
+      "definition": "device",
+      "status": "applied",
+      "hard_status": true,
+      "negation": false,
+      "source_data_criteria": "DeviceAppliedHospitalMeasuresPacemakerOrImplantableDefibrillatorDevice",
+      "temporal_references": [
+        {
+          "type": "SAE",
+          "reference": "ProcedurePerformedHospitalMeasuresCabg_precondition_47",
+          "range": {
+            "type": "IVL_PQ",
+            "high": {
+              "type": "PQ",
+              "unit": "d",
+              "value": "4",
+              "inclusive?": true,
+              "derived?": false
+            }
+          }
+        }
+      ]
+    },
+    "ProcedurePerformedHospitalMeasuresOtherCardiacSurgery_precondition_50": {
+      "title": "Hospital measures-Other Cardiac Surgery",
+      "description": "Procedure, Performed: Hospital measures-Other Cardiac Surgery",
+      "standard_category": "procedure",
+      "qds_data_type": "procedure_performed",
+      "code_list_id": "2.16.840.1.113883.3.666.5.701",
+      "type": "procedures",
+      "definition": "procedure",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "ProcedurePerformedHospitalMeasuresOtherCardiacSurgery",
+      "temporal_references": [
+        {
+          "type": "SAE",
+          "reference": "OccurrenceAScipMajorSurgicalProcedure1",
+          "range": {
+            "type": "IVL_PQ",
+            "high": {
+              "type": "PQ",
+              "unit": "d",
+              "value": "4",
+              "inclusive?": true,
+              "derived?": false
+            }
+          }
+        }
+      ]
+    },
+    "InterventionPerformedHospitalMeasuresIntermittentCatheterization_precondition_52": {
+      "title": "Hospital Measures-Intermittent Catheterization",
+      "description": "Intervention, Performed: Hospital Measures-Intermittent Catheterization",
+      "standard_category": "procedure",
+      "qds_data_type": "procedure_performed",
+      "code_list_id": "2.16.840.1.113883.3.666.5.825",
+      "type": "interventions",
+      "definition": "intervention",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "InterventionPerformedHospitalMeasuresIntermittentCatheterization",
+      "temporal_references": [
+        {
+          "type": "SBS",
+          "reference": "OccurrenceAScipMajorSurgicalProcedure1",
+          "range": {
+            "type": "IVL_PQ",
+            "low": {
+              "type": "PQ",
+              "unit": "min",
+              "value": "1",
+              "inclusive?": true,
+              "derived?": false
+            }
+          }
+        }
+      ]
+    },
+    "DeviceAppliedHospitalMeasuresSuprapubicCatheter_precondition_54": {
+      "title": "Hospital Measures-Suprapubic catheter",
+      "description": "Device, Applied: Hospital Measures-Suprapubic catheter",
+      "standard_category": "device",
+      "qds_data_type": "device_applied",
+      "code_list_id": "2.16.840.1.113883.3.666.5.827",
+      "type": "devices",
+      "definition": "device",
+      "status": "applied",
+      "hard_status": true,
+      "negation": false,
+      "source_data_criteria": "DeviceAppliedHospitalMeasuresSuprapubicCatheter",
+      "temporal_references": [
+        {
+          "type": "SBS",
+          "reference": "OccurrenceAScipMajorSurgicalProcedure1"
+        }
+      ]
+    },
+    "EncounterPerformedEncounterInpatient_precondition_56": {
+      "title": "Encounter Inpatient",
+      "description": "Encounter, Performed: Encounter Inpatient",
+      "standard_category": "encounter",
+      "qds_data_type": "encounter",
+      "code_list_id": "2.16.840.1.113883.3.666.5.307",
+      "type": "encounters",
+      "definition": "encounter",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "EncounterPerformedEncounterInpatient",
+      "field_values": {
+        "DISCHARGE_DATETIME": {
+          "type": "ANYNonNull"
+        }
+      },
+      "temporal_references": [
+        {
+          "type": "SAE",
+          "reference": "OccurrenceAScipMajorSurgicalProcedure1",
+          "range": {
+            "type": "IVL_PQ",
+            "high": {
+              "type": "PQ",
+              "unit": "d",
+              "value": "2",
+              "inclusive?": false,
+              "derived?": false
+            }
+          }
+        }
+      ]
+    },
+    "ProcedurePerformedHospitalMeasuresCabg_precondition_58": {
+      "title": "Hospital measures-CABG",
+      "description": "Procedure, Performed: Hospital measures-CABG",
+      "standard_category": "procedure",
+      "qds_data_type": "procedure_performed",
+      "code_list_id": "2.16.840.1.113883.3.666.5.694",
+      "type": "procedures",
+      "definition": "procedure",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "ProcedurePerformedHospitalMeasuresCabg",
+      "temporal_references": [
+        {
+          "type": "DURING",
+          "reference": "OccurrenceAEncounterInpatient3"
+        }
+      ]
+    },
+    "DeviceAppliedHospitalMeasuresPacemakerOrImplantableDefibrillatorDevice_precondition_59": {
+      "title": "Hospital measures-Pacemaker or implantable defibrillator device",
+      "description": "Device, Applied: Hospital measures-Pacemaker or implantable defibrillator device",
+      "standard_category": "device",
+      "qds_data_type": "device_applied",
+      "code_list_id": "2.16.840.1.113883.3.666.5.1086",
+      "type": "devices",
+      "definition": "device",
+      "status": "applied",
+      "hard_status": true,
+      "negation": false,
+      "source_data_criteria": "DeviceAppliedHospitalMeasuresPacemakerOrImplantableDefibrillatorDevice",
+      "temporal_references": [
+        {
+          "type": "SBS",
+          "reference": "ProcedurePerformedHospitalMeasuresCabg_precondition_58",
+          "range": {
+            "type": "IVL_PQ",
+            "high": {
+              "type": "PQ",
+              "unit": "d",
+              "value": "4",
+              "inclusive?": true,
+              "derived?": false
+            }
+          }
+        }
+      ]
+    },
+    "MedicationAdministeredHospitalMeasuresDiureticsRxnorm_precondition_61": {
+      "title": "Hospital Measures-Diuretics RxNorm",
+      "description": "Medication, Administered: Hospital Measures-Diuretics RxNorm",
+      "standard_category": "medication",
+      "qds_data_type": "medication_administered",
+      "code_list_id": "2.16.840.1.113883.3.666.5.829",
+      "type": "medications",
+      "definition": "medication",
+      "status": "administered",
+      "hard_status": true,
+      "negation": false,
+      "source_data_criteria": "MedicationAdministeredHospitalMeasuresDiureticsRxnorm",
+      "temporal_references": [
+        {
+          "type": "SAE",
+          "reference": "OccurrenceAScipMajorSurgicalProcedure1",
+          "range": {
+            "type": "IVL_PQ",
+            "high": {
+              "type": "PQ",
+              "unit": "d",
+              "value": "2",
+              "inclusive?": true,
+              "derived?": false
+            }
+          }
+        }
+      ]
+    },
+    "EncounterPerformedEncounterInpatient_precondition_63": {
+      "title": "Encounter Inpatient",
+      "description": "Encounter, Performed: Encounter Inpatient",
+      "standard_category": "encounter",
+      "qds_data_type": "encounter",
+      "code_list_id": "2.16.840.1.113883.3.666.5.307",
+      "type": "encounters",
+      "definition": "encounter",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "EncounterPerformedEncounterInpatient",
+      "field_values": {
+        "FACILITY_LOCATION": {
+          "type": "CD",
+          "code_list_id": "2.16.840.1.113883.3.666.5.1083",
+          "title": "Hospital Measures-ICU Locations"
+        }
+      },
+      "temporal_references": [
+        {
+          "type": "SAE",
+          "reference": "OccurrenceAScipMajorSurgicalProcedure1",
+          "range": {
+            "type": "IVL_PQ",
+            "high": {
+              "type": "PQ",
+              "unit": "d",
+              "value": "2",
+              "inclusive?": true,
+              "derived?": false
+            }
+          }
+        }
+      ]
+    },
+    "OccurrenceAScipMajorSurgicalProcedure1_precondition_67": {
+      "title": "SCIP Major Surgical Procedure",
+      "description": "Procedure, Performed: SCIP Major Surgical Procedure",
+      "standard_category": "procedure",
+      "qds_data_type": "procedure_performed",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.2",
+      "type": "procedures",
+      "definition": "procedure",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "specific_occurrence": "A",
+      "specific_occurrence_const": "PROCEDURE_PERFORMED_SCIP_MAJOR_SURGICAL_PROCEDURE",
+      "source_data_criteria": "OccurrenceAScipMajorSurgicalProcedure1",
+      "field_values": {
+        "ORDINAL": {
+          "type": "CD",
+          "code_list_id": "2.16.840.1.113883.3.526.2.8001",
+          "title": "Hospital Measures - Principal"
+        },
+        "INCISION_DATETIME": {
+          "type": "ANYNonNull"
+        }
+      }
+    },
+    "PatientCharacteristicExpired_precondition_68": {
+      "title": "Expired",
+      "description": "Patient Characteristic: Expired",
+      "standard_category": "individual_characteristic",
+      "qds_data_type": "individual_characteristic",
+      "code_list_id": "2.16.840.1.113883.3.666.5.730",
+      "type": "characteristic",
+      "definition": "patient_characteristic",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "PatientCharacteristicExpired",
+      "temporal_references": [
+        {
+          "type": "SAS",
+          "reference": "OccurrenceAScipMajorSurgicalProcedure1_precondition_67"
+        }
+      ]
+    },
+    "OccurrenceAScipMajorSurgicalProcedure1_precondition_70": {
+      "title": "SCIP Major Surgical Procedure",
+      "description": "Procedure, Performed: SCIP Major Surgical Procedure",
+      "standard_category": "procedure",
+      "qds_data_type": "procedure_performed",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.2",
+      "type": "procedures",
+      "definition": "procedure",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "specific_occurrence": "A",
+      "specific_occurrence_const": "PROCEDURE_PERFORMED_SCIP_MAJOR_SURGICAL_PROCEDURE",
+      "source_data_criteria": "OccurrenceAScipMajorSurgicalProcedure1",
+      "field_values": {
+        "STOP_DATETIME": {
+          "type": "ANYNonNull"
+        }
+      }
+    },
+    "PatientCharacteristicExpired_precondition_71": {
+      "title": "Expired",
+      "description": "Patient Characteristic: Expired",
+      "standard_category": "individual_characteristic",
+      "qds_data_type": "individual_characteristic",
+      "code_list_id": "2.16.840.1.113883.3.666.5.730",
+      "type": "characteristic",
+      "definition": "patient_characteristic",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "PatientCharacteristicExpired",
+      "temporal_references": [
+        {
+          "type": "SAS",
+          "reference": "OccurrenceAScipMajorSurgicalProcedure1_precondition_70",
+          "range": {
+            "type": "IVL_PQ",
+            "high": {
+              "type": "PQ",
+              "unit": "h",
+              "value": "6",
+              "inclusive?": true,
+              "derived?": false
+            }
+          }
+        }
+      ]
+    },
+    "DeviceAppliedHospitalMeasuresIndwellingUrinaryCatheter_precondition_77": {
+      "title": "Hospital Measures-Indwelling urinary catheter",
+      "description": "Device, Applied: Hospital Measures-Indwelling urinary catheter",
+      "standard_category": "device",
+      "qds_data_type": "device_applied",
+      "code_list_id": "2.16.840.1.113883.3.666.5.820",
+      "type": "devices",
+      "definition": "device",
+      "status": "applied",
+      "hard_status": true,
+      "negation": true,
+      "negation_code_list_id": "2.16.840.1.113883.3.117.1.7.1.18",
+      "source_data_criteria": "DeviceAppliedHospitalMeasuresIndwellingUrinaryCatheter",
+      "temporal_references": [
+        {
+          "type": "SAE",
+          "reference": "OccurrenceAScipMajorSurgicalProcedure1",
+          "range": {
+            "type": "IVL_PQ",
+            "high": {
+              "type": "PQ",
+              "unit": "d",
+              "value": "2",
+              "inclusive?": true,
+              "derived?": false
+            }
+          }
+        }
+      ]
+    },
+    "OccurrenceAHospitalMeasuresIndwellingUrinaryCatheter4_precondition_75": {
+      "title": "Hospital Measures-Indwelling urinary catheter",
+      "description": "Device, Applied: Hospital Measures-Indwelling urinary catheter",
+      "standard_category": "device",
+      "qds_data_type": "device_applied",
+      "code_list_id": "2.16.840.1.113883.3.666.5.820",
+      "type": "devices",
+      "definition": "device",
+      "status": "applied",
+      "hard_status": true,
+      "negation": false,
+      "specific_occurrence": "A",
+      "specific_occurrence_const": "DEVICE_APPLIED_HOSPITAL_MEASURES_INDWELLING_URINARY_CATHETER",
+      "source_data_criteria": "OccurrenceAHospitalMeasuresIndwellingUrinaryCatheter4",
+      "field_values": {
+        "REMOVAL_DATETIME": {
+          "type": "ANYNonNull"
+        },
+        "ANATOMICAL_STRUCTURE": {
+          "type": "CD",
+          "code_list_id": "2.16.840.1.113883.3.666.5.1130",
+          "title": "Hospital Measures-Urethra"
+        }
+      },
+      "temporal_references": [
+        {
+          "type": "SAE",
+          "reference": "OccurrenceAScipMajorSurgicalProcedure1",
+          "range": {
+            "type": "IVL_PQ",
+            "high": {
+              "type": "PQ",
+              "unit": "d",
+              "value": "2",
+              "inclusive?": true,
+              "derived?": false
+            }
+          }
+        }
+      ]
+    },
+    "OccurrenceBScipMajorSurgicalProcedure2_precondition_82": {
+      "title": "SCIP Major Surgical Procedure",
+      "description": "Procedure, Performed: SCIP Major Surgical Procedure",
+      "standard_category": "procedure",
+      "qds_data_type": "procedure_performed",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.2",
+      "type": "procedures",
+      "definition": "procedure",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "specific_occurrence": "B",
+      "specific_occurrence_const": "PROCEDURE_PERFORMED_SCIP_MAJOR_SURGICAL_PROCEDURE",
+      "source_data_criteria": "OccurrenceBScipMajorSurgicalProcedure2",
+      "temporal_references": [
+        {
+          "type": "SBS",
+          "reference": "OccurrenceAScipMajorSurgicalProcedure1"
+        }
+      ],
+      "subset_operators": [
+        {
+          "type": "RECENT"
+        }
+      ]
+    },
+    "OccurrenceBScipMajorSurgicalProcedure2_precondition_85": {
+      "title": "SCIP Major Surgical Procedure",
+      "description": "Procedure, Performed: SCIP Major Surgical Procedure",
+      "standard_category": "procedure",
+      "qds_data_type": "procedure_performed",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.2",
+      "type": "procedures",
+      "definition": "procedure",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "specific_occurrence": "B",
+      "specific_occurrence_const": "PROCEDURE_PERFORMED_SCIP_MAJOR_SURGICAL_PROCEDURE",
+      "source_data_criteria": "OccurrenceBScipMajorSurgicalProcedure2",
+      "temporal_references": [
+        {
+          "type": "SBS",
+          "reference": "OccurrenceAScipMajorSurgicalProcedure1",
+          "range": {
+            "type": "IVL_PQ",
+            "high": {
+              "type": "PQ",
+              "unit": "d",
+              "value": "3",
+              "inclusive?": true,
+              "derived?": false
+            }
+          }
+        }
+      ]
+    },
+    "OccurrenceBScipMajorSurgicalProcedure2_precondition_89": {
+      "title": "SCIP Major Surgical Procedure",
+      "description": "Procedure, Performed: SCIP Major Surgical Procedure",
+      "standard_category": "procedure",
+      "qds_data_type": "procedure_performed",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.2",
+      "type": "procedures",
+      "definition": "procedure",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "specific_occurrence": "B",
+      "specific_occurrence_const": "PROCEDURE_PERFORMED_SCIP_MAJOR_SURGICAL_PROCEDURE",
+      "source_data_criteria": "OccurrenceBScipMajorSurgicalProcedure2",
+      "temporal_references": [
+        {
+          "type": "SBS",
+          "reference": "OccurrenceAScipMajorSurgicalProcedure1"
+        }
+      ],
+      "subset_operators": [
+        {
+          "type": "RECENT"
+        }
+      ]
+    },
+    "OccurrenceBScipMajorSurgicalProcedure2_precondition_92": {
+      "title": "SCIP Major Surgical Procedure",
+      "description": "Procedure, Performed: SCIP Major Surgical Procedure",
+      "standard_category": "procedure",
+      "qds_data_type": "procedure_performed",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.2",
+      "type": "procedures",
+      "definition": "procedure",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "specific_occurrence": "B",
+      "specific_occurrence_const": "PROCEDURE_PERFORMED_SCIP_MAJOR_SURGICAL_PROCEDURE",
+      "source_data_criteria": "OccurrenceBScipMajorSurgicalProcedure2",
+      "temporal_references": [
+        {
+          "type": "SAE",
+          "reference": "OccurrenceAScipMajorSurgicalProcedure1",
+          "range": {
+            "type": "IVL_PQ",
+            "high": {
+              "type": "PQ",
+              "unit": "d",
+              "value": "3",
+              "inclusive?": true,
+              "derived?": false
+            }
+          }
+        }
+      ]
+    },
+    "PatientCharacteristicClinicalTrialParticipant_precondition_98": {
+      "title": "Clinical Trial Participant",
+      "description": "Patient Characteristic: Clinical Trial Participant",
+      "standard_category": "individual_characteristic",
+      "qds_data_type": "individual_characteristic",
+      "code_list_id": "2.16.840.1.113883.3.526.2.643",
+      "type": "characteristic",
+      "definition": "patient_characteristic",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "PatientCharacteristicClinicalTrialParticipant",
+      "temporal_references": [
+        {
+          "type": "SBE",
+          "reference": "OccurrenceAEncounterInpatient3"
+        }
+      ]
+    },
+    "PatientCharacteristicClinicalTrialParticipant_precondition_96": {
+      "title": "Clinical Trial Participant",
+      "description": "Patient Characteristic: Clinical Trial Participant",
+      "standard_category": "individual_characteristic",
+      "qds_data_type": "individual_characteristic",
+      "code_list_id": "2.16.840.1.113883.3.526.2.643",
+      "type": "characteristic",
+      "definition": "patient_characteristic",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "PatientCharacteristicClinicalTrialParticipant",
+      "temporal_references": [
+        {
+          "type": "EBS",
+          "reference": "OccurrenceAEncounterInpatient3"
+        }
+      ]
+    },
+    "OccurrenceAHospitalMeasuresIndwellingUrinaryCatheter4_precondition_106": {
+      "title": "Hospital Measures-Indwelling urinary catheter",
+      "description": "Device, Applied: Hospital Measures-Indwelling urinary catheter",
+      "standard_category": "device",
+      "qds_data_type": "device_applied",
+      "code_list_id": "2.16.840.1.113883.3.666.5.820",
+      "type": "devices",
+      "definition": "device",
+      "status": "applied",
+      "hard_status": true,
+      "negation": false,
+      "specific_occurrence": "A",
+      "specific_occurrence_const": "DEVICE_APPLIED_HOSPITAL_MEASURES_INDWELLING_URINARY_CATHETER",
+      "source_data_criteria": "OccurrenceAHospitalMeasuresIndwellingUrinaryCatheter4",
+      "field_values": {
+        "REMOVAL_DATETIME": {
+          "type": "ANYNonNull"
+        },
+        "ANATOMICAL_STRUCTURE": {
+          "type": "CD",
+          "code_list_id": "2.16.840.1.113883.3.666.5.1130",
+          "title": "Hospital Measures-Urethra"
+        }
+      },
+      "temporal_references": [
+        {
+          "type": "SAE",
+          "reference": "OccurrenceAScipMajorSurgicalProcedure1",
+          "range": {
+            "type": "IVL_PQ",
+            "high": {
+              "type": "PQ",
+              "unit": "d",
+              "value": "2",
+              "inclusive?": true,
+              "derived?": false
+            }
+          }
+        }
+      ]
+    },
+    "OccurrenceAHospitalMeasuresIndwellingUrinaryCatheter4_precondition_109": {
+      "title": "Hospital Measures-Indwelling urinary catheter",
+      "description": "Device, Applied: Hospital Measures-Indwelling urinary catheter",
+      "standard_category": "device",
+      "qds_data_type": "device_applied",
+      "code_list_id": "2.16.840.1.113883.3.666.5.820",
+      "type": "devices",
+      "definition": "device",
+      "status": "applied",
+      "hard_status": true,
+      "negation": false,
+      "specific_occurrence": "A",
+      "specific_occurrence_const": "DEVICE_APPLIED_HOSPITAL_MEASURES_INDWELLING_URINARY_CATHETER",
+      "source_data_criteria": "OccurrenceAHospitalMeasuresIndwellingUrinaryCatheter4",
+      "field_values": {
+        "START_DATETIME": {
+          "type": "ANYNonNull"
+        },
+        "ANATOMICAL_STRUCTURE": {
+          "type": "CD",
+          "code_list_id": "2.16.840.1.113883.3.666.5.1130",
+          "title": "Hospital Measures-Urethra"
+        }
+      },
+      "temporal_references": [
+        {
+          "type": "SAS",
+          "reference": "OccurrenceAEncounterInpatient3",
+          "range": {
+            "type": "IVL_PQ",
+            "low": {
+              "type": "PQ",
+              "unit": "min",
+              "value": "1",
+              "inclusive?": true,
+              "derived?": false
+            }
+          }
+        }
+      ]
+    },
+    "OccurrenceAScipMajorSurgicalProcedure1_precondition_111": {
+      "title": "SCIP Major Surgical Procedure",
+      "description": "Procedure, Performed: SCIP Major Surgical Procedure",
+      "standard_category": "procedure",
+      "qds_data_type": "procedure_performed",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.2",
+      "type": "procedures",
+      "definition": "procedure",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "specific_occurrence": "A",
+      "specific_occurrence_const": "PROCEDURE_PERFORMED_SCIP_MAJOR_SURGICAL_PROCEDURE",
+      "source_data_criteria": "OccurrenceAScipMajorSurgicalProcedure1",
+      "field_values": {
+        "ORDINAL": {
+          "type": "CD",
+          "code_list_id": "2.16.840.1.113883.3.526.2.8001",
+          "title": "Hospital Measures - Principal"
+        }
+      },
+      "temporal_references": [
+        {
+          "type": "EAE",
+          "reference": "OccurrenceAHospitalMeasuresJointCommissionEvidenceOfASurgicalProcedureRequiringGeneralOrNeuraxialAnesthesia5"
+        }
+      ]
+    },
+    "OccurrenceAHospitalMeasuresJointCommissionEvidenceOfASurgicalProcedureRequiringGeneralOrNeuraxialAnesthesia5_precondition_113": {
+      "title": "Hospital Measures-Joint Commission Evidence of a surgical procedure requiring general or neuraxial anesthesia",
+      "description": "Procedure, Performed: Hospital Measures-Joint Commission Evidence of a surgical procedure requiring general or neuraxial anesthesia",
+      "standard_category": "procedure",
+      "qds_data_type": "procedure_performed",
+      "code_list_id": "1.3.6.1.4.1.33895.1.3.0.31",
+      "type": "procedures",
+      "definition": "procedure",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "specific_occurrence": "A",
+      "specific_occurrence_const": "PROCEDURE_PERFORMED_HOSPITAL_MEASURES_JOINT_COMMISSION_EVIDENCE_OF_A_SURGICAL_PROCEDURE_REQUIRING_GENERAL_OR_NEURAXIAL_ANESTHESIA",
+      "source_data_criteria": "OccurrenceAHospitalMeasuresJointCommissionEvidenceOfASurgicalProcedureRequiringGeneralOrNeuraxialAnesthesia5",
+      "temporal_references": [
+        {
+          "type": "EDU",
+          "reference": "OccurrenceAEncounterInpatient3"
+        }
+      ]
+    },
+    "OccurrenceAHospitalMeasuresIndwellingUrinaryCatheter4_precondition_115": {
+      "title": "Hospital Measures-Indwelling urinary catheter",
+      "description": "Device, Applied: Hospital Measures-Indwelling urinary catheter",
+      "standard_category": "device",
+      "qds_data_type": "device_applied",
+      "code_list_id": "2.16.840.1.113883.3.666.5.820",
+      "type": "devices",
+      "definition": "device",
+      "status": "applied",
+      "hard_status": true,
+      "negation": false,
+      "specific_occurrence": "A",
+      "specific_occurrence_const": "DEVICE_APPLIED_HOSPITAL_MEASURES_INDWELLING_URINARY_CATHETER",
+      "source_data_criteria": "OccurrenceAHospitalMeasuresIndwellingUrinaryCatheter4",
+      "field_values": {
+        "START_DATETIME": {
+          "type": "ANYNonNull"
+        },
+        "ANATOMICAL_STRUCTURE": {
+          "type": "CD",
+          "code_list_id": "2.16.840.1.113883.3.666.5.1130",
+          "title": "Hospital Measures-Urethra"
+        }
+      }
+    },
+    "OccurrenceAHospitalMeasuresJointCommissionEvidenceOfASurgicalProcedureRequiringGeneralOrNeuraxialAnesthesia5_precondition_116": {
+      "title": "Hospital Measures-Joint Commission Evidence of a surgical procedure requiring general or neuraxial anesthesia",
+      "description": "Procedure, Performed: Hospital Measures-Joint Commission Evidence of a surgical procedure requiring general or neuraxial anesthesia",
+      "standard_category": "procedure",
+      "qds_data_type": "procedure_performed",
+      "code_list_id": "1.3.6.1.4.1.33895.1.3.0.31",
+      "type": "procedures",
+      "definition": "procedure",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "specific_occurrence": "A",
+      "specific_occurrence_const": "PROCEDURE_PERFORMED_HOSPITAL_MEASURES_JOINT_COMMISSION_EVIDENCE_OF_A_SURGICAL_PROCEDURE_REQUIRING_GENERAL_OR_NEURAXIAL_ANESTHESIA",
+      "source_data_criteria": "OccurrenceAHospitalMeasuresJointCommissionEvidenceOfASurgicalProcedureRequiringGeneralOrNeuraxialAnesthesia5",
+      "field_values": {
+        "STOP_DATETIME": {
+          "type": "ANYNonNull"
+        }
+      },
+      "temporal_references": [
+        {
+          "type": "EAS",
+          "reference": "OccurrenceAHospitalMeasuresIndwellingUrinaryCatheter4_precondition_115"
+        }
+      ]
+    },
+    "OccurrenceAHospitalMeasuresIndwellingUrinaryCatheter4_precondition_118": {
+      "title": "Hospital Measures-Indwelling urinary catheter",
+      "description": "Device, Applied: Hospital Measures-Indwelling urinary catheter",
+      "standard_category": "device",
+      "qds_data_type": "device_applied",
+      "code_list_id": "2.16.840.1.113883.3.666.5.820",
+      "type": "devices",
+      "definition": "device",
+      "status": "applied",
+      "hard_status": true,
+      "negation": false,
+      "specific_occurrence": "A",
+      "specific_occurrence_const": "DEVICE_APPLIED_HOSPITAL_MEASURES_INDWELLING_URINARY_CATHETER",
+      "source_data_criteria": "OccurrenceAHospitalMeasuresIndwellingUrinaryCatheter4",
+      "field_values": {
+        "START_DATETIME": {
+          "type": "ANYNonNull"
+        },
+        "ANATOMICAL_STRUCTURE": {
+          "type": "CD",
+          "code_list_id": "2.16.840.1.113883.3.666.5.1130",
+          "title": "Hospital Measures-Urethra"
+        }
+      }
+    },
+    "OccurrenceAHospitalMeasuresJointCommissionEvidenceOfASurgicalProcedureRequiringGeneralOrNeuraxialAnesthesia5_precondition_119": {
+      "title": "Hospital Measures-Joint Commission Evidence of a surgical procedure requiring general or neuraxial anesthesia",
+      "description": "Procedure, Performed: Hospital Measures-Joint Commission Evidence of a surgical procedure requiring general or neuraxial anesthesia",
+      "standard_category": "procedure",
+      "qds_data_type": "procedure_performed",
+      "code_list_id": "1.3.6.1.4.1.33895.1.3.0.31",
+      "type": "procedures",
+      "definition": "procedure",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "specific_occurrence": "A",
+      "specific_occurrence_const": "PROCEDURE_PERFORMED_HOSPITAL_MEASURES_JOINT_COMMISSION_EVIDENCE_OF_A_SURGICAL_PROCEDURE_REQUIRING_GENERAL_OR_NEURAXIAL_ANESTHESIA",
+      "source_data_criteria": "OccurrenceAHospitalMeasuresJointCommissionEvidenceOfASurgicalProcedureRequiringGeneralOrNeuraxialAnesthesia5",
+      "field_values": {
+        "STOP_DATETIME": {
+          "type": "ANYNonNull"
+        }
+      },
+      "temporal_references": [
+        {
+          "type": "EBS",
+          "reference": "OccurrenceAHospitalMeasuresIndwellingUrinaryCatheter4_precondition_118",
+          "range": {
+            "type": "IVL_PQ",
+            "high": {
+              "type": "PQ",
+              "unit": "h",
+              "value": "6",
+              "inclusive?": true,
+              "derived?": false
+            }
+          }
+        }
+      ]
+    },
+    "OccurrenceAEncounterInpatient3_precondition_124": {
+      "title": "Encounter Inpatient",
+      "description": "Encounter, Performed: Encounter Inpatient",
+      "standard_category": "encounter",
+      "qds_data_type": "encounter",
+      "code_list_id": "2.16.840.1.113883.3.666.5.307",
+      "type": "encounters",
+      "definition": "encounter",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "specific_occurrence": "A",
+      "specific_occurrence_const": "ENCOUNTER_PERFORMED_ENCOUNTER_INPATIENT",
+      "source_data_criteria": "OccurrenceAEncounterInpatient3",
+      "field_values": {
+        "DISCHARGE_DATETIME": {
+          "type": "ANYNonNull"
+        }
+      },
+      "temporal_references": [
+        {
+          "type": "DURING",
+          "reference": "MeasurePeriod"
+        }
+      ]
+    },
+    "OccurrenceAEncounterInpatient3_precondition_126": {
+      "title": "Encounter Inpatient",
+      "description": "Encounter, Performed: Encounter Inpatient",
+      "standard_category": "encounter",
+      "qds_data_type": "encounter",
+      "code_list_id": "2.16.840.1.113883.3.666.5.307",
+      "type": "encounters",
+      "definition": "encounter",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "specific_occurrence": "A",
+      "specific_occurrence_const": "ENCOUNTER_PERFORMED_ENCOUNTER_INPATIENT",
+      "source_data_criteria": "OccurrenceAEncounterInpatient3",
+      "field_values": {
+        "LENGTH_OF_STAY": {
+          "type": "IVL_PQ",
+          "high": {
+            "type": "PQ",
+            "unit": "d",
+            "value": "120",
+            "inclusive?": true,
+            "derived?": false
+          }
+        }
+      }
+    },
+    "OccurrenceAEncounterInpatient3_precondition_128": {
+      "title": "Encounter Inpatient",
+      "description": "Encounter, Performed: Encounter Inpatient",
+      "standard_category": "encounter",
+      "qds_data_type": "encounter",
+      "code_list_id": "2.16.840.1.113883.3.666.5.307",
+      "type": "encounters",
+      "definition": "encounter",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "specific_occurrence": "A",
+      "specific_occurrence_const": "ENCOUNTER_PERFORMED_ENCOUNTER_INPATIENT",
+      "source_data_criteria": "OccurrenceAEncounterInpatient3",
+      "field_values": {
+        "ADMISSION_DATETIME": {
+          "type": "ANYNonNull"
+        }
+      }
+    },
+    "PatientCharacteristicBirthdateBirthDate_precondition_129": {
+      "title": "birth date",
+      "description": "Patient Characteristic Birthdate: birth date",
+      "standard_category": "individual_characteristic",
+      "qds_data_type": "individual_characteristic",
+      "code_list_id": "2.16.840.1.113883.3.560.100.4",
+      "property": "birthtime",
+      "type": "characteristic",
+      "definition": "patient_characteristic_birthdate",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "PatientCharacteristicBirthdateBirthDate",
+      "inline_code_list": {
+        "LOINC": [
+          "21112-8"
+        ]
+      },
+      "temporal_references": [
+        {
+          "type": "SBS",
+          "reference": "OccurrenceAEncounterInpatient3_precondition_128",
+          "range": {
+            "type": "IVL_PQ",
+            "low": {
+              "type": "PQ",
+              "unit": "a",
+              "value": "18",
+              "inclusive?": true,
+              "derived?": false
+            }
+          }
+        }
+      ]
+    }
+  },
+  "source_data_criteria": {
+    "MedicationAdministeredHospitalMeasuresDiureticsRxnorm": {
+      "title": "Hospital Measures-Diuretics RxNorm",
+      "description": "Medication, Administered: Hospital Measures-Diuretics RxNorm",
+      "standard_category": "medication",
+      "qds_data_type": "medication_administered",
+      "code_list_id": "2.16.840.1.113883.3.666.5.829",
+      "type": "medications",
+      "definition": "medication",
+      "status": "administered",
+      "hard_status": true,
+      "negation": false,
+      "source_data_criteria": "MedicationAdministeredHospitalMeasuresDiureticsRxnorm"
+    },
+    "DeviceAppliedHospitalMeasuresIndwellingUrinaryCatheter": {
+      "title": "Hospital Measures-Indwelling urinary catheter",
+      "description": "Device, Applied: Hospital Measures-Indwelling urinary catheter",
+      "standard_category": "device",
+      "qds_data_type": "device_applied",
+      "code_list_id": "2.16.840.1.113883.3.666.5.820",
+      "type": "devices",
+      "definition": "device",
+      "status": "applied",
+      "hard_status": true,
+      "negation": false,
+      "source_data_criteria": "DeviceAppliedHospitalMeasuresIndwellingUrinaryCatheter"
+    },
+    "InterventionPerformedHospitalMeasuresIntermittentCatheterization": {
+      "title": "Hospital Measures-Intermittent Catheterization",
+      "description": "Intervention, Performed: Hospital Measures-Intermittent Catheterization",
+      "standard_category": "procedure",
+      "qds_data_type": "procedure_performed",
+      "code_list_id": "2.16.840.1.113883.3.666.5.825",
+      "type": "interventions",
+      "definition": "intervention",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "InterventionPerformedHospitalMeasuresIntermittentCatheterization"
+    },
+    "PhysicalExamFindingHospitalMeasuresScipUrinaryDiversion": {
+      "title": "Hospital Measures-SCIP urinary diversion",
+      "description": "Physical Exam, Finding: Hospital Measures-SCIP urinary diversion",
+      "standard_category": "physical_exam",
+      "qds_data_type": "physical_exam",
+      "code_list_id": "2.16.840.1.113883.3.666.5.822",
+      "type": "physical_exams",
+      "definition": "physical_exam",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "PhysicalExamFindingHospitalMeasuresScipUrinaryDiversion"
+    },
+    "ProcedurePerformedHospitalMeasuresScipUrinaryDiversionProcedures": {
+      "title": "Hospital Measures-SCIP urinary diversion procedures",
+      "description": "Procedure, Performed: Hospital Measures-SCIP urinary diversion procedures",
+      "standard_category": "procedure",
+      "qds_data_type": "procedure_performed",
+      "code_list_id": "2.16.840.1.113883.3.666.5.1050",
+      "type": "procedures",
+      "definition": "procedure",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "ProcedurePerformedHospitalMeasuresScipUrinaryDiversionProcedures"
+    },
+    "ProcedurePerformedHospitalMeasuresScipUrologicalPerinealProceduresWithPotentialNeedOfIndwellingCatheters": {
+      "title": "Hospital Measures-SCIP Urological/Perineal procedures with potential need of indwelling catheters",
+      "description": "Procedure, Performed: Hospital Measures-SCIP Urological/Perineal procedures with potential need of indwelling catheters",
+      "standard_category": "procedure",
+      "qds_data_type": "procedure_performed",
+      "code_list_id": "2.16.840.1.113883.3.666.5.819",
+      "type": "procedures",
+      "definition": "procedure",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "ProcedurePerformedHospitalMeasuresScipUrologicalPerinealProceduresWithPotentialNeedOfIndwellingCatheters"
+    },
+    "DeviceAppliedHospitalMeasuresSuprapubicCatheter": {
+      "title": "Hospital Measures-Suprapubic catheter",
+      "description": "Device, Applied: Hospital Measures-Suprapubic catheter",
+      "standard_category": "device",
+      "qds_data_type": "device_applied",
+      "code_list_id": "2.16.840.1.113883.3.666.5.827",
+      "type": "devices",
+      "definition": "device",
+      "status": "applied",
+      "hard_status": true,
+      "negation": false,
+      "source_data_criteria": "DeviceAppliedHospitalMeasuresSuprapubicCatheter"
+    },
+    "ProcedurePerformedHospitalMeasuresCabg": {
+      "title": "Hospital measures-CABG",
+      "description": "Procedure, Performed: Hospital measures-CABG",
+      "standard_category": "procedure",
+      "qds_data_type": "procedure_performed",
+      "code_list_id": "2.16.840.1.113883.3.666.5.694",
+      "type": "procedures",
+      "definition": "procedure",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "ProcedurePerformedHospitalMeasuresCabg"
+    },
+    "DeviceAppliedHospitalMeasuresPacemakerOrImplantableDefibrillatorDevice": {
+      "title": "Hospital measures-Pacemaker or implantable defibrillator device",
+      "description": "Device, Applied: Hospital measures-Pacemaker or implantable defibrillator device",
+      "standard_category": "device",
+      "qds_data_type": "device_applied",
+      "code_list_id": "2.16.840.1.113883.3.666.5.1086",
+      "type": "devices",
+      "definition": "device",
+      "status": "applied",
+      "hard_status": true,
+      "negation": false,
+      "source_data_criteria": "DeviceAppliedHospitalMeasuresPacemakerOrImplantableDefibrillatorDevice"
+    },
+    "PatientCharacteristicClinicalTrialParticipant": {
+      "title": "Clinical Trial Participant",
+      "description": "Patient Characteristic: Clinical Trial Participant",
+      "standard_category": "individual_characteristic",
+      "qds_data_type": "individual_characteristic",
+      "code_list_id": "2.16.840.1.113883.3.526.2.643",
+      "type": "characteristic",
+      "definition": "patient_characteristic",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "PatientCharacteristicClinicalTrialParticipant"
+    },
+    "ProcedurePerformedHospitalMeasuresOtherCardiacSurgery": {
+      "title": "Hospital measures-Other Cardiac Surgery",
+      "description": "Procedure, Performed: Hospital measures-Other Cardiac Surgery",
+      "standard_category": "procedure",
+      "qds_data_type": "procedure_performed",
+      "code_list_id": "2.16.840.1.113883.3.666.5.701",
+      "type": "procedures",
+      "definition": "procedure",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "ProcedurePerformedHospitalMeasuresOtherCardiacSurgery"
+    },
+    "ProcedurePerformedHospitalMeasuresPacemakerOrImplantableDefibrillatorProcedure": {
+      "title": "Hospital Measures-Pacemaker or implantable defibrillator procedure",
+      "description": "Procedure, Performed: Hospital Measures-Pacemaker or implantable defibrillator procedure",
+      "standard_category": "procedure",
+      "qds_data_type": "procedure_performed",
+      "code_list_id": "2.16.840.1.113883.3.666.5.1087",
+      "type": "procedures",
+      "definition": "procedure",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "ProcedurePerformedHospitalMeasuresPacemakerOrImplantableDefibrillatorProcedure"
+    },
+    "ProcedurePerformedHospitalMeasuresJointCommissionEvidenceOfASurgicalProcedureRequiringGeneralOrNeuraxialAnesthesia": {
+      "title": "Hospital Measures-Joint Commission Evidence of a surgical procedure requiring general or neuraxial anesthesia",
+      "description": "Procedure, Performed: Hospital Measures-Joint Commission Evidence of a surgical procedure requiring general or neuraxial anesthesia",
+      "standard_category": "procedure",
+      "qds_data_type": "procedure_performed",
+      "code_list_id": "1.3.6.1.4.1.33895.1.3.0.31",
+      "type": "procedures",
+      "definition": "procedure",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "ProcedurePerformedHospitalMeasuresJointCommissionEvidenceOfASurgicalProcedureRequiringGeneralOrNeuraxialAnesthesia"
+    },
+    "PatientCharacteristicBirthdateBirthDate": {
+      "title": "birth date",
+      "description": "Patient Characteristic Birthdate: birth date",
+      "standard_category": "individual_characteristic",
+      "qds_data_type": "individual_characteristic",
+      "code_list_id": "2.16.840.1.113883.3.560.100.4",
+      "property": "birthtime",
+      "type": "characteristic",
+      "definition": "patient_characteristic_birthdate",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "PatientCharacteristicBirthdateBirthDate",
+      "inline_code_list": {
+        "LOINC": [
+          "21112-8"
+        ]
+      }
+    },
+    "PatientCharacteristicExpired": {
+      "title": "Expired",
+      "description": "Patient Characteristic: Expired",
+      "standard_category": "individual_characteristic",
+      "qds_data_type": "individual_characteristic",
+      "code_list_id": "2.16.840.1.113883.3.666.5.730",
+      "type": "characteristic",
+      "definition": "patient_characteristic",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "PatientCharacteristicExpired"
+    },
+    "EncounterPerformedEncounterInpatient": {
+      "title": "Encounter Inpatient",
+      "description": "Encounter, Performed: Encounter Inpatient",
+      "standard_category": "encounter",
+      "qds_data_type": "encounter",
+      "code_list_id": "2.16.840.1.113883.3.666.5.307",
+      "type": "encounters",
+      "definition": "encounter",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "EncounterPerformedEncounterInpatient"
+    },
+    "ProcedurePerformedScipMajorSurgicalProcedure": {
+      "title": "SCIP Major Surgical Procedure",
+      "description": "Procedure, Performed: SCIP Major Surgical Procedure",
+      "standard_category": "procedure",
+      "qds_data_type": "procedure_performed",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.2",
+      "type": "procedures",
+      "definition": "procedure",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "ProcedurePerformedScipMajorSurgicalProcedure"
+    },
+    "DeviceAppliedNotDoneMedicalReasons": {
+      "title": "Medical Reasons",
+      "description": "Device, Applied not done: Medical Reasons",
+      "standard_category": "device",
+      "qds_data_type": "device_applied",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.18",
+      "type": "devices",
+      "definition": "device",
+      "status": "applied",
+      "hard_status": true,
+      "negation": true,
+      "source_data_criteria": "DeviceAppliedNotDoneMedicalReasons"
+    },
+    "OccurrenceAScipMajorSurgicalProcedure1": {
+      "title": "SCIP Major Surgical Procedure",
+      "description": "Procedure, Performed: SCIP Major Surgical Procedure",
+      "standard_category": "procedure",
+      "qds_data_type": "procedure_performed",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.2",
+      "type": "procedures",
+      "definition": "procedure",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "specific_occurrence": "A",
+      "specific_occurrence_const": "PROCEDURE_PERFORMED_SCIP_MAJOR_SURGICAL_PROCEDURE",
+      "source_data_criteria": "OccurrenceAScipMajorSurgicalProcedure1"
+    },
+    "OccurrenceBScipMajorSurgicalProcedure2": {
+      "title": "SCIP Major Surgical Procedure",
+      "description": "Procedure, Performed: SCIP Major Surgical Procedure",
+      "standard_category": "procedure",
+      "qds_data_type": "procedure_performed",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.2",
+      "type": "procedures",
+      "definition": "procedure",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "specific_occurrence": "B",
+      "specific_occurrence_const": "PROCEDURE_PERFORMED_SCIP_MAJOR_SURGICAL_PROCEDURE",
+      "source_data_criteria": "OccurrenceBScipMajorSurgicalProcedure2"
+    },
+    "OccurrenceAEncounterInpatient3": {
+      "title": "Encounter Inpatient",
+      "description": "Encounter, Performed: Encounter Inpatient",
+      "standard_category": "encounter",
+      "qds_data_type": "encounter",
+      "code_list_id": "2.16.840.1.113883.3.666.5.307",
+      "type": "encounters",
+      "definition": "encounter",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "specific_occurrence": "A",
+      "specific_occurrence_const": "ENCOUNTER_PERFORMED_ENCOUNTER_INPATIENT",
+      "source_data_criteria": "OccurrenceAEncounterInpatient3"
+    },
+    "OccurrenceAHospitalMeasuresIndwellingUrinaryCatheter4": {
+      "title": "Hospital Measures-Indwelling urinary catheter",
+      "description": "Device, Applied: Hospital Measures-Indwelling urinary catheter",
+      "standard_category": "device",
+      "qds_data_type": "device_applied",
+      "code_list_id": "2.16.840.1.113883.3.666.5.820",
+      "type": "devices",
+      "definition": "device",
+      "status": "applied",
+      "hard_status": true,
+      "negation": false,
+      "specific_occurrence": "A",
+      "specific_occurrence_const": "DEVICE_APPLIED_HOSPITAL_MEASURES_INDWELLING_URINARY_CATHETER",
+      "source_data_criteria": "OccurrenceAHospitalMeasuresIndwellingUrinaryCatheter4"
+    },
+    "OccurrenceAHospitalMeasuresJointCommissionEvidenceOfASurgicalProcedureRequiringGeneralOrNeuraxialAnesthesia5": {
+      "title": "Hospital Measures-Joint Commission Evidence of a surgical procedure requiring general or neuraxial anesthesia",
+      "description": "Procedure, Performed: Hospital Measures-Joint Commission Evidence of a surgical procedure requiring general or neuraxial anesthesia",
+      "standard_category": "procedure",
+      "qds_data_type": "procedure_performed",
+      "code_list_id": "1.3.6.1.4.1.33895.1.3.0.31",
+      "type": "procedures",
+      "definition": "procedure",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "specific_occurrence": "A",
+      "specific_occurrence_const": "PROCEDURE_PERFORMED_HOSPITAL_MEASURES_JOINT_COMMISSION_EVIDENCE_OF_A_SURGICAL_PROCEDURE_REQUIRING_GENERAL_OR_NEURAXIAL_ANESTHESIA",
+      "source_data_criteria": "OccurrenceAHospitalMeasuresJointCommissionEvidenceOfASurgicalProcedureRequiringGeneralOrNeuraxialAnesthesia5"
+    }
+  },
+  "attributes": [
+    {
+      "id": "COPYRIGHT",
+      "code": "COPY",
+      "value": "Measure specifications are in the Public Domain\r\n\r\nLOINC(R) is a registered trademark of the Regenstrief Institute.\r\n\r\nThis material contains SNOMED Clinical Terms (R) (SNOMED CT(c)) copyright 2004-2010 International Health Terminology Standards Development Organization. All rights reserved.",
+      "name": "Copyright"
+    },
+    {
+      "id": "MEASURE_SCORING",
+      "code": "MSRSCORE",
+      "name": "Measure Scoring"
+    },
+    {
+      "id": "MEASURE_TYPE",
+      "code": "MSRTYPE",
+      "name": "Measure Type"
+    },
+    {
+      "id": "STRATIFICATION",
+      "code": "STRAT",
+      "value": "None",
+      "name": "Stratification"
+    },
+    {
+      "id": "RISK_ADJUSTMENT",
+      "code": "MSRADJ",
+      "value": "None",
+      "name": "Risk Adjustment"
+    },
+    {
+      "id": "RATE_AGGREGATION",
+      "code": "MSRAGG",
+      "value": "None",
+      "name": "Rate Aggregation"
+    },
+    {
+      "id": "RATIONALE",
+      "code": "RAT",
+      "value": "It is well-established that the risk of catheter-associated urinary tract infection (UTI) increases with increasing duration of indwelling urinary catheterization. In 2000, Saint reported the results of a pooled analysis of 10 prospective trials dating from 1983 to 1995 which estimated that bacteriuria will develop in 26% of patients after 2 to 10 days of catheterization (95% CI 23-25%). Additional pooled analyses demonstrated that 24% (95% CI 16% to 32%) of those patients will develop symptomatic UTI and bacteremia will develop in 3.6%. Among surgical patients, two studies of postoperative patients discharged to subacute care with urinary catheters were more likely to be readmitted to the hospital with a UTI compared with those who had catheters removed prior to hospital discharges (Wald, 2005 and Wald, 2008). Among selected major surgical patients in the Surgical Infection Project (SIP) cohort, Wald demonstrated (in press) that 85% had perioperative indwelling catheters placed and half of those patients had catheters for greater than 2 days postoperatively. These patients were twice as likely to develop UTIs prior to hospital discharge. On multivariate analysis, those who had indwelling bladder catheters for more than 2 days postoperatively were 21% more likely to develop UTI, significantly less likely to be discharged to home, and had a significant increase in mortality at 30 days. Additional analyses suggest that there is sizeable variation in the duration of postoperative catheterization among hospitals and that hospital factors may account for this variation. In 2006, Stephan reported the results of a multifaceted intervention study in orthopedic surgery patients in which protocols limiting the use and duration of postoperative catheterization played a large role. They reported a resultant 60% reduction in UTI incidence-density.",
+      "name": "Rationale"
+    },
+    {
+      "id": "CLINICAL_RECOMMENDATION_STATEMENT",
+      "code": "CRS",
+      "value": "Minimizing the duration of indwelling urinary catheterization can reduce the risk of catheter-associated urinary tract infection.",
+      "name": "Clinical Recommendation Statement"
+    },
+    {
+      "id": "IMPROVEMENT_NOTATION",
+      "code": "IDUR",
+      "value": "Higher score indicates better quality.",
+      "name": "Improvement Notation"
+    },
+    {
+      "id": "NQF_ID_NUMBER",
+      "code": "OTH",
+      "value": "0453",
+      "name": "NQF ID Number"
+    },
+    {
+      "id": "DISCLAIMER",
+      "code": "DISC",
+      "value": "None",
+      "name": "Disclaimer"
+    },
+    {
+      "id": "EMEASURE_IDENTIFIER",
+      "code": "OTH",
+      "value": "178",
+      "name": "eMeasure Identifier"
+    },
+    {
+      "id": "REFERENCE",
+      "code": "REF",
+      "value": "Wald HL, Epstein AM, Radcliff TA, Kramer AM. Extended Use of Urinary Catheters in Older Surgical Patients: A Patient Safety Problem? Infect Cont Hosp Epidemiol 2008; 29:116-124.",
+      "name": "Reference"
+    },
+    {
+      "id": "DEFINITION",
+      "code": "DEF",
+      "value": "Initial Patient Population(s): All hospital discharges for selective surgery with hospital stays <= 120 days during the measurement year for patients age 18 and older at the time of hospital admission with a catheter in place postoperatively.",
+      "name": "Definition"
+    },
+    {
+      "id": "GUIDANCE",
+      "code": "GUIDE",
+      "value": "The measurement period is one calendar year but the reporting period is 3 months as a calendar quarter; Q1 = Jan – Mar, Q2 = Apr – Jun, Q3 = Jul – Sep, Q4 is Oct – Dec.\r\n\r\nPatients for whom there are missing or inaccurate data (e.g., arrival time, medication administration, etc.) are considered to have failed the measure; the total number of patients with missing or erroneous (e.g., a time of 03:69 or a date of 10/26/2035) data (i.e., measure failures) must be reported with the results of the measure.\r\n\r\nGeneral guidance:\r\n\r\nIn this measure the code lists that describe types of surgical procedures remain only in ICD-9 or ICD-10 because the concepts that apply are limited to a very specific subset of all surgical procedures.\r\n\r\nDenominator element guidance:\r\n\r\nThe denominator in this measure specifically excludes surgical procedures that may be associated with post-operative indwelling urinary catheter usage and that occur in close time proximity to the index major surgical procedure. Previous CABG and 'other cardiac surgery' procedures allow exclusion if performed within 4 days before or after the index major surgical procedure.  Other major surgical procedures allow exclusion if performed within 3 days before or after the index major surgical procedure. \r\n\r\nExclusion element guidance:\r\n\r\nThe exclusion for patients who are clinical trial participants is limited to patients participating in a clinical trial for the same conditions as covered by the measure. Other clinical trials are not valid reasons for exclusions. \r\n\r\nThe original specification for this measure allowed an exclusion for patients with pacemaker or implantable defibrillator insertions within 4 days of CABG or other cardiac procedures or 3 days for other surgery.  \r\n\r\nBy convention, discharge date post \"Encounter inpatient\" is used to describe the hospital discharge date.  Where logic needs to indicate discharge (or transfer) from one inpatient location to another, the logic uses \"Transfer From\" or \"Transfer To\" as the QDS data type.",
+      "name": "Guidance"
+    },
+    {
+      "id": "TRANSMISSION_FORMAT",
+      "code": "OTH",
+      "value": "None",
+      "name": "Transmission Format"
+    },
+    {
+      "id": "INITIAL_PATIENT_POPULATION",
+      "code": "IPP",
+      "value": "All hospital discharges for selective surgery with hospital stays <= 120 days during the measurement year for patients age 18 and older at the time of hospital admission with a catheter in place postoperatively.",
+      "name": "Initial Patient Population"
+    },
+    {
+      "id": "DENOMINATOR",
+      "code": "DENOM",
+      "value": "All selected surgical patients 18 years of age and older with a catheter in place postoperatively with An ICD-9-CM Principal Procedure Code of selected surgeries.",
+      "name": "Denominator"
+    },
+    {
+      "id": "DENOMINATOR_EXCLUSIONS",
+      "code": "OTH",
+      "value": "Patients enrolled in clinical trials. Patients who had a urological, gynecological or perineal procedure performed. \r\nPatients whose ICD-9-CM principal procedure occurred prior to the date of admission. \r\nPatients who had other procedures requiring general or spinal anesthesia that occurred within 3 days (4 days for CABG or Other Cardiac Surgery) prior to or after the procedure of interest (during separate surgical episodes) during this hospital stay. \r\nPatients who expired perioperatively. \r\nPatients whose length of stay was less than two days postoperatively. \r\nPatients who had a suprapubic catheter or had intermittent catheterization preoperatively.\r\nPatients who had a urethral catheter, a suprapubic catheter or who were being intermittently catheterized prior to the perioperative period. \r\nPatients who did not have a catheter in place postoperatively. \r\nPatients who had physician/APN/PA documentation of a reason for not removing the urinary catheter postoperatively.",
+      "name": "Denominator Exclusions"
+    },
+    {
+      "id": "NUMERATOR",
+      "code": "NUMER",
+      "value": "Number of surgical patients whose urinary catheter is removed on postoperative day (POD) 1 or postoperative day (POD) 2 with day of surgery being day zero.",
+      "name": "Numerator"
+    },
+    {
+      "id": "NUMERATOR_EXCLUSIONS",
+      "code": "OTH",
+      "value": "Not applicable",
+      "name": "Numerator Exclusions"
+    },
+    {
+      "id": "DENOMINATOR_EXCEPTIONS",
+      "code": "DENEXCEP",
+      "value": "None",
+      "name": "Denominator Exceptions"
+    },
+    {
+      "id": "MEASURE_POPULATION",
+      "code": "MSRPOPL",
+      "value": "Not applicable",
+      "name": "Measure Population"
+    },
+    {
+      "id": "MEASURE_OBSERVATIONS",
+      "code": "OTH",
+      "value": "Not applicable",
+      "name": "Measure Observations"
+    },
+    {
+      "id": "SUPPLEMENTAL_DATA_ELEMENTS",
+      "code": "OTH",
+      "value": "Report \"Patient Characteristic: Gender\" using \"Gender HL7 Value Set (2.16.840.1.113883.1.11.1)\"; Report \"Patient Characteristic: Race\" using \"Race CDC Value Set (2.16.840.1.114222.4.11.836)\"; Report \"Patient Characteristic: Ethnicity\" using \"Ethnicity CDC Value Set (2.16.840.1.114222.4.11.837)\"; Report \"Patient Characteristic: Payer\" using \"Payer Source of Payment Typology Value Set (2.16.840.1.113883.3.221.5)\".",
+      "name": "Supplemental Data Elements"
+    }
+  ],
+  "populations": [
+    {
+      "IPP": "IPP",
+      "DENOM": "DENOM",
+      "NUMER": "NUMER",
+      "DENEX": "DENEX"
+    }
+  ],
+  "measure_period": {
+    "type": "IVL_TS",
+    "low": {
+      "type": "TS",
+      "value": "201201010000",
+      "inclusive?": true,
+      "derived?": false
+    },
+    "high": {
+      "type": "TS",
+      "value": "201212312359",
+      "inclusive?": true,
+      "derived?": false
+    },
+    "width": {
+      "type": "PQ",
+      "unit": "a",
+      "value": "1",
+      "inclusive?": true,
+      "derived?": false
+    }
+  }
+}

@@ -1,0 +1,1640 @@
+{
+  "id": "0716",
+  "hqmf_id": "8A4D92B2-3A00-2A25-013A-295ED21C463C",
+  "hqmf_set_id": "FF796FD9-F99D-41FD-B8C2-57D0A59A5D8D",
+  "hqmf_version_number": 1,
+  "title": "Healthy Term Newborn",
+  "description": "Percent of term singleton live births (excluding those with diagnoses originating in the fetal period) who DO NOT have significant complications during birth or the nursery care.",
+  "cms_id": "CMS185v1",
+  "population_criteria": {
+    "DENEX": {
+      "conjunction?": true,
+      "type": "DENEX",
+      "title": "Denominator",
+      "hqmf_id": "701AA071-57E9-467E-8995-327BDBA116B4",
+      "preconditions": [
+        {
+          "id": 19,
+          "preconditions": [
+            {
+              "id": 16,
+              "preconditions": [
+                {
+                  "id": 2,
+                  "reference": "DiagnosisActiveCongenitalAnomaliesGroup_precondition_2"
+                },
+                {
+                  "id": 4,
+                  "reference": "DiagnosisActiveLaryngealStenosisGroup_precondition_4"
+                },
+                {
+                  "id": 6,
+                  "reference": "DiagnosisActiveHydropsGroup_precondition_6"
+                },
+                {
+                  "id": 8,
+                  "reference": "DiagnosisActiveHemolyticDiseaseGroup_precondition_8"
+                },
+                {
+                  "id": 10,
+                  "reference": "DiagnosisActiveImpairedFetalGrowthGroup_precondition_10"
+                },
+                {
+                  "id": 12,
+                  "reference": "DiagnosisActiveNewbornAffectedByPlacentaOrAbruptionGroup_precondition_12"
+                },
+                {
+                  "id": 14,
+                  "reference": "DiagnosisActiveDrugWithdrawalSyndromeGroup_precondition_14"
+                }
+              ],
+              "conjunction_code": "atLeastOneTrue"
+            }
+          ],
+          "conjunction_code": "allTrue"
+        }
+      ]
+    },
+    "NUMER": {
+      "conjunction?": true,
+      "type": "NUMER",
+      "title": "Numerator",
+      "hqmf_id": "2688BD83-BEA4-413E-8A3C-87155EFD6E23",
+      "preconditions": [
+        {
+          "id": 81,
+          "preconditions": [
+            {
+              "id": 78,
+              "preconditions": [
+                {
+                  "id": 61,
+                  "reference": "OccurrenceAEncounterInpatient1_precondition_61"
+                },
+                {
+                  "id": 76,
+                  "preconditions": [
+                    {
+                      "id": 63,
+                      "reference": "OccurrenceAEncounterInpatient1_precondition_63"
+                    },
+                    {
+                      "id": 74,
+                      "preconditions": [
+                        {
+                          "id": 65,
+                          "reference": "ProcedurePerformedPhototherapyProcedureGroup_precondition_65"
+                        },
+                        {
+                          "id": 71,
+                          "preconditions": [
+                            {
+                              "id": 67,
+                              "reference": "DiagnosisActiveHyperbilirubinemiaGroup_precondition_67"
+                            },
+                            {
+                              "id": 69,
+                              "reference": "DiagnosisActiveSocialReasonsGroup_precondition_69"
+                            }
+                          ],
+                          "conjunction_code": "atLeastOneTrue"
+                        }
+                      ],
+                      "conjunction_code": "atLeastOneTrue"
+                    }
+                  ],
+                  "conjunction_code": "allTrue"
+                }
+              ],
+              "conjunction_code": "atLeastOneTrue"
+            },
+            {
+              "id": 80,
+              "preconditions": [
+                {
+                  "id": 34,
+                  "preconditions": [
+                    {
+                      "id": 20,
+                      "reference": "DiagnosisActiveBirthTraumaOrInjuriesGroup_precondition_20"
+                    },
+                    {
+                      "id": 22,
+                      "reference": "DiagnosisActiveCongenitalOrInfantileCerebralPalsyGroup_precondition_22"
+                    },
+                    {
+                      "id": 24,
+                      "reference": "DiagnosisActiveHypoxiaOrAsphyxiaGroup_precondition_24"
+                    },
+                    {
+                      "id": 26,
+                      "reference": "DiagnosisActiveInfectionGroup_precondition_26"
+                    },
+                    {
+                      "id": 28,
+                      "reference": "DiagnosisActiveNeurologicComplicationsGroup_precondition_28"
+                    },
+                    {
+                      "id": 30,
+                      "reference": "DiagnosisActiveRespiratoryProblemsGroup_precondition_30"
+                    },
+                    {
+                      "id": 32,
+                      "reference": "DiagnosisActiveShockAndComplicationsGroup_precondition_32"
+                    }
+                  ],
+                  "conjunction_code": "atLeastOneTrue"
+                },
+                {
+                  "id": 51,
+                  "preconditions": [
+                    {
+                      "id": 37,
+                      "reference": "ProcedurePerformedArterialOrUmbilicalVenousCathGroup_precondition_37"
+                    },
+                    {
+                      "id": 39,
+                      "reference": "ProcedurePerformedCardiopulmonaryResuscitationGroup_precondition_39"
+                    },
+                    {
+                      "id": 41,
+                      "reference": "ProcedurePerformedTpnProcedureGroup_precondition_41"
+                    },
+                    {
+                      "id": 43,
+                      "reference": "ProcedurePerformedGastrostomyGroup_precondition_43"
+                    },
+                    {
+                      "id": 45,
+                      "reference": "ProcedurePerformedNeurologicProcedureGroup_precondition_45"
+                    },
+                    {
+                      "id": 47,
+                      "reference": "ProcedurePerformedGavageFeedingGroup_precondition_47"
+                    },
+                    {
+                      "id": 49,
+                      "reference": "ProcedurePerformedRespiratoryProceduresGroup_precondition_49"
+                    }
+                  ],
+                  "conjunction_code": "atLeastOneTrue"
+                },
+                {
+                  "id": 58,
+                  "preconditions": [
+                    {
+                      "id": 54,
+                      "reference": "EncounterPerformedEncounterInpatient_precondition_54"
+                    },
+                    {
+                      "id": 56,
+                      "reference": "EncounterPerformedEncounterInpatient_precondition_56"
+                    }
+                  ],
+                  "conjunction_code": "atLeastOneTrue"
+                }
+              ],
+              "conjunction_code": "atLeastOneTrue",
+              "negation": true
+            }
+          ],
+          "conjunction_code": "allTrue"
+        }
+      ]
+    },
+    "DENOM": {
+      "conjunction?": true,
+      "type": "DENOM",
+      "title": "Denominator",
+      "hqmf_id": "C959CEEF-B8D7-43CF-82A7-93F52862AF52"
+    },
+    "IPP": {
+      "conjunction?": true,
+      "type": "IPP",
+      "title": "Initial Patient Population",
+      "hqmf_id": "61B83640-E66B-4BCB-AABA-201E303FDAD2",
+      "preconditions": [
+        {
+          "id": 100,
+          "preconditions": [
+            {
+              "id": 82,
+              "reference": "DiagnosisActiveGestationalAge37Weeks_precondition_82"
+            },
+            {
+              "id": 84,
+              "reference": "OccurrenceAEncounterInpatient1_precondition_84"
+            },
+            {
+              "id": 86,
+              "reference": "OccurrenceAEncounterInpatient1_precondition_86"
+            },
+            {
+              "id": 98,
+              "preconditions": [
+                {
+                  "id": 88,
+                  "reference": "DiagnosisActiveSingleLivebornNewbornBornInHospital_precondition_88"
+                },
+                {
+                  "id": 96,
+                  "preconditions": [
+                    {
+                      "id": 90,
+                      "reference": "DiagnosisActiveSingleLiveBirth_precondition_90"
+                    },
+                    {
+                      "id": 92,
+                      "reference": "DiagnosisActiveLivebornBornInHospital_precondition_92"
+                    },
+                    {
+                      "id": 94,
+                      "reference": "OccurrenceAEncounterInpatient1_precondition_94"
+                    }
+                  ],
+                  "conjunction_code": "allTrue"
+                }
+              ],
+              "conjunction_code": "atLeastOneTrue"
+            }
+          ],
+          "conjunction_code": "allTrue"
+        }
+      ]
+    }
+  },
+  "data_criteria": {
+    "OccurrenceAEncounterInpatient1": {
+      "title": "Encounter Inpatient",
+      "description": "Encounter, Performed: Encounter Inpatient",
+      "standard_category": "encounter",
+      "qds_data_type": "encounter",
+      "code_list_id": "2.16.840.1.113883.3.666.5.307",
+      "type": "encounters",
+      "definition": "encounter",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "specific_occurrence": "A",
+      "specific_occurrence_const": "ENCOUNTER_PERFORMED_ENCOUNTER_INPATIENT",
+      "source_data_criteria": "OccurrenceAEncounterInpatient1"
+    },
+    "OccurrenceAEncounterInpatient1_precondition_17": {
+      "title": "Encounter Inpatient",
+      "description": "Encounter, Performed: Encounter Inpatient",
+      "standard_category": "encounter",
+      "qds_data_type": "encounter",
+      "code_list_id": "2.16.840.1.113883.3.666.5.307",
+      "type": "encounters",
+      "definition": "encounter",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "specific_occurrence": "A",
+      "specific_occurrence_const": "ENCOUNTER_PERFORMED_ENCOUNTER_INPATIENT",
+      "source_data_criteria": "OccurrenceAEncounterInpatient1"
+    },
+    "DiagnosisActiveCongenitalAnomaliesGroup_precondition_2": {
+      "title": "Congenital Anomalies Group",
+      "description": "Diagnosis, Active: Congenital Anomalies Group",
+      "standard_category": "diagnosis_condition_problem",
+      "qds_data_type": "diagnosis_active",
+      "code_list_id": "2.16.840.1.113883.3.666.5.1570",
+      "type": "conditions",
+      "definition": "diagnosis",
+      "status": "active",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "DiagnosisActiveCongenitalAnomaliesGroup",
+      "temporal_references": [
+        {
+          "type": "SDU",
+          "reference": "OccurrenceAEncounterInpatient1_precondition_17"
+        }
+      ]
+    },
+    "DiagnosisActiveLaryngealStenosisGroup_precondition_4": {
+      "title": "Laryngeal Stenosis Group",
+      "description": "Diagnosis, Active: Laryngeal Stenosis Group",
+      "standard_category": "diagnosis_condition_problem",
+      "qds_data_type": "diagnosis_active",
+      "code_list_id": "2.16.840.1.113883.3.666.5.1576",
+      "type": "conditions",
+      "definition": "diagnosis",
+      "status": "active",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "DiagnosisActiveLaryngealStenosisGroup",
+      "temporal_references": [
+        {
+          "type": "SDU",
+          "reference": "OccurrenceAEncounterInpatient1_precondition_17"
+        }
+      ]
+    },
+    "DiagnosisActiveHydropsGroup_precondition_6": {
+      "title": "Hydrops Group",
+      "description": "Diagnosis, Active: Hydrops Group",
+      "standard_category": "diagnosis_condition_problem",
+      "qds_data_type": "diagnosis_active",
+      "code_list_id": "2.16.840.1.113883.3.666.5.1573",
+      "type": "conditions",
+      "definition": "diagnosis",
+      "status": "active",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "DiagnosisActiveHydropsGroup",
+      "temporal_references": [
+        {
+          "type": "SDU",
+          "reference": "OccurrenceAEncounterInpatient1_precondition_17"
+        }
+      ]
+    },
+    "DiagnosisActiveHemolyticDiseaseGroup_precondition_8": {
+      "title": "Hemolytic Disease Group",
+      "description": "Diagnosis, Active: Hemolytic Disease Group",
+      "standard_category": "diagnosis_condition_problem",
+      "qds_data_type": "diagnosis_active",
+      "code_list_id": "2.16.840.1.113883.3.666.5.1571",
+      "type": "conditions",
+      "definition": "diagnosis",
+      "status": "active",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "DiagnosisActiveHemolyticDiseaseGroup",
+      "temporal_references": [
+        {
+          "type": "SDU",
+          "reference": "OccurrenceAEncounterInpatient1_precondition_17"
+        }
+      ]
+    },
+    "DiagnosisActiveImpairedFetalGrowthGroup_precondition_10": {
+      "title": "Impaired Fetal Growth Group",
+      "description": "Diagnosis, Active: Impaired Fetal Growth Group",
+      "standard_category": "diagnosis_condition_problem",
+      "qds_data_type": "diagnosis_active",
+      "code_list_id": "2.16.840.1.113883.3.666.5.1566",
+      "type": "conditions",
+      "definition": "diagnosis",
+      "status": "active",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "DiagnosisActiveImpairedFetalGrowthGroup",
+      "temporal_references": [
+        {
+          "type": "SDU",
+          "reference": "OccurrenceAEncounterInpatient1_precondition_17"
+        }
+      ]
+    },
+    "DiagnosisActiveNewbornAffectedByPlacentaOrAbruptionGroup_precondition_12": {
+      "title": "Newborn Affected by Placenta or Abruption Group",
+      "description": "Diagnosis, Active: Newborn Affected by Placenta or Abruption Group",
+      "standard_category": "diagnosis_condition_problem",
+      "qds_data_type": "diagnosis_active",
+      "code_list_id": "2.16.840.1.113883.3.666.5.1568",
+      "type": "conditions",
+      "definition": "diagnosis",
+      "status": "active",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "DiagnosisActiveNewbornAffectedByPlacentaOrAbruptionGroup",
+      "temporal_references": [
+        {
+          "type": "SDU",
+          "reference": "OccurrenceAEncounterInpatient1_precondition_17"
+        }
+      ]
+    },
+    "DiagnosisActiveDrugWithdrawalSyndromeGroup_precondition_14": {
+      "title": "Drug Withdrawal Syndrome Group",
+      "description": "Diagnosis, Active: Drug Withdrawal Syndrome Group",
+      "standard_category": "diagnosis_condition_problem",
+      "qds_data_type": "diagnosis_active",
+      "code_list_id": "2.16.840.1.113883.3.666.5.1574",
+      "type": "conditions",
+      "definition": "diagnosis",
+      "status": "active",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "DiagnosisActiveDrugWithdrawalSyndromeGroup",
+      "temporal_references": [
+        {
+          "type": "SDU",
+          "reference": "OccurrenceAEncounterInpatient1_precondition_17"
+        }
+      ]
+    },
+    "OccurrenceAEncounterInpatient1_precondition_61": {
+      "title": "Encounter Inpatient",
+      "description": "Encounter, Performed: Encounter Inpatient",
+      "standard_category": "encounter",
+      "qds_data_type": "encounter",
+      "code_list_id": "2.16.840.1.113883.3.666.5.307",
+      "type": "encounters",
+      "definition": "encounter",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "specific_occurrence": "A",
+      "specific_occurrence_const": "ENCOUNTER_PERFORMED_ENCOUNTER_INPATIENT",
+      "source_data_criteria": "OccurrenceAEncounterInpatient1",
+      "field_values": {
+        "LENGTH_OF_STAY": {
+          "type": "IVL_PQ",
+          "high": {
+            "type": "PQ",
+            "unit": "d",
+            "value": "6",
+            "inclusive?": false,
+            "derived?": false
+          }
+        }
+      }
+    },
+    "OccurrenceAEncounterInpatient1_precondition_63": {
+      "title": "Encounter Inpatient",
+      "description": "Encounter, Performed: Encounter Inpatient",
+      "standard_category": "encounter",
+      "qds_data_type": "encounter",
+      "code_list_id": "2.16.840.1.113883.3.666.5.307",
+      "type": "encounters",
+      "definition": "encounter",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "specific_occurrence": "A",
+      "specific_occurrence_const": "ENCOUNTER_PERFORMED_ENCOUNTER_INPATIENT",
+      "source_data_criteria": "OccurrenceAEncounterInpatient1",
+      "field_values": {
+        "LENGTH_OF_STAY": {
+          "type": "IVL_PQ",
+          "low": {
+            "type": "PQ",
+            "unit": "d",
+            "value": "5",
+            "inclusive?": false,
+            "derived?": false
+          }
+        }
+      }
+    },
+    "ProcedurePerformedPhototherapyProcedureGroup_precondition_65": {
+      "title": "Phototherapy Procedure Group",
+      "description": "Procedure, Performed: Phototherapy Procedure Group",
+      "standard_category": "procedure",
+      "qds_data_type": "procedure_performed",
+      "code_list_id": "2.16.840.1.113883.3.666.5.1594",
+      "type": "procedures",
+      "definition": "procedure",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "ProcedurePerformedPhototherapyProcedureGroup",
+      "temporal_references": [
+        {
+          "type": "DURING",
+          "reference": "OccurrenceAEncounterInpatient1"
+        }
+      ]
+    },
+    "OccurrenceAEncounterInpatient1_precondition_72": {
+      "title": "Encounter Inpatient",
+      "description": "Encounter, Performed: Encounter Inpatient",
+      "standard_category": "encounter",
+      "qds_data_type": "encounter",
+      "code_list_id": "2.16.840.1.113883.3.666.5.307",
+      "type": "encounters",
+      "definition": "encounter",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "specific_occurrence": "A",
+      "specific_occurrence_const": "ENCOUNTER_PERFORMED_ENCOUNTER_INPATIENT",
+      "source_data_criteria": "OccurrenceAEncounterInpatient1"
+    },
+    "DiagnosisActiveHyperbilirubinemiaGroup_precondition_67": {
+      "title": "Hyperbilirubinemia Group",
+      "description": "Diagnosis, Active: Hyperbilirubinemia Group",
+      "standard_category": "diagnosis_condition_problem",
+      "qds_data_type": "diagnosis_active",
+      "code_list_id": "2.16.840.1.113883.3.666.5.1593",
+      "type": "conditions",
+      "definition": "diagnosis",
+      "status": "active",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "DiagnosisActiveHyperbilirubinemiaGroup",
+      "temporal_references": [
+        {
+          "type": "SDU",
+          "reference": "OccurrenceAEncounterInpatient1_precondition_72"
+        }
+      ]
+    },
+    "DiagnosisActiveSocialReasonsGroup_precondition_69": {
+      "title": "Social Reasons Group",
+      "description": "Diagnosis, Active: Social Reasons Group",
+      "standard_category": "diagnosis_condition_problem",
+      "qds_data_type": "diagnosis_active",
+      "code_list_id": "2.16.840.1.113883.3.666.5.1595",
+      "type": "conditions",
+      "definition": "diagnosis",
+      "status": "active",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "DiagnosisActiveSocialReasonsGroup",
+      "temporal_references": [
+        {
+          "type": "SDU",
+          "reference": "OccurrenceAEncounterInpatient1_precondition_72"
+        }
+      ]
+    },
+    "OccurrenceAEncounterInpatient1_precondition_35": {
+      "title": "Encounter Inpatient",
+      "description": "Encounter, Performed: Encounter Inpatient",
+      "standard_category": "encounter",
+      "qds_data_type": "encounter",
+      "code_list_id": "2.16.840.1.113883.3.666.5.307",
+      "type": "encounters",
+      "definition": "encounter",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "specific_occurrence": "A",
+      "specific_occurrence_const": "ENCOUNTER_PERFORMED_ENCOUNTER_INPATIENT",
+      "source_data_criteria": "OccurrenceAEncounterInpatient1"
+    },
+    "DiagnosisActiveBirthTraumaOrInjuriesGroup_precondition_20": {
+      "title": "Birth Trauma or Injuries Group",
+      "description": "Diagnosis, Active: Birth Trauma or Injuries Group",
+      "standard_category": "diagnosis_condition_problem",
+      "qds_data_type": "diagnosis_active",
+      "code_list_id": "2.16.840.1.113883.3.666.5.1567",
+      "type": "conditions",
+      "definition": "diagnosis",
+      "status": "active",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "DiagnosisActiveBirthTraumaOrInjuriesGroup",
+      "temporal_references": [
+        {
+          "type": "SDU",
+          "reference": "OccurrenceAEncounterInpatient1_precondition_35"
+        }
+      ]
+    },
+    "DiagnosisActiveCongenitalOrInfantileCerebralPalsyGroup_precondition_22": {
+      "title": "Congenital or Infantile Cerebral Palsy Group",
+      "description": "Diagnosis, Active: Congenital or Infantile Cerebral Palsy Group",
+      "standard_category": "diagnosis_condition_problem",
+      "qds_data_type": "diagnosis_active",
+      "code_list_id": "2.16.840.1.113883.3.666.5.1580",
+      "type": "conditions",
+      "definition": "diagnosis",
+      "status": "active",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "DiagnosisActiveCongenitalOrInfantileCerebralPalsyGroup",
+      "temporal_references": [
+        {
+          "type": "SDU",
+          "reference": "OccurrenceAEncounterInpatient1_precondition_35"
+        }
+      ]
+    },
+    "DiagnosisActiveHypoxiaOrAsphyxiaGroup_precondition_24": {
+      "title": "Hypoxia or Asphyxia Group",
+      "description": "Diagnosis, Active: Hypoxia or Asphyxia Group",
+      "standard_category": "diagnosis_condition_problem",
+      "qds_data_type": "diagnosis_active",
+      "code_list_id": "2.16.840.1.113883.3.666.5.1577",
+      "type": "conditions",
+      "definition": "diagnosis",
+      "status": "active",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "DiagnosisActiveHypoxiaOrAsphyxiaGroup",
+      "temporal_references": [
+        {
+          "type": "SDU",
+          "reference": "OccurrenceAEncounterInpatient1_precondition_35"
+        }
+      ]
+    },
+    "DiagnosisActiveInfectionGroup_precondition_26": {
+      "title": "Infection Group",
+      "description": "Diagnosis, Active: Infection Group",
+      "standard_category": "diagnosis_condition_problem",
+      "qds_data_type": "diagnosis_active",
+      "code_list_id": "2.16.840.1.113883.3.666.5.1590",
+      "type": "conditions",
+      "definition": "diagnosis",
+      "status": "active",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "DiagnosisActiveInfectionGroup",
+      "temporal_references": [
+        {
+          "type": "SDU",
+          "reference": "OccurrenceAEncounterInpatient1_precondition_35"
+        }
+      ]
+    },
+    "DiagnosisActiveNeurologicComplicationsGroup_precondition_28": {
+      "title": "Neurologic Complications Group",
+      "description": "Diagnosis, Active: Neurologic Complications Group",
+      "standard_category": "diagnosis_condition_problem",
+      "qds_data_type": "diagnosis_active",
+      "code_list_id": "2.16.840.1.113883.3.666.5.1591",
+      "type": "conditions",
+      "definition": "diagnosis",
+      "status": "active",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "DiagnosisActiveNeurologicComplicationsGroup",
+      "temporal_references": [
+        {
+          "type": "SDU",
+          "reference": "OccurrenceAEncounterInpatient1_precondition_35"
+        }
+      ]
+    },
+    "DiagnosisActiveRespiratoryProblemsGroup_precondition_30": {
+      "title": "Respiratory Problems Group",
+      "description": "Diagnosis, Active: Respiratory Problems Group",
+      "standard_category": "diagnosis_condition_problem",
+      "qds_data_type": "diagnosis_active",
+      "code_list_id": "2.16.840.1.113883.3.666.5.1588",
+      "type": "conditions",
+      "definition": "diagnosis",
+      "status": "active",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "DiagnosisActiveRespiratoryProblemsGroup",
+      "temporal_references": [
+        {
+          "type": "SDU",
+          "reference": "OccurrenceAEncounterInpatient1_precondition_35"
+        }
+      ]
+    },
+    "DiagnosisActiveShockAndComplicationsGroup_precondition_32": {
+      "title": "Shock and Complications Group",
+      "description": "Diagnosis, Active: Shock and Complications Group",
+      "standard_category": "diagnosis_condition_problem",
+      "qds_data_type": "diagnosis_active",
+      "code_list_id": "2.16.840.1.113883.3.666.5.1581",
+      "type": "conditions",
+      "definition": "diagnosis",
+      "status": "active",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "DiagnosisActiveShockAndComplicationsGroup",
+      "temporal_references": [
+        {
+          "type": "SDU",
+          "reference": "OccurrenceAEncounterInpatient1_precondition_35"
+        }
+      ]
+    },
+    "OccurrenceAEncounterInpatient1_precondition_52": {
+      "title": "Encounter Inpatient",
+      "description": "Encounter, Performed: Encounter Inpatient",
+      "standard_category": "encounter",
+      "qds_data_type": "encounter",
+      "code_list_id": "2.16.840.1.113883.3.666.5.307",
+      "type": "encounters",
+      "definition": "encounter",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "specific_occurrence": "A",
+      "specific_occurrence_const": "ENCOUNTER_PERFORMED_ENCOUNTER_INPATIENT",
+      "source_data_criteria": "OccurrenceAEncounterInpatient1"
+    },
+    "ProcedurePerformedArterialOrUmbilicalVenousCathGroup_precondition_37": {
+      "title": "Arterial or Umbilical Venous Cath Group",
+      "description": "Procedure, Performed: Arterial or Umbilical Venous Cath Group",
+      "standard_category": "procedure",
+      "qds_data_type": "procedure_performed",
+      "code_list_id": "2.16.840.1.113883.3.666.5.1582",
+      "type": "procedures",
+      "definition": "procedure",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "ProcedurePerformedArterialOrUmbilicalVenousCathGroup",
+      "temporal_references": [
+        {
+          "type": "DURING",
+          "reference": "OccurrenceAEncounterInpatient1_precondition_52"
+        }
+      ]
+    },
+    "ProcedurePerformedCardiopulmonaryResuscitationGroup_precondition_39": {
+      "title": "Cardiopulmonary Resuscitation Group",
+      "description": "Procedure, Performed: Cardiopulmonary Resuscitation Group",
+      "standard_category": "procedure",
+      "qds_data_type": "procedure_performed",
+      "code_list_id": "2.16.840.1.113883.3.666.5.1586",
+      "type": "procedures",
+      "definition": "procedure",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "ProcedurePerformedCardiopulmonaryResuscitationGroup",
+      "temporal_references": [
+        {
+          "type": "DURING",
+          "reference": "OccurrenceAEncounterInpatient1_precondition_52"
+        }
+      ]
+    },
+    "ProcedurePerformedTpnProcedureGroup_precondition_41": {
+      "title": "TPN Procedure Group",
+      "description": "Procedure, Performed: TPN Procedure Group",
+      "standard_category": "procedure",
+      "qds_data_type": "procedure_performed",
+      "code_list_id": "2.16.840.1.113883.3.666.5.1583",
+      "type": "procedures",
+      "definition": "procedure",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "ProcedurePerformedTpnProcedureGroup",
+      "temporal_references": [
+        {
+          "type": "DURING",
+          "reference": "OccurrenceAEncounterInpatient1_precondition_52"
+        }
+      ]
+    },
+    "ProcedurePerformedGastrostomyGroup_precondition_43": {
+      "title": "Gastrostomy Group",
+      "description": "Procedure, Performed: Gastrostomy Group",
+      "standard_category": "procedure",
+      "qds_data_type": "procedure_performed",
+      "code_list_id": "2.16.840.1.113883.3.666.5.1584",
+      "type": "procedures",
+      "definition": "procedure",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "ProcedurePerformedGastrostomyGroup",
+      "temporal_references": [
+        {
+          "type": "DURING",
+          "reference": "OccurrenceAEncounterInpatient1_precondition_52"
+        }
+      ]
+    },
+    "ProcedurePerformedNeurologicProcedureGroup_precondition_45": {
+      "title": "Neurologic Procedure Group",
+      "description": "Procedure, Performed: Neurologic Procedure Group",
+      "standard_category": "procedure",
+      "qds_data_type": "procedure_performed",
+      "code_list_id": "2.16.840.1.113883.3.666.5.1592",
+      "type": "procedures",
+      "definition": "procedure",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "ProcedurePerformedNeurologicProcedureGroup",
+      "temporal_references": [
+        {
+          "type": "DURING",
+          "reference": "OccurrenceAEncounterInpatient1_precondition_52"
+        }
+      ]
+    },
+    "ProcedurePerformedGavageFeedingGroup_precondition_47": {
+      "title": "Gavage Feeding Group",
+      "description": "Procedure, Performed: Gavage Feeding Group",
+      "standard_category": "procedure",
+      "qds_data_type": "procedure_performed",
+      "code_list_id": "2.16.840.1.113883.3.666.5.1585",
+      "type": "procedures",
+      "definition": "procedure",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "ProcedurePerformedGavageFeedingGroup",
+      "temporal_references": [
+        {
+          "type": "DURING",
+          "reference": "OccurrenceAEncounterInpatient1_precondition_52"
+        }
+      ]
+    },
+    "ProcedurePerformedRespiratoryProceduresGroup_precondition_49": {
+      "title": "Respiratory Procedures Group",
+      "description": "Procedure, Performed: Respiratory Procedures Group",
+      "standard_category": "procedure",
+      "qds_data_type": "procedure_performed",
+      "code_list_id": "2.16.840.1.113883.3.666.5.1589",
+      "type": "procedures",
+      "definition": "procedure",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "ProcedurePerformedRespiratoryProceduresGroup",
+      "temporal_references": [
+        {
+          "type": "DURING",
+          "reference": "OccurrenceAEncounterInpatient1_precondition_52"
+        }
+      ]
+    },
+    "OccurrenceAEncounterInpatient1_precondition_59": {
+      "title": "Encounter Inpatient",
+      "description": "Encounter, Performed: Encounter Inpatient",
+      "standard_category": "encounter",
+      "qds_data_type": "encounter",
+      "code_list_id": "2.16.840.1.113883.3.666.5.307",
+      "type": "encounters",
+      "definition": "encounter",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "specific_occurrence": "A",
+      "specific_occurrence_const": "ENCOUNTER_PERFORMED_ENCOUNTER_INPATIENT",
+      "source_data_criteria": "OccurrenceAEncounterInpatient1"
+    },
+    "EncounterPerformedEncounterInpatient_precondition_54": {
+      "title": "Encounter Inpatient",
+      "description": "Encounter, Performed: Encounter Inpatient",
+      "standard_category": "encounter",
+      "qds_data_type": "encounter",
+      "code_list_id": "2.16.840.1.113883.3.666.5.307",
+      "type": "encounters",
+      "definition": "encounter",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "EncounterPerformedEncounterInpatient",
+      "field_values": {
+        "DISCHARGE_STATUS": {
+          "type": "CD",
+          "code_list_id": "2.16.840.1.113883.3.117.1.7.1.87",
+          "title": "Discharge To Another Hospital"
+        }
+      },
+      "temporal_references": [
+        {
+          "type": "SDU",
+          "reference": "OccurrenceAEncounterInpatient1_precondition_59"
+        }
+      ]
+    },
+    "EncounterPerformedEncounterInpatient_precondition_56": {
+      "title": "Encounter Inpatient",
+      "description": "Encounter, Performed: Encounter Inpatient",
+      "standard_category": "encounter",
+      "qds_data_type": "encounter",
+      "code_list_id": "2.16.840.1.113883.3.666.5.307",
+      "type": "encounters",
+      "definition": "encounter",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "EncounterPerformedEncounterInpatient",
+      "field_values": {
+        "DISCHARGE_STATUS": {
+          "type": "CD",
+          "code_list_id": "2.16.840.1.113883.3.666.5.1618",
+          "title": "Neonatal Death SNOMED CT"
+        }
+      },
+      "temporal_references": [
+        {
+          "type": "SDU",
+          "reference": "OccurrenceAEncounterInpatient1_precondition_59"
+        }
+      ]
+    },
+    "DiagnosisActiveGestationalAge37Weeks_precondition_82": {
+      "title": "Gestational age >= 37 weeks",
+      "description": "Diagnosis, Active: Gestational age >= 37 weeks",
+      "standard_category": "diagnosis_condition_problem",
+      "qds_data_type": "diagnosis_active",
+      "code_list_id": "2.16.840.1.113883.3.666.5.1596",
+      "type": "conditions",
+      "definition": "diagnosis",
+      "status": "active",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "DiagnosisActiveGestationalAge37Weeks",
+      "temporal_references": [
+        {
+          "type": "SDU",
+          "reference": "OccurrenceAEncounterInpatient1"
+        }
+      ]
+    },
+    "OccurrenceAEncounterInpatient1_precondition_84": {
+      "title": "Encounter Inpatient",
+      "description": "Encounter, Performed: Encounter Inpatient",
+      "standard_category": "encounter",
+      "qds_data_type": "encounter",
+      "code_list_id": "2.16.840.1.113883.3.666.5.307",
+      "type": "encounters",
+      "definition": "encounter",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "specific_occurrence": "A",
+      "specific_occurrence_const": "ENCOUNTER_PERFORMED_ENCOUNTER_INPATIENT",
+      "source_data_criteria": "OccurrenceAEncounterInpatient1",
+      "temporal_references": [
+        {
+          "type": "SDU",
+          "reference": "MeasurePeriod"
+        }
+      ]
+    },
+    "OccurrenceAEncounterInpatient1_precondition_86": {
+      "title": "Encounter Inpatient",
+      "description": "Encounter, Performed: Encounter Inpatient",
+      "standard_category": "encounter",
+      "qds_data_type": "encounter",
+      "code_list_id": "2.16.840.1.113883.3.666.5.307",
+      "type": "encounters",
+      "definition": "encounter",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "specific_occurrence": "A",
+      "specific_occurrence_const": "ENCOUNTER_PERFORMED_ENCOUNTER_INPATIENT",
+      "source_data_criteria": "OccurrenceAEncounterInpatient1",
+      "field_values": {
+        "LENGTH_OF_STAY": {
+          "type": "IVL_PQ",
+          "high": {
+            "type": "PQ",
+            "unit": "d",
+            "value": "120",
+            "inclusive?": true,
+            "derived?": false
+          }
+        }
+      }
+    },
+    "DiagnosisActiveSingleLivebornNewbornBornInHospital_precondition_88": {
+      "title": "Single Liveborn Newborn Born in Hospital",
+      "description": "Diagnosis, Active: Single Liveborn Newborn Born in Hospital",
+      "standard_category": "diagnosis_condition_problem",
+      "qds_data_type": "diagnosis_active",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.26",
+      "type": "conditions",
+      "definition": "diagnosis",
+      "status": "active",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "DiagnosisActiveSingleLivebornNewbornBornInHospital",
+      "temporal_references": [
+        {
+          "type": "SDU",
+          "reference": "OccurrenceAEncounterInpatient1"
+        }
+      ]
+    },
+    "DiagnosisActiveSingleLiveBirth_precondition_90": {
+      "title": "Single Live Birth",
+      "description": "Diagnosis, Active: Single Live Birth",
+      "standard_category": "diagnosis_condition_problem",
+      "qds_data_type": "diagnosis_active",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.25",
+      "type": "conditions",
+      "definition": "diagnosis",
+      "status": "active",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "DiagnosisActiveSingleLiveBirth",
+      "temporal_references": [
+        {
+          "type": "SDU",
+          "reference": "OccurrenceAEncounterInpatient1"
+        }
+      ]
+    },
+    "DiagnosisActiveLivebornBornInHospital_precondition_92": {
+      "title": "Liveborn Born In Hospital",
+      "description": "Diagnosis, Active: Liveborn Born In Hospital",
+      "standard_category": "diagnosis_condition_problem",
+      "qds_data_type": "diagnosis_active",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.29",
+      "type": "conditions",
+      "definition": "diagnosis",
+      "status": "active",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "DiagnosisActiveLivebornBornInHospital",
+      "temporal_references": [
+        {
+          "type": "SDU",
+          "reference": "OccurrenceAEncounterInpatient1"
+        }
+      ]
+    },
+    "OccurrenceAEncounterInpatient1_precondition_94": {
+      "title": "Encounter Inpatient",
+      "description": "Encounter, Performed: Encounter Inpatient",
+      "standard_category": "encounter",
+      "qds_data_type": "encounter",
+      "code_list_id": "2.16.840.1.113883.3.666.5.307",
+      "type": "encounters",
+      "definition": "encounter",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "specific_occurrence": "A",
+      "specific_occurrence_const": "ENCOUNTER_PERFORMED_ENCOUNTER_INPATIENT",
+      "source_data_criteria": "OccurrenceAEncounterInpatient1",
+      "field_values": {
+        "REASON": {
+          "type": "CD",
+          "code_list_id": "2.16.840.1.113883.3.117.1.7.1.70",
+          "title": "Birth"
+        }
+      }
+    }
+  },
+  "source_data_criteria": {
+    "EncounterPerformedEncounterInpatient": {
+      "title": "Encounter Inpatient",
+      "description": "Encounter, Performed: Encounter Inpatient",
+      "standard_category": "encounter",
+      "qds_data_type": "encounter",
+      "code_list_id": "2.16.840.1.113883.3.666.5.307",
+      "type": "encounters",
+      "definition": "encounter",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "EncounterPerformedEncounterInpatient"
+    },
+    "DiagnosisActiveBirthTraumaOrInjuriesGroup": {
+      "title": "Birth Trauma or Injuries Group",
+      "description": "Diagnosis, Active: Birth Trauma or Injuries Group",
+      "standard_category": "diagnosis_condition_problem",
+      "qds_data_type": "diagnosis_active",
+      "code_list_id": "2.16.840.1.113883.3.666.5.1567",
+      "type": "conditions",
+      "definition": "diagnosis",
+      "status": "active",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "DiagnosisActiveBirthTraumaOrInjuriesGroup"
+    },
+    "ProcedurePerformedCardiopulmonaryResuscitationGroup": {
+      "title": "Cardiopulmonary Resuscitation Group",
+      "description": "Procedure, Performed: Cardiopulmonary Resuscitation Group",
+      "standard_category": "procedure",
+      "qds_data_type": "procedure_performed",
+      "code_list_id": "2.16.840.1.113883.3.666.5.1586",
+      "type": "procedures",
+      "definition": "procedure",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "ProcedurePerformedCardiopulmonaryResuscitationGroup"
+    },
+    "DiagnosisActiveCongenitalAnomaliesGroup": {
+      "title": "Congenital Anomalies Group",
+      "description": "Diagnosis, Active: Congenital Anomalies Group",
+      "standard_category": "diagnosis_condition_problem",
+      "qds_data_type": "diagnosis_active",
+      "code_list_id": "2.16.840.1.113883.3.666.5.1570",
+      "type": "conditions",
+      "definition": "diagnosis",
+      "status": "active",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "DiagnosisActiveCongenitalAnomaliesGroup"
+    },
+    "DiagnosisActiveCongenitalOrInfantileCerebralPalsyGroup": {
+      "title": "Congenital or Infantile Cerebral Palsy Group",
+      "description": "Diagnosis, Active: Congenital or Infantile Cerebral Palsy Group",
+      "standard_category": "diagnosis_condition_problem",
+      "qds_data_type": "diagnosis_active",
+      "code_list_id": "2.16.840.1.113883.3.666.5.1580",
+      "type": "conditions",
+      "definition": "diagnosis",
+      "status": "active",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "DiagnosisActiveCongenitalOrInfantileCerebralPalsyGroup"
+    },
+    "DiagnosisActiveDrugWithdrawalSyndromeGroup": {
+      "title": "Drug Withdrawal Syndrome Group",
+      "description": "Diagnosis, Active: Drug Withdrawal Syndrome Group",
+      "standard_category": "diagnosis_condition_problem",
+      "qds_data_type": "diagnosis_active",
+      "code_list_id": "2.16.840.1.113883.3.666.5.1574",
+      "type": "conditions",
+      "definition": "diagnosis",
+      "status": "active",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "DiagnosisActiveDrugWithdrawalSyndromeGroup"
+    },
+    "ProcedurePerformedGastrostomyGroup": {
+      "title": "Gastrostomy Group",
+      "description": "Procedure, Performed: Gastrostomy Group",
+      "standard_category": "procedure",
+      "qds_data_type": "procedure_performed",
+      "code_list_id": "2.16.840.1.113883.3.666.5.1584",
+      "type": "procedures",
+      "definition": "procedure",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "ProcedurePerformedGastrostomyGroup"
+    },
+    "ProcedurePerformedGavageFeedingGroup": {
+      "title": "Gavage Feeding Group",
+      "description": "Procedure, Performed: Gavage Feeding Group",
+      "standard_category": "procedure",
+      "qds_data_type": "procedure_performed",
+      "code_list_id": "2.16.840.1.113883.3.666.5.1585",
+      "type": "procedures",
+      "definition": "procedure",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "ProcedurePerformedGavageFeedingGroup"
+    },
+    "DiagnosisActiveHemolyticDiseaseGroup": {
+      "title": "Hemolytic Disease Group",
+      "description": "Diagnosis, Active: Hemolytic Disease Group",
+      "standard_category": "diagnosis_condition_problem",
+      "qds_data_type": "diagnosis_active",
+      "code_list_id": "2.16.840.1.113883.3.666.5.1571",
+      "type": "conditions",
+      "definition": "diagnosis",
+      "status": "active",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "DiagnosisActiveHemolyticDiseaseGroup"
+    },
+    "DiagnosisActiveHydropsGroup": {
+      "title": "Hydrops Group",
+      "description": "Diagnosis, Active: Hydrops Group",
+      "standard_category": "diagnosis_condition_problem",
+      "qds_data_type": "diagnosis_active",
+      "code_list_id": "2.16.840.1.113883.3.666.5.1573",
+      "type": "conditions",
+      "definition": "diagnosis",
+      "status": "active",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "DiagnosisActiveHydropsGroup"
+    },
+    "DiagnosisActiveHyperbilirubinemiaGroup": {
+      "title": "Hyperbilirubinemia Group",
+      "description": "Diagnosis, Active: Hyperbilirubinemia Group",
+      "standard_category": "diagnosis_condition_problem",
+      "qds_data_type": "diagnosis_active",
+      "code_list_id": "2.16.840.1.113883.3.666.5.1593",
+      "type": "conditions",
+      "definition": "diagnosis",
+      "status": "active",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "DiagnosisActiveHyperbilirubinemiaGroup"
+    },
+    "DiagnosisActiveHypoxiaOrAsphyxiaGroup": {
+      "title": "Hypoxia or Asphyxia Group",
+      "description": "Diagnosis, Active: Hypoxia or Asphyxia Group",
+      "standard_category": "diagnosis_condition_problem",
+      "qds_data_type": "diagnosis_active",
+      "code_list_id": "2.16.840.1.113883.3.666.5.1577",
+      "type": "conditions",
+      "definition": "diagnosis",
+      "status": "active",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "DiagnosisActiveHypoxiaOrAsphyxiaGroup"
+    },
+    "DiagnosisActiveImpairedFetalGrowthGroup": {
+      "title": "Impaired Fetal Growth Group",
+      "description": "Diagnosis, Active: Impaired Fetal Growth Group",
+      "standard_category": "diagnosis_condition_problem",
+      "qds_data_type": "diagnosis_active",
+      "code_list_id": "2.16.840.1.113883.3.666.5.1566",
+      "type": "conditions",
+      "definition": "diagnosis",
+      "status": "active",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "DiagnosisActiveImpairedFetalGrowthGroup"
+    },
+    "DiagnosisActiveInfectionGroup": {
+      "title": "Infection Group",
+      "description": "Diagnosis, Active: Infection Group",
+      "standard_category": "diagnosis_condition_problem",
+      "qds_data_type": "diagnosis_active",
+      "code_list_id": "2.16.840.1.113883.3.666.5.1590",
+      "type": "conditions",
+      "definition": "diagnosis",
+      "status": "active",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "DiagnosisActiveInfectionGroup"
+    },
+    "DiagnosisActiveLaryngealStenosisGroup": {
+      "title": "Laryngeal Stenosis Group",
+      "description": "Diagnosis, Active: Laryngeal Stenosis Group",
+      "standard_category": "diagnosis_condition_problem",
+      "qds_data_type": "diagnosis_active",
+      "code_list_id": "2.16.840.1.113883.3.666.5.1576",
+      "type": "conditions",
+      "definition": "diagnosis",
+      "status": "active",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "DiagnosisActiveLaryngealStenosisGroup"
+    },
+    "DiagnosisActiveNeurologicComplicationsGroup": {
+      "title": "Neurologic Complications Group",
+      "description": "Diagnosis, Active: Neurologic Complications Group",
+      "standard_category": "diagnosis_condition_problem",
+      "qds_data_type": "diagnosis_active",
+      "code_list_id": "2.16.840.1.113883.3.666.5.1591",
+      "type": "conditions",
+      "definition": "diagnosis",
+      "status": "active",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "DiagnosisActiveNeurologicComplicationsGroup"
+    },
+    "ProcedurePerformedNeurologicProcedureGroup": {
+      "title": "Neurologic Procedure Group",
+      "description": "Procedure, Performed: Neurologic Procedure Group",
+      "standard_category": "procedure",
+      "qds_data_type": "procedure_performed",
+      "code_list_id": "2.16.840.1.113883.3.666.5.1592",
+      "type": "procedures",
+      "definition": "procedure",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "ProcedurePerformedNeurologicProcedureGroup"
+    },
+    "DiagnosisActiveNewbornAffectedByPlacentaOrAbruptionGroup": {
+      "title": "Newborn Affected by Placenta or Abruption Group",
+      "description": "Diagnosis, Active: Newborn Affected by Placenta or Abruption Group",
+      "standard_category": "diagnosis_condition_problem",
+      "qds_data_type": "diagnosis_active",
+      "code_list_id": "2.16.840.1.113883.3.666.5.1568",
+      "type": "conditions",
+      "definition": "diagnosis",
+      "status": "active",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "DiagnosisActiveNewbornAffectedByPlacentaOrAbruptionGroup"
+    },
+    "ProcedurePerformedPhototherapyProcedureGroup": {
+      "title": "Phototherapy Procedure Group",
+      "description": "Procedure, Performed: Phototherapy Procedure Group",
+      "standard_category": "procedure",
+      "qds_data_type": "procedure_performed",
+      "code_list_id": "2.16.840.1.113883.3.666.5.1594",
+      "type": "procedures",
+      "definition": "procedure",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "ProcedurePerformedPhototherapyProcedureGroup"
+    },
+    "DiagnosisActiveRespiratoryProblemsGroup": {
+      "title": "Respiratory Problems Group",
+      "description": "Diagnosis, Active: Respiratory Problems Group",
+      "standard_category": "diagnosis_condition_problem",
+      "qds_data_type": "diagnosis_active",
+      "code_list_id": "2.16.840.1.113883.3.666.5.1588",
+      "type": "conditions",
+      "definition": "diagnosis",
+      "status": "active",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "DiagnosisActiveRespiratoryProblemsGroup"
+    },
+    "ProcedurePerformedRespiratoryProceduresGroup": {
+      "title": "Respiratory Procedures Group",
+      "description": "Procedure, Performed: Respiratory Procedures Group",
+      "standard_category": "procedure",
+      "qds_data_type": "procedure_performed",
+      "code_list_id": "2.16.840.1.113883.3.666.5.1589",
+      "type": "procedures",
+      "definition": "procedure",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "ProcedurePerformedRespiratoryProceduresGroup"
+    },
+    "DiagnosisActiveShockAndComplicationsGroup": {
+      "title": "Shock and Complications Group",
+      "description": "Diagnosis, Active: Shock and Complications Group",
+      "standard_category": "diagnosis_condition_problem",
+      "qds_data_type": "diagnosis_active",
+      "code_list_id": "2.16.840.1.113883.3.666.5.1581",
+      "type": "conditions",
+      "definition": "diagnosis",
+      "status": "active",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "DiagnosisActiveShockAndComplicationsGroup"
+    },
+    "DiagnosisActiveSocialReasonsGroup": {
+      "title": "Social Reasons Group",
+      "description": "Diagnosis, Active: Social Reasons Group",
+      "standard_category": "diagnosis_condition_problem",
+      "qds_data_type": "diagnosis_active",
+      "code_list_id": "2.16.840.1.113883.3.666.5.1595",
+      "type": "conditions",
+      "definition": "diagnosis",
+      "status": "active",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "DiagnosisActiveSocialReasonsGroup"
+    },
+    "DiagnosisActiveGestationalAge37Weeks": {
+      "title": "Gestational age >= 37 weeks",
+      "description": "Diagnosis, Active: Gestational age >= 37 weeks",
+      "standard_category": "diagnosis_condition_problem",
+      "qds_data_type": "diagnosis_active",
+      "code_list_id": "2.16.840.1.113883.3.666.5.1596",
+      "type": "conditions",
+      "definition": "diagnosis",
+      "status": "active",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "DiagnosisActiveGestationalAge37Weeks"
+    },
+    "ProcedurePerformedTpnProcedureGroup": {
+      "title": "TPN Procedure Group",
+      "description": "Procedure, Performed: TPN Procedure Group",
+      "standard_category": "procedure",
+      "qds_data_type": "procedure_performed",
+      "code_list_id": "2.16.840.1.113883.3.666.5.1583",
+      "type": "procedures",
+      "definition": "procedure",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "ProcedurePerformedTpnProcedureGroup"
+    },
+    "ProcedurePerformedArterialOrUmbilicalVenousCathGroup": {
+      "title": "Arterial or Umbilical Venous Cath Group",
+      "description": "Procedure, Performed: Arterial or Umbilical Venous Cath Group",
+      "standard_category": "procedure",
+      "qds_data_type": "procedure_performed",
+      "code_list_id": "2.16.840.1.113883.3.666.5.1582",
+      "type": "procedures",
+      "definition": "procedure",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "ProcedurePerformedArterialOrUmbilicalVenousCathGroup"
+    },
+    "DiagnosisActiveLivebornBornInHospital": {
+      "title": "Liveborn Born In Hospital",
+      "description": "Diagnosis, Active: Liveborn Born In Hospital",
+      "standard_category": "diagnosis_condition_problem",
+      "qds_data_type": "diagnosis_active",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.29",
+      "type": "conditions",
+      "definition": "diagnosis",
+      "status": "active",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "DiagnosisActiveLivebornBornInHospital"
+    },
+    "DiagnosisActiveSingleLivebornNewbornBornInHospital": {
+      "title": "Single Liveborn Newborn Born in Hospital",
+      "description": "Diagnosis, Active: Single Liveborn Newborn Born in Hospital",
+      "standard_category": "diagnosis_condition_problem",
+      "qds_data_type": "diagnosis_active",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.26",
+      "type": "conditions",
+      "definition": "diagnosis",
+      "status": "active",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "DiagnosisActiveSingleLivebornNewbornBornInHospital"
+    },
+    "DiagnosisActiveSingleLiveBirth": {
+      "title": "Single Live Birth",
+      "description": "Diagnosis, Active: Single Live Birth",
+      "standard_category": "diagnosis_condition_problem",
+      "qds_data_type": "diagnosis_active",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.25",
+      "type": "conditions",
+      "definition": "diagnosis",
+      "status": "active",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "DiagnosisActiveSingleLiveBirth"
+    },
+    "OccurrenceAEncounterInpatient1": {
+      "title": "Encounter Inpatient",
+      "description": "Encounter, Performed: Encounter Inpatient",
+      "standard_category": "encounter",
+      "qds_data_type": "encounter",
+      "code_list_id": "2.16.840.1.113883.3.666.5.307",
+      "type": "encounters",
+      "definition": "encounter",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "specific_occurrence": "A",
+      "specific_occurrence_const": "ENCOUNTER_PERFORMED_ENCOUNTER_INPATIENT",
+      "source_data_criteria": "OccurrenceAEncounterInpatient1"
+    }
+  },
+  "attributes": [
+    {
+      "id": "COPYRIGHT",
+      "code": "COPY",
+      "value": "Measure specifications are in the Public Domain\r\n\r\nCPT(R) is a trademark of the American Medical Association. Current Procedural Terminology. (CPT) is copyright 2012 American Medical Association. All rights reserved. No fee schedules, basic units, relative values, or related listings are included in CPT. The AMA assumes no liability for the data contained herein. Applicable FARS/DFARS restrictions apply to government use.\r\n\r\nLOINC(R) is a registered trademark of the Regenstrief Institute.\r\n\r\nThis material contains SNOMED Clinical Terms (R) (SNOMED CT(c)) copyright 2004-2010 International Health Terminology Standards Development Organization. All rights reserved.",
+      "name": "Copyright"
+    },
+    {
+      "id": "MEASURE_SCORING",
+      "code": "MSRSCORE",
+      "name": "Measure Scoring"
+    },
+    {
+      "id": "MEASURE_TYPE",
+      "code": "MSRTYPE",
+      "name": "Measure Type"
+    },
+    {
+      "id": "STRATIFICATION",
+      "code": "STRAT",
+      "value": "None",
+      "name": "Stratification"
+    },
+    {
+      "id": "RISK_ADJUSTMENT",
+      "code": "MSRADJ",
+      "value": "None",
+      "name": "Risk Adjustment"
+    },
+    {
+      "id": "RATE_AGGREGATION",
+      "code": "MSRAGG",
+      "value": "None",
+      "name": "Rate Aggregation"
+    },
+    {
+      "id": "RATIONALE",
+      "code": "RAT",
+      "value": "The current set of Perinatal measures has no metrics for general term neonatal outcomes which is the most important outcome for most families having babies.  This measure sums up the outcomes for term babies that present to Labor and Delivery without underlying fetal conditions so expectations are high.  It serves as a balancing measure for other maternal process and outcome measures such as the low-risk first-birth Cesarean rate.  An ideal OB unit would have both good baby outcomes and an average or better Cesarean rate.",
+      "name": "Rationale"
+    },
+    {
+      "id": "CLINICAL_RECOMMENDATION_STATEMENT",
+      "code": "CRS",
+      "value": "This measure is an outcome measure; therefore clinical guidelines are not directly applicable as they are for process measures. There are a number of obstetric guidelines that direct elements of maternal care that in turn affect the newborn.  An example is ACOG Practice Bulletin on Labor Induction (#107) which states that elective deliveries should not occur prior to 39 weeks. This guideline directly affects neonatal outcomes, as measured in this metric, as early term births lead to increased neonatal morbidity and longer neonatal length of stay.",
+      "name": "Clinical Recommendation Statement"
+    },
+    {
+      "id": "IMPROVEMENT_NOTATION",
+      "code": "IDUR",
+      "value": "Increase In Rate",
+      "name": "Improvement Notation"
+    },
+    {
+      "id": "NQF_ID_NUMBER",
+      "code": "OTH",
+      "value": "0716",
+      "name": "NQF ID Number"
+    },
+    {
+      "id": "DISCLAIMER",
+      "code": "DISC",
+      "value": "None",
+      "name": "Disclaimer"
+    },
+    {
+      "id": "EMEASURE_IDENTIFIER",
+      "code": "OTH",
+      "value": "185",
+      "name": "eMeasure Identifier"
+    },
+    {
+      "id": "REFERENCE",
+      "code": "REF",
+      "value": "There are a number of obstetric guidelines that direct elements of the care that in turn affect the newborn. An example is the ACOG Practice bulletin on labor induction (#107): which states that elective deliveries should not occur prior to 39 weeks. This is covered in NQF #0469, Elective delivery prior to 39 completed weeks gestation, but does not have a corresponding measure of neonatal outcomes.",
+      "name": "Reference"
+    },
+    {
+      "id": "DEFINITION",
+      "code": "DEF",
+      "value": "Among babies who had no known complications prior to Labor and Delivery (normally grown, no anomalies or other fetal diagnoses) how many left the hospital with their mother without a significant complication.",
+      "name": "Definition"
+    },
+    {
+      "id": "GUIDANCE",
+      "code": "GUIDE",
+      "value": "The very first step for this measure, identifying all term singleton infants can be surprisingly challenging.  Some hospitals do not do a good job of using the proper v-codes or DRGs so that clinical information such as birthweight and gestational age need to be used in the first step.\r\n\r\nThe logic phrase AND: “Occurrence A of Encounter, Performed: Inpatient Encounter (reason: 'Birth')” intends to capture admission type of newborn for the encounter. Where this information is available in existing EHR structured fields (e.g. data that is fed to UB?04, field location 14), it can be used to map the criterion specified in the logic.\r\n\r\nThe logic phrase AND: “Diagnosis, Active: Liveborn Born In Hospital” starts during “Occurrence A of Encounter, Performed: Inpatient Encounter” intends to capture the point of origin for the inpatient admission. Where this information is available in existing EHR structured fields (e.g. data that is fed to UB-04, field location 15), it can be used to map the criterion specified in the logic.",
+      "name": "Guidance"
+    },
+    {
+      "id": "TRANSMISSION_FORMAT",
+      "code": "OTH",
+      "value": "None",
+      "name": "Transmission Format"
+    },
+    {
+      "id": "INITIAL_PATIENT_POPULATION",
+      "code": "IPP",
+      "value": "All patients who are single liveborn term newborns born in a hosptital.",
+      "name": "Initial Patient Population"
+    },
+    {
+      "id": "DENOMINATOR",
+      "code": "DENOM",
+      "value": "The denominator is composed of singleton, term (>=37 weeks), inborn, livebirths in their birth admission. The denominator further has eliminated fetal conditions likely to be present before labor. Maternal and obstetrical conditions (e.g. hypertension, prior cesarean, malpresentation) are not excluded unless evidence of fetal effect prior to labor (e.g. IUGR/SGA).",
+      "name": "Denominator"
+    },
+    {
+      "id": "DENOMINATOR_EXCLUSIONS",
+      "code": "OTH",
+      "value": "Denominator exclusions: multiple gestations, preterm, congenital anomalies or fetuses affected by selected maternal conditions.",
+      "name": "Denominator Exclusions"
+    },
+    {
+      "id": "NUMERATOR",
+      "code": "NUMER",
+      "value": "The absence of conditions or procedures reflecting morbidity that happened during birth and nursery care to an otherwise normal infant.",
+      "name": "Numerator"
+    },
+    {
+      "id": "NUMERATOR_EXCLUSIONS",
+      "code": "OTH",
+      "value": "Not Applicable",
+      "name": "Numerator Exclusions"
+    },
+    {
+      "id": "DENOMINATOR_EXCEPTIONS",
+      "code": "DENEXCEP",
+      "value": "None",
+      "name": "Denominator Exceptions"
+    },
+    {
+      "id": "MEASURE_POPULATION",
+      "code": "MSRPOPL",
+      "value": "Not applicable",
+      "name": "Measure Population"
+    },
+    {
+      "id": "MEASURE_OBSERVATIONS",
+      "code": "OTH",
+      "value": "Not applicable",
+      "name": "Measure Observations"
+    },
+    {
+      "id": "SUPPLEMENTAL_DATA_ELEMENTS",
+      "code": "OTH",
+      "value": "•\"Patient Characteristic Ethnicity: Ethnicity\" using \"Ethnicity CDC Value Set (2.16.840.1.114222.4.11.837)\" \r\n•\"Patient Characteristic Payer: Payer\" using \"Payer Source of Payment Typology Value Set (2.16.840.1.114222.4.11.3591)\" \r\n•\"Patient Characteristic Race: Race\" using \"Race CDC Value Set (2.16.840.1.114222.4.11.836)\" \r\n•\"Patient Characteristic Sex: ONC Administrative Sex\" using \"ONC Administrative Sex Administrative Sex Value Set (2.16.840.1.113762.1.4.1)\"",
+      "name": "Supplemental Data Elements"
+    }
+  ],
+  "populations": [
+    {
+      "IPP": "IPP",
+      "DENOM": "DENOM",
+      "NUMER": "NUMER",
+      "DENEX": "DENEX"
+    }
+  ],
+  "measure_period": {
+    "type": "IVL_TS",
+    "low": {
+      "type": "TS",
+      "value": "201201010000",
+      "inclusive?": true,
+      "derived?": false
+    },
+    "high": {
+      "type": "TS",
+      "value": "201212312359",
+      "inclusive?": true,
+      "derived?": false
+    },
+    "width": {
+      "type": "PQ",
+      "unit": "a",
+      "value": "1",
+      "inclusive?": true,
+      "derived?": false
+    }
+  }
+}

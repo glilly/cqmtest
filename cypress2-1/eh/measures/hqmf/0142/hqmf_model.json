@@ -1,0 +1,1350 @@
+{
+  "id": "0142",
+  "hqmf_id": "8A4D92B2-3887-5DF3-0139-0D01C6626E46",
+  "hqmf_set_id": "BB481284-30DD-4383-928C-82385BBF1B17",
+  "hqmf_version_number": 1,
+  "title": "Aspirin Prescribed at Discharge",
+  "description": "Acute myocardial infarction (AMI) patients who are prescribed aspirin at hospital discharge",
+  "cms_id": "CMS100v1",
+  "population_criteria": {
+    "DENEX": {
+      "conjunction?": true,
+      "type": "DENEX",
+      "title": "Denominator",
+      "hqmf_id": "FCE06869-6ADE-4A43-9A28-098D808A55BD",
+      "preconditions": [
+        {
+          "id": 48,
+          "preconditions": [
+            {
+              "id": 46,
+              "preconditions": [
+                {
+                  "id": 3,
+                  "reference": "InterventionPerformedHospitalMeasuresComfortMeasuresOnlyIntervention_precondition_3"
+                },
+                {
+                  "id": 5,
+                  "reference": "MedicationAdverseEffectsHospitalMeasuresAspirin_precondition_5"
+                },
+                {
+                  "id": 7,
+                  "reference": "TransferToHospitalMeasuresHomeHospiceCare_precondition_7"
+                },
+                {
+                  "id": 9,
+                  "reference": "TransferToHospitalMeasuresInpatientHospiceCare_precondition_9"
+                },
+                {
+                  "id": 11,
+                  "reference": "OccurrenceAHospitalMeasuresEncounterInpatient1_precondition_11"
+                },
+                {
+                  "id": 13,
+                  "reference": "OccurrenceAHospitalMeasuresEncounterInpatient1_precondition_13"
+                },
+                {
+                  "id": 15,
+                  "reference": "MedicationOrderHospitalMeasuresAspirin_precondition_15"
+                },
+                {
+                  "id": 18,
+                  "reference": "MedicationActiveHospitalMeasuresAspirin_precondition_18"
+                },
+                {
+                  "id": 21,
+                  "reference": "MedicationOrderHospitalMeasuresAspirin_precondition_21"
+                },
+                {
+                  "id": 24,
+                  "reference": "MedicationActiveHospitalMeasuresAspirin_precondition_24"
+                },
+                {
+                  "id": 27,
+                  "reference": "MedicationOrderHospitalMeasuresAspirin_precondition_27"
+                },
+                {
+                  "id": 29,
+                  "reference": "MedicationDischargeHospitalMeasuresWarfarinAnticoagulants_precondition_29"
+                },
+                {
+                  "id": 31,
+                  "reference": "MedicationOrderHospitalMeasuresAspirin_precondition_31"
+                },
+                {
+                  "id": 33,
+                  "reference": "MedicationAllergyHospitalMeasuresAspirin_precondition_33"
+                },
+                {
+                  "id": 35,
+                  "reference": "MedicationIntoleranceHospitalMeasuresAspirin_precondition_35"
+                },
+                {
+                  "id": 37,
+                  "reference": "OccurrenceAHospitalMeasuresEncounterInpatient1_precondition_37"
+                },
+                {
+                  "id": 44,
+                  "preconditions": [
+                    {
+                      "id": 41,
+                      "reference": "OccurrenceAClinicalTrialParticipant2_precondition_41"
+                    },
+                    {
+                      "id": 43,
+                      "preconditions": [
+                        {
+                          "id": 39,
+                          "reference": "OccurrenceAClinicalTrialParticipant2_precondition_39"
+                        }
+                      ],
+                      "conjunction_code": "atLeastOneTrue",
+                      "negation": true
+                    }
+                  ],
+                  "conjunction_code": "allTrue"
+                }
+              ],
+              "conjunction_code": "atLeastOneTrue"
+            }
+          ],
+          "conjunction_code": "allTrue"
+        }
+      ]
+    },
+    "NUMER": {
+      "conjunction?": true,
+      "type": "NUMER",
+      "title": "Numerator",
+      "hqmf_id": "C224FC7D-B0C3-4A7F-BB9C-4480C3095F9F",
+      "preconditions": [
+        {
+          "id": 51,
+          "preconditions": [
+            {
+              "id": 49,
+              "reference": "MedicationDischargeHospitalMeasuresAspirin_precondition_49"
+            }
+          ],
+          "conjunction_code": "allTrue"
+        }
+      ]
+    },
+    "DENOM": {
+      "conjunction?": true,
+      "type": "DENOM",
+      "title": "Denominator",
+      "hqmf_id": "193A17EC-66B4-4C44-9302-192556C78454"
+    },
+    "IPP": {
+      "conjunction?": true,
+      "type": "IPP",
+      "title": "Initial Patient Population",
+      "hqmf_id": "EDD90083-3417-4221-B3B9-52C4E5FAFAF4",
+      "preconditions": [
+        {
+          "id": 61,
+          "preconditions": [
+            {
+              "id": 52,
+              "reference": "DiagnosisActiveHospitalMeasuresAmi_precondition_52"
+            },
+            {
+              "id": 55,
+              "reference": "PatientCharacteristicBirthdateBirthDate_precondition_55"
+            },
+            {
+              "id": 57,
+              "reference": "OccurrenceAHospitalMeasuresEncounterInpatient1_precondition_57"
+            },
+            {
+              "id": 59,
+              "reference": "OccurrenceAHospitalMeasuresEncounterInpatient1_precondition_59"
+            }
+          ],
+          "conjunction_code": "allTrue"
+        }
+      ]
+    }
+  },
+  "data_criteria": {
+    "EncounterPerformedHospitalMeasuresEncounterInpatient": {
+      "title": "Hospital Measures-Encounter Inpatient",
+      "description": "Encounter, Performed: Hospital Measures-Encounter Inpatient",
+      "standard_category": "encounter",
+      "qds_data_type": "encounter",
+      "code_list_id": "2.16.840.1.113883.3.666.5.625",
+      "type": "encounters",
+      "definition": "encounter",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "EncounterPerformedHospitalMeasuresEncounterInpatient"
+    },
+    "PatientCharacteristicClinicalTrialParticipant": {
+      "title": "Clinical Trial Participant",
+      "description": "Patient Characteristic: Clinical Trial Participant",
+      "standard_category": "individual_characteristic",
+      "qds_data_type": "individual_characteristic",
+      "code_list_id": "2.16.840.1.113883.3.526.2.643",
+      "type": "characteristic",
+      "definition": "patient_characteristic",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "PatientCharacteristicClinicalTrialParticipant"
+    },
+    "MedicationActiveNotDoneMedicalReason": {
+      "title": "Medical Reason",
+      "description": "Medication, Active not done: Medical Reason",
+      "standard_category": "medication",
+      "qds_data_type": "medication_active",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.473",
+      "type": "medications",
+      "definition": "medication",
+      "status": "active",
+      "hard_status": false,
+      "negation": true,
+      "source_data_criteria": "MedicationActiveNotDoneMedicalReason"
+    },
+    "MedicationOrderNotDoneMedicalReason": {
+      "title": "Medical Reason",
+      "description": "Medication, Order not done: Medical Reason",
+      "standard_category": "medication",
+      "qds_data_type": "medication_order",
+      "code_list_id": "2.16.840.1.113883.3.526.2.313",
+      "type": "medications",
+      "definition": "medication",
+      "status": "ordered",
+      "hard_status": true,
+      "negation": true,
+      "source_data_criteria": "MedicationOrderNotDoneMedicalReason"
+    },
+    "MedicationActiveNotDonePatientReason": {
+      "title": "Patient Reason",
+      "description": "Medication, Active not done: Patient Reason",
+      "standard_category": "medication",
+      "qds_data_type": "medication_active",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.474",
+      "type": "medications",
+      "definition": "medication",
+      "status": "active",
+      "hard_status": false,
+      "negation": true,
+      "source_data_criteria": "MedicationActiveNotDonePatientReason"
+    },
+    "MedicationOrderNotDonePatientReason": {
+      "title": "Patient Reason",
+      "description": "Medication, Order not done: Patient Reason",
+      "standard_category": "medication",
+      "qds_data_type": "medication_order",
+      "code_list_id": "2.16.840.1.113883.3.526.2.311",
+      "type": "medications",
+      "definition": "medication",
+      "status": "ordered",
+      "hard_status": true,
+      "negation": true,
+      "source_data_criteria": "MedicationOrderNotDonePatientReason"
+    },
+    "OccurrenceAHospitalMeasuresEncounterInpatient1": {
+      "title": "Hospital Measures-Encounter Inpatient",
+      "description": "Encounter, Performed: Hospital Measures-Encounter Inpatient",
+      "standard_category": "encounter",
+      "qds_data_type": "encounter",
+      "code_list_id": "2.16.840.1.113883.3.666.5.625",
+      "type": "encounters",
+      "definition": "encounter",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "specific_occurrence": "A",
+      "specific_occurrence_const": "ENCOUNTER_PERFORMED_HOSPITAL_MEASURES_ENCOUNTER_INPATIENT",
+      "source_data_criteria": "OccurrenceAHospitalMeasuresEncounterInpatient1"
+    },
+    "InterventionPerformedHospitalMeasuresComfortMeasuresOnlyIntervention_precondition_3": {
+      "title": "Hospital Measures - Comfort Measures Only Intervention",
+      "description": "Intervention, Performed: Hospital Measures - Comfort Measures Only Intervention",
+      "standard_category": "procedure",
+      "qds_data_type": "procedure_performed",
+      "code_list_id": "1.3.6.1.4.1.33895.1.3.0.45",
+      "type": "interventions",
+      "definition": "intervention",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "InterventionPerformedHospitalMeasuresComfortMeasuresOnlyIntervention",
+      "temporal_references": [
+        {
+          "type": "SDU",
+          "reference": "OccurrenceAHospitalMeasuresEncounterInpatient1"
+        }
+      ]
+    },
+    "MedicationAdverseEffectsHospitalMeasuresAspirin_precondition_5": {
+      "title": "Hospital Measures-Aspirin",
+      "description": "Medication, Adverse Effects: Hospital Measures-Aspirin",
+      "standard_category": "allergy",
+      "qds_data_type": "allergy",
+      "code_list_id": "2.16.840.1.113883.3.666.5.626",
+      "type": "medications",
+      "definition": "medication_adverse_effects",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "MedicationAdverseEffectsHospitalMeasuresAspirin",
+      "temporal_references": [
+        {
+          "type": "SBE",
+          "reference": "OccurrenceAHospitalMeasuresEncounterInpatient1"
+        }
+      ]
+    },
+    "TransferToHospitalMeasuresHomeHospiceCare_precondition_7": {
+      "title": "Hospital Measures - Home Hospice Care",
+      "description": "Transfer To: Hospital Measures - Home Hospice Care",
+      "standard_category": "",
+      "qds_data_type": "",
+      "type": "transfers",
+      "definition": "transfer_to",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "TransferToHospitalMeasuresHomeHospiceCare",
+      "field_values": {
+        "TRANSFER_TO": {
+          "type": "CD",
+          "code_list_id": "2.16.840.1.113883.3.666.5.3008",
+          "title": "Hospital Measures - Home Hospice Care"
+        }
+      },
+      "temporal_references": [
+        {
+          "type": "SAE",
+          "reference": "OccurrenceAHospitalMeasuresEncounterInpatient1",
+          "range": {
+            "type": "IVL_PQ",
+            "high": {
+              "type": "PQ",
+              "unit": "d",
+              "value": "1",
+              "inclusive?": false,
+              "derived?": false
+            }
+          }
+        }
+      ]
+    },
+    "TransferToHospitalMeasuresInpatientHospiceCare_precondition_9": {
+      "title": "Hospital Measures - Inpatient Hospice Care",
+      "description": "Transfer To: Hospital Measures - Inpatient Hospice Care",
+      "standard_category": "",
+      "qds_data_type": "",
+      "type": "transfers",
+      "definition": "transfer_to",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "TransferToHospitalMeasuresInpatientHospiceCare",
+      "field_values": {
+        "TRANSFER_TO": {
+          "type": "CD",
+          "code_list_id": "2.16.840.1.113883.3.666.5.3007",
+          "title": "Hospital Measures - Inpatient Hospice Care"
+        }
+      },
+      "temporal_references": [
+        {
+          "type": "SAE",
+          "reference": "OccurrenceAHospitalMeasuresEncounterInpatient1",
+          "range": {
+            "type": "IVL_PQ",
+            "high": {
+              "type": "PQ",
+              "unit": "d",
+              "value": "1",
+              "inclusive?": false,
+              "derived?": false
+            }
+          }
+        }
+      ]
+    },
+    "OccurrenceAHospitalMeasuresEncounterInpatient1_precondition_11": {
+      "title": "Hospital Measures-Encounter Inpatient",
+      "description": "Encounter, Performed: Hospital Measures-Encounter Inpatient",
+      "standard_category": "encounter",
+      "qds_data_type": "encounter",
+      "code_list_id": "2.16.840.1.113883.3.666.5.625",
+      "type": "encounters",
+      "definition": "encounter",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "specific_occurrence": "A",
+      "specific_occurrence_const": "ENCOUNTER_PERFORMED_HOSPITAL_MEASURES_ENCOUNTER_INPATIENT",
+      "source_data_criteria": "OccurrenceAHospitalMeasuresEncounterInpatient1",
+      "field_values": {
+        "DISCHARGE_STATUS": {
+          "type": "CD",
+          "code_list_id": "2.16.840.1.113883.3.666.5.1106",
+          "title": "Left Against Medical Advice"
+        }
+      }
+    },
+    "OccurrenceAHospitalMeasuresEncounterInpatient1_precondition_13": {
+      "title": "Hospital Measures-Encounter Inpatient",
+      "description": "Encounter, Performed: Hospital Measures-Encounter Inpatient",
+      "standard_category": "encounter",
+      "qds_data_type": "encounter",
+      "code_list_id": "2.16.840.1.113883.3.666.5.625",
+      "type": "encounters",
+      "definition": "encounter",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "specific_occurrence": "A",
+      "specific_occurrence_const": "ENCOUNTER_PERFORMED_HOSPITAL_MEASURES_ENCOUNTER_INPATIENT",
+      "source_data_criteria": "OccurrenceAHospitalMeasuresEncounterInpatient1",
+      "field_values": {
+        "DISCHARGE_STATUS": {
+          "type": "CD",
+          "code_list_id": "2.16.840.1.113883.3.666.5.1146",
+          "title": "Hospital Measures - Expired"
+        }
+      }
+    },
+    "MedicationOrderHospitalMeasuresAspirin_precondition_15": {
+      "title": "Hospital Measures-Aspirin",
+      "description": "Medication, Order: Hospital Measures-Aspirin",
+      "standard_category": "medication",
+      "qds_data_type": "medication_order",
+      "code_list_id": "2.16.840.1.113883.3.666.5.626",
+      "type": "medications",
+      "definition": "medication",
+      "status": "ordered",
+      "hard_status": true,
+      "negation": false,
+      "source_data_criteria": "MedicationOrderHospitalMeasuresAspirin",
+      "field_values": {
+        "REASON": {
+          "type": "CD",
+          "code_list_id": "2.16.840.1.113883.3.666.5.1149",
+          "title": "Hospital Measures - Discontinue"
+        }
+      },
+      "temporal_references": [
+        {
+          "type": "DURING",
+          "reference": "OccurrenceAHospitalMeasuresEncounterInpatient1"
+        }
+      ]
+    },
+    "OccurrenceAHospitalMeasuresEncounterInpatient1_precondition_17": {
+      "title": "Hospital Measures-Encounter Inpatient",
+      "description": "Encounter, Performed: Hospital Measures-Encounter Inpatient",
+      "standard_category": "encounter",
+      "qds_data_type": "encounter",
+      "code_list_id": "2.16.840.1.113883.3.666.5.625",
+      "type": "encounters",
+      "definition": "encounter",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "specific_occurrence": "A",
+      "specific_occurrence_const": "ENCOUNTER_PERFORMED_HOSPITAL_MEASURES_ENCOUNTER_INPATIENT",
+      "source_data_criteria": "OccurrenceAHospitalMeasuresEncounterInpatient1",
+      "field_values": {
+        "DISCHARGE_DATETIME": {
+          "type": "ANYNonNull"
+        }
+      }
+    },
+    "MedicationActiveHospitalMeasuresAspirin_precondition_18": {
+      "title": "Hospital Measures-Aspirin",
+      "description": "Medication, Active: Hospital Measures-Aspirin",
+      "standard_category": "medication",
+      "qds_data_type": "medication_active",
+      "code_list_id": "2.16.840.1.113883.3.666.5.626",
+      "type": "medications",
+      "definition": "medication",
+      "status": "active",
+      "hard_status": false,
+      "negation": true,
+      "negation_code_list_id": "2.16.840.1.113883.3.117.1.7.1.473",
+      "source_data_criteria": "MedicationActiveHospitalMeasuresAspirin",
+      "temporal_references": [
+        {
+          "type": "DURING",
+          "reference": "OccurrenceAHospitalMeasuresEncounterInpatient1_precondition_17"
+        }
+      ]
+    },
+    "OccurrenceAHospitalMeasuresEncounterInpatient1_precondition_20": {
+      "title": "Hospital Measures-Encounter Inpatient",
+      "description": "Encounter, Performed: Hospital Measures-Encounter Inpatient",
+      "standard_category": "encounter",
+      "qds_data_type": "encounter",
+      "code_list_id": "2.16.840.1.113883.3.666.5.625",
+      "type": "encounters",
+      "definition": "encounter",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "specific_occurrence": "A",
+      "specific_occurrence_const": "ENCOUNTER_PERFORMED_HOSPITAL_MEASURES_ENCOUNTER_INPATIENT",
+      "source_data_criteria": "OccurrenceAHospitalMeasuresEncounterInpatient1",
+      "field_values": {
+        "DISCHARGE_DATETIME": {
+          "type": "ANYNonNull"
+        }
+      }
+    },
+    "MedicationOrderHospitalMeasuresAspirin_precondition_21": {
+      "title": "Hospital Measures-Aspirin",
+      "description": "Medication, Order: Hospital Measures-Aspirin",
+      "standard_category": "medication",
+      "qds_data_type": "medication_order",
+      "code_list_id": "2.16.840.1.113883.3.666.5.626",
+      "type": "medications",
+      "definition": "medication",
+      "status": "ordered",
+      "hard_status": true,
+      "negation": true,
+      "negation_code_list_id": "2.16.840.1.113883.3.526.2.313",
+      "source_data_criteria": "MedicationOrderHospitalMeasuresAspirin",
+      "temporal_references": [
+        {
+          "type": "DURING",
+          "reference": "OccurrenceAHospitalMeasuresEncounterInpatient1_precondition_20"
+        }
+      ]
+    },
+    "OccurrenceAHospitalMeasuresEncounterInpatient1_precondition_23": {
+      "title": "Hospital Measures-Encounter Inpatient",
+      "description": "Encounter, Performed: Hospital Measures-Encounter Inpatient",
+      "standard_category": "encounter",
+      "qds_data_type": "encounter",
+      "code_list_id": "2.16.840.1.113883.3.666.5.625",
+      "type": "encounters",
+      "definition": "encounter",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "specific_occurrence": "A",
+      "specific_occurrence_const": "ENCOUNTER_PERFORMED_HOSPITAL_MEASURES_ENCOUNTER_INPATIENT",
+      "source_data_criteria": "OccurrenceAHospitalMeasuresEncounterInpatient1",
+      "field_values": {
+        "DISCHARGE_DATETIME": {
+          "type": "ANYNonNull"
+        }
+      }
+    },
+    "MedicationActiveHospitalMeasuresAspirin_precondition_24": {
+      "title": "Hospital Measures-Aspirin",
+      "description": "Medication, Active: Hospital Measures-Aspirin",
+      "standard_category": "medication",
+      "qds_data_type": "medication_active",
+      "code_list_id": "2.16.840.1.113883.3.666.5.626",
+      "type": "medications",
+      "definition": "medication",
+      "status": "active",
+      "hard_status": false,
+      "negation": true,
+      "negation_code_list_id": "2.16.840.1.113883.3.117.1.7.1.474",
+      "source_data_criteria": "MedicationActiveHospitalMeasuresAspirin",
+      "temporal_references": [
+        {
+          "type": "DURING",
+          "reference": "OccurrenceAHospitalMeasuresEncounterInpatient1_precondition_23"
+        }
+      ]
+    },
+    "OccurrenceAHospitalMeasuresEncounterInpatient1_precondition_26": {
+      "title": "Hospital Measures-Encounter Inpatient",
+      "description": "Encounter, Performed: Hospital Measures-Encounter Inpatient",
+      "standard_category": "encounter",
+      "qds_data_type": "encounter",
+      "code_list_id": "2.16.840.1.113883.3.666.5.625",
+      "type": "encounters",
+      "definition": "encounter",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "specific_occurrence": "A",
+      "specific_occurrence_const": "ENCOUNTER_PERFORMED_HOSPITAL_MEASURES_ENCOUNTER_INPATIENT",
+      "source_data_criteria": "OccurrenceAHospitalMeasuresEncounterInpatient1",
+      "field_values": {
+        "DISCHARGE_DATETIME": {
+          "type": "ANYNonNull"
+        }
+      }
+    },
+    "MedicationOrderHospitalMeasuresAspirin_precondition_27": {
+      "title": "Hospital Measures-Aspirin",
+      "description": "Medication, Order: Hospital Measures-Aspirin",
+      "standard_category": "medication",
+      "qds_data_type": "medication_order",
+      "code_list_id": "2.16.840.1.113883.3.666.5.626",
+      "type": "medications",
+      "definition": "medication",
+      "status": "ordered",
+      "hard_status": true,
+      "negation": true,
+      "negation_code_list_id": "2.16.840.1.113883.3.526.2.311",
+      "source_data_criteria": "MedicationOrderHospitalMeasuresAspirin",
+      "temporal_references": [
+        {
+          "type": "DURING",
+          "reference": "OccurrenceAHospitalMeasuresEncounterInpatient1_precondition_26"
+        }
+      ]
+    },
+    "MedicationDischargeHospitalMeasuresWarfarinAnticoagulants_precondition_29": {
+      "title": "Hospital Measures - Warfarin Anticoagulants",
+      "description": "Medication, Discharge: Hospital Measures - Warfarin Anticoagulants",
+      "standard_category": "medication",
+      "qds_data_type": "medication_discharge",
+      "code_list_id": "2.16.840.1.113883.3.666.5.636",
+      "type": "medications",
+      "definition": "medication",
+      "status": "discharge",
+      "hard_status": true,
+      "negation": false,
+      "source_data_criteria": "MedicationDischargeHospitalMeasuresWarfarinAnticoagulants",
+      "temporal_references": [
+        {
+          "type": "DURING",
+          "reference": "OccurrenceAHospitalMeasuresEncounterInpatient1"
+        }
+      ]
+    },
+    "MedicationOrderHospitalMeasuresAspirin_precondition_31": {
+      "title": "Hospital Measures-Aspirin",
+      "description": "Medication, Order: Hospital Measures-Aspirin",
+      "standard_category": "medication",
+      "qds_data_type": "medication_order",
+      "code_list_id": "2.16.840.1.113883.3.666.5.626",
+      "type": "medications",
+      "definition": "medication",
+      "status": "ordered",
+      "hard_status": true,
+      "negation": false,
+      "source_data_criteria": "MedicationOrderHospitalMeasuresAspirin",
+      "field_values": {
+        "REASON": {
+          "type": "CD",
+          "code_list_id": "2.16.840.1.113883.3.666.5.1145",
+          "title": "Hospital Measures - Hold"
+        }
+      },
+      "temporal_references": [
+        {
+          "type": "DURING",
+          "reference": "OccurrenceAHospitalMeasuresEncounterInpatient1"
+        }
+      ]
+    },
+    "MedicationAllergyHospitalMeasuresAspirin_precondition_33": {
+      "title": "Hospital Measures-Aspirin",
+      "description": "Medication, Allergy: Hospital Measures-Aspirin",
+      "standard_category": "allergy",
+      "qds_data_type": "allergy",
+      "code_list_id": "2.16.840.1.113883.3.666.5.626",
+      "type": "medications",
+      "definition": "medication_allergy",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "MedicationAllergyHospitalMeasuresAspirin",
+      "temporal_references": [
+        {
+          "type": "SBE",
+          "reference": "OccurrenceAHospitalMeasuresEncounterInpatient1"
+        }
+      ]
+    },
+    "MedicationIntoleranceHospitalMeasuresAspirin_precondition_35": {
+      "title": "Hospital Measures-Aspirin",
+      "description": "Medication, Intolerance: Hospital Measures-Aspirin",
+      "standard_category": "allergy",
+      "qds_data_type": "allergy",
+      "code_list_id": "2.16.840.1.113883.3.666.5.626",
+      "type": "medications",
+      "definition": "medication_intolerance",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "MedicationIntoleranceHospitalMeasuresAspirin",
+      "temporal_references": [
+        {
+          "type": "SBE",
+          "reference": "OccurrenceAHospitalMeasuresEncounterInpatient1"
+        }
+      ]
+    },
+    "OccurrenceAHospitalMeasuresEncounterInpatient1_precondition_37": {
+      "title": "Hospital Measures-Encounter Inpatient",
+      "description": "Encounter, Performed: Hospital Measures-Encounter Inpatient",
+      "standard_category": "encounter",
+      "qds_data_type": "encounter",
+      "code_list_id": "2.16.840.1.113883.3.666.5.625",
+      "type": "encounters",
+      "definition": "encounter",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "specific_occurrence": "A",
+      "specific_occurrence_const": "ENCOUNTER_PERFORMED_HOSPITAL_MEASURES_ENCOUNTER_INPATIENT",
+      "source_data_criteria": "OccurrenceAHospitalMeasuresEncounterInpatient1",
+      "field_values": {
+        "DISCHARGE_STATUS": {
+          "type": "CD",
+          "code_list_id": "2.16.840.1.113883.3.117.1.7.1.87",
+          "title": "Discharge To Another Hospital"
+        }
+      }
+    },
+    "OccurrenceAClinicalTrialParticipant2_precondition_41": {
+      "title": "Clinical Trial Participant",
+      "description": "Patient Characteristic: Clinical Trial Participant",
+      "standard_category": "individual_characteristic",
+      "qds_data_type": "individual_characteristic",
+      "code_list_id": "2.16.840.1.113883.3.526.2.643",
+      "type": "characteristic",
+      "definition": "patient_characteristic",
+      "hard_status": false,
+      "negation": false,
+      "specific_occurrence": "A",
+      "specific_occurrence_const": "PATIENT_CHARACTERISTIC_CLINICAL_TRIAL_PARTICIPANT",
+      "source_data_criteria": "OccurrenceAClinicalTrialParticipant2",
+      "temporal_references": [
+        {
+          "type": "SBE",
+          "reference": "OccurrenceAHospitalMeasuresEncounterInpatient1"
+        }
+      ]
+    },
+    "OccurrenceAClinicalTrialParticipant2_precondition_39": {
+      "title": "Clinical Trial Participant",
+      "description": "Patient Characteristic: Clinical Trial Participant",
+      "standard_category": "individual_characteristic",
+      "qds_data_type": "individual_characteristic",
+      "code_list_id": "2.16.840.1.113883.3.526.2.643",
+      "type": "characteristic",
+      "definition": "patient_characteristic",
+      "hard_status": false,
+      "negation": false,
+      "specific_occurrence": "A",
+      "specific_occurrence_const": "PATIENT_CHARACTERISTIC_CLINICAL_TRIAL_PARTICIPANT",
+      "source_data_criteria": "OccurrenceAClinicalTrialParticipant2",
+      "temporal_references": [
+        {
+          "type": "EBS",
+          "reference": "OccurrenceAHospitalMeasuresEncounterInpatient1"
+        }
+      ]
+    },
+    "MedicationDischargeHospitalMeasuresAspirin_precondition_49": {
+      "title": "Hospital Measures-Aspirin",
+      "description": "Medication, Discharge: Hospital Measures-Aspirin",
+      "standard_category": "medication",
+      "qds_data_type": "medication_discharge",
+      "code_list_id": "2.16.840.1.113883.3.666.5.626",
+      "type": "medications",
+      "definition": "medication",
+      "status": "discharge",
+      "hard_status": true,
+      "negation": false,
+      "source_data_criteria": "MedicationDischargeHospitalMeasuresAspirin",
+      "temporal_references": [
+        {
+          "type": "DURING",
+          "reference": "OccurrenceAHospitalMeasuresEncounterInpatient1"
+        }
+      ]
+    },
+    "DiagnosisActiveHospitalMeasuresAmi_precondition_52": {
+      "title": "Hospital Measures - AMI",
+      "description": "Diagnosis, Active: Hospital Measures - AMI",
+      "standard_category": "diagnosis_condition_problem",
+      "qds_data_type": "diagnosis_active",
+      "code_list_id": "2.16.840.1.113883.3.666.5.3011",
+      "type": "conditions",
+      "definition": "diagnosis",
+      "status": "active",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "DiagnosisActiveHospitalMeasuresAmi",
+      "field_values": {
+        "ORDINAL": {
+          "type": "CD",
+          "code_list_id": "2.16.840.1.113883.3.666.5.3010",
+          "title": "Hospital Measures - Principal"
+        }
+      },
+      "temporal_references": [
+        {
+          "type": "SDU",
+          "reference": "OccurrenceAHospitalMeasuresEncounterInpatient1"
+        }
+      ]
+    },
+    "OccurrenceAHospitalMeasuresEncounterInpatient1_precondition_54": {
+      "title": "Hospital Measures-Encounter Inpatient",
+      "description": "Encounter, Performed: Hospital Measures-Encounter Inpatient",
+      "standard_category": "encounter",
+      "qds_data_type": "encounter",
+      "code_list_id": "2.16.840.1.113883.3.666.5.625",
+      "type": "encounters",
+      "definition": "encounter",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "specific_occurrence": "A",
+      "specific_occurrence_const": "ENCOUNTER_PERFORMED_HOSPITAL_MEASURES_ENCOUNTER_INPATIENT",
+      "source_data_criteria": "OccurrenceAHospitalMeasuresEncounterInpatient1",
+      "field_values": {
+        "ADMISSION_DATETIME": {
+          "type": "ANYNonNull"
+        }
+      }
+    },
+    "PatientCharacteristicBirthdateBirthDate_precondition_55": {
+      "title": "birth date",
+      "description": "Patient Characteristic Birthdate: birth date",
+      "standard_category": "individual_characteristic",
+      "qds_data_type": "individual_characteristic",
+      "code_list_id": "2.16.840.1.113883.3.560.100.4",
+      "property": "birthtime",
+      "type": "characteristic",
+      "definition": "patient_characteristic_birthdate",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "PatientCharacteristicBirthdateBirthDate",
+      "inline_code_list": {
+        "LOINC": [
+          "21112-8"
+        ]
+      },
+      "temporal_references": [
+        {
+          "type": "SBS",
+          "reference": "OccurrenceAHospitalMeasuresEncounterInpatient1_precondition_54",
+          "range": {
+            "type": "IVL_PQ",
+            "low": {
+              "type": "PQ",
+              "unit": "a",
+              "value": "18",
+              "inclusive?": true,
+              "derived?": false
+            }
+          }
+        }
+      ]
+    },
+    "OccurrenceAHospitalMeasuresEncounterInpatient1_precondition_57": {
+      "title": "Hospital Measures-Encounter Inpatient",
+      "description": "Encounter, Performed: Hospital Measures-Encounter Inpatient",
+      "standard_category": "encounter",
+      "qds_data_type": "encounter",
+      "code_list_id": "2.16.840.1.113883.3.666.5.625",
+      "type": "encounters",
+      "definition": "encounter",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "specific_occurrence": "A",
+      "specific_occurrence_const": "ENCOUNTER_PERFORMED_HOSPITAL_MEASURES_ENCOUNTER_INPATIENT",
+      "source_data_criteria": "OccurrenceAHospitalMeasuresEncounterInpatient1",
+      "field_values": {
+        "LENGTH_OF_STAY": {
+          "type": "IVL_PQ",
+          "high": {
+            "type": "PQ",
+            "unit": "d",
+            "value": "120",
+            "inclusive?": true,
+            "derived?": false
+          }
+        }
+      }
+    },
+    "OccurrenceAHospitalMeasuresEncounterInpatient1_precondition_59": {
+      "title": "Hospital Measures-Encounter Inpatient",
+      "description": "Encounter, Performed: Hospital Measures-Encounter Inpatient",
+      "standard_category": "encounter",
+      "qds_data_type": "encounter",
+      "code_list_id": "2.16.840.1.113883.3.666.5.625",
+      "type": "encounters",
+      "definition": "encounter",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "specific_occurrence": "A",
+      "specific_occurrence_const": "ENCOUNTER_PERFORMED_HOSPITAL_MEASURES_ENCOUNTER_INPATIENT",
+      "source_data_criteria": "OccurrenceAHospitalMeasuresEncounterInpatient1",
+      "field_values": {
+        "DISCHARGE_DATETIME": {
+          "type": "ANYNonNull"
+        }
+      },
+      "temporal_references": [
+        {
+          "type": "DURING",
+          "reference": "MeasurePeriod"
+        }
+      ]
+    }
+  },
+  "source_data_criteria": {
+    "DiagnosisActiveHospitalMeasuresAmi": {
+      "title": "Hospital Measures - AMI",
+      "description": "Diagnosis, Active: Hospital Measures - AMI",
+      "standard_category": "diagnosis_condition_problem",
+      "qds_data_type": "diagnosis_active",
+      "code_list_id": "2.16.840.1.113883.3.666.5.3011",
+      "type": "conditions",
+      "definition": "diagnosis",
+      "status": "active",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "DiagnosisActiveHospitalMeasuresAmi"
+    },
+    "PatientCharacteristicBirthdateBirthDate": {
+      "title": "birth date",
+      "description": "Patient Characteristic Birthdate: birth date",
+      "standard_category": "individual_characteristic",
+      "qds_data_type": "individual_characteristic",
+      "code_list_id": "2.16.840.1.113883.3.560.100.4",
+      "property": "birthtime",
+      "type": "characteristic",
+      "definition": "patient_characteristic_birthdate",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "PatientCharacteristicBirthdateBirthDate",
+      "inline_code_list": {
+        "LOINC": [
+          "21112-8"
+        ]
+      }
+    },
+    "MedicationOrderHospitalMeasuresAspirin": {
+      "title": "Hospital Measures-Aspirin",
+      "description": "Medication, Order: Hospital Measures-Aspirin",
+      "standard_category": "medication",
+      "qds_data_type": "medication_order",
+      "code_list_id": "2.16.840.1.113883.3.666.5.626",
+      "type": "medications",
+      "definition": "medication",
+      "status": "ordered",
+      "hard_status": true,
+      "negation": false,
+      "source_data_criteria": "MedicationOrderHospitalMeasuresAspirin"
+    },
+    "MedicationActiveHospitalMeasuresAspirin": {
+      "title": "Hospital Measures-Aspirin",
+      "description": "Medication, Active: Hospital Measures-Aspirin",
+      "standard_category": "medication",
+      "qds_data_type": "medication_active",
+      "code_list_id": "2.16.840.1.113883.3.666.5.626",
+      "type": "medications",
+      "definition": "medication",
+      "status": "active",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "MedicationActiveHospitalMeasuresAspirin"
+    },
+    "InterventionPerformedHospitalMeasuresComfortMeasuresOnlyIntervention": {
+      "title": "Hospital Measures - Comfort Measures Only Intervention",
+      "description": "Intervention, Performed: Hospital Measures - Comfort Measures Only Intervention",
+      "standard_category": "procedure",
+      "qds_data_type": "procedure_performed",
+      "code_list_id": "1.3.6.1.4.1.33895.1.3.0.45",
+      "type": "interventions",
+      "definition": "intervention",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "InterventionPerformedHospitalMeasuresComfortMeasuresOnlyIntervention"
+    },
+    "TransferToHospitalMeasuresHomeHospiceCare": {
+      "title": "Hospital Measures - Home Hospice Care",
+      "description": "Transfer To: Hospital Measures - Home Hospice Care",
+      "standard_category": "",
+      "qds_data_type": "",
+      "type": "transfers",
+      "definition": "transfer_to",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "TransferToHospitalMeasuresHomeHospiceCare",
+      "field_values": {
+        "TRANSFER_TO": {
+          "type": "CD",
+          "code_list_id": "2.16.840.1.113883.3.666.5.3008",
+          "title": "Hospital Measures - Home Hospice Care"
+        }
+      }
+    },
+    "MedicationAllergyHospitalMeasuresAspirin": {
+      "title": "Hospital Measures-Aspirin",
+      "description": "Medication, Allergy: Hospital Measures-Aspirin",
+      "standard_category": "allergy",
+      "qds_data_type": "allergy",
+      "code_list_id": "2.16.840.1.113883.3.666.5.626",
+      "type": "medications",
+      "definition": "medication_allergy",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "MedicationAllergyHospitalMeasuresAspirin"
+    },
+    "MedicationIntoleranceHospitalMeasuresAspirin": {
+      "title": "Hospital Measures-Aspirin",
+      "description": "Medication, Intolerance: Hospital Measures-Aspirin",
+      "standard_category": "allergy",
+      "qds_data_type": "allergy",
+      "code_list_id": "2.16.840.1.113883.3.666.5.626",
+      "type": "medications",
+      "definition": "medication_intolerance",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "MedicationIntoleranceHospitalMeasuresAspirin"
+    },
+    "MedicationAdverseEffectsHospitalMeasuresAspirin": {
+      "title": "Hospital Measures-Aspirin",
+      "description": "Medication, Adverse Effects: Hospital Measures-Aspirin",
+      "standard_category": "allergy",
+      "qds_data_type": "allergy",
+      "code_list_id": "2.16.840.1.113883.3.666.5.626",
+      "type": "medications",
+      "definition": "medication_adverse_effects",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "MedicationAdverseEffectsHospitalMeasuresAspirin"
+    },
+    "TransferToHospitalMeasuresInpatientHospiceCare": {
+      "title": "Hospital Measures - Inpatient Hospice Care",
+      "description": "Transfer To: Hospital Measures - Inpatient Hospice Care",
+      "standard_category": "",
+      "qds_data_type": "",
+      "type": "transfers",
+      "definition": "transfer_to",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "TransferToHospitalMeasuresInpatientHospiceCare",
+      "field_values": {
+        "TRANSFER_TO": {
+          "type": "CD",
+          "code_list_id": "2.16.840.1.113883.3.666.5.3007",
+          "title": "Hospital Measures - Inpatient Hospice Care"
+        }
+      }
+    },
+    "MedicationDischargeHospitalMeasuresWarfarinAnticoagulants": {
+      "title": "Hospital Measures - Warfarin Anticoagulants",
+      "description": "Medication, Discharge: Hospital Measures - Warfarin Anticoagulants",
+      "standard_category": "medication",
+      "qds_data_type": "medication_discharge",
+      "code_list_id": "2.16.840.1.113883.3.666.5.636",
+      "type": "medications",
+      "definition": "medication",
+      "status": "discharge",
+      "hard_status": true,
+      "negation": false,
+      "source_data_criteria": "MedicationDischargeHospitalMeasuresWarfarinAnticoagulants"
+    },
+    "MedicationDischargeHospitalMeasuresAspirin": {
+      "title": "Hospital Measures-Aspirin",
+      "description": "Medication, Discharge: Hospital Measures-Aspirin",
+      "standard_category": "medication",
+      "qds_data_type": "medication_discharge",
+      "code_list_id": "2.16.840.1.113883.3.666.5.626",
+      "type": "medications",
+      "definition": "medication",
+      "status": "discharge",
+      "hard_status": true,
+      "negation": false,
+      "source_data_criteria": "MedicationDischargeHospitalMeasuresAspirin"
+    },
+    "EncounterPerformedHospitalMeasuresEncounterInpatient": {
+      "title": "Hospital Measures-Encounter Inpatient",
+      "description": "Encounter, Performed: Hospital Measures-Encounter Inpatient",
+      "standard_category": "encounter",
+      "qds_data_type": "encounter",
+      "code_list_id": "2.16.840.1.113883.3.666.5.625",
+      "type": "encounters",
+      "definition": "encounter",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "EncounterPerformedHospitalMeasuresEncounterInpatient"
+    },
+    "PatientCharacteristicClinicalTrialParticipant": {
+      "title": "Clinical Trial Participant",
+      "description": "Patient Characteristic: Clinical Trial Participant",
+      "standard_category": "individual_characteristic",
+      "qds_data_type": "individual_characteristic",
+      "code_list_id": "2.16.840.1.113883.3.526.2.643",
+      "type": "characteristic",
+      "definition": "patient_characteristic",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "PatientCharacteristicClinicalTrialParticipant"
+    },
+    "MedicationActiveNotDoneMedicalReason": {
+      "title": "Medical Reason",
+      "description": "Medication, Active not done: Medical Reason",
+      "standard_category": "medication",
+      "qds_data_type": "medication_active",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.473",
+      "type": "medications",
+      "definition": "medication",
+      "status": "active",
+      "hard_status": false,
+      "negation": true,
+      "source_data_criteria": "MedicationActiveNotDoneMedicalReason"
+    },
+    "MedicationOrderNotDoneMedicalReason": {
+      "title": "Medical Reason",
+      "description": "Medication, Order not done: Medical Reason",
+      "standard_category": "medication",
+      "qds_data_type": "medication_order",
+      "code_list_id": "2.16.840.1.113883.3.526.2.313",
+      "type": "medications",
+      "definition": "medication",
+      "status": "ordered",
+      "hard_status": true,
+      "negation": true,
+      "source_data_criteria": "MedicationOrderNotDoneMedicalReason"
+    },
+    "MedicationActiveNotDonePatientReason": {
+      "title": "Patient Reason",
+      "description": "Medication, Active not done: Patient Reason",
+      "standard_category": "medication",
+      "qds_data_type": "medication_active",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.474",
+      "type": "medications",
+      "definition": "medication",
+      "status": "active",
+      "hard_status": false,
+      "negation": true,
+      "source_data_criteria": "MedicationActiveNotDonePatientReason"
+    },
+    "MedicationOrderNotDonePatientReason": {
+      "title": "Patient Reason",
+      "description": "Medication, Order not done: Patient Reason",
+      "standard_category": "medication",
+      "qds_data_type": "medication_order",
+      "code_list_id": "2.16.840.1.113883.3.526.2.311",
+      "type": "medications",
+      "definition": "medication",
+      "status": "ordered",
+      "hard_status": true,
+      "negation": true,
+      "source_data_criteria": "MedicationOrderNotDonePatientReason"
+    },
+    "OccurrenceAHospitalMeasuresEncounterInpatient1": {
+      "title": "Hospital Measures-Encounter Inpatient",
+      "description": "Encounter, Performed: Hospital Measures-Encounter Inpatient",
+      "standard_category": "encounter",
+      "qds_data_type": "encounter",
+      "code_list_id": "2.16.840.1.113883.3.666.5.625",
+      "type": "encounters",
+      "definition": "encounter",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "specific_occurrence": "A",
+      "specific_occurrence_const": "ENCOUNTER_PERFORMED_HOSPITAL_MEASURES_ENCOUNTER_INPATIENT",
+      "source_data_criteria": "OccurrenceAHospitalMeasuresEncounterInpatient1"
+    },
+    "OccurrenceAClinicalTrialParticipant2": {
+      "title": "Clinical Trial Participant",
+      "description": "Patient Characteristic: Clinical Trial Participant",
+      "standard_category": "individual_characteristic",
+      "qds_data_type": "individual_characteristic",
+      "code_list_id": "2.16.840.1.113883.3.526.2.643",
+      "type": "characteristic",
+      "definition": "patient_characteristic",
+      "hard_status": false,
+      "negation": false,
+      "specific_occurrence": "A",
+      "specific_occurrence_const": "PATIENT_CHARACTERISTIC_CLINICAL_TRIAL_PARTICIPANT",
+      "source_data_criteria": "OccurrenceAClinicalTrialParticipant2"
+    }
+  },
+  "attributes": [
+    {
+      "id": "COPYRIGHT",
+      "code": "COPY",
+      "value": "Measure specifications are in the Public Domain.\r\n\r\nLOINC (R) is a registered trademark of the Regenstrief Institute.\r\n\r\nThis material contains SNOMED Clinical Terms (R) (SNOMED CT(c)) copyright 2004-2010 International Health Terminology Standards Development Organization. All rights reserved.",
+      "name": "Copyright"
+    },
+    {
+      "id": "MEASURE_SCORING",
+      "code": "MSRSCORE",
+      "name": "Measure Scoring"
+    },
+    {
+      "id": "MEASURE_TYPE",
+      "code": "MSRTYPE",
+      "name": "Measure Type"
+    },
+    {
+      "id": "STRATIFICATION",
+      "code": "STRAT",
+      "value": "None",
+      "name": "Stratification"
+    },
+    {
+      "id": "RISK_ADJUSTMENT",
+      "code": "MSRADJ",
+      "value": "None",
+      "name": "Risk Adjustment"
+    },
+    {
+      "id": "RATE_AGGREGATION",
+      "code": "MSRAGG",
+      "value": "None",
+      "name": "Rate Aggregation"
+    },
+    {
+      "id": "RATIONALE",
+      "code": "RAT",
+      "value": "Aspirin therapy in patients who have suffered an acute myocardial infarction reduces the risk of adverse events and mortality. Studies have demonstrated that aspirin can reduce this risk by 20% (Antiplatelet Trialists' Collaboration, 1994). National guidelines strongly recommend long-term aspirin for the secondary prevention of subsequent cardiovascular events in eligible older patients discharged after AMI (Antman, 2004; Antman, 2008; Anderson, 2007; and Smith, 2006).",
+      "name": "Rationale"
+    },
+    {
+      "id": "CLINICAL_RECOMMENDATION_STATEMENT",
+      "code": "CRS",
+      "value": "National guidelines strongly recommend long-term aspirin for the secondary prevention of subsequent cardiovascular events in eligible older patients discharged after AMI",
+      "name": "Clinical Recommendation Statement"
+    },
+    {
+      "id": "IMPROVEMENT_NOTATION",
+      "code": "IDUR",
+      "value": "Higher score indicates better quality",
+      "name": "Improvement Notation"
+    },
+    {
+      "id": "NQF_ID_NUMBER",
+      "code": "OTH",
+      "value": "0142",
+      "name": "NQF ID Number"
+    },
+    {
+      "id": "DISCLAIMER",
+      "code": "DISC",
+      "value": "None",
+      "name": "Disclaimer"
+    },
+    {
+      "id": "EMEASURE_IDENTIFIER",
+      "code": "OTH",
+      "value": "100",
+      "name": "eMeasure Identifier"
+    },
+    {
+      "id": "REFERENCE",
+      "code": "REF",
+      "value": "Smith SC, Allen J, Blair SN, Bonow RO, Brass LM, Fonarow GC, et al. AHA/ACC guidelines for secondary prevention for patients with coronary and other atherosclerotic vascular disease: 2006 update. J Am Coll Cardiol. 2006;47:2130 –9. doi:10.1016/j.jacc.2006.04.026.",
+      "name": "Reference"
+    },
+    {
+      "id": "DEFINITION",
+      "code": "DEF",
+      "value": "None",
+      "name": "Definition"
+    },
+    {
+      "id": "GUIDANCE",
+      "code": "GUIDE",
+      "value": "The measurement period is one calendar year but the reporting period is 3 months as a calendar quarter; Q1 = Jan – Mar, Q2 = Apr – Jun, Q3 = Jul – Sep, Q4 is Oct – Dec.\r\n\r\nPatients for whom there are missing or inaccurate data (e.g., arrival time, medication administration, etc.) are considered to have failed the measure; the total number of patients with missing or erroneous (e.g., a time of 03:69 or a date of 10/26/2035) data (i.e., measure failures) must be reported with the results of the measure.\r\n\r\nExclusion element guidance: \r\nThe exclusion for patients who are clinical trial participants is limited to patients participating in a clinical trial for acute myocardial infarction (AMI), ST elevation myocardial infarction (STEMI), non-ST elevation myocardial infarction (non-STEMI), heart attack, or acute coronary syndrome (ACS), the same conditions as covered by the measure. Other clinical trials are not valid reasons for exclusions.",
+      "name": "Guidance"
+    },
+    {
+      "id": "TRANSMISSION_FORMAT",
+      "code": "OTH",
+      "value": "None",
+      "name": "Transmission Format"
+    },
+    {
+      "id": "INITIAL_PATIENT_POPULATION",
+      "code": "IPP",
+      "value": "All hospital discharges for acute myocardial infarction (AMI) with hospital stays <= 120 days during the measurement year for patients age 18 and older at the time of hospital admission",
+      "name": "Initial Patient Population"
+    },
+    {
+      "id": "DENOMINATOR",
+      "code": "DENOM",
+      "value": "All Acute Myocardial Infarctions patients age 18 and older with an ICD-9-CM Principal Diagnosis Code for Acute Myocardial Infarction",
+      "name": "Denominator"
+    },
+    {
+      "id": "DENOMINATOR_EXCLUSIONS",
+      "code": "OTH",
+      "value": "Patients with Comfort Measures Only documented. \r\nPatients enrolled in clinical trials.\r\nPatients discharged to another hospital. \r\nPatients who left against medical advice. \r\nPatients who expired.\r\nPatients discharged to home for hospice care.\r\nPatients discharged to a health care facility for hospice care.\r\nPatients with a documented Reason for No Aspirin at Discharge",
+      "name": "Denominator Exclusions"
+    },
+    {
+      "id": "NUMERATOR",
+      "code": "NUMER",
+      "value": "Acute Myocardial Infarction patients who are prescribed aspirin at hospital discharge.",
+      "name": "Numerator"
+    },
+    {
+      "id": "NUMERATOR_EXCLUSIONS",
+      "code": "OTH",
+      "value": "None",
+      "name": "Numerator Exclusions"
+    },
+    {
+      "id": "DENOMINATOR_EXCEPTIONS",
+      "code": "DENEXCEP",
+      "value": "None",
+      "name": "Denominator Exceptions"
+    },
+    {
+      "id": "MEASURE_POPULATION",
+      "code": "MSRPOPL",
+      "value": "Not applicable",
+      "name": "Measure Population"
+    },
+    {
+      "id": "MEASURE_OBSERVATIONS",
+      "code": "OTH",
+      "value": "Not applicable",
+      "name": "Measure Observations"
+    },
+    {
+      "id": "SUPPLEMENTAL_DATA_ELEMENTS",
+      "code": "OTH",
+      "value": "For every patient evaluated by this measure also identify payer, race, ethnicity, and sex.",
+      "name": "Supplemental Data Elements"
+    }
+  ],
+  "populations": [
+    {
+      "IPP": "IPP",
+      "DENOM": "DENOM",
+      "NUMER": "NUMER",
+      "DENEX": "DENEX"
+    }
+  ],
+  "measure_period": {
+    "type": "IVL_TS",
+    "low": {
+      "type": "TS",
+      "value": "201201010000",
+      "inclusive?": true,
+      "derived?": false
+    },
+    "high": {
+      "type": "TS",
+      "value": "201212312359",
+      "inclusive?": true,
+      "derived?": false
+    },
+    "width": {
+      "type": "PQ",
+      "unit": "a",
+      "value": "1",
+      "inclusive?": true,
+      "derived?": false
+    }
+  }
+}

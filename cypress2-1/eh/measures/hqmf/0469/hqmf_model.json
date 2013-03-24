@@ -1,0 +1,1333 @@
+{
+  "id": "0469",
+  "hqmf_id": "8A4D92B2-3887-5DF3-0139-01965ECF65BE",
+  "hqmf_set_id": "FD7CA18D-B56D-4BCA-AF35-71CE36B15246",
+  "hqmf_version_number": 1,
+  "title": "Elective Delivery",
+  "description": "Patients with elective vaginal deliveries or elective cesarean sections at >= 37 and < 39 weeks of gestation completed",
+  "cms_id": "CMS113v1",
+  "population_criteria": {
+    "DENEX": {
+      "conjunction?": true,
+      "type": "DENEX",
+      "title": "Denominator",
+      "hqmf_id": "0FA8268B-3397-4C41-AE73-8AFC0DF4FCA6",
+      "preconditions": [
+        {
+          "id": 24,
+          "preconditions": [
+            {
+              "id": 22,
+              "preconditions": [
+                {
+                  "id": 3,
+                  "reference": "PatientCharacteristicGestationalAge37Weeks_precondition_3"
+                },
+                {
+                  "id": 6,
+                  "reference": "PatientCharacteristicGestationalAge38Weeks_precondition_6"
+                },
+                {
+                  "id": 13,
+                  "preconditions": [
+                    {
+                      "id": 10,
+                      "reference": "DiagnosisActiveConditionsPossiblyJustifyingElectiveDeliveryPriorTo39WeeksGestation_precondition_10"
+                    },
+                    {
+                      "id": 12,
+                      "preconditions": [
+                        {
+                          "id": 8,
+                          "reference": "DiagnosisActiveConditionsPossiblyJustifyingElectiveDeliveryPriorTo39WeeksGestation_precondition_8"
+                        }
+                      ],
+                      "conjunction_code": "atLeastOneTrue",
+                      "negation": true
+                    }
+                  ],
+                  "conjunction_code": "allTrue"
+                },
+                {
+                  "id": 19,
+                  "preconditions": [
+                    {
+                      "id": 15,
+                      "reference": "ProcedurePerformedClassicalCesareanSection_precondition_15"
+                    },
+                    {
+                      "id": 17,
+                      "reference": "ProcedurePerformedMyomectomy_precondition_17"
+                    }
+                  ],
+                  "conjunction_code": "atLeastOneTrue"
+                }
+              ],
+              "conjunction_code": "atLeastOneTrue"
+            }
+          ],
+          "conjunction_code": "allTrue"
+        }
+      ]
+    },
+    "NUMER": {
+      "conjunction?": true,
+      "type": "NUMER",
+      "title": "Numerator",
+      "hqmf_id": "F7937E7B-EBF3-4E3C-82AF-D11DECB1906E",
+      "preconditions": [
+        {
+          "id": 54,
+          "preconditions": [
+            {
+              "id": 52,
+              "preconditions": [
+                {
+                  "id": 41,
+                  "preconditions": [
+                    {
+                      "id": 26,
+                      "reference": "PatientCharacteristicGestationalAge3738Weeks_precondition_26"
+                    },
+                    {
+                      "id": 38,
+                      "preconditions": [
+                        {
+                          "id": 28,
+                          "reference": "ProcedurePerformedMedicalInductionOfLabor_precondition_28"
+                        },
+                        {
+                          "id": 36,
+                          "preconditions": [
+                            {
+                              "id": 31,
+                              "reference": "PhysicalExamFindingActiveLabor_precondition_31"
+                            },
+                            {
+                              "id": 34,
+                              "reference": "DiagnosisActiveSpontaneousRuptureOfMembranes_precondition_34"
+                            }
+                          ],
+                          "conjunction_code": "allTrue",
+                          "negation": true
+                        }
+                      ],
+                      "conjunction_code": "atLeastOneTrue"
+                    }
+                  ],
+                  "conjunction_code": "allTrue"
+                },
+                {
+                  "id": 50,
+                  "preconditions": [
+                    {
+                      "id": 47,
+                      "reference": "PatientCharacteristicGestationalAgeUnknown_precondition_47"
+                    },
+                    {
+                      "id": 49,
+                      "preconditions": [
+                        {
+                          "id": 44,
+                          "reference": "PatientCharacteristicGestationalAge3738Weeks_precondition_44"
+                        }
+                      ],
+                      "conjunction_code": "allTrue",
+                      "negation": true
+                    }
+                  ],
+                  "conjunction_code": "atLeastOneTrue"
+                }
+              ],
+              "conjunction_code": "atLeastOneTrue"
+            }
+          ],
+          "conjunction_code": "allTrue"
+        }
+      ]
+    },
+    "DENOM": {
+      "conjunction?": true,
+      "type": "DENOM",
+      "title": "Denominator",
+      "hqmf_id": "50478393-C14F-42A7-B2D9-13301349D927"
+    },
+    "IPP": {
+      "conjunction?": true,
+      "type": "IPP",
+      "title": "Initial Patient Population",
+      "hqmf_id": "51F36102-87C8-4B61-9AE7-2067183264F3",
+      "preconditions": [
+        {
+          "id": 78,
+          "preconditions": [
+            {
+              "id": 55,
+              "reference": "PatientCharacteristicBirthdateBirthDate_precondition_55"
+            },
+            {
+              "id": 57,
+              "reference": "PatientCharacteristicBirthdateBirthDate_precondition_57"
+            },
+            {
+              "id": 59,
+              "reference": "OccurrenceAInpatientEncounter1_precondition_59"
+            },
+            {
+              "id": 61,
+              "reference": "OccurrenceAInpatientEncounter1_precondition_61"
+            },
+            {
+              "id": 75,
+              "preconditions": [
+                {
+                  "id": 63,
+                  "reference": "DiagnosisActiveComplicationMainlyRelatedToPregnancy_precondition_63"
+                },
+                {
+                  "id": 65,
+                  "reference": "DiagnosisActiveNormalDeliveryAndOtherIndicationsForCare_precondition_65"
+                },
+                {
+                  "id": 67,
+                  "reference": "DiagnosisActiveComplicationMainlyInTheCourseOfLaborAndDelivery_precondition_67"
+                },
+                {
+                  "id": 69,
+                  "reference": "DiagnosisActiveComplicationOfThePuerperium_precondition_69"
+                },
+                {
+                  "id": 71,
+                  "reference": "DiagnosisActiveOutcomeOfDelivery_precondition_71"
+                },
+                {
+                  "id": 73,
+                  "reference": "ProcedurePerformedDeliveryProcedures_precondition_73"
+                }
+              ],
+              "conjunction_code": "atLeastOneTrue"
+            }
+          ],
+          "conjunction_code": "allTrue"
+        }
+      ]
+    }
+  },
+  "data_criteria": {
+    "EncounterPerformedInpatientEncounter": {
+      "title": "Inpatient Encounter",
+      "description": "Encounter, Performed: Inpatient Encounter",
+      "standard_category": "encounter",
+      "qds_data_type": "encounter",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.23",
+      "type": "encounters",
+      "definition": "encounter",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "EncounterPerformedInpatientEncounter"
+    },
+    "OccurrenceAInpatientEncounter1": {
+      "title": "Inpatient Encounter",
+      "description": "Encounter, Performed: Inpatient Encounter",
+      "standard_category": "encounter",
+      "qds_data_type": "encounter",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.23",
+      "type": "encounters",
+      "definition": "encounter",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "specific_occurrence": "A",
+      "specific_occurrence_const": "ENCOUNTER_PERFORMED_INPATIENT_ENCOUNTER",
+      "source_data_criteria": "OccurrenceAInpatientEncounter1"
+    },
+    "ProcedurePerformedDeliveryProcedures_precondition_2": {
+      "title": "Delivery Procedures",
+      "description": "Procedure, Performed: Delivery Procedures",
+      "standard_category": "procedure",
+      "qds_data_type": "procedure_performed",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.401",
+      "type": "procedures",
+      "definition": "procedure",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "ProcedurePerformedDeliveryProcedures",
+      "temporal_references": [
+        {
+          "type": "DURING",
+          "reference": "OccurrenceAInpatientEncounter1"
+        }
+      ]
+    },
+    "PatientCharacteristicGestationalAge37Weeks_precondition_3": {
+      "title": "Gestational Age <37 weeks",
+      "description": "Patient Characteristic: Gestational Age <37 weeks",
+      "standard_category": "individual_characteristic",
+      "qds_data_type": "individual_characteristic",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.402",
+      "type": "characteristic",
+      "definition": "patient_characteristic",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "PatientCharacteristicGestationalAge37Weeks",
+      "temporal_references": [
+        {
+          "type": "SBS",
+          "reference": "ProcedurePerformedDeliveryProcedures_precondition_2"
+        }
+      ]
+    },
+    "ProcedurePerformedDeliveryProcedures_precondition_5": {
+      "title": "Delivery Procedures",
+      "description": "Procedure, Performed: Delivery Procedures",
+      "standard_category": "procedure",
+      "qds_data_type": "procedure_performed",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.401",
+      "type": "procedures",
+      "definition": "procedure",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "ProcedurePerformedDeliveryProcedures",
+      "temporal_references": [
+        {
+          "type": "DURING",
+          "reference": "OccurrenceAInpatientEncounter1"
+        }
+      ]
+    },
+    "PatientCharacteristicGestationalAge38Weeks_precondition_6": {
+      "title": "Gestational Age >38 weeks",
+      "description": "Patient Characteristic: Gestational Age >38 weeks",
+      "standard_category": "individual_characteristic",
+      "qds_data_type": "individual_characteristic",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.403",
+      "type": "characteristic",
+      "definition": "patient_characteristic",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "PatientCharacteristicGestationalAge38Weeks",
+      "temporal_references": [
+        {
+          "type": "SBS",
+          "reference": "ProcedurePerformedDeliveryProcedures_precondition_5"
+        }
+      ]
+    },
+    "DiagnosisActiveConditionsPossiblyJustifyingElectiveDeliveryPriorTo39WeeksGestation_precondition_10": {
+      "title": "Conditions Possibly Justifying Elective Delivery Prior to 39 Weeks Gestation",
+      "description": "Diagnosis, Active: Conditions Possibly Justifying Elective Delivery Prior to 39 Weeks Gestation",
+      "standard_category": "diagnosis_condition_problem",
+      "qds_data_type": "diagnosis_active",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.286",
+      "type": "conditions",
+      "definition": "diagnosis",
+      "status": "active",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "DiagnosisActiveConditionsPossiblyJustifyingElectiveDeliveryPriorTo39WeeksGestation",
+      "temporal_references": [
+        {
+          "type": "SBE",
+          "reference": "OccurrenceAInpatientEncounter1"
+        }
+      ]
+    },
+    "DiagnosisActiveConditionsPossiblyJustifyingElectiveDeliveryPriorTo39WeeksGestation_precondition_8": {
+      "title": "Conditions Possibly Justifying Elective Delivery Prior to 39 Weeks Gestation",
+      "description": "Diagnosis, Active: Conditions Possibly Justifying Elective Delivery Prior to 39 Weeks Gestation",
+      "standard_category": "diagnosis_condition_problem",
+      "qds_data_type": "diagnosis_active",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.286",
+      "type": "conditions",
+      "definition": "diagnosis",
+      "status": "active",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "DiagnosisActiveConditionsPossiblyJustifyingElectiveDeliveryPriorTo39WeeksGestation",
+      "temporal_references": [
+        {
+          "type": "EBS",
+          "reference": "OccurrenceAInpatientEncounter1"
+        }
+      ]
+    },
+    "OccurrenceAInpatientEncounter1_precondition_20": {
+      "title": "Inpatient Encounter",
+      "description": "Encounter, Performed: Inpatient Encounter",
+      "standard_category": "encounter",
+      "qds_data_type": "encounter",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.23",
+      "type": "encounters",
+      "definition": "encounter",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "specific_occurrence": "A",
+      "specific_occurrence_const": "ENCOUNTER_PERFORMED_INPATIENT_ENCOUNTER",
+      "source_data_criteria": "OccurrenceAInpatientEncounter1"
+    },
+    "ProcedurePerformedClassicalCesareanSection_precondition_15": {
+      "title": "Classical Cesarean Section",
+      "description": "Procedure, Performed: Classical Cesarean Section",
+      "standard_category": "procedure",
+      "qds_data_type": "procedure_performed",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.421",
+      "type": "procedures",
+      "definition": "procedure",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "ProcedurePerformedClassicalCesareanSection",
+      "temporal_references": [
+        {
+          "type": "SBS",
+          "reference": "OccurrenceAInpatientEncounter1_precondition_20"
+        }
+      ]
+    },
+    "ProcedurePerformedMyomectomy_precondition_17": {
+      "title": "Myomectomy",
+      "description": "Procedure, Performed: Myomectomy",
+      "standard_category": "procedure",
+      "qds_data_type": "procedure_performed",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.422",
+      "type": "procedures",
+      "definition": "procedure",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "ProcedurePerformedMyomectomy",
+      "temporal_references": [
+        {
+          "type": "SBS",
+          "reference": "OccurrenceAInpatientEncounter1_precondition_20"
+        }
+      ]
+    },
+    "ProcedurePerformedDeliveryProcedures_precondition_25": {
+      "title": "Delivery Procedures",
+      "description": "Procedure, Performed: Delivery Procedures",
+      "standard_category": "procedure",
+      "qds_data_type": "procedure_performed",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.401",
+      "type": "procedures",
+      "definition": "procedure",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "ProcedurePerformedDeliveryProcedures",
+      "temporal_references": [
+        {
+          "type": "DURING",
+          "reference": "OccurrenceAInpatientEncounter1"
+        }
+      ]
+    },
+    "PatientCharacteristicGestationalAge3738Weeks_precondition_26": {
+      "title": "Gestational Age 37-38 weeks",
+      "description": "Patient Characteristic: Gestational Age 37-38 weeks",
+      "standard_category": "individual_characteristic",
+      "qds_data_type": "individual_characteristic",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.287",
+      "type": "characteristic",
+      "definition": "patient_characteristic",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "PatientCharacteristicGestationalAge3738Weeks",
+      "temporal_references": [
+        {
+          "type": "SBS",
+          "reference": "ProcedurePerformedDeliveryProcedures_precondition_25"
+        }
+      ]
+    },
+    "OccurrenceAInpatientEncounter1_precondition_39": {
+      "title": "Inpatient Encounter",
+      "description": "Encounter, Performed: Inpatient Encounter",
+      "standard_category": "encounter",
+      "qds_data_type": "encounter",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.23",
+      "type": "encounters",
+      "definition": "encounter",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "specific_occurrence": "A",
+      "specific_occurrence_const": "ENCOUNTER_PERFORMED_INPATIENT_ENCOUNTER",
+      "source_data_criteria": "OccurrenceAInpatientEncounter1"
+    },
+    "ProcedurePerformedMedicalInductionOfLabor_precondition_28": {
+      "title": "Medical Induction of Labor",
+      "description": "Procedure, Performed: Medical Induction of Labor",
+      "standard_category": "procedure",
+      "qds_data_type": "procedure_performed",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.288",
+      "type": "procedures",
+      "definition": "procedure",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "ProcedurePerformedMedicalInductionOfLabor",
+      "temporal_references": [
+        {
+          "type": "DURING",
+          "reference": "OccurrenceAInpatientEncounter1_precondition_39"
+        }
+      ]
+    },
+    "ProcedurePerformedCesareanSection_precondition_30": {
+      "title": "Cesarean Section",
+      "description": "Procedure, Performed: Cesarean Section",
+      "standard_category": "procedure",
+      "qds_data_type": "procedure_performed",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.282",
+      "type": "procedures",
+      "definition": "procedure",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "ProcedurePerformedCesareanSection",
+      "temporal_references": [
+        {
+          "type": "DURING",
+          "reference": "OccurrenceAInpatientEncounter1"
+        }
+      ]
+    },
+    "PhysicalExamFindingActiveLabor_precondition_31": {
+      "title": "Active Labor",
+      "description": "Physical Exam, Finding: Active Labor",
+      "standard_category": "physical_exam",
+      "qds_data_type": "physical_exam",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.281",
+      "type": "physical_exams",
+      "definition": "physical_exam",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "PhysicalExamFindingActiveLabor",
+      "temporal_references": [
+        {
+          "type": "SBS",
+          "reference": "ProcedurePerformedCesareanSection_precondition_30"
+        },
+        {
+          "type": "DURING",
+          "reference": "OccurrenceAInpatientEncounter1_precondition_39"
+        }
+      ]
+    },
+    "ProcedurePerformedCesareanSection_precondition_33": {
+      "title": "Cesarean Section",
+      "description": "Procedure, Performed: Cesarean Section",
+      "standard_category": "procedure",
+      "qds_data_type": "procedure_performed",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.282",
+      "type": "procedures",
+      "definition": "procedure",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "ProcedurePerformedCesareanSection",
+      "temporal_references": [
+        {
+          "type": "DURING",
+          "reference": "OccurrenceAInpatientEncounter1"
+        }
+      ]
+    },
+    "DiagnosisActiveSpontaneousRuptureOfMembranes_precondition_34": {
+      "title": "Spontaneous Rupture of Membranes",
+      "description": "Diagnosis, Active: Spontaneous Rupture of Membranes",
+      "standard_category": "diagnosis_condition_problem",
+      "qds_data_type": "diagnosis_active",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.300",
+      "type": "conditions",
+      "definition": "diagnosis",
+      "status": "active",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "DiagnosisActiveSpontaneousRuptureOfMembranes",
+      "temporal_references": [
+        {
+          "type": "SBS",
+          "reference": "ProcedurePerformedCesareanSection_precondition_33"
+        },
+        {
+          "type": "DURING",
+          "reference": "OccurrenceAInpatientEncounter1_precondition_39"
+        }
+      ]
+    },
+    "ProcedurePerformedDeliveryProcedures_precondition_46": {
+      "title": "Delivery Procedures",
+      "description": "Procedure, Performed: Delivery Procedures",
+      "standard_category": "procedure",
+      "qds_data_type": "procedure_performed",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.401",
+      "type": "procedures",
+      "definition": "procedure",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "ProcedurePerformedDeliveryProcedures",
+      "temporal_references": [
+        {
+          "type": "DURING",
+          "reference": "OccurrenceAInpatientEncounter1"
+        }
+      ]
+    },
+    "PatientCharacteristicGestationalAgeUnknown_precondition_47": {
+      "title": "Gestational Age Unknown",
+      "description": "Patient Characteristic: Gestational Age Unknown",
+      "standard_category": "individual_characteristic",
+      "qds_data_type": "individual_characteristic",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.307",
+      "type": "characteristic",
+      "definition": "patient_characteristic",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "PatientCharacteristicGestationalAgeUnknown",
+      "temporal_references": [
+        {
+          "type": "SBS",
+          "reference": "ProcedurePerformedDeliveryProcedures_precondition_46"
+        }
+      ]
+    },
+    "ProcedurePerformedDeliveryProcedures_precondition_43": {
+      "title": "Delivery Procedures",
+      "description": "Procedure, Performed: Delivery Procedures",
+      "standard_category": "procedure",
+      "qds_data_type": "procedure_performed",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.401",
+      "type": "procedures",
+      "definition": "procedure",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "ProcedurePerformedDeliveryProcedures",
+      "temporal_references": [
+        {
+          "type": "DURING",
+          "reference": "OccurrenceAInpatientEncounter1"
+        }
+      ]
+    },
+    "PatientCharacteristicGestationalAge3738Weeks_precondition_44": {
+      "title": "Gestational Age 37-38 weeks",
+      "description": "Patient Characteristic: Gestational Age 37-38 weeks",
+      "standard_category": "individual_characteristic",
+      "qds_data_type": "individual_characteristic",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.287",
+      "type": "characteristic",
+      "definition": "patient_characteristic",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "PatientCharacteristicGestationalAge3738Weeks",
+      "temporal_references": [
+        {
+          "type": "SBS",
+          "reference": "ProcedurePerformedDeliveryProcedures_precondition_43"
+        }
+      ]
+    },
+    "PatientCharacteristicBirthdateBirthDate_precondition_55": {
+      "title": "birth date",
+      "description": "Patient Characteristic Birthdate: birth date",
+      "standard_category": "individual_characteristic",
+      "qds_data_type": "individual_characteristic",
+      "code_list_id": "2.16.840.1.113883.3.560.100.4",
+      "property": "birthtime",
+      "type": "characteristic",
+      "definition": "patient_characteristic_birthdate",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "PatientCharacteristicBirthdateBirthDate",
+      "inline_code_list": {
+        "LOINC": [
+          "21112-8"
+        ]
+      },
+      "temporal_references": [
+        {
+          "type": "SBS",
+          "reference": "OccurrenceAInpatientEncounter1",
+          "range": {
+            "type": "IVL_PQ",
+            "low": {
+              "type": "PQ",
+              "unit": "a",
+              "value": "8",
+              "inclusive?": true,
+              "derived?": false
+            }
+          }
+        }
+      ]
+    },
+    "PatientCharacteristicBirthdateBirthDate_precondition_57": {
+      "title": "birth date",
+      "description": "Patient Characteristic Birthdate: birth date",
+      "standard_category": "individual_characteristic",
+      "qds_data_type": "individual_characteristic",
+      "code_list_id": "2.16.840.1.113883.3.560.100.4",
+      "property": "birthtime",
+      "type": "characteristic",
+      "definition": "patient_characteristic_birthdate",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "PatientCharacteristicBirthdateBirthDate",
+      "inline_code_list": {
+        "LOINC": [
+          "21112-8"
+        ]
+      },
+      "temporal_references": [
+        {
+          "type": "SBS",
+          "reference": "OccurrenceAInpatientEncounter1",
+          "range": {
+            "type": "IVL_PQ",
+            "high": {
+              "type": "PQ",
+              "unit": "a",
+              "value": "65",
+              "inclusive?": false,
+              "derived?": false
+            }
+          }
+        }
+      ]
+    },
+    "OccurrenceAInpatientEncounter1_precondition_59": {
+      "title": "Inpatient Encounter",
+      "description": "Encounter, Performed: Inpatient Encounter",
+      "standard_category": "encounter",
+      "qds_data_type": "encounter",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.23",
+      "type": "encounters",
+      "definition": "encounter",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "specific_occurrence": "A",
+      "specific_occurrence_const": "ENCOUNTER_PERFORMED_INPATIENT_ENCOUNTER",
+      "source_data_criteria": "OccurrenceAInpatientEncounter1",
+      "field_values": {
+        "LENGTH_OF_STAY": {
+          "type": "IVL_PQ",
+          "high": {
+            "type": "PQ",
+            "unit": "d",
+            "value": "120",
+            "inclusive?": true,
+            "derived?": false
+          }
+        }
+      }
+    },
+    "OccurrenceAInpatientEncounter1_precondition_61": {
+      "title": "Inpatient Encounter",
+      "description": "Encounter, Performed: Inpatient Encounter",
+      "standard_category": "encounter",
+      "qds_data_type": "encounter",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.23",
+      "type": "encounters",
+      "definition": "encounter",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "specific_occurrence": "A",
+      "specific_occurrence_const": "ENCOUNTER_PERFORMED_INPATIENT_ENCOUNTER",
+      "source_data_criteria": "OccurrenceAInpatientEncounter1",
+      "field_values": {
+        "DISCHARGE_DATETIME": {
+          "type": "ANYNonNull"
+        }
+      },
+      "temporal_references": [
+        {
+          "type": "DURING",
+          "reference": "MeasurePeriod"
+        }
+      ]
+    },
+    "OccurrenceAInpatientEncounter1_precondition_76": {
+      "title": "Inpatient Encounter",
+      "description": "Encounter, Performed: Inpatient Encounter",
+      "standard_category": "encounter",
+      "qds_data_type": "encounter",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.23",
+      "type": "encounters",
+      "definition": "encounter",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "specific_occurrence": "A",
+      "specific_occurrence_const": "ENCOUNTER_PERFORMED_INPATIENT_ENCOUNTER",
+      "source_data_criteria": "OccurrenceAInpatientEncounter1"
+    },
+    "DiagnosisActiveComplicationMainlyRelatedToPregnancy_precondition_63": {
+      "title": "Complication Mainly Related to Pregnancy",
+      "description": "Diagnosis, Active: Complication Mainly Related to Pregnancy",
+      "standard_category": "diagnosis_condition_problem",
+      "qds_data_type": "diagnosis_active",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.372",
+      "type": "conditions",
+      "definition": "diagnosis",
+      "status": "active",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "DiagnosisActiveComplicationMainlyRelatedToPregnancy",
+      "temporal_references": [
+        {
+          "type": "SDU",
+          "reference": "OccurrenceAInpatientEncounter1_precondition_76"
+        }
+      ]
+    },
+    "DiagnosisActiveNormalDeliveryAndOtherIndicationsForCare_precondition_65": {
+      "title": "Normal Delivery and Other Indications for Care",
+      "description": "Diagnosis, Active: Normal Delivery and Other Indications for Care",
+      "standard_category": "diagnosis_condition_problem",
+      "qds_data_type": "diagnosis_active",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.391",
+      "type": "conditions",
+      "definition": "diagnosis",
+      "status": "active",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "DiagnosisActiveNormalDeliveryAndOtherIndicationsForCare",
+      "temporal_references": [
+        {
+          "type": "SDU",
+          "reference": "OccurrenceAInpatientEncounter1_precondition_76"
+        }
+      ]
+    },
+    "DiagnosisActiveComplicationMainlyInTheCourseOfLaborAndDelivery_precondition_67": {
+      "title": "Complication Mainly in the Course of Labor and Delivery",
+      "description": "Diagnosis, Active: Complication Mainly in the Course of Labor and Delivery",
+      "standard_category": "diagnosis_condition_problem",
+      "qds_data_type": "diagnosis_active",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.397",
+      "type": "conditions",
+      "definition": "diagnosis",
+      "status": "active",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "DiagnosisActiveComplicationMainlyInTheCourseOfLaborAndDelivery",
+      "temporal_references": [
+        {
+          "type": "SDU",
+          "reference": "OccurrenceAInpatientEncounter1_precondition_76"
+        }
+      ]
+    },
+    "DiagnosisActiveComplicationOfThePuerperium_precondition_69": {
+      "title": "Complication of the Puerperium",
+      "description": "Diagnosis, Active: Complication of the Puerperium",
+      "standard_category": "diagnosis_condition_problem",
+      "qds_data_type": "diagnosis_active",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.375",
+      "type": "conditions",
+      "definition": "diagnosis",
+      "status": "active",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "DiagnosisActiveComplicationOfThePuerperium",
+      "temporal_references": [
+        {
+          "type": "SDU",
+          "reference": "OccurrenceAInpatientEncounter1_precondition_76"
+        }
+      ]
+    },
+    "DiagnosisActiveOutcomeOfDelivery_precondition_71": {
+      "title": "Outcome of Delivery",
+      "description": "Diagnosis, Active: Outcome of Delivery",
+      "standard_category": "diagnosis_condition_problem",
+      "qds_data_type": "diagnosis_active",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.408",
+      "type": "conditions",
+      "definition": "diagnosis",
+      "status": "active",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "DiagnosisActiveOutcomeOfDelivery",
+      "temporal_references": [
+        {
+          "type": "SDU",
+          "reference": "OccurrenceAInpatientEncounter1_precondition_76"
+        }
+      ]
+    },
+    "ProcedurePerformedDeliveryProcedures_precondition_73": {
+      "title": "Delivery Procedures",
+      "description": "Procedure, Performed: Delivery Procedures",
+      "standard_category": "procedure",
+      "qds_data_type": "procedure_performed",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.401",
+      "type": "procedures",
+      "definition": "procedure",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "ProcedurePerformedDeliveryProcedures",
+      "temporal_references": [
+        {
+          "type": "SDU",
+          "reference": "OccurrenceAInpatientEncounter1_precondition_76"
+        }
+      ]
+    }
+  },
+  "source_data_criteria": {
+    "PatientCharacteristicBirthdateBirthDate": {
+      "title": "birth date",
+      "description": "Patient Characteristic Birthdate: birth date",
+      "standard_category": "individual_characteristic",
+      "qds_data_type": "individual_characteristic",
+      "code_list_id": "2.16.840.1.113883.3.560.100.4",
+      "property": "birthtime",
+      "type": "characteristic",
+      "definition": "patient_characteristic_birthdate",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "PatientCharacteristicBirthdateBirthDate",
+      "inline_code_list": {
+        "LOINC": [
+          "21112-8"
+        ]
+      }
+    },
+    "DiagnosisActiveConditionsPossiblyJustifyingElectiveDeliveryPriorTo39WeeksGestation": {
+      "title": "Conditions Possibly Justifying Elective Delivery Prior to 39 Weeks Gestation",
+      "description": "Diagnosis, Active: Conditions Possibly Justifying Elective Delivery Prior to 39 Weeks Gestation",
+      "standard_category": "diagnosis_condition_problem",
+      "qds_data_type": "diagnosis_active",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.286",
+      "type": "conditions",
+      "definition": "diagnosis",
+      "status": "active",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "DiagnosisActiveConditionsPossiblyJustifyingElectiveDeliveryPriorTo39WeeksGestation"
+    },
+    "ProcedurePerformedMedicalInductionOfLabor": {
+      "title": "Medical Induction of Labor",
+      "description": "Procedure, Performed: Medical Induction of Labor",
+      "standard_category": "procedure",
+      "qds_data_type": "procedure_performed",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.288",
+      "type": "procedures",
+      "definition": "procedure",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "ProcedurePerformedMedicalInductionOfLabor"
+    },
+    "ProcedurePerformedCesareanSection": {
+      "title": "Cesarean Section",
+      "description": "Procedure, Performed: Cesarean Section",
+      "standard_category": "procedure",
+      "qds_data_type": "procedure_performed",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.282",
+      "type": "procedures",
+      "definition": "procedure",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "ProcedurePerformedCesareanSection"
+    },
+    "PhysicalExamFindingActiveLabor": {
+      "title": "Active Labor",
+      "description": "Physical Exam, Finding: Active Labor",
+      "standard_category": "physical_exam",
+      "qds_data_type": "physical_exam",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.281",
+      "type": "physical_exams",
+      "definition": "physical_exam",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "PhysicalExamFindingActiveLabor"
+    },
+    "EncounterPerformedInpatientEncounter": {
+      "title": "Inpatient Encounter",
+      "description": "Encounter, Performed: Inpatient Encounter",
+      "standard_category": "encounter",
+      "qds_data_type": "encounter",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.23",
+      "type": "encounters",
+      "definition": "encounter",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "EncounterPerformedInpatientEncounter"
+    },
+    "PatientCharacteristicGestationalAge37Weeks": {
+      "title": "Gestational Age <37 weeks",
+      "description": "Patient Characteristic: Gestational Age <37 weeks",
+      "standard_category": "individual_characteristic",
+      "qds_data_type": "individual_characteristic",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.402",
+      "type": "characteristic",
+      "definition": "patient_characteristic",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "PatientCharacteristicGestationalAge37Weeks"
+    },
+    "DiagnosisActiveSpontaneousRuptureOfMembranes": {
+      "title": "Spontaneous Rupture of Membranes",
+      "description": "Diagnosis, Active: Spontaneous Rupture of Membranes",
+      "standard_category": "diagnosis_condition_problem",
+      "qds_data_type": "diagnosis_active",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.300",
+      "type": "conditions",
+      "definition": "diagnosis",
+      "status": "active",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "DiagnosisActiveSpontaneousRuptureOfMembranes"
+    },
+    "PatientCharacteristicGestationalAge3738Weeks": {
+      "title": "Gestational Age 37-38 weeks",
+      "description": "Patient Characteristic: Gestational Age 37-38 weeks",
+      "standard_category": "individual_characteristic",
+      "qds_data_type": "individual_characteristic",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.287",
+      "type": "characteristic",
+      "definition": "patient_characteristic",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "PatientCharacteristicGestationalAge3738Weeks"
+    },
+    "PatientCharacteristicGestationalAgeUnknown": {
+      "title": "Gestational Age Unknown",
+      "description": "Patient Characteristic: Gestational Age Unknown",
+      "standard_category": "individual_characteristic",
+      "qds_data_type": "individual_characteristic",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.307",
+      "type": "characteristic",
+      "definition": "patient_characteristic",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "PatientCharacteristicGestationalAgeUnknown"
+    },
+    "PatientCharacteristicGestationalAge38Weeks": {
+      "title": "Gestational Age >38 weeks",
+      "description": "Patient Characteristic: Gestational Age >38 weeks",
+      "standard_category": "individual_characteristic",
+      "qds_data_type": "individual_characteristic",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.403",
+      "type": "characteristic",
+      "definition": "patient_characteristic",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "PatientCharacteristicGestationalAge38Weeks"
+    },
+    "DiagnosisActiveComplicationMainlyRelatedToPregnancy": {
+      "title": "Complication Mainly Related to Pregnancy",
+      "description": "Diagnosis, Active: Complication Mainly Related to Pregnancy",
+      "standard_category": "diagnosis_condition_problem",
+      "qds_data_type": "diagnosis_active",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.372",
+      "type": "conditions",
+      "definition": "diagnosis",
+      "status": "active",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "DiagnosisActiveComplicationMainlyRelatedToPregnancy"
+    },
+    "DiagnosisActiveNormalDeliveryAndOtherIndicationsForCare": {
+      "title": "Normal Delivery and Other Indications for Care",
+      "description": "Diagnosis, Active: Normal Delivery and Other Indications for Care",
+      "standard_category": "diagnosis_condition_problem",
+      "qds_data_type": "diagnosis_active",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.391",
+      "type": "conditions",
+      "definition": "diagnosis",
+      "status": "active",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "DiagnosisActiveNormalDeliveryAndOtherIndicationsForCare"
+    },
+    "DiagnosisActiveComplicationMainlyInTheCourseOfLaborAndDelivery": {
+      "title": "Complication Mainly in the Course of Labor and Delivery",
+      "description": "Diagnosis, Active: Complication Mainly in the Course of Labor and Delivery",
+      "standard_category": "diagnosis_condition_problem",
+      "qds_data_type": "diagnosis_active",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.397",
+      "type": "conditions",
+      "definition": "diagnosis",
+      "status": "active",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "DiagnosisActiveComplicationMainlyInTheCourseOfLaborAndDelivery"
+    },
+    "DiagnosisActiveComplicationOfThePuerperium": {
+      "title": "Complication of the Puerperium",
+      "description": "Diagnosis, Active: Complication of the Puerperium",
+      "standard_category": "diagnosis_condition_problem",
+      "qds_data_type": "diagnosis_active",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.375",
+      "type": "conditions",
+      "definition": "diagnosis",
+      "status": "active",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "DiagnosisActiveComplicationOfThePuerperium"
+    },
+    "ProcedurePerformedDeliveryProcedures": {
+      "title": "Delivery Procedures",
+      "description": "Procedure, Performed: Delivery Procedures",
+      "standard_category": "procedure",
+      "qds_data_type": "procedure_performed",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.401",
+      "type": "procedures",
+      "definition": "procedure",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "ProcedurePerformedDeliveryProcedures"
+    },
+    "DiagnosisActiveOutcomeOfDelivery": {
+      "title": "Outcome of Delivery",
+      "description": "Diagnosis, Active: Outcome of Delivery",
+      "standard_category": "diagnosis_condition_problem",
+      "qds_data_type": "diagnosis_active",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.408",
+      "type": "conditions",
+      "definition": "diagnosis",
+      "status": "active",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "DiagnosisActiveOutcomeOfDelivery"
+    },
+    "ProcedurePerformedClassicalCesareanSection": {
+      "title": "Classical Cesarean Section",
+      "description": "Procedure, Performed: Classical Cesarean Section",
+      "standard_category": "procedure",
+      "qds_data_type": "procedure_performed",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.421",
+      "type": "procedures",
+      "definition": "procedure",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "ProcedurePerformedClassicalCesareanSection"
+    },
+    "ProcedurePerformedMyomectomy": {
+      "title": "Myomectomy",
+      "description": "Procedure, Performed: Myomectomy",
+      "standard_category": "procedure",
+      "qds_data_type": "procedure_performed",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.422",
+      "type": "procedures",
+      "definition": "procedure",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "ProcedurePerformedMyomectomy"
+    },
+    "OccurrenceAInpatientEncounter1": {
+      "title": "Inpatient Encounter",
+      "description": "Encounter, Performed: Inpatient Encounter",
+      "standard_category": "encounter",
+      "qds_data_type": "encounter",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.23",
+      "type": "encounters",
+      "definition": "encounter",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "specific_occurrence": "A",
+      "specific_occurrence_const": "ENCOUNTER_PERFORMED_INPATIENT_ENCOUNTER",
+      "source_data_criteria": "OccurrenceAInpatientEncounter1"
+    }
+  },
+  "attributes": [
+    {
+      "id": "COPYRIGHT",
+      "code": "COPY",
+      "value": "Measure specifications are in the Public Domain\r\n\r\nLOINC(R) is a registered trademark of the Regenstrief Institute.\r\n\r\nThis material contains SNOMED Clinical Terms (R) (SNOMED CT(c) ) copyright 2004-–2010 International Health Terminology Standards Development Organization. All rights reserved.",
+      "name": "Copyright"
+    },
+    {
+      "id": "MEASURE_SCORING",
+      "code": "MSRSCORE",
+      "name": "Measure Scoring"
+    },
+    {
+      "id": "MEASURE_TYPE",
+      "code": "MSRTYPE",
+      "name": "Measure Type"
+    },
+    {
+      "id": "STRATIFICATION",
+      "code": "STRAT",
+      "value": "None",
+      "name": "Stratification"
+    },
+    {
+      "id": "RISK_ADJUSTMENT",
+      "code": "MSRADJ",
+      "value": "None",
+      "name": "Risk Adjustment"
+    },
+    {
+      "id": "RATE_AGGREGATION",
+      "code": "MSRAGG",
+      "value": "None",
+      "name": "Rate Aggregation"
+    },
+    {
+      "id": "RATIONALE",
+      "code": "RAT",
+      "value": "For almost 3 decades, the American College of Obstetricians and Gynecologists (ACOG) and the American Academy of Pediatrics (AAP) have had in place a standard requiring 39 completed weeks gestation prior to ELECTIVE delivery, either vaginal or operative (ACOG, 1996). A survey conducted in 2007 of almost 20,000 births in HCA hospitals throughout the U.S. carried out in conjunction with the March of Dimes at the request of ACOG revealed that almost 1/3 of all babies delivered in the United States are electively delivered with 5% of all deliveries in the U.S. delivered in a manner violating ACOG/AAP guidelines. Most of these are for convenience, and result in significant short term neonatal morbidity (neonatal intensive care unit admission rates of 13- 21%) (Clark et al., 2009).\r\nAccording to Glantz (2005), compared to spontaneous labor, elective inductions result in more cesarean deliveries and longer maternal length of stay. The American Academy of Family Physicians (2000) also notes that elective induction doubles the cesarean delivery rate. Repeat elective cesarean sections before 39 weeks gestation also result in higher rates of adverse respiratory outcomes, mechanical ventilation, sepsis and hypoglycemia for the newborns (Tita et al., 2009).",
+      "name": "Rationale"
+    },
+    {
+      "id": "CLINICAL_RECOMMENDATION_STATEMENT",
+      "code": "CRS",
+      "value": "Guidelines from the American College of Obstetricians and Gynecologists and the American Academy of Pediatrics do not support non-medically indicated elective deliveries at <39 weeks gestation. Evidence suggests that early term deliveries result in significant short term neonatal morbidity. Therefore, it is recommended that elective deliveries should not be performed at <39 weeks gestation unless medically-indicated.",
+      "name": "Clinical Recommendation Statement"
+    },
+    {
+      "id": "IMPROVEMENT_NOTATION",
+      "code": "IDUR",
+      "value": "Decrease in the rate",
+      "name": "Improvement Notation"
+    },
+    {
+      "id": "NQF_ID_NUMBER",
+      "code": "OTH",
+      "value": "0469",
+      "name": "NQF ID Number"
+    },
+    {
+      "id": "DISCLAIMER",
+      "code": "DISC",
+      "value": "None",
+      "name": "Disclaimer"
+    },
+    {
+      "id": "EMEASURE_IDENTIFIER",
+      "code": "OTH",
+      "value": "113",
+      "name": "eMeasure Identifier"
+    },
+    {
+      "id": "REFERENCE",
+      "code": "REF",
+      "value": "Tita, A., Landon, M., Spong, C., Lai, Y., Leveno, K., Varner, M, et al. (2009). Timing of elective repeat cesarean delivery at term and neonatal outcomes. [Electronic Version]. NEJM. 360:2, 111-120.",
+      "name": "Reference"
+    },
+    {
+      "id": "DEFINITION",
+      "code": "DEF",
+      "value": "None",
+      "name": "Definition"
+    },
+    {
+      "id": "GUIDANCE",
+      "code": "GUIDE",
+      "value": "The unit of measurement for this measure is an inpatient episode of care. Each distinct hospitalization should be reported, regardless of whether the same patient is admitted for inpatient care more than once during the measurement period. In addition, the eMeasure logic intends to represent events within or surrounding a single occurrence of an inpatient hospitalization.\r\n\r\nWherever the gestational age is mentioned with relative timing to delivery, the intent is to capture gestational age documented on the day of delivery but prior to delivery.\r\n\r\nGestational age should be rounded off to the nearest completed week, not the following week. For example, an infant born on the 5th day of the 36th week (35 weeks and 5/7 days) is at a gestational age of 35 weeks, not 36 weeks.\r\n\r\nThe denominator inclusion of patients with a gestational age of 37 or 38 weeks, or gestational age unknown, or gestational age not documented, is achieved implicitly by excluding patients with a gestational age of <37 weeks or >= 39 weeks.\r\n\r\nThe numerator inclusion for patients with gestational age unknown or not documented in the medical record is achieved by modeling patients who do not have a gestational age of 37 or 38 weeks.",
+      "name": "Guidance"
+    },
+    {
+      "id": "TRANSMISSION_FORMAT",
+      "code": "OTH",
+      "value": "None",
+      "name": "Transmission Format"
+    },
+    {
+      "id": "INITIAL_PATIENT_POPULATION",
+      "code": "IPP",
+      "value": "Patients admitted to the hospital for inpatient acute care are included if they have a diagnosis related to pregnancy with reference to delivery, a patient age >= 8 years and < 65, and a length of stay < 120 days.",
+      "name": "Initial Patient Population"
+    },
+    {
+      "id": "DENOMINATOR",
+      "code": "DENOM",
+      "value": "Patients delivering newborns with >= 37 and < 39 weeks of gestation completed",
+      "name": "Denominator"
+    },
+    {
+      "id": "DENOMINATOR_EXCLUSIONS",
+      "code": "OTH",
+      "value": "Patients who experienced a prior uterine surgery (classical cesarean section or myomectomy)\r\nPatients with conditions possibly justifying elective delivery prior to 39 weeks gestation",
+      "name": "Denominator Exclusions"
+    },
+    {
+      "id": "NUMERATOR",
+      "code": "NUMER",
+      "value": "Patients with elective deliveries",
+      "name": "Numerator"
+    },
+    {
+      "id": "NUMERATOR_EXCLUSIONS",
+      "code": "OTH",
+      "value": "Not Applicable",
+      "name": "Numerator Exclusions"
+    },
+    {
+      "id": "DENOMINATOR_EXCEPTIONS",
+      "code": "DENEXCEP",
+      "value": "None",
+      "name": "Denominator Exceptions"
+    },
+    {
+      "id": "MEASURE_POPULATION",
+      "code": "MSRPOPL",
+      "value": "Not Applicable",
+      "name": "Measure Population"
+    },
+    {
+      "id": "MEASURE_OBSERVATIONS",
+      "code": "OTH",
+      "value": "Not Applicable",
+      "name": "Measure Observations"
+    },
+    {
+      "id": "SUPPLEMENTAL_DATA_ELEMENTS",
+      "code": "OTH",
+      "value": "For every patient evaluated by this measure also identify payer, race, ethnicity and sex.",
+      "name": "Supplemental Data Elements"
+    }
+  ],
+  "populations": [
+    {
+      "IPP": "IPP",
+      "DENOM": "DENOM",
+      "NUMER": "NUMER",
+      "DENEX": "DENEX"
+    }
+  ],
+  "measure_period": {
+    "type": "IVL_TS",
+    "low": {
+      "type": "TS",
+      "value": "201201010000",
+      "inclusive?": true,
+      "derived?": false
+    },
+    "high": {
+      "type": "TS",
+      "value": "201212312359",
+      "inclusive?": true,
+      "derived?": false
+    },
+    "width": {
+      "type": "PQ",
+      "unit": "a",
+      "value": "1",
+      "inclusive?": true,
+      "derived?": false
+    }
+  }
+}

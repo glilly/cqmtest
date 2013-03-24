@@ -1,0 +1,2057 @@
+{
+  "id": "0164",
+  "hqmf_id": "8A4D92B2-3887-5DF3-0139-11B262260A92",
+  "hqmf_set_id": "909CF4B4-7A85-4ABF-A1C7-CB597ED1C0B6",
+  "hqmf_version_number": 1,
+  "title": "Fibrinolytic Therapy Received Within 30 Minutes of Hospital Arrival",
+  "description": "Acute myocardial infarction (AMI) patients with ST-segment elevation or LBBB on the ECG closest to arrival time receiving fibrinolytic therapy during the hospital stay and having a time from hospital arrival to fibrinolysis of 30 minutes or less",
+  "cms_id": "CMS60v1",
+  "population_criteria": {
+    "DENEX": {
+      "conjunction?": true,
+      "type": "DENEX",
+      "title": "Denominator",
+      "hqmf_id": "B1CEAA1C-7FFD-4E4E-A2A4-EA20883FCB2E",
+      "preconditions": [
+        {
+          "id": 56,
+          "preconditions": [
+            {
+              "id": 54,
+              "preconditions": [
+                {
+                  "id": 12,
+                  "preconditions": [
+                    {
+                      "id": 9,
+                      "reference": "OccurrenceAClinicalTrialParticipant3_precondition_9"
+                    },
+                    {
+                      "id": 11,
+                      "preconditions": [
+                        {
+                          "id": 7,
+                          "reference": "OccurrenceAClinicalTrialParticipant3_precondition_7"
+                        }
+                      ],
+                      "conjunction_code": "atLeastOneTrue",
+                      "negation": true
+                    }
+                  ],
+                  "conjunction_code": "allTrue"
+                },
+                {
+                  "id": 41,
+                  "preconditions": [
+                    {
+                      "id": 32,
+                      "preconditions": [
+                        {
+                          "id": 22,
+                          "reference": "MedicationAdministeredHospitalMeasuresFibrinolyticTherapy_precondition_22"
+                        },
+                        {
+                          "id": 24,
+                          "reference": "MedicationAdministeredHospitalMeasuresFibrinolyticTherapy_precondition_24"
+                        },
+                        {
+                          "id": 26,
+                          "reference": "ProcedurePerformedHospitalMeasuresAorticBalloonPumpInsertion_precondition_26"
+                        },
+                        {
+                          "id": 28,
+                          "reference": "ProcedurePerformedHospitalMeasuresEndotrachaelIntubation_precondition_28"
+                        },
+                        {
+                          "id": 30,
+                          "reference": "DiagnosisActiveHospitalMeasuresCardiopulmonaryArrest_precondition_30"
+                        }
+                      ],
+                      "conjunction_code": "atLeastOneTrue"
+                    },
+                    {
+                      "id": 40,
+                      "preconditions": [
+                        {
+                          "id": 20,
+                          "reference": "OccurrenceAHospitalMeasuresFibrinolyticTherapy4_precondition_20"
+                        }
+                      ],
+                      "conjunction_code": "atLeastOneTrue",
+                      "negation": true
+                    }
+                  ],
+                  "conjunction_code": "allTrue"
+                },
+                {
+                  "id": 51,
+                  "preconditions": [
+                    {
+                      "id": 43,
+                      "reference": "TransferFromHospitalMeasuresAmbulatorySurgicalCenter_precondition_43"
+                    },
+                    {
+                      "id": 45,
+                      "reference": "TransferFromHospitalMeasuresHospitalOutpatientDepartment_precondition_45"
+                    },
+                    {
+                      "id": 47,
+                      "reference": "TransferFromHospitalMeasuresEdLocations_precondition_47"
+                    },
+                    {
+                      "id": 49,
+                      "reference": "TransferFromHospitalMeasuresAcuteCareHospital_precondition_49"
+                    }
+                  ],
+                  "conjunction_code": "atLeastOneTrue"
+                }
+              ],
+              "conjunction_code": "atLeastOneTrue"
+            }
+          ],
+          "conjunction_code": "allTrue"
+        }
+      ]
+    },
+    "NUMER": {
+      "conjunction?": true,
+      "type": "NUMER",
+      "title": "Numerator",
+      "hqmf_id": "133EB9C9-036E-4B34-9BDC-66CFCE19D8F3",
+      "preconditions": [
+        {
+          "id": 65,
+          "preconditions": [
+            {
+              "id": 63,
+              "reference": "OccurrenceAHospitalMeasuresFibrinolyticTherapy4_precondition_63"
+            }
+          ],
+          "conjunction_code": "allTrue"
+        }
+      ]
+    },
+    "DENOM": {
+      "conjunction?": true,
+      "type": "DENOM",
+      "title": "Denominator",
+      "hqmf_id": "ADC7845D-8F68-4975-BD25-292644EBCF8F",
+      "preconditions": [
+        {
+          "id": 114,
+          "preconditions": [
+            {
+              "id": 82,
+              "preconditions": [
+                {
+                  "id": 72,
+                  "reference": "OccurrenceAHospitalMeasuresEcg5_precondition_71",
+                  "conjunction_code": "allTrue"
+                },
+                {
+                  "id": 80,
+                  "preconditions": [
+                    {
+                      "id": 74,
+                      "reference": "OccurrenceAHospitalMeasuresEcg5_precondition_74"
+                    },
+                    {
+                      "id": 76,
+                      "reference": "OccurrenceAHospitalMeasuresEcg5_precondition_76"
+                    },
+                    {
+                      "id": 78,
+                      "reference": "OccurrenceAHospitalMeasuresEcg5_precondition_78"
+                    }
+                  ],
+                  "conjunction_code": "atLeastOneTrue"
+                }
+              ],
+              "conjunction_code": "allTrue"
+            },
+            {
+              "id": 112,
+              "preconditions": [
+                {
+                  "id": 90,
+                  "reference": "OccurrenceAHospitalMeasuresFibrinolyticTherapy4_precondition_89",
+                  "conjunction_code": "allTrue"
+                },
+                {
+                  "id": 109,
+                  "reference": "OccurrenceAHospitalMeasuresFibrinolyticTherapy4_precondition_109"
+                },
+                {
+                  "id": 111,
+                  "preconditions": [
+                    {
+                      "id": 101,
+                      "preconditions": [
+                        {
+                          "id": 92,
+                          "reference": "OccurrenceAHospitalMeasuresFibrinolyticTherapy4_precondition_92"
+                        },
+                        {
+                          "id": 99,
+                          "reference": "OccurrenceAHospitalMeasuresPci6_precondition_99"
+                        }
+                      ],
+                      "conjunction_code": "allTrue"
+                    }
+                  ],
+                  "conjunction_code": "atLeastOneTrue",
+                  "negation": true
+                }
+              ],
+              "conjunction_code": "allTrue"
+            }
+          ],
+          "conjunction_code": "allTrue"
+        }
+      ]
+    },
+    "IPP": {
+      "conjunction?": true,
+      "type": "IPP",
+      "title": "Initial Patient Population",
+      "hqmf_id": "0A8E31BB-71F2-4904-8F6E-FB783ECAEE44",
+      "preconditions": [
+        {
+          "id": 123,
+          "preconditions": [
+            {
+              "id": 115,
+              "reference": "DiagnosisActiveHospitalMeasuresAmi_precondition_115"
+            },
+            {
+              "id": 117,
+              "reference": "PatientCharacteristicBirthdateBirthDate_precondition_117"
+            },
+            {
+              "id": 119,
+              "reference": "OccurrenceAHospitalMeasuresEncounterInpatient1_precondition_119"
+            },
+            {
+              "id": 121,
+              "reference": "OccurrenceAHospitalMeasuresEncounterInpatient1_precondition_121"
+            }
+          ],
+          "conjunction_code": "allTrue"
+        }
+      ]
+    }
+  },
+  "data_criteria": {
+    "DiagnosticStudyResultHospitalMeasuresEcg": {
+      "title": "Hospital Measures-ECG",
+      "description": "Diagnostic Study, Result: Hospital Measures-ECG",
+      "standard_category": "diagnostic_study",
+      "qds_data_type": "diagnostic_study_result",
+      "code_list_id": "2.16.840.1.113883.3.666.5.735",
+      "type": "diagnostic_studies",
+      "definition": "diagnostic_study_result",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "DiagnosticStudyResultHospitalMeasuresEcg"
+    },
+    "ProcedurePerformedHospitalMeasuresPci": {
+      "title": "Hospital Measures-PCI",
+      "description": "Procedure, Performed: Hospital Measures-PCI",
+      "standard_category": "procedure",
+      "qds_data_type": "procedure_performed",
+      "code_list_id": "2.16.840.1.113883.3.666.5.737",
+      "type": "procedures",
+      "definition": "procedure",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "ProcedurePerformedHospitalMeasuresPci"
+    },
+    "PatientCharacteristicClinicalTrialParticipantClinicalTrialParticipant": {
+      "title": "Clinical Trial Participant",
+      "description": "Patient Characteristic Clinical Trial Participant: Clinical Trial Participant",
+      "standard_category": "individual_characteristic",
+      "qds_data_type": "individual_characteristic",
+      "code_list_id": "2.16.840.1.113883.3.526.2.643",
+      "property": "clinicalTrialParticipant",
+      "type": "characteristic",
+      "definition": "patient_characteristic_clinical_trial_participant",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "PatientCharacteristicClinicalTrialParticipantClinicalTrialParticipant",
+      "inline_code_list": {
+        "SNOMED-CT": [
+          "428024001"
+        ]
+      }
+    },
+    "EncounterPerformedHospitalMeasuresEncounterInpatient": {
+      "title": "Hospital Measures-Encounter Inpatient",
+      "description": "Encounter, Performed: Hospital Measures-Encounter Inpatient",
+      "standard_category": "encounter",
+      "qds_data_type": "encounter",
+      "code_list_id": "2.16.840.1.113883.3.666.5.625",
+      "type": "encounters",
+      "definition": "encounter",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "EncounterPerformedHospitalMeasuresEncounterInpatient"
+    },
+    "EncounterPerformedHospitalMeasuresEncounterEd": {
+      "title": "Hospital Measures-Encounter ED",
+      "description": "Encounter, Performed: Hospital Measures-Encounter ED",
+      "standard_category": "encounter",
+      "qds_data_type": "encounter",
+      "code_list_id": "2.16.840.1.113883.3.526.2.900",
+      "type": "encounters",
+      "definition": "encounter",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "EncounterPerformedHospitalMeasuresEncounterEd"
+    },
+    "MedicationAdministeredNotDoneMedicalReason": {
+      "title": "Medical Reason",
+      "description": "Medication, Administered not done: Medical Reason",
+      "standard_category": "medication",
+      "qds_data_type": "medication_administered",
+      "code_list_id": "2.16.840.1.113883.3.526.2.313",
+      "type": "medications",
+      "definition": "medication",
+      "status": "administered",
+      "hard_status": true,
+      "negation": true,
+      "source_data_criteria": "MedicationAdministeredNotDoneMedicalReason"
+    },
+    "MedicationAdministeredNotDonePatientReason": {
+      "title": "Patient Reason",
+      "description": "Medication, Administered not done: Patient Reason",
+      "standard_category": "medication",
+      "qds_data_type": "medication_administered",
+      "code_list_id": "2.16.840.1.113883.3.526.2.311",
+      "type": "medications",
+      "definition": "medication",
+      "status": "administered",
+      "hard_status": true,
+      "negation": true,
+      "source_data_criteria": "MedicationAdministeredNotDonePatientReason"
+    },
+    "OccurrenceAHospitalMeasuresEncounterInpatient1": {
+      "title": "Hospital Measures-Encounter Inpatient",
+      "description": "Encounter, Performed: Hospital Measures-Encounter Inpatient",
+      "standard_category": "encounter",
+      "qds_data_type": "encounter",
+      "code_list_id": "2.16.840.1.113883.3.666.5.625",
+      "type": "encounters",
+      "definition": "encounter",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "specific_occurrence": "A",
+      "specific_occurrence_const": "ENCOUNTER_PERFORMED_HOSPITAL_MEASURES_ENCOUNTER_INPATIENT",
+      "source_data_criteria": "OccurrenceAHospitalMeasuresEncounterInpatient1"
+    },
+    "OccurrenceAHospitalMeasuresPci6": {
+      "title": "Hospital Measures-PCI",
+      "description": "Procedure, Performed: Hospital Measures-PCI",
+      "standard_category": "procedure",
+      "qds_data_type": "procedure_performed",
+      "code_list_id": "2.16.840.1.113883.3.666.5.737",
+      "type": "procedures",
+      "definition": "procedure",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "specific_occurrence": "A",
+      "specific_occurrence_const": "PROCEDURE_PERFORMED_HOSPITAL_MEASURES_PCI",
+      "source_data_criteria": "OccurrenceAHospitalMeasuresPci6"
+    },
+    "OccurrenceAClinicalTrialParticipant3_precondition_9": {
+      "title": "Clinical Trial Participant",
+      "description": "Patient Characteristic Clinical Trial Participant: Clinical Trial Participant",
+      "standard_category": "individual_characteristic",
+      "qds_data_type": "individual_characteristic",
+      "code_list_id": "2.16.840.1.113883.3.526.2.643",
+      "property": "clinicalTrialParticipant",
+      "type": "characteristic",
+      "definition": "patient_characteristic_clinical_trial_participant",
+      "hard_status": false,
+      "negation": false,
+      "specific_occurrence": "A",
+      "specific_occurrence_const": "PATIENT_CHARACTERISTIC_CLINICAL_TRIAL_PARTICIPANT_CLINICAL_TRIAL_PARTICIPANT",
+      "source_data_criteria": "OccurrenceAClinicalTrialParticipant3",
+      "inline_code_list": {
+        "SNOMED-CT": [
+          "428024001"
+        ]
+      },
+      "temporal_references": [
+        {
+          "type": "SBE",
+          "reference": "OccurrenceAHospitalMeasuresEncounterInpatient1"
+        }
+      ]
+    },
+    "OccurrenceAClinicalTrialParticipant3_precondition_7": {
+      "title": "Clinical Trial Participant",
+      "description": "Patient Characteristic Clinical Trial Participant: Clinical Trial Participant",
+      "standard_category": "individual_characteristic",
+      "qds_data_type": "individual_characteristic",
+      "code_list_id": "2.16.840.1.113883.3.526.2.643",
+      "property": "clinicalTrialParticipant",
+      "type": "characteristic",
+      "definition": "patient_characteristic_clinical_trial_participant",
+      "hard_status": false,
+      "negation": false,
+      "specific_occurrence": "A",
+      "specific_occurrence_const": "PATIENT_CHARACTERISTIC_CLINICAL_TRIAL_PARTICIPANT_CLINICAL_TRIAL_PARTICIPANT",
+      "source_data_criteria": "OccurrenceAClinicalTrialParticipant3",
+      "inline_code_list": {
+        "SNOMED-CT": [
+          "428024001"
+        ]
+      },
+      "temporal_references": [
+        {
+          "type": "EBS",
+          "reference": "OccurrenceAHospitalMeasuresEncounterInpatient1"
+        }
+      ]
+    },
+    "OccurrenceAHospitalMeasuresEncounterInpatient1_precondition_33": {
+      "title": "Hospital Measures-Encounter Inpatient",
+      "description": "Encounter, Performed: Hospital Measures-Encounter Inpatient",
+      "standard_category": "encounter",
+      "qds_data_type": "encounter",
+      "code_list_id": "2.16.840.1.113883.3.666.5.625",
+      "type": "encounters",
+      "definition": "encounter",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "specific_occurrence": "A",
+      "specific_occurrence_const": "ENCOUNTER_PERFORMED_HOSPITAL_MEASURES_ENCOUNTER_INPATIENT",
+      "source_data_criteria": "OccurrenceAHospitalMeasuresEncounterInpatient1"
+    },
+    "OccurrenceAHospitalMeasuresEncounterEd2_precondition_35": {
+      "title": "Hospital Measures-Encounter ED",
+      "description": "Encounter, Performed: Hospital Measures-Encounter ED",
+      "standard_category": "encounter",
+      "qds_data_type": "encounter",
+      "code_list_id": "2.16.840.1.113883.3.526.2.900",
+      "type": "encounters",
+      "definition": "encounter",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "specific_occurrence": "A",
+      "specific_occurrence_const": "ENCOUNTER_PERFORMED_HOSPITAL_MEASURES_ENCOUNTER_ED",
+      "source_data_criteria": "OccurrenceAHospitalMeasuresEncounterEd2",
+      "temporal_references": [
+        {
+          "type": "SBS",
+          "reference": "OccurrenceAHospitalMeasuresEncounterInpatient1",
+          "range": {
+            "type": "IVL_PQ",
+            "high": {
+              "type": "PQ",
+              "unit": "d",
+              "value": "1",
+              "inclusive?": true,
+              "derived?": false
+            }
+          }
+        }
+      ]
+    },
+    "GROUP_FIRST_125": {
+      "title": "GROUP_FIRST_125",
+      "description": "",
+      "standard_category": "",
+      "qds_data_type": "",
+      "children_criteria": [
+        "OccurrenceAHospitalMeasuresEncounterInpatient1_precondition_33",
+        "OccurrenceAHospitalMeasuresEncounterEd2_precondition_35"
+      ],
+      "derivation_operator": "UNION",
+      "type": "derived",
+      "definition": "derived",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "GROUP_FIRST_125",
+      "subset_operators": [
+        {
+          "type": "FIRST"
+        }
+      ]
+    },
+    "MedicationAdministeredHospitalMeasuresFibrinolyticTherapy_precondition_22": {
+      "title": "Hospital Measures-Fibrinolytic Therapy",
+      "description": "Medication, Administered: Hospital Measures-Fibrinolytic Therapy",
+      "standard_category": "medication",
+      "qds_data_type": "medication_administered",
+      "code_list_id": "2.16.840.1.113883.3.666.5.736",
+      "type": "medications",
+      "definition": "medication",
+      "status": "administered",
+      "hard_status": true,
+      "negation": true,
+      "negation_code_list_id": "2.16.840.1.113883.3.526.2.313",
+      "source_data_criteria": "MedicationAdministeredHospitalMeasuresFibrinolyticTherapy",
+      "temporal_references": [
+        {
+          "type": "SAS",
+          "reference": "GROUP_FIRST_125",
+          "range": {
+            "type": "IVL_PQ",
+            "high": {
+              "type": "PQ",
+              "unit": "min",
+              "value": "30",
+              "inclusive?": true,
+              "derived?": false
+            }
+          }
+        }
+      ]
+    },
+    "MedicationAdministeredHospitalMeasuresFibrinolyticTherapy_precondition_24": {
+      "title": "Hospital Measures-Fibrinolytic Therapy",
+      "description": "Medication, Administered: Hospital Measures-Fibrinolytic Therapy",
+      "standard_category": "medication",
+      "qds_data_type": "medication_administered",
+      "code_list_id": "2.16.840.1.113883.3.666.5.736",
+      "type": "medications",
+      "definition": "medication",
+      "status": "administered",
+      "hard_status": true,
+      "negation": true,
+      "negation_code_list_id": "2.16.840.1.113883.3.526.2.311",
+      "source_data_criteria": "MedicationAdministeredHospitalMeasuresFibrinolyticTherapy",
+      "temporal_references": [
+        {
+          "type": "SAS",
+          "reference": "GROUP_FIRST_125",
+          "range": {
+            "type": "IVL_PQ",
+            "high": {
+              "type": "PQ",
+              "unit": "min",
+              "value": "30",
+              "inclusive?": true,
+              "derived?": false
+            }
+          }
+        }
+      ]
+    },
+    "ProcedurePerformedHospitalMeasuresAorticBalloonPumpInsertion_precondition_26": {
+      "title": "Hospital Measures-Aortic balloon pump insertion",
+      "description": "Procedure, Performed: Hospital Measures-Aortic balloon pump insertion",
+      "standard_category": "procedure",
+      "qds_data_type": "procedure_performed",
+      "code_list_id": "2.16.840.1.113883.3.666.5.1151",
+      "type": "procedures",
+      "definition": "procedure",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "ProcedurePerformedHospitalMeasuresAorticBalloonPumpInsertion",
+      "temporal_references": [
+        {
+          "type": "SAS",
+          "reference": "GROUP_FIRST_125",
+          "range": {
+            "type": "IVL_PQ",
+            "high": {
+              "type": "PQ",
+              "unit": "min",
+              "value": "30",
+              "inclusive?": true,
+              "derived?": false
+            }
+          }
+        }
+      ]
+    },
+    "ProcedurePerformedHospitalMeasuresEndotrachaelIntubation_precondition_28": {
+      "title": "Hospital Measures-Endotrachael intubation",
+      "description": "Procedure, Performed: Hospital Measures-Endotrachael intubation",
+      "standard_category": "procedure",
+      "qds_data_type": "procedure_performed",
+      "code_list_id": "2.16.840.1.113883.3.666.5.747",
+      "type": "procedures",
+      "definition": "procedure",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "ProcedurePerformedHospitalMeasuresEndotrachaelIntubation",
+      "temporal_references": [
+        {
+          "type": "SAS",
+          "reference": "GROUP_FIRST_125",
+          "range": {
+            "type": "IVL_PQ",
+            "high": {
+              "type": "PQ",
+              "unit": "min",
+              "value": "30",
+              "inclusive?": true,
+              "derived?": false
+            }
+          }
+        }
+      ]
+    },
+    "DiagnosisActiveHospitalMeasuresCardiopulmonaryArrest_precondition_30": {
+      "title": "Hospital Measures-Cardiopulmonary arrest",
+      "description": "Diagnosis, Active: Hospital Measures-Cardiopulmonary arrest",
+      "standard_category": "diagnosis_condition_problem",
+      "qds_data_type": "diagnosis_active",
+      "code_list_id": "2.16.840.1.113883.3.666.5.748",
+      "type": "conditions",
+      "definition": "diagnosis",
+      "status": "active",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "DiagnosisActiveHospitalMeasuresCardiopulmonaryArrest",
+      "temporal_references": [
+        {
+          "type": "SAS",
+          "reference": "GROUP_FIRST_125",
+          "range": {
+            "type": "IVL_PQ",
+            "high": {
+              "type": "PQ",
+              "unit": "min",
+              "value": "30",
+              "inclusive?": true,
+              "derived?": false
+            }
+          }
+        }
+      ]
+    },
+    "OccurrenceAHospitalMeasuresEncounterInpatient1_precondition_14": {
+      "title": "Hospital Measures-Encounter Inpatient",
+      "description": "Encounter, Performed: Hospital Measures-Encounter Inpatient",
+      "standard_category": "encounter",
+      "qds_data_type": "encounter",
+      "code_list_id": "2.16.840.1.113883.3.666.5.625",
+      "type": "encounters",
+      "definition": "encounter",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "specific_occurrence": "A",
+      "specific_occurrence_const": "ENCOUNTER_PERFORMED_HOSPITAL_MEASURES_ENCOUNTER_INPATIENT",
+      "source_data_criteria": "OccurrenceAHospitalMeasuresEncounterInpatient1"
+    },
+    "OccurrenceAHospitalMeasuresEncounterEd2_precondition_16": {
+      "title": "Hospital Measures-Encounter ED",
+      "description": "Encounter, Performed: Hospital Measures-Encounter ED",
+      "standard_category": "encounter",
+      "qds_data_type": "encounter",
+      "code_list_id": "2.16.840.1.113883.3.526.2.900",
+      "type": "encounters",
+      "definition": "encounter",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "specific_occurrence": "A",
+      "specific_occurrence_const": "ENCOUNTER_PERFORMED_HOSPITAL_MEASURES_ENCOUNTER_ED",
+      "source_data_criteria": "OccurrenceAHospitalMeasuresEncounterEd2",
+      "temporal_references": [
+        {
+          "type": "SBS",
+          "reference": "OccurrenceAHospitalMeasuresEncounterInpatient1",
+          "range": {
+            "type": "IVL_PQ",
+            "high": {
+              "type": "PQ",
+              "unit": "d",
+              "value": "1",
+              "inclusive?": true,
+              "derived?": false
+            }
+          }
+        }
+      ]
+    },
+    "GROUP_FIRST_127": {
+      "title": "GROUP_FIRST_127",
+      "description": "",
+      "standard_category": "",
+      "qds_data_type": "",
+      "children_criteria": [
+        "OccurrenceAHospitalMeasuresEncounterInpatient1_precondition_14",
+        "OccurrenceAHospitalMeasuresEncounterEd2_precondition_16"
+      ],
+      "derivation_operator": "UNION",
+      "type": "derived",
+      "definition": "derived",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "GROUP_FIRST_127",
+      "subset_operators": [
+        {
+          "type": "FIRST"
+        }
+      ]
+    },
+    "OccurrenceAHospitalMeasuresFibrinolyticTherapy4_precondition_20": {
+      "title": "Hospital Measures-Fibrinolytic Therapy",
+      "description": "Medication, Administered: Hospital Measures-Fibrinolytic Therapy",
+      "standard_category": "medication",
+      "qds_data_type": "medication_administered",
+      "code_list_id": "2.16.840.1.113883.3.666.5.736",
+      "type": "medications",
+      "definition": "medication",
+      "status": "administered",
+      "hard_status": true,
+      "negation": false,
+      "specific_occurrence": "A",
+      "specific_occurrence_const": "MEDICATION_ADMINISTERED_HOSPITAL_MEASURES_FIBRINOLYTIC_THERAPY",
+      "source_data_criteria": "OccurrenceAHospitalMeasuresFibrinolyticTherapy4",
+      "temporal_references": [
+        {
+          "type": "SAS",
+          "reference": "GROUP_FIRST_127",
+          "range": {
+            "type": "IVL_PQ",
+            "high": {
+              "type": "PQ",
+              "unit": "min",
+              "value": "30",
+              "inclusive?": true,
+              "derived?": false
+            }
+          }
+        }
+      ]
+    },
+    "OccurrenceAHospitalMeasuresEncounterInpatient1_precondition_52": {
+      "title": "Hospital Measures-Encounter Inpatient",
+      "description": "Encounter, Performed: Hospital Measures-Encounter Inpatient",
+      "standard_category": "encounter",
+      "qds_data_type": "encounter",
+      "code_list_id": "2.16.840.1.113883.3.666.5.625",
+      "type": "encounters",
+      "definition": "encounter",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "specific_occurrence": "A",
+      "specific_occurrence_const": "ENCOUNTER_PERFORMED_HOSPITAL_MEASURES_ENCOUNTER_INPATIENT",
+      "source_data_criteria": "OccurrenceAHospitalMeasuresEncounterInpatient1"
+    },
+    "TransferFromHospitalMeasuresAmbulatorySurgicalCenter_precondition_43": {
+      "title": "Hospital Measures-Ambulatory surgical center",
+      "description": "Transfer From: Hospital Measures-Ambulatory surgical center",
+      "standard_category": "",
+      "qds_data_type": "",
+      "type": "transfers",
+      "definition": "transfer_from",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "TransferFromHospitalMeasuresAmbulatorySurgicalCenter",
+      "field_values": {
+        "TRANSFER_FROM": {
+          "type": "CD",
+          "code_list_id": "2.16.840.1.113883.3.666.5.687",
+          "title": "Hospital Measures-Ambulatory surgical center"
+        }
+      },
+      "temporal_references": [
+        {
+          "type": "SBS",
+          "reference": "OccurrenceAHospitalMeasuresEncounterInpatient1_precondition_52",
+          "range": {
+            "type": "IVL_PQ",
+            "high": {
+              "type": "PQ",
+              "unit": "d",
+              "value": "1",
+              "inclusive?": true,
+              "derived?": false
+            }
+          }
+        }
+      ]
+    },
+    "TransferFromHospitalMeasuresHospitalOutpatientDepartment_precondition_45": {
+      "title": "Hospital Measures-Hospital outpatient department",
+      "description": "Transfer From: Hospital Measures-Hospital outpatient department",
+      "standard_category": "",
+      "qds_data_type": "",
+      "type": "transfers",
+      "definition": "transfer_from",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "TransferFromHospitalMeasuresHospitalOutpatientDepartment",
+      "field_values": {
+        "TRANSFER_FROM": {
+          "type": "CD",
+          "code_list_id": "2.16.840.1.113883.3.67.1.101.950",
+          "title": "Hospital Measures-Hospital outpatient department"
+        }
+      },
+      "temporal_references": [
+        {
+          "type": "SBS",
+          "reference": "OccurrenceAHospitalMeasuresEncounterInpatient1_precondition_52",
+          "range": {
+            "type": "IVL_PQ",
+            "high": {
+              "type": "PQ",
+              "unit": "d",
+              "value": "1",
+              "inclusive?": true,
+              "derived?": false
+            }
+          }
+        }
+      ]
+    },
+    "TransferFromHospitalMeasuresEdLocations_precondition_47": {
+      "title": "Hospital Measures-ED Locations",
+      "description": "Transfer From: Hospital Measures-ED Locations",
+      "standard_category": "",
+      "qds_data_type": "",
+      "type": "transfers",
+      "definition": "transfer_from",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "TransferFromHospitalMeasuresEdLocations",
+      "field_values": {
+        "TRANSFER_FROM": {
+          "type": "CD",
+          "code_list_id": "2.16.840.1.113883.3.666.5.3006",
+          "title": "Hospital Measures-ED Locations"
+        }
+      },
+      "temporal_references": [
+        {
+          "type": "SBS",
+          "reference": "OccurrenceAHospitalMeasuresEncounterInpatient1_precondition_52",
+          "range": {
+            "type": "IVL_PQ",
+            "high": {
+              "type": "PQ",
+              "unit": "d",
+              "value": "1",
+              "inclusive?": true,
+              "derived?": false
+            }
+          }
+        }
+      ]
+    },
+    "TransferFromHospitalMeasuresAcuteCareHospital_precondition_49": {
+      "title": "Hospital Measures-Acute care hospital",
+      "description": "Transfer From: Hospital Measures-Acute care hospital",
+      "standard_category": "",
+      "qds_data_type": "",
+      "type": "transfers",
+      "definition": "transfer_from",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "TransferFromHospitalMeasuresAcuteCareHospital",
+      "field_values": {
+        "TRANSFER_FROM": {
+          "type": "CD",
+          "code_list_id": "2.16.840.1.113883.3.666.5.3013",
+          "title": "Hospital Measures-Acute care hospital"
+        }
+      },
+      "temporal_references": [
+        {
+          "type": "SBS",
+          "reference": "OccurrenceAHospitalMeasuresEncounterInpatient1_precondition_52",
+          "range": {
+            "type": "IVL_PQ",
+            "high": {
+              "type": "PQ",
+              "unit": "d",
+              "value": "1",
+              "inclusive?": true,
+              "derived?": false
+            }
+          }
+        }
+      ]
+    },
+    "OccurrenceAHospitalMeasuresEncounterInpatient1_precondition_57": {
+      "title": "Hospital Measures-Encounter Inpatient",
+      "description": "Encounter, Performed: Hospital Measures-Encounter Inpatient",
+      "standard_category": "encounter",
+      "qds_data_type": "encounter",
+      "code_list_id": "2.16.840.1.113883.3.666.5.625",
+      "type": "encounters",
+      "definition": "encounter",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "specific_occurrence": "A",
+      "specific_occurrence_const": "ENCOUNTER_PERFORMED_HOSPITAL_MEASURES_ENCOUNTER_INPATIENT",
+      "source_data_criteria": "OccurrenceAHospitalMeasuresEncounterInpatient1"
+    },
+    "OccurrenceAHospitalMeasuresEncounterEd2_precondition_59": {
+      "title": "Hospital Measures-Encounter ED",
+      "description": "Encounter, Performed: Hospital Measures-Encounter ED",
+      "standard_category": "encounter",
+      "qds_data_type": "encounter",
+      "code_list_id": "2.16.840.1.113883.3.526.2.900",
+      "type": "encounters",
+      "definition": "encounter",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "specific_occurrence": "A",
+      "specific_occurrence_const": "ENCOUNTER_PERFORMED_HOSPITAL_MEASURES_ENCOUNTER_ED",
+      "source_data_criteria": "OccurrenceAHospitalMeasuresEncounterEd2",
+      "temporal_references": [
+        {
+          "type": "SBS",
+          "reference": "OccurrenceAHospitalMeasuresEncounterInpatient1",
+          "range": {
+            "type": "IVL_PQ",
+            "high": {
+              "type": "PQ",
+              "unit": "d",
+              "value": "1",
+              "inclusive?": true,
+              "derived?": false
+            }
+          }
+        }
+      ]
+    },
+    "GROUP_FIRST_129": {
+      "title": "GROUP_FIRST_129",
+      "description": "",
+      "standard_category": "",
+      "qds_data_type": "",
+      "children_criteria": [
+        "OccurrenceAHospitalMeasuresEncounterInpatient1_precondition_57",
+        "OccurrenceAHospitalMeasuresEncounterEd2_precondition_59"
+      ],
+      "derivation_operator": "UNION",
+      "type": "derived",
+      "definition": "derived",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "GROUP_FIRST_129",
+      "subset_operators": [
+        {
+          "type": "FIRST"
+        }
+      ]
+    },
+    "OccurrenceAHospitalMeasuresFibrinolyticTherapy4_precondition_63": {
+      "title": "Hospital Measures-Fibrinolytic Therapy",
+      "description": "Medication, Administered: Hospital Measures-Fibrinolytic Therapy",
+      "standard_category": "medication",
+      "qds_data_type": "medication_administered",
+      "code_list_id": "2.16.840.1.113883.3.666.5.736",
+      "type": "medications",
+      "definition": "medication",
+      "status": "administered",
+      "hard_status": true,
+      "negation": false,
+      "specific_occurrence": "A",
+      "specific_occurrence_const": "MEDICATION_ADMINISTERED_HOSPITAL_MEASURES_FIBRINOLYTIC_THERAPY",
+      "source_data_criteria": "OccurrenceAHospitalMeasuresFibrinolyticTherapy4",
+      "temporal_references": [
+        {
+          "type": "SAS",
+          "reference": "GROUP_FIRST_129",
+          "range": {
+            "type": "IVL_PQ",
+            "high": {
+              "type": "PQ",
+              "unit": "min",
+              "value": "30",
+              "inclusive?": true,
+              "derived?": false
+            }
+          }
+        }
+      ]
+    },
+    "OccurrenceAHospitalMeasuresEncounterInpatient1_precondition_66": {
+      "title": "Hospital Measures-Encounter Inpatient",
+      "description": "Encounter, Performed: Hospital Measures-Encounter Inpatient",
+      "standard_category": "encounter",
+      "qds_data_type": "encounter",
+      "code_list_id": "2.16.840.1.113883.3.666.5.625",
+      "type": "encounters",
+      "definition": "encounter",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "specific_occurrence": "A",
+      "specific_occurrence_const": "ENCOUNTER_PERFORMED_HOSPITAL_MEASURES_ENCOUNTER_INPATIENT",
+      "source_data_criteria": "OccurrenceAHospitalMeasuresEncounterInpatient1"
+    },
+    "OccurrenceAHospitalMeasuresEncounterEd2_precondition_68": {
+      "title": "Hospital Measures-Encounter ED",
+      "description": "Encounter, Performed: Hospital Measures-Encounter ED",
+      "standard_category": "encounter",
+      "qds_data_type": "encounter",
+      "code_list_id": "2.16.840.1.113883.3.526.2.900",
+      "type": "encounters",
+      "definition": "encounter",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "specific_occurrence": "A",
+      "specific_occurrence_const": "ENCOUNTER_PERFORMED_HOSPITAL_MEASURES_ENCOUNTER_ED",
+      "source_data_criteria": "OccurrenceAHospitalMeasuresEncounterEd2",
+      "temporal_references": [
+        {
+          "type": "SBS",
+          "reference": "OccurrenceAHospitalMeasuresEncounterInpatient1",
+          "range": {
+            "type": "IVL_PQ",
+            "high": {
+              "type": "PQ",
+              "unit": "d",
+              "value": "1",
+              "inclusive?": true,
+              "derived?": false
+            }
+          }
+        }
+      ]
+    },
+    "OccurrenceAHospitalMeasuresEcg5_precondition_71": {
+      "title": "Hospital Measures-ECG",
+      "description": "Diagnostic Study Result: Hospital Measures-ECG",
+      "standard_category": "diagnostic_study",
+      "qds_data_type": "diagnostic_study_result",
+      "code_list_id": "2.16.840.1.113883.3.666.5.735",
+      "type": "diagnostic_studies",
+      "definition": "diagnostic_study_result",
+      "hard_status": false,
+      "negation": false,
+      "specific_occurrence": "A",
+      "specific_occurrence_const": "DIAGNOSTIC_STUDY_RESULT_HOSPITAL_MEASURES_ECG",
+      "source_data_criteria": "OccurrenceAHospitalMeasuresEcg5",
+      "temporal_references": [
+        {
+          "type": "DURING",
+          "reference": "GROUP_DURING_CHILDREN_131"
+        }
+      ],
+      "subset_operators": [
+        {
+          "type": "FIRST"
+        }
+      ]
+    },
+    "GROUP_DURING_CHILDREN_131": {
+      "title": "GROUP_DURING_CHILDREN_131",
+      "description": "",
+      "standard_category": "",
+      "qds_data_type": "",
+      "children_criteria": [
+        "OccurrenceAHospitalMeasuresEncounterInpatient1_precondition_66",
+        "OccurrenceAHospitalMeasuresEncounterEd2_precondition_68"
+      ],
+      "derivation_operator": "UNION",
+      "type": "derived",
+      "definition": "derived",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "GROUP_DURING_CHILDREN_131"
+    },
+    "OccurrenceAHospitalMeasuresEcg5_precondition_74": {
+      "title": "Hospital Measures-ECG",
+      "description": "Diagnostic Study Result: Hospital Measures-ECG",
+      "standard_category": "diagnostic_study",
+      "qds_data_type": "diagnostic_study_result",
+      "code_list_id": "2.16.840.1.113883.3.666.5.735",
+      "type": "diagnostic_studies",
+      "definition": "diagnostic_study_result",
+      "hard_status": false,
+      "negation": false,
+      "specific_occurrence": "A",
+      "specific_occurrence_const": "DIAGNOSTIC_STUDY_RESULT_HOSPITAL_MEASURES_ECG",
+      "source_data_criteria": "OccurrenceAHospitalMeasuresEcg5",
+      "value": {
+        "type": "CD",
+        "code_list_id": "2.16.840.1.113883.3.666.5.1096",
+        "title": "Hospital Measures-ST-segment elevation"
+      }
+    },
+    "OccurrenceAHospitalMeasuresEcg5_precondition_76": {
+      "title": "Hospital Measures-ECG",
+      "description": "Diagnostic Study Result: Hospital Measures-ECG",
+      "standard_category": "diagnostic_study",
+      "qds_data_type": "diagnostic_study_result",
+      "code_list_id": "2.16.840.1.113883.3.666.5.735",
+      "type": "diagnostic_studies",
+      "definition": "diagnostic_study_result",
+      "hard_status": false,
+      "negation": false,
+      "specific_occurrence": "A",
+      "specific_occurrence_const": "DIAGNOSTIC_STUDY_RESULT_HOSPITAL_MEASURES_ECG",
+      "source_data_criteria": "OccurrenceAHospitalMeasuresEcg5",
+      "value": {
+        "type": "CD",
+        "code_list_id": "2.16.840.1.113883.3.666.5.1098",
+        "title": "Hospital Measures - Acute or Evolving MI"
+      }
+    },
+    "OccurrenceAHospitalMeasuresEcg5_precondition_78": {
+      "title": "Hospital Measures-ECG",
+      "description": "Diagnostic Study Result: Hospital Measures-ECG",
+      "standard_category": "diagnostic_study",
+      "qds_data_type": "diagnostic_study_result",
+      "code_list_id": "2.16.840.1.113883.3.666.5.735",
+      "type": "diagnostic_studies",
+      "definition": "diagnostic_study_result",
+      "hard_status": false,
+      "negation": false,
+      "specific_occurrence": "A",
+      "specific_occurrence_const": "DIAGNOSTIC_STUDY_RESULT_HOSPITAL_MEASURES_ECG",
+      "source_data_criteria": "OccurrenceAHospitalMeasuresEcg5",
+      "value": {
+        "type": "CD",
+        "code_list_id": "1.3.6.1.4.1.33895.1.3.0.8505",
+        "title": "Hospital Measures-LBBB"
+      }
+    },
+    "OccurrenceAHospitalMeasuresEncounterInpatient1_precondition_84": {
+      "title": "Hospital Measures-Encounter Inpatient",
+      "description": "Encounter, Performed: Hospital Measures-Encounter Inpatient",
+      "standard_category": "encounter",
+      "qds_data_type": "encounter",
+      "code_list_id": "2.16.840.1.113883.3.666.5.625",
+      "type": "encounters",
+      "definition": "encounter",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "specific_occurrence": "A",
+      "specific_occurrence_const": "ENCOUNTER_PERFORMED_HOSPITAL_MEASURES_ENCOUNTER_INPATIENT",
+      "source_data_criteria": "OccurrenceAHospitalMeasuresEncounterInpatient1"
+    },
+    "OccurrenceAHospitalMeasuresEncounterEd2_precondition_86": {
+      "title": "Hospital Measures-Encounter ED",
+      "description": "Encounter, Performed: Hospital Measures-Encounter ED",
+      "standard_category": "encounter",
+      "qds_data_type": "encounter",
+      "code_list_id": "2.16.840.1.113883.3.526.2.900",
+      "type": "encounters",
+      "definition": "encounter",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "specific_occurrence": "A",
+      "specific_occurrence_const": "ENCOUNTER_PERFORMED_HOSPITAL_MEASURES_ENCOUNTER_ED",
+      "source_data_criteria": "OccurrenceAHospitalMeasuresEncounterEd2",
+      "temporal_references": [
+        {
+          "type": "SBS",
+          "reference": "OccurrenceAHospitalMeasuresEncounterInpatient1",
+          "range": {
+            "type": "IVL_PQ",
+            "high": {
+              "type": "PQ",
+              "unit": "d",
+              "value": "1",
+              "inclusive?": true,
+              "derived?": false
+            }
+          }
+        }
+      ]
+    },
+    "OccurrenceAHospitalMeasuresFibrinolyticTherapy4_precondition_89": {
+      "title": "Hospital Measures-Fibrinolytic Therapy",
+      "description": "Medication, Administered: Hospital Measures-Fibrinolytic Therapy",
+      "standard_category": "medication",
+      "qds_data_type": "medication_administered",
+      "code_list_id": "2.16.840.1.113883.3.666.5.736",
+      "type": "medications",
+      "definition": "medication",
+      "status": "administered",
+      "hard_status": true,
+      "negation": false,
+      "specific_occurrence": "A",
+      "specific_occurrence_const": "MEDICATION_ADMINISTERED_HOSPITAL_MEASURES_FIBRINOLYTIC_THERAPY",
+      "source_data_criteria": "OccurrenceAHospitalMeasuresFibrinolyticTherapy4",
+      "temporal_references": [
+        {
+          "type": "DURING",
+          "reference": "GROUP_DURING_CHILDREN_133"
+        }
+      ],
+      "subset_operators": [
+        {
+          "type": "FIRST"
+        }
+      ]
+    },
+    "GROUP_DURING_CHILDREN_133": {
+      "title": "GROUP_DURING_CHILDREN_133",
+      "description": "",
+      "standard_category": "",
+      "qds_data_type": "",
+      "children_criteria": [
+        "OccurrenceAHospitalMeasuresEncounterInpatient1_precondition_84",
+        "OccurrenceAHospitalMeasuresEncounterEd2_precondition_86"
+      ],
+      "derivation_operator": "UNION",
+      "type": "derived",
+      "definition": "derived",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "GROUP_DURING_CHILDREN_133"
+    },
+    "OccurrenceAHospitalMeasuresEncounterInpatient1_precondition_103": {
+      "title": "Hospital Measures-Encounter Inpatient",
+      "description": "Encounter, Performed: Hospital Measures-Encounter Inpatient",
+      "standard_category": "encounter",
+      "qds_data_type": "encounter",
+      "code_list_id": "2.16.840.1.113883.3.666.5.625",
+      "type": "encounters",
+      "definition": "encounter",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "specific_occurrence": "A",
+      "specific_occurrence_const": "ENCOUNTER_PERFORMED_HOSPITAL_MEASURES_ENCOUNTER_INPATIENT",
+      "source_data_criteria": "OccurrenceAHospitalMeasuresEncounterInpatient1"
+    },
+    "OccurrenceAHospitalMeasuresEncounterEd2_precondition_105": {
+      "title": "Hospital Measures-Encounter ED",
+      "description": "Encounter, Performed: Hospital Measures-Encounter ED",
+      "standard_category": "encounter",
+      "qds_data_type": "encounter",
+      "code_list_id": "2.16.840.1.113883.3.526.2.900",
+      "type": "encounters",
+      "definition": "encounter",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "specific_occurrence": "A",
+      "specific_occurrence_const": "ENCOUNTER_PERFORMED_HOSPITAL_MEASURES_ENCOUNTER_ED",
+      "source_data_criteria": "OccurrenceAHospitalMeasuresEncounterEd2",
+      "temporal_references": [
+        {
+          "type": "SBS",
+          "reference": "OccurrenceAHospitalMeasuresEncounterInpatient1",
+          "range": {
+            "type": "IVL_PQ",
+            "high": {
+              "type": "PQ",
+              "unit": "d",
+              "value": "1",
+              "inclusive?": true,
+              "derived?": false
+            }
+          }
+        }
+      ]
+    },
+    "GROUP_FIRST_135": {
+      "title": "GROUP_FIRST_135",
+      "description": "",
+      "standard_category": "",
+      "qds_data_type": "",
+      "children_criteria": [
+        "OccurrenceAHospitalMeasuresEncounterInpatient1_precondition_103",
+        "OccurrenceAHospitalMeasuresEncounterEd2_precondition_105"
+      ],
+      "derivation_operator": "UNION",
+      "type": "derived",
+      "definition": "derived",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "GROUP_FIRST_135",
+      "subset_operators": [
+        {
+          "type": "FIRST"
+        }
+      ]
+    },
+    "OccurrenceAHospitalMeasuresFibrinolyticTherapy4_precondition_109": {
+      "title": "Hospital Measures-Fibrinolytic Therapy",
+      "description": "Medication, Administered: Hospital Measures-Fibrinolytic Therapy",
+      "standard_category": "medication",
+      "qds_data_type": "medication_administered",
+      "code_list_id": "2.16.840.1.113883.3.666.5.736",
+      "type": "medications",
+      "definition": "medication",
+      "status": "administered",
+      "hard_status": true,
+      "negation": false,
+      "specific_occurrence": "A",
+      "specific_occurrence_const": "MEDICATION_ADMINISTERED_HOSPITAL_MEASURES_FIBRINOLYTIC_THERAPY",
+      "source_data_criteria": "OccurrenceAHospitalMeasuresFibrinolyticTherapy4",
+      "temporal_references": [
+        {
+          "type": "SAS",
+          "reference": "GROUP_FIRST_135",
+          "range": {
+            "type": "IVL_PQ",
+            "high": {
+              "type": "PQ",
+              "unit": "h",
+              "value": "6",
+              "inclusive?": true,
+              "derived?": false
+            }
+          }
+        }
+      ]
+    },
+    "OccurrenceAHospitalMeasuresFibrinolyticTherapy4_precondition_92": {
+      "title": "Hospital Measures-Fibrinolytic Therapy",
+      "description": "Medication, Administered: Hospital Measures-Fibrinolytic Therapy",
+      "standard_category": "medication",
+      "qds_data_type": "medication_administered",
+      "code_list_id": "2.16.840.1.113883.3.666.5.736",
+      "type": "medications",
+      "definition": "medication",
+      "status": "administered",
+      "hard_status": true,
+      "negation": false,
+      "specific_occurrence": "A",
+      "specific_occurrence_const": "MEDICATION_ADMINISTERED_HOSPITAL_MEASURES_FIBRINOLYTIC_THERAPY",
+      "source_data_criteria": "OccurrenceAHospitalMeasuresFibrinolyticTherapy4",
+      "temporal_references": [
+        {
+          "type": "SAS",
+          "reference": "OccurrenceAHospitalMeasuresPci6"
+        }
+      ]
+    },
+    "OccurrenceAHospitalMeasuresEncounterInpatient1_precondition_94": {
+      "title": "Hospital Measures-Encounter Inpatient",
+      "description": "Encounter, Performed: Hospital Measures-Encounter Inpatient",
+      "standard_category": "encounter",
+      "qds_data_type": "encounter",
+      "code_list_id": "2.16.840.1.113883.3.666.5.625",
+      "type": "encounters",
+      "definition": "encounter",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "specific_occurrence": "A",
+      "specific_occurrence_const": "ENCOUNTER_PERFORMED_HOSPITAL_MEASURES_ENCOUNTER_INPATIENT",
+      "source_data_criteria": "OccurrenceAHospitalMeasuresEncounterInpatient1"
+    },
+    "OccurrenceAHospitalMeasuresEncounterEd2_precondition_96": {
+      "title": "Hospital Measures-Encounter ED",
+      "description": "Encounter, Performed: Hospital Measures-Encounter ED",
+      "standard_category": "encounter",
+      "qds_data_type": "encounter",
+      "code_list_id": "2.16.840.1.113883.3.526.2.900",
+      "type": "encounters",
+      "definition": "encounter",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "specific_occurrence": "A",
+      "specific_occurrence_const": "ENCOUNTER_PERFORMED_HOSPITAL_MEASURES_ENCOUNTER_ED",
+      "source_data_criteria": "OccurrenceAHospitalMeasuresEncounterEd2",
+      "temporal_references": [
+        {
+          "type": "SBS",
+          "reference": "OccurrenceAHospitalMeasuresEncounterInpatient1",
+          "range": {
+            "type": "IVL_PQ",
+            "high": {
+              "type": "PQ",
+              "unit": "d",
+              "value": "1",
+              "inclusive?": true,
+              "derived?": false
+            }
+          }
+        }
+      ]
+    },
+    "OccurrenceAHospitalMeasuresPci6_precondition_99": {
+      "title": "Hospital Measures-PCI",
+      "description": "Procedure, Performed: Hospital Measures-PCI",
+      "standard_category": "procedure",
+      "qds_data_type": "procedure_performed",
+      "code_list_id": "2.16.840.1.113883.3.666.5.737",
+      "type": "procedures",
+      "definition": "procedure",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "specific_occurrence": "A",
+      "specific_occurrence_const": "PROCEDURE_PERFORMED_HOSPITAL_MEASURES_PCI",
+      "source_data_criteria": "OccurrenceAHospitalMeasuresPci6",
+      "temporal_references": [
+        {
+          "type": "DURING",
+          "reference": "GROUP_DURING_CHILDREN_137"
+        }
+      ]
+    },
+    "GROUP_DURING_CHILDREN_137": {
+      "title": "GROUP_DURING_CHILDREN_137",
+      "description": "",
+      "standard_category": "",
+      "qds_data_type": "",
+      "children_criteria": [
+        "OccurrenceAHospitalMeasuresEncounterInpatient1_precondition_94",
+        "OccurrenceAHospitalMeasuresEncounterEd2_precondition_96"
+      ],
+      "derivation_operator": "UNION",
+      "type": "derived",
+      "definition": "derived",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "GROUP_DURING_CHILDREN_137"
+    },
+    "DiagnosisActiveHospitalMeasuresAmi_precondition_115": {
+      "title": "Hospital Measures - AMI",
+      "description": "Diagnosis, Active: Hospital Measures - AMI",
+      "standard_category": "diagnosis_condition_problem",
+      "qds_data_type": "diagnosis_active",
+      "code_list_id": "2.16.840.1.113883.3.666.5.3011",
+      "type": "conditions",
+      "definition": "diagnosis",
+      "status": "active",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "DiagnosisActiveHospitalMeasuresAmi",
+      "field_values": {
+        "ORDINAL": {
+          "type": "CD",
+          "code_list_id": "2.16.840.1.113883.3.666.5.3010",
+          "title": "Hospital Measures - Principal"
+        }
+      },
+      "temporal_references": [
+        {
+          "type": "SDU",
+          "reference": "OccurrenceAHospitalMeasuresEncounterInpatient1"
+        }
+      ]
+    },
+    "PatientCharacteristicBirthdateBirthDate_precondition_117": {
+      "title": "birth date",
+      "description": "Patient Characteristic Birthdate: birth date",
+      "standard_category": "individual_characteristic",
+      "qds_data_type": "individual_characteristic",
+      "code_list_id": "2.16.840.1.113883.3.560.100.4",
+      "property": "birthtime",
+      "type": "characteristic",
+      "definition": "patient_characteristic_birthdate",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "PatientCharacteristicBirthdateBirthDate",
+      "inline_code_list": {
+        "LOINC": [
+          "21112-8"
+        ]
+      },
+      "temporal_references": [
+        {
+          "type": "SBS",
+          "reference": "OccurrenceAHospitalMeasuresEncounterInpatient1",
+          "range": {
+            "type": "IVL_PQ",
+            "low": {
+              "type": "PQ",
+              "unit": "a",
+              "value": "18",
+              "inclusive?": true,
+              "derived?": false
+            }
+          }
+        }
+      ]
+    },
+    "OccurrenceAHospitalMeasuresEncounterInpatient1_precondition_119": {
+      "title": "Hospital Measures-Encounter Inpatient",
+      "description": "Encounter, Performed: Hospital Measures-Encounter Inpatient",
+      "standard_category": "encounter",
+      "qds_data_type": "encounter",
+      "code_list_id": "2.16.840.1.113883.3.666.5.625",
+      "type": "encounters",
+      "definition": "encounter",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "specific_occurrence": "A",
+      "specific_occurrence_const": "ENCOUNTER_PERFORMED_HOSPITAL_MEASURES_ENCOUNTER_INPATIENT",
+      "source_data_criteria": "OccurrenceAHospitalMeasuresEncounterInpatient1",
+      "field_values": {
+        "LENGTH_OF_STAY": {
+          "type": "IVL_PQ",
+          "high": {
+            "type": "PQ",
+            "unit": "d",
+            "value": "120",
+            "inclusive?": true,
+            "derived?": false
+          }
+        }
+      }
+    },
+    "OccurrenceAHospitalMeasuresEncounterInpatient1_precondition_121": {
+      "title": "Hospital Measures-Encounter Inpatient",
+      "description": "Encounter, Performed: Hospital Measures-Encounter Inpatient",
+      "standard_category": "encounter",
+      "qds_data_type": "encounter",
+      "code_list_id": "2.16.840.1.113883.3.666.5.625",
+      "type": "encounters",
+      "definition": "encounter",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "specific_occurrence": "A",
+      "specific_occurrence_const": "ENCOUNTER_PERFORMED_HOSPITAL_MEASURES_ENCOUNTER_INPATIENT",
+      "source_data_criteria": "OccurrenceAHospitalMeasuresEncounterInpatient1",
+      "field_values": {
+        "DISCHARGE_DATETIME": {
+          "type": "ANYNonNull"
+        }
+      },
+      "temporal_references": [
+        {
+          "type": "DURING",
+          "reference": "MeasurePeriod"
+        }
+      ]
+    }
+  },
+  "source_data_criteria": {
+    "DiagnosisActiveHospitalMeasuresAmi": {
+      "title": "Hospital Measures - AMI",
+      "description": "Diagnosis, Active: Hospital Measures - AMI",
+      "standard_category": "diagnosis_condition_problem",
+      "qds_data_type": "diagnosis_active",
+      "code_list_id": "2.16.840.1.113883.3.666.5.3011",
+      "type": "conditions",
+      "definition": "diagnosis",
+      "status": "active",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "DiagnosisActiveHospitalMeasuresAmi"
+    },
+    "DiagnosisActiveHospitalMeasuresCardiopulmonaryArrest": {
+      "title": "Hospital Measures-Cardiopulmonary arrest",
+      "description": "Diagnosis, Active: Hospital Measures-Cardiopulmonary arrest",
+      "standard_category": "diagnosis_condition_problem",
+      "qds_data_type": "diagnosis_active",
+      "code_list_id": "2.16.840.1.113883.3.666.5.748",
+      "type": "conditions",
+      "definition": "diagnosis",
+      "status": "active",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "DiagnosisActiveHospitalMeasuresCardiopulmonaryArrest"
+    },
+    "DiagnosticStudyResultHospitalMeasuresEcg": {
+      "title": "Hospital Measures-ECG",
+      "description": "Diagnostic Study, Result: Hospital Measures-ECG",
+      "standard_category": "diagnostic_study",
+      "qds_data_type": "diagnostic_study_result",
+      "code_list_id": "2.16.840.1.113883.3.666.5.735",
+      "type": "diagnostic_studies",
+      "definition": "diagnostic_study_result",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "DiagnosticStudyResultHospitalMeasuresEcg"
+    },
+    "MedicationAdministeredHospitalMeasuresFibrinolyticTherapy": {
+      "title": "Hospital Measures-Fibrinolytic Therapy",
+      "description": "Medication, Administered: Hospital Measures-Fibrinolytic Therapy",
+      "standard_category": "medication",
+      "qds_data_type": "medication_administered",
+      "code_list_id": "2.16.840.1.113883.3.666.5.736",
+      "type": "medications",
+      "definition": "medication",
+      "status": "administered",
+      "hard_status": true,
+      "negation": false,
+      "source_data_criteria": "MedicationAdministeredHospitalMeasuresFibrinolyticTherapy"
+    },
+    "ProcedurePerformedHospitalMeasuresAorticBalloonPumpInsertion": {
+      "title": "Hospital Measures-Aortic balloon pump insertion",
+      "description": "Procedure, Performed: Hospital Measures-Aortic balloon pump insertion",
+      "standard_category": "procedure",
+      "qds_data_type": "procedure_performed",
+      "code_list_id": "2.16.840.1.113883.3.666.5.1151",
+      "type": "procedures",
+      "definition": "procedure",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "ProcedurePerformedHospitalMeasuresAorticBalloonPumpInsertion"
+    },
+    "ProcedurePerformedHospitalMeasuresEndotrachaelIntubation": {
+      "title": "Hospital Measures-Endotrachael intubation",
+      "description": "Procedure, Performed: Hospital Measures-Endotrachael intubation",
+      "standard_category": "procedure",
+      "qds_data_type": "procedure_performed",
+      "code_list_id": "2.16.840.1.113883.3.666.5.747",
+      "type": "procedures",
+      "definition": "procedure",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "ProcedurePerformedHospitalMeasuresEndotrachaelIntubation"
+    },
+    "ProcedurePerformedHospitalMeasuresPci": {
+      "title": "Hospital Measures-PCI",
+      "description": "Procedure, Performed: Hospital Measures-PCI",
+      "standard_category": "procedure",
+      "qds_data_type": "procedure_performed",
+      "code_list_id": "2.16.840.1.113883.3.666.5.737",
+      "type": "procedures",
+      "definition": "procedure",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "ProcedurePerformedHospitalMeasuresPci"
+    },
+    "TransferFromHospitalMeasuresAcuteCareHospital": {
+      "title": "Hospital Measures-Acute care hospital",
+      "description": "Transfer From: Hospital Measures-Acute care hospital",
+      "standard_category": "",
+      "qds_data_type": "",
+      "type": "transfers",
+      "definition": "transfer_from",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "TransferFromHospitalMeasuresAcuteCareHospital",
+      "field_values": {
+        "TRANSFER_FROM": {
+          "type": "CD",
+          "code_list_id": "2.16.840.1.113883.3.666.5.3013",
+          "title": "Hospital Measures-Acute care hospital"
+        }
+      }
+    },
+    "TransferFromHospitalMeasuresAmbulatorySurgicalCenter": {
+      "title": "Hospital Measures-Ambulatory surgical center",
+      "description": "Transfer From: Hospital Measures-Ambulatory surgical center",
+      "standard_category": "",
+      "qds_data_type": "",
+      "type": "transfers",
+      "definition": "transfer_from",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "TransferFromHospitalMeasuresAmbulatorySurgicalCenter",
+      "field_values": {
+        "TRANSFER_FROM": {
+          "type": "CD",
+          "code_list_id": "2.16.840.1.113883.3.666.5.687",
+          "title": "Hospital Measures-Ambulatory surgical center"
+        }
+      }
+    },
+    "TransferFromHospitalMeasuresHospitalOutpatientDepartment": {
+      "title": "Hospital Measures-Hospital outpatient department",
+      "description": "Transfer From: Hospital Measures-Hospital outpatient department",
+      "standard_category": "",
+      "qds_data_type": "",
+      "type": "transfers",
+      "definition": "transfer_from",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "TransferFromHospitalMeasuresHospitalOutpatientDepartment",
+      "field_values": {
+        "TRANSFER_FROM": {
+          "type": "CD",
+          "code_list_id": "2.16.840.1.113883.3.67.1.101.950",
+          "title": "Hospital Measures-Hospital outpatient department"
+        }
+      }
+    },
+    "PatientCharacteristicBirthdateBirthDate": {
+      "title": "birth date",
+      "description": "Patient Characteristic Birthdate: birth date",
+      "standard_category": "individual_characteristic",
+      "qds_data_type": "individual_characteristic",
+      "code_list_id": "2.16.840.1.113883.3.560.100.4",
+      "property": "birthtime",
+      "type": "characteristic",
+      "definition": "patient_characteristic_birthdate",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "PatientCharacteristicBirthdateBirthDate",
+      "inline_code_list": {
+        "LOINC": [
+          "21112-8"
+        ]
+      }
+    },
+    "PatientCharacteristicClinicalTrialParticipantClinicalTrialParticipant": {
+      "title": "Clinical Trial Participant",
+      "description": "Patient Characteristic Clinical Trial Participant: Clinical Trial Participant",
+      "standard_category": "individual_characteristic",
+      "qds_data_type": "individual_characteristic",
+      "code_list_id": "2.16.840.1.113883.3.526.2.643",
+      "property": "clinicalTrialParticipant",
+      "type": "characteristic",
+      "definition": "patient_characteristic_clinical_trial_participant",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "PatientCharacteristicClinicalTrialParticipantClinicalTrialParticipant",
+      "inline_code_list": {
+        "SNOMED-CT": [
+          "428024001"
+        ]
+      }
+    },
+    "TransferFromHospitalMeasuresEdLocations": {
+      "title": "Hospital Measures-ED Locations",
+      "description": "Transfer From: Hospital Measures-ED Locations",
+      "standard_category": "",
+      "qds_data_type": "",
+      "type": "transfers",
+      "definition": "transfer_from",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "TransferFromHospitalMeasuresEdLocations",
+      "field_values": {
+        "TRANSFER_FROM": {
+          "type": "CD",
+          "code_list_id": "2.16.840.1.113883.3.666.5.3006",
+          "title": "Hospital Measures-ED Locations"
+        }
+      }
+    },
+    "EncounterPerformedHospitalMeasuresEncounterInpatient": {
+      "title": "Hospital Measures-Encounter Inpatient",
+      "description": "Encounter, Performed: Hospital Measures-Encounter Inpatient",
+      "standard_category": "encounter",
+      "qds_data_type": "encounter",
+      "code_list_id": "2.16.840.1.113883.3.666.5.625",
+      "type": "encounters",
+      "definition": "encounter",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "EncounterPerformedHospitalMeasuresEncounterInpatient"
+    },
+    "EncounterPerformedHospitalMeasuresEncounterEd": {
+      "title": "Hospital Measures-Encounter ED",
+      "description": "Encounter, Performed: Hospital Measures-Encounter ED",
+      "standard_category": "encounter",
+      "qds_data_type": "encounter",
+      "code_list_id": "2.16.840.1.113883.3.526.2.900",
+      "type": "encounters",
+      "definition": "encounter",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "source_data_criteria": "EncounterPerformedHospitalMeasuresEncounterEd"
+    },
+    "MedicationAdministeredNotDoneMedicalReason": {
+      "title": "Medical Reason",
+      "description": "Medication, Administered not done: Medical Reason",
+      "standard_category": "medication",
+      "qds_data_type": "medication_administered",
+      "code_list_id": "2.16.840.1.113883.3.526.2.313",
+      "type": "medications",
+      "definition": "medication",
+      "status": "administered",
+      "hard_status": true,
+      "negation": true,
+      "source_data_criteria": "MedicationAdministeredNotDoneMedicalReason"
+    },
+    "MedicationAdministeredNotDonePatientReason": {
+      "title": "Patient Reason",
+      "description": "Medication, Administered not done: Patient Reason",
+      "standard_category": "medication",
+      "qds_data_type": "medication_administered",
+      "code_list_id": "2.16.840.1.113883.3.526.2.311",
+      "type": "medications",
+      "definition": "medication",
+      "status": "administered",
+      "hard_status": true,
+      "negation": true,
+      "source_data_criteria": "MedicationAdministeredNotDonePatientReason"
+    },
+    "OccurrenceAHospitalMeasuresEncounterInpatient1": {
+      "title": "Hospital Measures-Encounter Inpatient",
+      "description": "Encounter, Performed: Hospital Measures-Encounter Inpatient",
+      "standard_category": "encounter",
+      "qds_data_type": "encounter",
+      "code_list_id": "2.16.840.1.113883.3.666.5.625",
+      "type": "encounters",
+      "definition": "encounter",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "specific_occurrence": "A",
+      "specific_occurrence_const": "ENCOUNTER_PERFORMED_HOSPITAL_MEASURES_ENCOUNTER_INPATIENT",
+      "source_data_criteria": "OccurrenceAHospitalMeasuresEncounterInpatient1"
+    },
+    "OccurrenceAHospitalMeasuresEncounterEd2": {
+      "title": "Hospital Measures-Encounter ED",
+      "description": "Encounter, Performed: Hospital Measures-Encounter ED",
+      "standard_category": "encounter",
+      "qds_data_type": "encounter",
+      "code_list_id": "2.16.840.1.113883.3.526.2.900",
+      "type": "encounters",
+      "definition": "encounter",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "specific_occurrence": "A",
+      "specific_occurrence_const": "ENCOUNTER_PERFORMED_HOSPITAL_MEASURES_ENCOUNTER_ED",
+      "source_data_criteria": "OccurrenceAHospitalMeasuresEncounterEd2"
+    },
+    "OccurrenceAClinicalTrialParticipant3": {
+      "title": "Clinical Trial Participant",
+      "description": "Patient Characteristic Clinical Trial Participant: Clinical Trial Participant",
+      "standard_category": "individual_characteristic",
+      "qds_data_type": "individual_characteristic",
+      "code_list_id": "2.16.840.1.113883.3.526.2.643",
+      "property": "clinicalTrialParticipant",
+      "type": "characteristic",
+      "definition": "patient_characteristic_clinical_trial_participant",
+      "hard_status": false,
+      "negation": false,
+      "specific_occurrence": "A",
+      "specific_occurrence_const": "PATIENT_CHARACTERISTIC_CLINICAL_TRIAL_PARTICIPANT_CLINICAL_TRIAL_PARTICIPANT",
+      "source_data_criteria": "OccurrenceAClinicalTrialParticipant3",
+      "inline_code_list": {
+        "SNOMED-CT": [
+          "428024001"
+        ]
+      }
+    },
+    "OccurrenceAHospitalMeasuresFibrinolyticTherapy4": {
+      "title": "Hospital Measures-Fibrinolytic Therapy",
+      "description": "Medication, Administered: Hospital Measures-Fibrinolytic Therapy",
+      "standard_category": "medication",
+      "qds_data_type": "medication_administered",
+      "code_list_id": "2.16.840.1.113883.3.666.5.736",
+      "type": "medications",
+      "definition": "medication",
+      "status": "administered",
+      "hard_status": true,
+      "negation": false,
+      "specific_occurrence": "A",
+      "specific_occurrence_const": "MEDICATION_ADMINISTERED_HOSPITAL_MEASURES_FIBRINOLYTIC_THERAPY",
+      "source_data_criteria": "OccurrenceAHospitalMeasuresFibrinolyticTherapy4"
+    },
+    "OccurrenceAHospitalMeasuresEcg5": {
+      "title": "Hospital Measures-ECG",
+      "description": "Diagnostic Study Result: Hospital Measures-ECG",
+      "standard_category": "diagnostic_study",
+      "qds_data_type": "diagnostic_study_result",
+      "code_list_id": "2.16.840.1.113883.3.666.5.735",
+      "type": "diagnostic_studies",
+      "definition": "diagnostic_study_result",
+      "hard_status": false,
+      "negation": false,
+      "specific_occurrence": "A",
+      "specific_occurrence_const": "DIAGNOSTIC_STUDY_RESULT_HOSPITAL_MEASURES_ECG",
+      "source_data_criteria": "OccurrenceAHospitalMeasuresEcg5"
+    },
+    "OccurrenceAHospitalMeasuresPci6": {
+      "title": "Hospital Measures-PCI",
+      "description": "Procedure, Performed: Hospital Measures-PCI",
+      "standard_category": "procedure",
+      "qds_data_type": "procedure_performed",
+      "code_list_id": "2.16.840.1.113883.3.666.5.737",
+      "type": "procedures",
+      "definition": "procedure",
+      "status": "performed",
+      "hard_status": false,
+      "negation": false,
+      "specific_occurrence": "A",
+      "specific_occurrence_const": "PROCEDURE_PERFORMED_HOSPITAL_MEASURES_PCI",
+      "source_data_criteria": "OccurrenceAHospitalMeasuresPci6"
+    }
+  },
+  "attributes": [
+    {
+      "id": "COPYRIGHT",
+      "code": "COPY",
+      "value": "Measure specifications are in the Public Domain.\r\n\r\nLOINC (R) is a registered trademark of the Regenstrief Institute.\r\n\r\nThis material contains SNOMED Clinical Terms (R) (SNOMED CT(c)) copyright 2004-2010 International Health Terminology Standards Development Organization. All rights reserved.",
+      "name": "Copyright"
+    },
+    {
+      "id": "MEASURE_SCORING",
+      "code": "MSRSCORE",
+      "name": "Measure Scoring"
+    },
+    {
+      "id": "MEASURE_TYPE",
+      "code": "MSRTYPE",
+      "name": "Measure Type"
+    },
+    {
+      "id": "STRATIFICATION",
+      "code": "STRAT",
+      "value": "None",
+      "name": "Stratification"
+    },
+    {
+      "id": "RISK_ADJUSTMENT",
+      "code": "MSRADJ",
+      "value": "None",
+      "name": "Risk Adjustment"
+    },
+    {
+      "id": "RATE_AGGREGATION",
+      "code": "MSRAGG",
+      "value": "None",
+      "name": "Rate Aggregation"
+    },
+    {
+      "id": "RATIONALE",
+      "code": "RAT",
+      "value": "Time to fibrinolytic therapy is a strong predictor of outcome in patients with an acute myocardial infarction. Nearly 2 lives per 1000 patients are lost per hour of delay (Fibrinolytic Therapy Trialists' Collaborative Group, 1994). National guidelines recommend that fibrinolytic therapy be given within 30 minutes of hospital arrival in patients with ST-elevation myocardial infarction (Antman, 2004).",
+      "name": "Rationale"
+    },
+    {
+      "id": "CLINICAL_RECOMMENDATION_STATEMENT",
+      "code": "CRS",
+      "value": "National guidelines recommend that fibrinolytic therapy be given within 30 minutes of hospital arrival in patients with ST-elevation myocardial infarction.",
+      "name": "Clinical Recommendation Statement"
+    },
+    {
+      "id": "IMPROVEMENT_NOTATION",
+      "code": "IDUR",
+      "value": "Higher score indicates better quality",
+      "name": "Improvement Notation"
+    },
+    {
+      "id": "NQF_ID_NUMBER",
+      "code": "OTH",
+      "value": "0164",
+      "name": "NQF ID Number"
+    },
+    {
+      "id": "DISCLAIMER",
+      "code": "DISC",
+      "value": "None",
+      "name": "Disclaimer"
+    },
+    {
+      "id": "EMEASURE_IDENTIFIER",
+      "code": "OTH",
+      "value": "60",
+      "name": "eMeasure Identifier"
+    },
+    {
+      "id": "REFERENCE",
+      "code": "REF",
+      "value": "Krumholz HM, Anderson JL, Bachelder BL, Fesmire FM, Fihn SD, Foody JM, et al. ACC/AHA 2008 performance measures for adults with ST-elevation and non–ST-elevation myocardial infarction: a report of the American College of Cardiology/American Heart Association Task Force on Performance Measures (Writing Committee to Develop Performance Measures for ST-Elevation and Non–ST-Elevation Myocardial Infarction). J Am Coll Cardiol. 2008;52:2046–99.",
+      "name": "Reference"
+    },
+    {
+      "id": "DEFINITION",
+      "code": "DEF",
+      "value": "None",
+      "name": "Definition"
+    },
+    {
+      "id": "GUIDANCE",
+      "code": "GUIDE",
+      "value": "The measurement period is one calendar year but the reporting period is 3 months as a calendar quarter; Q1 = Jan – Mar, Q2 = Apr – Jun, Q3 = Jul – Sep, Q4 is Oct – Dec. \r\n\r\nDenominator element guidance: \r\n\r\nThe denominator and numerator criteria indicate scenarios in which the patient is admitted to the hospital directly or the patient is admitted from the Emergency Department (ED). The calculation is to indicate the timing from arrival at the facility to the occurrence of an event.  \r\n\r\nFor the denominator data element \"Diagnostic Study, Result: Hospital Measures-ECG,\" EHR implementations will need to develop mechanisms to capture ECG findings to support denominator criteria for this measure. The measure specification indicates allowable findings. The source of the ECG results should be a physician/APN/PA (rather than the ECG machine's computerized results).\r\n\r\nNumerator element guidance:\r\n\r\nThis measure expects fibrinolytic therapy within 30 minutes of hospital arrival.  Those patients receiving fibrinolysis greater than 30 minutes after arrival may be excluded from the denominator only if there is a documented reason for a delay or documented occurrence of intubation, cardiopulmonary arrest or intraaortic balloon pump insertion within the first 30 minutes after arrival. Patients receiving fibrinolysis greater than 30 minutes after arrival and with no reason provided are not compliant with the numerator criteria and will remain in the denominator.\r\n\r\nExclusion element guidance: \r\n\r\nThe exclusion for patients who are clinical trial participants is limited to patients participating in a clinical trial for acute myocardial infarction (AMI), ST elevation myocardial infarction (STEMI), non-ST elevation myocardial infarction (non-STEMI), heart attack, or acute coronary syndrome (ACS), the same conditions as covered by the measure. Other clinical trials are not valid reasons for exclusions. \r\n\r\nTransfers from another hospital are excluded since care may have been delivered in the other setting. Transfers from those hospitals are considered exclusions regardless of whether the receiving hospital has the same or different hospital unique identifier as the transferring hospital.",
+      "name": "Guidance"
+    },
+    {
+      "id": "TRANSMISSION_FORMAT",
+      "code": "OTH",
+      "value": "None",
+      "name": "Transmission Format"
+    },
+    {
+      "id": "INITIAL_PATIENT_POPULATION",
+      "code": "IPP",
+      "value": "All hospital discharges for acute myocardial infarction (AMI) with hospital stays <= 120 days during the measurement year for patients age 18 and older at the time of hospital admission with ST-elevation or left bundle branch block (LBBB) on electrocardiogram (ECG) who received fibrinolytic therapy",
+      "name": "Initial Patient Population"
+    },
+    {
+      "id": "DENOMINATOR",
+      "code": "DENOM",
+      "value": "AMI patients age 18 and older with ST-elevation or LBBB on ECG who received fibrinolytic therapy with an ICD-9-CM Principal Diagnosis Code for AMI AND ST-segment elevation or LBBB on the ECG performed closest to hospital arrival AND Fibrinolytic therapy within 6 hours after hospital arrival AND Fibrinolytic therapy is primary reperfusion therapy",
+      "name": "Denominator"
+    },
+    {
+      "id": "DENOMINATOR_EXCLUSIONS",
+      "code": "OTH",
+      "value": "Patients enrolled in clinical trials.\r\nPatients received as a transfer from an inpatient or outpatient department of another hospital. \r\nPatients received as a transfer from the emergency/observation department of another hospital. \r\nPatients received as a transfer from an ambulatory surgery center. \r\nPatients who did not receive fibrinolytic therapy within 30 minutes and had a reason for delay documented by a physician/advanced practice nurse/physician assistant (e.g., social, religious, initial concern or refusal, cardiopulmonary arrest, balloon pump insertion, respiratory failure requiring intubation).",
+      "name": "Denominator Exclusions"
+    },
+    {
+      "id": "NUMERATOR",
+      "code": "NUMER",
+      "value": "AMI patients whose time from hospital arrival to fibrinolysis is 30 minutes or less.",
+      "name": "Numerator"
+    },
+    {
+      "id": "NUMERATOR_EXCLUSIONS",
+      "code": "OTH",
+      "value": "Not Applicable",
+      "name": "Numerator Exclusions"
+    },
+    {
+      "id": "DENOMINATOR_EXCEPTIONS",
+      "code": "DENEXCEP",
+      "value": "None",
+      "name": "Denominator Exceptions"
+    },
+    {
+      "id": "MEASURE_POPULATION",
+      "code": "MSRPOPL",
+      "value": "Not Applicable",
+      "name": "Measure Population"
+    },
+    {
+      "id": "MEASURE_OBSERVATIONS",
+      "code": "OTH",
+      "value": "Not Applicable",
+      "name": "Measure Observations"
+    },
+    {
+      "id": "SUPPLEMENTAL_DATA_ELEMENTS",
+      "code": "OTH",
+      "value": "For every patient evaluated by this measure also identify payer, race, ethnicity and sex.",
+      "name": "Supplemental Data Elements"
+    }
+  ],
+  "populations": [
+    {
+      "IPP": "IPP",
+      "DENOM": "DENOM",
+      "NUMER": "NUMER",
+      "DENEX": "DENEX"
+    }
+  ],
+  "measure_period": {
+    "type": "IVL_TS",
+    "low": {
+      "type": "TS",
+      "value": "201201010000",
+      "inclusive?": true,
+      "derived?": false
+    },
+    "high": {
+      "type": "TS",
+      "value": "201212312359",
+      "inclusive?": true,
+      "derived?": false
+    },
+    "width": {
+      "type": "PQ",
+      "unit": "a",
+      "value": "1",
+      "inclusive?": true,
+      "derived?": false
+    }
+  }
+}

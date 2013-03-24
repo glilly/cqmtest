@@ -1,0 +1,474 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:n1="urn:hl7-org:v3">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   
+      <title>Hearing Screening Prior To Hospital Discharge (EHDI-1a)</title><style type="text/css">
+body {
+	color: rgb(26, 26, 26);
+	background-color: rgb(255,255,255);
+	font-family: Verdana, Tahoma, sans-serif;
+	font-size: 11px;
+}
+
+a {
+	color: rgb(0, 0, 255);
+	background-color: rgb(255,255,255);
+}
+
+h1 {
+	font-size: 12pt;
+	font-weight: bold;
+}
+
+h2 {
+	font-size: 11pt;
+	font-weight: bold;
+}
+
+h3 {
+	font-size: 10pt;
+	font-weight: bold;
+}
+
+h4 {
+	font-size: 8pt;
+	font-weight: bold;
+}
+
+div {
+	width: 80%;
+}
+
+table {
+	line-height: 10pt;
+	width: 80%;
+}
+
+tr {
+	background-color: rgb(224,224,224);
+}
+
+td {
+	padding: 0.1cm 0.2cm;
+	vertical-align: top;
+}
+
+.h1center {
+	font-size: 12pt;
+	font-weight: bold;
+	text-align: center;
+	width: 80%;
+}
+
+.header_table{
+	border: 1pt inset rgb(0,0,0);
+}
+
+.narr_table {
+	width: 100%;
+}
+
+.narr_tr {
+	background-color: rgb(225,225,225);
+}
+pre {
+ overflow: auto; /* Use horizontal scroller if needed; for Firefox 2, not needed in Firefox 3 */
+ white-space: pre-wrap; /* css-3 */
+ white-space: -moz-pre-wrap !important; /* Mozilla, since 1999 */
+ white-space: -pre-wrap; /* Opera 4-6 */
+ white-space: -o-pre-wrap; /* Opera 7 */
+ word-wrap: break-word; /* Internet Explorer 5.5+ */
+ font-family: Verdana, Tahoma, sans-serif;
+ font-size: 11px;
+ text-align:left;
+ margin: 0px 0px 0px 0px;
+ padding:0px 0px 0px 0px;
+}
+.narr_th {
+	background-color: rgb(201,201,201);
+}
+
+.td_label{
+	font-weight: bold;
+	color: white;
+}
+	</style></head>
+   <body>
+      <table class="header_table">
+         <tbody>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">eMeasure Title</span></td>
+               <td width="80%" colspan="3">Hearing Screening Prior To Hospital Discharge (EHDI-1a)</td>
+            </tr>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">eMeasure Identifier<br>(Measure Authoring Tool)</span></td>
+               <td width="30%">31</td>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">eMeasure Version number</span></td>
+               <td width="30%">1</td>
+            </tr>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">NQF Number</span></td>
+               <td width="30%">1354</td>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">GUID</span></td>
+               <td> 0924fbae-3fdb-4d0a-aab7-9f354e699fde</td>
+            </tr>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">Measurement Period</span></td>
+               <td width="80%" colspan="3">January 1, 20xx  through December 31, 20xx </td>
+            </tr>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">Measure Steward</span></td>
+               <td width="80%" colspan="3">CDC National Center on Birth Defects and Developmental Disabilities</td>
+            </tr>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">Measure Developer</span></td>
+               <td width="80%" colspan="3">CDC Early Hearing Detection and Intervention Program</td>
+            </tr>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">Measure Developer</span></td>
+               <td width="80%" colspan="3">CDC Early Hearing Detection and Intervention Program</td>
+            </tr>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">Endorsed By</span></td>
+               <td width="80%" colspan="3">National Quality Forum</td>
+            </tr>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">Description</span></td>
+               <td width="80%" colspan="3">
+                  <div style="width:660px;overflow-x:hidden;overflow-y:auto"><pre>This measure assesses the proportion of births that have been screened for hearing loss before hospital discharge.</pre></div>
+               </td>
+            </tr>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">Copyright</span></td>
+               <td width="80%" colspan="3">
+                  <div style="width:660px;overflow-x:hidden;overflow-y:auto"><pre>None</pre></div>
+               </td>
+            </tr>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">Disclaimer</span></td>
+               <td width="80%" colspan="3">
+                  <div style="width:660px;overflow-x:hidden;overflow-y:auto"><pre>None</pre></div>
+               </td>
+            </tr>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">Measure Scoring</span></td>
+               <td width="80%" colspan="3">Proportion</td>
+            </tr>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">Measure Type</span></td>
+               <td width="80%" colspan="3">Process</td>
+            </tr>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">Measure Type</span></td>
+               <td width="80%" colspan="3">Process</td>
+            </tr>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">Stratification</span></td>
+               <td width="80%" colspan="3">
+                  <div style="width:660px;overflow-x:hidden;overflow-y:auto"><pre>None</pre></div>
+               </td>
+            </tr>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">Risk Adjustment</span></td>
+               <td width="80%" colspan="3">
+                  <div style="width:660px;overflow-x:hidden;overflow-y:auto"><pre>None</pre></div>
+               </td>
+            </tr>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">Rate Aggregation</span></td>
+               <td width="80%" colspan="3">
+                  <div style="width:660px;overflow-x:hidden;overflow-y:auto"><pre>None</pre></div>
+               </td>
+            </tr>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">Rationale</span></td>
+               <td width="80%" colspan="3">
+                  <div style="width:660px;overflow-x:hidden;overflow-y:auto"><pre>Birthing facility staff should review the effectiveness and timeliness of screening relative to nursery discharge. Benchmarks set within the EHCP may trigger hospital or jurisdictional compliance activities, such as re-writing of procedural guidelines or re-training of screening staff.</pre></div>
+               </td>
+            </tr>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">Clinical Recommendation Statement</span></td>
+               <td width="80%" colspan="3">
+                  <div style="width:660px;overflow-x:hidden;overflow-y:auto"><pre>None</pre></div>
+               </td>
+            </tr>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">Improvement Notation</span></td>
+               <td width="80%" colspan="3">
+                  <div style="width:660px;overflow-x:hidden;overflow-y:auto"><pre>An increase in the rate.</pre></div>
+               </td>
+            </tr>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">Reference</span></td>
+               <td width="80%" colspan="3">
+                  <div style="width:660px;overflow-x:hidden;overflow-y:auto"><pre>HRSA Title V Block Grant MCHB Performance Measure: Percentage of newborns who have been screened for hearing before hospital discharge.</pre></div>
+               </td>
+            </tr>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">Reference</span></td>
+               <td width="80%" colspan="3">
+                  <div style="width:660px;overflow-x:hidden;overflow-y:auto"><pre>U.S. Preventive Services Task Force (www.ahrq.gov/clinic/uspstf/uspsnbhr.htm) Year 2007 Position Statement: Principles and Guidelines for Early Hearing Detection and Intervention Programs. Joint Committee on Infant Hearing. Pediatrics 2007;120;898-921 (http://pediatrics.aappublications.org/cgi/content/full/120/4/898?ijkey=oj9BAleq21OlA&amp;keytype=ref&amp;siteid=aapjournals)</pre></div>
+               </td>
+            </tr>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">Reference</span></td>
+               <td width="80%" colspan="3">
+                  <div style="width:660px;overflow-x:hidden;overflow-y:auto"><pre>HRSA Title V Block Grant MCHB Performance Measure: Percentage of newborns who have been screened for hearing before hospital discharge.</pre></div>
+               </td>
+            </tr>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">Reference</span></td>
+               <td width="80%" colspan="3">
+                  <div style="width:660px;overflow-x:hidden;overflow-y:auto"><pre>U.S. Preventive Services Task Force (www.ahrq.gov/clinic/uspstf/uspsnbhr.htm) Year 2007 Position Statement: Principles and Guidelines for Early Hearing Detection and Intervention Programs. Joint Committee on Infant Hearing. Pediatrics 2007;120;898-921 (http://pediatrics.aappublications.org/cgi/content/full/120/4/898?ijkey=oj9BAleq21OlA&amp;keytype=ref&amp;siteid=aapjournals)</pre></div>
+               </td>
+            </tr>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">Definition</span></td>
+               <td width="80%" colspan="3">
+                  <div style="width:660px;overflow-x:hidden;overflow-y:auto"><pre>None</pre></div>
+               </td>
+            </tr>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">Guidance</span></td>
+               <td width="80%" colspan="3">
+                  <div style="width:660px;overflow-x:hidden;overflow-y:auto"><pre>The measurement period is one calendar year but the reporting period is jurisdictionally defined.
+
+The logic phrase AND: &#8220;Occurrence A of Encounter, Performed: Inpatient Encounter (reason: 'Birth')&#8221; intends to capture admission type of newborn for the encounter. Where this information is available in existing EHR structured fields (e.g. data that is fed to UB 04, field location 14), it can be used to map the criterion specified in the logic.
+
+The logic phrase AND: &#8220;Diagnosis, Active: Liveborn Born In Hospital&#8221; starts during &#8220;Occurrence A of Encounter, Performed: Inpatient Encounter&#8221; intends to capture the point of origin for the inpatient admission. Where this information is available in existing EHR structured fields (e.g. data that is fed to UB-04, field location 15), it can be used to map the criterion specified in the logic.</pre></div>
+               </td>
+            </tr>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">Transmission Format</span></td>
+               <td width="80%" colspan="3">
+                  <div style="width:660px;overflow-x:hidden;overflow-y:auto"><pre>None</pre></div>
+               </td>
+            </tr>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">Initial Patient Population</span></td>
+               <td width="80%" colspan="3">
+                  <div style="width:660px;overflow-x:hidden;overflow-y:auto"><pre>Newborn</pre></div>
+               </td>
+            </tr>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">Denominator</span></td>
+               <td width="80%" colspan="3">
+                  <div style="width:660px;overflow-x:hidden;overflow-y:auto"><pre>All live births during the measurement time period born at a facility and, discharged without being screened, or screened prior to discharge, or screened but still not discharged.</pre></div>
+               </td>
+            </tr>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">Denominator Exclusions</span></td>
+               <td width="80%" colspan="3">
+                  <div style="width:660px;overflow-x:hidden;overflow-y:auto"><pre>Patient deceased prior to discharge and has not received hearing screening.</pre></div>
+               </td>
+            </tr>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">Numerator</span></td>
+               <td width="80%" colspan="3">
+                  <div style="width:660px;overflow-x:hidden;overflow-y:auto"><pre>All live births during the measurement time period born at a facility and screened for
+hearing loss prior to discharge, or screened but still not discharged; 
+Or not being screened due to medical reasons or medical exclusions.</pre></div>
+               </td>
+            </tr>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">Numerator Exclusions</span></td>
+               <td width="80%" colspan="3">
+                  <div style="width:660px;overflow-x:hidden;overflow-y:auto"><pre>Not applicable</pre></div>
+               </td>
+            </tr>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">Denominator Exceptions</span></td>
+               <td width="80%" colspan="3">
+                  <div style="width:660px;overflow-x:hidden;overflow-y:auto"><pre>None</pre></div>
+               </td>
+            </tr>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">Measure Population</span></td>
+               <td width="80%" colspan="3">
+                  <div style="width:660px;overflow-x:hidden;overflow-y:auto"><pre>Not applicable</pre></div>
+               </td>
+            </tr>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">Measure Observations</span></td>
+               <td width="80%" colspan="3">
+                  <div style="width:660px;overflow-x:hidden;overflow-y:auto"><pre>Not applicable</pre></div>
+               </td>
+            </tr>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">Supplemental Data Elements</span></td>
+               <td width="80%" colspan="3">
+                  <div style="width:660px;overflow-x:hidden;overflow-y:auto"><pre>For every patient evaluated by this measure also identify payer, race, ethnicity and sex.</pre></div>
+               </td>
+            </tr>
+         </tbody>
+      </table>
+      <h2><a name="toc">Table of Contents</a></h2>
+      <ul>
+         <li><a href="#d21513738e523">Population criteria</a></li>
+         <li><a href="#d21513738e1306">Data criteria (QDM Data Elements)</a></li>
+         <li><a href="#d21513738e1703">Reporting Stratification</a></li>
+         <li><a href="#d21513738e1724">Supplemental Data Elements</a></li>
+      </ul>
+      <hr align="left" color="teal" size="2" width="80%">
+      <h3><a name="d21513738e523" href="#toc">Population criteria</a></h3>
+      <div>
+         
+         <ul>
+            <li>
+               <b>Initial Patient Population =</b>
+               
+               <ul>
+                  <li>AND: "Diagnosis, Active: Livebirth (ordinality: 'Principal Diagnosis')" starts during "Occurrence A of Encounter, Performed:
+                     Inpatient Encounter"
+                  </li>
+                  <li>AND: "Occurrence A of Encounter, Performed: Inpatient Encounter (reason: 'Birth')" during "Measurement Period"</li>
+                  <li>AND: "Diagnosis, Active: Liveborn Born In Hospital" starts during "Occurrence A of Encounter, Performed: Inpatient Encounter"</li>
+               </ul>
+               
+            </li>
+            <li>
+               <b>Denominator =</b>
+               
+               <ul>
+                  <li>AND: "Initial Patient Population"</li>
+               </ul>
+               
+            </li>
+            <li>
+               <b>Denominator Exclusions =</b>
+               
+               <ul>
+                  <li>AND NOT: 
+                     <ul>
+                        <li>OR: "Diagnostic Study, Result: Hearing Examination"</li>
+                        <li>OR: "Diagnostic Study, Result: Newborn Hearing Screen Left"</li>
+                        <li>OR: "Diagnostic Study, Result: Newborn Hearing Screen Right"</li>
+                        <li> during "Occurrence A of Encounter, Performed: Inpatient Encounter"</li>
+                     </ul>
+                     
+                  </li>
+                  <li>AND: "Patient Characteristic Expired: Patient Expired" during "Occurrence A of Encounter, Performed: Inpatient Encounter"</li>
+               </ul>
+               
+            </li>
+            <li>
+               <b>Numerator =</b>
+               
+               <ul>
+                  <li>AND: 
+                     <ul>
+                        <li>OR: "Diagnostic Study, Result not done: Medical Reasons" for "Newborn Hearing Screen Left LOINC Value Set"</li>
+                        <li>OR: "Diagnostic Study, Result not done: Medical Reasons" for "Newborn Hearing Screen Right LOINC Value Set"</li>
+                        <li>OR: "Diagnostic Study, Result: Hearing Examination"</li>
+                        <li>OR: "Diagnostic Study, Result not done: Medical Reasons" for "Hearing Examination SNOMED-CT Value Set"</li>
+                        <li>OR: 
+                           <ul>
+                              <li>AND: "Diagnostic Study, Result: Newborn Hearing Screen Left (result: 'Pass Or Refer')"</li>
+                              <li>AND: "Diagnostic Study, Result: Newborn Hearing Screen Right (result: 'Pass Or Refer')"</li>
+                           </ul>
+                           
+                        </li>
+                        <li> during "Occurrence A of Encounter, Performed: Inpatient Encounter"</li>
+                     </ul>
+                     
+                  </li>
+               </ul>
+               
+            </li>
+            <li>
+               <b>Denominator Exceptions =</b>
+               
+               <ul>
+                  <li>None</li>
+               </ul>
+               
+            </li>
+         </ul>
+         
+      </div>
+      <h3><a name="d21513738e1306" href="#toc">Data criteria (QDM Data Elements)</a></h3>
+      <div>
+         
+         <ul>
+            <li>
+               "Diagnosis, Active: Livebirth" using "Livebirth SNOMED-CT Value Set (2.16.840.1.114222.4.1.214079.1.1.1)"
+            </li>
+            <li>
+               "Diagnosis, Active: Liveborn Born In Hospital" using "Liveborn Born In Hospital SNOMED-CT Value Set (2.16.840.1.113883.3.117.1.7.1.29)"
+            </li>
+            <li>
+               "Diagnostic Study, Result: Hearing Examination" using "Hearing Examination SNOMED-CT Value Set (2.16.840.1.114222.4.1.214079.1.1.2)"
+            </li>
+            <li>
+               "Diagnostic Study, Result: Newborn Hearing Screen Left" using "Newborn Hearing Screen Left LOINC Value Set (2.16.840.1.114222.4.1.214079.1.1.3)"
+            </li>
+            <li>
+               "Diagnostic Study, Result: Newborn Hearing Screen Right" using "Newborn Hearing Screen Right LOINC Value Set (2.16.840.1.114222.4.1.214079.1.1.4)"
+            </li>
+            <li>
+               "Diagnostic Study, Result not done: Medical Reasons" using "Medical Reasons SNOMED-CT Value Set (2.16.840.1.114222.4.1.214079.1.1.7)"
+            </li>
+            <li>
+               "Diagnostic Study, Result not done: Medical Reasons" using "Medical Reasons SNOMED-CT Value Set (2.16.840.1.114222.4.1.214079.1.1.7)"
+            </li>
+            <li>
+               "Diagnostic Study, Result not done: Medical Reasons" using "Medical Reasons SNOMED-CT Value Set (2.16.840.1.114222.4.1.214079.1.1.7)"
+            </li>
+            <li>
+               "Encounter, Performed: Inpatient Encounter" using "Inpatient Encounter SNOMED-CT Value Set (2.16.840.1.113883.3.117.1.7.1.23)"
+            </li>
+            <li>
+               "Patient Characteristic Expired: Patient Expired" using "Patient Expired SNOMED-CT Value Set (2.16.840.1.113883.3.67.1.101.1.78)"
+            </li>
+            <li>
+               Attribute: "Ordinality: Principal Diagnosis" using "Principal Diagnosis SNOMED-CT Value Set  (2.16.840.1.113883.3.117.2.7.1.14)"
+            </li>
+            <li>
+               Attribute: "Reason: Birth" using "Birth SNOMED-CT Value Set  (2.16.840.1.113883.3.117.1.7.1.70)"
+            </li>
+            <li>
+               Attribute: "Result: Pass Or Refer" using "Pass Or Refer SNOMED-CT Value Set  (2.16.840.1.114222.4.1.214079.1.1.6)"
+            </li>
+         </ul>
+         
+      </div>
+      <h3><a name="d21513738e1703" href="#toc">Reporting Stratification</a></h3>
+      <div>
+         
+         <ul>
+            <li>None</li>
+         </ul>
+         
+      </div>
+      <h3><a name="d21513738e1724" href="#toc">Supplemental Data Elements</a></h3>
+      <div>
+         
+         <ul>
+            <li>
+               "Patient Characteristic Ethnicity: Ethnicity" using "Ethnicity CDC Value Set (2.16.840.1.114222.4.11.837)"
+            </li>
+            <li>
+               "Patient Characteristic Payer: Payer" using "Payer Source of Payment Typology Value Set (2.16.840.1.114222.4.11.3591)"
+            </li>
+            <li>
+               "Patient Characteristic Race: Race" using "Race CDC Value Set (2.16.840.1.114222.4.11.836)"
+            </li>
+            <li>
+               "Patient Characteristic Sex: ONC Administrative Sex" using "ONC Administrative Sex Administrative Sex Value Set (2.16.840.1.113762.1.4.1)"
+            </li>
+         </ul>
+         
+      </div><br><hr align="left" color="teal" size="2" width="80%"><br><table class="header_table">
+         <tbody>
+            <tr>
+               <td width="20%" bgcolor="#656565" style="background-color:#656565"><span class="td_label">Measure Set</span></td>
+               <td colspan="3" width="80%">
+                  <div style="width:660px;overflow-x:hidden;overflow-y:auto;word-wrap:break-word">Early Hearing Detection and Intervention (EHDI)</div>
+               </td>
+            </tr>
+         </tbody>
+      </table>
+   </body>
+</html>
