@@ -1,0 +1,1538 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html xmlns:n1="urn:hl7-org:v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Cypress Certification Patient Test Record: Eric Nelson</title>
+    <style type="text/css">
+      body {
+        color: #003366;
+        background-color: #FFFFFF;
+        font-family: Verdana, Tahoma, sans-serif;
+        font-size: 11px;
+      }
+      a {
+        color: #003366;
+        background-color: #FFFFFF;
+      }
+      h1 {
+        font-size: 12pt;
+        font-weight: bold;
+      }
+      h2 {
+        font-size: 11pt;
+        font-weight: bold;
+      }
+      h3 {
+        font-size: 10pt;
+        font-weight: bold;
+      }
+      h4 {
+        font-size: 8pt;
+        font-weight: bold;
+      }
+      div {
+        width: 95%;
+      }
+      table {
+        line-height: 10pt;
+        width: 90%;
+      }
+      tr {
+        background-color: #ccccff;
+      }
+      td {
+        padding: 0.1cm 0.2cm;
+        vertical-align: top;
+      }
+      .h1center {
+        font-size: 12pt;
+        font-weight: bold;
+        text-align: center;
+        width: 80%;
+      }
+      .header_table{
+        border: 1pt inset #00008b;
+      }
+      .narr_table {
+        width: 100%;
+      }
+      .narr_tr {
+        background-color: #ffffcc;
+      }
+      .narr_th {
+        background-color: #ffd700;
+      }
+      .td_label{
+        font-weight: bold;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="h1center">Cypress Certification Patient Test Record: Eric Nelson</h1>
+    <table class="header_table">
+  <tbody>
+    <tr>
+      <td width="20%" bgcolor="#3399ff"><span class="td_label">Patient</span></td>
+      <td witdh="30%">Eric Nelson</td>
+      <td width="15%" bgcolor="#3399ff"><span class="td_label">Sex</span></td>
+      <td>Male</td>
+    </tr>
+    <tr>
+      <td width="20%" bgcolor="#3399ff"><span class="td_label">Date of birth</span></td>
+      <td width="30%">February 1st, 1942 15:00</td>
+      <td width="15%" bgcolor="#3399ff"><span class="td_label">Date of expiration</span></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td width="20%" bgcolor="#3399ff"><span class="td_label">Race</span></td>
+      <td width="30%">American Indian or Alaska Native</td>
+      <td width="15%" bgcolor="#3399ff"><span class="td_label">Ethnicity</span></td>
+      <td>Not Hispanic or Latino</td>
+    </tr>    
+    <tr>
+      <td bgcolor="#3399ff"><span class="td_label">Insurance Providers</span></td>
+      <td>
+      	Other
+      </td>
+      <td bgcolor="#3399ff"><span class="td_label">Patient IDs</span></td>
+      <td>517bf6364524ba3128000ccc Cypress</td>
+    </tr>
+    <tr>
+      <td bgcolor="#3399ff"><span class="td_label">Contact info</span></td>
+      <td colspan="3"> 
+      </td>
+    </tr>
+  </tbody>
+</table>
+<table class="header_table">
+  <tbody>
+    <tr>
+      <td width="20%" bgcolor="#3399ff"><span class="td_label">Document Id</span></td>
+      <td width="80%">517bf6364524ba3128000ccc 2.16.840.1.113883.3.72</td>
+    </tr>
+    <tr>
+      <td width="20%" bgcolor="#3399ff"><span class="td_label">Document Created:</span></td>
+      <td width="80%">April 28th, 2013 14:50</td>
+    </tr>
+  </tbody>
+</table>
+<table class="header_table">
+  <tbody>
+    <tr>
+      <td width="20%" bgcolor="#3399ff"><span class="td_label">Author</span></td>
+      <td width="80%">Auto Generated</td>
+    </tr>
+    <tr>
+      <td bgcolor="#3399ff"><span class="td_label">Contact info</span></td>
+      <td>
+        Tel:  +1-781-271-3000<br />
+      </td>
+    </tr>
+  </tbody>
+</table>
+<table class="header_table">
+  <tbody>
+    <tr>
+      <td width="20%" bgcolor="#3399ff"><span class="td_label">Document maintained by</span></td>
+      <td width="80%">Cypress</td>
+    </tr>
+    <tr>
+      <td bgcolor="#3399ff"><span class="td_label">Contact info</span></td>
+      <td width="80%">202 Burlington Rd.<br />Bedford, MA 01730<br />Tel:  +1-781-271-3000<br /></td>
+    </tr>
+  </tbody>
+</table>
+
+    <!--h2><a name="toc">Table of Contents</a></h2>
+    <ul>
+      <li><a href="#idp190080">Allergies and Adverse Reactions</a></li>
+      <li><a href="#idp553808">Medications - Prescription and Non-Prescription</a></li>
+      <li><a href="#idp266352">Encounters</a></li>
+      <li><a href="#idp594640">Problems</a></li>
+    </ul-->
+    <script language="javascript">
+      var cur_view = "section";
+      function toggle(id) {
+        var e = document.getElementById(id);
+        if (cur_view=="section"){
+         document.getElementById("patient_information_by_section").style.display = 'none';
+         document.getElementById("table_by_encounter").style.display = 'block';
+         document.getElementById('toggle_button').innerHTML="View By Section";
+         cur_view = "encounter";
+        }else{
+         document.getElementById("patient_information_by_section").style.display = 'block';
+         document.getElementById("table_by_encounter").style.display = 'none';
+         document.getElementById('toggle_button').innerHTML="View By Encounter";
+         cur_view = "section";
+        }      
+      }
+      
+      function showConcepts(ev, id) {
+        var left = ev.clientX + document.documentElement.scrollLeft;
+        var top = ev.clientY + document.documentElement.scrollTop;
+
+        var concepts = document.getElementById(id);
+        concepts.style.display = 'block';
+        concepts.style.left = left + 'px';
+        concepts.style.top = top + 'px';
+      }
+      function hideConcepts(ev, id) {
+        var concepts = document.getElementById(id);
+        concepts.style.display = 'none';
+      }
+      function showCodes(event, id) {
+        //var left = ev.clientX + document.documentElement.scrollLeft;
+        //var top = ev.clientY + document.documentElement.scrollTop;
+
+        // Calculate pageX/Y if missing and clientX/Y available
+        if ( event.pageX == null && event.clientX != null ) {
+          var doc = document.documentElement, body = document.body;
+          event.pageX = event.clientX + (doc && doc.scrollLeft || body && body.scrollLeft || 0) - (doc && doc.clientLeft || body && body.clientLeft || 0);
+          event.pageY = event.clientY + (doc && doc.scrollTop  || body && body.scrollTop  || 0) - (doc   && doc.clientTop  || body && body.clientTop  || 0);
+        }
+        var left = event.pageX;
+        var top = event.pageY;
+        var codes = document.getElementById(id);
+        codes.style.display = 'block';
+        codes.style.left = left + 'px';
+        codes.style.top = top + 'px';
+      }
+      function hideCodes(ev, id) {
+        var codes = document.getElementById(id);
+        codes.style.display = 'none';
+      }
+    </script>
+    <div>
+      <h3><a href="#" onclick="toggle('table_by_encounter');" id="toggle_button">View By Encounter</a></h3>
+    </div>
+    <div id="patient_information_by_section" style="display:block">
+    <h3><a name="_link" href="#toc">Diagnoses</a></h3>
+<div>
+  <table class="narr_table" border="1" width="100%">
+    <thead>
+      <tr class="narr_tr">
+        <th class="narr_th" width="30%">Description</th>
+        <th class="narr_th" width="15%">Codes</th>
+        <th class="narr_th" width="15%">Time</th>
+        <th class="narr_th" width="10%">Status</th>
+        <th class="narr_th" width="15%">Results</th>
+        <th class="narr_th" width="15%">Fields</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr class="narr_tr">
+  
+  <td>Diagnosis, Active: Heart Failure (Code List: 2.16.840.1.113883.3.526.3.376)</td>
+  <td>
+      <b>
+          SNOMED-CT: <i>
+                              <span onmouseover="showCodes(event,'517b27f44524ba62e600027a_false_SNOMED-CT_10091002')" onmouseout="hideCodes(event,'517b27f44524ba62e600027a_false_SNOMED-CT_10091002')" style="cursor:pointer;">10091002</span>
+                      </i>
+      </b>
+          <span id="517b27f44524ba62e600027a_false_SNOMED-CT_10091002" style="display: none; position: absolute; background: #EEE; padding: 10px; paddint-left: 30px; width: 200px; overflow: auto; z-index: 3000;"> High output heart failure (disorder) </span>
+      <br/>
+      <b>
+          ICD-9-CM: <i>
+                              <span onmouseover="showCodes(event,'517b27f44524ba62e600027a_false_ICD-9-CM_428.0')" onmouseout="hideCodes(event,'517b27f44524ba62e600027a_false_ICD-9-CM_428.0')" style="cursor:pointer;">428.0</span>
+                      </i>
+      </b>
+          <span id="517b27f44524ba62e600027a_false_ICD-9-CM_428.0" style="display: none; position: absolute; background: #EEE; padding: 10px; paddint-left: 30px; width: 200px; overflow: auto; z-index: 3000;"> Congestive heart failure, unspecified </span>
+      <br/>
+      <b>
+          ICD-10-CM: <i>
+                              <span onmouseover="showCodes(event,'517b27f44524ba62e600027a_false_ICD-10-CM_I50.1')" onmouseout="hideCodes(event,'517b27f44524ba62e600027a_false_ICD-10-CM_I50.1')" style="cursor:pointer;">I50.1</span>
+                      </i>
+      </b>
+          <span id="517b27f44524ba62e600027a_false_ICD-10-CM_I50.1" style="display: none; position: absolute; background: #EEE; padding: 10px; paddint-left: 30px; width: 200px; overflow: auto; z-index: 3000;"> Left ventricular failure </span>
+      <br/>
+  </td>
+  <td>March 1st, 2012 12:05 - present</td>
+  <td>active</td>   
+  <td>
+  </td>
+  <td>
+	</td>
+
+</tr>
+
+        <tr class="narr_tr">
+  
+  <td>Diagnosis, Active: Coronary Artery Disease No MI (Code List: 2.16.840.1.113883.3.526.3.369)</td>
+  <td>
+      <b>
+          SNOMED-CT: <i>
+                              <span onmouseover="showCodes(event,'517b27f44524ba62e600027b_false_SNOMED-CT_123641001')" onmouseout="hideCodes(event,'517b27f44524ba62e600027b_false_SNOMED-CT_123641001')" style="cursor:pointer;">123641001</span>
+                      </i>
+      </b>
+          <span id="517b27f44524ba62e600027b_false_SNOMED-CT_123641001" style="display: none; position: absolute; background: #EEE; padding: 10px; paddint-left: 30px; width: 200px; overflow: auto; z-index: 3000;"> Left coronary artery occlusion (disorder) </span>
+      <br/>
+      <b>
+          ICD-9-CM: <i>
+                              <span onmouseover="showCodes(event,'517b27f44524ba62e600027b_false_ICD-9-CM_411.0')" onmouseout="hideCodes(event,'517b27f44524ba62e600027b_false_ICD-9-CM_411.0')" style="cursor:pointer;">411.0</span>
+                      </i>
+      </b>
+          <span id="517b27f44524ba62e600027b_false_ICD-9-CM_411.0" style="display: none; position: absolute; background: #EEE; padding: 10px; paddint-left: 30px; width: 200px; overflow: auto; z-index: 3000;"> Postmyocardial infarction syndrome </span>
+      <br/>
+      <b>
+          ICD-10-CM: <i>
+                              <span onmouseover="showCodes(event,'517b27f44524ba62e600027b_false_ICD-10-CM_I20.0')" onmouseout="hideCodes(event,'517b27f44524ba62e600027b_false_ICD-10-CM_I20.0')" style="cursor:pointer;">I20.0</span>
+                      </i>
+      </b>
+          <span id="517b27f44524ba62e600027b_false_ICD-10-CM_I20.0" style="display: none; position: absolute; background: #EEE; padding: 10px; paddint-left: 30px; width: 200px; overflow: auto; z-index: 3000;"> Unstable angina </span>
+      <br/>
+  </td>
+  <td>March 1st, 2012 12:05 - present</td>
+  <td>active</td>   
+  <td>
+  </td>
+  <td>
+	</td>
+
+</tr>
+
+        <tr class="narr_tr">
+  
+  <td>Diagnosis, Active: Moderate or Severe LVSD (Code List: 2.16.840.1.113883.3.526.3.1090)</td>
+  <td>
+      <b>
+          SNOMED-CT: <i>
+                              <span onmouseover="showCodes(event,'517b27f44524ba62e600027d_false_SNOMED-CT_981000124106')" onmouseout="hideCodes(event,'517b27f44524ba62e600027d_false_SNOMED-CT_981000124106')" style="cursor:pointer;">981000124106</span>
+                      </i>
+      </b>
+          <span id="517b27f44524ba62e600027d_false_SNOMED-CT_981000124106" style="display: none; position: absolute; background: #EEE; padding: 10px; paddint-left: 30px; width: 200px; overflow: auto; z-index: 3000;"> Moderate left ventricular systolic dysfunction (disorder) </span>
+      <br/>
+  </td>
+  <td>March 1st, 2012 12:05 - present</td>
+  <td>active</td>   
+  <td>
+  </td>
+  <td>
+	</td>
+
+</tr>
+
+        <tr class="narr_tr">
+  
+  <td>Diagnosis, Active: Ischemic Vascular Disease (Code List: 2.16.840.1.113883.3.464.1003.104.12.1003)</td>
+  <td>
+      <b>
+          SNOMED-CT: <i>
+                              <span onmouseover="showCodes(event,'517b27f44524ba62e600027c_false_SNOMED-CT_123641001')" onmouseout="hideCodes(event,'517b27f44524ba62e600027c_false_SNOMED-CT_123641001')" style="cursor:pointer;">123641001</span>
+                      </i>
+      </b>
+          <span id="517b27f44524ba62e600027c_false_SNOMED-CT_123641001" style="display: none; position: absolute; background: #EEE; padding: 10px; paddint-left: 30px; width: 200px; overflow: auto; z-index: 3000;"> Left coronary artery occlusion (disorder) </span>
+      <br/>
+      <b>
+          ICD-9-CM: <i>
+                              <span onmouseover="showCodes(event,'517b27f44524ba62e600027c_false_ICD-9-CM_411.0')" onmouseout="hideCodes(event,'517b27f44524ba62e600027c_false_ICD-9-CM_411.0')" style="cursor:pointer;">411.0</span>
+                      </i>
+      </b>
+          <span id="517b27f44524ba62e600027c_false_ICD-9-CM_411.0" style="display: none; position: absolute; background: #EEE; padding: 10px; paddint-left: 30px; width: 200px; overflow: auto; z-index: 3000;"> Postmyocardial infarction syndrome </span>
+      <br/>
+      <b>
+          ICD-10-CM: <i>
+                              <span onmouseover="showCodes(event,'517b27f44524ba62e600027c_false_ICD-10-CM_I20.0')" onmouseout="hideCodes(event,'517b27f44524ba62e600027c_false_ICD-10-CM_I20.0')" style="cursor:pointer;">I20.0</span>
+                      </i>
+      </b>
+          <span id="517b27f44524ba62e600027c_false_ICD-10-CM_I20.0" style="display: none; position: absolute; background: #EEE; padding: 10px; paddint-left: 30px; width: 200px; overflow: auto; z-index: 3000;"> Unstable angina </span>
+      <br/>
+  </td>
+  <td>March 1st, 2012 12:05 - present</td>
+  <td>active</td>   
+  <td>
+  </td>
+  <td>
+	</td>
+
+</tr>
+
+        <tr class="narr_tr">
+  
+  <td>Diagnosis, Active: Hypertension (Code List: 2.16.840.1.113883.3.464.1003.104.12.1016)</td>
+  <td>
+      <b>
+          SNOMED-CT: <i>
+                              <span onmouseover="showCodes(event,'517b27f44524ba62e600027e_false_SNOMED-CT_10725009')" onmouseout="hideCodes(event,'517b27f44524ba62e600027e_false_SNOMED-CT_10725009')" style="cursor:pointer;">10725009</span>
+                      </i>
+      </b>
+          <span id="517b27f44524ba62e600027e_false_SNOMED-CT_10725009" style="display: none; position: absolute; background: #EEE; padding: 10px; paddint-left: 30px; width: 200px; overflow: auto; z-index: 3000;"> Benign hypertension (disorder) </span>
+      <br/>
+      <b>
+          ICD-9-CM: <i>
+                              <span onmouseover="showCodes(event,'517b27f44524ba62e600027e_false_ICD-9-CM_401.1')" onmouseout="hideCodes(event,'517b27f44524ba62e600027e_false_ICD-9-CM_401.1')" style="cursor:pointer;">401.1</span>
+                      </i>
+      </b>
+          <span id="517b27f44524ba62e600027e_false_ICD-9-CM_401.1" style="display: none; position: absolute; background: #EEE; padding: 10px; paddint-left: 30px; width: 200px; overflow: auto; z-index: 3000;"> Benign essential hypertension </span>
+      <br/>
+  </td>
+  <td>March 1st, 2012 12:30 - present</td>
+  <td>active</td>   
+  <td>
+  </td>
+  <td>
+	</td>
+
+</tr>
+
+    </tbody>
+  </table>
+</div>
+
+    <h3><a name="_link" href="#toc">Encounters</a></h3>
+<div>
+  <table class="narr_table" border="1" width="100%">
+    <thead>
+      <tr class="narr_tr">
+        <th class="narr_th" width="30%">Description</th>
+        <th class="narr_th" width="15%">Codes</th>
+        <th class="narr_th" width="15%">Time</th>
+        <th class="narr_th" width="10%">Status</th>
+        <th class="narr_th" width="15%">Results</th>
+        <th class="narr_th" width="15%">Fields</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr class="narr_tr">
+  
+  <td>Encounter, Performed: Office Visit (Code List: 2.16.840.1.113883.3.464.1003.101.12.1001)</td>
+  <td>
+      <b>
+          CPT: <i>
+                              <span onmouseover="showCodes(event,'517b27f44524ba62e600027f_false_CPT_99201')" onmouseout="hideCodes(event,'517b27f44524ba62e600027f_false_CPT_99201')" style="cursor:pointer;">99201</span>
+                      </i>
+      </b>
+          <span id="517b27f44524ba62e600027f_false_CPT_99201" style="display: none; position: absolute; background: #EEE; padding: 10px; paddint-left: 30px; width: 200px; overflow: auto; z-index: 3000;"> Office or other outpatient visit for the evaluation and management of a new patient, which requires these 3 key components: A problem focused history; A problem focused examination; Straightforward medical decision making. Counseling and/or coordination of care with other providers or agencies are provided consistent with the nature of the problem(s) and the patient's and/or family's needs. Usually, the presenting problem(s) are self limited or minor. Physicians typically spend 10 minutes face-to-face with the patient and/or family. </span>
+      <br/>
+  </td>
+  <td>March 1st, 2012 12:00 - March 1st, 2012 13:00</td>
+  <td>performed</td>   
+  <td>
+  </td>
+  <td>
+	</td>
+
+</tr>
+
+        <tr class="narr_tr">
+  
+  <td>Encounter, Performed: Office Visit (Code List: 2.16.840.1.113883.3.464.1003.101.12.1001)</td>
+  <td>
+      <b>
+          CPT: <i>
+                              <span onmouseover="showCodes(event,'517b27f44524ba62e6000280_false_CPT_99201')" onmouseout="hideCodes(event,'517b27f44524ba62e6000280_false_CPT_99201')" style="cursor:pointer;">99201</span>
+                      </i>
+      </b>
+          <span id="517b27f44524ba62e6000280_false_CPT_99201" style="display: none; position: absolute; background: #EEE; padding: 10px; paddint-left: 30px; width: 200px; overflow: auto; z-index: 3000;"> Office or other outpatient visit for the evaluation and management of a new patient, which requires these 3 key components: A problem focused history; A problem focused examination; Straightforward medical decision making. Counseling and/or coordination of care with other providers or agencies are provided consistent with the nature of the problem(s) and the patient's and/or family's needs. Usually, the presenting problem(s) are self limited or minor. Physicians typically spend 10 minutes face-to-face with the patient and/or family. </span>
+      <br/>
+  </td>
+  <td>July 1st, 2012 12:00 - July 1st, 2012 13:00</td>
+  <td>performed</td>   
+  <td>
+  </td>
+  <td>
+	</td>
+
+</tr>
+
+        <tr class="narr_tr">
+  
+  <td>Encounter, Performed: Blood Pressure Visit (Code List: 2.16.840.1.113883.3.464.1003.101.12.1056)</td>
+  <td>
+      <b>
+          SNOMED-CT: <i>
+                              <span onmouseover="showCodes(event,'517b27f44524ba62e6000281_false_SNOMED-CT_185349003')" onmouseout="hideCodes(event,'517b27f44524ba62e6000281_false_SNOMED-CT_185349003')" style="cursor:pointer;">185349003</span>
+                      </i>
+      </b>
+          <span id="517b27f44524ba62e6000281_false_SNOMED-CT_185349003" style="display: none; position: absolute; background: #EEE; padding: 10px; paddint-left: 30px; width: 200px; overflow: auto; z-index: 3000;"> Encounter for &quot;check-up&quot; (procedure) </span>
+      <br/>
+      <b>
+          CPT: <i>
+                              <span onmouseover="showCodes(event,'517b27f44524ba62e6000281_false_CPT_99202')" onmouseout="hideCodes(event,'517b27f44524ba62e6000281_false_CPT_99202')" style="cursor:pointer;">99202</span>
+                      </i>
+      </b>
+          <span id="517b27f44524ba62e6000281_false_CPT_99202" style="display: none; position: absolute; background: #EEE; padding: 10px; paddint-left: 30px; width: 200px; overflow: auto; z-index: 3000;"> Office or other outpatient visit for the evaluation and management of a new patient, which requires these 3 key components: An expanded problem focused history; An expanded problem focused examination; Straightforward medical decision making. Counseling and/or coordination of care with other providers or agencies are provided consistent with the nature of the problem(s) and the patient's and/or family's needs. Usually, the presenting problem(s) are of low to moderate severity. Physicians typically spend 20 minutes face-to-face with the patient and/or family. </span>
+      <br/>
+  </td>
+  <td>November 1st, 2012 12:00 - November 1st, 2012 13:00</td>
+  <td>performed</td>   
+  <td>
+  </td>
+  <td>
+	</td>
+
+</tr>
+
+    </tbody>
+  </table>
+</div>
+
+    <h3><a name="_link" href="#toc">Medications</a></h3>
+<div>
+  <table class="narr_table" border="1" width="100%">
+    <thead>
+      <tr class="narr_tr">
+        <th class="narr_th" width="30%">Description</th>
+        <th class="narr_th" width="15%">Codes</th>
+        <th class="narr_th" width="15%">Time</th>
+        <th class="narr_th" width="10%">Status</th>
+        <th class="narr_th" width="15%">Results</th>
+        <th class="narr_th" width="15%">Fields</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr class="narr_tr">
+  
+  <td>Medication, Active: Aspirin and Other Anti-thrombotics (Code List: 2.16.840.1.113883.3.464.1003.196.12.1211)</td>
+  <td>
+      <b>
+          RxNorm: <i>
+                              <span onmouseover="showCodes(event,'517b27f44524ba62e6000282_false_RxNorm_197374')" onmouseout="hideCodes(event,'517b27f44524ba62e6000282_false_RxNorm_197374')" style="cursor:pointer;">197374</span>
+                      </i>
+      </b>
+          <span id="517b27f44524ba62e6000282_false_RxNorm_197374" style="display: none; position: absolute; background: #EEE; padding: 10px; paddint-left: 30px; width: 200px; overflow: auto; z-index: 3000;"> Aspirin 800 MG Extended Release Tablet </span>
+      <br/>
+  </td>
+  <td>March 1st, 2012 12:05 - present</td>
+  <td>active</td>   
+  <td>
+  </td>
+  <td>
+	</td>
+
+</tr>
+
+        <tr class="narr_tr">
+  
+  <td>Medication, Order: Beta Blocker Therapy for LVSD (Code List: 2.16.840.1.113883.3.526.3.1184)</td>
+  <td>
+      <b>
+          RxNorm: <i>
+                              <span onmouseover="showCodes(event,'517b27f44524ba62e6000283_false_RxNorm_200031')" onmouseout="hideCodes(event,'517b27f44524ba62e6000283_false_RxNorm_200031')" style="cursor:pointer;">200031</span>
+                      </i>
+      </b>
+          <span id="517b27f44524ba62e6000283_false_RxNorm_200031" style="display: none; position: absolute; background: #EEE; padding: 10px; paddint-left: 30px; width: 200px; overflow: auto; z-index: 3000;"> carvedilol 6.25 MG Oral Tablet </span>
+      <br/>
+  </td>
+  <td>March 1st, 2012 12:05 - March 1st, 2012 12:05</td>
+  <td>ordered</td>   
+  <td>
+  </td>
+  <td>
+	</td>
+
+</tr>
+
+        <tr class="narr_tr">
+  
+  <td>Medication, Order: ACE inhibitor or ARB (Code List: 2.16.840.1.113883.3.526.3.1139)</td>
+  <td>
+      <b>
+          RxNorm: <i>
+                              <span onmouseover="showCodes(event,'517b27f44524ba62e6000284_false_RxNorm_1001394')" onmouseout="hideCodes(event,'517b27f44524ba62e6000284_false_RxNorm_1001394')" style="cursor:pointer;">1001394</span>
+                      </i>
+      </b>
+          <span id="517b27f44524ba62e6000284_false_RxNorm_1001394" style="display: none; position: absolute; background: #EEE; padding: 10px; paddint-left: 30px; width: 200px; overflow: auto; z-index: 3000;"> Hydrochlorothiazide 12.5 MG / Lisinopril 5 MG Oral Tablet </span>
+      <br/>
+  </td>
+  <td>March 1st, 2012 12:05 - March 1st, 2012 12:05</td>
+  <td>ordered</td>   
+  <td>
+  </td>
+  <td>
+	</td>
+
+</tr>
+
+    </tbody>
+  </table>
+</div>
+
+    <h3><a name="_link" href="#toc">Physical Exams</a></h3>
+<div>
+  <table class="narr_table" border="1" width="100%">
+    <thead>
+      <tr class="narr_tr">
+        <th class="narr_th" width="30%">Description</th>
+        <th class="narr_th" width="15%">Codes</th>
+        <th class="narr_th" width="15%">Time</th>
+        <th class="narr_th" width="10%">Status</th>
+        <th class="narr_th" width="15%">Results</th>
+        <th class="narr_th" width="15%">Fields</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr class="narr_tr">
+  
+  <td>Physical Exam, Finding: Systolic Blood Pressure (Code List: 2.16.840.1.113883.3.526.3.1032)</td>
+  <td>
+      <b>
+          LOINC: <i>
+                              <span onmouseover="showCodes(event,'517b27f44524ba62e6000285_false_LOINC_8480-6')" onmouseout="hideCodes(event,'517b27f44524ba62e6000285_false_LOINC_8480-6')" style="cursor:pointer;">8480-6</span>
+                      </i>
+      </b>
+          <span id="517b27f44524ba62e6000285_false_LOINC_8480-6" style="display: none; position: absolute; background: #EEE; padding: 10px; paddint-left: 30px; width: 200px; overflow: auto; z-index: 3000;"> Systolic blood pressure </span>
+      <br/>
+  </td>
+  <td>March 1st, 2012 12:05 - March 1st, 2012 12:05</td>
+  <td></td>   
+  <td>
+        150 mmHg<br/>
+  </td>
+  <td>
+	</td>
+
+</tr>
+
+        <tr class="narr_tr">
+  
+  <td>Physical Exam, Finding: Diastolic Blood Pressure (Code List: 2.16.840.1.113883.3.526.3.1033)</td>
+  <td>
+      <b>
+          LOINC: <i>
+                              <span onmouseover="showCodes(event,'517b27f44524ba62e6000287_false_LOINC_8462-4')" onmouseout="hideCodes(event,'517b27f44524ba62e6000287_false_LOINC_8462-4')" style="cursor:pointer;">8462-4</span>
+                      </i>
+      </b>
+          <span id="517b27f44524ba62e6000287_false_LOINC_8462-4" style="display: none; position: absolute; background: #EEE; padding: 10px; paddint-left: 30px; width: 200px; overflow: auto; z-index: 3000;"> Diastolic blood pressure </span>
+      <br/>
+  </td>
+  <td>March 1st, 2012 12:05 - March 1st, 2012 12:05</td>
+  <td></td>   
+  <td>
+        60 mmHg<br/>
+  </td>
+  <td>
+	</td>
+
+</tr>
+
+        <tr class="narr_tr">
+  
+  <td>Physical Exam, Finding: Systolic Blood Pressure (Code List: 2.16.840.1.113883.3.526.3.1032)</td>
+  <td>
+      <b>
+          LOINC: <i>
+                              <span onmouseover="showCodes(event,'517b27f44524ba62e600028b_false_LOINC_8480-6')" onmouseout="hideCodes(event,'517b27f44524ba62e600028b_false_LOINC_8480-6')" style="cursor:pointer;">8480-6</span>
+                      </i>
+      </b>
+          <span id="517b27f44524ba62e600028b_false_LOINC_8480-6" style="display: none; position: absolute; background: #EEE; padding: 10px; paddint-left: 30px; width: 200px; overflow: auto; z-index: 3000;"> Systolic blood pressure </span>
+      <br/>
+  </td>
+  <td>November 1st, 2012 12:00 - November 1st, 2012 12:00</td>
+  <td></td>   
+  <td>
+        130 mmHg<br/>
+  </td>
+  <td>
+	</td>
+
+</tr>
+
+        <tr class="narr_tr">
+  
+  <td>Physical Exam, Finding: Diastolic Blood Pressure (Code List: 2.16.840.1.113883.3.526.3.1033)</td>
+  <td>
+      <b>
+          LOINC: <i>
+                              <span onmouseover="showCodes(event,'517b27f44524ba62e600028d_false_LOINC_8462-4')" onmouseout="hideCodes(event,'517b27f44524ba62e600028d_false_LOINC_8462-4')" style="cursor:pointer;">8462-4</span>
+                      </i>
+      </b>
+          <span id="517b27f44524ba62e600028d_false_LOINC_8462-4" style="display: none; position: absolute; background: #EEE; padding: 10px; paddint-left: 30px; width: 200px; overflow: auto; z-index: 3000;"> Diastolic blood pressure </span>
+      <br/>
+  </td>
+  <td>November 1st, 2012 12:00 - November 1st, 2012 12:00</td>
+  <td></td>   
+  <td>
+        60 mmHg<br/>
+  </td>
+  <td>
+	</td>
+
+</tr>
+
+    </tbody>
+  </table>
+</div>
+
+    <h3><a name="_link" href="#toc">Functional Status Results</a></h3>
+<div>
+  <table class="narr_table" border="1" width="100%">
+    <thead>
+      <tr class="narr_tr">
+        <th class="narr_th" width="30%">Description</th>
+        <th class="narr_th" width="15%">Codes</th>
+        <th class="narr_th" width="15%">Time</th>
+        <th class="narr_th" width="10%">Status</th>
+        <th class="narr_th" width="15%">Results</th>
+        <th class="narr_th" width="15%">Fields</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr class="narr_tr">
+  
+  <td>Functional Status, Result: Functional Status Assessment for Heart Failure (Code List: 2.16.840.1.113883.3.464.1003.118.12.1031)</td>
+  <td>
+      <b>
+          LOINC: <i>
+                              <span onmouseover="showCodes(event,'517b27f44524ba62e6000289_false_LOINC_71938-5')" onmouseout="hideCodes(event,'517b27f44524ba62e6000289_false_LOINC_71938-5')" style="cursor:pointer;">71938-5</span>
+                      </i>
+      </b>
+          <span id="517b27f44524ba62e6000289_false_LOINC_71938-5" style="display: none; position: absolute; background: #EEE; padding: 10px; paddint-left: 30px; width: 200px; overflow: auto; z-index: 3000;"> Total score MLHFQ </span>
+      <br/>
+  </td>
+  <td>March 1st, 2012 12:05 - March 1st, 2012 12:05</td>
+  <td></td>   
+  <td>
+  </td>
+  <td>
+	</td>
+
+</tr>
+
+        <tr class="narr_tr">
+  
+  <td>Functional Status, Result: Functional Status Assessment for Heart Failure (Code List: 2.16.840.1.113883.3.464.1003.118.12.1031)</td>
+  <td>
+      <b>
+          LOINC: <i>
+                              <span onmouseover="showCodes(event,'517b27f44524ba62e600028a_false_LOINC_71938-5')" onmouseout="hideCodes(event,'517b27f44524ba62e600028a_false_LOINC_71938-5')" style="cursor:pointer;">71938-5</span>
+                      </i>
+      </b>
+          <span id="517b27f44524ba62e600028a_false_LOINC_71938-5" style="display: none; position: absolute; background: #EEE; padding: 10px; paddint-left: 30px; width: 200px; overflow: auto; z-index: 3000;"> Total score MLHFQ </span>
+      <br/>
+  </td>
+  <td>July 1st, 2012 12:05 - July 1st, 2012 12:05</td>
+  <td></td>   
+  <td>
+  </td>
+  <td>
+	</td>
+
+</tr>
+
+    </tbody>
+  </table>
+</div>
+
+    <h3><a name="_link" href="#toc">Laboratory Tests</a></h3>
+<div>
+  <table class="narr_table" border="1" width="100%">
+    <thead>
+      <tr class="narr_tr">
+        <th class="narr_th" width="30%">Description</th>
+        <th class="narr_th" width="15%">Codes</th>
+        <th class="narr_th" width="15%">Time</th>
+        <th class="narr_th" width="10%">Status</th>
+        <th class="narr_th" width="15%">Results</th>
+        <th class="narr_th" width="15%">Fields</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr class="narr_tr">
+  
+  <td>Laboratory Test, Result: Triglycerides (Code List: 2.16.840.1.113883.3.600.883)</td>
+  <td>
+      <b>
+          LOINC: <i>
+                              <span onmouseover="showCodes(event,'517b27f44524ba62e600028f_false_LOINC_12951-0')" onmouseout="hideCodes(event,'517b27f44524ba62e600028f_false_LOINC_12951-0')" style="cursor:pointer;">12951-0</span>
+                      </i>
+      </b>
+          <span id="517b27f44524ba62e600028f_false_LOINC_12951-0" style="display: none; position: absolute; background: #EEE; padding: 10px; paddint-left: 30px; width: 200px; overflow: auto; z-index: 3000;"> Triglyceride [Mass/volume] in Serum or Plasma by calculation </span>
+      <br/>
+  </td>
+  <td>March 1st, 2012 12:05 - March 1st, 2012 12:05</td>
+  <td></td>   
+  <td>
+        90 mg/dL<br/>
+  </td>
+  <td>
+	</td>
+
+</tr>
+
+        <tr class="narr_tr">
+  
+  <td>Laboratory Test, Result: Total Cholesterol Laboratory Test (Code List: 2.16.840.1.113883.3.464.1003.104.12.1013)</td>
+  <td>
+      <b>
+          LOINC: <i>
+                              <span onmouseover="showCodes(event,'517b27f44524ba62e6000291_false_LOINC_2093-3')" onmouseout="hideCodes(event,'517b27f44524ba62e6000291_false_LOINC_2093-3')" style="cursor:pointer;">2093-3</span>
+                      </i>
+      </b>
+          <span id="517b27f44524ba62e6000291_false_LOINC_2093-3" style="display: none; position: absolute; background: #EEE; padding: 10px; paddint-left: 30px; width: 200px; overflow: auto; z-index: 3000;"> Cholesterol [Mass/volume] in Serum or Plasma </span>
+      <br/>
+  </td>
+  <td>March 1st, 2012 12:05 - March 1st, 2012 12:05</td>
+  <td></td>   
+  <td>
+        157 <br/>
+  </td>
+  <td>
+	</td>
+
+</tr>
+
+        <tr class="narr_tr">
+  
+  <td>Laboratory Test, Result: HDL-C Laboratory Test (Code List: 2.16.840.1.113883.3.464.1003.104.12.1012)</td>
+  <td>
+      <b>
+          LOINC: <i>
+                              <span onmouseover="showCodes(event,'517b27f44524ba62e6000293_false_LOINC_2085-9')" onmouseout="hideCodes(event,'517b27f44524ba62e6000293_false_LOINC_2085-9')" style="cursor:pointer;">2085-9</span>
+                      </i>
+      </b>
+          <span id="517b27f44524ba62e6000293_false_LOINC_2085-9" style="display: none; position: absolute; background: #EEE; padding: 10px; paddint-left: 30px; width: 200px; overflow: auto; z-index: 3000;"> Cholesterol in HDL [Mass/volume] in Serum or Plasma </span>
+      <br/>
+  </td>
+  <td>March 1st, 2012 12:05 - March 1st, 2012 12:05</td>
+  <td></td>   
+  <td>
+        50 mg<br/>
+  </td>
+  <td>
+	</td>
+
+</tr>
+
+        <tr class="narr_tr">
+  
+  <td>Laboratory Test, Result: LDL-C Laboratory Test (Code List: 2.16.840.1.113883.3.526.3.1248)</td>
+  <td>
+      <b>
+          LOINC: <i>
+                              <span onmouseover="showCodes(event,'517b27f44524ba62e6000295_false_LOINC_13457-7')" onmouseout="hideCodes(event,'517b27f44524ba62e6000295_false_LOINC_13457-7')" style="cursor:pointer;">13457-7</span>
+                      </i>
+      </b>
+          <span id="517b27f44524ba62e6000295_false_LOINC_13457-7" style="display: none; position: absolute; background: #EEE; padding: 10px; paddint-left: 30px; width: 200px; overflow: auto; z-index: 3000;"> Cholesterol in LDL [Mass/volume] in Serum or Plasma by calculation </span>
+      <br/>
+  </td>
+  <td>March 1st, 2012 12:05 - March 1st, 2012 12:05</td>
+  <td></td>   
+  <td>
+        80 mg/dL<br/>
+  </td>
+  <td>
+	</td>
+
+</tr>
+
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+
+    <div id="table_by_encounter" style="display:none">
+
+  
+    
+    <div style="background: #EEEEEE; width: 92%"><h3>Encounter 1</h3></div>
+    <div style="padding-left: 15px;">
+      <h3><a name="_link" href="#toc">Encounters</a></h3>
+<div>
+  <table class="narr_table" border="1" width="100%">
+    <thead>
+      <tr class="narr_tr">
+        <th class="narr_th" width="30%">Description</th>
+        <th class="narr_th" width="15%">Codes</th>
+        <th class="narr_th" width="15%">Time</th>
+        <th class="narr_th" width="10%">Status</th>
+        <th class="narr_th" width="15%">Results</th>
+        <th class="narr_th" width="15%">Fields</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr class="narr_tr">
+  
+  <td>Encounter, Performed: Office Visit (Code List: 2.16.840.1.113883.3.464.1003.101.12.1001)</td>
+  <td>
+      <b>
+          CPT: <i>
+                              <span onmouseover="showCodes(event,'517b27f44524ba62e600027f_true_CPT_99201')" onmouseout="hideCodes(event,'517b27f44524ba62e600027f_true_CPT_99201')" style="cursor:pointer;">99201</span>
+                      </i>
+      </b>
+          <span id="517b27f44524ba62e600027f_true_CPT_99201" style="display: none; position: absolute; background: #EEE; padding: 10px; paddint-left: 30px; width: 200px; overflow: auto; z-index: 3000;"> Office or other outpatient visit for the evaluation and management of a new patient, which requires these 3 key components: A problem focused history; A problem focused examination; Straightforward medical decision making. Counseling and/or coordination of care with other providers or agencies are provided consistent with the nature of the problem(s) and the patient's and/or family's needs. Usually, the presenting problem(s) are self limited or minor. Physicians typically spend 10 minutes face-to-face with the patient and/or family. </span>
+      <br/>
+  </td>
+  <td>March 1st, 2012 12:00 - March 1st, 2012 13:00</td>
+  <td>performed</td>   
+  <td>
+  </td>
+  <td>
+	</td>
+
+</tr>
+
+    </tbody>
+  </table>
+</div>
+
+        <h3><a name="_link" href="#toc">Diagnoses</a></h3>
+<div>
+  <table class="narr_table" border="1" width="100%">
+    <thead>
+      <tr class="narr_tr">
+        <th class="narr_th" width="30%">Description</th>
+        <th class="narr_th" width="15%">Codes</th>
+        <th class="narr_th" width="15%">Time</th>
+        <th class="narr_th" width="10%">Status</th>
+        <th class="narr_th" width="15%">Results</th>
+        <th class="narr_th" width="15%">Fields</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr class="narr_tr">
+  
+  <td>Diagnosis, Active: Heart Failure (Code List: 2.16.840.1.113883.3.526.3.376)</td>
+  <td>
+      <b>
+          SNOMED-CT: <i>
+                              <span onmouseover="showCodes(event,'517b27f44524ba62e600027a_true_SNOMED-CT_10091002')" onmouseout="hideCodes(event,'517b27f44524ba62e600027a_true_SNOMED-CT_10091002')" style="cursor:pointer;">10091002</span>
+                      </i>
+      </b>
+          <span id="517b27f44524ba62e600027a_true_SNOMED-CT_10091002" style="display: none; position: absolute; background: #EEE; padding: 10px; paddint-left: 30px; width: 200px; overflow: auto; z-index: 3000;"> High output heart failure (disorder) </span>
+      <br/>
+      <b>
+          ICD-9-CM: <i>
+                              <span onmouseover="showCodes(event,'517b27f44524ba62e600027a_true_ICD-9-CM_428.0')" onmouseout="hideCodes(event,'517b27f44524ba62e600027a_true_ICD-9-CM_428.0')" style="cursor:pointer;">428.0</span>
+                      </i>
+      </b>
+          <span id="517b27f44524ba62e600027a_true_ICD-9-CM_428.0" style="display: none; position: absolute; background: #EEE; padding: 10px; paddint-left: 30px; width: 200px; overflow: auto; z-index: 3000;"> Congestive heart failure, unspecified </span>
+      <br/>
+      <b>
+          ICD-10-CM: <i>
+                              <span onmouseover="showCodes(event,'517b27f44524ba62e600027a_true_ICD-10-CM_I50.1')" onmouseout="hideCodes(event,'517b27f44524ba62e600027a_true_ICD-10-CM_I50.1')" style="cursor:pointer;">I50.1</span>
+                      </i>
+      </b>
+          <span id="517b27f44524ba62e600027a_true_ICD-10-CM_I50.1" style="display: none; position: absolute; background: #EEE; padding: 10px; paddint-left: 30px; width: 200px; overflow: auto; z-index: 3000;"> Left ventricular failure </span>
+      <br/>
+  </td>
+  <td>March 1st, 2012 12:05 - present</td>
+  <td>active</td>   
+  <td>
+  </td>
+  <td>
+	</td>
+
+</tr>
+
+        <tr class="narr_tr">
+  
+  <td>Diagnosis, Active: Coronary Artery Disease No MI (Code List: 2.16.840.1.113883.3.526.3.369)</td>
+  <td>
+      <b>
+          SNOMED-CT: <i>
+                              <span onmouseover="showCodes(event,'517b27f44524ba62e600027b_true_SNOMED-CT_123641001')" onmouseout="hideCodes(event,'517b27f44524ba62e600027b_true_SNOMED-CT_123641001')" style="cursor:pointer;">123641001</span>
+                      </i>
+      </b>
+          <span id="517b27f44524ba62e600027b_true_SNOMED-CT_123641001" style="display: none; position: absolute; background: #EEE; padding: 10px; paddint-left: 30px; width: 200px; overflow: auto; z-index: 3000;"> Left coronary artery occlusion (disorder) </span>
+      <br/>
+      <b>
+          ICD-9-CM: <i>
+                              <span onmouseover="showCodes(event,'517b27f44524ba62e600027b_true_ICD-9-CM_411.0')" onmouseout="hideCodes(event,'517b27f44524ba62e600027b_true_ICD-9-CM_411.0')" style="cursor:pointer;">411.0</span>
+                      </i>
+      </b>
+          <span id="517b27f44524ba62e600027b_true_ICD-9-CM_411.0" style="display: none; position: absolute; background: #EEE; padding: 10px; paddint-left: 30px; width: 200px; overflow: auto; z-index: 3000;"> Postmyocardial infarction syndrome </span>
+      <br/>
+      <b>
+          ICD-10-CM: <i>
+                              <span onmouseover="showCodes(event,'517b27f44524ba62e600027b_true_ICD-10-CM_I20.0')" onmouseout="hideCodes(event,'517b27f44524ba62e600027b_true_ICD-10-CM_I20.0')" style="cursor:pointer;">I20.0</span>
+                      </i>
+      </b>
+          <span id="517b27f44524ba62e600027b_true_ICD-10-CM_I20.0" style="display: none; position: absolute; background: #EEE; padding: 10px; paddint-left: 30px; width: 200px; overflow: auto; z-index: 3000;"> Unstable angina </span>
+      <br/>
+  </td>
+  <td>March 1st, 2012 12:05 - present</td>
+  <td>active</td>   
+  <td>
+  </td>
+  <td>
+	</td>
+
+</tr>
+
+        <tr class="narr_tr">
+  
+  <td>Diagnosis, Active: Moderate or Severe LVSD (Code List: 2.16.840.1.113883.3.526.3.1090)</td>
+  <td>
+      <b>
+          SNOMED-CT: <i>
+                              <span onmouseover="showCodes(event,'517b27f44524ba62e600027d_true_SNOMED-CT_981000124106')" onmouseout="hideCodes(event,'517b27f44524ba62e600027d_true_SNOMED-CT_981000124106')" style="cursor:pointer;">981000124106</span>
+                      </i>
+      </b>
+          <span id="517b27f44524ba62e600027d_true_SNOMED-CT_981000124106" style="display: none; position: absolute; background: #EEE; padding: 10px; paddint-left: 30px; width: 200px; overflow: auto; z-index: 3000;"> Moderate left ventricular systolic dysfunction (disorder) </span>
+      <br/>
+  </td>
+  <td>March 1st, 2012 12:05 - present</td>
+  <td>active</td>   
+  <td>
+  </td>
+  <td>
+	</td>
+
+</tr>
+
+        <tr class="narr_tr">
+  
+  <td>Diagnosis, Active: Ischemic Vascular Disease (Code List: 2.16.840.1.113883.3.464.1003.104.12.1003)</td>
+  <td>
+      <b>
+          SNOMED-CT: <i>
+                              <span onmouseover="showCodes(event,'517b27f44524ba62e600027c_true_SNOMED-CT_123641001')" onmouseout="hideCodes(event,'517b27f44524ba62e600027c_true_SNOMED-CT_123641001')" style="cursor:pointer;">123641001</span>
+                      </i>
+      </b>
+          <span id="517b27f44524ba62e600027c_true_SNOMED-CT_123641001" style="display: none; position: absolute; background: #EEE; padding: 10px; paddint-left: 30px; width: 200px; overflow: auto; z-index: 3000;"> Left coronary artery occlusion (disorder) </span>
+      <br/>
+      <b>
+          ICD-9-CM: <i>
+                              <span onmouseover="showCodes(event,'517b27f44524ba62e600027c_true_ICD-9-CM_411.0')" onmouseout="hideCodes(event,'517b27f44524ba62e600027c_true_ICD-9-CM_411.0')" style="cursor:pointer;">411.0</span>
+                      </i>
+      </b>
+          <span id="517b27f44524ba62e600027c_true_ICD-9-CM_411.0" style="display: none; position: absolute; background: #EEE; padding: 10px; paddint-left: 30px; width: 200px; overflow: auto; z-index: 3000;"> Postmyocardial infarction syndrome </span>
+      <br/>
+      <b>
+          ICD-10-CM: <i>
+                              <span onmouseover="showCodes(event,'517b27f44524ba62e600027c_true_ICD-10-CM_I20.0')" onmouseout="hideCodes(event,'517b27f44524ba62e600027c_true_ICD-10-CM_I20.0')" style="cursor:pointer;">I20.0</span>
+                      </i>
+      </b>
+          <span id="517b27f44524ba62e600027c_true_ICD-10-CM_I20.0" style="display: none; position: absolute; background: #EEE; padding: 10px; paddint-left: 30px; width: 200px; overflow: auto; z-index: 3000;"> Unstable angina </span>
+      <br/>
+  </td>
+  <td>March 1st, 2012 12:05 - present</td>
+  <td>active</td>   
+  <td>
+  </td>
+  <td>
+	</td>
+
+</tr>
+
+        <tr class="narr_tr">
+  
+  <td>Diagnosis, Active: Hypertension (Code List: 2.16.840.1.113883.3.464.1003.104.12.1016)</td>
+  <td>
+      <b>
+          SNOMED-CT: <i>
+                              <span onmouseover="showCodes(event,'517b27f44524ba62e600027e_true_SNOMED-CT_10725009')" onmouseout="hideCodes(event,'517b27f44524ba62e600027e_true_SNOMED-CT_10725009')" style="cursor:pointer;">10725009</span>
+                      </i>
+      </b>
+          <span id="517b27f44524ba62e600027e_true_SNOMED-CT_10725009" style="display: none; position: absolute; background: #EEE; padding: 10px; paddint-left: 30px; width: 200px; overflow: auto; z-index: 3000;"> Benign hypertension (disorder) </span>
+      <br/>
+      <b>
+          ICD-9-CM: <i>
+                              <span onmouseover="showCodes(event,'517b27f44524ba62e600027e_true_ICD-9-CM_401.1')" onmouseout="hideCodes(event,'517b27f44524ba62e600027e_true_ICD-9-CM_401.1')" style="cursor:pointer;">401.1</span>
+                      </i>
+      </b>
+          <span id="517b27f44524ba62e600027e_true_ICD-9-CM_401.1" style="display: none; position: absolute; background: #EEE; padding: 10px; paddint-left: 30px; width: 200px; overflow: auto; z-index: 3000;"> Benign essential hypertension </span>
+      <br/>
+  </td>
+  <td>March 1st, 2012 12:30 - present</td>
+  <td>active</td>   
+  <td>
+  </td>
+  <td>
+	</td>
+
+</tr>
+
+    </tbody>
+  </table>
+</div>
+
+        <h3><a name="_link" href="#toc">Laboratory Tests</a></h3>
+<div>
+  <table class="narr_table" border="1" width="100%">
+    <thead>
+      <tr class="narr_tr">
+        <th class="narr_th" width="30%">Description</th>
+        <th class="narr_th" width="15%">Codes</th>
+        <th class="narr_th" width="15%">Time</th>
+        <th class="narr_th" width="10%">Status</th>
+        <th class="narr_th" width="15%">Results</th>
+        <th class="narr_th" width="15%">Fields</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr class="narr_tr">
+  
+  <td>Laboratory Test, Result: LDL-C Laboratory Test (Code List: 2.16.840.1.113883.3.526.3.1248)</td>
+  <td>
+      <b>
+          LOINC: <i>
+                              <span onmouseover="showCodes(event,'517b27f44524ba62e6000295_true_LOINC_13457-7')" onmouseout="hideCodes(event,'517b27f44524ba62e6000295_true_LOINC_13457-7')" style="cursor:pointer;">13457-7</span>
+                      </i>
+      </b>
+          <span id="517b27f44524ba62e6000295_true_LOINC_13457-7" style="display: none; position: absolute; background: #EEE; padding: 10px; paddint-left: 30px; width: 200px; overflow: auto; z-index: 3000;"> Cholesterol in LDL [Mass/volume] in Serum or Plasma by calculation </span>
+      <br/>
+  </td>
+  <td>March 1st, 2012 12:05 - March 1st, 2012 12:05</td>
+  <td></td>   
+  <td>
+        80 mg/dL<br/>
+  </td>
+  <td>
+	</td>
+
+</tr>
+
+        <tr class="narr_tr">
+  
+  <td>Laboratory Test, Result: Triglycerides (Code List: 2.16.840.1.113883.3.600.883)</td>
+  <td>
+      <b>
+          LOINC: <i>
+                              <span onmouseover="showCodes(event,'517b27f44524ba62e600028f_true_LOINC_12951-0')" onmouseout="hideCodes(event,'517b27f44524ba62e600028f_true_LOINC_12951-0')" style="cursor:pointer;">12951-0</span>
+                      </i>
+      </b>
+          <span id="517b27f44524ba62e600028f_true_LOINC_12951-0" style="display: none; position: absolute; background: #EEE; padding: 10px; paddint-left: 30px; width: 200px; overflow: auto; z-index: 3000;"> Triglyceride [Mass/volume] in Serum or Plasma by calculation </span>
+      <br/>
+  </td>
+  <td>March 1st, 2012 12:05 - March 1st, 2012 12:05</td>
+  <td></td>   
+  <td>
+        90 mg/dL<br/>
+  </td>
+  <td>
+	</td>
+
+</tr>
+
+        <tr class="narr_tr">
+  
+  <td>Laboratory Test, Result: HDL-C Laboratory Test (Code List: 2.16.840.1.113883.3.464.1003.104.12.1012)</td>
+  <td>
+      <b>
+          LOINC: <i>
+                              <span onmouseover="showCodes(event,'517b27f44524ba62e6000293_true_LOINC_2085-9')" onmouseout="hideCodes(event,'517b27f44524ba62e6000293_true_LOINC_2085-9')" style="cursor:pointer;">2085-9</span>
+                      </i>
+      </b>
+          <span id="517b27f44524ba62e6000293_true_LOINC_2085-9" style="display: none; position: absolute; background: #EEE; padding: 10px; paddint-left: 30px; width: 200px; overflow: auto; z-index: 3000;"> Cholesterol in HDL [Mass/volume] in Serum or Plasma </span>
+      <br/>
+  </td>
+  <td>March 1st, 2012 12:05 - March 1st, 2012 12:05</td>
+  <td></td>   
+  <td>
+        50 mg<br/>
+  </td>
+  <td>
+	</td>
+
+</tr>
+
+        <tr class="narr_tr">
+  
+  <td>Laboratory Test, Result: Total Cholesterol Laboratory Test (Code List: 2.16.840.1.113883.3.464.1003.104.12.1013)</td>
+  <td>
+      <b>
+          LOINC: <i>
+                              <span onmouseover="showCodes(event,'517b27f44524ba62e6000291_true_LOINC_2093-3')" onmouseout="hideCodes(event,'517b27f44524ba62e6000291_true_LOINC_2093-3')" style="cursor:pointer;">2093-3</span>
+                      </i>
+      </b>
+          <span id="517b27f44524ba62e6000291_true_LOINC_2093-3" style="display: none; position: absolute; background: #EEE; padding: 10px; paddint-left: 30px; width: 200px; overflow: auto; z-index: 3000;"> Cholesterol [Mass/volume] in Serum or Plasma </span>
+      <br/>
+  </td>
+  <td>March 1st, 2012 12:05 - March 1st, 2012 12:05</td>
+  <td></td>   
+  <td>
+        157 <br/>
+  </td>
+  <td>
+	</td>
+
+</tr>
+
+    </tbody>
+  </table>
+</div>
+
+        <h3><a name="_link" href="#toc">Medications</a></h3>
+<div>
+  <table class="narr_table" border="1" width="100%">
+    <thead>
+      <tr class="narr_tr">
+        <th class="narr_th" width="30%">Description</th>
+        <th class="narr_th" width="15%">Codes</th>
+        <th class="narr_th" width="15%">Time</th>
+        <th class="narr_th" width="10%">Status</th>
+        <th class="narr_th" width="15%">Results</th>
+        <th class="narr_th" width="15%">Fields</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr class="narr_tr">
+  
+  <td>Medication, Active: Aspirin and Other Anti-thrombotics (Code List: 2.16.840.1.113883.3.464.1003.196.12.1211)</td>
+  <td>
+      <b>
+          RxNorm: <i>
+                              <span onmouseover="showCodes(event,'517b27f44524ba62e6000282_true_RxNorm_197374')" onmouseout="hideCodes(event,'517b27f44524ba62e6000282_true_RxNorm_197374')" style="cursor:pointer;">197374</span>
+                      </i>
+      </b>
+          <span id="517b27f44524ba62e6000282_true_RxNorm_197374" style="display: none; position: absolute; background: #EEE; padding: 10px; paddint-left: 30px; width: 200px; overflow: auto; z-index: 3000;"> Aspirin 800 MG Extended Release Tablet </span>
+      <br/>
+  </td>
+  <td>March 1st, 2012 12:05 - present</td>
+  <td>active</td>   
+  <td>
+  </td>
+  <td>
+	</td>
+
+</tr>
+
+        <tr class="narr_tr">
+  
+  <td>Medication, Order: Beta Blocker Therapy for LVSD (Code List: 2.16.840.1.113883.3.526.3.1184)</td>
+  <td>
+      <b>
+          RxNorm: <i>
+                              <span onmouseover="showCodes(event,'517b27f44524ba62e6000283_true_RxNorm_200031')" onmouseout="hideCodes(event,'517b27f44524ba62e6000283_true_RxNorm_200031')" style="cursor:pointer;">200031</span>
+                      </i>
+      </b>
+          <span id="517b27f44524ba62e6000283_true_RxNorm_200031" style="display: none; position: absolute; background: #EEE; padding: 10px; paddint-left: 30px; width: 200px; overflow: auto; z-index: 3000;"> carvedilol 6.25 MG Oral Tablet </span>
+      <br/>
+  </td>
+  <td>March 1st, 2012 12:05 - March 1st, 2012 12:05</td>
+  <td>ordered</td>   
+  <td>
+  </td>
+  <td>
+	</td>
+
+</tr>
+
+        <tr class="narr_tr">
+  
+  <td>Medication, Order: ACE inhibitor or ARB (Code List: 2.16.840.1.113883.3.526.3.1139)</td>
+  <td>
+      <b>
+          RxNorm: <i>
+                              <span onmouseover="showCodes(event,'517b27f44524ba62e6000284_true_RxNorm_1001394')" onmouseout="hideCodes(event,'517b27f44524ba62e6000284_true_RxNorm_1001394')" style="cursor:pointer;">1001394</span>
+                      </i>
+      </b>
+          <span id="517b27f44524ba62e6000284_true_RxNorm_1001394" style="display: none; position: absolute; background: #EEE; padding: 10px; paddint-left: 30px; width: 200px; overflow: auto; z-index: 3000;"> Hydrochlorothiazide 12.5 MG / Lisinopril 5 MG Oral Tablet </span>
+      <br/>
+  </td>
+  <td>March 1st, 2012 12:05 - March 1st, 2012 12:05</td>
+  <td>ordered</td>   
+  <td>
+  </td>
+  <td>
+	</td>
+
+</tr>
+
+    </tbody>
+  </table>
+</div>
+
+        <h3><a name="_link" href="#toc">Physical Exams</a></h3>
+<div>
+  <table class="narr_table" border="1" width="100%">
+    <thead>
+      <tr class="narr_tr">
+        <th class="narr_th" width="30%">Description</th>
+        <th class="narr_th" width="15%">Codes</th>
+        <th class="narr_th" width="15%">Time</th>
+        <th class="narr_th" width="10%">Status</th>
+        <th class="narr_th" width="15%">Results</th>
+        <th class="narr_th" width="15%">Fields</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr class="narr_tr">
+  
+  <td>Physical Exam, Finding: Systolic Blood Pressure (Code List: 2.16.840.1.113883.3.526.3.1032)</td>
+  <td>
+      <b>
+          LOINC: <i>
+                              <span onmouseover="showCodes(event,'517b27f44524ba62e6000285_true_LOINC_8480-6')" onmouseout="hideCodes(event,'517b27f44524ba62e6000285_true_LOINC_8480-6')" style="cursor:pointer;">8480-6</span>
+                      </i>
+      </b>
+          <span id="517b27f44524ba62e6000285_true_LOINC_8480-6" style="display: none; position: absolute; background: #EEE; padding: 10px; paddint-left: 30px; width: 200px; overflow: auto; z-index: 3000;"> Systolic blood pressure </span>
+      <br/>
+  </td>
+  <td>March 1st, 2012 12:05 - March 1st, 2012 12:05</td>
+  <td></td>   
+  <td>
+        150 mmHg<br/>
+  </td>
+  <td>
+	</td>
+
+</tr>
+
+        <tr class="narr_tr">
+  
+  <td>Physical Exam, Finding: Diastolic Blood Pressure (Code List: 2.16.840.1.113883.3.526.3.1033)</td>
+  <td>
+      <b>
+          LOINC: <i>
+                              <span onmouseover="showCodes(event,'517b27f44524ba62e6000287_true_LOINC_8462-4')" onmouseout="hideCodes(event,'517b27f44524ba62e6000287_true_LOINC_8462-4')" style="cursor:pointer;">8462-4</span>
+                      </i>
+      </b>
+          <span id="517b27f44524ba62e6000287_true_LOINC_8462-4" style="display: none; position: absolute; background: #EEE; padding: 10px; paddint-left: 30px; width: 200px; overflow: auto; z-index: 3000;"> Diastolic blood pressure </span>
+      <br/>
+  </td>
+  <td>March 1st, 2012 12:05 - March 1st, 2012 12:05</td>
+  <td></td>   
+  <td>
+        60 mmHg<br/>
+  </td>
+  <td>
+	</td>
+
+</tr>
+
+    </tbody>
+  </table>
+</div>
+
+        <h3><a name="_link" href="#toc">Functional Status Results</a></h3>
+<div>
+  <table class="narr_table" border="1" width="100%">
+    <thead>
+      <tr class="narr_tr">
+        <th class="narr_th" width="30%">Description</th>
+        <th class="narr_th" width="15%">Codes</th>
+        <th class="narr_th" width="15%">Time</th>
+        <th class="narr_th" width="10%">Status</th>
+        <th class="narr_th" width="15%">Results</th>
+        <th class="narr_th" width="15%">Fields</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr class="narr_tr">
+  
+  <td>Functional Status, Result: Functional Status Assessment for Heart Failure (Code List: 2.16.840.1.113883.3.464.1003.118.12.1031)</td>
+  <td>
+      <b>
+          LOINC: <i>
+                              <span onmouseover="showCodes(event,'517b27f44524ba62e6000289_true_LOINC_71938-5')" onmouseout="hideCodes(event,'517b27f44524ba62e6000289_true_LOINC_71938-5')" style="cursor:pointer;">71938-5</span>
+                      </i>
+      </b>
+          <span id="517b27f44524ba62e6000289_true_LOINC_71938-5" style="display: none; position: absolute; background: #EEE; padding: 10px; paddint-left: 30px; width: 200px; overflow: auto; z-index: 3000;"> Total score MLHFQ </span>
+      <br/>
+  </td>
+  <td>March 1st, 2012 12:05 - March 1st, 2012 12:05</td>
+  <td></td>   
+  <td>
+  </td>
+  <td>
+	</td>
+
+</tr>
+
+    </tbody>
+  </table>
+</div>
+
+    </div>
+
+    <br/>
+    <div style="background: #EEEEEE; width: 92%"><h3>Encounter 2</h3></div>
+    <div style="padding-left: 15px;">
+      <h3><a name="_link" href="#toc">Encounters</a></h3>
+<div>
+  <table class="narr_table" border="1" width="100%">
+    <thead>
+      <tr class="narr_tr">
+        <th class="narr_th" width="30%">Description</th>
+        <th class="narr_th" width="15%">Codes</th>
+        <th class="narr_th" width="15%">Time</th>
+        <th class="narr_th" width="10%">Status</th>
+        <th class="narr_th" width="15%">Results</th>
+        <th class="narr_th" width="15%">Fields</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr class="narr_tr">
+  
+  <td>Encounter, Performed: Office Visit (Code List: 2.16.840.1.113883.3.464.1003.101.12.1001)</td>
+  <td>
+      <b>
+          CPT: <i>
+                              <span onmouseover="showCodes(event,'517b27f44524ba62e6000280_true_CPT_99201')" onmouseout="hideCodes(event,'517b27f44524ba62e6000280_true_CPT_99201')" style="cursor:pointer;">99201</span>
+                      </i>
+      </b>
+          <span id="517b27f44524ba62e6000280_true_CPT_99201" style="display: none; position: absolute; background: #EEE; padding: 10px; paddint-left: 30px; width: 200px; overflow: auto; z-index: 3000;"> Office or other outpatient visit for the evaluation and management of a new patient, which requires these 3 key components: A problem focused history; A problem focused examination; Straightforward medical decision making. Counseling and/or coordination of care with other providers or agencies are provided consistent with the nature of the problem(s) and the patient's and/or family's needs. Usually, the presenting problem(s) are self limited or minor. Physicians typically spend 10 minutes face-to-face with the patient and/or family. </span>
+      <br/>
+  </td>
+  <td>July 1st, 2012 12:00 - July 1st, 2012 13:00</td>
+  <td>performed</td>   
+  <td>
+  </td>
+  <td>
+	</td>
+
+</tr>
+
+    </tbody>
+  </table>
+</div>
+
+        <h3><a name="_link" href="#toc">Functional Status Results</a></h3>
+<div>
+  <table class="narr_table" border="1" width="100%">
+    <thead>
+      <tr class="narr_tr">
+        <th class="narr_th" width="30%">Description</th>
+        <th class="narr_th" width="15%">Codes</th>
+        <th class="narr_th" width="15%">Time</th>
+        <th class="narr_th" width="10%">Status</th>
+        <th class="narr_th" width="15%">Results</th>
+        <th class="narr_th" width="15%">Fields</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr class="narr_tr">
+  
+  <td>Functional Status, Result: Functional Status Assessment for Heart Failure (Code List: 2.16.840.1.113883.3.464.1003.118.12.1031)</td>
+  <td>
+      <b>
+          LOINC: <i>
+                              <span onmouseover="showCodes(event,'517b27f44524ba62e600028a_true_LOINC_71938-5')" onmouseout="hideCodes(event,'517b27f44524ba62e600028a_true_LOINC_71938-5')" style="cursor:pointer;">71938-5</span>
+                      </i>
+      </b>
+          <span id="517b27f44524ba62e600028a_true_LOINC_71938-5" style="display: none; position: absolute; background: #EEE; padding: 10px; paddint-left: 30px; width: 200px; overflow: auto; z-index: 3000;"> Total score MLHFQ </span>
+      <br/>
+  </td>
+  <td>July 1st, 2012 12:05 - July 1st, 2012 12:05</td>
+  <td></td>   
+  <td>
+  </td>
+  <td>
+	</td>
+
+</tr>
+
+    </tbody>
+  </table>
+</div>
+
+    </div>
+
+    <br/>
+    <div style="background: #EEEEEE; width: 92%"><h3>Encounter 3</h3></div>
+    <div style="padding-left: 15px;">
+      <h3><a name="_link" href="#toc">Encounters</a></h3>
+<div>
+  <table class="narr_table" border="1" width="100%">
+    <thead>
+      <tr class="narr_tr">
+        <th class="narr_th" width="30%">Description</th>
+        <th class="narr_th" width="15%">Codes</th>
+        <th class="narr_th" width="15%">Time</th>
+        <th class="narr_th" width="10%">Status</th>
+        <th class="narr_th" width="15%">Results</th>
+        <th class="narr_th" width="15%">Fields</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr class="narr_tr">
+  
+  <td>Encounter, Performed: Blood Pressure Visit (Code List: 2.16.840.1.113883.3.464.1003.101.12.1056)</td>
+  <td>
+      <b>
+          SNOMED-CT: <i>
+                              <span onmouseover="showCodes(event,'517b27f44524ba62e6000281_true_SNOMED-CT_185349003')" onmouseout="hideCodes(event,'517b27f44524ba62e6000281_true_SNOMED-CT_185349003')" style="cursor:pointer;">185349003</span>
+                      </i>
+      </b>
+          <span id="517b27f44524ba62e6000281_true_SNOMED-CT_185349003" style="display: none; position: absolute; background: #EEE; padding: 10px; paddint-left: 30px; width: 200px; overflow: auto; z-index: 3000;"> Encounter for &quot;check-up&quot; (procedure) </span>
+      <br/>
+      <b>
+          CPT: <i>
+                              <span onmouseover="showCodes(event,'517b27f44524ba62e6000281_true_CPT_99202')" onmouseout="hideCodes(event,'517b27f44524ba62e6000281_true_CPT_99202')" style="cursor:pointer;">99202</span>
+                      </i>
+      </b>
+          <span id="517b27f44524ba62e6000281_true_CPT_99202" style="display: none; position: absolute; background: #EEE; padding: 10px; paddint-left: 30px; width: 200px; overflow: auto; z-index: 3000;"> Office or other outpatient visit for the evaluation and management of a new patient, which requires these 3 key components: An expanded problem focused history; An expanded problem focused examination; Straightforward medical decision making. Counseling and/or coordination of care with other providers or agencies are provided consistent with the nature of the problem(s) and the patient's and/or family's needs. Usually, the presenting problem(s) are of low to moderate severity. Physicians typically spend 20 minutes face-to-face with the patient and/or family. </span>
+      <br/>
+  </td>
+  <td>November 1st, 2012 12:00 - November 1st, 2012 13:00</td>
+  <td>performed</td>   
+  <td>
+  </td>
+  <td>
+	</td>
+
+</tr>
+
+    </tbody>
+  </table>
+</div>
+
+        <h3><a name="_link" href="#toc">Physical Exams</a></h3>
+<div>
+  <table class="narr_table" border="1" width="100%">
+    <thead>
+      <tr class="narr_tr">
+        <th class="narr_th" width="30%">Description</th>
+        <th class="narr_th" width="15%">Codes</th>
+        <th class="narr_th" width="15%">Time</th>
+        <th class="narr_th" width="10%">Status</th>
+        <th class="narr_th" width="15%">Results</th>
+        <th class="narr_th" width="15%">Fields</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr class="narr_tr">
+  
+  <td>Physical Exam, Finding: Systolic Blood Pressure (Code List: 2.16.840.1.113883.3.526.3.1032)</td>
+  <td>
+      <b>
+          LOINC: <i>
+                              <span onmouseover="showCodes(event,'517b27f44524ba62e600028b_true_LOINC_8480-6')" onmouseout="hideCodes(event,'517b27f44524ba62e600028b_true_LOINC_8480-6')" style="cursor:pointer;">8480-6</span>
+                      </i>
+      </b>
+          <span id="517b27f44524ba62e600028b_true_LOINC_8480-6" style="display: none; position: absolute; background: #EEE; padding: 10px; paddint-left: 30px; width: 200px; overflow: auto; z-index: 3000;"> Systolic blood pressure </span>
+      <br/>
+  </td>
+  <td>November 1st, 2012 12:00 - November 1st, 2012 12:00</td>
+  <td></td>   
+  <td>
+        130 mmHg<br/>
+  </td>
+  <td>
+	</td>
+
+</tr>
+
+        <tr class="narr_tr">
+  
+  <td>Physical Exam, Finding: Diastolic Blood Pressure (Code List: 2.16.840.1.113883.3.526.3.1033)</td>
+  <td>
+      <b>
+          LOINC: <i>
+                              <span onmouseover="showCodes(event,'517b27f44524ba62e600028d_true_LOINC_8462-4')" onmouseout="hideCodes(event,'517b27f44524ba62e600028d_true_LOINC_8462-4')" style="cursor:pointer;">8462-4</span>
+                      </i>
+      </b>
+          <span id="517b27f44524ba62e600028d_true_LOINC_8462-4" style="display: none; position: absolute; background: #EEE; padding: 10px; paddint-left: 30px; width: 200px; overflow: auto; z-index: 3000;"> Diastolic blood pressure </span>
+      <br/>
+  </td>
+  <td>November 1st, 2012 12:00 - November 1st, 2012 12:00</td>
+  <td></td>   
+  <td>
+        60 mmHg<br/>
+  </td>
+  <td>
+	</td>
+
+</tr>
+
+    </tbody>
+  </table>
+</div>
+
+    </div>
+
+  
+</div>
+
+    
+    <br /><br />
+    <br /><br />
+    <br /><br />
+    <br /><br />
+  </body>
+</html>
