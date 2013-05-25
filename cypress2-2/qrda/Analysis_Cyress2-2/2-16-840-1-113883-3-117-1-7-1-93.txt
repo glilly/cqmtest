@@ -1,0 +1,252 @@
+| ns0:DescribedValueSet  
+|   : ID^2.16.840.1.113883.3.117.1.7.1.93
+|   : displayName^Patient Refusal
+|   : version^20121025
+|  | ns0:ConceptList  
+                Code    System         Description
+           105480006  SNOMEDCT  Refusal of treatment by patient (situation)
+           182890002  SNOMEDCT  Patient requests alternative treatment (finding)
+           182895007  SNOMEDCT  Drug declined by patient (situation)
+           182896008  SNOMEDCT  Drug declined by patient - dislikes taste (situation)
+           182897004  SNOMEDCT  Drug declined by patient - side effects (situation)
+           182898009  SNOMEDCT  Drug declined by patient - inconvenient (situation)
+           182900006  SNOMEDCT  Drug declined by patient - patient beliefs (situation)
+           182901005  SNOMEDCT  Drug declined by patient - alternative therapy (situation)
+           182903008  SNOMEDCT  Drug declined by patient - reason unknown (situation)
+           183944003  SNOMEDCT  Procedure refused (situation)
+           183945002  SNOMEDCT  Procedure refused for religious reason (situation)
+           183947005  SNOMEDCT  Refused procedure - after thought (situation)
+           183948000  SNOMEDCT  Refused procedure - parent's wish (situation)
+           275936005  SNOMEDCT  Patient noncompliance - general (situation)
+           371138003  SNOMEDCT  Refusal of treatment by parents (situation)
+           385648002  SNOMEDCT  Rejected by recipient (qualifier value)
+           406149000  SNOMEDCT  Medication refused (situation)
+           413312003  SNOMEDCT  Patient non-compliant - refused service (situation)
+           416432009  SNOMEDCT  Procedure not wanted (situation)
+           443390004  SNOMEDCT  Refused (qualifier value)
+|  | ns0:Source Joint Commission
+|  | ns0:Type Extensional
+|  | ns0:Binding Dynamic
+|  | ns0:Status Active
+|  | ns0:RevisionDate 2012-05-02
+--------------------------------------------------------------
+CATEGORY: Attribute
+CMS eMeasure ID: CMS104v1
+Endorsed By: National Quality Forum
+GUID: 42bf391f-38a3-4c0f-9ece-dcd47e9609d9
+Meaningful Use Measures: FY 2014 EH
+Measure Developer: The Joint Commission
+Measure Steward: The Joint Commission
+Measure Type: PROCESS
+NQF Number: 0435
+SHEETNAME: Discharged on Antithrombotic The
+eMeasure Copyright: Measure specifications are in the Public Domain
+eMeasure Description: Ischemic stroke patients prescribed antithrombotic therapy at hospital discharge
+eMeasure Identifier: 104
+eMeasure Status: Complete
+eMeasure Title: Discharged on Antithrombotic Therapy
+eMeasure Version number: 1
+--------------------------------------------------------------
+CATEGORY: Attribute
+CMS eMeasure ID: CMS110v1
+Endorsed By: National Quality Forum
+GUID: 7fe69617-fa28-4305-a2b8-ceb6bcd9693d
+Meaningful Use Measures: FY 2014 EH
+Measure Developer: Joint Commission
+Measure Steward: Joint Commission
+Measure Type: PROCESS
+NQF Number: 0375
+SHEETNAME: Venous Thromboembolism Discharge
+eMeasure Copyright: Measure specifications are in the Public Domain
+eMeasure Description: This measure assesses the number of patients diagnosed with confirmed VTE that are discharged to home, home care, court/law enforcement or home on hospice care on warfarin with written discharge instructions that address all four 
+eMeasure Identifier: 110
+eMeasure Status: Complete
+eMeasure Title: Venous Thromboembolism Discharge Instructions
+eMeasure Version number: 1
+--------------------------------------------------------------
+CATEGORY: Attribute
+CMS eMeasure ID: CMS72v1
+Endorsed By: National Quality Forum
+GUID: 93f3479f-75d8-4731-9a3f-b7749d8bcd37
+Meaningful Use Measures: FY 2014 EH
+Measure Developer: The Joint Commission
+Measure Steward: The Joint Commission
+Measure Type: PROCESS
+NQF Number: 0438
+SHEETNAME: SKT-5 (Stroke)
+eMeasure Copyright: Measure specifications are in the Public Domain
+eMeasure Description: Ischemic stroke patients administered antithrombotic therapy by the end of hospital day 2.
+eMeasure Identifier: 72
+eMeasure Status: Complete
+eMeasure Title: Antithrombotic Therapy By End of Hospital Day 2
+eMeasure Version number: 1
+--------------------------------------------------------------
+CATEGORY: Attribute
+CMS eMeasure ID: CMS105v1
+Endorsed By: National Quality Forum
+GUID: 1f503318-bb8d-4b91-af63-223ae0a2328e
+Meaningful Use Measures: FY 2014 EH
+Measure Developer: The Joint Commission
+Measure Steward: The Joint Commission
+Measure Type: PROCESS
+NQF Number: 0439
+SHEETNAME: Discharged on Statin Medication
+eMeasure Copyright: Measure specifications are in the Public Domain.
+eMeasure Description: Ischemic stroke patients with LDL greater than or equal to 100 mg/dL, or LDL not measured, or who were on a lipid-lowering medication prior to hospital arrival are prescribed statin medication at hospital discharge.
+eMeasure Identifier: 105
+eMeasure Status: Complete
+eMeasure Title: Discharged on Statin Medication
+eMeasure Version number: 1
+--------------------------------------------------------------
+CATEGORY: Attribute
+CMS eMeasure ID: CMS102v1
+Endorsed By: National Quality Forum
+GUID: 7dc26160-e615-4cc2-879c-75985189ec1a
+Meaningful Use Measures: FY 2014 EH
+Measure Developer: The Joint Commission
+Measure Steward: The Joint Commission
+Measure Type: PROCESS
+NQF Number: 0441
+SHEETNAME: Assessed for Rehabilitation
+eMeasure Copyright: Measure specifications are in the Public Domain
+eMeasure Description: Ischemic or hemorrhagic stroke patients who were assessed for rehabilitation services.
+eMeasure Identifier: 102
+eMeasure Status: Complete
+eMeasure Title: Assessed for Rehabilitation
+eMeasure Version number: 1
+--------------------------------------------------------------
+CATEGORY: Attribute
+CMS eMeasure ID: CMS91v2
+Endorsed By: National Quality Forum
+GUID: 2838875a-07b5-4bf0-be04-c3eb99f53975
+Meaningful Use Measures: FY 2014 EH
+Measure Developer: Joint Commission
+Measure Steward: Joint Commission
+Measure Type: PROCESS
+NQF Number: 0437
+SHEETNAME: STK-4
+eMeasure Copyright: Measure specifications are in the Public Domain.
+eMeasure Description: Acute ischemic stroke patients who arrive at this hospital within 2 hours of time last known well and for whom IV t-PA was initiated at this hospital within 3 hours of time last known well.
+eMeasure Identifier: 91
+eMeasure Status: InProgress
+eMeasure Title: Thrombolytic Therapy
+eMeasure Version number: 2
+--------------------------------------------------------------
+CATEGORY: Attribute
+CMS eMeasure ID: CMS71v2
+Endorsed By: National Quality Forum
+GUID: 03876d69-085b-415c-ae9d-9924171040c2
+Meaningful Use Measures: FY 2014 EH
+Measure Developer: The Joint Commission
+Measure Steward: The Joint Commission
+Measure Type: PROCESS
+NQF Number: 0436
+SHEETNAME: STK-3 (Stroke)
+eMeasure Copyright: Measure specifications are in the Public Domain.
+eMeasure Description: Ischemic stroke patients with atrial fibrillation/flutter who are prescribed anticoagulation therapy at hospital discharge.
+eMeasure Identifier: 71
+eMeasure Status: Complete
+eMeasure Title: Anticoagulation Therapy for Atrial Fibrillation/Flutter
+eMeasure Version number: 2
+--------------------------------------------------------------
+CATEGORY: Attribute
+CMS eMeasure ID: CMS190v1
+Endorsed By: National Quality Forum
+GUID: fa91ba68-1e66-4a23-8eb2-baa8e6df2f2f
+Meaningful Use Measures: FY 2014 EH
+Measure Developer: Joint Commission
+Measure Steward: Joint Commission
+Measure Type: PROCESS
+NQF Number: 0372
+SHEETNAME: VTE-2
+eMeasure Copyright: Measure specifications are in the Public Domain
+eMeasure Description: This measure assesses the number of patients who received VTE prophylaxis or have documentation why no VTE prophylaxis was given the day of or the day after the initial admission (or transfer) to the Intensive Care Unit (ICU) or s
+eMeasure Identifier: 190
+eMeasure Status: InProgress
+eMeasure Title: Intensive Care Unit Venous Thromboembolism Prophylaxis
+eMeasure Version number: 1
+--------------------------------------------------------------
+CATEGORY: Attribute
+CMS eMeasure ID: CMS114v1
+Endorsed By: National Quality Forum
+GUID: 32cfc834-843a-4f45-b359-8e158eac4396
+Meaningful Use Measures: FY 2014 EH
+Measure Developer: Joint Commission
+Measure Steward: Joint Commission
+Measure Type: OUTCOME
+NQF Number: 0376
+SHEETNAME: VTE-6
+eMeasure Copyright: Measure specifications are in the Public Domain.
+eMeasure Description: This measure assesses the number of patients diagnosed with confirmed VTE during hospitalization (not present at admission) who did not receive VTE prophylaxis between hospital admission and the day before the VTE diagnostic testi
+eMeasure Identifier: 114
+eMeasure Status: Complete
+eMeasure Title: Incidence of Potentially-Preventable Venous Thromboembolism
+eMeasure Version number: 1
+--------------------------------------------------------------
+CATEGORY: Attribute
+CMS eMeasure ID: CMS107v1
+Endorsed By: National Quality Forum
+GUID: 217fdf0d-3d64-4720-9116-d5e5afa27f2c
+Meaningful Use Measures: FY 2014 EH
+Measure Developer: Joint Commission
+Measure Steward: Joint Commission
+Measure Type: PROCESS
+NQF Number: 0440
+SHEETNAME: Stroke Education
+eMeasure Copyright: Measure specifications are in the Public Domain
+eMeasure Description: Ischemic or hemorrhagic stroke patients or their caregivers who were given educational materials during the hospital stay addressing all of the following: activation of emergency medical system, need for follow-up after discharge,
+eMeasure Identifier: 107
+eMeasure Status: Complete
+eMeasure Title: Stroke Education
+eMeasure Version number: 1
+--------------------------------------------------------------
+CATEGORY: Attribute
+CMS eMeasure ID: CMS108v1
+Endorsed By: National Quality Forum
+GUID: 38b0b5ec-0f63-466f-8fe3-2cd20ddd1622
+Meaningful Use Measures: FY 2014 EH
+Measure Developer: Joint Commission
+Measure Steward: Joint Commission
+Measure Type: PROCESS
+NQF Number: 0371
+SHEETNAME: Venous Thromboembolism Prophyla
+eMeasure Copyright: Measure specifications are in the Public Domain
+eMeasure Description: This measure assesses the number of patients who received VTE prophylaxis or have documentation why no VTE prophylaxis was given the day of or the day after hospital admission or surgery end date for surgeries that start the day o
+eMeasure Identifier: 108
+eMeasure Status: Complete
+eMeasure Title: Venous Thromboembolism Prophylaxis
+eMeasure Version number: 1
+--------------------------------------------------------------
+CATEGORY: Attribute
+CMS eMeasure ID: CMS73v1
+Endorsed By: National Quality Forum
+GUID: 6f069bb2-b3c4-4bf4-adc5-f6dd424a10b7
+Meaningful Use Measures: FY 2014 EH
+Measure Developer: Joint Commission
+Measure Steward: Joint Commission
+Measure Type: PROCESS
+NQF Number: 0373
+SHEETNAME: VTE 3
+eMeasure Copyright: Measure specifications are in the Public Domain.
+eMeasure Description: This measure assesses the number of patients diagnosed with confirmed VTE who received an overlap of parenteral (intravenous [IV] or subcutaneous [subcu]) anticoagulation and warfarin therapy. For patients who received less than f
+eMeasure Identifier: 73
+eMeasure Status: Complete
+eMeasure Title: Venous Thromboembolism Patients with Anticoagulation Overlap Therapy
+eMeasure Version number: 1
+--------------------------------------------------------------
+CATEGORY: Attribute
+CMS eMeasure ID: CMS26v1
+Endorsed By: National Quality Forum
+GUID: e1cb05e0-97d5-40fc-b456-15c5dbf44309
+Meaningful Use Measures: FY 2014 EH
+Measure Developer: Joint Commission
+Measure Steward: Joint Commission
+Measure Type: PROCESS
+NQF Number: 0338
+SHEETNAME: CAC-3
+eMeasure Copyright: LOINC(R) is a registered trademark of the Regenstrief Institute.
+eMeasure Description: An assessment that there is documentation in the medical record that a Home Management Plan of Care (HMPC) document was given to the pediatric asthma patient/caregiver.
+eMeasure Identifier: 26
+eMeasure Status: InProgress
+eMeasure Title: Home Management Plan of Care (HMPC) Document Given to Patient/Caregiver
+eMeasure Version number: 1

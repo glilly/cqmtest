@@ -1,0 +1,47 @@
+| ns0:DescribedValueSet  
+|   : ID^2.16.840.1.113883.3.67.1.101.11.722
+|   : displayName^Nursing Home
+|   : version^20121025
+|  | ns0:ConceptList  
+                Code    System         Description
+           160734000  SNOMEDCT  Lives in a nursing home (finding)
+|  | ns0:Source Telligen
+|  | ns0:Definition (2.16.840.1.113883.3.67.1.101.1.259:Nursing Home)
+|  | ns0:Type Grouping
+|  | ns0:Binding Dynamic
+|  | ns0:Status Active
+|  | ns0:RevisionDate 2012-03-13
+--------------------------------------------------------------
+CATEGORY: Attribute
+CMS eMeasure ID: CMS160v1
+Endorsed By: National Quality Forum
+GUID: a4b9763c-847e-4e02-bb7e-acc596e90e2c
+Meaningful Use Measures: CY 2014 EP
+Measure Developer: Minnesota Community Measurement
+Measure Steward: Minnesota Community Measurement
+Measure Type: PROCESS
+NQF Number: 0712
+SHEETNAME: Dep_PHQ-9
+eMeasure Copyright: Copyright MN Community Measurement, 2012. All rights reserved
+eMeasure Description: Adult patients age 18 and older with the diagnosis of major depression or dysthymia who have a PHQ-9 tool administered at least once during a 4 month period in which there was a qualifying visit.
+eMeasure Identifier: 160
+eMeasure Status: Complete
+eMeasure Title: Depression Utilization of the PHQ-9 Tool
+eMeasure Version number: 1
+--------------------------------------------------------------
+CATEGORY: Attribute
+CMS eMeasure ID: CMS159v1
+Endorsed By: National Quality Forum
+GUID: 8455cd3e-dbb9-4e0c-8084-3ece4068fe94
+Meaningful Use Measures: CY 2014 EP
+Measure Developer: Minnesota Community Measurement
+Measure Steward: Minnesota Community Measurement
+Measure Type: OUTCOME
+NQF Number: 0710
+SHEETNAME: Dep_Rem_12
+eMeasure Copyright: Copyright MN Community Measurement, 2012. All rights reserved.
+eMeasure Description: Adult patients age 18 and older with major depression or dysthymia and an initial PHQ-9 score > 9 who demonstrate remission at twelve months defined as PHQ-9 score less than 5. This measure applies to both patients with newly d
+eMeasure Identifier: 159
+eMeasure Status: Complete
+eMeasure Title: Depression Remission at Twelve Months
+eMeasure Version number: 1

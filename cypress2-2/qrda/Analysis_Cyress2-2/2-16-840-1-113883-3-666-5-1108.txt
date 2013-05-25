@@ -1,0 +1,69 @@
+| ns0:DescribedValueSet  
+|   : ID^2.16.840.1.113883.3.666.5.1108
+|   : displayName^Hospital measures-Route IV
+|   : version^20130401
+|  | ns0:ConceptList  
+                Code    System         Description
+           255560000  SNOMEDCT  Intravenous (qualifier value)
+           385228000  SNOMEDCT  Intravenous infusion (qualifier value)
+           418114005  SNOMEDCT  Intravenous central route (qualifier value)
+           419993007  SNOMEDCT  Intravenous peripheral route (qualifier value)
+           447963004  SNOMEDCT  Intravenous push technique (qualifier value)
+           449137004  SNOMEDCT  Intravenous piggyback technique (qualifier value)
+            47625008  SNOMEDCT  Intravenous route (qualifier value)
+|  | ns0:Source Oklahoma Foundation for Medical Quality
+|  | ns0:Type Extensional
+|  | ns0:Binding Static
+|  | ns0:Status Active
+|  | ns0:RevisionDate 2013-03-30
+--------------------------------------------------------------
+CATEGORY: Attribute
+CMS eMeasure ID: CMS188v3
+Endorsed By: National Quality Forum
+GUID: 8243eae0-bbd7-4107-920b-fc3db04b9584
+Meaningful Use Measures: FY 2014 EH
+Measure Developer: Oklahoma Foundation for Medical Quality
+Measure Steward: Centers for Medicare & Medicaid Services
+Measure Type: PROCESS
+NQF Number: 0147
+SHEETNAME: PN 6
+eMeasure Copyright: Measure specifications are in the Public Domain
+eMeasure Description: (PN-6) Immunocompetent patients with Community-Acquired Pneumonia who receive an initial antibiotic regimen during the first 24 hours that is consistent with current guidelines 
+eMeasure Identifier: 188
+eMeasure Status: InProgress
+eMeasure Title: Initial Antibiotic Selection for Community-Acquired Pneumonia (CAP) in Immunocompetent Patients
+eMeasure Version number: 3
+--------------------------------------------------------------
+CATEGORY: Attribute
+CMS eMeasure ID: CMS171v3
+Endorsed By: National Quality Forum
+GUID: d09add1d-30f5-462d-b677-3d17d9ccd664
+Meaningful Use Measures: FY 2014 EH
+Measure Developer: Oklahoma Foundation for Medical Quality
+Measure Steward: Centers for Medicare & Medicaid Services
+Measure Type: PROCESS
+NQF Number: 0527
+SHEETNAME: SCIP Prophylactic Antibiotic 1 H
+eMeasure Copyright: Measure specifications are in the Public Domain.
+eMeasure Description: Surgical patients with prophylactic antibiotics initiated within one hour prior to surgical incision. Patients who received vancomycin or a fluoroquinolone for prophylactic antibiotics should have the antibiotics initiated within 
+eMeasure Identifier: 171
+eMeasure Status: InProgress
+eMeasure Title: Prophylactic Antibiotic Received Within One Hour Prior to Surgical Incision
+eMeasure Version number: 3
+--------------------------------------------------------------
+CATEGORY: Attribute
+CMS eMeasure ID: CMS172v3
+Endorsed By: National Quality Forum
+GUID: feea3922-f61f-4b05-98f9-b72a11815f12
+Meaningful Use Measures: FY 2014 EH
+Measure Developer: Oklahoma Foundation for Medical Quality
+Measure Steward: Centers for Medicare & Medicaid Services
+Measure Type: PROCESS
+NQF Number: 0528
+SHEETNAME: SCIP Antibiotic Selection
+eMeasure Copyright: Measure specifications are in the Public Domain
+eMeasure Description: Surgical patients who received prophylactic antibiotics consistent with current guidelines (specific to each type of surgical procedure).
+eMeasure Identifier: 172
+eMeasure Status: InProgress
+eMeasure Title: Prophylactic Antibiotic Selection for Surgical Patients
+eMeasure Version number: 3

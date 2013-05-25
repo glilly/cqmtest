@@ -1,0 +1,60 @@
+| ns0:DescribedValueSet  
+|   : ID^2.16.840.1.113883.3.666.5.729
+|   : displayName^Hospital measures-IV Hysterectomy-Antibiotics
+|   : version^20130401
+|  | ns0:ConceptList  
+                Code    System         Description
+              204929    RXNORM  Cefuroxime 15 MG/ML Injectable Solution
+              204931    RXNORM  Cefotetan 10 MG/ML Injectable Solution
+              240984    RXNORM  Ampicillin 100 MG/ML / Sulbactam 50 MG/ML Injectable Solution
+              245239    RXNORM  Cefuroxime 250 MG/ML Injectable Suspension
+              308208    RXNORM  Ampicillin 250 MG/ML / Sulbactam 125 MG/ML Injectable Solution
+              309051    RXNORM  Cefazolin 10 MG/ML Injectable Solution
+              309052    RXNORM  Cefazolin 20 MG/ML Injectable Solution
+              309053    RXNORM  Cefazolin 225 MG/ML Injectable Solution
+              309069    RXNORM  Cefotetan 100 MG/ML Injectable Solution
+              309070    RXNORM  Cefotetan 40 MG/ML Injectable Solution
+              309071    RXNORM  Cefotetan 500 MG/ML Injectable Solution
+              309072    RXNORM  Cefoxitin 200 MG/ML Injectable Solution
+              309074    RXNORM  Cefoxitin 20 MG/ML Injectable Solution
+              309075    RXNORM  Cefoxitin 180 MG/ML Injectable Solution
+              309099    RXNORM  Cefuroxime 90 MG/ML Injectable Solution
+              309100    RXNORM  Cefuroxime 30 MG/ML Injectable Solution
+              309101    RXNORM  Cefuroxime 95 MG/ML Injectable Solution
+              313920    RXNORM  Cefazolin 200 MG/ML Injectable Solution
+              313925    RXNORM  Cefotetan 20 MG/ML Injectable Solution
+              313929    RXNORM  Cefazolin 330 MG/ML Injectable Solution
+              342904    RXNORM  Cefoxitin 40 MG/ML Injectable Solution
+              343049    RXNORM  Cefotetan 400 MG/ML Injectable Solution
+              387065    RXNORM  Cefuroxime 50 MG/ML Injectable Solution
+              387066    RXNORM  Cefuroxime 60 MG/ML Injectable Solution
+              562058    RXNORM  Cefoxitin 95 MG/ML Injectable Solution
+              562062    RXNORM  Cefazolin 250 MG/ML Injectable Solution
+              796301    RXNORM  Cefazolin 100 MG/ML Injectable Solution
+              854220    RXNORM  Cefazolin 40 MG/ML Injectable Solution
+              895924    RXNORM  Cefotetan 200 MG/ML Injectable Solution
+              904288    RXNORM  Cefuroxime 100 MG/ML Injectable Solution
+              993109    RXNORM  Ampicillin 20 MG/ML / Sulbactam 10 MG/ML Injectable Solution
+              997632    RXNORM  Cefuroxime 225 MG/ML Injectable Suspension
+|  | ns0:Source Oklahoma Foundation for Medical Quality
+|  | ns0:Type Extensional
+|  | ns0:Binding Static
+|  | ns0:Status Active
+|  | ns0:RevisionDate 2013-03-30
+--------------------------------------------------------------
+CATEGORY: Medication
+CMS eMeasure ID: CMS172v3
+Endorsed By: National Quality Forum
+GUID: feea3922-f61f-4b05-98f9-b72a11815f12
+Meaningful Use Measures: FY 2014 EH
+Measure Developer: Oklahoma Foundation for Medical Quality
+Measure Steward: Centers for Medicare & Medicaid Services
+Measure Type: PROCESS
+NQF Number: 0528
+SHEETNAME: SCIP Antibiotic Selection
+eMeasure Copyright: Measure specifications are in the Public Domain
+eMeasure Description: Surgical patients who received prophylactic antibiotics consistent with current guidelines (specific to each type of surgical procedure).
+eMeasure Identifier: 172
+eMeasure Status: InProgress
+eMeasure Title: Prophylactic Antibiotic Selection for Surgical Patients
+eMeasure Version number: 3

@@ -1,0 +1,45 @@
+| ns0:DescribedValueSet  
+|   : ID^2.16.840.1.113883.3.526.3.1212
+|   : displayName^Intolerance to ACE inhibitor or ARB
+|   : version^20121025
+|  | ns0:ConceptList  
+                Code    System         Description
+           293500009  SNOMEDCT  Angiotensin-converting-enzyme inhibitor adverse reaction (disorder)
+           293501008  SNOMEDCT  Captopril adverse reaction (disorder)
+           293502001  SNOMEDCT  Lisinopril adverse reaction (disorder)
+           293503006  SNOMEDCT  Quinapril adverse reaction (disorder)
+           293504000  SNOMEDCT  Ramipril adverse reaction (disorder)
+           293505004  SNOMEDCT  Cilazapril adverse reaction (disorder)
+           293506003  SNOMEDCT  Trandolapril adverse reaction (disorder)
+           293507007  SNOMEDCT  Enalapril adverse reaction (disorder)
+           293508002  SNOMEDCT  Fosinopril adverse reaction (disorder)
+           293509005  SNOMEDCT  Perindopril adverse reaction (disorder)
+           293513003  SNOMEDCT  Losartan adverse reaction (disorder)
+           371627004  SNOMEDCT  Angiotensin converting enzyme inhibitor-aggravated angioedema (disorder)
+           407564000  SNOMEDCT  Angiotensin converting enzyme inhibitor not tolerated (situation)
+           407565004  SNOMEDCT  Angiotensin II receptor antagonist not tolerated (situation)
+           407590002  SNOMEDCT  Angiotensin II receptor antagonist adverse reaction (disorder)
+           422593004  SNOMEDCT  Acute renal failure due to angiotensin-converting-enzyme inhibitor (disorder)
+|  | ns0:Source American Medical Association-convened Physician Consortium for Performance Improvement(R)
+|  | ns0:Definition (2.16.840.1.113883.3.526.2.1257:Intolerance to ACE inhibitor or ARB)
+|  | ns0:Type Grouping
+|  | ns0:Binding Static
+|  | ns0:Status Active
+|  | ns0:RevisionDate 2012-10-25
+--------------------------------------------------------------
+CATEGORY: Condition/Diagnosis/Problem
+CMS eMeasure ID: CMS135v1
+Endorsed By: National Quality Forum
+GUID: 430ffc53-4122-4421-88cc-2edd8117bb3c
+Meaningful Use Measures: CY 2014 EP
+Measure Developer: American Medical Association-convened Physician Consortium for Performance Improvement(R) (AMA-PCPI)
+Measure Steward: American Medical Association-convened Physician Consortium for Performance Improvement(R) (AMA-PCPI)
+Measure Type: PROCESS
+NQF Number: 0081
+SHEETNAME: HF_ACE_ARB_LVSD
+eMeasure Copyright: Copyright 2012 American College of Cardiology, American Heart Association and American Medical Association. All Rights Reserved.
+eMeasure Description: Percentage of patients aged 18 years and older with a diagnosis of heart failure (HF) with a current or prior left ventricular ejection fraction (LVEF) < 40% who were prescribed ACE inhibitor or ARB therapy either within a 12 m
+eMeasure Identifier: 135
+eMeasure Status: Complete
+eMeasure Title: Heart Failure (HF): Angiotensin-Converting Enzyme (ACE) Inhibitor or Angiotensin Receptor Blocker (ARB) Therapy for Left Ventricular Systolic Dysfunction (LVSD)
+eMeasure Version number: 1

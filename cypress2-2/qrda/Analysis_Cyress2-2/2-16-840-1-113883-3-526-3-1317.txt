@@ -1,0 +1,30 @@
+| ns0:DescribedValueSet  
+|   : ID^2.16.840.1.113883.3.526.3.1317
+|   : displayName^Allergy to Tamoxifen or Aromatase Inhibitor Therapy
+|   : version^20121025
+|  | ns0:ConceptList  
+                Code    System         Description
+           293790002  SNOMEDCT  Tamoxifen allergy (disorder)
+|  | ns0:Source American Medical Association-convened Physician Consortium for Performance Improvement(R)
+|  | ns0:Definition (2.16.840.1.113883.3.526.2.1383:Allergy to Tamoxifen or Aromatase Inhibitor Therapy)
+|  | ns0:Type Grouping
+|  | ns0:Binding Dynamic
+|  | ns0:Status Active
+|  | ns0:RevisionDate 2012-07-30
+--------------------------------------------------------------
+CATEGORY: Condition/Diagnosis/Problem
+CMS eMeasure ID: CMS140v1
+Endorsed By: National Quality Forum
+GUID: ac639794-cb3f-4f4f-8fa6-680300d5ed4e
+Meaningful Use Measures: CY 2014 EP
+Measure Developer: American Medical Association-convened Physician Consortium for Performance Improvement(R) (AMA-PCPI)
+Measure Steward: American Medical Association-convened Physician Consortium for Performance Improvement(R) (AMA-PCPI)
+Measure Type: PROCESS
+NQF Number: 0387
+SHEETNAME: Onc_Breast_Cancer
+eMeasure Copyright: Copyright 2012 American Medical Association, American Society of Clinical Oncology, and National Comprehensive Cancer Network. All Rights Reserved.
+eMeasure Description: Percentage of female patients aged 18 years and older with Stage IC through IIIC, ER or PR positive breast cancer who were prescribed tamoxifen or aromatase inhibitor (AI) during the 12-month reporting period
+eMeasure Identifier: 140
+eMeasure Status: Complete
+eMeasure Title: Breast Cancer: Hormonal Therapy for Stage IC-IIIC Estrogen Receptor/Progesterone Receptor (ER/PR) Positive Breast Cancer
+eMeasure Version number: 1
