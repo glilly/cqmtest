@@ -1,5 +1,0 @@
-cypress 2.5.1
-
-glilly@pobox.com
-
-$#dancing6 
