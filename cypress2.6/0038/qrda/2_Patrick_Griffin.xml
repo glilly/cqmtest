@@ -1,0 +1,1734 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ClinicalDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xmlns="urn:hl7-org:v3"
+ xmlns:voc="urn:hl7-org:v3/voc"
+ xmlns:sdtc="urn:hl7-org:sdtc">
+  <!-- QRDA Header -->
+  <realmCode code="US"/>
+  <typeId root="2.16.840.1.113883.1.3" extension="POCD_HD000040"/>
+  <!-- US Realm Header Template Id -->
+  <templateId root="2.16.840.1.113883.10.20.22.1.1"/>
+  <!-- QRDA templateId -->
+  <templateId root="2.16.840.1.113883.10.20.24.1.1"/>
+  <!-- QDM-based QRDA templateId -->
+  <templateId root="2.16.840.1.113883.10.20.24.1.2"/>
+  <!-- This is the globally unique identifier for this QRDA document -->
+  <id root="d04a5de0-a278-0132-76ce-404024e80912"/>
+  <!-- QRDA document type code -->
+  <code code="55182-0" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Quality Measure Report"/>
+  <title>QRDA Incidence Report</title>
+  <!-- This is the document creation time -->
+  <effectiveTime value="20150301194100"/>
+  <confidentialityCode code="N" codeSystem="2.16.840.1.113883.5.25"/>
+  <languageCode code="eng"/>
+  <!-- reported patient -->
+    <recordTarget>
+    <patientRole>
+        <id extension="1425238804_4" root="2.16.840.1.113883.3.1257"/>
+      <addr use="HP">
+          <streetAddressLine>202 Burlington Rd.</streetAddressLine>
+          <city>Bedford</city>
+          <state>MA</state>
+          <postalCode>01730</postalCode>
+          <country>US</country>
+      </addr>
+      <telecom use="WP" value="tel:+1-781-271-3000"/>
+      <patient>
+        <name>
+          <given>Patrick</given>
+          <family>Griffin</family>
+        </name>
+        <administrativeGenderCode code="M" codeSystem="2.16.840.1.113883.5.1" codeSystemName="HL7 AdministrativeGender"/>
+        <birthTime value="20110619214115"/>
+          <raceCode code="2028-9" displayName="Asian" codeSystemName="CDC Race and Ethnicity" codeSystem="2.16.840.1.113883.6.238"/>
+          <ethnicGroupCode code="2186-5" displayName="Not Hispanic or Latino" codeSystemName="CDC Race and Ethnicity" codeSystem="2.16.840.1.113883.6.238"/>
+          <languageCommunication>
+            <templateId root="2.16.840.1.113883.3.88.11.83.2" assigningAuthorityName="HITSP/C83"/>
+            <templateId root="1.3.6.1.4.1.19376.1.5.3.1.2.1" assigningAuthorityName="IHE/PCC"/>
+            <languageCode code="eng"/>
+          </languageCommunication>
+      </patient>
+    </patientRole>
+  </recordTarget>
+
+  <!-- Example of an author who is a device -->
+    <author>
+      <time value="20150301194100"/>
+      <assignedAuthor>
+        <!-- id extension="Cypress" root="2.16.840.1.113883.19.5"/ -->
+        <!-- NPI -->
+        <id extension="FakeNPI" root="2.16.840.1.113883.4.6"/>
+        <addr>
+          <streetAddressLine>202 Burlington Rd.</streetAddressLine>
+          <city>Bedford</city>
+          <state>MA</state>
+          <postalCode>01730</postalCode>
+          <country>US</country>
+        </addr>
+        <telecom use="WP" value="tel:(781)271-3000"/>
+        <assignedAuthoringDevice>
+          <manufacturerModelName>Cypress</manufacturerModelName >
+          <softwareName>Cypress</softwareName >
+        </assignedAuthoringDevice >
+      </assignedAuthor>
+    </author>
+    <custodian>
+      <assignedCustodian>
+        <representedCustodianOrganization>
+          <id root="2.16.840.1.113883.19.5"/>
+          <name>Cypress Test Deck</name>
+          <telecom use="WP" value="tel:(781)271-3000"/>
+          <addr>
+            <streetAddressLine>202 Burlington Rd.</streetAddressLine>
+            <city>Bedford</city>
+            <state>MA</state>
+            <postalCode>01730</postalCode>
+            <country>US</country>
+          </addr>
+        </representedCustodianOrganization>
+      </assignedCustodian>
+    </custodian>
+    <legalAuthenticator>
+      <time value="20150301194100"/>
+      <signatureCode code="S"/>
+      <assignedEntity>
+        <id root="bc01a5d1-3a34-4286-82cc-43eb04c972a7"/>
+        <addr>
+          <streetAddressLine>202 Burlington Rd.</streetAddressLine>
+          <city>Bedford</city>
+          <state>MA</state>
+          <postalCode>01730</postalCode>
+          <country>US</country>
+        </addr>
+        <telecom use="WP" value="tel:(781)271-3000"/>
+        <assignedPerson>
+          <name>
+             <given>Henry</given>
+             <family>Seven</family>
+          </name>
+       </assignedPerson>
+        <representedOrganization>
+          <id root="2.16.840.1.113883.19.5"/>
+          <name>Cypress</name>
+        </representedOrganization>
+      </assignedEntity>
+    </legalAuthenticator>
+
+  <documentationOf typeCode="DOC">
+  <serviceEvent classCode="PCPR"> <!-- care provision -->
+    <!-- No provider data found in the patient record
+         putting in a fake provider -->
+    <effectiveTime>
+      <low value="20020716"/>
+      <high value="20150301194100"/>
+    </effectiveTime>
+    <!-- You can include multiple performers, each with an NPI, TIN, CCN. -->
+    <performer typeCode="PRF"> 
+      <time>
+        <low value="20020716"/>
+        <high value="20150301194100"/>
+      </time>
+      <assignedEntity>
+        <!-- This is the provider NPI -->
+        <id root="2.16.840.1.113883.4.6" extension="111111111" /> 
+        <representedOrganization>
+          <!-- This is the organization TIN -->
+          <id root="2.16.840.1.113883.4.2" extension="1234567" /> 
+          <!-- This is the organization CCN -->
+          <id root="2.16.840.1.113883.4.336" extension="54321" /> 
+        </representedOrganization>
+      </assignedEntity>
+    </performer>
+  </serviceEvent>
+</documentationOf>
+
+  <component>
+    <structuredBody>
+            <component>
+        <section>
+          <!-- 
+            *****************************************************************
+            Measure Section
+            *****************************************************************
+          -->
+          <!-- This is the templateId for Measure Section -->
+          <templateId root="2.16.840.1.113883.10.20.24.2.2"/>
+          <!-- This is the templateId for Measure Section QDM -->
+          <templateId root="2.16.840.1.113883.10.20.24.2.3"/>
+          <!-- This is the LOINC code for "Measure document". This stays the same for all measure section required by QRDA standard -->
+          <code code="55186-1" codeSystem="2.16.840.1.113883.6.1"/>
+          <title>Measure Section</title>
+          <text>
+            <table border="1" width="100%">
+              <thead>
+                <tr>
+                  <th>eMeasure Title</th>
+                  <th>Version neutral identifier</th>
+                  <th>eMeasure Version Number</th>
+                  <th>Version specific identifier</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Childhood Immunization Status</td>
+                  <td>B2802B7A-3580-4BE8-9458-921AEA62B78C</td>
+                  <td>3</td>
+                  <td>40280381-4555-E1C1-0145-D7C003364261</td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+          </text>
+          <!-- 1..* Organizers, each containing a reference to an eMeasure -->
+          <entry>
+            <organizer classCode="CLUSTER" moodCode="EVN">
+              <!-- This is the templateId for Measure Reference -->
+              <templateId root="2.16.840.1.113883.10.20.24.3.98"/>
+              <!-- This is the templateId for eMeasure Reference QDM -->
+              <templateId root="2.16.840.1.113883.10.20.24.3.97"/>
+              <id extension="40280381-4555-E1C1-0145-D7C003364261"/>
+              <statusCode code="completed"/>
+              <!-- Containing isBranch external references -->
+              <reference typeCode="REFR">
+                <externalDocument classCode="DOC" moodCode="EVN">
+                  <!-- SHALL: This is the version specific identifier for eMeasure: QualityMeasureDocument/id it is a GUID-->
+                  <id root="2.16.840.1.113883.4.738" extension="40280381-4555-E1C1-0145-D7C003364261"/>
+                  <!-- SHOULD This is the title of the eMeasure -->
+                  <text>Childhood Immunization Status</text>
+                  <!-- SHOULD: setId is the eMeasure version neutral id  -->
+                  <setId root="B2802B7A-3580-4BE8-9458-921AEA62B78C"/>
+                  <!-- This is the sequential eMeasure Version number -->
+                  <versionNumber value="3"/>                  
+                </externalDocument>
+              </reference>
+            </organizer>
+          </entry>
+        </section>
+      </component>
+
+            <component>
+        <section>
+          <!-- This is the templateId for Reporting Parameters section -->
+          <templateId root="2.16.840.1.113883.10.20.17.2.1"/>
+          <code code="55187-9" codeSystem="2.16.840.1.113883.6.1"/>
+          <title>Reporting Parameters</title>
+          <text>
+            <list>
+              <item>Reporting period: January 1st, 2013 00:00 - December 31st, 2013 23:59</item>
+            </list>
+          </text>
+          <entry typeCode="DRIV">
+            <act classCode="ACT" moodCode="EVN">
+              <!-- This is the templateId for Reporting Parameteres Act -->
+              <templateId root="2.16.840.1.113883.10.20.17.3.8"/>
+              <id extension="296E5BF61A3BDA711B384B9C82A27BC9" />
+              <code code="252116004" codeSystem="2.16.840.1.113883.6.96" displayName="Observation Parameters"/>
+              <effectiveTime>
+                <low value="20130101000000"/>
+                <high value="20131231235959"/>
+              </effectiveTime>
+            </act>
+          </entry>
+        </section>
+      </component>
+            <component>
+        <section>
+          <!-- This is the templateId for Patient Data section -->
+          <templateId root="2.16.840.1.113883.10.20.17.2.4"/>
+          <!-- This is the templateId for Patient Data QDM section -->
+          <templateId root="2.16.840.1.113883.10.20.24.2.1"/>
+          <code code="55188-7" codeSystem="2.16.840.1.113883.6.1"/>
+          <title>Patient Data</title>
+          <text>
+
+          </text>
+          
+<entry>
+  <act classCode="ACT" moodCode="EVN" >
+    <!-- Medication, Administered template -->
+    <templateId root="2.16.840.1.113883.10.20.24.3.42"/>
+    <id root="1.3.6.1.4.1.115" extension="54f36b146379700b607b0000"/>
+    <code code="416118004" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Administration"/>
+    <statusCode code="completed"/>
+    <effectiveTime xsi:type="IVL_TS">
+      <low value='20110902214115'/>
+      <high value='20110902214115'/>
+    </effectiveTime>
+    <entryRelationship typeCode="COMP">
+      <substanceAdministration classCode="SBADM" moodCode="EVN">
+        <!-- Medication Activity (consolidation) template -->
+        <templateId root="2.16.840.1.113883.10.20.22.4.16"/>
+        <id root="d04e74f0-a278-0132-76ce-404024e80912"/>
+        <text>Medication, Administered: Hemophilus Influenze B (HiB) Vaccine</text>
+        <statusCode code="completed"/>
+        <effectiveTime xsi:type="IVL_TS">
+          <low value='20110902214115'/>
+          <high value='20110902214115'/>
+        </effectiveTime>
+        
+
+        <consumable>
+          <manufacturedProduct classCode="MANU">
+            <!-- Medication Information (consolidation) template -->
+            <templateId root="2.16.840.1.113883.10.20.22.4.23"/>
+            <id root="d04e95e0-a278-0132-76ce-404024e80912"/>
+            <manufacturedMaterial>
+              <code code="120" codeSystem="2.16.840.1.113883.12.292" sdtc:valueSet="2.16.840.1.113883.3.464.1003.196.12.1214"><originalText>Medication, Administered: Hemophilus Influenze B (HiB) Vaccine</originalText></code>
+            </manufacturedMaterial>
+          </manufacturedProduct>
+        </consumable>
+      </substanceAdministration>
+    </entryRelationship>
+    
+  </act>
+</entry>
+<entry>
+  <act classCode="ACT" moodCode="EVN" >
+    <!-- Medication, Administered template -->
+    <templateId root="2.16.840.1.113883.10.20.24.3.42"/>
+    <id root="1.3.6.1.4.1.115" extension="54f36b146379700b607f0000"/>
+    <code code="416118004" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Administration"/>
+    <statusCode code="completed"/>
+    <effectiveTime xsi:type="IVL_TS">
+      <low value='20110902214115'/>
+      <high value='20110902214115'/>
+    </effectiveTime>
+    <entryRelationship typeCode="COMP">
+      <substanceAdministration classCode="SBADM" moodCode="EVN">
+        <!-- Medication Activity (consolidation) template -->
+        <templateId root="2.16.840.1.113883.10.20.22.4.16"/>
+        <id root="d04ed8c0-a278-0132-76ce-404024e80912"/>
+        <text>Medication, Administered: DTaP Vaccine</text>
+        <statusCode code="completed"/>
+        <effectiveTime xsi:type="IVL_TS">
+          <low value='20110902214115'/>
+          <high value='20110902214115'/>
+        </effectiveTime>
+        
+
+        <consumable>
+          <manufacturedProduct classCode="MANU">
+            <!-- Medication Information (consolidation) template -->
+            <templateId root="2.16.840.1.113883.10.20.22.4.23"/>
+            <id root="d04eeaa0-a278-0132-76ce-404024e80912"/>
+            <manufacturedMaterial>
+              <code code="106" codeSystem="2.16.840.1.113883.12.292" sdtc:valueSet="2.16.840.1.113883.3.464.1003.196.12.1214"><originalText>Medication, Administered: DTaP Vaccine</originalText></code>
+            </manufacturedMaterial>
+          </manufacturedProduct>
+        </consumable>
+      </substanceAdministration>
+    </entryRelationship>
+    
+  </act>
+</entry>
+<entry>
+  <act classCode="ACT" moodCode="EVN" >
+    <!-- Medication, Administered template -->
+    <templateId root="2.16.840.1.113883.10.20.24.3.42"/>
+    <id root="1.3.6.1.4.1.115" extension="54f36b146379700b60800000"/>
+    <code code="416118004" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Administration"/>
+    <statusCode code="completed"/>
+    <effectiveTime xsi:type="IVL_TS">
+      <low value='20120302224115'/>
+      <high value='20120302224115'/>
+    </effectiveTime>
+    <entryRelationship typeCode="COMP">
+      <substanceAdministration classCode="SBADM" moodCode="EVN">
+        <!-- Medication Activity (consolidation) template -->
+        <templateId root="2.16.840.1.113883.10.20.22.4.16"/>
+        <id root="d04f2780-a278-0132-76ce-404024e80912"/>
+        <text>Medication, Administered: Hemophilus Influenze B (HiB) Vaccine</text>
+        <statusCode code="completed"/>
+        <effectiveTime xsi:type="IVL_TS">
+          <low value='20120302224115'/>
+          <high value='20120302224115'/>
+        </effectiveTime>
+        
+
+        <consumable>
+          <manufacturedProduct classCode="MANU">
+            <!-- Medication Information (consolidation) template -->
+            <templateId root="2.16.840.1.113883.10.20.22.4.23"/>
+            <id root="d04f3d00-a278-0132-76ce-404024e80912"/>
+            <manufacturedMaterial>
+              <code code="120" codeSystem="2.16.840.1.113883.12.292" sdtc:valueSet="2.16.840.1.113883.3.464.1003.196.12.1214"><originalText>Medication, Administered: Hemophilus Influenze B (HiB) Vaccine</originalText></code>
+            </manufacturedMaterial>
+          </manufacturedProduct>
+        </consumable>
+      </substanceAdministration>
+    </entryRelationship>
+    
+  </act>
+</entry>
+<entry>
+  <act classCode="ACT" moodCode="EVN" >
+    <!-- Medication, Administered template -->
+    <templateId root="2.16.840.1.113883.10.20.24.3.42"/>
+    <id root="1.3.6.1.4.1.115" extension="54f36b146379700b60850000"/>
+    <code code="416118004" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Administration"/>
+    <statusCode code="completed"/>
+    <effectiveTime xsi:type="IVL_TS">
+      <low value='20120302224115'/>
+      <high value='20120302224115'/>
+    </effectiveTime>
+    <entryRelationship typeCode="COMP">
+      <substanceAdministration classCode="SBADM" moodCode="EVN">
+        <!-- Medication Activity (consolidation) template -->
+        <templateId root="2.16.840.1.113883.10.20.22.4.16"/>
+        <id root="d04f71c0-a278-0132-76ce-404024e80912"/>
+        <text>Medication, Administered: DTaP Vaccine</text>
+        <statusCode code="completed"/>
+        <effectiveTime xsi:type="IVL_TS">
+          <low value='20120302224115'/>
+          <high value='20120302224115'/>
+        </effectiveTime>
+        
+
+        <consumable>
+          <manufacturedProduct classCode="MANU">
+            <!-- Medication Information (consolidation) template -->
+            <templateId root="2.16.840.1.113883.10.20.22.4.23"/>
+            <id root="d04f8260-a278-0132-76ce-404024e80912"/>
+            <manufacturedMaterial>
+              <code code="106" codeSystem="2.16.840.1.113883.12.292" sdtc:valueSet="2.16.840.1.113883.3.464.1003.196.12.1214"><originalText>Medication, Administered: DTaP Vaccine</originalText></code>
+            </manufacturedMaterial>
+          </manufacturedProduct>
+        </consumable>
+      </substanceAdministration>
+    </entryRelationship>
+    
+  </act>
+</entry>
+<entry>
+  <act classCode="ACT" moodCode="EVN" >
+    <!-- Medication, Administered template -->
+    <templateId root="2.16.840.1.113883.10.20.24.3.42"/>
+    <id root="1.3.6.1.4.1.115" extension="54f36b146379700b60870000"/>
+    <code code="416118004" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Administration"/>
+    <statusCode code="completed"/>
+    <effectiveTime xsi:type="IVL_TS">
+      <low value='20121202224115'/>
+      <high value='20121202224115'/>
+    </effectiveTime>
+    <entryRelationship typeCode="COMP">
+      <substanceAdministration classCode="SBADM" moodCode="EVN">
+        <!-- Medication Activity (consolidation) template -->
+        <templateId root="2.16.840.1.113883.10.20.22.4.16"/>
+        <id root="d04fb2b0-a278-0132-76ce-404024e80912"/>
+        <text>Medication, Administered: DTaP Vaccine</text>
+        <statusCode code="completed"/>
+        <effectiveTime xsi:type="IVL_TS">
+          <low value='20121202224115'/>
+          <high value='20121202224115'/>
+        </effectiveTime>
+        
+
+        <consumable>
+          <manufacturedProduct classCode="MANU">
+            <!-- Medication Information (consolidation) template -->
+            <templateId root="2.16.840.1.113883.10.20.22.4.23"/>
+            <id root="d04fc360-a278-0132-76ce-404024e80912"/>
+            <manufacturedMaterial>
+              <code code="106" codeSystem="2.16.840.1.113883.12.292" sdtc:valueSet="2.16.840.1.113883.3.464.1003.196.12.1214"><originalText>Medication, Administered: DTaP Vaccine</originalText></code>
+            </manufacturedMaterial>
+          </manufacturedProduct>
+        </consumable>
+      </substanceAdministration>
+    </entryRelationship>
+    
+  </act>
+</entry>
+<entry>
+  <act classCode="ACT" moodCode="EVN" >
+    <!-- Medication, Administered template -->
+    <templateId root="2.16.840.1.113883.10.20.24.3.42"/>
+    <id root="1.3.6.1.4.1.115" extension="54f36b146379700b60880000"/>
+    <code code="416118004" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Administration"/>
+    <statusCode code="completed"/>
+    <effectiveTime xsi:type="IVL_TS">
+      <low value='20121202224115'/>
+      <high value='20121202224115'/>
+    </effectiveTime>
+    <entryRelationship typeCode="COMP">
+      <substanceAdministration classCode="SBADM" moodCode="EVN">
+        <!-- Medication Activity (consolidation) template -->
+        <templateId root="2.16.840.1.113883.10.20.22.4.16"/>
+        <id root="d04ff290-a278-0132-76ce-404024e80912"/>
+        <text>Medication, Administered: Hemophilus Influenze B (HiB) Vaccine</text>
+        <statusCode code="completed"/>
+        <effectiveTime xsi:type="IVL_TS">
+          <low value='20121202224115'/>
+          <high value='20121202224115'/>
+        </effectiveTime>
+        
+
+        <consumable>
+          <manufacturedProduct classCode="MANU">
+            <!-- Medication Information (consolidation) template -->
+            <templateId root="2.16.840.1.113883.10.20.22.4.23"/>
+            <id root="d0500280-a278-0132-76ce-404024e80912"/>
+            <manufacturedMaterial>
+              <code code="120" codeSystem="2.16.840.1.113883.12.292" sdtc:valueSet="2.16.840.1.113883.3.464.1003.196.12.1214"><originalText>Medication, Administered: Hemophilus Influenze B (HiB) Vaccine</originalText></code>
+            </manufacturedMaterial>
+          </manufacturedProduct>
+        </consumable>
+      </substanceAdministration>
+    </entryRelationship>
+    
+  </act>
+</entry>
+<entry>
+  <act classCode="ACT" moodCode="EVN" >
+    <!-- Medication, Administered template -->
+    <templateId root="2.16.840.1.113883.10.20.24.3.42"/>
+    <id root="1.3.6.1.4.1.115" extension="54f36b146379700b60950000"/>
+    <code code="416118004" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Administration"/>
+    <statusCode code="completed"/>
+    <effectiveTime xsi:type="IVL_TS">
+      <low value='20130402214115'/>
+      <high value='20130402214115'/>
+    </effectiveTime>
+    <entryRelationship typeCode="COMP">
+      <substanceAdministration classCode="SBADM" moodCode="EVN">
+        <!-- Medication Activity (consolidation) template -->
+        <templateId root="2.16.840.1.113883.10.20.22.4.16"/>
+        <id root="d0503170-a278-0132-76ce-404024e80912"/>
+        <text>Medication, Administered: Hemophilus Influenze B (HiB) Vaccine</text>
+        <statusCode code="completed"/>
+        <effectiveTime xsi:type="IVL_TS">
+          <low value='20130402214115'/>
+          <high value='20130402214115'/>
+        </effectiveTime>
+        
+
+        <consumable>
+          <manufacturedProduct classCode="MANU">
+            <!-- Medication Information (consolidation) template -->
+            <templateId root="2.16.840.1.113883.10.20.22.4.23"/>
+            <id root="d0504230-a278-0132-76ce-404024e80912"/>
+            <manufacturedMaterial>
+              <code code="120" codeSystem="2.16.840.1.113883.12.292" sdtc:valueSet="2.16.840.1.113883.3.464.1003.196.12.1214"><originalText>Medication, Administered: Hemophilus Influenze B (HiB) Vaccine</originalText></code>
+            </manufacturedMaterial>
+          </manufacturedProduct>
+        </consumable>
+      </substanceAdministration>
+    </entryRelationship>
+    
+  </act>
+</entry>
+<entry>
+  <act classCode="ACT" moodCode="EVN" >
+    <!-- Medication, Administered template -->
+    <templateId root="2.16.840.1.113883.10.20.24.3.42"/>
+    <id root="1.3.6.1.4.1.115" extension="54f36b146379700b60970000"/>
+    <code code="416118004" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Administration"/>
+    <statusCode code="completed"/>
+    <effectiveTime xsi:type="IVL_TS">
+      <low value='20130402214115'/>
+      <high value='20130402214115'/>
+    </effectiveTime>
+    <entryRelationship typeCode="COMP">
+      <substanceAdministration classCode="SBADM" moodCode="EVN">
+        <!-- Medication Activity (consolidation) template -->
+        <templateId root="2.16.840.1.113883.10.20.22.4.16"/>
+        <id root="d0508630-a278-0132-76ce-404024e80912"/>
+        <text>Medication, Administered: DTaP Vaccine</text>
+        <statusCode code="completed"/>
+        <effectiveTime xsi:type="IVL_TS">
+          <low value='20130402214115'/>
+          <high value='20130402214115'/>
+        </effectiveTime>
+        
+
+        <consumable>
+          <manufacturedProduct classCode="MANU">
+            <!-- Medication Information (consolidation) template -->
+            <templateId root="2.16.840.1.113883.10.20.22.4.23"/>
+            <id root="d05099e0-a278-0132-76ce-404024e80912"/>
+            <manufacturedMaterial>
+              <code code="106" codeSystem="2.16.840.1.113883.12.292" sdtc:valueSet="2.16.840.1.113883.3.464.1003.196.12.1214"><originalText>Medication, Administered: DTaP Vaccine</originalText></code>
+            </manufacturedMaterial>
+          </manufacturedProduct>
+        </consumable>
+      </substanceAdministration>
+    </entryRelationship>
+    
+  </act>
+</entry>
+
+<entry>
+  <act classCode="ACT" moodCode="EVN" >
+    <!-- Medication, Administered template -->
+    <templateId root="2.16.840.1.113883.10.20.24.3.42"/>
+    <id root="1.3.6.1.4.1.115" extension="54f36b146379700b607b0000"/>
+    <code code="416118004" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Administration"/>
+    <statusCode code="completed"/>
+    <effectiveTime xsi:type="IVL_TS">
+      <low value='20110902214115'/>
+      <high value='20110902214115'/>
+    </effectiveTime>
+    <entryRelationship typeCode="COMP">
+      <substanceAdministration classCode="SBADM" moodCode="EVN">
+        <!-- Medication Activity (consolidation) template -->
+        <templateId root="2.16.840.1.113883.10.20.22.4.16"/>
+        <id root="d0512f60-a278-0132-76ce-404024e80912"/>
+        <text>Medication, Administered: Hemophilus Influenze B (HiB) Vaccine</text>
+        <statusCode code="completed"/>
+        <effectiveTime xsi:type="IVL_TS">
+          <low value='20110902214115'/>
+          <high value='20110902214115'/>
+        </effectiveTime>
+        
+
+        <consumable>
+          <manufacturedProduct classCode="MANU">
+            <!-- Medication Information (consolidation) template -->
+            <templateId root="2.16.840.1.113883.10.20.22.4.23"/>
+            <id root="d0514290-a278-0132-76ce-404024e80912"/>
+            <manufacturedMaterial>
+              <code code="120" codeSystem="2.16.840.1.113883.12.292" sdtc:valueSet="2.16.840.1.113883.3.464.1003.196.12.1217"><originalText>Medication, Administered: Hemophilus Influenze B (HiB) Vaccine</originalText></code>
+            </manufacturedMaterial>
+          </manufacturedProduct>
+        </consumable>
+      </substanceAdministration>
+    </entryRelationship>
+    
+  </act>
+</entry>
+<entry>
+  <act classCode="ACT" moodCode="EVN" >
+    <!-- Medication, Administered template -->
+    <templateId root="2.16.840.1.113883.10.20.24.3.42"/>
+    <id root="1.3.6.1.4.1.115" extension="54f36b146379700b60800000"/>
+    <code code="416118004" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Administration"/>
+    <statusCode code="completed"/>
+    <effectiveTime xsi:type="IVL_TS">
+      <low value='20120302224115'/>
+      <high value='20120302224115'/>
+    </effectiveTime>
+    <entryRelationship typeCode="COMP">
+      <substanceAdministration classCode="SBADM" moodCode="EVN">
+        <!-- Medication Activity (consolidation) template -->
+        <templateId root="2.16.840.1.113883.10.20.22.4.16"/>
+        <id root="d0517dc0-a278-0132-76ce-404024e80912"/>
+        <text>Medication, Administered: Hemophilus Influenze B (HiB) Vaccine</text>
+        <statusCode code="completed"/>
+        <effectiveTime xsi:type="IVL_TS">
+          <low value='20120302224115'/>
+          <high value='20120302224115'/>
+        </effectiveTime>
+        
+
+        <consumable>
+          <manufacturedProduct classCode="MANU">
+            <!-- Medication Information (consolidation) template -->
+            <templateId root="2.16.840.1.113883.10.20.22.4.23"/>
+            <id root="d0518e00-a278-0132-76ce-404024e80912"/>
+            <manufacturedMaterial>
+              <code code="120" codeSystem="2.16.840.1.113883.12.292" sdtc:valueSet="2.16.840.1.113883.3.464.1003.196.12.1217"><originalText>Medication, Administered: Hemophilus Influenze B (HiB) Vaccine</originalText></code>
+            </manufacturedMaterial>
+          </manufacturedProduct>
+        </consumable>
+      </substanceAdministration>
+    </entryRelationship>
+    
+  </act>
+</entry>
+<entry>
+  <act classCode="ACT" moodCode="EVN" >
+    <!-- Medication, Administered template -->
+    <templateId root="2.16.840.1.113883.10.20.24.3.42"/>
+    <id root="1.3.6.1.4.1.115" extension="54f36b146379700b60880000"/>
+    <code code="416118004" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Administration"/>
+    <statusCode code="completed"/>
+    <effectiveTime xsi:type="IVL_TS">
+      <low value='20121202224115'/>
+      <high value='20121202224115'/>
+    </effectiveTime>
+    <entryRelationship typeCode="COMP">
+      <substanceAdministration classCode="SBADM" moodCode="EVN">
+        <!-- Medication Activity (consolidation) template -->
+        <templateId root="2.16.840.1.113883.10.20.22.4.16"/>
+        <id root="d051bec0-a278-0132-76ce-404024e80912"/>
+        <text>Medication, Administered: Hemophilus Influenze B (HiB) Vaccine</text>
+        <statusCode code="completed"/>
+        <effectiveTime xsi:type="IVL_TS">
+          <low value='20121202224115'/>
+          <high value='20121202224115'/>
+        </effectiveTime>
+        
+
+        <consumable>
+          <manufacturedProduct classCode="MANU">
+            <!-- Medication Information (consolidation) template -->
+            <templateId root="2.16.840.1.113883.10.20.22.4.23"/>
+            <id root="d051cea0-a278-0132-76ce-404024e80912"/>
+            <manufacturedMaterial>
+              <code code="120" codeSystem="2.16.840.1.113883.12.292" sdtc:valueSet="2.16.840.1.113883.3.464.1003.196.12.1217"><originalText>Medication, Administered: Hemophilus Influenze B (HiB) Vaccine</originalText></code>
+            </manufacturedMaterial>
+          </manufacturedProduct>
+        </consumable>
+      </substanceAdministration>
+    </entryRelationship>
+    
+  </act>
+</entry>
+<entry>
+  <act classCode="ACT" moodCode="EVN" >
+    <!-- Medication, Administered template -->
+    <templateId root="2.16.840.1.113883.10.20.24.3.42"/>
+    <id root="1.3.6.1.4.1.115" extension="54f36b146379700b60950000"/>
+    <code code="416118004" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Administration"/>
+    <statusCode code="completed"/>
+    <effectiveTime xsi:type="IVL_TS">
+      <low value='20130402214115'/>
+      <high value='20130402214115'/>
+    </effectiveTime>
+    <entryRelationship typeCode="COMP">
+      <substanceAdministration classCode="SBADM" moodCode="EVN">
+        <!-- Medication Activity (consolidation) template -->
+        <templateId root="2.16.840.1.113883.10.20.22.4.16"/>
+        <id root="d051fdc0-a278-0132-76ce-404024e80912"/>
+        <text>Medication, Administered: Hemophilus Influenze B (HiB) Vaccine</text>
+        <statusCode code="completed"/>
+        <effectiveTime xsi:type="IVL_TS">
+          <low value='20130402214115'/>
+          <high value='20130402214115'/>
+        </effectiveTime>
+        
+
+        <consumable>
+          <manufacturedProduct classCode="MANU">
+            <!-- Medication Information (consolidation) template -->
+            <templateId root="2.16.840.1.113883.10.20.22.4.23"/>
+            <id root="d0520da0-a278-0132-76ce-404024e80912"/>
+            <manufacturedMaterial>
+              <code code="120" codeSystem="2.16.840.1.113883.12.292" sdtc:valueSet="2.16.840.1.113883.3.464.1003.196.12.1217"><originalText>Medication, Administered: Hemophilus Influenze B (HiB) Vaccine</originalText></code>
+            </manufacturedMaterial>
+          </manufacturedProduct>
+        </consumable>
+      </substanceAdministration>
+    </entryRelationship>
+    
+  </act>
+</entry>
+
+<entry>
+  <act classCode="ACT" moodCode="EVN" >
+    <!-- Medication, Administered template -->
+    <templateId root="2.16.840.1.113883.10.20.24.3.42"/>
+    <id root="1.3.6.1.4.1.115" extension="54f36b146379700b607d0000"/>
+    <code code="416118004" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Administration"/>
+    <statusCode code="completed"/>
+    <effectiveTime xsi:type="IVL_TS">
+      <low value='20110902214115'/>
+      <high value='20110902214115'/>
+    </effectiveTime>
+    <entryRelationship typeCode="COMP">
+      <substanceAdministration classCode="SBADM" moodCode="EVN">
+        <!-- Medication Activity (consolidation) template -->
+        <templateId root="2.16.840.1.113883.10.20.22.4.16"/>
+        <id root="d0526cf0-a278-0132-76ce-404024e80912"/>
+        <text>Medication, Administered: Hepatitis B Vaccine</text>
+        <statusCode code="completed"/>
+        <effectiveTime xsi:type="IVL_TS">
+          <low value='20110902214115'/>
+          <high value='20110902214115'/>
+        </effectiveTime>
+        
+
+        <consumable>
+          <manufacturedProduct classCode="MANU">
+            <!-- Medication Information (consolidation) template -->
+            <templateId root="2.16.840.1.113883.10.20.22.4.23"/>
+            <id root="d0527d50-a278-0132-76ce-404024e80912"/>
+            <manufacturedMaterial>
+              <code code="08" codeSystem="2.16.840.1.113883.12.292" sdtc:valueSet="2.16.840.1.113883.3.464.1003.196.12.1216"><originalText>Medication, Administered: Hepatitis B Vaccine</originalText></code>
+            </manufacturedMaterial>
+          </manufacturedProduct>
+        </consumable>
+      </substanceAdministration>
+    </entryRelationship>
+    
+  </act>
+</entry>
+<entry>
+  <act classCode="ACT" moodCode="EVN" >
+    <!-- Medication, Administered template -->
+    <templateId root="2.16.840.1.113883.10.20.24.3.42"/>
+    <id root="1.3.6.1.4.1.115" extension="54f36b146379700b60860000"/>
+    <code code="416118004" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Administration"/>
+    <statusCode code="completed"/>
+    <effectiveTime xsi:type="IVL_TS">
+      <low value='20120302224115'/>
+      <high value='20120302224115'/>
+    </effectiveTime>
+    <entryRelationship typeCode="COMP">
+      <substanceAdministration classCode="SBADM" moodCode="EVN">
+        <!-- Medication Activity (consolidation) template -->
+        <templateId root="2.16.840.1.113883.10.20.22.4.16"/>
+        <id root="d052add0-a278-0132-76ce-404024e80912"/>
+        <text>Medication, Administered: Hepatitis B Vaccine</text>
+        <statusCode code="completed"/>
+        <effectiveTime xsi:type="IVL_TS">
+          <low value='20120302224115'/>
+          <high value='20120302224115'/>
+        </effectiveTime>
+        
+
+        <consumable>
+          <manufacturedProduct classCode="MANU">
+            <!-- Medication Information (consolidation) template -->
+            <templateId root="2.16.840.1.113883.10.20.22.4.23"/>
+            <id root="d052bf40-a278-0132-76ce-404024e80912"/>
+            <manufacturedMaterial>
+              <code code="08" codeSystem="2.16.840.1.113883.12.292" sdtc:valueSet="2.16.840.1.113883.3.464.1003.196.12.1216"><originalText>Medication, Administered: Hepatitis B Vaccine</originalText></code>
+            </manufacturedMaterial>
+          </manufacturedProduct>
+        </consumable>
+      </substanceAdministration>
+    </entryRelationship>
+    
+  </act>
+</entry>
+<entry>
+  <act classCode="ACT" moodCode="EVN" >
+    <!-- Medication, Administered template -->
+    <templateId root="2.16.840.1.113883.10.20.24.3.42"/>
+    <id root="1.3.6.1.4.1.115" extension="54f36b146379700b608b0000"/>
+    <code code="416118004" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Administration"/>
+    <statusCode code="completed"/>
+    <effectiveTime xsi:type="IVL_TS">
+      <low value='20121202224115'/>
+      <high value='20121202224115'/>
+    </effectiveTime>
+    <entryRelationship typeCode="COMP">
+      <substanceAdministration classCode="SBADM" moodCode="EVN">
+        <!-- Medication Activity (consolidation) template -->
+        <templateId root="2.16.840.1.113883.10.20.22.4.16"/>
+        <id root="d052ee20-a278-0132-76ce-404024e80912"/>
+        <text>Medication, Administered: Hepatitis B Vaccine</text>
+        <statusCode code="completed"/>
+        <effectiveTime xsi:type="IVL_TS">
+          <low value='20121202224115'/>
+          <high value='20121202224115'/>
+        </effectiveTime>
+        
+
+        <consumable>
+          <manufacturedProduct classCode="MANU">
+            <!-- Medication Information (consolidation) template -->
+            <templateId root="2.16.840.1.113883.10.20.22.4.23"/>
+            <id root="d052fdf0-a278-0132-76ce-404024e80912"/>
+            <manufacturedMaterial>
+              <code code="08" codeSystem="2.16.840.1.113883.12.292" sdtc:valueSet="2.16.840.1.113883.3.464.1003.196.12.1216"><originalText>Medication, Administered: Hepatitis B Vaccine</originalText></code>
+            </manufacturedMaterial>
+          </manufacturedProduct>
+        </consumable>
+      </substanceAdministration>
+    </entryRelationship>
+    
+  </act>
+</entry>
+<entry>
+  <act classCode="ACT" moodCode="EVN" >
+    <!-- Medication, Administered template -->
+    <templateId root="2.16.840.1.113883.10.20.24.3.42"/>
+    <id root="1.3.6.1.4.1.115" extension="54f36b146379700b60900000"/>
+    <code code="416118004" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Administration"/>
+    <statusCode code="completed"/>
+    <effectiveTime xsi:type="IVL_TS">
+      <low value='20130402214115'/>
+      <high value='20130402214115'/>
+    </effectiveTime>
+    <entryRelationship typeCode="COMP">
+      <substanceAdministration classCode="SBADM" moodCode="EVN">
+        <!-- Medication Activity (consolidation) template -->
+        <templateId root="2.16.840.1.113883.10.20.22.4.16"/>
+        <id root="d0532db0-a278-0132-76ce-404024e80912"/>
+        <text>Medication, Administered: Hepatitis B Vaccine</text>
+        <statusCode code="completed"/>
+        <effectiveTime xsi:type="IVL_TS">
+          <low value='20130402214115'/>
+          <high value='20130402214115'/>
+        </effectiveTime>
+        
+
+        <consumable>
+          <manufacturedProduct classCode="MANU">
+            <!-- Medication Information (consolidation) template -->
+            <templateId root="2.16.840.1.113883.10.20.22.4.23"/>
+            <id root="d0533db0-a278-0132-76ce-404024e80912"/>
+            <manufacturedMaterial>
+              <code code="08" codeSystem="2.16.840.1.113883.12.292" sdtc:valueSet="2.16.840.1.113883.3.464.1003.196.12.1216"><originalText>Medication, Administered: Hepatitis B Vaccine</originalText></code>
+            </manufacturedMaterial>
+          </manufacturedProduct>
+        </consumable>
+      </substanceAdministration>
+    </entryRelationship>
+    
+  </act>
+</entry>
+<entry>
+  <act classCode="ACT" moodCode="EVN" >
+    <!-- Medication, Administered template -->
+    <templateId root="2.16.840.1.113883.10.20.24.3.42"/>
+    <id root="1.3.6.1.4.1.115" extension="54f36b146379700b60940000"/>
+    <code code="416118004" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Administration"/>
+    <statusCode code="completed"/>
+    <effectiveTime xsi:type="IVL_TS">
+      <low value='20130402214115'/>
+      <high value='20130402214115'/>
+    </effectiveTime>
+    <entryRelationship typeCode="COMP">
+      <substanceAdministration classCode="SBADM" moodCode="EVN">
+        <!-- Medication Activity (consolidation) template -->
+        <templateId root="2.16.840.1.113883.10.20.22.4.16"/>
+        <id root="d0536e20-a278-0132-76ce-404024e80912"/>
+        <text>Medication, Administered: Hepatitis A Vaccine</text>
+        <statusCode code="completed"/>
+        <effectiveTime xsi:type="IVL_TS">
+          <low value='20130402214115'/>
+          <high value='20130402214115'/>
+        </effectiveTime>
+        
+
+        <consumable>
+          <manufacturedProduct classCode="MANU">
+            <!-- Medication Information (consolidation) template -->
+            <templateId root="2.16.840.1.113883.10.20.22.4.23"/>
+            <id root="d0537e50-a278-0132-76ce-404024e80912"/>
+            <manufacturedMaterial>
+              <code code="104" codeSystem="2.16.840.1.113883.12.292" sdtc:valueSet="2.16.840.1.113883.3.464.1003.196.12.1216"><originalText>Medication, Administered: Hepatitis A Vaccine</originalText></code>
+            </manufacturedMaterial>
+          </manufacturedProduct>
+        </consumable>
+      </substanceAdministration>
+    </entryRelationship>
+    
+  </act>
+</entry>
+
+<entry>
+  <act classCode="ACT" moodCode="EVN" >
+    <!-- Medication, Administered template -->
+    <templateId root="2.16.840.1.113883.10.20.24.3.42"/>
+    <id root="1.3.6.1.4.1.115" extension="54f36b146379700b607e0000"/>
+    <code code="416118004" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Administration"/>
+    <statusCode code="completed"/>
+    <effectiveTime xsi:type="IVL_TS">
+      <low value='20110902214115'/>
+      <high value='20110902214115'/>
+    </effectiveTime>
+    <entryRelationship typeCode="COMP">
+      <substanceAdministration classCode="SBADM" moodCode="EVN">
+        <!-- Medication Activity (consolidation) template -->
+        <templateId root="2.16.840.1.113883.10.20.22.4.16"/>
+        <id root="d053d780-a278-0132-76ce-404024e80912"/>
+        <text>Medication, Administered: Inactivated Polio Vaccine (IPV)</text>
+        <statusCode code="completed"/>
+        <effectiveTime xsi:type="IVL_TS">
+          <low value='20110902214115'/>
+          <high value='20110902214115'/>
+        </effectiveTime>
+        
+
+        <consumable>
+          <manufacturedProduct classCode="MANU">
+            <!-- Medication Information (consolidation) template -->
+            <templateId root="2.16.840.1.113883.10.20.22.4.23"/>
+            <id root="d053e7d0-a278-0132-76ce-404024e80912"/>
+            <manufacturedMaterial>
+              <code code="10" codeSystem="2.16.840.1.113883.12.292" sdtc:valueSet="2.16.840.1.113883.3.464.1003.196.12.1219"><originalText>Medication, Administered: Inactivated Polio Vaccine (IPV)</originalText></code>
+            </manufacturedMaterial>
+          </manufacturedProduct>
+        </consumable>
+      </substanceAdministration>
+    </entryRelationship>
+    
+  </act>
+</entry>
+<entry>
+  <act classCode="ACT" moodCode="EVN" >
+    <!-- Medication, Administered template -->
+    <templateId root="2.16.840.1.113883.10.20.24.3.42"/>
+    <id root="1.3.6.1.4.1.115" extension="54f36b146379700b60830000"/>
+    <code code="416118004" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Administration"/>
+    <statusCode code="completed"/>
+    <effectiveTime xsi:type="IVL_TS">
+      <low value='20120302224115'/>
+      <high value='20120302224115'/>
+    </effectiveTime>
+    <entryRelationship typeCode="COMP">
+      <substanceAdministration classCode="SBADM" moodCode="EVN">
+        <!-- Medication Activity (consolidation) template -->
+        <templateId root="2.16.840.1.113883.10.20.22.4.16"/>
+        <id root="d0541780-a278-0132-76ce-404024e80912"/>
+        <text>Medication, Administered: Inactivated Polio Vaccine (IPV)</text>
+        <statusCode code="completed"/>
+        <effectiveTime xsi:type="IVL_TS">
+          <low value='20120302224115'/>
+          <high value='20120302224115'/>
+        </effectiveTime>
+        
+
+        <consumable>
+          <manufacturedProduct classCode="MANU">
+            <!-- Medication Information (consolidation) template -->
+            <templateId root="2.16.840.1.113883.10.20.22.4.23"/>
+            <id root="d0542800-a278-0132-76ce-404024e80912"/>
+            <manufacturedMaterial>
+              <code code="10" codeSystem="2.16.840.1.113883.12.292" sdtc:valueSet="2.16.840.1.113883.3.464.1003.196.12.1219"><originalText>Medication, Administered: Inactivated Polio Vaccine (IPV)</originalText></code>
+            </manufacturedMaterial>
+          </manufacturedProduct>
+        </consumable>
+      </substanceAdministration>
+    </entryRelationship>
+    
+  </act>
+</entry>
+<entry>
+  <act classCode="ACT" moodCode="EVN" >
+    <!-- Medication, Administered template -->
+    <templateId root="2.16.840.1.113883.10.20.24.3.42"/>
+    <id root="1.3.6.1.4.1.115" extension="54f36b146379700b60890000"/>
+    <code code="416118004" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Administration"/>
+    <statusCode code="completed"/>
+    <effectiveTime xsi:type="IVL_TS">
+      <low value='20121202224115'/>
+      <high value='20121202224115'/>
+    </effectiveTime>
+    <entryRelationship typeCode="COMP">
+      <substanceAdministration classCode="SBADM" moodCode="EVN">
+        <!-- Medication Activity (consolidation) template -->
+        <templateId root="2.16.840.1.113883.10.20.22.4.16"/>
+        <id root="d05455e0-a278-0132-76ce-404024e80912"/>
+        <text>Medication, Administered: Inactivated Polio Vaccine (IPV)</text>
+        <statusCode code="completed"/>
+        <effectiveTime xsi:type="IVL_TS">
+          <low value='20121202224115'/>
+          <high value='20121202224115'/>
+        </effectiveTime>
+        
+
+        <consumable>
+          <manufacturedProduct classCode="MANU">
+            <!-- Medication Information (consolidation) template -->
+            <templateId root="2.16.840.1.113883.10.20.22.4.23"/>
+            <id root="d05465c0-a278-0132-76ce-404024e80912"/>
+            <manufacturedMaterial>
+              <code code="10" codeSystem="2.16.840.1.113883.12.292" sdtc:valueSet="2.16.840.1.113883.3.464.1003.196.12.1219"><originalText>Medication, Administered: Inactivated Polio Vaccine (IPV)</originalText></code>
+            </manufacturedMaterial>
+          </manufacturedProduct>
+        </consumable>
+      </substanceAdministration>
+    </entryRelationship>
+    
+  </act>
+</entry>
+<entry>
+  <act classCode="ACT" moodCode="EVN" >
+    <!-- Medication, Administered template -->
+    <templateId root="2.16.840.1.113883.10.20.24.3.42"/>
+    <id root="1.3.6.1.4.1.115" extension="54f36b146379700b608e0000"/>
+    <code code="416118004" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Administration"/>
+    <statusCode code="completed"/>
+    <effectiveTime xsi:type="IVL_TS">
+      <low value='20130302224115'/>
+      <high value='20130302224115'/>
+    </effectiveTime>
+    <entryRelationship typeCode="COMP">
+      <substanceAdministration classCode="SBADM" moodCode="EVN">
+        <!-- Medication Activity (consolidation) template -->
+        <templateId root="2.16.840.1.113883.10.20.22.4.16"/>
+        <id root="d0549570-a278-0132-76ce-404024e80912"/>
+        <text>Medication, Administered: Inactivated Polio Vaccine (IPV)</text>
+        <statusCode code="completed"/>
+        <effectiveTime xsi:type="IVL_TS">
+          <low value='20130302224115'/>
+          <high value='20130302224115'/>
+        </effectiveTime>
+        
+
+        <consumable>
+          <manufacturedProduct classCode="MANU">
+            <!-- Medication Information (consolidation) template -->
+            <templateId root="2.16.840.1.113883.10.20.22.4.23"/>
+            <id root="d054a5e0-a278-0132-76ce-404024e80912"/>
+            <manufacturedMaterial>
+              <code code="10" codeSystem="2.16.840.1.113883.12.292" sdtc:valueSet="2.16.840.1.113883.3.464.1003.196.12.1219"><originalText>Medication, Administered: Inactivated Polio Vaccine (IPV)</originalText></code>
+            </manufacturedMaterial>
+          </manufacturedProduct>
+        </consumable>
+      </substanceAdministration>
+    </entryRelationship>
+    
+  </act>
+</entry>
+
+<entry>
+  <act classCode="ACT" moodCode="EVN" >
+    <!-- Medication, Administered template -->
+    <templateId root="2.16.840.1.113883.10.20.24.3.42"/>
+    <id root="1.3.6.1.4.1.115" extension="54f36b146379700b60820000"/>
+    <code code="416118004" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Administration"/>
+    <statusCode code="completed"/>
+    <effectiveTime xsi:type="IVL_TS">
+      <low value='20120302224115'/>
+      <high value='20120302224115'/>
+    </effectiveTime>
+    <entryRelationship typeCode="COMP">
+      <substanceAdministration classCode="SBADM" moodCode="EVN">
+        <!-- Medication Activity (consolidation) template -->
+        <templateId root="2.16.840.1.113883.10.20.22.4.16"/>
+        <id root="d054ff80-a278-0132-76ce-404024e80912"/>
+        <text>Medication, Administered: Influenza Vaccine</text>
+        <statusCode code="completed"/>
+        <effectiveTime xsi:type="IVL_TS">
+          <low value='20120302224115'/>
+          <high value='20120302224115'/>
+        </effectiveTime>
+        
+
+        <consumable>
+          <manufacturedProduct classCode="MANU">
+            <!-- Medication Information (consolidation) template -->
+            <templateId root="2.16.840.1.113883.10.20.22.4.23"/>
+            <id root="d0550f80-a278-0132-76ce-404024e80912"/>
+            <manufacturedMaterial>
+              <code code="140" codeSystem="2.16.840.1.113883.12.292" sdtc:valueSet="2.16.840.1.113883.3.464.1003.196.12.1218"><originalText>Medication, Administered: Influenza Vaccine</originalText></code>
+            </manufacturedMaterial>
+          </manufacturedProduct>
+        </consumable>
+      </substanceAdministration>
+    </entryRelationship>
+    
+  </act>
+</entry>
+<entry>
+  <act classCode="ACT" moodCode="EVN" >
+    <!-- Medication, Administered template -->
+    <templateId root="2.16.840.1.113883.10.20.24.3.42"/>
+    <id root="1.3.6.1.4.1.115" extension="54f36b146379700b608c0000"/>
+    <code code="416118004" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Administration"/>
+    <statusCode code="completed"/>
+    <effectiveTime xsi:type="IVL_TS">
+      <low value='20121202224115'/>
+      <high value='20121202224115'/>
+    </effectiveTime>
+    <entryRelationship typeCode="COMP">
+      <substanceAdministration classCode="SBADM" moodCode="EVN">
+        <!-- Medication Activity (consolidation) template -->
+        <templateId root="2.16.840.1.113883.10.20.22.4.16"/>
+        <id root="d0553fb0-a278-0132-76ce-404024e80912"/>
+        <text>Medication, Administered: Influenza Vaccine</text>
+        <statusCode code="completed"/>
+        <effectiveTime xsi:type="IVL_TS">
+          <low value='20121202224115'/>
+          <high value='20121202224115'/>
+        </effectiveTime>
+        
+
+        <consumable>
+          <manufacturedProduct classCode="MANU">
+            <!-- Medication Information (consolidation) template -->
+            <templateId root="2.16.840.1.113883.10.20.22.4.23"/>
+            <id root="d0554fd0-a278-0132-76ce-404024e80912"/>
+            <manufacturedMaterial>
+              <code code="140" codeSystem="2.16.840.1.113883.12.292" sdtc:valueSet="2.16.840.1.113883.3.464.1003.196.12.1218"><originalText>Medication, Administered: Influenza Vaccine</originalText></code>
+            </manufacturedMaterial>
+          </manufacturedProduct>
+        </consumable>
+      </substanceAdministration>
+    </entryRelationship>
+    
+  </act>
+</entry>
+<entry>
+  <act classCode="ACT" moodCode="EVN" >
+    <!-- Medication, Administered template -->
+    <templateId root="2.16.840.1.113883.10.20.24.3.42"/>
+    <id root="1.3.6.1.4.1.115" extension="54f36b146379700b60910000"/>
+    <code code="416118004" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Administration"/>
+    <statusCode code="completed"/>
+    <effectiveTime xsi:type="IVL_TS">
+      <low value='20130402214115'/>
+      <high value='20130402214115'/>
+    </effectiveTime>
+    <entryRelationship typeCode="COMP">
+      <substanceAdministration classCode="SBADM" moodCode="EVN">
+        <!-- Medication Activity (consolidation) template -->
+        <templateId root="2.16.840.1.113883.10.20.22.4.16"/>
+        <id root="d0557ee0-a278-0132-76ce-404024e80912"/>
+        <text>Medication, Administered: Influenza Vaccine</text>
+        <statusCode code="completed"/>
+        <effectiveTime xsi:type="IVL_TS">
+          <low value='20130402214115'/>
+          <high value='20130402214115'/>
+        </effectiveTime>
+        
+
+        <consumable>
+          <manufacturedProduct classCode="MANU">
+            <!-- Medication Information (consolidation) template -->
+            <templateId root="2.16.840.1.113883.10.20.22.4.23"/>
+            <id root="d0558f30-a278-0132-76ce-404024e80912"/>
+            <manufacturedMaterial>
+              <code code="140" codeSystem="2.16.840.1.113883.12.292" sdtc:valueSet="2.16.840.1.113883.3.464.1003.196.12.1218"><originalText>Medication, Administered: Influenza Vaccine</originalText></code>
+            </manufacturedMaterial>
+          </manufacturedProduct>
+        </consumable>
+      </substanceAdministration>
+    </entryRelationship>
+    
+  </act>
+</entry>
+
+<entry>
+  <act classCode="ACT" moodCode="EVN" >
+    <!-- Medication, Administered template -->
+    <templateId root="2.16.840.1.113883.10.20.24.3.42"/>
+    <id root="1.3.6.1.4.1.115" extension="54f36b146379700b607c0000"/>
+    <code code="416118004" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Administration"/>
+    <statusCode code="completed"/>
+    <effectiveTime xsi:type="IVL_TS">
+      <low value='20110902214115'/>
+      <high value='20110902214115'/>
+    </effectiveTime>
+    <entryRelationship typeCode="COMP">
+      <substanceAdministration classCode="SBADM" moodCode="EVN">
+        <!-- Medication Activity (consolidation) template -->
+        <templateId root="2.16.840.1.113883.10.20.22.4.16"/>
+        <id root="d055f410-a278-0132-76ce-404024e80912"/>
+        <text>Medication, Administered: Pneumococcal Conjugate Vaccine</text>
+        <statusCode code="completed"/>
+        <effectiveTime xsi:type="IVL_TS">
+          <low value='20110902214115'/>
+          <high value='20110902214115'/>
+        </effectiveTime>
+        
+
+        <consumable>
+          <manufacturedProduct classCode="MANU">
+            <!-- Medication Information (consolidation) template -->
+            <templateId root="2.16.840.1.113883.10.20.22.4.23"/>
+            <id root="d0560600-a278-0132-76ce-404024e80912"/>
+            <manufacturedMaterial>
+              <code code="100" codeSystem="2.16.840.1.113883.12.292" sdtc:valueSet="2.16.840.1.113883.3.464.1003.196.12.1221"><originalText>Medication, Administered: Pneumococcal Conjugate Vaccine</originalText></code>
+            </manufacturedMaterial>
+          </manufacturedProduct>
+        </consumable>
+      </substanceAdministration>
+    </entryRelationship>
+    
+  </act>
+</entry>
+<entry>
+  <act classCode="ACT" moodCode="EVN" >
+    <!-- Medication, Administered template -->
+    <templateId root="2.16.840.1.113883.10.20.24.3.42"/>
+    <id root="1.3.6.1.4.1.115" extension="54f36b146379700b60810000"/>
+    <code code="416118004" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Administration"/>
+    <statusCode code="completed"/>
+    <effectiveTime xsi:type="IVL_TS">
+      <low value='20120302224115'/>
+      <high value='20120302224115'/>
+    </effectiveTime>
+    <entryRelationship typeCode="COMP">
+      <substanceAdministration classCode="SBADM" moodCode="EVN">
+        <!-- Medication Activity (consolidation) template -->
+        <templateId root="2.16.840.1.113883.10.20.22.4.16"/>
+        <id root="d0563600-a278-0132-76ce-404024e80912"/>
+        <text>Medication, Administered: Pneumococcal Conjugate Vaccine</text>
+        <statusCode code="completed"/>
+        <effectiveTime xsi:type="IVL_TS">
+          <low value='20120302224115'/>
+          <high value='20120302224115'/>
+        </effectiveTime>
+        
+
+        <consumable>
+          <manufacturedProduct classCode="MANU">
+            <!-- Medication Information (consolidation) template -->
+            <templateId root="2.16.840.1.113883.10.20.22.4.23"/>
+            <id root="d0564660-a278-0132-76ce-404024e80912"/>
+            <manufacturedMaterial>
+              <code code="100" codeSystem="2.16.840.1.113883.12.292" sdtc:valueSet="2.16.840.1.113883.3.464.1003.196.12.1221"><originalText>Medication, Administered: Pneumococcal Conjugate Vaccine</originalText></code>
+            </manufacturedMaterial>
+          </manufacturedProduct>
+        </consumable>
+      </substanceAdministration>
+    </entryRelationship>
+    
+  </act>
+</entry>
+<entry>
+  <act classCode="ACT" moodCode="EVN" >
+    <!-- Medication, Administered template -->
+    <templateId root="2.16.840.1.113883.10.20.24.3.42"/>
+    <id root="1.3.6.1.4.1.115" extension="54f36b146379700b608a0000"/>
+    <code code="416118004" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Administration"/>
+    <statusCode code="completed"/>
+    <effectiveTime xsi:type="IVL_TS">
+      <low value='20121202224115'/>
+      <high value='20121202224115'/>
+    </effectiveTime>
+    <entryRelationship typeCode="COMP">
+      <substanceAdministration classCode="SBADM" moodCode="EVN">
+        <!-- Medication Activity (consolidation) template -->
+        <templateId root="2.16.840.1.113883.10.20.22.4.16"/>
+        <id root="d0567700-a278-0132-76ce-404024e80912"/>
+        <text>Medication, Administered: Pneumococcal Conjugate Vaccine</text>
+        <statusCode code="completed"/>
+        <effectiveTime xsi:type="IVL_TS">
+          <low value='20121202224115'/>
+          <high value='20121202224115'/>
+        </effectiveTime>
+        
+
+        <consumable>
+          <manufacturedProduct classCode="MANU">
+            <!-- Medication Information (consolidation) template -->
+            <templateId root="2.16.840.1.113883.10.20.22.4.23"/>
+            <id root="d05686e0-a278-0132-76ce-404024e80912"/>
+            <manufacturedMaterial>
+              <code code="100" codeSystem="2.16.840.1.113883.12.292" sdtc:valueSet="2.16.840.1.113883.3.464.1003.196.12.1221"><originalText>Medication, Administered: Pneumococcal Conjugate Vaccine</originalText></code>
+            </manufacturedMaterial>
+          </manufacturedProduct>
+        </consumable>
+      </substanceAdministration>
+    </entryRelationship>
+    
+  </act>
+</entry>
+<entry>
+  <act classCode="ACT" moodCode="EVN" >
+    <!-- Medication, Administered template -->
+    <templateId root="2.16.840.1.113883.10.20.24.3.42"/>
+    <id root="1.3.6.1.4.1.115" extension="54f36b146379700b608f0000"/>
+    <code code="416118004" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Administration"/>
+    <statusCode code="completed"/>
+    <effectiveTime xsi:type="IVL_TS">
+      <low value='20130402214115'/>
+      <high value='20130402214115'/>
+    </effectiveTime>
+    <entryRelationship typeCode="COMP">
+      <substanceAdministration classCode="SBADM" moodCode="EVN">
+        <!-- Medication Activity (consolidation) template -->
+        <templateId root="2.16.840.1.113883.10.20.22.4.16"/>
+        <id root="d056b770-a278-0132-76ce-404024e80912"/>
+        <text>Medication, Administered: Pneumococcal Conjugate Vaccine</text>
+        <statusCode code="completed"/>
+        <effectiveTime xsi:type="IVL_TS">
+          <low value='20130402214115'/>
+          <high value='20130402214115'/>
+        </effectiveTime>
+        
+
+        <consumable>
+          <manufacturedProduct classCode="MANU">
+            <!-- Medication Information (consolidation) template -->
+            <templateId root="2.16.840.1.113883.10.20.22.4.23"/>
+            <id root="d056c790-a278-0132-76ce-404024e80912"/>
+            <manufacturedMaterial>
+              <code code="100" codeSystem="2.16.840.1.113883.12.292" sdtc:valueSet="2.16.840.1.113883.3.464.1003.196.12.1221"><originalText>Medication, Administered: Pneumococcal Conjugate Vaccine</originalText></code>
+            </manufacturedMaterial>
+          </manufacturedProduct>
+        </consumable>
+      </substanceAdministration>
+    </entryRelationship>
+    
+  </act>
+</entry>
+
+
+
+<entry>
+  <act classCode="ACT" moodCode="EVN" >
+    <!-- Medication, Administered template -->
+    <templateId root="2.16.840.1.113883.10.20.24.3.42"/>
+    <id root="1.3.6.1.4.1.115" extension="54f36b146379700b60840000"/>
+    <code code="416118004" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Administration"/>
+    <statusCode code="completed"/>
+    <effectiveTime xsi:type="IVL_TS">
+      <low value='20120302224115'/>
+      <high value='20120302224115'/>
+    </effectiveTime>
+    <entryRelationship typeCode="COMP">
+      <substanceAdministration classCode="SBADM" moodCode="EVN">
+        <!-- Medication Activity (consolidation) template -->
+        <templateId root="2.16.840.1.113883.10.20.22.4.16"/>
+        <id root="d0574380-a278-0132-76ce-404024e80912"/>
+        <text>Medication, Administered: Rotavirus Vaccine (3 dose schedule)</text>
+        <statusCode code="completed"/>
+        <effectiveTime xsi:type="IVL_TS">
+          <low value='20120302224115'/>
+          <high value='20120302224115'/>
+        </effectiveTime>
+        
+
+        <consumable>
+          <manufacturedProduct classCode="MANU">
+            <!-- Medication Information (consolidation) template -->
+            <templateId root="2.16.840.1.113883.10.20.22.4.23"/>
+            <id root="d05753e0-a278-0132-76ce-404024e80912"/>
+            <manufacturedMaterial>
+              <code code="116" codeSystem="2.16.840.1.113883.12.292" sdtc:valueSet="2.16.840.1.113883.3.464.1003.196.12.1223"><originalText>Medication, Administered: Rotavirus Vaccine (3 dose schedule)</originalText></code>
+            </manufacturedMaterial>
+          </manufacturedProduct>
+        </consumable>
+      </substanceAdministration>
+    </entryRelationship>
+    
+  </act>
+</entry>
+<entry>
+  <act classCode="ACT" moodCode="EVN" >
+    <!-- Medication, Administered template -->
+    <templateId root="2.16.840.1.113883.10.20.24.3.42"/>
+    <id root="1.3.6.1.4.1.115" extension="54f36b146379700b608d0000"/>
+    <code code="416118004" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Administration"/>
+    <statusCode code="completed"/>
+    <effectiveTime xsi:type="IVL_TS">
+      <low value='20121202224115'/>
+      <high value='20121202224115'/>
+    </effectiveTime>
+    <entryRelationship typeCode="COMP">
+      <substanceAdministration classCode="SBADM" moodCode="EVN">
+        <!-- Medication Activity (consolidation) template -->
+        <templateId root="2.16.840.1.113883.10.20.22.4.16"/>
+        <id root="d05782a0-a278-0132-76ce-404024e80912"/>
+        <text>Medication, Administered: Rotavirus Vaccine (3 dose schedule)</text>
+        <statusCode code="completed"/>
+        <effectiveTime xsi:type="IVL_TS">
+          <low value='20121202224115'/>
+          <high value='20121202224115'/>
+        </effectiveTime>
+        
+
+        <consumable>
+          <manufacturedProduct classCode="MANU">
+            <!-- Medication Information (consolidation) template -->
+            <templateId root="2.16.840.1.113883.10.20.22.4.23"/>
+            <id root="d0579280-a278-0132-76ce-404024e80912"/>
+            <manufacturedMaterial>
+              <code code="116" codeSystem="2.16.840.1.113883.12.292" sdtc:valueSet="2.16.840.1.113883.3.464.1003.196.12.1223"><originalText>Medication, Administered: Rotavirus Vaccine (3 dose schedule)</originalText></code>
+            </manufacturedMaterial>
+          </manufacturedProduct>
+        </consumable>
+      </substanceAdministration>
+    </entryRelationship>
+    
+  </act>
+</entry>
+<entry>
+  <act classCode="ACT" moodCode="EVN" >
+    <!-- Medication, Administered template -->
+    <templateId root="2.16.840.1.113883.10.20.24.3.42"/>
+    <id root="1.3.6.1.4.1.115" extension="54f36b146379700b60960000"/>
+    <code code="416118004" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Administration"/>
+    <statusCode code="completed"/>
+    <effectiveTime xsi:type="IVL_TS">
+      <low value='20130402214115'/>
+      <high value='20130402214115'/>
+    </effectiveTime>
+    <entryRelationship typeCode="COMP">
+      <substanceAdministration classCode="SBADM" moodCode="EVN">
+        <!-- Medication Activity (consolidation) template -->
+        <templateId root="2.16.840.1.113883.10.20.22.4.16"/>
+        <id root="d057c140-a278-0132-76ce-404024e80912"/>
+        <text>Medication, Administered: Rotavirus Vaccine (3 dose schedule)</text>
+        <statusCode code="completed"/>
+        <effectiveTime xsi:type="IVL_TS">
+          <low value='20130402214115'/>
+          <high value='20130402214115'/>
+        </effectiveTime>
+        
+
+        <consumable>
+          <manufacturedProduct classCode="MANU">
+            <!-- Medication Information (consolidation) template -->
+            <templateId root="2.16.840.1.113883.10.20.22.4.23"/>
+            <id root="d057d130-a278-0132-76ce-404024e80912"/>
+            <manufacturedMaterial>
+              <code code="116" codeSystem="2.16.840.1.113883.12.292" sdtc:valueSet="2.16.840.1.113883.3.464.1003.196.12.1223"><originalText>Medication, Administered: Rotavirus Vaccine (3 dose schedule)</originalText></code>
+            </manufacturedMaterial>
+          </manufacturedProduct>
+        </consumable>
+      </substanceAdministration>
+    </entryRelationship>
+    
+  </act>
+</entry>
+
+<entry>
+  <act classCode="ACT" moodCode="EVN" >
+    <!-- Medication, Administered template -->
+    <templateId root="2.16.840.1.113883.10.20.24.3.42"/>
+    <id root="1.3.6.1.4.1.115" extension="54f36b146379700b60940000"/>
+    <code code="416118004" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Administration"/>
+    <statusCode code="completed"/>
+    <effectiveTime xsi:type="IVL_TS">
+      <low value='20130402214115'/>
+      <high value='20130402214115'/>
+    </effectiveTime>
+    <entryRelationship typeCode="COMP">
+      <substanceAdministration classCode="SBADM" moodCode="EVN">
+        <!-- Medication Activity (consolidation) template -->
+        <templateId root="2.16.840.1.113883.10.20.22.4.16"/>
+        <id root="d0582a80-a278-0132-76ce-404024e80912"/>
+        <text>Medication, Administered: Hepatitis A Vaccine</text>
+        <statusCode code="completed"/>
+        <effectiveTime xsi:type="IVL_TS">
+          <low value='20130402214115'/>
+          <high value='20130402214115'/>
+        </effectiveTime>
+        
+
+        <consumable>
+          <manufacturedProduct classCode="MANU">
+            <!-- Medication Information (consolidation) template -->
+            <templateId root="2.16.840.1.113883.10.20.22.4.23"/>
+            <id root="d0583bd0-a278-0132-76ce-404024e80912"/>
+            <manufacturedMaterial>
+              <code code="104" codeSystem="2.16.840.1.113883.12.292" sdtc:valueSet="2.16.840.1.113883.3.464.1003.196.12.1215"><originalText>Medication, Administered: Hepatitis A Vaccine</originalText></code>
+            </manufacturedMaterial>
+          </manufacturedProduct>
+        </consumable>
+      </substanceAdministration>
+    </entryRelationship>
+    
+  </act>
+</entry>
+
+
+
+<entry>
+  <!-- Patient Characteristic Payer -->
+  <observation classCode="OBS" moodCode="EVN">
+    <templateId root="2.16.840.1.113883.10.20.24.3.55"/>
+    <id root="1.3.6.1.4.1.115" extension="54f36b146379700b60980000"/>
+    <code code="48768-6" codeSystemName="LOINC" codeSystem="2.16.840.1.113883.6.1" displayName="Payment source"/> 
+    <statusCode code="completed"/>
+    <effectiveTime>
+      <!-- Attribute: Start Datetime -->
+      <low value='20080102124115'/>
+    </effectiveTime>
+    <value code="2" codeSystem="2.16.840.1.113883.3.221.5" xsi:type="CD" sdtc:valueSet="2.16.840.1.114222.4.11.3591"><originalText></originalText></value>
+
+  </observation>            
+</entry>
+
+<entry>
+  <encounter classCode="ENC" moodCode="EVN">
+    <!--  Encounter activities template -->
+    <templateId root="2.16.840.1.113883.10.20.22.4.49"/>
+    <!-- Encounter performed template -->
+    <templateId root="2.16.840.1.113883.10.20.24.3.23"/>
+    <id root="1.3.6.1.4.1.115" extension="54f36b146379700b60770000"/>
+    <code code="99201" codeSystem="2.16.840.1.113883.6.12" sdtc:valueSet="2.16.840.1.113883.3.464.1003.101.12.1001"><originalText>Encounter, Performed: Office Visit</originalText></code>
+    <text>Encounter, Performed: Office Visit</text>
+    <statusCode code="completed"/>
+    <effectiveTime>
+      <!-- We try to look for the admit/discharge times on the encounter if they are
+           there. If not, we fall back to the typical start/end date. -->
+      <low value='20110902204115'/>
+      <high value='20110902214115'/>
+    </effectiveTime>
+
+
+
+
+  </encounter>
+</entry>
+<entry>
+  <encounter classCode="ENC" moodCode="EVN">
+    <!--  Encounter activities template -->
+    <templateId root="2.16.840.1.113883.10.20.22.4.49"/>
+    <!-- Encounter performed template -->
+    <templateId root="2.16.840.1.113883.10.20.24.3.23"/>
+    <id root="1.3.6.1.4.1.115" extension="54f36b146379700b60780000"/>
+    <code code="99201" codeSystem="2.16.840.1.113883.6.12" sdtc:valueSet="2.16.840.1.113883.3.464.1003.101.12.1001"><originalText>Encounter, Performed: Office Visit</originalText></code>
+    <text>Encounter, Performed: Office Visit</text>
+    <statusCode code="completed"/>
+    <effectiveTime>
+      <!-- We try to look for the admit/discharge times on the encounter if they are
+           there. If not, we fall back to the typical start/end date. -->
+      <low value='20120302214115'/>
+      <high value='20120302224115'/>
+    </effectiveTime>
+
+
+
+
+  </encounter>
+</entry>
+<entry>
+  <encounter classCode="ENC" moodCode="EVN">
+    <!--  Encounter activities template -->
+    <templateId root="2.16.840.1.113883.10.20.22.4.49"/>
+    <!-- Encounter performed template -->
+    <templateId root="2.16.840.1.113883.10.20.24.3.23"/>
+    <id root="1.3.6.1.4.1.115" extension="54f36b146379700b60790000"/>
+    <code code="99201" codeSystem="2.16.840.1.113883.6.12" sdtc:valueSet="2.16.840.1.113883.3.464.1003.101.12.1001"><originalText>Encounter, Performed: Office Visit</originalText></code>
+    <text>Encounter, Performed: Office Visit</text>
+    <statusCode code="completed"/>
+    <effectiveTime>
+      <!-- We try to look for the admit/discharge times on the encounter if they are
+           there. If not, we fall back to the typical start/end date. -->
+      <low value='20121202214115'/>
+      <high value='20121202224115'/>
+    </effectiveTime>
+
+
+
+
+  </encounter>
+</entry>
+<entry>
+  <encounter classCode="ENC" moodCode="EVN">
+    <!--  Encounter activities template -->
+    <templateId root="2.16.840.1.113883.10.20.22.4.49"/>
+    <!-- Encounter performed template -->
+    <templateId root="2.16.840.1.113883.10.20.24.3.23"/>
+    <id root="1.3.6.1.4.1.115" extension="54f36b146379700b607a0000"/>
+    <code code="99201" codeSystem="2.16.840.1.113883.6.12" sdtc:valueSet="2.16.840.1.113883.3.464.1003.101.12.1001"><originalText>Encounter, Performed: Office Visit</originalText></code>
+    <text>Encounter, Performed: Office Visit</text>
+    <statusCode code="completed"/>
+    <effectiveTime>
+      <!-- We try to look for the admit/discharge times on the encounter if they are
+           there. If not, we fall back to the typical start/end date. -->
+      <low value='20130402204115'/>
+      <high value='20130402214115'/>
+    </effectiveTime>
+
+
+
+
+  </encounter>
+</entry>
+
+
+
+
+
+
+
+
+
+
+
+<entry>
+  <act classCode="ACT" moodCode="EVN" >
+    <!-- Medication, Administered template -->
+    <templateId root="2.16.840.1.113883.10.20.24.3.42"/>
+    <id root="1.3.6.1.4.1.115" extension="54f36b146379700b60930000"/>
+    <code code="416118004" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Administration"/>
+    <statusCode code="completed"/>
+    <effectiveTime xsi:type="IVL_TS">
+      <low value='20130402214115'/>
+      <high value='20130402214115'/>
+    </effectiveTime>
+    <entryRelationship typeCode="COMP">
+      <substanceAdministration classCode="SBADM" moodCode="EVN">
+        <!-- Medication Activity (consolidation) template -->
+        <templateId root="2.16.840.1.113883.10.20.22.4.16"/>
+        <id root="d05a42e0-a278-0132-76ce-404024e80912"/>
+        <text>Medication, Administered: Measles, Mumps and Rubella (MMR) Vaccine</text>
+        <statusCode code="completed"/>
+        <effectiveTime xsi:type="IVL_TS">
+          <low value='20130402214115'/>
+          <high value='20130402214115'/>
+        </effectiveTime>
+        
+
+        <consumable>
+          <manufacturedProduct classCode="MANU">
+            <!-- Medication Information (consolidation) template -->
+            <templateId root="2.16.840.1.113883.10.20.22.4.23"/>
+            <id root="d05a5490-a278-0132-76ce-404024e80912"/>
+            <manufacturedMaterial>
+              <code code="03" codeSystem="2.16.840.1.113883.12.292" sdtc:valueSet="2.16.840.1.113883.3.464.1003.196.12.1224"><originalText>Medication, Administered: Measles, Mumps and Rubella (MMR) Vaccine</originalText></code>
+            </manufacturedMaterial>
+          </manufacturedProduct>
+        </consumable>
+      </substanceAdministration>
+    </entryRelationship>
+    
+  </act>
+</entry>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<entry>
+  <act classCode="ACT" moodCode="EVN" >
+    <!-- Medication, Administered template -->
+    <templateId root="2.16.840.1.113883.10.20.24.3.42"/>
+    <id root="1.3.6.1.4.1.115" extension="54f36b146379700b60920000"/>
+    <code code="416118004" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Administration"/>
+    <statusCode code="completed"/>
+    <effectiveTime xsi:type="IVL_TS">
+      <low value='20130402214115'/>
+      <high value='20130402214115'/>
+    </effectiveTime>
+    <entryRelationship typeCode="COMP">
+      <substanceAdministration classCode="SBADM" moodCode="EVN">
+        <!-- Medication Activity (consolidation) template -->
+        <templateId root="2.16.840.1.113883.10.20.22.4.16"/>
+        <id root="d05b1a30-a278-0132-76ce-404024e80912"/>
+        <text>Medication, Administered: Varicella Zoster Vaccine (VZV)</text>
+        <statusCode code="completed"/>
+        <effectiveTime xsi:type="IVL_TS">
+          <low value='20130402214115'/>
+          <high value='20130402214115'/>
+        </effectiveTime>
+        
+
+        <consumable>
+          <manufacturedProduct classCode="MANU">
+            <!-- Medication Information (consolidation) template -->
+            <templateId root="2.16.840.1.113883.10.20.22.4.23"/>
+            <id root="d05b2ea0-a278-0132-76ce-404024e80912"/>
+            <manufacturedMaterial>
+              <code code="21" codeSystem="2.16.840.1.113883.12.292" sdtc:valueSet="2.16.840.1.113883.3.464.1003.196.12.1170"><originalText>Medication, Administered: Varicella Zoster Vaccine (VZV)</originalText></code>
+            </manufacturedMaterial>
+          </manufacturedProduct>
+        </consumable>
+      </substanceAdministration>
+    </entryRelationship>
+    
+  </act>
+</entry>
+
+
+
+
+
+
+
+
+
+
+
+
+        </section>
+      </component>
+    </structuredBody>
+  </component>
+</ClinicalDocument>
